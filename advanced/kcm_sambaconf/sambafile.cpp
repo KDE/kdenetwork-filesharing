@@ -191,6 +191,7 @@ bool SambaFile::slotApply()
         delete _tempFile;
         _tempFile = 0;
         kdDebug(5009) << "SambaFile::slotApply: changes successfully saved!" << endl;
+        return true;
     }        
   } else {
     kdDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
@@ -201,6 +202,7 @@ bool SambaFile::slotApply()
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
     connect( job, SIGNAL( result( KIO::Job * ) ), 
              this, SLOT( slotSaveJobFinished ( KIO::Job * ) ) );
+    return (job->error()==0);
   }
 
 }

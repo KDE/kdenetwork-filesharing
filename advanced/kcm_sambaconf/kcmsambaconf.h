@@ -37,6 +37,7 @@ public:
 
 	SambaShare* getShare() const;
   void setShare(SambaShare* share);
+	void updateShare();
 
 protected:
  	SambaShare* _share;
@@ -72,6 +73,7 @@ class KcmSambaConf: public KCModule
     void editShareDefaults();
     void editPrinterDefaults();
 
+    void socketOptionsBtnClicked();
 	protected:
   	/**
      * The path of the smb.conf file

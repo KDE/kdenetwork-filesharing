@@ -39,6 +39,7 @@
 #include "sambafile.h"
 #include "sharedlgimpl.h"
 #include "printerdlgimpl.h"
+#include "socketoptionsdlg.h"
 
 #include "kcmsambaconf.h"
 
@@ -58,6 +59,13 @@ void ShareListViewItem::setShare(SambaShare* share)
 {
 	assert(share);
   _share = share;
+	updateShare();
+}
+
+void ShareListViewItem::updateShare()
+{
+	assert(_share);
+
   setText(0,_share->getName());
   setText(2,_share->getValue("comment"));
 
@@ -73,7 +81,6 @@ void ShareListViewItem::setShare(SambaShare* share)
 	}
 
   setPixmap(3,createPropertyPixmap());
-
 }
 
 QPixmap ShareListViewItem::createPropertyPixmap()
@@ -150,6 +157,8 @@ void KcmSambaConf::editShare()
 
   ShareDlgImpl* dlg = new ShareDlgImpl(_interface,item->getShare());
   dlg->exec();
+  
+  delete dlg;
 }
 
 void KcmSambaConf::addShare()
@@ -187,6 +196,13 @@ void KcmSambaConf::editPrinter()
 
   PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,item->getShare());
   dlg->exec();
+  
+  if (dlg->result() == QDialog::Accepted)
+  {
+  	item->updateShare();
+  }
+
+  delete dlg;
 }
 
 void KcmSambaConf::addPrinter()
@@ -234,6 +250,16 @@ void KcmSambaConf::editPrinterDefaults()
   dlg->exec();
 }
 
+void KcmSambaConf::socketOptionsBtnClicked()
+{
+		SambaShare* share = _sambaFile->getShare("global");
+
+    SocketOptionsDlg *dlg = new SocketOptionsDlg(_interface);
+    dlg->setShare(share);
+    dlg->exec();
+    
+    delete dlg;
+}
 
 void KcmSambaConf::load() 
 {
@@ -253,6 +279,8 @@ void KcmSambaConf::load()
 	connect ( _interface->editDefaultPrinterBtn, SIGNAL(pressed()), this, SLOT(editPrinterDefaults()));
 	connect ( _interface->editDefaultShareBtn, SIGNAL(pressed()), this, SLOT(editShareDefaults()));
 
+	connect ( _interface->socketOptionsBtn, SIGNAL(clicked()), this, SLOT(socketOptionsBtnClicked()));
+  
   _smbconf = SambaFile::findSambaConf();
 	_sambaFile = new SambaFile(_smbconf);
 

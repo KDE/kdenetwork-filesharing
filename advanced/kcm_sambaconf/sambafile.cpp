@@ -486,6 +486,9 @@ void SambaFile::slotJobFinished( KIO::Job * job )
 
 bool SambaFile::load()
 {
+  if (path.isNull() || path.isEmpty())
+      return false;
+      
   kdDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path << endl;
   KURL url(path);
 

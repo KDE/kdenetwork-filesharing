@@ -170,6 +170,7 @@ public slots:
 protected slots:
   void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
   void slotJobFinished( KIO::Job *);
+  void saveDone( KProcess*);
   
 signals:
   void canceled(const QString &);

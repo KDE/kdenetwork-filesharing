@@ -27,6 +27,7 @@
  ******************************************************************************/
 
 #include <qfile.h>
+#include <qprocess.h>
 
 #include <ksimpleconfig.h>
 #include <kdebug.h>
@@ -143,22 +144,24 @@ void SambaFile::slotApply()
   if (QFileInfo(path).isWritable())
   {
      saveTo(path);
+     changed = false;
      return;
   }
 
   // Create a temporary smb.conf file
-  QString tmpFilename= getTempFileName();
-
-  KSimpleConfig* config = 0L;
-
-  saveTo(tmpFilename);
-//  config = getSimpleConfig(_sambaConfig, tmpFilename);
-//  config->sync();
+  //QString tmpFilename= getTempFileName();
+  KTempFile tmpFile;
+  tmpFile.setAutoDelete(false);
+  
+  if (!saveTo(tmpFile.name())) {
+    KMessageBox::sorry(0,i18n("Couldn't save to temporary file %1").arg(tmpFile.name()));  
+    return;
+  }
 
   QFileInfo fi(path);
 
   // Override the original smb.conf with the temporary file
-  QString cpCmd=QString("cp %1 %2").arg(tmpFilename).arg(path);
+  QString cpCmd=QString("cp %1 %2").arg(tmpFile.name()).arg(path);
   QString chmodCmd=
     QString::number(
         (fi.permission(QFileInfo::ReadUser) ? 4 : 0)
@@ -173,36 +176,42 @@ void SambaFile::slotApply()
       + (fi.permission(QFileInfo::WriteOther) ? 2 : 0)
       + (fi.permission(QFileInfo::ExeOther) ? 1 : 0) );
 
-
-
-  KProcess* proc = new KProcess();
-
-  // if file is not writable do a kdesu
-  if (!QFileInfo(path).isWritable() )
-    *proc<<"kdesu"<<"-c"<<cpCmd+";"+"chmod "+chmodCmd+" "+path;
-  else
-  {
-    *proc << "cp" << tmpFilename << path;
-    proc->start(KProcess::Block);
-    delete proc;
-    proc = new KProcess();
-    *proc << "chmod" << chmodCmd << path;
-    proc->start(KProcess::Block);
-  }
-
-  if (!proc->start(KProcess::Block))
-    KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
-
-  delete(proc);
-
-  // Remove the temporary file
-  unlink(QFile::encodeName(tmpFilename));
+  QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(tmpFile.name()).arg(path).arg(chmodCmd).arg(path).arg(tmpFile.name());
   
-  delete(config);
-  changed = false;
+  KProcess* proc = new KProcess();
+  *proc << "kdesu" << suCommand;
+//  *proc << "-t";
+//  *proc << "-c";
+//  *proc << "cp";
+//  *proc << "-v";
+//  *proc << tmpFile.name();
+//  *proc << path;
+//  proc->addArgument(suCommand);
+  //*proc << "kdesu" << "-c" << suCommand;
+//  proc->start();
+
+   connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT(saveDone(KProcess *)));
+
+  if (! proc->start())
+     KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
+  else
+    changed = false;
+  //proc->detach();
+  //delete proc;    
+    
+//  if (!proc.normalExit())    
+//     
+  //proc.exitStatus();  
+  
+  //KMessageBox::information(0,i18n("Changes successfully saved !"));      
+      
+  
 }
 
-
+void SambaFile::saveDone(KProcess *proc)
+{
+   delete(proc);
+}
 
   /**
    * Returns a name which isn't already used for a share
@@ -439,7 +448,7 @@ QString SambaFile::findSambaConf()
      return "/usr/samba/lib/smb.conf";
 
 
-  return "";
+  return QString::null;
 }
 
 

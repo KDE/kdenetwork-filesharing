@@ -51,7 +51,7 @@
                     </property>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout65</cstring>
+                            <cstring>Layout52</cstring>
                         </property>
                         <hbox>
                             <property name="name">
@@ -63,28 +63,50 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLabel">
+                            <widget class="QFrame">
                                 <property name="name">
-                                    <cstring>directoryPixLbl</cstring>
+                                    <cstring>Frame7</cstring>
                                 </property>
-                                <property name="sizePolicy">
-                                    <sizepolicy>
-                                        <hsizetype>0</hsizetype>
-                                        <vsizetype>0</vsizetype>
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
+                                <property name="frameShape">
+                                    <enum>Box</enum>
                                 </property>
-                                <property name="text">
-                                    <string>Pixmap</string>
+                                <property name="frameShadow">
+                                    <enum>Sunken</enum>
                                 </property>
-                                <property name="scaledContents">
-                                    <bool>true</bool>
-                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>directoryPixLbl</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Pixmap</string>
+                                        </property>
+                                        <property name="scaledContents">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                </vbox>
                             </widget>
                             <widget class="QGroupBox">
                                 <property name="name">
-                                    <cstring>directoryGroup</cstring>
+                                    <cstring>directoryGrp</cstring>
                                 </property>
                                 <property name="title">
                                     <string>Directory</string>
@@ -146,106 +168,9 @@
                             </widget>
                         </hbox>
                     </widget>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>Layout66</cstring>
-                        </property>
-                        <hbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QLabel">
-                                <property name="name">
-                                    <cstring>printerPixLbl</cstring>
-                                </property>
-                                <property name="sizePolicy">
-                                    <sizepolicy>
-                                        <hsizetype>0</hsizetype>
-                                        <vsizetype>0</vsizetype>
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                </property>
-                                <property name="text">
-                                    <string>Pixmap</string>
-                                </property>
-                                <property name="scaledContents">
-                                    <bool>true</bool>
-                                </property>
-                            </widget>
-                            <widget class="QGroupBox">
-                                <property name="name">
-                                    <cstring>printerGroup</cstring>
-                                </property>
-                                <property name="enabled">
-                                    <bool>true</bool>
-                                </property>
-                                <property name="title">
-                                    <string>Printer</string>
-                                </property>
-                                <vbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>11</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QLayoutWidget">
-                                        <property name="name">
-                                            <cstring>Layout5</cstring>
-                                        </property>
-                                        <hbox>
-                                            <property name="name">
-                                                <cstring>unnamed</cstring>
-                                            </property>
-                                            <property name="margin">
-                                                <number>0</number>
-                                            </property>
-                                            <property name="spacing">
-                                                <number>6</number>
-                                            </property>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>TextLabel4</cstring>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Queue</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="KComboBox">
-                                                <property name="name">
-                                                    <cstring>queueCombo</cstring>
-                                                </property>
-                                            </widget>
-                                        </hbox>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>printersChk</cstring>
-                                        </property>
-                                        <property name="enabled">
-                                            <bool>true</bool>
-                                        </property>
-                                        <property name="text">
-                                            <string>share all printers</string>
-                                        </property>
-                                    </widget>
-                                </vbox>
-                            </widget>
-                        </hbox>
-                    </widget>
                     <widget class="QGroupBox">
                         <property name="name">
-                            <cstring>GroupBox2</cstring>
+                            <cstring>identifierGrp</cstring>
                         </property>
                         <property name="title">
                             <string>Identifier</string>
@@ -1026,7 +951,7 @@
                                     <string>Guest &amp;account</string>
                                 </property>
                                 <property name="buddy" stdset="0">
-                                    <cstring>guestEdit</cstring>
+                                    <cstring>guestAccountEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
@@ -1067,7 +992,7 @@
                                     <string>Hosts &amp;deny</string>
                                 </property>
                                 <property name="buddy" stdset="0">
-                                    <cstring>denyEdit</cstring>
+                                    <cstring>hostsDenyEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
@@ -1081,7 +1006,7 @@
                                     <string>&amp;Hosts allow</string>
                                 </property>
                                 <property name="buddy" stdset="0">
-                                    <cstring>allowEdit</cstring>
+                                    <cstring>hostsAllowEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1351,7 +1276,7 @@
                     <cstring>advancedTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Advanced</string>
+                    <string>&amp;Advanced</string>
                 </attribute>
                 <hbox>
                     <property name="name">
@@ -1545,7 +1470,7 @@
                                     <cstring>GroupBox17</cstring>
                                 </property>
                                 <property name="title">
-                                    <string>Logging</string>
+                                    <string>&amp;Logging</string>
                                 </property>
                                 <vbox>
                                     <property name="name">
@@ -1773,31 +1698,15 @@
     </connection>
 </connections>
 <includes>
-    <include location="global" impldecl="in declaration">sharedata.h</include>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
     <include location="global" impldecl="in implementation">qptrlist.h</include>
     <include location="global" impldecl="in implementation">kmessagebox.h</include>
     <include location="local" impldecl="in implementation">share.ui.h</include>
 </includes>
-<variables>
-    <variable>bool printersExist</variable>
-    <variable>shareData* share</variable>
-    <variable>bool homesExist</variable>
-</variables>
-<signals>
-    <signal>changed(shareData*)</signal>
-</signals>
 <slots>
-    <slot>edit( shareData * data )</slot>
     <slot access="private">checkValues()</slot>
-    <slot>updateShareData()</slot>
-    <slot>checkTypes( bool directory )</slot>
     <slot access="private" specifier="non virtual">init()</slot>
-    <slot access="private" specifier="non virtual">delUsers()</slot>
-    <slot access="private" specifier="non virtual">createHomes( bool value )</slot>
-    <slot access="private" specifier="non virtual">createPrinters( bool value )</slot>
     <slot>trytoAccept()</slot>
-    <slot specifier="non virtual">checkHomesAndPrinters()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

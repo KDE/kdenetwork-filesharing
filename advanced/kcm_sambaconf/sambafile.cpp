@@ -87,6 +87,7 @@ SambaFile::~SambaFile()
 {
   delete _sambaConfig;
   delete _testParmValues;
+  delete _tempFile;
 
 }
 
@@ -121,16 +122,15 @@ QString SambaFile::findShareByPath(const QString & path) const
 }
 
 bool SambaFile::save() {
-  slotApply();
-  return true;
+  return slotApply();
 }
 
 
-void SambaFile::slotApply()
+bool SambaFile::slotApply()
 {
   if (readonly) {
       kdDebug(FILESHARE_DEBUG) << "SambaFile::slotApply: readonly=true" << endl;
-      return;
+      return false;
   }      
 
   // If we have write access to the smb.conf
@@ -142,48 +142,47 @@ void SambaFile::slotApply()
   {
     saveTo(path);
     changed = false;
-    return;
+    return true;
   }
 
   // Create a temporary smb.conf file
+   delete _tempFile;
   _tempFile = new KTempFile();
+  _tempFile->setAutoDelete(true);
 
   if (!saveTo(_tempFile->name())) {
-    KMessageBox::sorry(0,i18n("Couldn't save to temporary file %1").arg(_tempFile->name()));
-    return;
+    kdDebug(5009) << "SambaFile::slotApply: Couldn't save to temporary file" << endl; 
+    delete _tempFile;
+    _tempFile = 0;
+    return false;
   }
 
   QFileInfo fi(path);
   KURL url(path);
 
-  // Override the original smb.conf with the temporary file
-  QString chmodCmd=
-    QString::number(
-        (fi.permission(QFileInfo::ReadUser) ? 4 : 0)
-      + (fi.permission(QFileInfo::WriteUser) ? 2 : 0)
-      + (fi.permission(QFileInfo::ExeUser) ? 1 : 0) )
-    + QString::number(
-        (fi.permission(QFileInfo::ReadGroup) ? 4 : 0)
-      + (fi.permission(QFileInfo::WriteGroup) ? 2 : 0)
-      + (fi.permission(QFileInfo::ExeGroup) ? 1 : 0) )
-    + QString::number(
-        (fi.permission(QFileInfo::ReadOther) ? 4 : 0)
-      + (fi.permission(QFileInfo::WriteOther) ? 2 : 0)
-      + (fi.permission(QFileInfo::ExeOther) ? 1 : 0) );
-
-  KProcess* proc = new KProcess();
-
   if (KURL(path).isLocalFile()) {
+    KProcess proc;
     kdDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
-    _tempFile->setAutoDelete(false); // Would otherwise be deleted before the command is executed!
-    QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(_tempFile->name()).arg(path).arg(path).arg(chmodCmd).arg(_tempFile->name());
-    *proc << "kdesu" << suCommand;
-    connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT(saveDone(KProcess *)));
+    
+    QString suCommand=QString("cp %1 %2; rm %3")
+              .arg(_tempFile->name())
+              .arg(path)
+              .arg(_tempFile->name());
+    proc << "kdesu" << "-d" << suCommand;
 
-    if (! proc->start())
-        KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
-    else
+    if (! proc.start(KProcess::Block)) {
+        kdDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!" << endl;
+        //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
+        delete _tempFile;
+        _tempFile = 0;
+        return false;
+    }        
+    else {
         changed = false;
+        delete _tempFile;
+        _tempFile = 0;
+        kdDebug(5009) << "SambaFile::slotApply: changes successfully saved!" << endl;
+    }        
   } else {
     kdDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
     _tempFile->setAutoDelete(true);
@@ -191,20 +190,10 @@ void SambaFile::slotApply()
     srcURL.setPath( _tempFile->name() );
 
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
-    connect( job, SIGNAL( result( KIO::Job * ) ), this, SLOT( slotSaveJobFinished ( KIO::Job * ) ) );
+    connect( job, SIGNAL( result( KIO::Job * ) ), 
+             this, SLOT( slotSaveJobFinished ( KIO::Job * ) ) );
   }
 
-
-
-  //KMessageBox::information(0,i18n("Changes successfully saved!"));
-
-
-}
-
-void SambaFile::saveDone(KProcess *proc)
-{
-  delete(proc);
-  delete _tempFile;
 }
 
   /**
@@ -223,7 +212,7 @@ QString SambaFile::getUnusedName(const QString alreadyUsedName) const
 
   while (_sambaConfig->find(s))
   {
-    s = init+QString("%1").arg(i);
+    s = init+QString::number(i);
     i++;
   }
 
@@ -480,7 +469,8 @@ QString SambaFile::findSambaConf()
 }
 
 void SambaFile::slotSaveJobFinished( KIO::Job * job ) {
-
+  delete _tempFile;
+  _tempFile = 0;
 }
 
 void SambaFile::slotJobFinished( KIO::Job * job )

@@ -160,12 +160,11 @@ public slots:
    * if the user is not allowed she'll be asked
    * for a root password
    **/
-  void slotApply();
+  bool slotApply();
 protected slots:
   void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
   void slotJobFinished( KIO::Job *);
   void slotSaveJobFinished( KIO::Job *);
-  void saveDone( KProcess*);
 
 signals:
   void canceled(const QString &);

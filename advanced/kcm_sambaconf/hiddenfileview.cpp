@@ -258,8 +258,8 @@ void HiddenFileView::columnClicked(int column) {
 void HiddenFileView::deleteItem( KFileItem *fileItem )
 {
   HiddenListViewItem* item;
-  for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
-       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  for (item = dynamic_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
+       item = dynamic_cast<HiddenListViewItem*>(item->nextSibling()))
   {
     if (item->getFileItem() == fileItem)
     {

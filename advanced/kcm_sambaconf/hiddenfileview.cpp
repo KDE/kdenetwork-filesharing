@@ -402,6 +402,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                         p.find("?") > -1 )
                 {
                     // TODO after message freeze: why show three times the wildcard string? Once should be enough.
+		    // TODO remove <b></b> and use <qt> instead
                     int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
                     "do you want to uncheck all files matching <b>'%1'</b>? <br>"

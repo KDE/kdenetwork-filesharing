@@ -24,7 +24,8 @@ libkcm_kcmsambaconf_la_SOURCES = \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
   dictmanager.cpp \
-  qmultichecklistitem.cpp
+  qmultichecklistitem.cpp \
+  joindomaindlg.ui
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -76,14 +77,15 @@ EXTRA_DIST = $(service_DATA) \
   filemodedlgimpl.h \
   hiddenfileview.h \
   dictmanager.h \
-  qmultichecklistitem.h
+  qmultichecklistitem.h \
+  joindomaindlh.ui.h
 
 mydata_DATA = kcmsambaconf.desktop
 mydatadir = $(kde_appsdir)/Settings/Network
 
 ## what's going on with this file I don't know
 ## I'm just an automake automaton --exa
-DISTCLEANFILES = qmultichecklistitem.cpp
+# DISTCLEANFILES = qmultichecklistitem.cpp
 
 #messages:
 #	$(XGETTEXT) $(libkcm_kcm_sambaconf_la_SOURCES) -o $(podir)/kcm_sambaconf.pot

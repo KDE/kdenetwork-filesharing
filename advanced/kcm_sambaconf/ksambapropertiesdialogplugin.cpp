@@ -38,6 +38,7 @@
 #include "konqinterface.h"
 #include "ksambapropertiesdialogplugin.h"
 #include "sambafile.h"
+#include "share.h"
 
 
 typedef KGenericFactory<KSambaPropertiesDialogPlugin, KPropertiesDialog> KSambaPropertiesDialogPluginFactory;
@@ -97,16 +98,16 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   QVBoxLayout *stackLayout = new QVBoxLayout(frame);
   stackLayout->addWidget(stack);
   
- 	initWidget = createInitWidget(stack);
+ 	shareWidget = createShareWidget(stack);
   configWidget = createConfigWidget(stack);
 
-  stack->addWidget(initWidget,0);
+  stack->addWidget(shareWidget,0);
   stack->addWidget(configWidget,1);
 
   if (smbconf == "")
      stack->raiseWidget(configWidget);
   else
-  	 stack->raiseWidget(initWidget);
+  	 stack->raiseWidget(shareWidget);
 
 }
 
@@ -140,194 +141,13 @@ QWidget* KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
 
 }
 
-QWidget* KSambaPropertiesDialogPlugin::createInitWidget(QWidget* parent)
+KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 {
-	QWidget* w = new QWidget(parent);
 
+  shareWidget = new KonqInterface(parent);
 
-  QVBoxLayout *layout = new QVBoxLayout(w,5);
-
-
-  QVButtonGroup *btnGrp = new QVButtonGroup(w);
-  btnGrp->setLineWidth(0);
-  btnGrp->setMargin(0);
-
-  notSharedRadio = new QRadioButton(i18n("Not shared"),btnGrp);
-  sharedRadio = new QRadioButton(i18n("Shared"),btnGrp);
-
-  btnGrp->insert(notSharedRadio,1);
-  btnGrp->insert(sharedRadio,2);
-
-  connect(btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
-
-  layout->addWidget(btnGrp);
-
-  // Base Options
-
-  QString help;
-
-  baseGrpBox = new QVGroupBox(i18n("Base Options"),w);
-  QFrame* innerBox = new QFrame(baseGrpBox);
-  QGridLayout *gridLayout = new QGridLayout(innerBox,2,2,5,5);
-
-  nameEdit = new QLineEdit(innerBox);
-  QLabel* lbl = new QLabel(i18n("&Name"),innerBox);
-  lbl->setBuddy(nameEdit);
-  gridLayout->addWidget(lbl,0,0);
-  gridLayout->addWidget(nameEdit,0,1);
-  connect(nameEdit, SIGNAL(textChanged(const QString &)), this, SLOT(setDirty()));
-
-  help = i18n("This is the name of the share");
-  
-  QWhatsThis::add(nameEdit,help);
-  QWhatsThis::add(lbl,help);
-
-  commentEdit = new QLineEdit(innerBox);
-  lbl = new QLabel(i18n("&Comment"),innerBox);
-  lbl->setBuddy(commentEdit);
-  gridLayout->addWidget(lbl,1,0);
-  gridLayout->addWidget(commentEdit,1,1);
-  connect(commentEdit, SIGNAL(textChanged(const QString &)), this, SLOT(setDirty()));
-
-  help = i18n("This is a text field that is seen next"
-  					  " to a share when a client does a queries"
-  					  " the server, either via the network"
-  					  " neighborhood or via net view to list"
-  					  " what shares are available.");
-              
-	QWhatsThis::add(commentEdit,help);
-  QWhatsThis::add(lbl,help);
-
-  layout->addWidget(baseGrpBox);
-
-
-  // Security Options
-
-  secureGrpBox = new QVGroupBox(i18n("Security Options"),w);
-  innerBox = new QFrame(secureGrpBox);
-  gridLayout = new QGridLayout(innerBox,5,2,5,5);
-
-  guestAccountEdit = new QLineEdit(innerBox);
-  lbl = new QLabel(i18n("&Guest account"),innerBox);
-  lbl->setBuddy(guestAccountEdit);
-  gridLayout->addWidget(lbl,0,0);
-  gridLayout->addWidget(guestAccountEdit,0,1);
-
-  help = i18n("This is a username which will be used for access"
-  						" to services which are specified as guest ok."
-              " Whatever privileges this user has will be available"
-              " to any client connecting to the guest service."
-              " Typically this user will exist in the password file,"
-              " but will not have a valid login. The user account \"ftp\""
-              " is often a good choice for this parameter."
-              " If a username is specified in a given service,"
-              " the specified username overrides this one.");
-
-	QWhatsThis::add(lbl,help);
-  QWhatsThis::add(guestAccountEdit,help);
-
-  readOnlyChk = new QCheckBox(innerBox);
-  lbl = new QLabel(i18n("&Read only"),innerBox);
-  lbl->setBuddy(readOnlyChk);
-  gridLayout->addWidget(lbl,1,0);
-  gridLayout->addWidget(readOnlyChk,1,1);
-  connect(readOnlyChk, SIGNAL(clicked()), this, SLOT(setDirty()));
-
-	help = i18n("If this parameter is yes, then users"
-  					  " of a service may not create or modify"
-              " files in the service's directory.");
-
-	QWhatsThis::add(readOnlyChk,help);
-  QWhatsThis::add(lbl,help);
-
-  guestOkChk = new QCheckBox(innerBox);
-  lbl = new QLabel(i18n("Gue&st ok"),innerBox);
-  lbl->setBuddy(guestOkChk);
-  gridLayout->addWidget(lbl,2,0);
-  gridLayout->addWidget(guestOkChk,2,1);
-  connect(guestOkChk, SIGNAL(clicked()), this, SLOT(setDirty()));
-
-	help = i18n("If this parameter is yes for a service,"
- 		 		"then no password is required to connect to the service. "
-        "Privileges will be those of the guest account.");
-
-  QWhatsThis::add(lbl,help);
-  QWhatsThis::add(guestOkChk,help);
-
-  hostsAllowLineEdit = new QLineEdit(innerBox);
-  lbl = new QLabel(i18n("&Hosts allow"),innerBox);
-  lbl->setBuddy(hostsAllowLineEdit);
-  gridLayout->addWidget(lbl,3,0);
-  gridLayout->addWidget(hostsAllowLineEdit,3,1);
-  connect(hostsAllowLineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(setDirty()));
-
-  help = i18n("This parameter is a comma, space, or tab delimited"
-  					  " set of hosts which are permitted to access a service.");
-
-	QWhatsThis::add(lbl,help);
-  QWhatsThis::add(hostsAllowLineEdit,help);
-
-  hostsDenyLineEdit = new QLineEdit(innerBox);
-  lbl = new QLabel(i18n("Hosts &deny"),innerBox);
-  lbl->setBuddy(hostsDenyLineEdit);
-  gridLayout->addWidget(lbl,4,0);
-  gridLayout->addWidget(hostsDenyLineEdit,4,1);
-  connect(hostsDenyLineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(setDirty()));
-
-  help = i18n("The opposite of hosts allow - hosts listed"
-  					  " here are NOT permitted access to services"
-  					  " unless the specific services have their own"
-  					  " lists to override this one. Where the lists"
-  					  " conflict, the allow list takes precedence.");
-              
-	QWhatsThis::add(lbl,help);
-	QWhatsThis::add(hostsDenyLineEdit,help);
-
-
-  layout->addWidget(secureGrpBox);
-
-  // Browse options
-
-  browseGrpBox = new QVGroupBox(i18n("Other Options"),w);
-  innerBox = new QFrame(browseGrpBox);
-  gridLayout = new QGridLayout(innerBox,2,2,5,5);
-
-  browseableChk = new QCheckBox(innerBox);
-  lbl = new QLabel(i18n("&Browseable"),innerBox);
-  lbl->setBuddy(browseableChk);
-  gridLayout->addWidget(lbl,0,0);
-  gridLayout->addWidget(browseableChk,0,1);
-  connect(browseableChk, SIGNAL(clicked()), this, SLOT(setDirty()));
-
-  help = i18n("This controls whether this share is seen in the"
-  					  " list of available shares in a net view and in the browse list.");
-              
-	QWhatsThis::add(lbl,help);
-  QWhatsThis::add(browseableChk,help);
-
-  // Browse options
-
-//  miscGrpBox = new QVGroupBox(i18n("Miscellaneous Options"),frame);
-//  innerBox = new QFrame(miscGrpBox);
-//  gridLayout = new QGridLayout(innerBox,1,2,5,5);
-
-  availableChk = new QCheckBox(innerBox);
-  lbl = new QLabel(i18n("A&vailable"),innerBox);
-  lbl->setBuddy(availableChk);
-  gridLayout->addWidget(lbl,1,0);
-  gridLayout->addWidget(availableChk,1,1);
-  connect(availableChk, SIGNAL(clicked()), this, SLOT(setDirty()));
-
-  help = i18n("This parameter lets you \"turn off\" a service."
-  					  " If available = no, then ALL attempts to connect"
-              " to the service will fail. Such failures are logged.");
-              
-	QWhatsThis::add(lbl,help);
-  QWhatsThis::add(availableChk,help);
-
-  layout->addWidget(browseGrpBox);
-
-//  layout->addWidget(miscGrpBox);
+  connect(shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
+  connect(shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
 
 	if ( QFileInfo(smbconf).exists() )
 	{
@@ -337,20 +157,19 @@ QWidget* KSambaPropertiesDialogPlugin::createInitWidget(QWidget* parent)
 
     if (share.isEmpty())
     {
-      notSharedRadio->setChecked(true);
-      baseGrpBox->setEnabled(false);
-      secureGrpBox->setEnabled(false);
-      browseGrpBox->setEnabled(false);
-  //    miscGrpBox->setEnabled(false);
+      shareWidget->notSharedRadio->setChecked(true);
+      shareWidget->baseGrp->setEnabled(false);
+      shareWidget->securityGrp->setEnabled(false);
+      shareWidget->otherGrp->setEnabled(false);
     }
     else
     {
-      sharedRadio->setChecked(true);
+      shareWidget->sharedRadio->setChecked(true);
       initValues(share,sambaFile);
     }
 	}
   
-  return w;
+  return shareWidget;
 }
 
 KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
@@ -385,16 +204,15 @@ QString KSambaPropertiesDialogPlugin::findSambaConf() const
 
 void KSambaPropertiesDialogPlugin::initValues(const QString & share, SambaFile & sambaFile)
 {
-
-  nameEdit->setText(share);
-  commentEdit->setText(sambaFile.readValue(share,"comment"));
-  guestAccountEdit->setText(addGlobalText(sambaFile.readValue(share,"guest account"),"guest account", sambaFile));;
-  readOnlyChk->setChecked(sambaFile.readBoolValue(share,"read only"));
-  guestOkChk->setChecked(sambaFile.readBoolValue(share,"guest ok"));
-  hostsAllowLineEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts allow"),"hosts allow", sambaFile));
-  hostsDenyLineEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts deny"),"hosts deny", sambaFile));
-  browseableChk->setChecked(sambaFile.readBoolValue(share,"browseable"));
-  availableChk->setChecked(sambaFile.readBoolValue(share,"available"));
+  shareWidget->nameEdit->setText(share);
+  shareWidget->commentEdit->setText(sambaFile.readValue(share,"comment"));
+  shareWidget->readOnlyChk->setChecked(sambaFile.readBoolValue(share,"read only"));
+  shareWidget->guestOkChk->setChecked(sambaFile.readBoolValue(share,"guest ok"));
+  shareWidget->guestEdit->setText(addGlobalText(sambaFile.readValue(share,"guest account"),"guest account", sambaFile));;
+  shareWidget->allowEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts allow"),"hosts allow", sambaFile));
+  shareWidget->denyEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts deny"),"hosts deny", sambaFile));
+  shareWidget->browseableChk->setChecked(sambaFile.readBoolValue(share,"browseable"));
+  shareWidget->availableChk->setChecked(sambaFile.readBoolValue(share,"available"));
 }
 
 void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
@@ -405,10 +223,9 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
 
   if (state==1)
   {  // Not Shared
-    baseGrpBox->setEnabled(false);
-    secureGrpBox->setEnabled(false);
-    browseGrpBox->setEnabled(false);
-//    miscGrpBox->setEnabled(false);
+    shareWidget->baseGrp->setEnabled(false);
+    shareWidget->securityGrp->setEnabled(false);
+    shareWidget->otherGrp->setEnabled(false);
   }
   else  // shared
   {
@@ -420,10 +237,9 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
       initValues(share,sambaFile);
     }
 
-    baseGrpBox->setEnabled(true);
-    secureGrpBox->setEnabled(true);
-    browseGrpBox->setEnabled(true);
-//    miscGrpBox->setEnabled(true);
+    shareWidget->baseGrp->setEnabled(true);
+    shareWidget->securityGrp->setEnabled(true);
+    shareWidget->otherGrp->setEnabled(true);
   }
   
   emit changed();
@@ -438,47 +254,47 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 
   QString share = sambaFile.findShareByPath(sharePath);
 
-  if (share.isEmpty() && sharedRadio->isChecked())
+  if (share.isEmpty() && shareWidget->sharedRadio->isChecked())
   {
-    if (nameEdit->text().isEmpty())
+    if (shareWidget->nameEdit->text().isEmpty())
     {
        KMessageBox::information(frame,i18n("Please enter a name for the shared directory."),i18n("Information"));
-       nameEdit->setFocus();
+       shareWidget->nameEdit->setFocus();
        properties->abortApplying();
        return;
     }
 
-    share = nameEdit->text();
+    share = shareWidget->nameEdit->text();
 
     if (!sambaFile.newShare(share,sharePath))
     {
        KMessageBox::sorry(frame,i18n("The samba share name '%1' already exists !").arg(share),i18n("Information"));
-       nameEdit->setFocus();
+       shareWidget->nameEdit->setFocus();
        properties->abortApplying();
        return;
     }
   }
 
-  if (!share.isEmpty() && notSharedRadio->isChecked())
+  if (!share.isEmpty() && shareWidget->notSharedRadio->isChecked())
   {
     sambaFile.removeShare(share);
   } 
-  if (!share.isEmpty() && share != nameEdit->text())
+  if (!share.isEmpty() && share != shareWidget->nameEdit->text())
   {
-  	sambaFile.renameShare(share, nameEdit->text());
-    share = nameEdit->text();
+  	sambaFile.renameShare(share, shareWidget->nameEdit->text());
+    share = shareWidget->nameEdit->text();
   }
 
-  if (!share.isEmpty() && sharedRadio->isChecked());
+  if (!share.isEmpty() && shareWidget->sharedRadio->isChecked());
   {
-    sambaFile.writeValue(share, "comment", commentEdit->text());
-    sambaFile.writeValue(share, "guest account", guestAccountEdit->text());
-    sambaFile.writeValue(share, "read only", readOnlyChk->isChecked());
-    sambaFile.writeValue(share, "guest ok", guestOkChk->isChecked());
-    sambaFile.writeValue(share, "hosts allow", hostsAllowLineEdit->text());
-    sambaFile.writeValue(share, "hosts deny", hostsDenyLineEdit->text());
-    sambaFile.writeValue(share, "browseable", browseableChk->isChecked());
-    sambaFile.writeValue(share, "availabe", availableChk->isChecked());
+    sambaFile.writeValue(share, "comment", shareWidget->commentEdit->text());
+    sambaFile.writeValue(share, "read only", shareWidget->readOnlyChk->isChecked());
+    sambaFile.writeValue(share, "guest ok", shareWidget->guestOkChk->isChecked());
+    sambaFile.writeValue(share, "guest account", shareWidget->guestEdit->text());
+    sambaFile.writeValue(share, "hosts allow", shareWidget->allowEdit->text());
+    sambaFile.writeValue(share, "hosts deny", shareWidget->denyEdit->text());
+    sambaFile.writeValue(share, "browseable", shareWidget->browseableChk->isChecked());
+    sambaFile.writeValue(share, "availabe", shareWidget->availableChk->isChecked());
   }
 
 
@@ -524,9 +340,9 @@ void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
     kapp->config()->writeEntry("smb.conf",smbconf);
 		kapp->config()->sync();
 
-		delete initWidget;
-    initWidget = createInitWidget(stack);
-    stack->raiseWidget(initWidget);
+		delete shareWidget;
+    shareWidget = createShareWidget(stack);
+    stack->raiseWidget(shareWidget);
   }
 
 }

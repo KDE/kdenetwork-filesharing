@@ -51,8 +51,8 @@ protected:
 
   QFrame* frame;
   
-  QWidget* initWidget;
-  KonqInterface* configWidget;
+  KonqInterface* shareWidget;
+  QWidget* configWidget;
 
   QWidgetStack *stack;
 
@@ -62,7 +62,7 @@ protected:
   void initValues(const QString & share, SambaFile & sambaFile);
   void init();
   
-  QWidget* createInitWidget(QWidget* parent);
+  KonqInterface* createShareWidget(QWidget* parent);
   QWidget* createConfigWidget(QWidget* parent);
 
 protected slots:

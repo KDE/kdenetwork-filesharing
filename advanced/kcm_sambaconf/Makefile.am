@@ -78,8 +78,8 @@ EXTRA_DIST = $(service_DATA) \
   dictmanager.h \
   qmultichecklistitem.h
 
-data_DATA = kcmsambaconf.desktop
-datadir = $(kde_appsdir)/Settings/Network
+mydata_DATA = kcmsambaconf.desktop
+mydatadir = $(kde_appsdir)/Settings/Network
 
 ## what's going on with this file I don't know
 ## I'm just an automake automaton --exa

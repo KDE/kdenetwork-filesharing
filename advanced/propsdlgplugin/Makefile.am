@@ -10,7 +10,7 @@ fileshare_propsdlgplugin_la_LIBADD = \
     libpropsdlgplugin_common.la \
     ../nfs/libfilesharenfs.la \
     ../kcm_sambaconf/libfilesharesamba.la \
-    $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT) $(LIB_KIO)
+	$(LIB_KIO)
 
 fileshare_propsdlgplugin_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 

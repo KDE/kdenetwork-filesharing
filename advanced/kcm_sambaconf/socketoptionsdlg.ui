@@ -1,0 +1,317 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>SocketOptionsDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>SocketOptionsDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>400</width>
+            <height>227</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Socket options</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>11</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout106</cstring>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QCheckBox" row="2" column="1">
+                    <property name="name">
+                        <cstring>SO_SNDLOWATChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_SNDLOWAT</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="0">
+                    <property name="name">
+                        <cstring>IPTOS_THROUGHPUTChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>IPTOS_THROUGHPUT</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="0" column="1">
+                    <property name="name">
+                        <cstring>SO_SNDBUFChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_SNDBUF</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="0">
+                    <property name="name">
+                        <cstring>SO_KEEPALIVEChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_KEEPALIVE</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>SO_RCVBUFChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_RCVBUF</string>
+                    </property>
+                </widget>
+                <widget class="QSpinBox" row="0" column="2">
+                    <property name="name">
+                        <cstring>SO_SNDBUFSpin</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="maxValue">
+                        <number>100000</number>
+                    </property>
+                </widget>
+                <widget class="QSpinBox" row="3" column="2">
+                    <property name="name">
+                        <cstring>SO_RCVLOWATSpin</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="maxValue">
+                        <number>100000</number>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="5" column="0">
+                    <property name="name">
+                        <cstring>SO_BROADCASTChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_BROADCAST</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="0">
+                    <property name="name">
+                        <cstring>IPTOS_LOWDELAYChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>IPTOS_LOWDELAY</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="0" column="0">
+                    <property name="name">
+                        <cstring>TCP_NODELAYChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>TCP_NODELAY</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="1">
+                    <property name="name">
+                        <cstring>SO_RCVLOWATChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_RCVLOWAT</string>
+                    </property>
+                </widget>
+                <widget class="QSpinBox" row="1" column="2">
+                    <property name="name">
+                        <cstring>SO_RCVBUFSpin</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="maxValue">
+                        <number>100000</number>
+                    </property>
+                </widget>
+                <widget class="QSpinBox" row="2" column="2">
+                    <property name="name">
+                        <cstring>SO_SNDLOWATSpin</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="maxValue">
+                        <number>100000</number>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="4" column="0">
+                    <property name="name">
+                        <cstring>SO_REUSEADDRChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>SO_REUSEADDR</string>
+                    </property>
+                </widget>
+            </grid>
+        </widget>
+        <widget class="QFrame">
+            <property name="name">
+                <cstring>Frame8</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonHelp</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Help</string>
+                    </property>
+                    <property name="accel">
+                        <number>4144</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name" stdset="0">
+                        <cstring>Horizontal Spacing2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonOk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>OK</string>
+                    </property>
+                    <property name="accel">
+                        <number>0</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <number>0</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>SocketOptionsDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>SocketOptionsDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>SO_RCVLOWATChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>SO_RCVLOWATSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>SO_SNDLOWATChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>SO_SNDLOWATSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>SO_RCVBUFChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>SO_RCVBUFSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>SO_SNDBUFChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>SO_SNDBUFSpin</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">assert.h</include>
+    <include location="local" impldecl="in implementation">sambashare.h</include>
+    <include location="local" impldecl="in implementation">socketoptionsdlg.ui.h</include>
+</includes>
+<forwards>
+    <forward>class SambaShare;</forward>
+</forwards>
+<variables>
+    <variable>SambaShare* _share;</variable>
+</variables>
+<slots>
+    <slot>setShare( SambaShare * share )</slot>
+    <slot access="private" returnType="bool">getBoolValue( const QString &amp; str, const QString &amp; name )</slot>
+    <slot access="private" returnType="int">getIntValue( const QString &amp; str, const QString &amp; name )</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

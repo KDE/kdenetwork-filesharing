@@ -160,6 +160,9 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 
   QString newValue = value;
 
+  if (getName() == "global")
+     globalValue = false;
+
   if (name=="read only")
   {
 		synonym = "writeable";

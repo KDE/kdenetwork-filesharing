@@ -5,12 +5,12 @@ kde_module_LTLIBRARIES = libkcm_kcmsambaconf.la ksambakonqiplugin.la
 INCLUDES = $(all_includes)
 
 METASOURCES=AUTO
-libkcm_kcmsambaconf_la_SOURCES = share.ui   kcminterface.ui   kcmprinterdlg.ui   printerdlgimpl.cpp   kcmsambaconf.cpp   sambafile.cpp   sambashare.cpp   sharedlgimpl.cpp   socketoptionsdlg.ui   smbpasswdfile.cpp   passwd.cpp   common.cpp   usertab.ui   usertabimpl.cpp   filemodedlg.ui   filemodedlgimpl.cpp   hiddenfileview.cpp   dictmanager.cpp   qmultichecklistitem.cpp   joindomaindlg.ui smbconfconfigwidget.h smbconfconfigwidget.cpp
+libkcm_kcmsambaconf_la_SOURCES = share.ui   kcminterface.ui   kcmprinterdlg.ui   printerdlgimpl.cpp   kcmsambaconf.cpp   sambafile.cpp   sambashare.cpp   sharedlgimpl.cpp   socketoptionsdlg.ui   smbpasswdfile.cpp   passwd.cpp   common.cpp   usertab.ui   usertabimpl.cpp   filemodedlg.ui   filemodedlgimpl.cpp   hiddenfileview.cpp   dictmanager.cpp   qmultichecklistitem.cpp   joindomaindlg.ui smbconfconfigwidget.h smbconfconfigwidget.cpp linuxpermissionchecker.cpp linuxpermissionchecker.h
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 
-ksambakonqiplugin_la_SOURCES = ksambapropertiesdialogplugin.cpp   konqinterface.ui  	sambafile.cpp   share.ui   sharedlgimpl.cpp   sambashare.cpp   socketoptionsdlg.ui   common.cpp   usertab.ui   usertabimpl.cpp   filemodedlg.ui   smbpasswdfile.cpp   passwd.cpp   filemodedlgimpl.cpp   hiddenfileview.cpp   dictmanager.cpp   qmultichecklistitem.cpp smbconfconfigwidget.cpp smbconfconfigwidget.h
+ksambakonqiplugin_la_SOURCES = ksambapropertiesdialogplugin.cpp   konqinterface.ui  	sambafile.cpp   share.ui   sharedlgimpl.cpp   sambashare.cpp   socketoptionsdlg.ui   common.cpp   usertab.ui   usertabimpl.cpp   filemodedlg.ui   smbpasswdfile.cpp   passwd.cpp   filemodedlgimpl.cpp   hiddenfileview.cpp   dictmanager.cpp   qmultichecklistitem.cpp smbconfconfigwidget.cpp smbconfconfigwidget.h linuxpermissionchecker.h linuxpermissionchecker.cpp
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module

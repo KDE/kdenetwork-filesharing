@@ -66,7 +66,11 @@
 #include "kcmsambaconf.h"
 #include "smbpasswdfile.h"
 #include "passwd.h"
+#include "qmultichecklistitem.h"
 
+
+#define COL_DISABLED 2
+#define COL_NOPASSWORD 3
 
 
 ShareListViewItem::ShareListViewItem(QListView * parent, SambaShare* share)
@@ -171,10 +175,16 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 	: KCModule(parent,name)
 {
-  _dictMngr = new DictManager();
-  
   load();
+  
   initAdvancedTab();
+  
+  if (getuid() != 0) {
+    for (int i=0;i<_interface->mainTab->count();i++) {
+      QWidget* w = _interface->mainTab->page(i);
+      w->setEnabled(false);
+    }
+  }
 };
 
 
@@ -440,6 +450,8 @@ void KcmSambaConf::load()
      share = _sambaFile->newShare("global");
 
 	assert( share);
+  _dictMngr = new DictManager(share);
+  
 
   _interface->configUrlRq->setURL( _smbconf );
 	
@@ -754,6 +766,7 @@ void KcmSambaConf::loadWinbind(SambaShare* share)
 	
 	_dictMngr->add("winbind enum users",_interface->winbindEnumUsersChk);
 	_dictMngr->add("winbind enum groups",_interface->winbindEnumGroupsChk);
+	_dictMngr->add("windbind use default domain",_interface->windbindUseDefaultDomainChk);
 	
 
 }
@@ -848,8 +861,15 @@ void KcmSambaConf::loadUserTab()
   SambaUser *user;
   for ( user = sambaList.first(); user; user = sambaList.next() )
   {
-    new KListViewItem(_interface->sambaUsersListView, user->name, QString::number(user->uid));
+    QMultiCheckListItem* item = new QMultiCheckListItem(_interface->sambaUsersListView);
+    item->setText(0,user->name);
+    item->setText(1,QString::number(user->uid));
+    item->setOn(COL_DISABLED,user->isDisabled);
+    item->setOn(COL_NOPASSWORD,user->hasNoPassword);
+    
     added.append(user->name);
+
+    
   }
 
   UnixUserList unixList = getUnixUserList();
@@ -873,8 +893,34 @@ void KcmSambaConf::loadUserTab()
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
            this, SLOT( removeSambaUserBtnClicked() ));
 
+  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
+           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
 
 
+}
+
+void KcmSambaConf::slotMouseButtonPressed(int btn,QListViewItem* item,const QPoint & p,int col) {
+  if (col < 2)
+    return;
+    
+  SambaShare* share = _sambaFile->getShare("global");
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );    
+  QMultiCheckListItem* i = static_cast<QMultiCheckListItem*>(item);
+  SambaUser user( item->text(0), item->text(1).toInt() );
+  user.isDisabled = i->isOn(COL_DISABLED);
+  user.hasNoPassword = i->isOn(COL_NOPASSWORD);
+    
+  switch(col) {
+    case COL_DISABLED : 
+      if (i->isOn(col)) 
+        passwd.enableUser(user);
+      else
+        passwd.disableUser(user);
+      break;
+    case COL_NOPASSWORD : break;
+  }
+    
+  i->toggle(col);
 }
 
 void KcmSambaConf::saveUserTab()
@@ -898,8 +944,12 @@ void KcmSambaConf::addSambaUserBtnClicked()
       break;
     }
 
-    new KListViewItem(_interface->sambaUsersListView, item->text(0), item->text(1));
-
+    QMultiCheckListItem* sambaItem = new QMultiCheckListItem(_interface->sambaUsersListView);
+    sambaItem->setText(0,user.name);
+    sambaItem->setText(1,QString::number(user.uid));
+    sambaItem->setOn(COL_DISABLED,user.isDisabled);
+    sambaItem->setOn(COL_NOPASSWORD,user.hasNoPassword);
+ 
     list.remove(item);
     delete item;
   }

@@ -37,6 +37,8 @@ ksambakonqiplugin_la_SOURCES = \
   usertab.ui \
   usertabimpl.cpp \
   filemodedlg.ui \
+  smbpasswdfile.cpp \
+  passwd.cpp \
   filemodedlgimpl.cpp 
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)

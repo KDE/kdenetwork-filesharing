@@ -1,0 +1,1149 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>KcmPrinterDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>KcmPrinterDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>533</width>
+            <height>346</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Printer settings</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>11</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QTabWidget">
+            <property name="name">
+                <cstring>TabWidget4</cstring>
+            </property>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Base settings</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>Layout51</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>Frame6</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>Box</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Sunken</enum>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>printerPixLbl</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Pixmap</string>
+                                        </property>
+                                        <property name="scaledContents">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>printerGrp</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="title">
+                                    <string>Printer</string>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>Layout49</cstring>
+                                        </property>
+                                        <grid>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="KURLRequester" row="1" column="1">
+                                                <property name="name">
+                                                    <cstring>pathUrlRq</cstring>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel" row="1" column="0">
+                                                <property name="name">
+                                                    <cstring>TextLabel7</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Path</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLabel" row="0" column="0">
+                                                <property name="name">
+                                                    <cstring>TextLabel4_2</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Queue</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QLayoutWidget" row="0" column="1">
+                                                <property name="name">
+                                                    <cstring>Layout48</cstring>
+                                                </property>
+                                                <hbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <property name="margin">
+                                                        <number>0</number>
+                                                    </property>
+                                                    <property name="spacing">
+                                                        <number>6</number>
+                                                    </property>
+                                                    <widget class="KComboBox">
+                                                        <property name="name">
+                                                            <cstring>queueCombo</cstring>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QCheckBox">
+                                                        <property name="name">
+                                                            <cstring>printersChk</cstring>
+                                                        </property>
+                                                        <property name="enabled">
+                                                            <bool>true</bool>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>share all printers</string>
+                                                        </property>
+                                                    </widget>
+                                                </hbox>
+                                            </widget>
+                                        </grid>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>identifierGrp</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Identifier</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>Lbl_shareName</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Name</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Comment</string>
+                                </property>
+                            </widget>
+                            <widget class="KLineEdit" row="1" column="1">
+                                <property name="name">
+                                    <cstring>commentEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="KLineEdit" row="0" column="1">
+                                <property name="name">
+                                    <cstring>shareNameEdit</cstring>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>GroupBox4</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Main properties</string>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>availableBaseChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Available</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>browseableBaseChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Browseable</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>publicBaseChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Public</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>printableBaseChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Printable</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <spacer>
+                        <property name="name" stdset="0">
+                            <cstring>Spacer18</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Printing</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>printableChk</cstring>
+                        </property>
+                        <property name="text">
+                            <string>printable</string>
+                        </property>
+                    </widget>
+                    <widget class="QCheckBox" row="0" column="2">
+                        <property name="name">
+                            <cstring>postscriptChk</cstring>
+                        </property>
+                        <property name="text">
+                            <string>postscript</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>printerDriverLbl</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Printer driver file</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="5" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>TextLabel5_2_2_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Printer driver location</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="4" column="2">
+                        <property name="name">
+                            <cstring>printerDriverFileEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="5" column="2">
+                        <property name="name">
+                            <cstring>printerDriverLocationEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="3" column="2">
+                        <property name="name">
+                            <cstring>printerDriverEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="3" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>TextLabel5_2_8</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Printer driver</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="2" column="0">
+                        <property name="name">
+                            <cstring>PrintingLbl</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Printing</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="1" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>TextLabel3_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Max print jobs</string>
+                        </property>
+                    </widget>
+                    <spacer row="6" column="1">
+                        <property name="name" stdset="0">
+                            <cstring>Spacer24</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget" row="2" column="2">
+                        <property name="name">
+                            <cstring>Layout43</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QComboBox">
+                                <item>
+                                    <property name="text">
+                                        <string>sysv</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>aix</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>hpux</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>bsd</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>qnx</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>plp</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>lprnq</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>softq</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>cups</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>nt</string>
+                                    </property>
+                                </item>
+                                <item>
+                                    <property name="text">
+                                        <string>os2</string>
+                                    </property>
+                                </item>
+                                <property name="name">
+                                    <cstring>printingCombo</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer25</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget" row="1" column="2">
+                        <property name="name">
+                            <cstring>Layout44</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="KIntNumInput">
+                                <property name="name">
+                                    <cstring>maxPrintJobsInput</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer26</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Commands</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QLabel" row="0" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Print command</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="0" column="1">
+                        <property name="name">
+                            <cstring>printCommandEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="1" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>lpq command</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="1" column="1">
+                        <property name="name">
+                            <cstring>lpqCommandEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="2" column="1">
+                        <property name="name">
+                            <cstring>lprmCommandEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="2" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_3</cstring>
+                        </property>
+                        <property name="text">
+                            <string>lprm command</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="4" column="1">
+                        <property name="name">
+                            <cstring>lpresumeEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="3" column="1">
+                        <property name="name">
+                            <cstring>lppauseEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="4" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_5</cstring>
+                        </property>
+                        <property name="text">
+                            <string>lpresume</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="5" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_6</cstring>
+                        </property>
+                        <property name="text">
+                            <string>queuepause</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="3" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_4</cstring>
+                        </property>
+                        <property name="text">
+                            <string>lppause</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="5" column="1">
+                        <property name="name">
+                            <cstring>queuepauseEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="6" column="1">
+                        <property name="name">
+                            <cstring>queueresumeEdit</cstring>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="6" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5_2_7</cstring>
+                        </property>
+                        <property name="text">
+                            <string>queueresume</string>
+                        </property>
+                    </widget>
+                    <spacer row="7" column="0">
+                        <property name="name" stdset="0">
+                            <cstring>Spacer23</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Security</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>guestOkChk</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Guest ok</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>If this is checked , then no password is required to connect to the service. Privileges will be those of the guest account.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="1" column="0">
+                        <property name="name">
+                            <cstring>TextLabel1_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Guest &amp;account</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>guestAccountEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="1" column="1">
+                        <property name="name">
+                            <cstring>guestAccountEdit</cstring>
+                        </property>
+                        <property name="toolTip" stdset="0">
+                            <string>Guest account</string>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="4" column="0">
+                        <property name="name">
+                            <cstring>TextLabel6</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Hosts &amp;deny</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>hostsDenyEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="4" column="1">
+                        <property name="name">
+                            <cstring>hostsDenyEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="3" column="1">
+                        <property name="name">
+                            <cstring>hostsAllowEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="3" column="0">
+                        <property name="name">
+                            <cstring>TextLabel5</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Hosts allow</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>hostsAllowEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="2" column="0">
+                        <property name="name">
+                            <cstring>TextLabel6_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Printer admin</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>printerAdminEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLineEdit" row="2" column="1">
+                        <property name="name">
+                            <cstring>printerAdminEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                        </property>
+                    </widget>
+                    <spacer row="5" column="0">
+                        <property name="name" stdset="0">
+                            <cstring>Spacer21</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </grid>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Advanced</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>Layout45</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox27</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>&amp;Tuning</string>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>TextLabel1</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Min print space</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput">
+                                        <property name="name">
+                                            <cstring>minPrintSpaceInput</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>10000000</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>textLabel2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>kB</string>
+                                            <comment>kilo Byte</comment>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox17</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>&amp;Logging</string>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>statusChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>status</string>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>GroupBox31</cstring>
+                        </property>
+                        <property name="title">
+                            <string>&amp;Miscellaneous</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QLineEdit" row="1" column="1">
+                                <property name="name">
+                                    <cstring>postExecEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="0" column="1">
+                                <property name="name">
+                                    <cstring>preExecEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel6_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>preexec</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="2" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel6_3_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>root preexec</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="2" column="1">
+                                <property name="name">
+                                    <cstring>rootPreExecEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="3" column="1">
+                                <property name="name">
+                                    <cstring>rootPostExecEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="3" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel6_3_4</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>root postexec</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel6_3_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>postexec</string>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                    <spacer>
+                        <property name="name" stdset="0">
+                            <cstring>Spacer22</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </vbox>
+            </widget>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonHelp</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Help</string>
+                    </property>
+                    <property name="accel">
+                        <number>4144</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name" stdset="0">
+                        <cstring>Horizontal Spacing2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonOk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>OK</string>
+                    </property>
+                    <property name="accel">
+                        <number>0</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <number>0</number>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>printersChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>queueCombo</receiver>
+        <slot>setDisabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>printersChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>shareNameEdit</receiver>
+        <slot>setDisabled(bool)</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>printerAdminEdit</tabstop>
+    <tabstop>TabWidget4</tabstop>
+    <tabstop>queueCombo</tabstop>
+    <tabstop>printersChk</tabstop>
+    <tabstop>commentEdit</tabstop>
+    <tabstop>shareNameEdit</tabstop>
+    <tabstop>availableBaseChk</tabstop>
+    <tabstop>browseableBaseChk</tabstop>
+    <tabstop>publicBaseChk</tabstop>
+    <tabstop>guestOkChk</tabstop>
+    <tabstop>guestAccountEdit</tabstop>
+    <tabstop>hostsDenyEdit</tabstop>
+    <tabstop>hostsAllowEdit</tabstop>
+    <tabstop>buttonHelp</tabstop>
+    <tabstop>buttonOk</tabstop>
+    <tabstop>buttonCancel</tabstop>
+</tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">kiconloader.h</include>
+    <include location="local" impldecl="in implementation">kcmprinterdlg.ui.h</include>
+</includes>
+<slots>
+    <slot>init()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

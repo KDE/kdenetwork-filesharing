@@ -2533,12 +2533,12 @@ Only change something if you know what you are doing.</string>
                                 </widget>
                                 <widget class="QLineEdit" row="2" column="1">
                                     <property name="name">
-                                        <cstring>rootPreexecEdit</cstring>
+                                        <cstring>postexecEdit</cstring>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="1" column="1">
                                     <property name="name">
-                                        <cstring>postexecEdit</cstring>
+                                        <cstring>rootPreexecEdit</cstring>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="3" column="1">
@@ -2774,6 +2774,8 @@ Only change something if you know what you are doing.</string>
         </widget>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <connections>
     <connection>
         <sender>buttonCancel</sender>
@@ -2985,8 +2987,8 @@ Only change something if you know what you are doing.</string>
     <tabstop>msdfsRootChk</tabstop>
     <tabstop>msdfsProxyChk</tabstop>
     <tabstop>preexecEdit</tabstop>
-    <tabstop>postexecEdit</tabstop>
     <tabstop>rootPreexecEdit</tabstop>
+    <tabstop>postexecEdit</tabstop>
     <tabstop>rootPostexecEdit</tabstop>
     <tabstop>preexecCloseChk</tabstop>
     <tabstop>rootPreexecCloseChk</tabstop>
@@ -3101,4 +3103,7 @@ Only change something if you know what you are doing.</string>
     <slot>buttonHelp_clicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
 </UI>

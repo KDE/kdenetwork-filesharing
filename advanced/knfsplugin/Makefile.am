@@ -3,18 +3,8 @@ kde_module_LTLIBRARIES = \
 	knfskonqiplugin.la \
   kcm_kcmnfsmodule.la
 
-knfskonqiplugin_la_METASOURCES = \
-  nfsdialogimpl.moc \
-  nfsconfigwidget.moc \
-  hostprops.moc
-
-kcm_kcmnfsmodule_la_METASOURCES = \
-	cmdialogimpl.moc \
-	nfsdialog.moc \
-	nfsdialogimpl.moc \
-	nfsconfigwidget.moc \
-  hostprops.moc \
-  kcmnfsmodule.moc
+knfskonqiplugin_la_METASOURCES = AUTO
+kcm_kcmnfsmodule_la_METASOURCES = AUTO
 
 kcm_kcmnfsmodule_la_SOURCES = \
 	cmdialogimpl.cpp \

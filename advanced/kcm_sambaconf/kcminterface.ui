@@ -58,36 +58,41 @@
             <property name="name">
                 <cstring>mainTab</cstring>
             </property>
+            <property name="whatsThis" stdset="0">
+                <string>&lt;qt&gt;
+Here you can edit the Samba users, stored in the smbpasswd file.
+&lt;p&gt;
+Every Samba user must have a corresponding Unix user.
+On the right you can see all Unix users, stored in the passwd file and not configured as Samba users.
+You can see the Samba users on the left side.
+&lt;p&gt;
+To add new Samba users simply press the &lt;em&gt;&amp;lt; add&lt;/em&gt; button.
+The selected Unix users will then become Samba users and will
+removed from the Unix users list (but they will remain Unix users).
+&lt;p&gt;
+To remove a Samba users press the &lt;em&gt;&amp;gt; remove&lt;/em&gt; button.
+The selected Samba users will be removed from the smbpasswd file,
+and reappear on the right side, as Unix users which aren't Samba users.
+&lt;/qt&gt;</string>
+            </property>
             <widget class="QWidget">
                 <property name="name">
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Base Settings</string>
+                    <string>&amp;Base Settings</string>
                 </attribute>
                 <vbox>
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <property name="margin">
-                        <number>11</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
-                    </property>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout13_2</cstring>
+                            <cstring>layout38</cstring>
                         </property>
                         <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
                             </property>
                             <widget class="QLabel">
                                 <property name="name">
@@ -102,10 +107,24 @@
                                 <property name="text">
                                     <string>Samba config file:</string>
                                 </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>configUrlRq</cstring>
+                                </property>
                             </widget>
                             <widget class="KURLRequester">
                                 <property name="name">
                                     <cstring>configUrlRq</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>loadBtn</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="text">
+                                    <string>Load</string>
                                 </property>
                             </widget>
                         </hbox>
@@ -119,7 +138,7 @@
                             </font>
                         </property>
                         <property name="title">
-                            <string>Server &amp;Identification</string>
+                            <string>Server Identification</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -140,7 +159,10 @@
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Workgroup:</string>
+                                    <string>&amp;Workgroup:</string>
+                                </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>workgroupEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="KLineEdit" row="0" column="1">
@@ -182,7 +204,10 @@
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Server string:</string>
+                                    <string>Server stri&amp;ng:</string>
+                                </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>serverStringEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -194,7 +219,10 @@
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>NetBIOS name:</string>
+                                    <string>NetBI&amp;OS name:</string>
+                                </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>netbiosNameEdit</cstring>
                                 </property>
                             </widget>
                         </grid>
@@ -243,7 +271,7 @@
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>Share</string>
+                                            <string>S&amp;hare</string>
                                         </property>
                                         <property name="checked">
                                             <bool>true</bool>
@@ -258,7 +286,7 @@
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>User</string>
+                                            <string>Use&amp;r</string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -270,7 +298,7 @@
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>Server</string>
+                                            <string>Ser&amp;ver</string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -282,7 +310,7 @@
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>Domain</string>
+                                            <string>Do&amp;main</string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -363,7 +391,7 @@
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Allow guest logins</string>
+                                    <string>Allow guest &amp;logins</string>
                                 </property>
                             </widget>
                             <widget class="QLineEdit" row="0" column="1">
@@ -372,18 +400,6 @@
                                 </property>
                                 <property name="enabled">
                                     <bool>false</bool>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="2" column="0">
-                                <property name="name">
-                                    <cstring>encryptPasswordsChk</cstring>
-                                </property>
-                                <property name="font">
-                                    <font>
-                                    </font>
-                                </property>
-                                <property name="text">
-                                    <string>Encrypt passwords  </string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="1">
@@ -403,28 +419,33 @@
                             </widget>
                             <widget class="QLayoutWidget" row="1" column="1">
                                 <property name="name">
-                                    <cstring>Layout53</cstring>
+                                    <cstring>layout39</cstring>
                                 </property>
                                 <hbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <property name="margin">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
                                     <widget class="QLabel">
                                         <property name="name">
                                             <cstring>TextLabel6_5</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
                                         </property>
                                         <property name="font">
                                             <font>
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>Guest account:</string>
+                                            <string>&amp;Guest account:</string>
+                                        </property>
+                                        <property name="buddy" stdset="0">
+                                            <cstring>guestAccountCombo</cstring>
                                         </property>
                                     </widget>
                                     <widget class="QComboBox">
@@ -433,13 +454,12 @@
                                         </property>
                                         <property name="font">
                                             <font>
-                                                <bold>1</bold>
                                             </font>
                                         </property>
                                     </widget>
                                     <spacer>
                                         <property name="name">
-                                            <cstring>Spacer50</cstring>
+                                            <cstring>spacer44</cstring>
                                         </property>
                                         <property name="orientation">
                                             <enum>Horizontal</enum>
@@ -449,12 +469,24 @@
                                         </property>
                                         <property name="sizeHint">
                                             <size>
-                                                <width>30</width>
-                                                <height>0</height>
+                                                <width>40</width>
+                                                <height>20</height>
                                             </size>
                                         </property>
                                     </spacer>
                                 </hbox>
+                            </widget>
+                            <widget class="QCheckBox" row="2" column="0">
+                                <property name="name">
+                                    <cstring>encryptPasswordsChk</cstring>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                    </font>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Encrypt passwords  </string>
+                                </property>
                             </widget>
                         </grid>
                     </widget>
@@ -549,8 +581,8 @@
                         </property>
                         <property name="sizeHint">
                             <size>
-                                <width>0</width>
-                                <height>16</height>
+                                <width>16</width>
+                                <height>34</height>
                             </size>
                         </property>
                     </spacer>
@@ -857,12 +889,6 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <property name="margin">
-                        <number>11</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
-                    </property>
                     <widget class="QLayoutWidget">
                         <property name="name">
                             <cstring>Layout46</cstring>
@@ -925,6 +951,14 @@
                                 <property name="name">
                                     <cstring>sambaUsersListView</cstring>
                                 </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>10</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
                             </widget>
                             <widget class="QLayoutWidget">
                                 <property name="name">
@@ -945,7 +979,7 @@
                                             <cstring>addSambaUserBtn</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>&lt;</string>
+                                            <string>&lt; add     </string>
                                         </property>
                                     </widget>
                                     <widget class="QPushButton">
@@ -953,7 +987,7 @@
                                             <cstring>removeSambaUserBtn</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>&gt;</string>
+                                            <string>  remove &gt;</string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -984,29 +1018,42 @@
                                 <property name="name">
                                     <cstring>unixUsersListView</cstring>
                                 </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>5</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
                             </widget>
                         </hbox>
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout47</cstring>
+                            <cstring>layout55</cstring>
                         </property>
                         <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
                             </property>
                             <widget class="QPushButton">
                                 <property name="name">
                                     <cstring>sambaUserPasswordBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Change Password</string>
+                                    <string>&amp;Change Password</string>
+                                </property>
+                            </widget>
+                            <widget class="QPushButton">
+                                <property name="name">
+                                    <cstring>joinADomainBtn</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Join a domain</string>
                                 </property>
                             </widget>
                             <spacer>
@@ -1021,8 +1068,8 @@
                                 </property>
                                 <property name="sizeHint">
                                     <size>
-                                        <width>20</width>
-                                        <height>0</height>
+                                        <width>240</width>
+                                        <height>20</height>
                                     </size>
                                 </property>
                             </spacer>
@@ -1550,15 +1597,9 @@ Only change something if you know what you are doing !</string>
                 <attribute name="title">
                     <string>Advanced Dump</string>
                 </attribute>
-                <hbox>
+                <vbox>
                     <property name="name">
                         <cstring>unnamed</cstring>
-                    </property>
-                    <property name="margin">
-                        <number>0</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
                     </property>
                     <widget class="QTabWidget">
                         <property name="name">
@@ -3092,6 +3133,47 @@ Only change something if you know what you are doing !</string>
                                         <string>Kernel oplocks</string>
                                     </property>
                                 </widget>
+                                <spacer row="5" column="0">
+                                    <property name="name">
+                                        <cstring>spacer59</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>200</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="KIntSpinBox" row="4" column="1">
+                                    <property name="name">
+                                        <cstring>lockSpinTimeSpin</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>2147483647</number>
+                                    </property>
+                                </widget>
+                                <widget class="KIntSpinBox" row="2" column="1">
+                                    <property name="name">
+                                        <cstring>oplockBreakWaitTimeSpin</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>2147483647</number>
+                                    </property>
+                                </widget>
+                                <widget class="KIntSpinBox" row="3" column="1">
+                                    <property name="name">
+                                        <cstring>lockSpinCountSpin</cstring>
+                                    </property>
+                                    <property name="maxValue">
+                                        <number>2147483647</number>
+                                    </property>
+                                </widget>
                                 <widget class="QLabel" row="2" column="0">
                                     <property name="name">
                                         <cstring>textLabel2</cstring>
@@ -3108,6 +3190,55 @@ Only change something if you know what you are doing !</string>
                                         <set>AlignVCenter</set>
                                     </property>
                                 </widget>
+                                <widget class="QLabel" row="2" column="2">
+                                    <property name="name">
+                                        <cstring>textLabel3</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>milliseconds</string>
+                                    </property>
+                                </widget>
+                                <spacer row="2" column="3">
+                                    <property name="name">
+                                        <cstring>spacer60</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>200</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QLabel" row="4" column="2">
+                                    <property name="name">
+                                        <cstring>textLabel3_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>microseconds</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel2_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Lock spin count:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="4" column="0">
+                                    <property name="name">
+                                        <cstring>textLabel2_2_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Lock spin time:</string>
+                                    </property>
+                                </widget>
                                 <widget class="QLabel" row="1" column="0">
                                     <property name="name">
                                         <cstring>TextLabel5_2</cstring>
@@ -3116,70 +3247,10 @@ Only change something if you know what you are doing !</string>
                                         <string>Lock directory:</string>
                                     </property>
                                 </widget>
-                                <widget class="KURLRequester" row="1" column="1">
+                                <widget class="KURLRequester" row="1" column="1" rowspan="1" colspan="3">
                                     <property name="name">
                                         <cstring>lockDirectoryUrlRq</cstring>
                                     </property>
-                                </widget>
-                                <spacer row="3" column="0">
-                                    <property name="name">
-                                        <cstring>spacer59</cstring>
-                                    </property>
-                                    <property name="orientation">
-                                        <enum>Vertical</enum>
-                                    </property>
-                                    <property name="sizeType">
-                                        <enum>Expanding</enum>
-                                    </property>
-                                    <property name="sizeHint">
-                                        <size>
-                                            <width>20</width>
-                                            <height>40</height>
-                                        </size>
-                                    </property>
-                                </spacer>
-                                <widget class="QLayoutWidget" row="2" column="1">
-                                    <property name="name">
-                                        <cstring>layout54</cstring>
-                                    </property>
-                                    <hbox>
-                                        <property name="name">
-                                            <cstring>unnamed</cstring>
-                                        </property>
-                                        <widget class="KIntSpinBox">
-                                            <property name="name">
-                                                <cstring>oplockBreakWaitTimeSpin</cstring>
-                                            </property>
-                                            <property name="maxValue">
-                                                <number>2147483647</number>
-                                            </property>
-                                        </widget>
-                                        <widget class="QLabel">
-                                            <property name="name">
-                                                <cstring>textLabel3</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>milliseconds</string>
-                                            </property>
-                                        </widget>
-                                        <spacer>
-                                            <property name="name">
-                                                <cstring>spacer60</cstring>
-                                            </property>
-                                            <property name="orientation">
-                                                <enum>Horizontal</enum>
-                                            </property>
-                                            <property name="sizeType">
-                                                <enum>Expanding</enum>
-                                            </property>
-                                            <property name="sizeHint">
-                                                <size>
-                                                    <width>200</width>
-                                                    <height>20</height>
-                                                </size>
-                                            </property>
-                                        </spacer>
-                                    </hbox>
                                 </widget>
                             </grid>
                         </widget>
@@ -5512,8 +5583,49 @@ This is only available if the SSL libraries have been compiled on your system an
                                 </spacer>
                             </vbox>
                         </widget>
+                        <widget class="QWidget">
+                            <property name="name">
+                                <cstring>tab</cstring>
+                            </property>
+                            <attribute name="title">
+                                <string>Debug</string>
+                            </attribute>
+                            <vbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>ntStatusSupportChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>NT status support</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer81</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>40</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </vbox>
+                        </widget>
                     </widget>
-                </hbox>
+                </vbox>
             </widget>
         </widget>
     </vbox>
@@ -5895,10 +6007,12 @@ This is only available if the SSL libraries have been compiled on your system an
     <includehint>kpushbutton.h</includehint>
     <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
     <includehint>kurlrequester.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>kpushbutton.h</includehint>
-    <includehint>knuminput.h</includehint>
     <includehint>kurlrequester.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>kpushbutton.h</includehint>

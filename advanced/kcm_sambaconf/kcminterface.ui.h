@@ -136,3 +136,6 @@ void KcmInterface::mapToGuestCombo_activated( int i)
 {
     allowGuestLoginsChk->setChecked(i>0);
 }
+
+
+

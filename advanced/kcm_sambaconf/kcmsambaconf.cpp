@@ -57,6 +57,9 @@
 #include "socketoptionsdlg.h"
 
 #include "kcmsambaconf.h"
+#include "smbpasswdfile.h"
+#include "passwd.h"
+
 
 
 ShareListViewItem::ShareListViewItem(QListView * parent, SambaShare* share)
@@ -479,8 +482,82 @@ void KcmSambaConf::load()
   _interface->announceVersionEdit->setText( share->getValue("announce version",false,true) );
   _interface->nameResolveOrderEdit->setText( share->getValue("name resolve order",false,true) );
 
+  loadUserTab();
+
   connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
 }
+
+void KcmSambaConf::loadUserTab()
+{
+  SambaShare* share = _sambaFile->getShare("global");
+
+  QStringList added;
+
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SambaUserList sambaList = passwd.getSambaUserList();
+
+  SambaUser *user;
+  for ( user = sambaList.first(); user; user = sambaList.next() )
+  {
+    new KListViewItem(_interface->sambaUsersListView, user->name, QString::number(user->uid));
+    added.append(user->name);
+  }
+
+  UnixUserList unixList = getUnixUserList();
+
+  UnixUser *unixUser;
+  for ( unixUser = unixList.first(); unixUser; unixUser = unixList.next() )
+  {
+    QStringList::Iterator it;
+
+    it=added.find(unixUser->name);
+    if (it == added.end())
+        new KListViewItem(_interface->unixUsersListView, unixUser->name, QString::number(unixUser->uid));
+  }
+
+  _interface->unixUsersListView->setSelectionMode(QListView::Extended);
+  _interface->sambaUsersListView->setSelectionMode(QListView::Extended);
+
+  connect( _interface->addSambaUserBtn, SIGNAL(clicked()),
+           this, SLOT( addSambaUserBtnClicked() ));
+
+  connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
+           this, SLOT( removeSambaUserBtnClicked() ));
+
+
+
+}
+
+void KcmSambaConf::saveUserTab()
+{
+}
+
+void KcmSambaConf::addSambaUserBtnClicked()
+{
+  QPtrList<QListViewItem> list = _interface->unixUsersListView->selectedItems();
+
+  QListViewItem* item;
+  for ( item = list.first(); item; item = list.first() )
+  {
+    new KListViewItem(_interface->sambaUsersListView, item->text(0), item->text(1));
+    list.remove(item);
+    delete item;
+  }
+}
+
+void KcmSambaConf::removeSambaUserBtnClicked()
+{
+  QPtrList<QListViewItem> list = _interface->sambaUsersListView->selectedItems();
+
+  QListViewItem* item;
+  for ( item = list.first(); item; item = list.first() )
+  {
+    new KListViewItem(_interface->unixUsersListView, item->text(0), item->text(1));
+    list.remove(item);
+    delete item;
+  }
+}
+
 
 void KcmSambaConf::defaults() {
 	// insert your default settings code here...

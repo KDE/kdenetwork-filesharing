@@ -46,3 +46,5 @@ void KcmInterface::changedSlot()
 {
     emit changed();
 }
+
+

@@ -15,7 +15,7 @@ libkcm_kcmsambaconf_la_SOURCES = \
   sharedlgimpl.cpp \
   socketoptionsdlg.ui \
   smbpasswdfile.cpp \
-  passwd.h \
+  passwd.cpp \
   common.h
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
@@ -50,7 +50,8 @@ EXTRA_DIST = $(service_DATA) \
   sharedlgimpl.h \
   sambashare.h \
   socketoptionsdlg.ui \
-  smbpasswdfile.h
+  smbpasswdfile.h \
+  passwd.h
 
 
 apps_DATA = kcmsambaconf.desktop

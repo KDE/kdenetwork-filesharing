@@ -36,6 +36,7 @@
 #include <qptrlist.h>
 #include <qlistview.h>
 
+
 class SambaShare;
 class SambaFile;
 class QPixmap;
@@ -92,6 +93,13 @@ class KcmSambaConf: public KCModule
      **/
   	QString _smbconf;
 		SambaFile* _sambaFile;
+
+    void loadUserTab();
+    void saveUserTab();
+
+  protected slots:
+    void addSambaUserBtnClicked();
+    void removeSambaUserBtnClicked();
 
   private:
 		KAboutData* _myAboutData;

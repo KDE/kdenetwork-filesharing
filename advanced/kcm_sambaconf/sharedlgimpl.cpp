@@ -260,6 +260,7 @@ void ShareDlgImpl::initDialog()
 
 ShareDlgImpl::~ShareDlgImpl()
 {
+  delete _fileView;
 }
 
 void ShareDlgImpl::initAdvancedTab() 

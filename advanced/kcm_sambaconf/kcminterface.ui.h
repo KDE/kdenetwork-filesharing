@@ -48,3 +48,14 @@ void KcmInterface::changedSlot()
 }
 
 
+
+
+
+
+
+
+void KcmInterface::securityLevelCombo_activated( int i )
+{
+   passwordServerEdit->setDisabled(i<2);
+    
+}

@@ -922,7 +922,7 @@
                                     <cstring>securityLevelCombo</cstring>
                                 </property>
                                 <property name="currentItem">
-                                    <number>2</number>
+                                    <number>0</number>
                                 </property>
                                 <property name="duplicatesEnabled">
                                     <bool>false</bool>
@@ -1198,6 +1198,9 @@
                                                     <widget class="KLineEdit" row="0" column="1">
                                                         <property name="name">
                                                             <cstring>passwordServerEdit</cstring>
+                                                        </property>
+                                                        <property name="enabled">
+                                                            <bool>false</bool>
                                                         </property>
                                                         <property name="font">
                                                             <font>
@@ -1900,19 +1903,6 @@
                                 </rect>
                             </property>
                         </widget>
-                        <widget class="KLineEdit">
-                            <property name="name">
-                                <cstring>winsServerEdit</cstring>
-                            </property>
-                            <property name="geometry">
-                                <rect>
-                                    <x>40</x>
-                                    <y>140</y>
-                                    <width>250</width>
-                                    <height>20</height>
-                                </rect>
-                            </property>
-                        </widget>
                         <widget class="QRadioButton">
                             <property name="name">
                                 <cstring>winsSupportRadio</cstring>
@@ -1927,6 +1917,22 @@
                             </property>
                             <property name="text">
                                 <string>Act as a Wins server</string>
+                            </property>
+                        </widget>
+                        <widget class="KLineEdit">
+                            <property name="name">
+                                <cstring>winsServerEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>40</x>
+                                    <y>140</y>
+                                    <width>250</width>
+                                    <height>20</height>
+                                </rect>
                             </property>
                         </widget>
                     </widget>
@@ -3842,6 +3848,12 @@
         <receiver>KcmInterface</receiver>
         <slot>changedSlot()</slot>
     </connection>
+    <connection>
+        <sender>securityLevelCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>securityLevelCombo_activated(int)</slot>
+    </connection>
 </connections>
 <includes>
     <include location="global" impldecl="in declaration">qptrlist.h</include>
@@ -3855,6 +3867,7 @@
 <slots>
     <slot>init()</slot>
     <slot>changedSlot()</slot>
+    <slot>securityLevelCombo_activated( int i )</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

@@ -23,7 +23,7 @@ libkcm_kcmsambaconf_la_SOURCES = \
   filemodedlg.ui \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
-  dictmanager.cpp
+  dictmanager.cpp 
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -44,7 +44,7 @@ ksambakonqiplugin_la_SOURCES = \
   passwd.cpp \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
-  dictmanager.cpp
+  dictmanager.cpp 
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
@@ -73,12 +73,11 @@ EXTRA_DIST = $(service_DATA) \
   filemodedlg.ui.h \
   filemodedlgimpl.h \
   hiddenfileview.h \
-  dictmanager.h
+  dictmanager.h 
 
 
-apps_DATA = kcmsambaconf.desktop
-appsdir = $(kde_appsdir)/Settings/Network
-
+data_DATA = kcmsambaconf.desktop
+datadir = $(kde_appsdir)/Settings/Network
 
 #messages:
 #	$(XGETTEXT) $(libkcm_kcm_sambaconf_la_SOURCES) -o $(podir)/kcm_sambaconf.pot

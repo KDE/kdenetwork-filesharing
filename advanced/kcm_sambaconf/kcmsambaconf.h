@@ -32,7 +32,6 @@
 #define KCMSAMBACONF_H_
 
 #include <kcmodule.h>
-#include <kaboutdata.h>
 #include <kcminterface.h>
 #include <share.h>
 #include <qptrlist.h>
@@ -79,7 +78,6 @@ class KcmSambaConf: public KCModule
     void defaults();
     int buttons();
     QString quickHelp() const;
-    const KAboutData* aboutData() {return _myAboutData; };
 
   public slots:
     void configChanged();
@@ -153,7 +151,6 @@ class KcmSambaConf: public KCModule
     void slotSpecifySmbConf(const QString &);
     
   private:
-    KAboutData* _myAboutData;
     KcmInterface* _interface;
     KJanusWidget* _janus;
     SmbConfConfigWidget* m_smbConfConfigWidget;

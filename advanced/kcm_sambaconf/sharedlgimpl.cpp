@@ -248,7 +248,7 @@ void ShareDlgImpl::accept()
 void ShareDlgImpl::homeChkToggled(bool b)
 {
   shareNameEdit->setDisabled(b);
-	pathUrlRq->->setDisabled(b);
+	pathUrlRq->setDisabled(b);
 
 	if (b)
   {

@@ -2,7 +2,7 @@
                           sambafile.cpp  -  description
                             -------------------
     begin                : Son Apr 14 2002
-    copyright            : (C) 2002-2003 by Jan Schäfer
+    copyright            : (C) 2002-2003 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
@@ -176,7 +176,7 @@ void SambaFile::slotApply()
   KProcess* proc = new KProcess();
 
   if (KURL(path).isLocalFile()) {
-    KMessageBox::information(0,i18n("Local File !"));
+    KMessageBox::information(0,i18n("Local file!"));
     _tempFile->setAutoDelete(false); // Would otherwise be deleted before the command is executed!
     QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(_tempFile->name()).arg(path).arg(path).arg(chmodCmd).arg(_tempFile->name());
     *proc << "kdesu" << suCommand;
@@ -197,7 +197,7 @@ void SambaFile::slotApply()
 
 
 
-  //KMessageBox::information(0,i18n("Changes successfully saved !"));
+  //KMessageBox::information(0,i18n("Changes successfully saved!"));
 
 
 }

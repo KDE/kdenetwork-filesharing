@@ -2,7 +2,7 @@
                           hiddenfileview.cpp  -  description
                              -------------------
     begin                : Wed Jan 1 2003
-    copyright            : (C) 2003 by Jan Schäfer
+    copyright            : (C) 2003 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -114,7 +114,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 
   _hiddenActn = new KToggleAction(i18n("&Hide"));
   _vetoActn = new KToggleAction(i18n("&Veto"));
-  _vetoOplockActn = new KToggleAction(i18n("&Veto oplock"));
+  _vetoOplockActn = new KToggleAction(i18n("&Veto Oplock"));
 
   initListView();
 

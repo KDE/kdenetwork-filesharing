@@ -2,7 +2,7 @@
                           nfshostdlg.cpp  -  description
                              -------------------
     begin                : Mon Apr 29 2002
-    copyright            : (C) 2002 by Jan Schäfer
+    copyright            : (C) 2002 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -33,7 +33,7 @@
 
 
 NFSHostDlg::NFSHostDlg(QWidget* parent, HostList* hosts, NFSEntry* entry)
-  : KDialogBase(Plain, i18n("Host properties"), Ok|Cancel, Ok, parent),
+  : KDialogBase(Plain, i18n("Host Properties"), Ok|Cancel, Ok, parent),
   m_hosts(hosts), m_nfsEntry(entry), m_modified(false)
 {
 

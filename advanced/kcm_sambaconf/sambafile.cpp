@@ -661,7 +661,7 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
 
     for (QMap<QString,QString>::Iterator it2 = entries.begin(); it2 != entries.end(); ++it2 )
     {
-      if (it2.data()!="")
+      if (!it2.data().isEmpty())
           share->setValue(it2.key(),QString(it2.data()),false,false);
     }
 

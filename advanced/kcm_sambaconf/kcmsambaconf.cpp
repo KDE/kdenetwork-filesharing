@@ -756,7 +756,7 @@ void KcmSambaConf::loadWins(SambaShare* share)
   _dictMngr->add("wins server", _interface->winsServerEdit);
   _dictMngr->add("wins hook", _interface->winsHookEdit);
   _interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
-  _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
+  _interface->otherWinsRadio->setChecked( !share->getValue("wins server",false,true).isEmpty() );
 }
 
 

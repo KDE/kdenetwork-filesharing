@@ -202,7 +202,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   // If the option has a comment we don't remove
   // it if the value is equal to the default value.
   // That's because the author of the option has thought about it.
-  if (defaultValue && global=="" && !hasComments(synonym))
+  if (defaultValue && global.isEmpty() && !hasComments(synonym))
   {
     if ( newValue.stripWhiteSpace().lower() == getDefaultValue(synonym).stripWhiteSpace().lower() )
     {

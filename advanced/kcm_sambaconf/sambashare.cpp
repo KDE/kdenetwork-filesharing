@@ -190,6 +190,11 @@ void SambaShare::setValue(const QString & name, bool value, bool globalValue=tru
 	setValue(name,SambaFile::textFromBool(value),globalValue, defaultValue);
 }
 
+void SambaShare::setValue(const QString & name, int value, bool globalValue=true, bool defaultValue=true)
+{
+	setValue(name,QString::number(value),globalValue, defaultValue);
+}
+
 /**
  * Returns the default value of the parameter
  **/
@@ -219,6 +224,7 @@ QString SambaShare::getDefaultValue(const QString & name) const
 	if (lname == "guest ok") return "no";
 	if (lname == "guest only") return "no";
 	if (lname == "user only") return "no";
+  if (lname == "workgroup") return "WORKGROUP";
 
   // Logging options
 

@@ -78,7 +78,7 @@ public:
   /**
    * Same as above but for boolean parameters
    * Don't use defaultValue = false with this function
-   * because you can't distinguish an unset paremeter
+   * because you can't distinguish an unset parameter
    * from a false parameter
    **/
   bool getBoolValue(const QString & name, bool globalValue=true, bool defaultValue=true) const;
@@ -92,11 +92,11 @@ public:
    * Sets the parameter name to the given value
    * @param value the value of the parameter
    * @param name the name of the parameter
-   * @param globalValue if true then the value is only set if it is different from the global value
-   * @param defaultValue if true then the value is only set if it is different from the default value
+   * @param globalValue if true then the value is only set if it is different to the global value
+   * @param defaultValue if true then the value is only set if it is different to the default value
    *                     if globalValue and defaultValue is true then the value is set when a global value
-   *                     exists and it it is different from it. If no global value exists then it is only
-   *                     set if different from the default value.
+   *                     exists and it it is different to it. If no global value exists then it is only
+   *                     set if different to the default value.
    **/
   void setValue(const QString & name,const QString & value, bool globalValue=true, bool defaultValue=true);
 
@@ -104,6 +104,11 @@ public:
    * Same as above but for boolean parameters
    **/
   void setValue(const QString & name, bool value, bool globalValue=true, bool defaultValue=true);
+
+  /**
+   * Same as above but for integer parameters
+   **/
+  void setValue(const QString & name, int value, bool globalValue=true, bool defaultValue=true);
 
   /**
    * Returns the default value of the parameter

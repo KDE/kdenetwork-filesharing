@@ -141,6 +141,11 @@
                                 <property name="name">
                                     <cstring>workgroupEdit</cstring>
                                 </property>
+                                <property name="font">
+                                    <font>
+                                        <bold>0</bold>
+                                    </font>
+                                </property>
                                 <property name="toolTip" stdset="0">
                                     <string>Enter here the name of your workgroup/domain.</string>
                                 </property>
@@ -148,6 +153,11 @@
                             <widget class="KLineEdit" row="1" column="1">
                                 <property name="name">
                                     <cstring>serverStringEdit</cstring>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <bold>0</bold>
+                                    </font>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -180,15 +190,30 @@
                                 <property name="name">
                                     <cstring>netbiosNameEdit</cstring>
                                 </property>
+                                <property name="font">
+                                    <font>
+                                        <bold>0</bold>
+                                    </font>
+                                </property>
                             </widget>
                             <widget class="KLineEdit" row="4" column="1">
                                 <property name="name">
                                     <cstring>netbiosScopeEdit</cstring>
                                 </property>
+                                <property name="font">
+                                    <font>
+                                        <bold>0</bold>
+                                    </font>
+                                </property>
                             </widget>
                             <widget class="KLineEdit" row="3" column="1">
                                 <property name="name">
                                     <cstring>netbiosAliasesEdit</cstring>
+                                </property>
+                                <property name="font">
+                                    <font>
+                                        <bold>0</bold>
+                                    </font>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="3" column="0">
@@ -1555,7 +1580,7 @@
                 <attribute name="title">
                     <string>&amp;Domain / Wins</string>
                 </attribute>
-                <vbox>
+                <grid>
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
@@ -1565,40 +1590,104 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QLayoutWidget">
+                    <widget class="QGroupBox" row="0" column="0">
                         <property name="name">
-                            <cstring>Layout36</cstring>
+                            <cstring>GroupBox3</cstring>
                         </property>
-                        <hbox>
+                        <property name="title">
+                            <string>Domain settings</string>
+                        </property>
+                        <vbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <property name="margin">
-                                <number>0</number>
+                                <number>11</number>
                             </property>
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QGroupBox">
+                            <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>GroupBox3</cstring>
+                                    <cstring>preferredMasterChk</cstring>
                                 </property>
-                                <property name="title">
-                                    <string>Domain settings</string>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
                                 </property>
-                                <vbox>
+                                <property name="text">
+                                    <string>Preferred master</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>localMasterChk</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Local master</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>domainMasterChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Domain master</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>domainLogonsChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Domain logons</string>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>Layout16</cstring>
+                                </property>
+                                <hbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
                                     <property name="margin">
-                                        <number>11</number>
+                                        <number>0</number>
                                     </property>
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
-                                    <widget class="QCheckBox">
+                                    <widget class="QLabel">
                                         <property name="name">
-                                            <cstring>preferredMasterChk</cstring>
+                                            <cstring>TextLabel5</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>OS Level</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntSpinBox">
+                                        <property name="name">
+                                            <cstring>osLevelSpin</cstring>
                                         </property>
                                         <property name="sizePolicy">
                                             <sizepolicy>
@@ -1608,362 +1697,240 @@
                                                 <verstretch>0</verstretch>
                                             </sizepolicy>
                                         </property>
-                                        <property name="text">
-                                            <string>Preferred master</string>
-                                        </property>
                                     </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>localMasterChk</cstring>
+                                    <spacer>
+                                        <property name="name" stdset="0">
+                                            <cstring>Spacer14</cstring>
                                         </property>
-                                        <property name="sizePolicy">
-                                            <sizepolicy>
-                                                <hsizetype>0</hsizetype>
-                                                <vsizetype>0</vsizetype>
-                                                <horstretch>0</horstretch>
-                                                <verstretch>0</verstretch>
-                                            </sizepolicy>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
                                         </property>
-                                        <property name="text">
-                                            <string>Local master</string>
+                                        <property name="sizeType">
+                                            <enum>Preferred</enum>
                                         </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>domainMasterChk</cstring>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
                                         </property>
-                                        <property name="text">
-                                            <string>Domain master</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>domainLogonsChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Domain logons</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLayoutWidget">
-                                        <property name="name">
-                                            <cstring>Layout16</cstring>
-                                        </property>
-                                        <hbox>
-                                            <property name="name">
-                                                <cstring>unnamed</cstring>
-                                            </property>
-                                            <property name="margin">
-                                                <number>0</number>
-                                            </property>
-                                            <property name="spacing">
-                                                <number>6</number>
-                                            </property>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>TextLabel5</cstring>
-                                                </property>
-                                                <property name="sizePolicy">
-                                                    <sizepolicy>
-                                                        <hsizetype>0</hsizetype>
-                                                        <vsizetype>5</vsizetype>
-                                                        <horstretch>0</horstretch>
-                                                        <verstretch>0</verstretch>
-                                                    </sizepolicy>
-                                                </property>
-                                                <property name="text">
-                                                    <string>OS Level</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="KIntSpinBox">
-                                                <property name="name">
-                                                    <cstring>osLevelSpin</cstring>
-                                                </property>
-                                                <property name="sizePolicy">
-                                                    <sizepolicy>
-                                                        <hsizetype>0</hsizetype>
-                                                        <vsizetype>0</vsizetype>
-                                                        <horstretch>0</horstretch>
-                                                        <verstretch>0</verstretch>
-                                                    </sizepolicy>
-                                                </property>
-                                            </widget>
-                                            <spacer>
-                                                <property name="name" stdset="0">
-                                                    <cstring>Spacer14</cstring>
-                                                </property>
-                                                <property name="orientation">
-                                                    <enum>Horizontal</enum>
-                                                </property>
-                                                <property name="sizeType">
-                                                    <enum>Preferred</enum>
-                                                </property>
-                                                <property name="sizeHint">
-                                                    <size>
-                                                        <width>20</width>
-                                                        <height>20</height>
-                                                    </size>
-                                                </property>
-                                            </spacer>
-                                        </hbox>
-                                    </widget>
-                                </vbox>
+                                    </spacer>
+                                </hbox>
                             </widget>
-                            <widget class="QButtonGroup">
-                                <property name="name">
-                                    <cstring>ButtonGroup7</cstring>
-                                </property>
-                                <property name="title">
-                                    <string>Wins settings</string>
-                                </property>
-                                <widget class="QRadioButton">
-                                    <property name="name">
-                                        <cstring>noWinsSupportRadio</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>11</x>
-                                            <y>18</y>
-                                            <width>283</width>
-                                            <height>19</height>
-                                        </rect>
-                                    </property>
-                                    <property name="text">
-                                        <string>Deactivate Wins</string>
-                                    </property>
-                                    <property name="autoRepeat">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="checked">
-                                        <bool>true</bool>
-                                    </property>
-                                </widget>
-                                <widget class="QRadioButton">
-                                    <property name="name">
-                                        <cstring>winsSupportRadio</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>11</x>
-                                            <y>43</y>
-                                            <width>283</width>
-                                            <height>19</height>
-                                        </rect>
-                                    </property>
-                                    <property name="text">
-                                        <string>Act as a Wins server</string>
-                                    </property>
-                                </widget>
-                                <widget class="QFrame">
-                                    <property name="name">
-                                        <cstring>Frame6</cstring>
-                                    </property>
-                                    <property name="enabled">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>11</x>
-                                            <y>68</y>
-                                            <width>283</width>
-                                            <height>20</height>
-                                        </rect>
-                                    </property>
-                                    <property name="sizePolicy">
-                                        <sizepolicy>
-                                            <hsizetype>5</hsizetype>
-                                            <vsizetype>0</vsizetype>
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="minimumSize">
-                                        <size>
-                                            <width>170</width>
-                                            <height>20</height>
-                                        </size>
-                                    </property>
-                                    <property name="frameShape">
-                                        <enum>NoFrame</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                        <enum>Raised</enum>
-                                    </property>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>dnsProxyChk</cstring>
-                                        </property>
-                                        <property name="enabled">
-                                            <bool>false</bool>
-                                        </property>
-                                        <property name="geometry">
-                                            <rect>
-                                                <x>30</x>
-                                                <y>0</y>
-                                                <width>140</width>
-                                                <height>19</height>
-                                            </rect>
-                                        </property>
-                                        <property name="text">
-                                            <string>DNS proxy support</string>
-                                        </property>
-                                    </widget>
-                                </widget>
-                                <widget class="QFrame">
-                                    <property name="name">
-                                        <cstring>Frame7</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>11</x>
-                                            <y>119</y>
-                                            <width>170</width>
-                                            <height>25</height>
-                                        </rect>
-                                    </property>
-                                    <property name="sizePolicy">
-                                        <sizepolicy>
-                                            <hsizetype>0</hsizetype>
-                                            <vsizetype>0</vsizetype>
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="minimumSize">
-                                        <size>
-                                            <width>170</width>
-                                            <height>25</height>
-                                        </size>
-                                    </property>
-                                    <property name="frameShape">
-                                        <enum>NoFrame</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                        <enum>Raised</enum>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel">
-                                    <property name="name">
-                                        <cstring>winsHookLbl</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>40</x>
-                                            <y>90</y>
-                                            <width>65</width>
-                                            <height>20</height>
-                                        </rect>
-                                    </property>
-                                    <property name="text">
-                                        <string>Wins hook</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLineEdit">
-                                    <property name="name">
-                                        <cstring>winsHookEdit</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>110</x>
-                                            <y>90</y>
-                                            <width>180</width>
-                                            <height>20</height>
-                                        </rect>
-                                    </property>
-                                </widget>
-                                <widget class="QRadioButton">
-                                    <property name="name">
-                                        <cstring>otherWinsRadio</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>11</x>
-                                            <y>119</y>
-                                            <width>283</width>
-                                            <height>19</height>
-                                        </rect>
-                                    </property>
-                                    <property name="text">
-                                        <string>Use another Wins server</string>
-                                    </property>
-                                </widget>
-                                <widget class="QFrame">
-                                    <property name="name">
-                                        <cstring>Frame8</cstring>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>10</x>
-                                            <y>170</y>
-                                            <width>283</width>
-                                            <height>16</height>
-                                        </rect>
-                                    </property>
-                                    <property name="frameShape">
-                                        <enum>HLine</enum>
-                                    </property>
-                                    <property name="frameShadow">
-                                        <enum>Sunken</enum>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox">
-                                    <property name="name">
-                                        <cstring>winsProxyChk</cstring>
-                                    </property>
-                                    <property name="enabled">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>10</x>
-                                            <y>190</y>
-                                            <width>283</width>
-                                            <height>19</height>
-                                        </rect>
-                                    </property>
-                                    <property name="sizePolicy">
-                                        <sizepolicy>
-                                            <hsizetype>5</hsizetype>
-                                            <vsizetype>0</vsizetype>
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="text">
-                                        <string>Wins proxy support</string>
-                                    </property>
-                                </widget>
-                                <widget class="KRestrictedLine">
-                                    <property name="name">
-                                        <cstring>winsServerEdit</cstring>
-                                    </property>
-                                    <property name="enabled">
-                                        <bool>false</bool>
-                                    </property>
-                                    <property name="geometry">
-                                        <rect>
-                                            <x>41</x>
-                                            <y>144</y>
-                                            <width>140</width>
-                                            <height>20</height>
-                                        </rect>
-                                    </property>
-                                    <property name="text">
-                                        <string>0.0.0.0</string>
-                                    </property>
-                                    <property name="maxLength">
-                                        <number>15</number>
-                                    </property>
-                                    <property name="urlDropsEnabled" stdset="0">
-                                        <bool>false</bool>
-                                    </property>
-                                    <property name="validChars">
-                                        <string>1234567890.</string>
-                                    </property>
-                                </widget>
-                            </widget>
-                        </hbox>
+                        </vbox>
                     </widget>
-                    <spacer>
+                    <widget class="QButtonGroup" row="0" column="1">
+                        <property name="name">
+                            <cstring>ButtonGroup7</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Wins settings</string>
+                        </property>
+                        <widget class="QRadioButton">
+                            <property name="name">
+                                <cstring>noWinsSupportRadio</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>11</x>
+                                    <y>18</y>
+                                    <width>283</width>
+                                    <height>19</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Deactivate Wins</string>
+                            </property>
+                            <property name="autoRepeat">
+                                <bool>true</bool>
+                            </property>
+                            <property name="checked">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QFrame">
+                            <property name="name">
+                                <cstring>Frame6</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>11</x>
+                                    <y>68</y>
+                                    <width>283</width>
+                                    <height>20</height>
+                                </rect>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="minimumSize">
+                                <size>
+                                    <width>170</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                            <property name="frameShape">
+                                <enum>NoFrame</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Raised</enum>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>dnsProxyChk</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="geometry">
+                                    <rect>
+                                        <x>30</x>
+                                        <y>0</y>
+                                        <width>140</width>
+                                        <height>19</height>
+                                    </rect>
+                                </property>
+                                <property name="text">
+                                    <string>DNS proxy support</string>
+                                </property>
+                            </widget>
+                        </widget>
+                        <widget class="QLabel">
+                            <property name="name">
+                                <cstring>winsHookLbl</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>40</x>
+                                    <y>90</y>
+                                    <width>65</width>
+                                    <height>20</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Wins hook</string>
+                            </property>
+                        </widget>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>winsProxyChk</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>true</bool>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>10</x>
+                                    <y>190</y>
+                                    <width>283</width>
+                                    <height>19</height>
+                                </rect>
+                            </property>
+                            <property name="sizePolicy">
+                                <sizepolicy>
+                                    <hsizetype>5</hsizetype>
+                                    <vsizetype>0</vsizetype>
+                                    <horstretch>0</horstretch>
+                                    <verstretch>0</verstretch>
+                                </sizepolicy>
+                            </property>
+                            <property name="text">
+                                <string>Wins proxy support</string>
+                            </property>
+                        </widget>
+                        <widget class="QRadioButton">
+                            <property name="name">
+                                <cstring>otherWinsRadio</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>11</x>
+                                    <y>119</y>
+                                    <width>180</width>
+                                    <height>19</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Use another Wins server</string>
+                            </property>
+                        </widget>
+                        <widget class="QFrame">
+                            <property name="name">
+                                <cstring>Frame8</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>10</x>
+                                    <y>170</y>
+                                    <width>283</width>
+                                    <height>16</height>
+                                </rect>
+                            </property>
+                            <property name="frameShape">
+                                <enum>HLine</enum>
+                            </property>
+                            <property name="frameShadow">
+                                <enum>Sunken</enum>
+                            </property>
+                        </widget>
+                        <widget class="QLineEdit">
+                            <property name="name">
+                                <cstring>winsHookEdit</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>110</x>
+                                    <y>90</y>
+                                    <width>180</width>
+                                    <height>20</height>
+                                </rect>
+                            </property>
+                        </widget>
+                        <widget class="KLineEdit">
+                            <property name="name">
+                                <cstring>winsServerEdit</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>40</x>
+                                    <y>140</y>
+                                    <width>250</width>
+                                    <height>20</height>
+                                </rect>
+                            </property>
+                        </widget>
+                        <widget class="QRadioButton">
+                            <property name="name">
+                                <cstring>winsSupportRadio</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>11</x>
+                                    <y>43</y>
+                                    <width>283</width>
+                                    <height>19</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Act as a Wins server</string>
+                            </property>
+                        </widget>
+                    </widget>
+                    <spacer row="1" column="0">
                         <property name="name" stdset="0">
                             <cstring>Spacer41</cstring>
                         </property>
@@ -1980,7 +1947,7 @@
                             </size>
                         </property>
                     </spacer>
-                </vbox>
+                </grid>
             </widget>
             <widget class="QWidget">
                 <property name="name">
@@ -3774,16 +3741,106 @@
         <slot>changedSlot()</slot>
     </connection>
     <connection>
+        <sender>winsSupportRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>dnsProxyChk</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>winsSupportRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>winsHookEdit</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>winsSupportRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>winsHookLbl</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>shareListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>editShareBtn</receiver>
+        <slot>animateClick()</slot>
+    </connection>
+    <connection>
+        <sender>printerListView</sender>
+        <signal>doubleClicked(QListViewItem*)</signal>
+        <receiver>editPrinterBtn</receiver>
+        <slot>animateClick()</slot>
+    </connection>
+    <connection>
         <sender>otherWinsRadio</sender>
         <signal>toggled(bool)</signal>
         <receiver>winsServerEdit</receiver>
         <slot>setEnabled(bool)</slot>
     </connection>
     <connection>
+        <sender>noWinsSupportRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
         <sender>winsSupportRadio</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>dnsProxyChk</receiver>
-        <slot>setEnabled(bool)</slot>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>dnsProxyChk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>winsHookEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>otherWinsRadio</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>winsProxyChk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>winsServerEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>osLevelSpin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>domainLogonsChk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>localMasterChk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>preferredMasterChk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
     </connection>
 </connections>
 <includes>

@@ -564,7 +564,7 @@ bool SambaFile::saveTo(const QString & path)
     }
 
     // Add the name of the share / section
-    s << "[" << *it << "]" << endl;
+    s << "[" << share->getName() << "]" << endl;
 
     // Add all options of the share 
     QStringList optionList = share->getOptionList();

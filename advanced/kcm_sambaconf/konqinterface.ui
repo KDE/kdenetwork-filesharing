@@ -100,7 +100,6 @@
             </property>
             <property name="font">
                 <font>
-                    <bold>1</bold>
                 </font>
             </property>
             <property name="title">
@@ -122,7 +121,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="toolTip" stdset="0">
@@ -138,7 +136,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="toolTip" stdset="0">
@@ -154,7 +151,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -179,7 +175,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -200,7 +195,6 @@
             </property>
             <property name="font">
                 <font>
-                    <bold>1</bold>
                 </font>
             </property>
             <property name="title">
@@ -216,26 +210,24 @@
                 <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget class="QLineEdit" row="3" column="1" rowspan="1" colspan="2">
+                <widget class="QLineEdit" row="3" column="1">
                     <property name="name">
                         <cstring>denyEdit</cstring>
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                     </property>
                 </widget>
-                <widget class="QLineEdit" row="2" column="1" rowspan="1" colspan="2">
+                <widget class="QLineEdit" row="2" column="1">
                     <property name="name">
                         <cstring>allowEdit</cstring>
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="whatsThis" stdset="0">
@@ -248,7 +240,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -267,7 +258,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -286,7 +276,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -305,7 +294,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -315,13 +303,12 @@
                         <string>If this is checked, then users of a service may not create or modify files in the service's directory.</string>
                     </property>
                 </widget>
-                <widget class="QCheckBox" row="0" column="1" rowspan="1" colspan="2">
+                <widget class="QCheckBox" row="0" column="1">
                     <property name="name">
                         <cstring>guestOkChk</cstring>
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -343,30 +330,12 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>This is a username which will be used for access this directory if guests are allowed</string>
                     </property>
                 </widget>
-                <spacer row="1" column="2">
-                    <property name="name">
-                        <cstring>Spacer3</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Horizontal</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>30</width>
-                            <height>0</height>
-                        </size>
-                    </property>
-                </spacer>
             </grid>
         </widget>
         <widget class="QGroupBox">
@@ -375,7 +344,6 @@
             </property>
             <property name="font">
                 <font>
-                    <bold>1</bold>
                 </font>
             </property>
             <property name="title">
@@ -397,7 +365,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">
@@ -421,7 +388,6 @@
                     </property>
                     <property name="font">
                         <font>
-                            <bold>0</bold>
                         </font>
                     </property>
                     <property name="text">

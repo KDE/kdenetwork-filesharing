@@ -26,7 +26,7 @@ kcm_kcmnfsmodule_la_LDFLAGS = \
   $(KDE_PLUGIN)
 
 knfskonqiplugin_la_SOURCES = \
- 	nfshostdlg.cpp \
+	nfshostdlg.cpp \
   hostprops.ui \
   nfspropsdlgplugin.cpp \
   nfsentry.cpp \
@@ -64,19 +64,7 @@ EXTRA_DIST = \
 	$(service_DATA) \
   kcmnfsmodule.desktop
 
-install-data-local:
-	$(mkinstalldirs) ${prefix}/share/applnk/Settings/Network/
-	$(INSTALL_DATA) $(srcdir)/kcmnfsmodule.desktop ${prefix}/share/applnk/Settings/Network/kcmnfsmodule.desktop
-
-uninstall-local:
-	-rm -f ${prefix}/share/applnk/Settings/Network/kcmnfsmodule.desktop
-
+apps_DATA = kcmnfsmodule.deskto
+appsdir = $(kde_appsdir)/Settings/Network
 
 METASOURCES = AUTO
-
-#messages:
-#	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
-#	if test -n "$$LIST"; then \
-#	 $(XGETTEXT) $$LIST -o $(podir)/knfskonqiplugin.pot; \
-#	fi
-

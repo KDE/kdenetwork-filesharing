@@ -34,6 +34,7 @@
 #include <qlineedit.h>
 #include <qcombobox.h>
 #include <qlabel.h>
+#include <qlistbox.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -67,7 +68,7 @@ void PrinterDlgImpl::initDialog()
   if (!_share)
      return;
 
-	QPtrList<KMPrinter> *printerList = KMManager::self()->printerList();
+	QPtrList<KMPrinter> *printerList = KMManager::self()->printerListComplete();
 
   for (QPtrListIterator<KMPrinter> it(*printerList); it.current(); ++it)
   {
@@ -76,7 +77,8 @@ void PrinterDlgImpl::initDialog()
     }
   }
 
-  queueCombo->setCurrentText(_share->getValue("printer name"));
+	int i = queueCombo->listBox()->index(queueCombo->listBox()->findItem(_share->getValue("printer name"),Qt::ExactMatch));
+  queueCombo->setCurrentItem(i);
 
   pathUrlRq->setURL( _share->getValue("path") );
   printersChk->setChecked( _share->getName() == "printers" );
@@ -131,6 +133,70 @@ void PrinterDlgImpl::initDialog()
   rootPostExecEdit->setText( _share->getValue("root postexec") );
 
   // Hidden files
+}
+
+void PrinterDlgImpl::accept()
+{
+  _share->setValue("printer name",queueCombo->currentText());
+
+  _share->setValue("path",pathUrlRq->url());
+
+  if (printersChk->isChecked())
+  {
+  	 _share->setName("printers");
+  }
+	else
+		_share->setName(shareNameEdit->text());
+
+	_share->setValue("comment",commentEdit->text( ) );
+
+  _share->setValue("available",availableBaseChk->isChecked( ) );
+  _share->setValue("browseable",browseableBaseChk->isChecked( ) );
+  _share->setValue("printable",printableBaseChk->isChecked( ) );
+  _share->setValue("public",publicBaseChk->isChecked( ) );
+
+  // Printing
+
+  _share->setValue("printable",printableChk->isChecked());
+  _share->setValue("postscript",postscriptChk->isChecked( ) );
+
+  _share->setValue("max print jobs", QString("%1").arg(maxPrintJobsInput->value()) );
+  _share->setValue("printing",printingCombo->currentText( ) );
+
+  _share->setValue("printer friver",printerDriverEdit->text( ) );
+  _share->setValue("printer driver file",printerDriverFileEdit->text( ) );
+  _share->setValue("printer driver location",printerDriverLocationEdit->text( ) );
+
+  // Commands
+
+  _share->setValue("print command",printCommandEdit->text( ) );
+  _share->setValue("lpq command",lpqCommandEdit->text( ) );
+  _share->setValue("lprm command",lprmCommandEdit->text( ) );
+  _share->setValue("lppause",lppauseEdit->text( ) );
+  _share->setValue("lpresume",lpresumeEdit->text( ) );
+  _share->setValue("queuepause",queuepauseEdit->text( ) );
+  _share->setValue("queueresume",queueresumeEdit->text( ) );
+
+  // Security
+
+  _share->setValue("guest ok",guestOkChk->isChecked( ) );
+  _share->setValue("guest account",guestAccountEdit->text( ) );
+  _share->setValue("printer admin",printerAdminEdit->text( ) );
+  _share->setValue("hosts allow",hostsAllowEdit->text( ) );
+  _share->setValue("hosts deny",hostsDenyEdit->text( ) );
+
+
+  // Advanced
+
+  _share->setValue("min print space", QString("%1").arg(minPrintSpaceInput->value()) );
+  _share->setValue("status",statusChk->isChecked( ) );
+
+  _share->setValue("preexec",preExecEdit->text( ) );
+  _share->setValue("postexec",postExecEdit->text( ) );
+  _share->setValue("root preexec",rootPreExecEdit->text( ) );
+  _share->setValue("root postexec",rootPostExecEdit->text( ) );
+
+	KcmPrinterDlg::accept();
 }
 
 PrinterDlgImpl::~PrinterDlgImpl()

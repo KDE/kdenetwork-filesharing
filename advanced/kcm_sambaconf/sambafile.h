@@ -68,7 +68,9 @@ public:
 
   /** No descriptions */
   QString findShareByPath(const QString & path) const;
-
+  void removeShareByPath(const QString & path);
+  
+  
   SambaShare* newShare(const QString & name);
   SambaShare* newShare(const QString & name, const QString & path);
   SambaShare* newPrinter(const QString & name, const QString & printer);

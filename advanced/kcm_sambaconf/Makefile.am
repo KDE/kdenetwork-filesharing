@@ -3,7 +3,7 @@ kde_module_LTLIBRARIES = libkcm_kcmsambaconf.la ksambakonqiplugin.la
 
 INCLUDES = $(all_includes)
 
-libkcm_kcmsambaconf_la_METASOURCES=AUTO
+METASOURCES=AUTO
 libkcm_kcmsambaconf_la_SOURCES = \
 	share.ui \
   kcminterface.ui \
@@ -14,7 +14,6 @@ libkcm_kcmsambaconf_la_SOURCES = \
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 
-ksambakonqiplugin_la_METASOURCES=AUTO
 ksambakonqiplugin_la_SOURCES = \
 	ksambapropertiesdialogplugin.cpp \
   konqinterface.ui \

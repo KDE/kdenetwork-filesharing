@@ -34,6 +34,7 @@
 #include <qptrlist.h>
 
 class SambaConfigFile;
+class QStringList;
 
 /**
  * A class which represents a Samba share
@@ -130,6 +131,41 @@ public:
  	 **/
 	QString getSynonym(const QString & name) const;
 
+  /**
+   * Returns the comments of the share
+   * e.g. the text above the [...] section
+   **/
+  QStringList getComments();
+
+  /**
+   * Sets the comments for the share
+   * e.g. the text above the [...] section
+   **/
+  void setComments(const QStringList & commentList);
+  
+  /**
+   * Sets the comments for the passed option
+   **/
+  void setComments(const QString & name, const QStringList & commentList);
+
+  /**
+   * Returns the comments of the passed option
+   **/
+  QStringList getComments(const QString & name);
+
+  /**
+   * Returns true if the passed option has comments
+   * otherwise returns false
+   **/
+  bool hasComments(const QString & name);
+
+  /**
+   * Returns the list of all options
+   * the order of the options is exactly the
+   * order of the insertion of the options
+   **/
+  QStringList getOptionList();
+  
 	/**
    * Returns true if this share is a printer
    **/
@@ -143,6 +179,35 @@ protected:
 	QString _name;
   SambaConfigFile* _sambaFile;
 
+  /**
+   * This attribute stores all option comments.
+   * the comments which stood above the option name
+   * are stored in this QStringList
+   **/
+  QDict<QStringList> _commentList;
+
+  /**
+   * The comments for this share
+   **/
+  QStringList _comments;
+
+  /**
+   * An extra list which holds
+   * all stored options
+   * You might say, hey for what is this ?
+   * We have them already stored in the QDict.
+   * That's right, but there is a problem :
+   * QDict doesn't preserve the order of
+   * the inserted items, but when saving
+   * the options back to the smb.conf
+   * we want to have exactly the same order
+   * so this QStringList is only for saving
+   * the order of the options.
+   * On the other side we need a very fast lookup
+   * of the options, because we lookup very frequently
+   * so this is the best way to do both.
+   **/
+  QStringList _optionList;
 
 };
 

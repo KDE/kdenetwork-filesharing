@@ -50,8 +50,12 @@ class SambaConfigFile : public QDict<SambaShare>
 public:
   SambaConfigFile(SambaFile*);
   QString getDefaultValue(const QString & name);
+  QStringList getShareList();
+  void addShare(const QString & name, SambaShare* share);
+  void removeShare(const QString & name);
 protected:
   SambaFile* _sambaFile;
+  QStringList _shareList;
 };
 
 
@@ -110,13 +114,25 @@ protected:
   bool readonly;
   bool changed;
   QString path;
-  SambaConfigFile *sambaConfig;
+  SambaConfigFile *_sambaConfig;
   SambaShare* _testParmValues;
   QString _parmOutput;
 
   void parseParmStdOutput();
   SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
   KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
+
+  /**
+   * Load all data from the smb.conf file
+   **/
+  void load();
+
+  /**
+   * Save all data to the specified file
+   * if successful returns true otherwise false
+   **/
+  bool saveTo(const QString & path);
+
 private:
   void copyConfigs(KConfig* first, KConfig* second);
 	QString getTempFileName();

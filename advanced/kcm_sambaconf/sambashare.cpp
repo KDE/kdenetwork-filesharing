@@ -26,7 +26,10 @@
  *                                                                            *
  ******************************************************************************/
 
+#include <iostream.h>
+ 
 #include <kdebug.h>
+#include <qstringlist.h>
 
 #include "sambafile.h"
 #include "sambashare.h"
@@ -158,9 +161,13 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 {
   QString synonym = getSynonym(name);
 
+  
   QString newValue = value;
 
-  if (getName() == "global")
+  if (newValue.isNull())
+     newValue = "";
+  
+  if (getName().lower() == "global")
      globalValue = false;
 
   if (name=="read only")
@@ -171,26 +178,37 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 
   QString global = "";
 
-	if (globalValue)
+	if (globalValue && !hasComments(synonym))
   {
 		global = getGlobalValue(synonym, false);
 
-  	if ( newValue == global )
+  	if ( newValue.lower() == global.lower() )
     {
 			remove(synonym);
+      _optionList.remove(synonym);
 			return;
     }
   }
 
-  if (defaultValue && global=="")
+  // If the option has a comment we don't remove
+  // it if the value is equal to the default value.
+  // That's because the author of the option has thought about it.
+  if (defaultValue && global=="" && !hasComments(synonym))
   {
-  	if ( newValue == getDefaultValue(synonym) )
+  	if ( newValue.stripWhiteSpace().lower() == getDefaultValue(synonym).stripWhiteSpace().lower() )
     {
 			remove(synonym);
+      _optionList.remove(synonym);
     	return;
-   	}
+   	} 
+    
   }
 
+  if (!find(synonym))
+  {
+     _optionList.append(synonym);
+  }
+     
 	replace(synonym,new QString(newValue));
 }
 
@@ -209,13 +227,73 @@ void SambaShare::setValue(const QString & name, int value, bool globalValue=true
  **/
 QString SambaShare::getDefaultValue(const QString & name)
 {
-  return _sambaFile->getDefaultValue(name);
+  QString defaultValue = _sambaFile->getDefaultValue(name);
+  if (defaultValue.isNull())
+     defaultValue = "";
+
+  return defaultValue;
 }
 
 bool SambaShare::getDefaultBoolValue(const QString & name)
 {
 
 	return SambaFile::boolFromText(getDefaultValue(name));
+}
+
+/**
+ * Sets the comments for the passed option
+ **/
+void SambaShare::setComments(const QString & name, const QStringList & commentList)
+{
+  // Only add inempty lists
+  if (commentList.empty())
+     return;
+
+  QString synonym = getSynonym(name);
+
+  _commentList.replace(name,new QStringList(commentList));
+}
+
+/**
+ * Returns the comments of the passed option
+ **/
+QStringList SambaShare::getComments(const QString & name)
+{
+  QStringList* list = _commentList.find(getSynonym(name));
+
+  if (list)
+     return QStringList(*list);
+  else
+     return QStringList();
+}
+
+
+bool SambaShare::hasComments(const QString & name)
+{
+  return 0L != _commentList.find(getSynonym(name));
+}
+
+/**
+ * Returns the comments of the share
+ * e.g. the text above the [...] section
+ **/
+QStringList SambaShare::getComments()
+{
+  return _comments;
+}
+
+/**
+ * Sets the comments for the share
+ * e.g. the text above the [...] section
+ **/
+void SambaShare::setComments(const QStringList & commentList)
+{
+  _comments = commentList;
+}
+
+QStringList SambaShare::getOptionList()
+{
+  return _optionList;
 }
 
 /**

@@ -26,6 +26,8 @@
  *                                                                            *
  ******************************************************************************/
 
+#include <qfile.h>
+
 #include <ksimpleconfig.h>
 #include <kdebug.h>
 #include <qfileinfo.h>
@@ -57,21 +59,40 @@ QString SambaConfigFile::getDefaultValue(const QString & name)
   return s;
 }
 
+void SambaConfigFile::addShare(const QString & name, SambaShare* share)
+{
+  insert(name,share),
+  _shareList.append(name);
+}
+
+void SambaConfigFile::removeShare(const QString & name)
+{
+  remove(name);
+  _shareList.remove(name);
+}
+
+
+QStringList SambaConfigFile::getShareList()
+{
+  return _shareList;
+}
+
 SambaFile::SambaFile(const QString & _path, bool _readonly)
 {
   path = _path;
   readonly = _readonly;
   changed = false;
   _testParmValues = 0L;
+  _sambaConfig = 0L;
 
-  KSimpleConfig *config = new KSimpleConfig(path,readonly);
-
-  sambaConfig = getSambaConfigFile(config);
+//  KSimpleConfig *config = new KSimpleConfig(path,readonly);
+//  _sambaConfig = getSambaConfigFile(config);
+  load();
 }
 
 SambaFile::~SambaFile()
 {
-	delete sambaConfig;
+	delete _sambaConfig;
   if (_testParmValues)
      delete _testParmValues;
 
@@ -89,7 +110,7 @@ QString SambaFile::getTempFileName()
 /** No descriptions */
 QString SambaFile::findShareByPath(const QString & path) const
 {
-  QDictIterator<SambaShare> it(*sambaConfig);
+  QDictIterator<SambaShare> it(*_sambaConfig);
   for (  ; it.current(); ++it )
   {
     SambaShare* share = it.current();
@@ -108,14 +129,27 @@ void SambaFile::slotApply()
   if (readonly)
       return;
 
+  QString path = "/home/jan/tmp/test.conf";
+      
+  // If we have write access to the smb.conf
+  // we simply save the values to it
+  // if not we have to save the results in
+  // a temporary file and copy it afterwards
+  // over the smb.conf file with kdesu.
+  if (QFileInfo(path).isWritable())
+  {
+     saveTo(path);
+     return;
+  }
 
   // Create a temporary smb.conf file
   QString tmpFilename= getTempFileName();
 
   KSimpleConfig* config = 0L;
 
-  config = getSimpleConfig(sambaConfig, tmpFilename);
-  config->sync();
+  saveTo(tmpFilename);
+//  config = getSimpleConfig(_sambaConfig, tmpFilename);
+//  config->sync();
 
   QFileInfo fi(path);
 
@@ -176,7 +210,7 @@ QString SambaFile::getUnusedName() const
 
   int i = 1;
 
-  while (sambaConfig->find(s))
+  while (_sambaConfig->find(s))
   {
 		s = init+QString("%1").arg(i);
     i++;
@@ -189,11 +223,11 @@ QString SambaFile::getUnusedName() const
 
 SambaShare* SambaFile::newShare(const QString & name)
 {
-  if (sambaConfig->find(name))
+  if (_sambaConfig->find(name))
      return 0L;
 
-  SambaShare* share = new SambaShare(name,sambaConfig);
-  sambaConfig->insert(name,share);
+  SambaShare* share = new SambaShare(name,_sambaConfig);
+  _sambaConfig->addShare(name,share);
 
   changed = true;
 
@@ -230,7 +264,7 @@ void SambaFile::removeShare(const QString & share)
 {
   changed = true;
 
-  sambaConfig->remove(share);
+  _sambaConfig->removeShare(share);
 }
 
 void SambaFile::removeShare(SambaShare* share)
@@ -241,7 +275,7 @@ void SambaFile::removeShare(SambaShare* share)
 /** No descriptions */
 SambaShare* SambaFile::getShare(const QString & share) const
 {
-	SambaShare *s = sambaConfig->find(share);
+	SambaShare *s = _sambaConfig->find(share);
 
   return s;
 }
@@ -253,7 +287,7 @@ SambaShareList* SambaFile::getSharedDirs() const
 {
 	SambaShareList* list = new SambaShareList();
 
-	QDictIterator<SambaShare> it(*sambaConfig);
+	QDictIterator<SambaShare> it(*_sambaConfig);
 
   for( ; it.current(); ++it )
   {
@@ -274,7 +308,7 @@ SambaShareList* SambaFile::getSharedPrinters() const
 {
 	SambaShareList* list = new SambaShareList();
 
-	QDictIterator<SambaShare> it(*sambaConfig);
+	QDictIterator<SambaShare> it(*_sambaConfig);
 
   for( ; it.current(); ++it )
   {
@@ -319,7 +353,7 @@ void SambaFile::parseParmStdOutput()
 
   if (_testParmValues)
      delete _testParmValues;
-  _testParmValues = new SambaShare(sambaConfig);
+  _testParmValues = new SambaShare(_sambaConfig);
 
   QString section="";
 
@@ -414,6 +448,150 @@ QString SambaFile::textFromBool(bool value)
   else
   	 return "no";
 }
+
+void SambaFile::load()
+{
+  QFile f(path);
+
+
+  if (!f.open(IO_ReadOnly))
+     return;
+
+  QTextStream s(&f);
+
+  if (_sambaConfig)
+     delete _sambaConfig;
+
+  _sambaConfig = new SambaConfigFile(this);
+
+  QString section="";
+  SambaShare *currentShare = 0L;
+  bool continuedLine = false; // is true if the line before ended with a backslash
+  QString name="";
+  QString value="";
+  QString completeLine;
+  QStringList comments;
+  
+  while (!s.eof())
+  {
+    QString currentLine = s.readLine().stripWhiteSpace();
+
+    if (continuedLine)
+    {
+       completeLine += currentLine;
+       if ( currentLine.right(1) == "\\" )
+       {
+          continuedLine = true;
+          completeLine = completeLine.left( completeLine.length()-1 ); // remove the ending backslash
+          continue;
+       }
+    } else
+      completeLine = currentLine;
+
+    // comments or empty lines
+    if (completeLine.isEmpty() ||
+        "#" == completeLine.left(1) ||
+        ";" == completeLine.left(1))
+    {
+       comments.append(completeLine);
+       continue;
+    }
+
+    // is the line continued in the next line ?
+    if ( completeLine.right(1) == "\\" )
+    {
+      continuedLine = true;
+      completeLine = completeLine.left( completeLine.length()-1 ); // remove the ending backslash
+      continue;
+    }
+
+    continuedLine = false;
+
+    // sections
+    if ("[" == completeLine.left(1))
+    {
+      // get the name of the section
+      section = completeLine.mid(1,completeLine.length()-2);
+      currentShare = new SambaShare(section,_sambaConfig);
+      _sambaConfig->addShare(section,currentShare);
+      currentShare->setComments(comments);
+      comments.clear();
+      
+      continue;
+    }
+
+    // parameter
+    if (completeLine.find("=")>-1)
+    {
+      name = QStringList::split("=",completeLine)[0].stripWhiteSpace();
+      value = QStringList::split("=",completeLine)[1].stripWhiteSpace();
+
+      if (currentShare)
+      {
+      
+        currentShare->setComments(name,comments);
+        currentShare->setValue(name,value,false,true);
+
+        comments.clear();
+      }
+    }
+  }
+
+  f.close();
+  
+}
+
+bool SambaFile::saveTo(const QString & path)
+{
+  QFile f(path);
+
+  if (!f.open(IO_WriteOnly))
+     return false;
+
+  QTextStream s(&f);
+
+  QStringList shareList = _sambaConfig->getShareList();
+  
+  for ( QStringList::Iterator it = shareList.begin(); it != shareList.end(); ++it )
+  {
+    SambaShare* share = _sambaConfig->find(*it);
+
+    // First add all comments of the share to the file
+    QStringList comments = share->getComments();
+    for ( QStringList::Iterator cmtIt = comments.begin(); cmtIt != comments.end(); ++cmtIt )
+    {
+       s << *cmtIt << endl;
+
+       kdDebug() << *cmtIt << endl;
+    }
+
+    // Add the name of the share / section
+    s << "[" << *it << "]" << endl;
+
+    // Add all options of the share 
+    QStringList optionList = share->getOptionList();
+
+    for ( QStringList::Iterator optionIt = optionList.begin(); optionIt != optionList.end(); ++optionIt )
+    {
+
+      // Add the comments of the option
+      comments = share->getComments(*optionIt);
+      for ( QStringList::Iterator cmtIt = comments.begin(); cmtIt != comments.end(); ++cmtIt )
+      {
+         s << *cmtIt << endl;
+      }
+
+      // Add the option
+      s << *optionIt << " = " << *share->find(*optionIt) << endl;
+    }
+
+  }
+
+  f.close();
+  
+  return true;     
+}
+
 
 SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
 {

@@ -1,0 +1,238 @@
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<class>JoinDomainDlg</class>
+<widget class="QDialog">
+    <property name="name">
+        <cstring>JoinDomainDlg</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>427</width>
+            <height>213</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Join a domain</string>
+    </property>
+    <property name="sizeGripEnabled">
+        <bool>true</bool>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <widget class="QLayoutWidget" row="7" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>Layout1</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <spacer>
+                    <property name="name">
+                        <cstring>Horizontal Spacing2</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonOk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;OK</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                    <property name="default">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QPushButton">
+                    <property name="name">
+                        <cstring>buttonCancel</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Cancel</string>
+                    </property>
+                    <property name="accel">
+                        <string></string>
+                    </property>
+                    <property name="autoDefault">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLineEdit" row="0" column="1">
+            <property name="name">
+                <cstring>domainEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLineEdit" row="1" column="1">
+            <property name="name">
+                <cstring>domainControllerEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLineEdit" row="2" column="1">
+            <property name="name">
+                <cstring>usernameEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel" row="4" column="0">
+            <property name="name">
+                <cstring>textLabel5_2_2</cstring>
+            </property>
+            <property name="text">
+                <string>&amp;Verify:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>verifyEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel" row="3" column="0">
+            <property name="name">
+                <cstring>textLabel5_2</cstring>
+            </property>
+            <property name="text">
+                <string>&amp;Password:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>passwordEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel" row="2" column="0">
+            <property name="name">
+                <cstring>textLabel5</cstring>
+            </property>
+            <property name="text">
+                <string>&amp;Username:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>usernameEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel" row="1" column="0">
+            <property name="name">
+                <cstring>textLabel4_2</cstring>
+            </property>
+            <property name="text">
+                <string>Domain co&amp;ntroller:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>domainControllerEdit</cstring>
+            </property>
+        </widget>
+        <widget class="QLabel" row="0" column="0">
+            <property name="name">
+                <cstring>textLabel4</cstring>
+            </property>
+            <property name="text">
+                <string>&amp;Domain:</string>
+            </property>
+            <property name="buddy" stdset="0">
+                <cstring>domainEdit</cstring>
+            </property>
+        </widget>
+        <widget class="KPasswordEdit" row="3" column="1">
+            <property name="name">
+                <cstring>passwordEdit</cstring>
+            </property>
+        </widget>
+        <widget class="KPasswordEdit" row="4" column="1">
+            <property name="name">
+                <cstring>verifyEdit</cstring>
+            </property>
+        </widget>
+        <widget class="Line" row="6" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>line1</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <spacer row="5" column="1">
+            <property name="name">
+                <cstring>spacer65</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>40</height>
+                </size>
+            </property>
+        </spacer>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>JoinDomainDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>JoinDomainDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+</connections>
+<tabstops>
+    <tabstop>domainEdit</tabstop>
+    <tabstop>domainControllerEdit</tabstop>
+    <tabstop>usernameEdit</tabstop>
+    <tabstop>passwordEdit</tabstop>
+    <tabstop>verifyEdit</tabstop>
+    <tabstop>buttonOk</tabstop>
+    <tabstop>buttonCancel</tabstop>
+</tabstops>
+<includes>
+    <include location="global" impldecl="in declaration">kpassdlg.h</include>
+    <include location="global" impldecl="in implementation">kmessagebox.h</include>
+    <include location="local" impldecl="in implementation">joindomaindlg.ui.h</include>
+</includes>
+<slots>
+    <slot>accept()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kpassdlg.h</includehint>
+    <includehint>kpassdlg.h</includehint>
+</includehints>
+</UI>

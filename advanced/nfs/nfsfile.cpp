@@ -80,6 +80,14 @@ NFSEntry* NFSFile::getEntryByPath(const QString & path)
   return 0L;
 }
 
+bool NFSFile::removeEntryByPath(const QString & path) {
+  NFSEntry* entry = getEntryByPath(path);
+  if (!entry) 
+      return false;
+      
+  removeEntry(entry);      
+}
+
 EntryIterator NFSFile::getEntries()
 {
   return EntryIterator(_entries);

@@ -38,6 +38,7 @@ public:
   void removeEntry(NFSEntry *);
   bool hasEntry(NFSEntry *);
   NFSEntry* getEntryByPath(const QString &);
+  bool removeEntryByPath(const QString &);
   EntryIterator getEntries();
 
   bool save();

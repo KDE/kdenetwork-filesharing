@@ -231,3 +231,28 @@ void KcmShareDlg::oplockContentionLimitSpin_valueChanged( int i)
     //oplockContentionLimitWarnPix->show();
     
 }
+
+
+void KcmShareDlg::storeDosAttributesChk_toggled( bool b)
+{
+    mapArchiveChk->setDisabled(b);
+    mapSystemChk->setDisabled(b);
+    mapHiddenChk->setDisabled(b);
+  
+    if (b) {
+	mapArchiveChk->setChecked(false);
+	mapSystemChk->setChecked(false);
+	mapHiddenChk->setChecked(false);
+    }  
+}
+
+
+void KcmShareDlg::buttonHelp_clicked()
+{
+    KProcess* p = new KProcess();
+    *p << "konqueror";
+    *p << "man:smb.conf";
+    p->start();
+}
+
+

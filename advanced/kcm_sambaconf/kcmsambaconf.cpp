@@ -23,6 +23,7 @@
 #include <qgroupbox.h>
 #include <qpainter.h>
 #include <qcheckbox.h>
+#include <qlistbox.h>
 
 
 #include <klocale.h>
@@ -180,9 +181,11 @@ void KcmSambaConf::addShare()
   dlg->exec();
 
   if (dlg->result() == QDialog::Rejected )
-  	 removeShare();
-  else
-	   emit changed(true);
+  	removeShare();
+  else  {
+    item->updateShare();
+    emit changed(true);
+  }
 
   delete dlg;
 }
@@ -230,7 +233,10 @@ void KcmSambaConf::addPrinter()
   if (dlg->result() == QDialog::Rejected )
   	 removePrinter();
   else
+  {
+    item->updateShare();
 		emit changed(true);
+  }
 
   delete dlg;
 }
@@ -352,9 +358,41 @@ void KcmSambaConf::load()
 
   // Security
 
+	int i = _interface->securityLevelCombo->listBox()->index(_interface->securityLevelCombo->listBox()->findItem(share->getValue("security level"),Qt::ExactMatch));
+  _interface->securityLevelCombo->setCurrentItem(i);
+
+	i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest"),Qt::ExactMatch));
+  _interface->mapToGuestCombo->setCurrentItem(i);
+
+
   _interface->passwordServerEdit->setText( share->getValue("password server",false,true) );
+  _interface->passwdChatEdit->setText( share->getValue("passwd chat",false,true) );
 	_interface->passwordLevelSpin->setValue( share->getValue("password level", false, true).toInt());
+  _interface->minPasswdLengthSpin->setValue( share->getValue("min passwd length", false, true).toInt());
   _interface->encryptPasswordChk->setChecked( share->getBoolValue("encrypt passwords",false,true));
+  _interface->updateEncryptedChk->setChecked( share->getBoolValue("update encrypted",false,true));
+
+  _interface->smbPasswdFileUrlRq->setURL( share->getValue("smb passwd file",false,true) );
+  _interface->passwdProgramUrlRq->setURL( share->getValue("passwd program",false,true) );
+
+  _interface->passwdChatDebugChk->setChecked( share->getBoolValue("passwd chat debug",false,true));
+  _interface->unixPasswordSyncChk->setChecked( share->getBoolValue("unix password sync",false,true));
+
+  _interface->usernameMapUrlRq->setURL( share->getValue("username map",false,true) );
+  _interface->usernameLevelSpin->setValue( share->getValue("username level", false, true).toInt());
+
+  _interface->useRhostsChk->setChecked( share->getBoolValue("use rhosts",false,true));
+  _interface->lanmanAuthChk->setChecked( share->getBoolValue("lanman auth",false,true));
+  _interface->allowTrustedDomainsChk->setChecked( share->getBoolValue("allow trusted domains",false,true));
+  _interface->obeyPamRestrictionsChk->setChecked( share->getBoolValue("obey pam restrictions",false,true));
+  _interface->pamPasswordChangeChk->setChecked( share->getBoolValue("pam password change",false,true));
+  _interface->restrictAnonymousChk->setChecked( share->getBoolValue("restrict anonymous",false,true));
+  _interface->alternatePermissionsChk->setChecked( share->getBoolValue("alternate permissions",false,true));
+
+  _interface->rootDirectoryEdit->setText( share->getValue("root directory",false,true) );
+  _interface->hostsEquivUrlRq->setURL( share->getValue("hosts equiv",false,true) );
+  
+
 }
 
 void KcmSambaConf::defaults() {

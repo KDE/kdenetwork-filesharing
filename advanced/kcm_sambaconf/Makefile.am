@@ -18,7 +18,9 @@ libkcm_kcmsambaconf_la_SOURCES = \
   passwd.cpp \
   common.cpp \
   usertab.ui \
-  usertabimpl.cpp
+  usertabimpl.cpp \
+  filemodedlg.ui \
+  filemodedlgimpl.cpp 
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -33,7 +35,9 @@ ksambakonqiplugin_la_SOURCES = \
   socketoptionsdlg.ui \
   common.cpp \
   usertab.ui \
-  usertabimpl.cpp
+  usertabimpl.cpp \
+  filemodedlg.ui \
+  filemodedlgimpl.cpp 
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
@@ -44,20 +48,23 @@ service_DATA  = ksambakonqiplugin.desktop
 EXTRA_DIST = $(service_DATA) \
 	kcmsambaconf.cpp \
 	kcmsambaconf.h \
-	share.ui \
+	share.ui.h \
 	externals.h \
 	kcmsambaconf.desktop \
 	ksambapropertiesdialogplugin.cpp \
-  konqinterface.ui \
+  konqinterface.ui.h \
 	sambafile.cpp \
 	ksambapropertiesdialogplugin.h \
 	sambafile.h \
   sharedlgimpl.h \
   sambashare.h \
-  socketoptionsdlg.ui \
+  socketoptionsdlg.ui.h \
   smbpasswdfile.h \
   passwd.h \
-  common.h
+  common.h \
+  usertab.ui.h \
+  filemodedlg.ui.h \
+  filemodedlgimpl.h
 
 
 apps_DATA = kcmsambaconf.desktop

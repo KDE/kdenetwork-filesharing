@@ -45,6 +45,11 @@
 #include <qtable.h>
 #include <qlistbox.h>
 #include <qtoolbutton.h>
+#include <qpixmap.h>
+#include <qframe.h>
+#include <qwidget.h>
+#include <qtabwidget.h>
+
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -59,6 +64,7 @@
 #include <kpopupmenu.h>
 #include <kaction.h>
 #include <krestrictedline.h>
+#include <kjanuswidget.h>
 
 #include <assert.h>
 
@@ -69,6 +75,7 @@
 #include "usertabimpl.h"
 #include "filemodedlgimpl.h"
 #include "hiddenfileview.h"
+#include "dictmanager.h"
 
 #include "sharedlgimpl.h"
 
@@ -78,10 +85,11 @@
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")
 {
-
+  _dictMngr = new DictManager();
   _share = share;
 	assert(_share);
   initDialog();
+  initAdvancedTab();
 }
 
 void ShareDlgImpl::initDialog()
@@ -95,20 +103,17 @@ void ShareDlgImpl::initDialog()
 
 	pathUrlRq->setMode(2+8+16);
 
-
   homeChk->setChecked(_share->getName().lower() == "homes");
-
-  pathUrlRq->setURL( _share->getValue("path") );
-
   shareNameEdit->setText( _share->getName() );
-
-	
-
-  commentEdit->setText( _share->getValue("comment") );
-  availableBaseChk->setChecked( _share->getBoolValue("available") );
-  browseableBaseChk->setChecked( _share->getBoolValue("browseable") );
+  
+  _dictMngr->add("path",pathUrlRq);
+  
+  _dictMngr->add("comment",commentEdit);
+  _dictMngr->add("available",availableBaseChk);
+  _dictMngr->add("browseable",browseableBaseChk);
+  _dictMngr->add("public",publicBaseChk);
+    
   readOnlyBaseChk->setChecked( ! _share->getBoolValue("writeable") );
-  publicBaseChk->setChecked( _share->getBoolValue("public") );
 
   // User settings
 
@@ -118,70 +123,75 @@ void ShareDlgImpl::initDialog()
 
   // Filename settings
   
-  defaultCaseCombo->setCurrentText( _share->getValue("default case") );
-  caseSensitiveChk->setChecked( _share->getBoolValue("case sensitive") );
-  preserveCaseChk->setChecked( _share->getBoolValue("preserve case") );
-  shortPreserveCaseChk->setChecked( _share->getBoolValue("short preserve case") );
-  mangledNamesChk->setChecked( _share->getBoolValue("mangled names") );
-  mangleCaseChk->setChecked( _share->getBoolValue("mangle case") );
-  manglingCharEdit->setText( _share->getValue("mangling char") );
+  _dictMngr->add("case sensitive",caseSensitiveChk);
+  _dictMngr->add("preserve case",preserveCaseChk);
+  _dictMngr->add("short preserve case",shortPreserveCaseChk);
+  _dictMngr->add("mangled names",mangledNamesChk);
+  _dictMngr->add("mangle case",mangleCaseChk);
+  _dictMngr->add("mangling char",manglingCharEdit);
+  
+  _dictMngr->add("default case",defaultCaseCombo);
 
-  hideDotFilesChk->setChecked( _share->getBoolValue("hide dot files") );
-  hideTrailingDotChk->setChecked( _share->getBoolValue("strip dot") );
-  hideUnreadableChk->setChecked( _share->getBoolValue("hide unreadable") );
-  dosFilemodeChk->setChecked( _share->getBoolValue("dos filemode") );
-  dosFiletimesChk->setChecked( _share->getBoolValue("dos filetimes") );
-  dosFiletimeResolutionChk->setChecked( _share->getBoolValue("dos filetime resolution") );
-  deleteReadonlyChk->setChecked( _share->getBoolValue("delete readonly") );
-
+  _dictMngr->add("hide dot files",hideDotFilesChk);
+  _dictMngr->add("strip dot",hideTrailingDotChk);
+  _dictMngr->add("hide unreadable",hideUnreadableChk);
+  _dictMngr->add("dos filemode",dosFilemodeChk);
+  _dictMngr->add("dos filetimes",dosFiletimesChk);
+  _dictMngr->add("dos filetime resolution",dosFiletimeResolutionChk);
 
   // Security tab
   
-  guestOnlyChk->setChecked( _share->getBoolValue("guest only") );
-  userOnlyChk->setChecked( _share->getBoolValue("user only") );
-  hostsAllowEdit->setText( _share->getValue("hosts allow") );
-
+  _dictMngr->add("guest only",guestOnlyChk);
+  _dictMngr->add("only user",onlyUserChk);
+  _dictMngr->add("hosts allow",hostsAllowEdit);
+  
   guestAccountCombo->insertStringList( getUnixUsers() );
   setComboToString(guestAccountCombo,_share->getValue("guest account"));
 
-  hostsDenyEdit->setText( _share->getValue("hosts deny") );
-  forceDirectorySecurityModeEdit->setText( _share->getValue("force directory security mode") );
-  forceDirectoryModeEdit->setText( _share->getValue("force directory mode") );
-  forceSecurityModeEdit->setText( _share->getValue("force security mode") );
+  _dictMngr->add("hosts deny",hostsDenyEdit);
+  _dictMngr->add("force directory security mode",forceDirectorySecurityModeEdit);
+  _dictMngr->add("force directory mode",forceDirectoryModeEdit);
+  _dictMngr->add("force security mode",forceSecurityModeEdit);
   
-  forceCreateModeEdit->setText( _share->getValue("force create mode") );
-  directorySecurityMaskEdit->setText( _share->getValue("directory security mask") );
-  directoryMaskEdit->setText( _share->getValue("directory mask") );
-  securityMaskEdit->setText( _share->getValue("security mask") );
-  createMaskEdit->setText( _share->getValue("create mask") );
-  inheritPermissionsChk->setChecked( _share->getBoolValue("inherit permissions") );
-  wideLinksChk->setChecked( _share->getBoolValue("wide links") );
-  followSymlinksChk->setChecked( _share->getBoolValue("follow symlinks") );
-
-  mapHiddenChk->setChecked( _share->getBoolValue("map hidden") );
-  mapArchiveChk->setChecked( _share->getBoolValue("map archive") );
-  mapSystemChk->setChecked( _share->getBoolValue("map system") );
+  _dictMngr->add("force create mode",forceCreateModeEdit);
+  _dictMngr->add("directory security mask",directorySecurityMaskEdit);
+  _dictMngr->add("directory mask",directoryMaskEdit);
+  _dictMngr->add("security mask",securityMaskEdit);
+  _dictMngr->add("create mask",createMaskEdit);
+  _dictMngr->add("inherit permissions",inheritPermissionsChk);
+  _dictMngr->add("wide links",wideLinksChk);
+  _dictMngr->add("follow symlinks",followSymlinksChk);
+    
+  _dictMngr->add("map hidden",mapHiddenChk);
+  _dictMngr->add("map archive",mapArchiveChk);
+  _dictMngr->add("map system",mapSystemChk);
   
   // Advanced
 
-  blockingLocksChk->setChecked( _share->getBoolValue("blocking locks") );
-  fakeOplocksChk->setChecked( _share->getBoolValue("fake oplocks") );
-  lockingChk->setChecked( _share->getBoolValue("locking") );
-  level2OplocksChk->setChecked( _share->getBoolValue("level2 oplocks") );
-  posixLockingChk->setChecked( _share->getBoolValue("posix locking") );
-  strictLockingChk->setChecked( _share->getBoolValue("strict locking") );
-  shareModesChk->setChecked( _share->getBoolValue("share modes") );
-  oplocksChk->setChecked( _share->getBoolValue("oplocks") );
+  _dictMngr->add("blocking locks",blockingLocksChk);
+  _dictMngr->add("fake oplocks",fakeOplocksChk);
+  _dictMngr->add("locking",lockingChk);
+  _dictMngr->add("level2 oplocks",level2OplocksChk);
+  _dictMngr->add("posix locking",posixLockingChk);
+  _dictMngr->add("strict locking",strictLockingChk);
+  _dictMngr->add("share modes",shareModesChk);
+  _dictMngr->add("oplocks",oplocksChk);
+
+  _dictMngr->add("oplock contention limit",oplockContentionLimitSpin);
+  _dictMngr->add("strict sync",strictSyncChk);
   
-  oplockContentionLimitInput->setValue( _share->getValue("oplock contention limit").toInt() );
-  strictSyncChk->setChecked( _share->getBoolValue("strict sync") );
+  // Tuning 
+  
+  _dictMngr->add("strict allocate",strictAllocateChk);
+  
+  _dictMngr->add("max connections",maxConnectionsSpin);
+  _dictMngr->add("write cache size",writeCacheSizeSpin);
 
-  maxConnectionsInput->setValue( _share->getValue("max connections").toInt() );
-  writeCacheSizeInput->setValue( _share->getValue("write cache size").toInt() );
+  _dictMngr->add("sync always",syncAlwaysChk);
+  _dictMngr->add("status",statusChk);
 
-  syncAlwaysChk->setChecked( _share->getBoolValue("sync always") );
-  statusChk->setChecked( _share->getBoolValue("status") );
-
+  _dictMngr->load( _share );
+  
   _fileView = 0L;
 
   connect( _tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
@@ -189,6 +199,85 @@ void ShareDlgImpl::initDialog()
 
 ShareDlgImpl::~ShareDlgImpl()
 {
+}
+
+void ShareDlgImpl::initAdvancedTab() 
+{
+	
+  QVBoxLayout *l = new QVBoxLayout(advancedFrame);
+	l->setAutoAdd(true);
+	l->setMargin(0);
+	_janus = new KJanusWidget(advancedFrame,0,KJanusWidget::TreeList);
+	_janus->setRootIsDecorated(false);
+	_janus->setShowIconsInTreeList(true);
+	
+	QWidget *w;
+	QFrame *f;
+	QString label;
+ 	QPixmap icon;
+	
+	for (int i=0;i<advancedDumpTab->count();)
+	{
+		w = advancedDumpTab->page(i);
+		label = advancedDumpTab->label(i);
+
+		if (label.lower() == "security")
+			 icon = SmallIcon("password");
+		else
+		if (label.lower() == "logging")
+			 icon = SmallIcon("history");
+		else
+		if (label.lower() == "tuning")
+			 icon = SmallIcon("launch");
+		else
+		if (label.lower() == "filenames")
+			 icon = SmallIcon("folder");
+		else
+		if (label.lower() == "printing")
+			 icon = SmallIcon("fileprint");
+		else
+		if (label.lower() == "logon")
+			 icon = SmallIcon("kdmconfig");
+		else
+		if (label.lower() == "protocol")
+			 icon = SmallIcon("core");
+		else
+		if (label.lower() == "coding")
+			 icon = SmallIcon("charset");
+		else
+		if (label.lower() == "socket")
+				icon = SmallIcon("socket");
+		else
+		if (label.lower() == "ssl")
+			 icon = SmallIcon("encrypted");
+		else
+		if (label.lower() == "browsing")
+			 icon = SmallIcon("konqueror");
+		else
+		if (label.lower() == "misc")
+			 icon = SmallIcon("misc");
+		else {
+			 icon = QPixmap(16,16);
+			 icon.fill();
+		}
+			 //SmallIcon("empty2");
+		
+		f = _janus->addPage( label,label,icon );
+		l = new QVBoxLayout(f);
+	  l->setAutoAdd(true);
+		l->setMargin(0);
+		
+		advancedDumpTab->removePage(w);
+		
+		w->reparent(f,QPoint(1,1),TRUE);
+		
+	}
+	
+	w = _tabs->page(5);
+	_tabs->removePage(w);
+	delete w;
+
+
 }
 
 
@@ -228,89 +317,23 @@ void ShareDlgImpl::accept()
 	else
     _share->setName(shareNameEdit->text());
 
-
-  _share->setValue("path",pathUrlRq->url() );
-
-
-	_share->setValue("comment",commentEdit->text( ) );
-
-  _share->setValue("available",availableBaseChk->isChecked( ) );
-  _share->setValue("browseable",browseableBaseChk->isChecked( ) );
   _share->setValue("writeable", ! readOnlyBaseChk->isChecked( ) );
-  _share->setValue("public",publicBaseChk->isChecked( ) );
 
   // User settings
 
   _userTab->save();
 
-  // Filename settings
-  
-  _share->setValue("default case",defaultCaseCombo->currentText( ) );
-  _share->setValue("case sensitive",caseSensitiveChk->isChecked( ) );
-  _share->setValue("preserve case",preserveCaseChk->isChecked( ) );
-  _share->setValue("short preserve case",shortPreserveCaseChk->isChecked( ) );
-  _share->setValue("mangled names",mangledNamesChk->isChecked( ) );
-  _share->setValue("mangle case",mangleCaseChk->isChecked( ) );
-  _share->setValue("mangling char",manglingCharEdit->text( ) );
-
-  _share->setValue("hide dot files",hideDotFilesChk->isChecked( ) );
-  _share->setValue("strip dot",hideTrailingDotChk->isChecked( ) );
-  _share->setValue("hide unreadable",hideUnreadableChk->isChecked( ) );
-  _share->setValue("dos filemode",dosFilemodeChk->isChecked( ) );
-  _share->setValue("dos filetimes",dosFiletimesChk->isChecked( ) );
-  _share->setValue("dos filetime resolution",dosFiletimeResolutionChk->isChecked( ) );
-  _share->setValue("delete readonly",deleteReadonlyChk->isChecked( ) );
-
-
   // Security
   
-  _share->setValue("guest only",guestOnlyChk->isChecked( ) );
-  _share->setValue("user only",userOnlyChk->isChecked( ) );
-  _share->setValue("hosts allow",hostsAllowEdit->text( ) );
   _share->setValue("guest account",guestAccountCombo->currentText( ) );
-  _share->setValue("hosts deny",hostsDenyEdit->text( ) );
-  _share->setValue("force directory security mode",forceDirectorySecurityModeEdit->text( ) );
-  _share->setValue("force directory mode",forceDirectoryModeEdit->text( ) );
-  _share->setValue("force security mode",forceSecurityModeEdit->text( ) );
-
-  _share->setValue("force create mode",forceCreateModeEdit->text( ) );
-  _share->setValue("directory security mask",directorySecurityMaskEdit->text( ) );
-  _share->setValue("directory mask",directoryMaskEdit->text( ) );
-  _share->setValue("security mask",securityMaskEdit->text( ) );
-  _share->setValue("create mask",createMaskEdit->text( ) );
-  _share->setValue("inherit permissions",inheritPermissionsChk->isChecked( ) );
-  _share->setValue("wide links",wideLinksChk->isChecked( ) );
-  _share->setValue("follow symlinks",followSymlinksChk->isChecked( ) );
-
-  _share->setValue("map hidden",mapHiddenChk->isChecked( ) );
-  _share->setValue("map archive",mapArchiveChk->isChecked( ) );
-  _share->setValue("map system",mapSystemChk->isChecked( ) );
 
   
-  // Advanced
-
-  _share->setValue("blocking locks",blockingLocksChk->isChecked( ) );
-  _share->setValue("fake oplocks",fakeOplocksChk->isChecked( ) );
-  _share->setValue("locking",lockingChk->isChecked( ) );
-  _share->setValue("level2 oplocks",level2OplocksChk->isChecked( ) );
-  _share->setValue("posix locking",posixLockingChk->isChecked( ) );
-  _share->setValue("strict locking",strictLockingChk->isChecked( ) );
-  _share->setValue("share modes",shareModesChk->isChecked( ) );
-  _share->setValue("oplocks",oplocksChk->isChecked( ) );
-
-  _share->setValue("oplock contention limit",QString::number(oplockContentionLimitInput->value()));
-  _share->setValue("strict sync",strictSyncChk->isChecked( ) );
-
-  _share->setValue("max connections",QString::number(maxConnectionsInput->value()) );
-  _share->setValue("write cache size",QString::number(writeCacheSizeInput->value()) );
-
-  _share->setValue("sync always",syncAlwaysChk->isChecked( ) );
-  _share->setValue("status",statusChk->isChecked( ) );
-
   // Hidden files
   if (_fileView)
       _fileView->save();
 
+  _dictMngr->save( _share );      
+      
 	KcmShareDlg::accept();
 }
 

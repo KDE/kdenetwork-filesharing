@@ -45,7 +45,8 @@ class KToggleAction;
 class QGroupBox;
 class UserTabImpl;
 class HiddenFileView;
-
+class DictManager;
+class KJanusWidget;
 
 /**
  * This class implements the share.ui interface
@@ -74,9 +75,12 @@ protected :
 
   HiddenFileView* _fileView;
   UserTabImpl* _userTab;
-
+  KJanusWidget* _janus;
+  
+  DictManager* _dictMngr;
 
   void loadHiddenFilesView();
+  void initAdvancedTab();
 
 protected slots:
 	virtual void accept();

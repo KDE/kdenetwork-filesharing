@@ -386,7 +386,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   }
 
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-      i18n("This group '%1' does not exist; should it be created?").arg(s)))
+      i18n("This group '%1' does not exist. Should it be created?").arg(s)))
       return false;
       
   //debug("CreateFileShareGroup: "+s);

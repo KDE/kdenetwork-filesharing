@@ -201,12 +201,16 @@ void SambaFile::slotApply()
   /**
    * Returns a name which isn't already used for a share
    **/
-QString SambaFile::getUnusedName() const
+QString SambaFile::getUnusedName(const QString alreadyUsedName) const
 {
+
 	QString init = i18n("Unnamed");
+  if (alreadyUsedName != QString::null)
+    init = alreadyUsedName;
+    
   QString s = init;
 
-  int i = 1;
+  int i = 2;
 
   while (_sambaConfig->find(s))
   {
@@ -520,10 +524,14 @@ void SambaFile::load()
     }
 
     // parameter
-    if (completeLine.find("=")>-1)
+		int i = completeLine.find("=");
+		
+    if (i>-1)
     {
-      name = QStringList::split("=",completeLine)[0].stripWhiteSpace();
-      value = QStringList::split("=",completeLine)[1].stripWhiteSpace();
+			name = completeLine.left(i).stripWhiteSpace();
+			value = completeLine.right( completeLine.length()-i-1).stripWhiteSpace();
+//      name = QStringList::split("=",completeLine)[0].stripWhiteSpace();
+//      value = QStringList::split("=",completeLine)[1].stripWhiteSpace();
 
       if (currentShare)
       {

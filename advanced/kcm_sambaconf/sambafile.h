@@ -93,8 +93,12 @@ public:
 
   /**
    * Returns a name which isn't already used for a share
+   * if the alreadyUsedName parameter is given, then
+   * a name based on this name is returned.
+   * E.g.: if public is already used, the method could return 
+   * public2
    **/
-	QString getUnusedName() const;
+	QString getUnusedName(const QString alreadyUsedName=QString::null) const;
 
   /**
    * Returns all values of the global section

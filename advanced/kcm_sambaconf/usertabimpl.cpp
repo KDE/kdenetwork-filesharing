@@ -187,7 +187,7 @@ void UserTabImpl::load()
 void UserTabImpl::setAllowedUser(int i, const QString & name)
 {
     QStringList accessRights;
-    accessRights << "Share" << "Read only" << "Writeable" << "Admin";
+    accessRights << i18n("Share") << i18n("Read only") << i18n("Writeable") << i18n("Admin");
 
     QTableItem* item = new QTableItem( userTable,QTableItem::Never, name );
     userTable->setItem(i,0,item);
@@ -341,8 +341,9 @@ void UserTabImpl::save()
 
     switch (comboItem->currentItem())
     {
-      case 0 : if (allowAllUsersChk->isChecked())
-                   validUsers.append(item->text());break;
+      case 0 : //if (allowAllUsersChk->isChecked())
+                 //  validUsers.append(item->text());
+                 break;
       case 1 : readList.append(item->text());break;
       case 2 : writeList.append(item->text());break;
       case 3 : adminUsers.append(item->text());break;

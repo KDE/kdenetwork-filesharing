@@ -52,7 +52,7 @@ void QMultiCheckListItem::setOn(int column, bool b) {
   
   checkStates.setBit(column,b);
   checkBoxColumns.setBit(column);
-  kdDebug() << "setOn : " << column << endl;
+  kdDebug(5009) << "setOn : " << column << endl;
   repaint();
 }
 

@@ -47,7 +47,7 @@ LinuxPermissionChecker::LinuxPermissionChecker(SambaShare* share,QWidget* parent
   m_fi = QFileInfo(share->getValue("path"));
   
   if ( ! m_fi.exists()) {
-    kdDebug() << "LinuxPermissionChecker: path does not exists !" << endl;
+    kdDebug(5009) << "LinuxPermissionChecker: path does not exists !" << endl;
   }
 
 }

@@ -1,30 +1,21 @@
-/***************************************************************************
-                          KSambaPropertiesDialogPlugin.cpp  -  description
-                            -------------------
-    begin                : Son Apr 14 2002
-    copyright            : (C) 2002 by Jan Schäfer
-    email                : janschaefer@users.sourceforge.net
-***************************************************************************/
+/*
+  Copyright (c) 2002-2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
 
-/******************************************************************************
-*                                                                            *
-*  This file is part of KSambaPlugin.                                        *
-*                                                                            *
-*  KSambaPlugin is free software; you can redistribute it and/or modify      *
-*  it under the terms of the GNU General Public License as published by      *
-*  the Free Software Foundation; either version 2 of the License, or         *
-*  (at your option) any later version.                                       *
-*                                                                            *
-*  KSambaPlugin is distributed in the hope that it will be useful,           *
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of            *
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *
-*  GNU General Public License for more details.                              *
-*                                                                            *
-*  You should have received a copy of the GNU General Public License         *
-*  along with KSambaPlugin; if not, write to the Free Software                     *
-*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA  *
-*                                                                            *
-******************************************************************************/
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+*/
 
 #include <qframe.h>
 #include <qlayout.h>
@@ -82,7 +73,7 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   m_sharePath = getLocalPathFromUrl(properties->kurl());
 
   if (m_sharePath.isNull()) {
-    kdDebug() << "KSambaPropertiesDialogPlugin: URL is no local file !" << endl;
+    kdDebug(5009) << "KSambaPropertiesDialogPlugin: URL is no local file !" << endl;
     return;
   }
 
@@ -271,7 +262,7 @@ void KSambaPropertiesDialogPlugin::initValues()
   }     
 
   SambaShare* share = getActiveShare();     
-  kdDebug() << share->getName() << endl;
+  kdDebug(5009) << share->getName() << endl;
   m_shareWidget->nameEdit->setText( share->getName() );
   m_shareWidget->commentEdit->setText( share->getValue("comment") );
   m_shareWidget->readOnlyChk->setChecked( share->getBoolValue("read only") );

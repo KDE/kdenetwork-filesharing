@@ -313,7 +313,7 @@ void UserTabImpl::addGroupBtnClicked()
   if (dlg->exec()) {
     for (QStringList::Iterator it = selectedGroups.begin(); it != selectedGroups.end(); ++it)
     {
-        kdDebug() << "GroupKind: " << dlg->getGroupKind() << endl;
+        kdDebug(5009) << "GroupKind: " << dlg->getGroupKind() << endl;
         QString name = dlg->getGroupKind() + (*it);
         addUserToUserTable(name,dlg->getAccess());
     }

@@ -124,7 +124,7 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
 
   if (result)
   {
-    kdDebug() << _smbpasswdOutput << endl;
+    kdDebug(5009) << _smbpasswdOutput << endl;
   }
 
   return result;
@@ -150,7 +150,7 @@ bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 
   if (result)
   {
-    kdDebug() << _smbpasswdOutput << endl;
+    kdDebug(5009) << _smbpasswdOutput << endl;
   }
 
   return result;

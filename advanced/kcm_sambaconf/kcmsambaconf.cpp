@@ -501,7 +501,7 @@ void KcmSambaConf::loadBtnClicked() {
 
 void KcmSambaConf::load(const QString & smbFile) 
 {
-  kdDebug() << "loading " << smbFile << endl;
+  kdDebug(5009) << "loading " << smbFile << endl;
   _smbconf = smbFile;
 
   if (_sambaFile)
@@ -518,8 +518,7 @@ void KcmSambaConf::load(const QString & smbFile)
 }
 
 void KcmSambaConf::loadCanceled(const QString & msg) {
-  KMessageBox::sorry(0L,i18n(msg).arg(_smbconf),
-                        i18n("Error while opening file"));
+  KMessageBox::sorry(0L,msg,i18n("Error while opening file"));
 }
 
 void KcmSambaConf::fillFields() 
@@ -1241,7 +1240,7 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
     
     QCString password;
     int passResult = KPasswordDialog::getNewPassword(password,
-                        i18n("Please enter a password for the user "+user.name));
+                        i18n("Please enter a password for the user %1").arg(user.name));
     if (passResult != KPasswordDialog::Accepted)
        return;
     
@@ -1266,7 +1265,7 @@ void KcmSambaConf::save() {
   SambaShare *share = _sambaFile->getShare("global");
   assert(share);
 
-  kdDebug() << "saving ... " << endl;
+  kdDebug(5009) << "saving ... " << endl;
 
   // Base settings
 

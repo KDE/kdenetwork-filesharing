@@ -110,7 +110,7 @@ QString SambaFile::findShareByPath(const QString & path) const
         KURL curUrl(*s);
         curUrl.adjustPath(-1);
 
-        kdDebug() << url.path() << " =? " << curUrl.path() << endl;
+        kdDebug(5009) << url.path() << " =? " << curUrl.path() << endl;
 
         if (url.path() == curUrl.path())
             return it.currentKey();
@@ -172,7 +172,7 @@ void SambaFile::slotApply()
   KProcess* proc = new KProcess();
 
   if (KURL(path).isLocalFile()) {
-    kdDebug() << "SambaFile::slotApply: is local file!" << endl;
+    kdDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
     _tempFile->setAutoDelete(false); // Would otherwise be deleted before the command is executed!
     QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(_tempFile->name()).arg(path).arg(path).arg(chmodCmd).arg(_tempFile->name());
     *proc << "kdesu" << suCommand;
@@ -183,7 +183,7 @@ void SambaFile::slotApply()
     else
         changed = false;
   } else {
-    kdDebug() << "SambaFile::slotApply: is remote file!" << endl;
+    kdDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
     _tempFile->setAutoDelete(true);
     KURL srcURL;
     srcURL.setPath( _tempFile->name() );
@@ -349,7 +349,7 @@ int SambaFile::getSambaVersion() {
       _sambaVersion = 3;
   } 
 
-  kdDebug() << "Samba version = " << _sambaVersion << endl;
+  kdDebug(5009) << "Samba version = " << _sambaVersion << endl;
     
   return _sambaVersion;
 }
@@ -631,7 +631,7 @@ bool SambaFile::saveTo(const QString & path)
     {
       s << *cmtIt << endl;
 
-      kdDebug() << *cmtIt << endl;
+      kdDebug(5009) << *cmtIt << endl;
     }
 
     // If there are no lines before the section add

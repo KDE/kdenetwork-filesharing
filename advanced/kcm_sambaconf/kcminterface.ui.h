@@ -40,3 +40,9 @@ void KcmInterface::init()
     
 }
 
+
+
+void KcmInterface::changedSlot()
+{
+    emit changed();
+}

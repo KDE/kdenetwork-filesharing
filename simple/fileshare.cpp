@@ -335,26 +335,26 @@ void KFileShareConfig::removeShareBtnClicked() {
           samba = true;
   }
 
+  NFSFile nfsFile(KNFSShare::instance()->exportsPath());
   if (nfs) {
     kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
-    NFSFile nfsFile(KNFSShare::instance()->exportsPath());
     nfsFile.load();
     for ( item = items.first(); item; item = items.next() ) {
         nfsFile.removeEntryByPath(item->text(0));
     }
-    nfsFile.save();
   }
   
+  SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
   if (samba) {
     kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;  
-    SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
     smbFile.load();
     for ( item = items.first(); item; item = items.next() ) {
         smbFile.removeShareByPath(item->text(0));
     }
-    smbFile.save();
   }    
-  
+
+  PropertiesPage::save(&nfsFile, &smbFile, nfs,samba);
+    
   updateShareListView();
 }
 

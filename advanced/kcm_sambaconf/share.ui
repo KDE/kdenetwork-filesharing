@@ -1691,6 +1691,12 @@
         <receiver>KcmShareDlg</receiver>
         <slot>accept()</slot>
     </connection>
+    <connection>
+        <sender>homeChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>homeChkToggled(bool)</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
@@ -1702,6 +1708,7 @@
     <slot access="private">checkValues()</slot>
     <slot access="private" specifier="non virtual">init()</slot>
     <slot>trytoAccept()</slot>
+    <slot>homeChkToggled( bool )</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

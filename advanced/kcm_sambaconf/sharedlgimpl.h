@@ -66,6 +66,7 @@ protected :
 
 protected slots:
 	virtual void accept();
+  virtual void homeChkToggled(bool);
 };
 
 

@@ -92,3 +92,9 @@ void KcmShareDlg::trytoAccept()
 
 
 
+
+
+void KcmShareDlg::homeChkToggled( bool )
+{
+
+}

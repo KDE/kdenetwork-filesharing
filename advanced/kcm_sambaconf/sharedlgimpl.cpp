@@ -34,13 +34,14 @@
 #include <qlineedit.h>
 #include <qcombobox.h>
 #include <qlabel.h>
+#include <qgroupbox.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
 #include <knuminput.h>
 #include <kdebug.h>
 #include <kcombobox.h>
-#include <qgroupbox.h>
+#include <kiconloader.h>
 
 #include <assert.h>
 
@@ -242,6 +243,26 @@ void ShareDlgImpl::accept()
   // Hidden files
 
 	KcmShareDlg::accept();
+}
+
+void ShareDlgImpl::homeChkToggled(bool b)
+{
+  shareNameEdit->setDisabled(b);
+	pathUrlRq->->setDisabled(b);
+
+	if (b)
+  {
+  	shareNameEdit->setText("homes");
+    pathUrlRq->setURL("");
+    directoryPixLbl->setPixmap(DesktopIcon("folder_home",48));
+		
+  }
+  else
+  {
+  	shareNameEdit->setText( _share->getName() );
+	  pathUrlRq->setURL( _share->getValue("path") );
+    directoryPixLbl->setPixmap(DesktopIcon("folder"));
+  }
 }
 
 #include "sharedlgimpl.moc"

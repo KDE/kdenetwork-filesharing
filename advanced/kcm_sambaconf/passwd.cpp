@@ -1,9 +1,9 @@
 /***************************************************************************
                           passwd.cpp  -  description
                              -------------------
-    begin                : Mon Apr  8 13:35:56 CEST 2002
-    copyright            : (C) 2002 by Christian Nitschkowski
-    email                : segfault_ii@web.de
+    begin                : Tue June 6 2002
+    copyright            : (C) 2002 by Jan Schäfer
+    email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
 /******************************************************************************
@@ -21,7 +21,7 @@
  *  GNU General Public License for more details.                              *
  *                                                                            *
  *  You should have received a copy of the GNU General Public License         *
- *  along with KSambaPlugin; if not, write to the Free Software                     *
+ *  along with KSambaPlugin; if not, write to the Free Software               *
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA  *
  *                                                                            *
  ******************************************************************************/
@@ -30,6 +30,7 @@
 #include <sys/types.h>
 #include <pwd.h>
 #include <grp.h>
+#include <iostream.h>
 
 #include "passwd.h"
 
@@ -96,6 +97,8 @@ QStringList getUnixGroups()
 
 int getUserUID(const QString & name)
 {
+  if (name.isNull()) return -1;
+
   struct passwd* p;
 
   p = getpwnam(name);
@@ -108,8 +111,12 @@ int getUserUID(const QString & name)
 
 int getUserGID(const QString & name)
 {
+  if (name.isNull()) return -1;
+
   struct passwd* p;
 
+  cout << "getUserGID : " << name << endl;
+  
   p = getpwnam(name);
 
   if (p)
@@ -120,6 +127,8 @@ int getUserGID(const QString & name)
 
 int getGroupGID(const QString & name)
 {
+  if (name.isNull()) return -1;
+
   struct group* g;
 
   g = getgrnam(name);

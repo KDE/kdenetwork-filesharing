@@ -50,12 +50,13 @@ static bool userMod(const QString & user, const QValueList<KUserGroup> & groups)
 
 GroupConfigDlg::GroupConfigDlg(QWidget * parent,
       const QString & fileShareGroup, bool restricted,
-      bool rootPassNeeded) 
+      bool rootPassNeeded, bool simpleSharing) 
   : KDialogBase(parent,"groupconfigdlg", true,
                 i18n("Allowed Users"), Ok|Cancel, Ok, true) ,
   m_fileShareGroup(fileShareGroup),
   m_restricted(restricted) ,
-  m_rootPassNeeded(rootPassNeeded)              
+  m_rootPassNeeded(rootPassNeeded),
+  m_simpleSharing(simpleSharing)              
    
 {
   initGUI();
@@ -86,6 +87,11 @@ void GroupConfigDlg::initGUI() {
            this, SLOT(slotRemoveUser()));
   connect( m_gui->otherGroupBtn, SIGNAL(clicked()),
            this, SLOT(slotChangeGroup()));
+           
+  if (m_simpleSharing) {
+      // if simple sharing users never need the root password
+      m_gui->writeAccessChk->setDisabled(true);
+  }          
 }
 
 void GroupConfigDlg::updateListBox() {

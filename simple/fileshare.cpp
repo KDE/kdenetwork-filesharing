@@ -180,7 +180,8 @@ void KFileShareConfig::updateShareListView()
 }
 
 void KFileShareConfig::allowedUsersBtnClicked() {
-  GroupConfigDlg dlg(this,m_fileShareGroup,m_restricted,m_rootPassNeeded);
+  GroupConfigDlg dlg(this,m_fileShareGroup,m_restricted,m_rootPassNeeded,
+                     m_ccgui->simpleRadio->isChecked());
   if (dlg.exec() == QDialog::Accepted) {
       m_fileShareGroup = dlg.fileShareGroup().name();
       m_restricted = dlg.restricted();

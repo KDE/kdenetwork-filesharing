@@ -1,4 +1,5 @@
 <!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>KcmPrinterDlg</class>
 <comment>
 /******************************************************************************
  *                                                                            *
@@ -20,7 +21,6 @@
  *                                                                            *
  ******************************************************************************/
 </comment>
-<class>KcmPrinterDlg</class>
 <widget class="QDialog">
     <property name="name">
         <cstring>KcmPrinterDlg</cstring>
@@ -48,7 +48,7 @@
         </property>
         <widget class="QTabWidget">
             <property name="name">
-                <cstring>TabWidget4</cstring>
+                <cstring>_tabs</cstring>
             </property>
             <widget class="QWidget">
                 <property name="name">
@@ -482,7 +482,7 @@
                                 </item>
                                 <item>
                                     <property name="text">
-                                        <string>lprnq</string>
+                                        <string>lprng</string>
                                     </property>
                                 </item>
                                 <item>
@@ -712,32 +712,7 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QLabel" row="1" column="0">
-                        <property name="name">
-                            <cstring>TextLabel1_2</cstring>
-                        </property>
-                        <property name="text">
-                            <string>Guest &amp;account</string>
-                        </property>
-                        <property name="buddy" stdset="0">
-                            <cstring>guestAccountEdit</cstring>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
-                        </property>
-                    </widget>
-                    <widget class="QLineEdit" row="1" column="1">
-                        <property name="name">
-                            <cstring>guestAccountEdit</cstring>
-                        </property>
-                        <property name="toolTip" stdset="0">
-                            <string>Guest account</string>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
-                        </property>
-                    </widget>
-                    <widget class="QLabel" row="4" column="0">
+                    <widget class="QLabel" row="3" column="0">
                         <property name="name">
                             <cstring>TextLabel6</cstring>
                         </property>
@@ -751,7 +726,7 @@
                             <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                         </property>
                     </widget>
-                    <widget class="QLineEdit" row="4" column="1">
+                    <widget class="QLineEdit" row="3" column="1">
                         <property name="name">
                             <cstring>hostsDenyEdit</cstring>
                         </property>
@@ -759,7 +734,7 @@
                             <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                         </property>
                     </widget>
-                    <widget class="QLineEdit" row="3" column="1">
+                    <widget class="QLineEdit" row="2" column="1">
                         <property name="name">
                             <cstring>hostsAllowEdit</cstring>
                         </property>
@@ -767,7 +742,7 @@
                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                         </property>
                     </widget>
-                    <widget class="QLabel" row="3" column="0">
+                    <widget class="QLabel" row="2" column="0">
                         <property name="name">
                             <cstring>TextLabel5</cstring>
                         </property>
@@ -781,21 +756,7 @@
                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                         </property>
                     </widget>
-                    <widget class="QLabel" row="2" column="0">
-                        <property name="name">
-                            <cstring>TextLabel6_2</cstring>
-                        </property>
-                        <property name="text">
-                            <string>&amp;Printer admin</string>
-                        </property>
-                        <property name="buddy" stdset="0">
-                            <cstring>printerAdminEdit</cstring>
-                        </property>
-                        <property name="whatsThis" stdset="0">
-                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
-                        </property>
-                    </widget>
-                    <widget class="QLineEdit" row="2" column="1">
+                    <widget class="QLineEdit" row="1" column="1">
                         <property name="name">
                             <cstring>printerAdminEdit</cstring>
                         </property>
@@ -803,7 +764,7 @@
                             <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                         </property>
                     </widget>
-                    <spacer row="5" column="0">
+                    <spacer row="4" column="0">
                         <property name="name" stdset="0">
                             <cstring>Spacer21</cstring>
                         </property>
@@ -820,6 +781,72 @@
                             </size>
                         </property>
                     </spacer>
+                    <widget class="QLabel" row="1" column="0">
+                        <property name="name">
+                            <cstring>TextLabel6_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>&amp;Printer admin</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>printerAdminEdit</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLabel" row="0" column="0">
+                        <property name="name">
+                            <cstring>TextLabel1_2</cstring>
+                        </property>
+                        <property name="text">
+                            <string>Guest &amp;account</string>
+                        </property>
+                        <property name="buddy" stdset="0">
+                            <cstring>guestAccountCombo</cstring>
+                        </property>
+                        <property name="whatsThis" stdset="0">
+                            <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
+                        </property>
+                    </widget>
+                    <widget class="QLayoutWidget" row="0" column="1">
+                        <property name="name">
+                            <cstring>Layout50</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QComboBox">
+                                <property name="name">
+                                    <cstring>guestAccountCombo</cstring>
+                                </property>
+                            </widget>
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer27</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </hbox>
+                    </widget>
                 </grid>
             </widget>
             <widget class="QWidget">
@@ -1150,7 +1177,7 @@
 </connections>
 <tabstops>
     <tabstop>printerAdminEdit</tabstop>
-    <tabstop>TabWidget4</tabstop>
+    <tabstop>_tabs</tabstop>
     <tabstop>queueCombo</tabstop>
     <tabstop>printersChk</tabstop>
     <tabstop>commentEdit</tabstop>
@@ -1158,7 +1185,6 @@
     <tabstop>availableBaseChk</tabstop>
     <tabstop>browseableBaseChk</tabstop>
     <tabstop>publicBaseChk</tabstop>
-    <tabstop>guestAccountEdit</tabstop>
     <tabstop>hostsDenyEdit</tabstop>
     <tabstop>hostsAllowEdit</tabstop>
     <tabstop>buttonHelp</tabstop>

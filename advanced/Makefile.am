@@ -1,1 +1,1 @@
-SUBDIRS = kcm_sambaconf
+SUBDIRS = kcm_sambaconf knfsplugin

@@ -92,7 +92,7 @@ void GroupConfigDlg::updateListBox() {
   QValueList<KUser>::iterator it;
   for ( it = m_users.begin(); it != m_users.end(); ++it ) {
      m_gui->listBox->insertItem(prettyString(*it));
-     kdDebug() << "GroupConfigDlg::updateListBox: " << (*it).loginName() << endl;
+     kdDebug(5009) << "GroupConfigDlg::updateListBox: " << (*it).loginName() << endl;
   }
 }
 

@@ -430,7 +430,7 @@ QString SambaFile::findSambaConf()
   KConfig config("ksambaplugin");
   // Perhaps the user has defined the path
   config.setGroup("KSambaKonqiPlugin");
-  QString sambaConf = config.readEntry("smb.conf");
+  QString sambaConf = config.readPathEntry("smb.conf");
 
   if ( QFileInfo(sambaConf).exists() )
     return sambaConf;

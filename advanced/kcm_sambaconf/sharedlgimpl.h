@@ -138,6 +138,8 @@ protected slots:
   void vetoChkClicked(bool b);
   void showContextMenu(QListViewItem*,const QPoint&);
   void updateView();
+  void hideDotFilesChkClicked(bool);
+  void hideUnreadableChkClicked(bool);
 };
 
 /**
@@ -174,6 +176,7 @@ protected :
 protected slots:
 	virtual void accept();
   virtual void homeChkToggled(bool);
+  virtual void accessModifierBtnClicked();
 
   void tabChangedSlot(QWidget* w);
 };

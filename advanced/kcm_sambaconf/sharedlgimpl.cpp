@@ -44,6 +44,7 @@
 #include <qcursor.h>
 #include <qtable.h>
 #include <qlistbox.h>
+#include <qtoolbutton.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -57,6 +58,7 @@
 #include <kmessagebox.h>
 #include <kpopupmenu.h>
 #include <kaction.h>
+#include <krestrictedline.h>
 
 #include <assert.h>
 
@@ -66,6 +68,7 @@
 #include "common.h"
 #include "passwd.h"
 #include "usertabimpl.h"
+#include "filemodedlgimpl.h"
 
 
 #define COL_NAME 0
@@ -166,7 +169,8 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 //  new QLabel(i18n("*.tmp/*SECRET*/.*/file?.*/"),grid);
 
   _dir = new KDirLister(true);
-
+  _dir->setShowingDotFiles(true);
+  
   connect( _dir, SIGNAL(newItems(const KFileItemList &)),
            this, SLOT(insertNewFiles(const KFileItemList &)));
 
@@ -191,6 +195,8 @@ void HiddenFileView::initListView()
   connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,QListViewItem*,const QPoint&)),
            this, SLOT(showContextMenu(QListViewItem*,const QPoint&)));
 
+  connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));
+  connect( _dlg->hideUnreadableChk, SIGNAL(toggled(bool)), this, SLOT(hideUnreadableChkClicked(bool)));
 }
 
 HiddenFileView::~HiddenFileView()
@@ -199,7 +205,7 @@ HiddenFileView::~HiddenFileView()
 
 void HiddenFileView::load()
 {
-  _dir->openURL( KURL(_share->getValue("path")) );
+  _dir->openURL( _dlg->pathUrlRq->url() );
 }
 
 void HiddenFileView::save()
@@ -523,7 +529,12 @@ QPtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
 
 bool HiddenFileView::matchHidden(const QString & s)
 {
-  return matchRegExpList(s,_hiddenList);
+  QPtrList<QRegExp> hiddenList(_hiddenList);
+
+  if (_dlg->hideDotFilesChk->isChecked())
+     hiddenList.append( new QRegExp(".*",false,true) );
+
+  return matchRegExpList(s,hiddenList);
 }
 
 bool HiddenFileView::matchVeto(const QString & s)
@@ -562,6 +573,17 @@ QRegExp* HiddenFileView::getRegExpListMatch(const QString & s, QPtrList<QRegExp>
 
   return 0L;
 }
+
+void HiddenFileView::hideDotFilesChkClicked(bool b)
+{
+  updateView();
+}
+
+void HiddenFileView::hideUnreadableChkClicked(bool b)
+{
+  updateView();
+}
+
 
 
 
@@ -630,8 +652,8 @@ void ShareDlgImpl::initDialog()
   deleteReadonlyChk->setChecked( _share->getBoolValue("delete readonly") );
 
 
-//-  readOnlyChk->setChecked( _share->getBoolValue("read only") );
-//-  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
+  // Security tab
+  
   guestOnlyChk->setChecked( _share->getBoolValue("guest only") );
   userOnlyChk->setChecked( _share->getBoolValue("user only") );
   hostsAllowEdit->setText( _share->getValue("hosts allow") );
@@ -653,6 +675,10 @@ void ShareDlgImpl::initDialog()
   wideLinksChk->setChecked( _share->getBoolValue("wide links") );
   followSymlinksChk->setChecked( _share->getBoolValue("follow symlinks") );
 
+  mapHiddenChk->setChecked( _share->getBoolValue("map hidden") );
+  mapArchiveChk->setChecked( _share->getBoolValue("map archive") );
+  mapSystemChk->setChecked( _share->getBoolValue("map system") );
+  
   // Advanced
 
   blockingLocksChk->setChecked( _share->getBoolValue("blocking locks") );
@@ -697,9 +723,10 @@ void ShareDlgImpl::loadHiddenFilesView()
   if (_fileView)
      return;
 
-
   _fileView = new HiddenFileView( this, _share );
-  _fileView->load();
+
+  if ( ! _share->isSpecialSection())
+     _fileView->load();
 
 
 }
@@ -752,8 +779,8 @@ void ShareDlgImpl::accept()
   _share->setValue("delete readonly",deleteReadonlyChk->isChecked( ) );
 
 
-//-  _share->setValue("read only",readOnlyChk->isChecked( ) );
-//-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
+  // Security
+  
   _share->setValue("guest only",guestOnlyChk->isChecked( ) );
   _share->setValue("user only",userOnlyChk->isChecked( ) );
   _share->setValue("hosts allow",hostsAllowEdit->text( ) );
@@ -772,6 +799,11 @@ void ShareDlgImpl::accept()
   _share->setValue("wide links",wideLinksChk->isChecked( ) );
   _share->setValue("follow symlinks",followSymlinksChk->isChecked( ) );
 
+  _share->setValue("map hidden",mapHiddenChk->isChecked( ) );
+  _share->setValue("map archive",mapArchiveChk->isChecked( ) );
+  _share->setValue("map system",mapSystemChk->isChecked( ) );
+
+  
   // Advanced
 
   _share->setValue("blocking locks",blockingLocksChk->isChecked( ) );
@@ -817,6 +849,47 @@ void ShareDlgImpl::homeChkToggled(bool b)
 	  pathUrlRq->setURL( _share->getValue("path") );
     directoryPixLbl->setPixmap(DesktopIcon("folder"));
   }
+}
+
+void ShareDlgImpl::accessModifierBtnClicked()
+{
+  cout << "clicked" << endl;
+
+  assert(QObject::sender());
+  
+  QString name = QObject::sender()->name();
+  
+  QLineEdit *edit = 0L;
+      
+  if (name == "forceCreateModeBtn")
+     edit = forceCreateModeEdit;
+  else
+  if (name == "forceSecurityModeBtn")
+     edit = forceSecurityModeEdit;
+  else
+  if (name == "forceDirectoryModeBtn")
+     edit = forceDirectoryModeEdit;
+  else
+  if (name == "forceDirectorySecurityModeBtn")
+     edit = forceDirectorySecurityModeEdit;
+  else
+  if (name == "createMaskBtn")
+     edit = createMaskEdit;
+  else
+  if (name == "securityMaskBtn")
+     edit = securityMaskEdit;
+  else
+  if (name == "directoryMaskBtn")
+     edit = directoryMaskEdit;
+  else
+  if (name == "directorySecurityMaskBtn")
+     edit = directorySecurityMaskEdit;
+
+  assert(edit);
+  
+  FileModeDlgImpl dlg(this, edit);
+
+  dlg.exec();
 }
 
 

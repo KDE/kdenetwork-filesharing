@@ -153,3 +153,9 @@ void KcmShareDlg::userOnlyChk_toggled( bool b)
     guestOnlyChk->setDisabled(b);
     publicBaseChk->setDisabled(b);
 }
+
+void KcmShareDlg::accessModifierBtnClicked()
+{
+  
+    
+}

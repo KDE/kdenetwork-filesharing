@@ -29,8 +29,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>576</width>
-            <height>437</height>
+            <width>578</width>
+            <height>420</height>
         </rect>
     </property>
     <property name="caption">
@@ -314,7 +314,7 @@
                 <attribute name="title">
                     <string>Filename settings</string>
                 </attribute>
-                <hbox>
+                <grid>
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
@@ -324,7 +324,109 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QGroupBox">
+                    <widget class="QLayoutWidget" row="0" column="1">
+                        <property name="name">
+                            <cstring>Layout27</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox9</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="title">
+                                    <string>Other options</string>
+                                </property>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>hideTrailingDotChk</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>10</x>
+                                            <y>20</y>
+                                            <width>130</width>
+                                            <height>20</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Hide trailing dot</string>
+                                    </property>
+                                </widget>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox15</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>DOS</string>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>dosFilemodeChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>dos filemode</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>dosFiletimesChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>dos filetimes</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>dosFiletimeResolutionChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>dos filetime resolution</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>deleteReadonlyChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>delete readonly</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>false</bool>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QGroupBox" row="0" column="0">
                         <property name="name">
                             <cstring>GroupBox5</cstring>
                         </property>
@@ -518,128 +620,24 @@
                             </widget>
                         </vbox>
                     </widget>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>Layout27</cstring>
+                    <spacer row="1" column="0">
+                        <property name="name" stdset="0">
+                            <cstring>Spacer9</cstring>
                         </property>
-                        <vbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QGroupBox">
-                                <property name="name">
-                                    <cstring>GroupBox9</cstring>
-                                </property>
-                                <property name="sizePolicy">
-                                    <sizepolicy>
-                                        <hsizetype>7</hsizetype>
-                                        <vsizetype>5</vsizetype>
-                                        <horstretch>0</horstretch>
-                                        <verstretch>0</verstretch>
-                                    </sizepolicy>
-                                </property>
-                                <property name="title">
-                                    <string>Other options</string>
-                                </property>
-                                <vbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>11</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>hideDotFilesChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>hide dot-files</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>hideTrailingDotChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>hide trailing dot</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>hideUnreadableChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>hide unreadable</string>
-                                        </property>
-                                    </widget>
-                                </vbox>
-                            </widget>
-                            <widget class="QGroupBox">
-                                <property name="name">
-                                    <cstring>GroupBox15</cstring>
-                                </property>
-                                <property name="title">
-                                    <string>DOS</string>
-                                </property>
-                                <vbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>11</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>dosFilemodeChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>dos filemode</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>dosFiletimesChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>dos filetimes</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>dosFiletimeResolutionChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>dos filetime resolution</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>deleteReadonlyChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>delete readonly</string>
-                                        </property>
-                                        <property name="checked">
-                                            <bool>false</bool>
-                                        </property>
-                                    </widget>
-                                </vbox>
-                            </widget>
-                        </vbox>
-                    </widget>
-                </hbox>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </grid>
             </widget>
             <widget class="QWidget">
                 <property name="name">
@@ -870,30 +868,6 @@
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                                         </property>
                                     </widget>
-                                    <widget class="QLineEdit" row="3" column="1">
-                                        <property name="name">
-                                            <cstring>forceDirectorySecurityModeEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="2" column="1">
-                                        <property name="name">
-                                            <cstring>forceDirectoryModeEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="1" column="1">
-                                        <property name="name">
-                                            <cstring>forceSecurityModeEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
                                     <widget class="QLabel" row="1" column="0">
                                         <property name="name">
                                             <cstring>TextLabel5_2_3_2</cstring>
@@ -936,12 +910,124 @@
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                                         </property>
                                     </widget>
-                                    <widget class="QLineEdit" row="0" column="1">
+                                    <widget class="QToolButton" row="2" column="2">
+                                        <property name="name">
+                                            <cstring>forceDirectoryModeBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="3" column="2">
+                                        <property name="name">
+                                            <cstring>forceDirectorySecurityModeBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="0" column="1">
                                         <property name="name">
                                             <cstring>forceCreateModeEdit</cstring>
                                         </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>forceSecurityModeEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>forceDirectoryModeEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>forceDirectorySecurityModeEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="1" column="2">
+                                        <property name="name">
+                                            <cstring>forceSecurityModeBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="0" column="2">
+                                        <property name="name">
+                                            <cstring>forceCreateModeBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
                                         </property>
                                     </widget>
                                 </grid>
@@ -969,52 +1055,6 @@
                                         </property>
                                         <property name="text">
                                             <string>Directory security mask</string>
-                                        </property>
-                                        <property name="buddy" stdset="0">
-                                            <cstring>allowEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="3" column="1">
-                                        <property name="name">
-                                            <cstring>directorySecurityMaskEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="2" column="1">
-                                        <property name="name">
-                                            <cstring>directoryMaskEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="1" column="1">
-                                        <property name="name">
-                                            <cstring>securityMaskEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="0" column="1">
-                                        <property name="name">
-                                            <cstring>createMaskEdit</cstring>
-                                        </property>
-                                        <property name="whatsThis" stdset="0">
-                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLabel" row="0" column="0">
-                                        <property name="name">
-                                            <cstring>TextLabel5_2</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Create mask</string>
                                         </property>
                                         <property name="buddy" stdset="0">
                                             <cstring>allowEdit</cstring>
@@ -1051,15 +1091,149 @@
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                                         </property>
                                     </widget>
+                                    <widget class="QToolButton" row="1" column="2">
+                                        <property name="name">
+                                            <cstring>securityMaskBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="2" column="2">
+                                        <property name="name">
+                                            <cstring>directoryMaskBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="3" column="2">
+                                        <property name="name">
+                                            <cstring>directorySecurityMaskBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>securityMaskEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>directoryMaskEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>directorySecurityMaskEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel5_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Create mask</string>
+                                        </property>
+                                        <property name="buddy" stdset="0">
+                                            <cstring>allowEdit</cstring>
+                                        </property>
+                                        <property name="whatsThis" stdset="0">
+                                            <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KRestrictedLine" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>createMaskEdit</cstring>
+                                        </property>
+                                        <property name="validChars">
+                                            <string>01234567</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QToolButton" row="0" column="2">
+                                        <property name="name">
+                                            <cstring>createMaskBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>1</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>20</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>...</string>
+                                        </property>
+                                    </widget>
                                 </grid>
                             </widget>
                         </hbox>
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout49</cstring>
+                            <cstring>Layout52</cstring>
                         </property>
-                        <hbox>
+                        <grid>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
@@ -1069,15 +1243,23 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QCheckBox">
+                            <widget class="QCheckBox" row="1" column="1">
                                 <property name="name">
-                                    <cstring>inheritPermissionsChk</cstring>
+                                    <cstring>mapHiddenChk</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Inherit permissions</string>
+                                    <string>Map hidden</string>
                                 </property>
                             </widget>
-                            <widget class="QCheckBox">
+                            <widget class="QCheckBox" row="1" column="2">
+                                <property name="name">
+                                    <cstring>mapSystemChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Map system</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="0" column="1">
                                 <property name="name">
                                     <cstring>followSymlinksChk</cstring>
                                 </property>
@@ -1085,7 +1267,15 @@
                                     <string>Follow symlinks</string>
                                 </property>
                             </widget>
-                            <widget class="QCheckBox">
+                            <widget class="QCheckBox" row="0" column="0">
+                                <property name="name">
+                                    <cstring>inheritPermissionsChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Inherit permissions</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox" row="0" column="2">
                                 <property name="name">
                                     <cstring>wideLinksChk</cstring>
                                 </property>
@@ -1093,7 +1283,15 @@
                                     <string>Wide links</string>
                                 </property>
                             </widget>
-                        </hbox>
+                            <widget class="QCheckBox" row="1" column="0">
+                                <property name="name">
+                                    <cstring>mapArchiveChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Map archive</string>
+                                </property>
+                            </widget>
+                        </grid>
                     </widget>
                     <spacer>
                         <property name="name" stdset="0">
@@ -1511,7 +1709,7 @@
                         <property name="title">
                             <string>Manual configuration</string>
                         </property>
-                        <grid>
+                        <vbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
@@ -1521,33 +1719,81 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLabel" row="0" column="0">
+                            <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>TextLabel1_3</cstring>
+                                    <cstring>Layout13</cstring>
                                 </property>
-                                <property name="text">
-                                    <string>Hidden files</string>
-                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel1_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Hidden files</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>hiddenEdit</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel2_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Veto files</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>vetoEdit</cstring>
+                                        </property>
+                                    </widget>
+                                </grid>
                             </widget>
-                            <widget class="QLabel" row="1" column="0">
+                            <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>TextLabel2_2</cstring>
+                                    <cstring>Layout14</cstring>
                                 </property>
-                                <property name="text">
-                                    <string>Veto files</string>
-                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>hideDotFilesChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Hide files starting with a dot </string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>hideUnreadableChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Hide unreadable files</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
                             </widget>
-                            <widget class="QLineEdit" row="0" column="1">
-                                <property name="name">
-                                    <cstring>hiddenEdit</cstring>
-                                </property>
-                            </widget>
-                            <widget class="QLineEdit" row="1" column="1">
-                                <property name="name">
-                                    <cstring>vetoEdit</cstring>
-                                </property>
-                            </widget>
-                        </grid>
+                        </vbox>
                     </widget>
                 </vbox>
             </widget>
@@ -1663,6 +1909,54 @@
         <receiver>KcmShareDlg</receiver>
         <slot>homeChkToggled(bool)</slot>
     </connection>
+    <connection>
+        <sender>forceCreateModeBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>forceSecurityModeBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>forceDirectoryModeBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>forceDirectorySecurityModeBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>createMaskBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>securityMaskBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>directorySecurityMaskBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>directoryMaskBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>accessModifierBtnClicked()</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
@@ -1679,6 +1973,7 @@
     <slot>removeAllowedUserBtnClicked()</slot>
     <slot>guestOnlyChk_toggled( bool b )</slot>
     <slot>userOnlyChk_toggled( bool b )</slot>
+    <slot access="protected">accessModifierBtnClicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

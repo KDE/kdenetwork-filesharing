@@ -2,7 +2,7 @@
                           passwd.cpp  -  description
                              -------------------
     begin                : Tue June 6 2002
-    copyright            : (C) 2002 by Jan Schäfer
+    copyright            : (C) 2002 by Jan Schaefer
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -30,7 +30,7 @@
 #include <sys/types.h>
 #include <pwd.h>
 #include <grp.h>
-#include <iostream.h>
+#include <iostream>
 
 #include "passwd.h"
 

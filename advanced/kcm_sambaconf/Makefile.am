@@ -77,11 +77,13 @@ EXTRA_DIST = $(service_DATA) \
   hiddenfileview.h \
   dictmanager.h \
   qmultichecklistitem.h
-  
-
 
 data_DATA = kcmsambaconf.desktop
 datadir = $(kde_appsdir)/Settings/Network
+
+## what's going on with this file I don't know
+## I'm just an automake automaton --exa
+DISTCLEANFILES = qmultichecklistitem.cpp
 
 #messages:
 #	$(XGETTEXT) $(libkcm_kcm_sambaconf_la_SOURCES) -o $(podir)/kcm_sambaconf.pot

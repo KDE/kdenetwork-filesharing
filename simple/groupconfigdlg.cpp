@@ -136,12 +136,18 @@ void GroupConfigDlg::slotAddUser() {
   
   stringList.sort();
   
+  bool ok;
   QString userName = KInputDialog::getItem(
             i18n("Select User"),
             i18n("Select a user:"),
-            stringList);
-            
-              
+            stringList,
+            0,
+            false,
+            &ok);
+
+  if (!ok)
+      return;            
+                        
   QString loginName = fromPrettyString(userName);
   KUser user(loginName);
   m_users.append(KUser(loginName));

@@ -385,7 +385,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
             int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<qt>Some files you have selected are hidden because they start with a dot; "
                     "do you want to uncheck all files starting with a dot?<br>"
-                    "(If you say no, no files will be unchecked.)</qt>"),i18n("Files Starting With Dot"));
+                    "(If you answer No, no files will be unchecked.)</qt>"),i18n("Files Starting With Dot"));
                 
             if (result == KMessageBox::No) {
                 QPtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));

@@ -224,7 +224,7 @@
                                 <cstring>nfsChk</cstring>
                             </property>
                             <property name="enabled">
-                                <bool>true</bool>
+                                <bool>false</bool>
                             </property>
                             <property name="text">
                                 <string>Use &amp;NFS (Linux/UNIX)</string>
@@ -236,6 +236,9 @@
                         <widget class="QCheckBox" row="0" column="1">
                             <property name="name">
                                 <cstring>sambaChk</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
                             </property>
                             <property name="text">
                                 <string>Use Sam&amp;ba (Microsoft(R) Windows(R))</string>
@@ -413,6 +416,12 @@
         <sender>advancedRadio</sender>
         <signal>toggled(bool)</signal>
         <receiver>nfsChk</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+   <connection>
+        <sender>advancedRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>sambaChk</receiver>
         <slot>setEnabled(bool)</slot>
     </connection>
     <connection>

@@ -49,6 +49,7 @@
 #include <kiconloader.h>
 #include <knuminput.h>
 #include <krestrictedline.h>
+#include <kmessagebox.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -316,16 +317,19 @@ void KcmSambaConf::load()
 
 	_interface = new KcmInterface(this);
 
-	connect ( _interface->editShareBtn, SIGNAL(pressed()), this, SLOT(editShare()));
-	connect ( _interface->addShareBtn, SIGNAL(pressed()), this, SLOT(addShare()));
-	connect ( _interface->removeShareBtn, SIGNAL(pressed()), this, SLOT(removeShare()));
 
-	connect ( _interface->editPrinterBtn, SIGNAL(pressed()), this, SLOT(editPrinter()));
-	connect ( _interface->addPrinterBtn, SIGNAL(pressed()), this, SLOT(addPrinter()));
-	connect ( _interface->removePrinterBtn, SIGNAL(pressed()), this, SLOT(removePrinter()));
+	connect ( _interface->sambaUserPasswordBtn, SIGNAL(clicked()), this, SLOT(sambaUserPasswordBtnClicked()));
 
-	connect ( _interface->editDefaultPrinterBtn, SIGNAL(pressed()), this, SLOT(editPrinterDefaults()));
-	connect ( _interface->editDefaultShareBtn, SIGNAL(pressed()), this, SLOT(editShareDefaults()));
+	connect ( _interface->editShareBtn, SIGNAL(clicked()), this, SLOT(editShare()));
+	connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
+	connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
+
+	connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
+	connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
+	connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
+
+	connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
+	connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
 
 	connect ( _interface->socketOptionsBtn, SIGNAL(clicked()), this, SLOT(socketOptionsBtnClicked()));
   
@@ -375,7 +379,7 @@ void KcmSambaConf::load()
 
   // Security
 
-  int i = _interface->securityLevelCombo->listBox()->index(_interface->securityLevelCombo->listBox()->findItem(share->getValue("security level",false,true),Qt::ExactMatch));
+  int i = _interface->securityLevelCombo->listBox()->index(_interface->securityLevelCombo->listBox()->findItem(share->getValue("security",false,true),Qt::ExactMatch));
   _interface->securityLevelCombo->setCurrentItem(i);
 
   i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest",false,true),Qt::ExactMatch));
@@ -430,7 +434,7 @@ void KcmSambaConf::load()
   _interface->debugPidChk->setChecked( share->getBoolValue("debug pid",false,true));
   _interface->microsecondsChk->setChecked( share->getBoolValue("debug hires timestamp",false,true));
   _interface->syslogOnlyChk->setChecked( share->getBoolValue("syslog only",false,true));
-  _interface->timestampChk->setChecked( share->getBoolValue("timestamp",false,true));
+  _interface->timestampChk->setChecked( share->getBoolValue("debug timestamp",false,true));
 
   // WINS
 
@@ -439,6 +443,7 @@ void KcmSambaConf::load()
   _interface->dnsProxyChk->setChecked( share->getBoolValue("dns proxy",false,true));
   _interface->winsServerEdit->setText( share->getValue("wins server",false,true) );
   _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
+  _interface->winsHookEdit->setText( share->getValue("wins hook",false,true) );
 
   _interface->preferredMasterChk->setChecked( share->getBoolValue("preferred master",false,true));
   _interface->localMasterChk->setChecked( share->getBoolValue("local master",false,true));
@@ -536,10 +541,21 @@ void KcmSambaConf::addSambaUserBtnClicked()
 {
   QPtrList<QListViewItem> list = _interface->unixUsersListView->selectedItems();
 
+  SambaShare* share = _sambaFile->getShare("global");
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+
   QListViewItem* item;
   for ( item = list.first(); item; item = list.first() )
   {
+    SambaUser user( item->text(0), item->text(1).toInt() );
+    if (!passwd.addUser(user))
+    {
+      KMessageBox::sorry(0,i18n("Adding the user %1 to the Samba user database failed.").arg(user.name));
+      break;
+    }
+
     new KListViewItem(_interface->sambaUsersListView, item->text(0), item->text(1));
+
     list.remove(item);
     delete item;
   }
@@ -549,13 +565,43 @@ void KcmSambaConf::removeSambaUserBtnClicked()
 {
   QPtrList<QListViewItem> list = _interface->sambaUsersListView->selectedItems();
 
+  SambaShare* share = _sambaFile->getShare("global");
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+
   QListViewItem* item;
   for ( item = list.first(); item; item = list.first() )
   {
+    SambaUser user( item->text(0), item->text(1).toInt() );
+    if (!passwd.removeUser(user))
+    {
+      KMessageBox::sorry(0,i18n("Removing the user %1 from the Samba user database failed.").arg(user.name));
+      continue;
+    }
+
     new KListViewItem(_interface->unixUsersListView, item->text(0), item->text(1));
     list.remove(item);
     delete item;
   }
+}
+
+void KcmSambaConf::sambaUserPasswordBtnClicked()
+{
+  QPtrList<QListViewItem> list = _interface->sambaUsersListView->selectedItems();
+
+  SambaShare* share = _sambaFile->getShare("global");
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+
+  QListViewItem* item;
+  for ( item = list.first(); item; item = list.next() )
+  {
+    SambaUser user( item->text(0), item->text(1).toInt() );
+    if (!passwd.changePassword(user))
+    {
+      KMessageBox::sorry(0,i18n("Changing the password of the user %1 failed.").arg(user.name));
+    }
+
+  }
+
 }
 
 
@@ -588,7 +634,7 @@ void KcmSambaConf::save() {
 
   // Security
 
-  share->setValue("security level",_interface->securityLevelCombo->currentText());
+  share->setValue("security",_interface->securityLevelCombo->currentText());
   share->setValue("map to guest",_interface->mapToGuestCombo->currentText());
 
 
@@ -641,7 +687,7 @@ void KcmSambaConf::save() {
   share->setValue("debug pid",_interface->debugPidChk->isChecked(), false, true );
   share->setValue("debug hires timestamp",_interface->microsecondsChk->isChecked(), false, true );
   share->setValue("syslog only",_interface->syslogOnlyChk->isChecked(), false, true );
-  share->setValue("timestamp",_interface->timestampChk->isChecked(), false, true );
+  share->setValue("debug timestamp",_interface->timestampChk->isChecked(), false, true );
 
 
   // WINS
@@ -650,6 +696,7 @@ void KcmSambaConf::save() {
   share->setValue("wins proxy",_interface->winsProxyChk->isChecked(), false,true);
   share->setValue("dns proxy",_interface->dnsProxyChk->isChecked(), false,true);
   share->setValue("wins server",_interface->winsServerEdit->text(), false,true);
+  share->setValue("wins hook",_interface->winsHookEdit->text(), false,true);
 
   share->setValue("preferred master",_interface->preferredMasterChk->isChecked(), false,true);
   share->setValue("local master",_interface->localMasterChk->isChecked(), false,true);

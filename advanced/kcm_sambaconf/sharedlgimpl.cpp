@@ -65,6 +65,7 @@
 #include "sharedlgimpl.h"
 #include "common.h"
 #include "passwd.h"
+#include "usertabimpl.h"
 
 
 #define COL_NAME 0
@@ -589,7 +590,7 @@ void ShareDlgImpl::initDialog()
 
   if (_share->getName().lower() == "global")
   {
-    tabs->removePage( tabs->page(HIDDENTABINDEX) );
+    _tabs->removePage( _tabs->page(HIDDENTABINDEX) );
   }
 
   pathUrlRq->setURL( _share->getValue("path") );
@@ -606,9 +607,9 @@ void ShareDlgImpl::initDialog()
 
   // User settings
 
-  invalidUsersEdit->setText( _share->getValue("invalid users") );
-
-  loadUserTable();
+  _userTab = new UserTabImpl(this,_share);
+  _tabs->insertTab(_userTab,i18n("&Users"),1);
+  _userTab->load();
 
   // Filename settings
   
@@ -674,216 +675,19 @@ void ShareDlgImpl::initDialog()
 
   _fileView = 0L;
 
-  connect( tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
+  connect( _tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
 }
 
 ShareDlgImpl::~ShareDlgImpl()
 {
 }
 
-void ShareDlgImpl::loadUserTable()
-{
-  forceUserCombo->insertItem("");
-  forceGroupCombo->insertItem("");
-
-  QStringList unixGroups = getUnixGroups();
-
-  forceUserCombo->insertStringList( getUnixUsers() );
-  forceGroupCombo->insertStringList( unixGroups );
-
-  setComboToString(forceUserCombo, _share->getValue("force user"));
-  setComboToString(forceGroupCombo, _share->getValue("force group"));
-
-
-  possibleUserListView->setSelectionMode(QListView::Extended);
-  possibleUserListView->setAlternateBackground( Qt::white );
-
-  QStringList validUsers = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("valid users"));
-  QStringList readList = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("read list"));
-  QStringList writeList = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("write list"));
-  QStringList adminUsers = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("admin users"));
-
-  QStringList added;
-
-  QStringList accessRights;
-  accessRights << "Share" << "Read only" << "Writeable" << "Admin";
-
-  int row=0;
-
-  userTable->setLeftMargin(0);
-
-  SmbPasswdFile passwd( KURL(_share->getValue("smb passwd file",true,true)) );
-  SambaUserList sambaList = passwd.getSambaUserList();
-
-  // if the valid users list contains no entries
-  // then all users are allowed !
-  if (validUsers.empty())
-     validUsers = sambaList.getUserNames();
-
-  QStringList all = validUsers+readList+writeList+adminUsers;
-
-
-  for ( QStringList::Iterator it = all.begin(); it != all.end(); ++it )
-  {
-    if (added.find(*it)!=added.end())
-       continue;
-
-    added.append(*it);
-
-    userTable->setNumRows(row+1);
-
-    QTableItem* item = new QTableItem( userTable,QTableItem::Never, *it );
-    userTable->setItem(row,0,item);
-    QComboTableItem* comboItem = new QComboTableItem( userTable,accessRights);
-    userTable->setItem(row,1,comboItem);
-
-    QStringList::Iterator it2;
-
-    it2=readList.find(*it);
-    if (it2 != readList.end())
-    {
-      comboItem->setCurrentItem(1);
-      readList.remove(it2);
-    }
-
-    it2=writeList.find(*it);
-    if (it2 != writeList.end())
-    {
-      comboItem->setCurrentItem(2);
-      writeList.remove(it2);
-    }
-
-    it2=adminUsers.find(*it);
-    if (it2 != adminUsers.end())
-    {
-      comboItem->setCurrentItem(3);
-      adminUsers.remove(it2);
-    }
-
-    row++;
-  }
-
-  _usersFolder = new KListViewItem(possibleUserListView, i18n("Samba Users"));
-  _groupsFolder = new KListViewItem(possibleUserListView, i18n("Unix Groups"));
-
-  _usersFolder->setPixmap(0,SmallIcon("folder"));
-  _groupsFolder->setPixmap(0,SmallIcon("folder"));
-
-
-  SambaUser *user;
-  for ( user = sambaList.first(); user; user = sambaList.next() )
-  {
-    QStringList::Iterator it;
-
-    it=added.find(user->name);
-    if (it == added.end())
-        new KListViewItem(_usersFolder, user->name);
-  }
-
-  for (QStringList::Iterator it = unixGroups.begin(); it != unixGroups.end(); ++it)
-  {
-    new KListViewItem(_groupsFolder, *it);
-  }
-
-}
-
-void ShareDlgImpl::addAllowedUserBtnClicked()
-{
-  QPtrList<QListViewItem> list = possibleUserListView->selectedItems();
-  QStringList accessRights;
-  accessRights << "Share" << "Read only" << "Writeable" << "Admin";
-
-  QListViewItem* item;
-  for ( item = list.first(); item; item = list.first() )
-  {
-    if (item == _usersFolder ||
-        item == _groupsFolder)
-       continue;
-
-    int row = userTable->numRows();
-    userTable->setNumRows(row+1);
-
-    QString name = item->text(0);
-    if (item->parent() == _groupsFolder)
-        name = "+"+name;
-
-    QTableItem* tableItem = new QTableItem( userTable,QTableItem::Never, name  );
-    userTable->setItem(row,0,tableItem);
-    QComboTableItem* comboItem = new QComboTableItem( userTable,accessRights);
-    userTable->setItem(row,1,comboItem);
-
-    list.remove(item);
-    delete item;
-  }
-}
-
-void ShareDlgImpl::removeAllowedUserBtnClicked()
-{
-  QMemArray<int>rows;
-
-  int j=0;
-
-  for (int i=0; i<userTable->numRows(); i++)
-  {
-    if (userTable->isRowSelected(i))
-    {
-      QTableItem* item = userTable->item(i,0);
-      QString name = item->text();
-
-      if (name.left(1)=="+")
-      {
-          name = name.right(name.length()-1);
-          new KListViewItem(_groupsFolder, name);
-      } else
-          new KListViewItem(_usersFolder, name);
-
-
-
-      rows.resize(j+1);
-      rows[j] = i;
-      j++;
-    }
-  }
-
-  userTable->removeRows(rows);
-}
-
-void ShareDlgImpl::saveUserTable()
-{
-  QStringList validUsers;
-  QStringList writeList;
-  QStringList readList;
-  QStringList adminUsers;
-
-  for (int i=0; i<userTable->numRows(); i++)
-  {
-    QTableItem* item = userTable->item(i,0);
-    QComboTableItem* comboItem = static_cast<QComboTableItem*>(userTable->item(i,1));
-
-    validUsers.append(item->text());
-
-    switch (comboItem->currentItem())
-    {
-      case 1 : readList.append(item->text());break;
-      case 2 : writeList.append(item->text());break;
-      case 3 : adminUsers.append(item->text());break;
-      default : break;
-    }
-  }
-
-  _share->setValue("valid users", validUsers.join(","));
-  _share->setValue("read list", readList.join(","));
-  _share->setValue("write list", writeList.join(","));
-  _share->setValue("admin users", adminUsers.join(","));
-
-
-}
 
 void ShareDlgImpl::tabChangedSlot(QWidget* w)
 {
 
   // We are only interrested in the Hidden files tab
-  if (HIDDENTABINDEX == tabs->indexOf(w))
+  if (HIDDENTABINDEX == _tabs->indexOf(w))
      loadHiddenFilesView();
 
 }
@@ -927,11 +731,7 @@ void ShareDlgImpl::accept()
 
   // User settings
 
-  _share->setValue("invalid users",invalidUsersEdit->text( ) );
-  _share->setValue("force user",forceUserCombo->currentText( ) );
-  _share->setValue("force group",forceGroupCombo->currentText( ) );
-
-  saveUserTable();
+  _userTab->save();
 
   // Filename settings
   

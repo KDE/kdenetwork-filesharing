@@ -51,7 +51,7 @@
         </property>
         <widget class="QTabWidget">
             <property name="name">
-                <cstring>tabs</cstring>
+                <cstring>_tabs</cstring>
             </property>
             <widget class="QWidget">
                 <property name="name">
@@ -305,213 +305,6 @@
                             </size>
                         </property>
                     </spacer>
-                </vbox>
-            </widget>
-            <widget class="QWidget">
-                <property name="name">
-                    <cstring>usersTab</cstring>
-                </property>
-                <attribute name="title">
-                    <string>&amp;Users</string>
-                </attribute>
-                <vbox>
-                    <property name="name">
-                        <cstring>unnamed</cstring>
-                    </property>
-                    <property name="margin">
-                        <number>11</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
-                    </property>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>Layout16</cstring>
-                        </property>
-                        <hbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QTable">
-                                <column>
-                                    <property name="text">
-                                        <string>Allowed Users</string>
-                                    </property>
-                                </column>
-                                <column>
-                                    <property name="text">
-                                        <string>Access Rights</string>
-                                    </property>
-                                </column>
-                                <property name="name">
-                                    <cstring>userTable</cstring>
-                                </property>
-                                <property name="resizePolicy">
-                                    <enum>AutoOneFit</enum>
-                                </property>
-                                <property name="numRows">
-                                    <number>0</number>
-                                </property>
-                                <property name="numCols">
-                                    <number>2</number>
-                                </property>
-                                <property name="showGrid">
-                                    <bool>false</bool>
-                                </property>
-                                <property name="columnMovingEnabled">
-                                    <bool>true</bool>
-                                </property>
-                                <property name="selectionMode">
-                                    <enum>MultiRow</enum>
-                                </property>
-                                <property name="focusStyle">
-                                    <enum>FollowStyle</enum>
-                                </property>
-                            </widget>
-                            <widget class="QLayoutWidget">
-                                <property name="name">
-                                    <cstring>Layout13</cstring>
-                                </property>
-                                <vbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QPushButton">
-                                        <property name="name">
-                                            <cstring>addAllowedUserBtn</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>&lt;</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QPushButton">
-                                        <property name="name">
-                                            <cstring>removeAllowedUserBtn</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>&gt;</string>
-                                        </property>
-                                    </widget>
-                                </vbox>
-                            </widget>
-                            <widget class="KListView">
-                                <column>
-                                    <property name="text">
-                                        <string>Possible Users</string>
-                                    </property>
-                                    <property name="clickable">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="resizeable">
-                                        <bool>true</bool>
-                                    </property>
-                                </column>
-                                <property name="name">
-                                    <cstring>possibleUserListView</cstring>
-                                </property>
-                            </widget>
-                        </hbox>
-                    </widget>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>Layout16</cstring>
-                        </property>
-                        <hbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QLabel">
-                                <property name="name">
-                                    <cstring>TextLabel8</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Rejected users</string>
-                                </property>
-                            </widget>
-                            <widget class="QLineEdit">
-                                <property name="name">
-                                    <cstring>invalidUsersEdit</cstring>
-                                </property>
-                            </widget>
-                        </hbox>
-                    </widget>
-                    <widget class="QLayoutWidget">
-                        <property name="name">
-                            <cstring>Layout15</cstring>
-                        </property>
-                        <hbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QLabel">
-                                <property name="name">
-                                    <cstring>TextLabel12</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Force user</string>
-                                </property>
-                            </widget>
-                            <widget class="QComboBox">
-                                <property name="name">
-                                    <cstring>forceUserCombo</cstring>
-                                </property>
-                            </widget>
-                            <spacer>
-                                <property name="name" stdset="0">
-                                    <cstring>Spacer8</cstring>
-                                </property>
-                                <property name="orientation">
-                                    <enum>Horizontal</enum>
-                                </property>
-                                <property name="sizeType">
-                                    <enum>Expanding</enum>
-                                </property>
-                                <property name="sizeHint">
-                                    <size>
-                                        <width>20</width>
-                                        <height>20</height>
-                                    </size>
-                                </property>
-                            </spacer>
-                            <widget class="QLabel">
-                                <property name="name">
-                                    <cstring>TextLabel13</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Force group</string>
-                                </property>
-                            </widget>
-                            <widget class="QComboBox">
-                                <property name="name">
-                                    <cstring>forceGroupCombo</cstring>
-                                </property>
-                            </widget>
-                        </hbox>
-                    </widget>
                 </vbox>
             </widget>
             <widget class="QWidget">
@@ -922,7 +715,7 @@
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout22</cstring>
+                            <cstring>Layout51</cstring>
                         </property>
                         <grid>
                             <property name="name">
@@ -934,45 +727,12 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLabel" row="0" column="0">
-                                <property name="name">
-                                    <cstring>TextLabel1_2</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Guest &amp;account</string>
-                                </property>
-                                <property name="buddy" stdset="0">
-                                    <cstring>guestAccountEdit</cstring>
-                                </property>
-                                <property name="whatsThis" stdset="0">
-                                    <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
-                                </property>
-                            </widget>
                             <widget class="QLineEdit" row="1" column="1">
                                 <property name="name">
                                     <cstring>hostsAllowEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
-                                </property>
-                            </widget>
-                            <widget class="QLineEdit" row="0" column="1">
-                                <property name="name">
-                                    <cstring>guestAccountEdit</cstring>
-                                </property>
-                                <property name="toolTip" stdset="0">
-                                    <string>Guest account</string>
-                                </property>
-                                <property name="whatsThis" stdset="0">
-                                    <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
-                                </property>
-                            </widget>
-                            <widget class="QLineEdit" row="2" column="1">
-                                <property name="name">
-                                    <cstring>hostsDenyEdit</cstring>
-                                </property>
-                                <property name="whatsThis" stdset="0">
-                                    <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="0">
@@ -989,6 +749,28 @@
                                     <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                                 </property>
                             </widget>
+                            <widget class="QLineEdit" row="2" column="1">
+                                <property name="name">
+                                    <cstring>hostsDenyEdit</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel1_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Guest &amp;account</string>
+                                </property>
+                                <property name="buddy" stdset="0">
+                                    <cstring>guestAccountCombo</cstring>
+                                </property>
+                                <property name="whatsThis" stdset="0">
+                                    <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
+                                </property>
+                            </widget>
                             <widget class="QLabel" row="1" column="0">
                                 <property name="name">
                                     <cstring>TextLabel5</cstring>
@@ -1002,6 +784,44 @@
                                 <property name="whatsThis" stdset="0">
                                     <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                                 </property>
+                            </widget>
+                            <widget class="QLayoutWidget" row="0" column="1">
+                                <property name="name">
+                                    <cstring>Layout50</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QComboBox">
+                                        <property name="name">
+                                            <cstring>guestAccountCombo</cstring>
+                                        </property>
+                                    </widget>
+                                    <spacer>
+                                        <property name="name" stdset="0">
+                                            <cstring>Spacer27</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </hbox>
                             </widget>
                         </grid>
                     </widget>
@@ -1235,13 +1055,45 @@
                             </widget>
                         </hbox>
                     </widget>
-                    <widget class="QCheckBox">
+                    <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>inheritPermissionsChk</cstring>
+                            <cstring>Layout49</cstring>
                         </property>
-                        <property name="text">
-                            <string>Inherit permissions</string>
-                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>inheritPermissionsChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Inherit permissions</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>followSymlinksChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Follow symlinks</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>wideLinksChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Wide links</string>
+                                </property>
+                            </widget>
+                        </hbox>
                     </widget>
                     <spacer>
                         <property name="name" stdset="0">
@@ -1811,18 +1663,6 @@
         <receiver>KcmShareDlg</receiver>
         <slot>homeChkToggled(bool)</slot>
     </connection>
-    <connection>
-        <sender>addAllowedUserBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmShareDlg</receiver>
-        <slot>addAllowedUserBtnClicked()</slot>
-    </connection>
-    <connection>
-        <sender>removeAllowedUserBtn</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmShareDlg</receiver>
-        <slot>removeAllowedUserBtnClicked()</slot>
-    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
@@ -1837,6 +1677,8 @@
     <slot>homeChkToggled( bool )</slot>
     <slot>addAllowedUserBtnClicked()</slot>
     <slot>removeAllowedUserBtnClicked()</slot>
+    <slot>guestOnlyChk_toggled( bool b )</slot>
+    <slot>userOnlyChk_toggled( bool b )</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

@@ -49,6 +49,7 @@ class QRegExp;
 class KPopupMenu;
 class KToggleAction;
 class QGroupBox;
+class UserTabImpl;
 
 class HiddenListViewItem : public KListViewItem
 {
@@ -165,19 +166,14 @@ protected :
 	SambaShare* _share;
 
   HiddenFileView* _fileView;
-  KListViewItem* _groupsFolder;
-  KListViewItem* _usersFolder;
+  UserTabImpl* _userTab;
 
 
   void loadHiddenFilesView();
-  void loadUserTable();
-  void saveUserTable();
 
 protected slots:
 	virtual void accept();
   virtual void homeChkToggled(bool);
-  virtual void addAllowedUserBtnClicked();
-  virtual void removeAllowedUserBtnClicked();
 
   void tabChangedSlot(QWidget* w);
 };

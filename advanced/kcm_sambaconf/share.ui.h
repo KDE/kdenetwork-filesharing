@@ -128,3 +128,28 @@ void KcmShareDlg::removeAllowedUserBtnClicked()
 {
 
 }
+
+void KcmShareDlg::guestOnlyChk_toggled( bool b)
+{
+    if (b)
+    {
+	userOnlyChk->setChecked(false);
+	publicBaseChk->setChecked(true);
+    }
+    
+    userOnlyChk->setDisabled(b);
+    publicBaseChk->setDisabled(b);
+}
+
+
+void KcmShareDlg::userOnlyChk_toggled( bool b)
+{
+    if (b)
+    {
+	guestOnlyChk->setChecked(false);
+	publicBaseChk->setChecked(false);
+    }
+    
+    guestOnlyChk->setDisabled(b);
+    publicBaseChk->setDisabled(b);
+}

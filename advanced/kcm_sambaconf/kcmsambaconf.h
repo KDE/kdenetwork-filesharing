@@ -100,6 +100,7 @@ class KcmSambaConf: public KCModule
   protected slots:
     void addSambaUserBtnClicked();
     void removeSambaUserBtnClicked();
+    void sambaUserPasswordBtnClicked();
 
   private:
 		KAboutData* _myAboutData;

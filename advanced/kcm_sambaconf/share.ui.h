@@ -61,7 +61,7 @@ void KcmShareDlg::checkValues()
 void KcmShareDlg::init()
 {
     directoryPixLbl->setPixmap(DesktopIcon("folder"));
-    
+    PixmapLabel1->setPixmap(SmallIcon("messagebox_warning"));
 /*
     QListBoxItem* item = 0;
     QPtrList<QListBoxItem>* selectedList = new QPtrList<QListBoxItem>;

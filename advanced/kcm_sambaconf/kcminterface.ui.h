@@ -37,7 +37,8 @@ void KcmInterface::init()
     editPrinterBtn->setIconSet(SmallIcon("edit"));
     removePrinterBtn->setIconSet(SmallIcon("editdelete"));
     editDefaultPrinterBtn->setIconSet(SmallIcon("print_class"));
-    
+
+    advancedWarningPixLbl->setPixmap(SmallIcon("messagebox_warning"));
 }
 
 

@@ -39,41 +39,57 @@
 #include "dictmanager.h" 
 
  
-DictManager::DictManager():
+DictManager::DictManager(SambaShare* share):
   lineEditDict(40,false),
   checkBoxDict(40,false),
   urlRequesterDict(40,false),
   spinBoxDict(40,false),
   comboBoxDict(20,false)
 {
+  _share = share;
 }
 
 DictManager::~DictManager() {
 }
 
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {
-  lineEditDict.insert(key,lineEdit);
-  connect(lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
+  if (_share->optionSupported(key)) {
+    lineEditDict.insert(key,lineEdit);
+    connect(lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
+  } else
+    lineEdit->setEnabled(false);
 }
 
 void DictManager::add(const QString & key, QCheckBox* checkBox){
-  checkBoxDict.insert(key,checkBox);
-  connect(checkBox, SIGNAL(clicked()), this, SLOT(changedSlot()));
+  if (_share->optionSupported(key)) {
+    checkBoxDict.insert(key,checkBox);
+    connect(checkBox, SIGNAL(clicked()), this, SLOT(changedSlot()));
+  } else
+    checkBox->setEnabled(false);
 }
 
 void DictManager::add(const QString & key, KURLRequester* urlRq){
-  urlRequesterDict.insert(key,urlRq);
-  connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
+  if (_share->optionSupported(key)) {
+    urlRequesterDict.insert(key,urlRq);
+    connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
+  } else
+    urlRq->setEnabled(false);
 }
 
 void DictManager::add(const QString & key, QSpinBox* spinBox){
-  spinBoxDict.insert(key,spinBox);
-  connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changedSlot()));
+  if (_share->optionSupported(key)) {
+    spinBoxDict.insert(key,spinBox);
+    connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changedSlot()));
+  } else
+    spinBox->setEnabled(false);
 }
               
 void DictManager::add(const QString & key, QComboBox* comboBox){
-  comboBoxDict.insert(key,comboBox);
-  connect(comboBox, SIGNAL(activated(int)), this, SLOT(changedSlot()));
+  if (_share->optionSupported(key)) {
+    comboBoxDict.insert(key,comboBox);
+    connect(comboBox, SIGNAL(activated(int)), this, SLOT(changedSlot()));
+  } else
+    comboBox->setEnabled(false);
 }
 
 

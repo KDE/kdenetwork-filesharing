@@ -35,7 +35,7 @@ class QCheckBox;
 class QSpinBox;
 class QComboBox;
 class QString;
-
+class SambaShare;
 /**
  * @author Jan Schäfer
  **/
@@ -43,7 +43,7 @@ class DictManager : public QObject
 {
 Q_OBJECT
   public :
-    DictManager();
+    DictManager(SambaShare *share);
     virtual ~DictManager();
     
     void add(const QString &, QLineEdit*);
@@ -61,6 +61,8 @@ Q_OBJECT
     QDict<KURLRequester> urlRequesterDict;
     QDict<QSpinBox> spinBoxDict;
     QDict<QComboBox> comboBoxDict;
+    
+    SambaShare* _share;
     
   protected slots:
     void changedSlot();

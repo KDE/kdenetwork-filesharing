@@ -129,6 +129,13 @@ public:
   bool openFile();
   
   bool isRemoteFile();
+
+  /**
+   * Save all data to the specified file
+   * if successful returns true otherwise false
+   **/
+  bool saveTo(const QString & path);
+
 protected:
   bool readonly;
   bool changed;
@@ -144,11 +151,6 @@ protected:
   KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
 
 
-  /**
-   * Save all data to the specified file
-   * if successful returns true otherwise false
-   **/
-  bool saveTo(const QString & path);
 
 private:
   void copyConfigs(KConfig* first, KConfig* second);

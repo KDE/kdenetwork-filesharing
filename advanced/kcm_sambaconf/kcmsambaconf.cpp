@@ -30,6 +30,7 @@
  ******************************************************************************/
 
 #include <assert.h>
+#include <unistd.h>
 
 #include <qlayout.h>
 #include <qgroupbox.h>
@@ -159,7 +160,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 	: KCModule(parent,name)
 {
-	load();
+  load();
 };
 
 
@@ -370,16 +371,15 @@ void KcmSambaConf::load()
 
   // Security
 
-	int i = _interface->securityLevelCombo->listBox()->index(_interface->securityLevelCombo->listBox()->findItem(share->getValue("security level"),Qt::ExactMatch));
+  int i = _interface->securityLevelCombo->listBox()->index(_interface->securityLevelCombo->listBox()->findItem(share->getValue("security level",false,true),Qt::ExactMatch));
   _interface->securityLevelCombo->setCurrentItem(i);
 
-	i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest"),Qt::ExactMatch));
+  i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest",false,true),Qt::ExactMatch));
   _interface->mapToGuestCombo->setCurrentItem(i);
-
 
   _interface->passwordServerEdit->setText( share->getValue("password server",false,true) );
   _interface->passwdChatEdit->setText( share->getValue("passwd chat",false,true) );
-	_interface->passwordLevelSpin->setValue( share->getValue("password level", false, true).toInt());
+  _interface->passwordLevelSpin->setValue( share->getValue("password level", false, true).toInt());
   _interface->minPasswdLengthSpin->setValue( share->getValue("min passwd length", false, true).toInt());
   _interface->encryptPasswordChk->setChecked( share->getBoolValue("encrypt passwords",false,true));
   _interface->updateEncryptedChk->setChecked( share->getBoolValue("update encrypted",false,true));
@@ -403,8 +403,32 @@ void KcmSambaConf::load()
 
   _interface->rootDirectoryEdit->setText( share->getValue("root directory",false,true) );
   _interface->hostsEquivUrlRq->setURL( share->getValue("hosts equiv",false,true) );
-  
 
+  // Advanced
+  _interface->changeNotifyTimeoutSpin->setValue( share->getValue("change notify timeout", false, true).toInt());
+  _interface->keepaliveSpin->setValue( share->getValue("keepalive", false, true).toInt());
+  _interface->lpqCacheTimeSpin->setValue( share->getValue("lpq cache time", false, true).toInt());
+  _interface->maxOpenFilesSpin->setValue( share->getValue("max open files", false, true).toInt());
+  _interface->readSizeSpin->setValue( share->getValue("read size", false, true).toInt());
+  _interface->maxDiskSizeSpin->setValue( share->getValue("max disk size", false, true).toInt());
+  _interface->statCacheSizeSpin->setValue( share->getValue("stat cache size", false, true).toInt());
+  _interface->getwdCacheChk->setChecked( share->getBoolValue("getwd cache",false,true));
+
+  _interface->maxLogSizeInput->setValue( share->getValue("max log size", false, true).toInt());
+  _interface->logFileUrlRq->setURL( share->getValue("log file",false,true) );
+
+  _interface->syslogSpin->setValue( share->getValue("syslog", false, true).toInt());
+  _interface->logLevelSpin->setValue( share->getValue("log level", false, true).toInt());
+
+  _interface->statusChk->setChecked( share->getBoolValue("status",false,true));
+
+  _interface->debugUidChk->setChecked( share->getBoolValue("debug uid",false,true));
+  _interface->debugPidChk->setChecked( share->getBoolValue("debug pid",false,true));
+  _interface->microsecondsChk->setChecked( share->getBoolValue("debug hires timestamp",false,true));
+  _interface->syslogOnlyChk->setChecked( share->getBoolValue("syslog only",false,true));
+  _interface->timestampChk->setChecked( share->getBoolValue("timestamp",false,true));
+
+  connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
 }
 
 void KcmSambaConf::defaults() {
@@ -414,6 +438,84 @@ void KcmSambaConf::defaults() {
 
 void KcmSambaConf::save() {
 	// insert your saving code here...
+
+  SambaShare *share = _sambaFile->getShare("global");
+  assert(share);
+
+  // Base settings
+
+  _smbconf = _interface->configUrlRq->url();
+  share->setValue("workgroup", _interface->workgroupEdit->text(), false, true );
+  share->setValue("server string", _interface->serverStringEdit->text(), false, true );
+  share->setValue("netbios name",_interface->netbiosNameEdit->text(), false, true );
+  share->setValue("netbios aliases",_interface->netbiosAliasesEdit->text(), false, true );
+  share->setValue("netbios scope",_interface->netbiosScopeEdit->text(), false, true );
+
+  share->setValue("coding system",_interface->codingSystemEdit->text(), false, true );
+  share->setValue("client code page",_interface->clientCodePageEdit->text(), false, true );
+  share->setValue("code page directory",_interface->codePageDirUrlRq->url(), false, true);
+
+  share->setValue("interfaces",_interface->interfacesEdit->text(), false, true );
+  share->setValue("bind interfaces only",_interface->bindInterfacesOnlyChk->isChecked(), false, true );
+
+  // Security
+
+  share->setValue("security level",_interface->securityLevelCombo->currentText());
+  share->setValue("map to guest",_interface->mapToGuestCombo->currentText());
+
+
+  share->setValue("password server",_interface->passwordServerEdit->text(), false, true );
+  share->setValue("passwd chat",_interface->passwdChatEdit->text(), false, true );
+  share->setValue("password level",_interface->passwordLevelSpin->value(), false, true);
+  share->setValue("min passwd length",_interface->minPasswdLengthSpin->value(), false, true);
+  share->setValue("encrypt passwords",_interface->encryptPasswordChk->isChecked(), false, true );
+  share->setValue("update encrypted",_interface->updateEncryptedChk->isChecked(), false, true );
+
+  share->setValue("smb passwd file",_interface->smbPasswdFileUrlRq->url(), false, true);
+  share->setValue("passwd program",_interface->passwdProgramUrlRq->url(), false, true);
+
+  share->setValue("passwd chat debug",_interface->passwdChatDebugChk->isChecked(), false, true );
+  share->setValue("unix password sync",_interface->unixPasswordSyncChk->isChecked(), false, true );
+
+  share->setValue("username map",_interface->usernameMapUrlRq->url(), false, true );
+  share->setValue("username level",_interface->usernameLevelSpin->value(), false, true );
+
+  share->setValue("use rhosts",_interface->useRhostsChk->isChecked(), false, true );
+  share->setValue("lanman auth",_interface->lanmanAuthChk->isChecked(), false, true );
+  share->setValue("allow trusted domains",_interface->allowTrustedDomainsChk->isChecked(), false, true );
+  share->setValue("obey pam restrictions",_interface->obeyPamRestrictionsChk->isChecked(), false, true );
+  share->setValue("pam password change",_interface->pamPasswordChangeChk->isChecked(), false, true );
+  share->setValue("restrict anonymous",_interface->restrictAnonymousChk->isChecked(), false, true );
+  share->setValue("alternate permissions",_interface->alternatePermissionsChk->isChecked(), false, true );
+
+  share->setValue("root directory",_interface->rootDirectoryEdit->text(), false, true );
+  share->setValue("hosts equiv",_interface->hostsEquivUrlRq->url(), false, true );
+
+  // Advanced
+  share->setValue("change notify timeout",_interface->changeNotifyTimeoutSpin->value(), false, true);
+  share->setValue("keepalive",_interface->keepaliveSpin->value(), false, true);
+  share->setValue("lpq cache time",_interface->lpqCacheTimeSpin->value(), false, true);
+  share->setValue("max open files",_interface->maxOpenFilesSpin->value(), false, true);
+  share->setValue("read size",_interface->readSizeSpin->value(), false, true);
+  share->setValue("max disk size",_interface->maxDiskSizeSpin->value(), false, true);
+  share->setValue("stat cache size",_interface->statCacheSizeSpin->value(), false, true);
+  share->setValue("getwd cache",_interface->getwdCacheChk->isChecked(), false, true );
+
+  share->setValue("max log size",_interface->maxLogSizeInput->value(), false, true);
+  share->setValue("log file",_interface->logFileUrlRq->url(), false, true);
+
+  share->setValue("syslog",_interface->syslogSpin->value(), false, true);
+  share->setValue("log level",_interface->logLevelSpin->value(), false, true);
+
+  share->setValue("status",_interface->statusChk->isChecked(), false, true );
+
+  share->setValue("debug uid",_interface->debugUidChk->isChecked(), false, true );
+  share->setValue("debug pid",_interface->debugPidChk->isChecked(), false, true );
+  share->setValue("debug hires timestamp",_interface->microsecondsChk->isChecked(), false, true );
+  share->setValue("syslog only",_interface->syslogOnlyChk->isChecked(), false, true );
+  share->setValue("timestamp",_interface->timestampChk->isChecked(), false, true );
+
+
   _sambaFile->slotApply();
 
 }

@@ -1,11 +1,11 @@
 ####### kdevelop will overwrite this part!!! (begin)##########
-kde_module_LTLIBRARIES = libkcm_kcm_sambaconf.la
+kde_module_LTLIBRARIES = libkcm_kcm_sambaconf.la ksambakonqiplugin.la
 
 
 INCLUDES = $(all_includes)
 
 
-LDFLAGS =    
+LDFLAGS =
 
 libkcm_kcm_sambaconf_la_METASOURCES=AUTO
 
@@ -14,9 +14,13 @@ libkcm_kcm_sambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT
 
 libkcm_kcm_sambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)     
 
+ksambakonqiplugin_la_SOURCES = ksambapropertiesdialogplugin.cpp sambafile.cpp
+ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
+ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
 
 
-EXTRA_DIST = kcm_sambaconf.cpp kcm_sambaconf.h home.ui interface.ui share.ui sharetype.ui externals.h kcm_sambaconf.desktop 
+EXTRA_DIST = kcm_sambaconf.cpp kcm_sambaconf.h home.ui interface.ui share.ui sharetype.ui externals.h kcm_sambaconf.desktop \
+						 ksambapropertiesdialogplugin.cpp sambafile.cpp ksambapropertiesdialogplugin.h sambafile.h
 
 install-data-local:
 	$(mkinstalldirs) ${KDEDIR}/applnk/Settings/Network/

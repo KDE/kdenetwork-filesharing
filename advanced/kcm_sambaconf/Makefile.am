@@ -23,7 +23,8 @@ libkcm_kcmsambaconf_la_SOURCES = \
   filemodedlg.ui \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
-  dictmanager.cpp 
+  dictmanager.cpp \
+  qmultichecklistitem.cpp
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -44,7 +45,7 @@ ksambakonqiplugin_la_SOURCES = \
   passwd.cpp \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
-  dictmanager.cpp 
+  dictmanager.cpp   
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
@@ -73,7 +74,9 @@ EXTRA_DIST = $(service_DATA) \
   filemodedlg.ui.h \
   filemodedlgimpl.h \
   hiddenfileview.h \
-  dictmanager.h 
+  dictmanager.h \
+  qmultichecklistitem.h
+  
 
 
 data_DATA = kcmsambaconf.desktop

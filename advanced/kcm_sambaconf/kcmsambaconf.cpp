@@ -312,6 +312,8 @@ void KcmSambaConf::socketOptionsBtnClicked()
 
 void KcmSambaConf::load() 
 {
+  kdDebug() << "loading" << endl;
+
 	QBoxLayout * l = new QHBoxLayout( this );
 	l->setAutoAdd( TRUE );
 
@@ -441,7 +443,9 @@ void KcmSambaConf::load()
   _interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
   _interface->winsProxyChk->setChecked( share->getBoolValue("wins proxy",false,true));
   _interface->dnsProxyChk->setChecked( share->getBoolValue("dns proxy",false,true));
+
   _interface->winsServerEdit->setText( share->getValue("wins server",false,true) );
+
   _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
   _interface->winsHookEdit->setText( share->getValue("wins hook",false,true) );
 
@@ -616,6 +620,8 @@ void KcmSambaConf::save() {
   SambaShare *share = _sambaFile->getShare("global");
   assert(share);
 
+  kdDebug() << "saving ... " << endl;
+  
   // Base settings
 
   _smbconf = _interface->configUrlRq->url();
@@ -695,7 +701,12 @@ void KcmSambaConf::save() {
   share->setValue("wins support",_interface->winsSupportRadio->isChecked(), false,true);
   share->setValue("wins proxy",_interface->winsProxyChk->isChecked(), false,true);
   share->setValue("dns proxy",_interface->dnsProxyChk->isChecked(), false,true);
-  share->setValue("wins server",_interface->winsServerEdit->text(), false,true);
+
+  if (_interface->otherWinsRadio->isChecked())
+     share->setValue("wins server",_interface->winsServerEdit->text(), false,true);
+  else
+     share->setValue("wins server",QString(""), false,true);  
+  
   share->setValue("wins hook",_interface->winsHookEdit->text(), false,true);
 
   share->setValue("preferred master",_interface->preferredMasterChk->isChecked(), false,true);

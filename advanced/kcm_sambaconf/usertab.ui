@@ -1,0 +1,513 @@
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>UserTab</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>UserTab</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>600</width>
+            <height>480</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>11</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
+        </property>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>allowAllUsersChk</cstring>
+            </property>
+            <property name="text">
+                <string>Allow any user and specify only special access rights for some ones</string>
+            </property>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout6</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QSplitter">
+                    <property name="name">
+                        <cstring>Splitter1</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>Layout23</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QTable">
+                                <column>
+                                    <property name="text">
+                                        <string>Allowed Users</string>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>UID</string>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>GID</string>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>Access Rights</string>
+                                    </property>
+                                </column>
+                                <property name="name">
+                                    <cstring>userTable</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>100</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="resizePolicy">
+                                    <enum>AutoOneFit</enum>
+                                </property>
+                                <property name="numRows">
+                                    <number>0</number>
+                                </property>
+                                <property name="numCols">
+                                    <number>4</number>
+                                </property>
+                                <property name="showGrid">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="columnMovingEnabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="selectionMode">
+                                    <enum>MultiRow</enum>
+                                </property>
+                                <property name="focusStyle">
+                                    <enum>FollowStyle</enum>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>Layout13</cstring>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>addAllowedUserBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>35</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>&lt;</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>removeAllowedUserBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>1</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>35</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>&gt;</string>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>Layout22</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="KListView">
+                                <column>
+                                    <property name="text">
+                                        <string>Rejected Users</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizeable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>UID</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizeable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>GID</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizeable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <property name="name">
+                                    <cstring>rejectedUserListView</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>7</hsizetype>
+                                        <vsizetype>7</vsizetype>
+                                        <horstretch>100</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="mouseTracking">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="rootIsDecorated">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>Layout13_2</cstring>
+                                </property>
+                                <vbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>addRejectedUserBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>35</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>&lt;</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QPushButton">
+                                        <property name="name">
+                                            <cstring>removeRejectedUserBtn</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="maximumSize">
+                                            <size>
+                                                <width>35</width>
+                                                <height>32767</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>&gt;</string>
+                                        </property>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                        </hbox>
+                    </widget>
+                </widget>
+                <widget class="KListView">
+                    <column>
+                        <property name="text">
+                            <string>Possible Users</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizeable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>UID</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizeable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                    <column>
+                        <property name="text">
+                            <string>GID</string>
+                        </property>
+                        <property name="clickable">
+                            <bool>true</bool>
+                        </property>
+                        <property name="resizeable">
+                            <bool>true</bool>
+                        </property>
+                    </column>
+                    <property name="name">
+                        <cstring>possibleUserListView</cstring>
+                    </property>
+                    <property name="sizePolicy">
+                        <sizepolicy>
+                            <hsizetype>5</hsizetype>
+                            <vsizetype>7</vsizetype>
+                            <horstretch>0</horstretch>
+                            <verstretch>0</verstretch>
+                        </sizepolicy>
+                    </property>
+                    <property name="mouseTracking">
+                        <bool>false</bool>
+                    </property>
+                    <property name="rootIsDecorated">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>Layout15</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>TextLabel12</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Force user</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>forceUserCombo</cstring>
+                    </property>
+                </widget>
+                <spacer>
+                    <property name="name" stdset="0">
+                        <cstring>Spacer8</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
+                </spacer>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>TextLabel13</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Force group</string>
+                    </property>
+                </widget>
+                <widget class="QComboBox">
+                    <property name="name">
+                        <cstring>forceGroupCombo</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>allowAllUsersChk</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>addAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>addAllowedUserBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>addAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>removeAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>removeAllowedUserBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>removeAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>addRejectedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>addRejectedUserBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>addRejectedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>removeRejectedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>removeRejectedUserBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>removeRejectedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>forceUserCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>forceGroupCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>UserTab</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">usertab.ui.h</include>
+</includes>
+<signals>
+    <signal>changed()</signal>
+</signals>
+<slots>
+    <slot>addAllowedUserBtnClicked()</slot>
+    <slot>removeAllowedUserBtnClicked()</slot>
+    <slot>addRejectedUserBtnClicked()</slot>
+    <slot>removeRejectedUserBtnClicked()</slot>
+    <slot>changedSlot()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

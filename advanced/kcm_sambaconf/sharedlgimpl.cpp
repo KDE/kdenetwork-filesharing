@@ -99,7 +99,7 @@ void ShareDlgImpl::initDialog()
 {
   if (!_share)
      return;
-	
+
   // Base settings
   _fileView = 0L;
 
@@ -107,33 +107,39 @@ void ShareDlgImpl::initDialog()
 
   homeChk->setChecked(_share->getName().lower() == "homes");
   shareNameEdit->setText( _share->getName() );
-  
+
   _dictMngr->add("path",pathUrlRq);
-  
+
   _dictMngr->add("comment",commentEdit);
   _dictMngr->add("available",availableBaseChk);
   _dictMngr->add("browseable",browseableBaseChk);
   _dictMngr->add("public",publicBaseChk);
 
   _dictMngr->add("read only",readOnlyBaseChk);
-      
+
   // User settings
 
   _userTab = new UserTabImpl(this,_share);
   _tabs->insertTab(_userTab,i18n("&Users"),1);
   _userTab->load();
+  connect(_userTab, SIGNAL(changed()), this, SLOT(changedSlot()));
 
   // Filename settings
-  
+
   _dictMngr->add("case sensitive",caseSensitiveChk);
   _dictMngr->add("preserve case",preserveCaseChk);
   _dictMngr->add("short preserve case",shortPreserveCaseChk);
   _dictMngr->add("mangled names",mangledNamesChk);
   _dictMngr->add("mangle case",mangleCaseChk);
   _dictMngr->add("mangling char",manglingCharEdit);
-  _dictMngr->add("mangling method",manglingMethodCombo);
-  
-  _dictMngr->add("default case",defaultCaseCombo);
+  _dictMngr->add("mangled map",mangledMapEdit);
+
+
+  _dictMngr->add("mangling method",manglingMethodCombo,
+                 new QStringList(QStringList() << "hash" << "hash2"));
+
+  _dictMngr->add("default case",defaultCaseCombo,
+                 new QStringList(QStringList() << "Lower" << "Upper"));
 
   _dictMngr->add("hide dot files",hideDotFilesChk);
   _dictMngr->add("strip dot",hideTrailingDotChk);
@@ -145,14 +151,14 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("dos filetime resolution",dosFiletimeResolutionChk);
 
   // Security tab
-  
+
   _dictMngr->add("guest only",guestOnlyChk);
   _dictMngr->add("hosts allow",hostsAllowEdit);
-  
+
   _dictMngr->add("only user",onlyUserChk);
-  _dictMngr->add("username",userNameEdit);  
-  
-  
+  _dictMngr->add("username",userNameEdit);
+
+
   guestAccountCombo->insertStringList( getUnixUsers() );
   setComboToString(guestAccountCombo,_share->getValue("guest account"));
 
@@ -160,7 +166,7 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("force directory security mode",forceDirectorySecurityModeEdit);
   _dictMngr->add("force directory mode",forceDirectoryModeEdit);
   _dictMngr->add("force security mode",forceSecurityModeEdit);
-  
+
   _dictMngr->add("force create mode",forceCreateModeEdit);
   _dictMngr->add("directory security mask",directorySecurityMaskEdit);
   _dictMngr->add("directory mask",directoryMaskEdit);
@@ -168,18 +174,21 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("create mask",createMaskEdit);
   _dictMngr->add("inherit permissions",inheritPermissionsChk);
   _dictMngr->add("inherit acls",inheritAclsChk);
+  _dictMngr->add("nt acl support",ntAclSupportChk);
+  _dictMngr->add("delete readonly",deleteReadonlyChk);
+
   _dictMngr->add("wide links",wideLinksChk);
   _dictMngr->add("follow symlinks",followSymlinksChk);
-    
+
   _dictMngr->add("map hidden",mapHiddenChk);
   _dictMngr->add("map archive",mapArchiveChk);
   _dictMngr->add("map system",mapSystemChk);
-  
-  _dictMngr->add("force unknown acl user",forceUnknownAclUserChk);
+
+  _dictMngr->add("force unknown acl user",forceUnknownAclUserEdit);
   _dictMngr->add("profile acls",profileAclsChk);
   _dictMngr->add("map acl inherit",mapAclInheritChk);
-  
-  
+
+
   // Advanced
 
   _dictMngr->add("blocking locks",blockingLocksChk);
@@ -205,18 +214,17 @@ void ShareDlgImpl::initDialog()
 
   
   _dictMngr->add("sync always",syncAlwaysChk);
-  _dictMngr->add("status",statusChk);
   _dictMngr->add("use sendfile",useSendfileChk);
-  
-  _dictMngr->add("csc policy",cscPolicyCombo);
+
+  _dictMngr->add("csc policy",cscPolicyCombo,
+                 new QStringList(QStringList() << "manual" << "documents" << "programs" << "disable"));
   
   
 
   // VFS
   
-  _dictMngr->add("vfs object",vfsObjectEdit);
-  _dictMngr->add("vfs options",vfsOptionsEdit);
   _dictMngr->add("vfs objects",vfsObjectsEdit);
+  _dictMngr->add("vfs options",vfsOptionsEdit);
 
   // Misc
   
@@ -272,9 +280,6 @@ void ShareDlgImpl::initAdvancedTab()
 
 		if (label.lower() == "security")
 			 icon = SmallIcon("password");
-		else
-		if (label.lower() == "logging")
-			 icon = SmallIcon("history");
 		else
 		if (label.lower() == "tuning")
 			 icon = SmallIcon("launch");

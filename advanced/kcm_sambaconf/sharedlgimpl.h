@@ -69,6 +69,7 @@ protected:
 };
 
 
+class ShareDlgImpl;
 
 /**
  * Widget which shows a list of files
@@ -78,12 +79,12 @@ protected:
  * of the SambaShare an offers the possibility of
  * selecting the files which should be hidden
  **/
-class HiddenFileView : public QWidget
+class HiddenFileView : public QObject
 {
 Q_OBJECT
 
 public:
-  HiddenFileView(QWidget* parent, SambaShare* share);
+  HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share);
   ~HiddenFileView();
 
   /**
@@ -98,21 +99,14 @@ public:
 
 protected:
   SambaShare* _share;
-  KListView* _listView;
+  ShareDlgImpl* _dlg;
+
   KDirLister* _dir;
   QPtrList<QRegExp> _hiddenList;
   QPtrList<QRegExp> _vetoList;
 
-  QLineEdit* _hiddenEdit;
-  QLineEdit* _vetoEdit;
-
-  QCheckBox* _hiddenChk;
-  QCheckBox* _vetoChk;
-
   KToggleAction* _hiddenActn;
   KToggleAction* _vetoActn;
-
-  QGroupBox* _selGrpBx;
 
   KPopupMenu* _popup;
 
@@ -169,18 +163,18 @@ protected :
    **/
 	SambaShare* _share;
 
-  QWidget* _hiddenFilesTab;
   HiddenFileView* _fileView;
 
-  void createHiddenFilesTab();
-  void createHiddenFilesView();
-
+  void loadHiddenFilesView();
+  void loadUserTable();
+  void saveUserTable();
 
 protected slots:
 	virtual void accept();
   virtual void homeChkToggled(bool);
-protected slots: // Protected slots
-  /** No descriptions */
+  virtual void addAllowedUserBtnClicked();
+  virtual void removeAllowedUserBtnClicked();
+
   void tabChangedSlot(QWidget* w);
 };
 

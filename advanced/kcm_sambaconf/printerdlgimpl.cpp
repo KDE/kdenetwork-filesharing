@@ -58,22 +58,26 @@
 #include "printerdlgimpl.h"
 #include "usertabimpl.h"
 #include "passwd.h"
+#include "dictmanager.h"
+
 
 PrinterDlgImpl::PrinterDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmPrinterDlg(parent,"sharedlgimpl")
 {
+  if (!share) {
+    kdWarning() << "PrinterDlgImpl::Constructor : share parameter is null!" << endl;
+    return;    
+  }
 
   _share = share;
-	assert(_share);
+  _dictMngr = new DictManager(share);
+  
   initDialog();
 }
 
 void PrinterDlgImpl::initDialog()
 {
 	// Base settings
-
-	assert(_share);
-
   if (!_share)
      return;
 
@@ -88,73 +92,83 @@ void PrinterDlgImpl::initDialog()
 
   setComboToString(queueCombo,_share->getValue("printer name"));
 
-  pathUrlRq->setURL( _share->getValue("path") );
+ 
+  _dictMngr->add("path",pathUrlRq);
   printersChk->setChecked( _share->getName() == "printers" );
 
   shareNameEdit->setText( _share->getName() );
-	commentEdit->setText( _share->getValue("comment") );
+  _dictMngr->add("comment",commentEdit);
 
-  availableBaseChk->setChecked( _share->getBoolValue("available") );
-  browseableBaseChk->setChecked( _share->getBoolValue("browseable") );
-  publicBaseChk->setChecked( _share->getBoolValue("public") );
-
+  _dictMngr->add("available",availableBaseChk);
+  _dictMngr->add("browseable",browseableBaseChk);
+  _dictMngr->add("public",publicBaseChk);
+  
   // Users
 
   _userTab = new UserTabImpl(this,_share);
   _tabs->insertTab(_userTab,i18n("&Users"),1);
   _userTab->load();
+  connect(_userTab, SIGNAL(changed()), this, SLOT(changedSlot()));
+  
 
   // Printing
 
-  postscriptChk->setChecked( _share->getBoolValue("postscript") );
+  _dictMngr->add("postscript",postscriptChk);
+  _dictMngr->add("use client driver",useClientDriverChk);
+  _dictMngr->add("default devmode",defaultDevmodeChk);
 
-  maxPrintJobsInput->setValue( _share->getValue("max print jobs").toInt() );
-  setComboToString(printingCombo,_share->getValue("printing"));
-
-  kdDebug() << _share->getValue("printing") << endl;
-
-  printerDriverEdit->setText( _share->getValue("printer driver") );
-  printerDriverFileEdit->setText( _share->getValue("printer driver file") );
-  printerDriverLocationEdit->setText( _share->getValue("printer driver location") );
+  _dictMngr->add("max print jobs",maxPrintJobsSpin);
+  _dictMngr->add("max reported print jobs",maxReportedPrintJobsSpin);
+  _dictMngr->add("printing",printingCombo,
+                  new QStringList(QStringList() 
+                  << "sysv" << "aix" << "hpux" << "bsd" << "qnx"
+                  << "plp" << "lprng" << "softq" << "cups" << "nt" << "os2"));
+                  
+  _dictMngr->add("printer driver",printerDriverEdit);
+  _dictMngr->add("printer driver location",printerDriverLocationEdit);
 
   // Commands
 
-  printCommandEdit->setText( _share->getValue("print command") );
-  lpqCommandEdit->setText( _share->getValue("lpq command") );
-  lprmCommandEdit->setText( _share->getValue("lprm command") );
-  lppauseEdit->setText( _share->getValue("lppause") );
-  lpresumeEdit->setText( _share->getValue("lpresume") );
-  queuepauseEdit->setText( _share->getValue("queuepause") );
-  queueresumeEdit->setText( _share->getValue("queueresume") );
-
+  _dictMngr->add("print command",printCommandEdit);
+  _dictMngr->add("lpq command",lpqCommandEdit);
+  _dictMngr->add("lprm command",lprmCommandEdit);
+  _dictMngr->add("lppause",lppauseEdit);
+  _dictMngr->add("lpresume",lpresumeEdit);
+  _dictMngr->add("queuepause",queuepauseEdit);
+  _dictMngr->add("queueresume",queueresumeEdit);
+  
   // Security
 
+  _dictMngr->add("printer admin",printerAdminEdit);
+  _dictMngr->add("hosts allow",hostsAllowEdit);
+  _dictMngr->add("hosts deny",hostsDenyEdit);
+  
   guestAccountCombo->insertStringList( getUnixUsers() );
   setComboToString(guestAccountCombo,_share->getValue("guest account"));
-  printerAdminEdit->setText( _share->getValue("printer admin") );
-  hostsAllowEdit->setText( _share->getValue("hosts allow") );
-  hostsDenyEdit->setText( _share->getValue("hosts deny") );
-
 
   // Advanced
 
-  minPrintSpaceInput->setValue( _share->getValue("min print space").toInt() );
-  statusChk->setChecked( _share->getBoolValue("status") );
+  _dictMngr->add("min print space",minPrintSpaceSpin);
+  _dictMngr->add("status",statusChk);
+  _dictMngr->add("preexec",preExecEdit);
+  _dictMngr->add("postexec",postExecEdit);
+  _dictMngr->add("root preexec",rootPreExecEdit);
+  _dictMngr->add("root postexec",rootPostExecEdit);
 
-  preExecEdit->setText( _share->getValue("preexec") );
-  postExecEdit->setText( _share->getValue("postexec") );
-  rootPreExecEdit->setText( _share->getValue("root preexec") );
-  rootPostExecEdit->setText( _share->getValue("root postexec") );
-
-  // Hidden files
-  
+  _dictMngr->load( _share );
+  connect(_dictMngr, SIGNAL(changed()), this, SLOT(changedSlot()));
+    
 }
 
 void PrinterDlgImpl::accept()
 {
-  _share->setValue("printer name",queueCombo->currentText());
+  if (!_share)
+     return;
 
-  _share->setValue("path",pathUrlRq->url());
+  // Security
+  
+  _share->setValue("guest account",guestAccountCombo->currentText( ) );
+  _share->setValue("printer name",queueCombo->currentText());
 
   if (printersChk->isChecked())
   {
@@ -163,55 +177,10 @@ void PrinterDlgImpl::accept()
 	else
 		_share->setName(shareNameEdit->text());
 
-	_share->setValue("comment",commentEdit->text( ) );
-
-  _share->setValue("available",availableBaseChk->isChecked( ) );
-  _share->setValue("browseable",browseableBaseChk->isChecked( ) );
-  _share->setValue("public",publicBaseChk->isChecked( ) );
-
-  // users
 
   _userTab->save();
-
-  // Printing
-
-  _share->setValue("postscript",postscriptChk->isChecked( ) );
-
-  _share->setValue("max print jobs", QString("%1").arg(maxPrintJobsInput->value()) );
-  _share->setValue("printing",printingCombo->currentText( ) );
-
-  _share->setValue("printer driver",printerDriverEdit->text( ) );
-  _share->setValue("printer driver file",printerDriverFileEdit->text( ) );
-  _share->setValue("printer driver location",printerDriverLocationEdit->text( ) );
-
-  // Commands
-
-  _share->setValue("print command",printCommandEdit->text( ) );
-  _share->setValue("lpq command",lpqCommandEdit->text( ) );
-  _share->setValue("lprm command",lprmCommandEdit->text( ) );
-  _share->setValue("lppause",lppauseEdit->text( ) );
-  _share->setValue("lpresume",lpresumeEdit->text( ) );
-  _share->setValue("queuepause",queuepauseEdit->text( ) );
-  _share->setValue("queueresume",queueresumeEdit->text( ) );
-
-  // Security
-
-//-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
-  _share->setValue("guest account",guestAccountCombo->currentText( ) );
-  _share->setValue("printer admin",printerAdminEdit->text( ) );
-  _share->setValue("hosts allow",hostsAllowEdit->text( ) );
-  _share->setValue("hosts deny",hostsDenyEdit->text( ) );
-
-
-  // Advanced
-
-  _share->setValue("min print space", QString("%1").arg(minPrintSpaceInput->value()) );
-  _share->setValue("status",statusChk->isChecked( ) );
-
-  _share->setValue("preexec",preExecEdit->text( ) );
-  _share->setValue("postexec",postExecEdit->text( ) );
-  _share->setValue("root preexec",rootPreExecEdit->text( ) );
-  _share->setValue("root postexec",rootPostExecEdit->text( ) );
+  _dictMngr->save( _share );      
+      
 
 	KcmPrinterDlg::accept();
 }

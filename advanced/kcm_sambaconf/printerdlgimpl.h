@@ -39,6 +39,7 @@
 class SambaShare;
 class QWidget;
 class UserTabImpl;
+class DictManager;
 
 /**
  * This class implements the tcmprinterdlg.ui interface
@@ -66,6 +67,7 @@ protected :
 	SambaShare* _share;
 
   UserTabImpl* _userTab;
+  DictManager* _dictMngr;
 
 protected slots:
 	void accept();

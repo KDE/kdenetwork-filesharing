@@ -168,8 +168,15 @@ public:
   
 	/**
    * Returns true if this share is a printer
+   * that's if printable = true
    **/
   bool isPrinter();
+
+  /**
+   * Returns true if the share name is
+   * global, printers or homes
+   **/
+  bool isSpecialSection();
 
 protected:
 	/**

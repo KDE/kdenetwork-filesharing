@@ -308,3 +308,17 @@ bool SambaShare::isPrinter()
 
 	return str!=0;
 }
+
+/**
+ * Returns true if the share name is
+ * global, printers or homes
+ **/
+bool SambaShare::isSpecialSection()
+{
+  if ( _name.lower() == "global" ||
+       _name.lower() == "printers" ||
+       _name.lower() == "homes" )
+     return true;
+  else
+     return false;
+}

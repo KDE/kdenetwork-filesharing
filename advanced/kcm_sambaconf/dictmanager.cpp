@@ -26,6 +26,8 @@
  *                                                                            *
  ******************************************************************************/
  
+#include <iostream.h> 
+ 
 #include <qlineedit.h>
 #include <qcheckbox.h>
 #include <qspinbox.h>
@@ -51,22 +53,27 @@ DictManager::~DictManager() {
 
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {
   lineEditDict.insert(key,lineEdit);
+  connect(lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
 }
 
 void DictManager::add(const QString & key, QCheckBox* checkBox){
   checkBoxDict.insert(key,checkBox);
+  connect(checkBox, SIGNAL(clicked()), this, SLOT(changedSlot()));
 }
 
 void DictManager::add(const QString & key, KURLRequester* urlRq){
   urlRequesterDict.insert(key,urlRq);
+  connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
 }
 
 void DictManager::add(const QString & key, QSpinBox* spinBox){
   spinBoxDict.insert(key,spinBox);
+  connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changedSlot()));
 }
               
 void DictManager::add(const QString & key, QComboBox* comboBox){
   comboBoxDict.insert(key,comboBox);
+  connect(comboBox, SIGNAL(activated(int)), this, SLOT(changedSlot()));
 }
 
 
@@ -135,4 +142,13 @@ void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
   }
 
 }
+
+void DictManager::changedSlot() {
+  emit changed();
+}
+
+
+
+#include "dictmanager.moc"
+
 

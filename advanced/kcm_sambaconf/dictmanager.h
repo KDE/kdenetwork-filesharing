@@ -39,12 +39,12 @@ class QString;
 /**
  * @author Jan Schäfer
  **/
-class DictManager 
+class DictManager : public QObject
 {
-
+Q_OBJECT
   public :
     DictManager();
-    ~DictManager();
+    virtual ~DictManager();
     
     void add(const QString &, QLineEdit*);
     void add(const QString &, QCheckBox*);
@@ -61,7 +61,12 @@ class DictManager
     QDict<KURLRequester> urlRequesterDict;
     QDict<QSpinBox> spinBoxDict;
     QDict<QComboBox> comboBoxDict;
-  
+    
+  protected slots:
+    void changedSlot();
+    
+  signals:
+    void changed();  
 };
  
 #endif

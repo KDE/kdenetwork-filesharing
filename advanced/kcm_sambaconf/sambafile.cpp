@@ -129,8 +129,6 @@ void SambaFile::slotApply()
   if (readonly)
       return;
 
-  QString path = "/home/jan/tmp/test.conf";
-      
   // If we have write access to the smb.conf
   // we simply save the values to it
   // if not we have to save the results in

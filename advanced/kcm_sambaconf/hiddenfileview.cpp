@@ -76,7 +76,7 @@ HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool h
 
   setOn(COL_HIDDEN,hidden);
   setOn(COL_VETO,veto);
-  setOn(COL_VETO_OPLOCK,vetoOplock);  
+  setOn(COL_VETO_OPLOCK,vetoOplock);
 
   _fileItem = fi;
 }
@@ -141,7 +141,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 
   _dir = new KDirLister(true);
   _dir->setShowingDotFiles(true);
-  
+
   connect( _dir, SIGNAL(newItems(const KFileItemList &)),
            this, SLOT(insertNewFiles(const KFileItemList &)));
 
@@ -150,7 +150,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 
   connect( _dir, SIGNAL(refreshItems(const KFileItemList &)),
            this, SLOT(refreshItems(const KFileItemList &)));
-           
+
   connect( _hiddenActn, SIGNAL(toggled(bool)), this, SLOT(hiddenChkClicked(bool)));
   connect( _vetoActn, SIGNAL(toggled(bool)), this, SLOT(vetoChkClicked(bool)));
   connect( _vetoOplockActn, SIGNAL(toggled(bool)), this, SLOT(vetoOplockChkClicked(bool)));
@@ -167,7 +167,7 @@ void HiddenFileView::initListView()
   _vetoOplockList = createRegExpList(_share->getValue("veto oplock files"));
 
   _popup = new KPopupMenu(_dlg->hiddenListView);
-  
+
   _hiddenActn->plug(_popup);
   _vetoActn->plug(_popup);
   _vetoOplockActn->plug(_popup);
@@ -178,7 +178,7 @@ void HiddenFileView::initListView()
 
   connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));
   connect( _dlg->hideUnreadableChk, SIGNAL(toggled(bool)), this, SLOT(hideUnreadableChkClicked(bool)));
-  
+
   connect( _dlg->hiddenListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
            this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
 }
@@ -191,7 +191,7 @@ void HiddenFileView::load()
 {
   if (_dlg->hiddenListView)
     _dlg->hiddenListView->clear();
-    
+
   _dir->openURL( _dlg->pathUrlRq->url() );
 }
 
@@ -238,14 +238,14 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
     bool vetoOplock = matchVetoOplock(tmp->text());
 
     HiddenListViewItem *item = new HiddenListViewItem( _dlg->hiddenListView, tmp, hidden, veto, vetoOplock );
-    
+
   }
 }
 
 
 
 void HiddenFileView::columnClicked(int column) {
-  
+
 
   switch (column) {
     case COL_HIDDEN : hiddenChkClicked( !_dlg->hiddenChk->isOn() );break;
@@ -267,12 +267,12 @@ void HiddenFileView::deleteItem( KFileItem *fileItem )
       break;
     }
   }
-    
+
 }
 
-void HiddenFileView::refreshItems( const KFileItemList& items )
+void HiddenFileView::refreshItems( const KFileItemList& /*items*/ )
 {
-  updateView();  
+  updateView();
 }
 
 
@@ -311,7 +311,7 @@ void HiddenFileView::selectionChanged()
        vetoOplock = true;
     else
        noVetoOplock = true;
-    
+
     if (item->isOn(COL_HIDDEN))
        hide = true;
     else
@@ -344,8 +344,8 @@ void HiddenFileView::selectionChanged()
     _dlg->vetoOplockChk->setTristate(false);
     _dlg->vetoOplockChk->setChecked(vetoOplock);
   }
-  
-  
+
+
   if (hide && noHide)
   {
     _dlg->hiddenChk->setTristate(true);
@@ -365,7 +365,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
   chkBox->setTristate(false);
   action->setChecked(b);
   chkBox->setChecked(b);
-  
+
   HiddenListViewItem* item;
   for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
        item = static_cast<HiddenListViewItem*>(item->nextSibling()))

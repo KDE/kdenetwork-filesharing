@@ -101,7 +101,7 @@ int getUserUID(const QString & name)
 
   struct passwd* p;
 
-  p = getpwnam(name);
+  p = getpwnam(name.local8Bit());
 
   if (p)
      return p->pw_uid;
@@ -115,7 +115,7 @@ int getUserGID(const QString & name)
 
   struct passwd* p;
 
-  p = getpwnam(name);
+  p = getpwnam(name.local8Bit());
 
   if (p)
     return p->pw_gid;
@@ -129,7 +129,7 @@ int getGroupGID(const QString & name)
 
   struct group* g;
 
-  g = getgrnam(name);
+  g = getgrnam(name.local8Bit());
 
   if (g)
     return g->gr_gid;
@@ -144,7 +144,7 @@ bool isUserInGroup(const QString & user, const QString & group) {
   {
     if (g && QString(g->gr_name) == group) {
        char** names = g->gr_mem;
-       
+
        int i = 0;
        char* name = names[0];
        while (name != 0L) {
@@ -158,7 +158,7 @@ bool isUserInGroup(const QString & user, const QString & group) {
        break;
     }
   }
-  
+
   endgrent();
   return false;
 }

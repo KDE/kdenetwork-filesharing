@@ -119,7 +119,7 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
            this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
 
   _smbpasswdOutput = "";
-    
+
   bool result = p.start(KProcess::Block,KProcess::Stdout);
 
   if (result)
@@ -129,7 +129,7 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
 
   return result;
 }
-  
+
 /**
  * Tries to add the passed user to the smbpasswd file
  * returns true if successful otherwise false
@@ -163,7 +163,7 @@ bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 bool SmbPasswdFile::removeUser(const SambaUser & user)
 {
   QStringList l;
-  l << "-x" << user.name; 
+  l << "-x" << user.name;
   return executeSmbpasswd(l);
 }
 
@@ -186,7 +186,7 @@ void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen
  * If there is no entry in the [global] section
  * it tries to guess the location.
  **/
-KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile *file)
+KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile * /*file*/)
 {
   kdWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!" << endl;
   return KURL("");
@@ -194,29 +194,29 @@ KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile *file)
 
 bool SmbPasswdFile::enableUser(const SambaUser & user) {
   QStringList l;
-  l << "-e" << user.name; 
-  return executeSmbpasswd(l);
-}
-  
-bool SmbPasswdFile::disableUser(const SambaUser & user) {
-  QStringList l;
-  l << "-d" << user.name; 
-  return executeSmbpasswd(l);
-}
-  
-bool SmbPasswdFile::setNoPassword(const SambaUser & user) {
-  QStringList l;
-  l << "-n" << user.name; 
-  return executeSmbpasswd(l);
-}
-  
-bool SmbPasswdFile::setMachineTrustAccount(const SambaUser & user) {
-  QStringList l;
-  l << "-m" << user.name; 
+  l << "-e" << user.name;
   return executeSmbpasswd(l);
 }
 
-bool SmbPasswdFile::joinADomain(const QString & domain, const QString & server, 
+bool SmbPasswdFile::disableUser(const SambaUser & user) {
+  QStringList l;
+  l << "-d" << user.name;
+  return executeSmbpasswd(l);
+}
+
+bool SmbPasswdFile::setNoPassword(const SambaUser & user) {
+  QStringList l;
+  l << "-n" << user.name;
+  return executeSmbpasswd(l);
+}
+
+bool SmbPasswdFile::setMachineTrustAccount(const SambaUser & user) {
+  QStringList l;
+  l << "-m" << user.name;
+  return executeSmbpasswd(l);
+}
+
+bool SmbPasswdFile::joinADomain(const QString & domain, const QString & server,
       const QString & user, const QString & password) {
   QStringList l;
   l << "-j" << domain;

@@ -85,12 +85,12 @@ ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 {
   if (!share) {
     kdWarning() << "ShareDlgImpl::Constructor : share parameter is null!" << endl;
-    return;    
+    return;
   }
-  
+
   _dictMngr = new DictManager(share);
   _share = share;
-  
+
   initDialog();
   initAdvancedTab();
 }
@@ -199,43 +199,43 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("strict locking",strictLockingChk);
   _dictMngr->add("share modes",shareModesChk);
   _dictMngr->add("oplocks",oplocksChk);
-  
+
 
   _dictMngr->add("oplock contention limit",oplockContentionLimitSpin);
   _dictMngr->add("strict sync",strictSyncChk);
-  
-  // Tuning 
-  
+
+  // Tuning
+
   _dictMngr->add("strict allocate",strictAllocateChk);
-  
+
   _dictMngr->add("max connections",maxConnectionsSpin);
   _dictMngr->add("write cache size",writeCacheSizeSpin);
   _dictMngr->add("block size",blockSizeSpin);
 
-  
+
   _dictMngr->add("sync always",syncAlwaysChk);
   _dictMngr->add("use sendfile",useSendfileChk);
 
   _dictMngr->add("csc policy",cscPolicyCombo,
                  new QStringList(QStringList() << "manual" << "documents" << "programs" << "disable"));
-  
-  
+
+
 
   // VFS
-  
+
   _dictMngr->add("vfs objects",vfsObjectsEdit);
   _dictMngr->add("vfs options",vfsOptionsEdit);
 
   // Misc
-  
+
   _dictMngr->add("preexec",preexecEdit);
   _dictMngr->add("postexec",postexecEdit);
   _dictMngr->add("root preexec",rootPreexecEdit);
   _dictMngr->add("root postexec",rootPostexecEdit);
-  
+
   _dictMngr->add("preexec close",preexecCloseChk);
   _dictMngr->add("root preexec close",rootPreexecCloseChk);
-  
+
   _dictMngr->add("volume",volumeEdit);
   _dictMngr->add("fstype",fstypeEdit);
   _dictMngr->add("magic script",magicScriptEdit);
@@ -243,12 +243,12 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("dont descend",dontDescendEdit);
   _dictMngr->add("set directory",setDirectoryChk);
   _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
-    
+
   _dictMngr->add("msdfs root",msdfsRootChk);
   _dictMngr->add("msdfs proxy",msdfsProxyChk);
-  
+
   _dictMngr->load( _share );
-  
+
 
   connect( _tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
   connect(_dictMngr, SIGNAL(changed()), this, SLOT(changedSlot()));
@@ -258,21 +258,21 @@ ShareDlgImpl::~ShareDlgImpl()
 {
 }
 
-void ShareDlgImpl::initAdvancedTab() 
+void ShareDlgImpl::initAdvancedTab()
 {
-	
+
   QVBoxLayout *l = new QVBoxLayout(advancedFrame);
 	l->setAutoAdd(true);
 	l->setMargin(0);
 	_janus = new KJanusWidget(advancedFrame,0,KJanusWidget::TreeList);
 	_janus->setRootIsDecorated(false);
 	_janus->setShowIconsInTreeList(true);
-	
+
 	QWidget *w;
 	QFrame *f;
 	QString label;
  	QPixmap icon;
-	
+
 	for (int i=0;i<advancedDumpTab->count();)
 	{
 		w = advancedDumpTab->page(i);
@@ -318,18 +318,18 @@ void ShareDlgImpl::initAdvancedTab()
 			 icon.fill();
 		}
 			 //SmallIcon("empty2");
-		
+
 		f = _janus->addPage( label,label,icon );
 		l = new QVBoxLayout(f);
 	  l->setAutoAdd(true);
 		l->setMargin(0);
-		
+
 		advancedDumpTab->removePage(w);
-		
+
 		w->reparent(f,QPoint(1,1),TRUE);
-		
+
 	}
-	
+
 	w = _tabs->page(5);
 	_tabs->removePage(w);
 	delete w;
@@ -351,7 +351,7 @@ void ShareDlgImpl::loadHiddenFilesView()
 
   if (_fileView)
      return;
-     
+
   _fileView = new HiddenFileView( this, _share );
 
   if ( ! _share->isSpecialSection())
@@ -376,16 +376,16 @@ void ShareDlgImpl::accept()
   _userTab->save();
 
   // Security
-  
+
   _share->setValue("guest account",guestAccountCombo->currentText( ) );
 
-  
+
   // Hidden files
   if (_fileView)
       _fileView->save();
 
-  _dictMngr->save( _share );      
-      
+  _dictMngr->save( _share );
+
 	KcmShareDlg::accept();
 }
 
@@ -399,7 +399,7 @@ void ShareDlgImpl::homeChkToggled(bool b)
   	shareNameEdit->setText("homes");
     pathUrlRq->setURL("");
     directoryPixLbl->setPixmap(DesktopIcon("folder_home",48));
-		
+
   }
   else
   {
@@ -415,12 +415,12 @@ void ShareDlgImpl::accessModifierBtnClicked()
     kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : QObject::sender() is null!" << endl;
     return;
   }
-  
-  
+
+
   QString name = QObject::sender()->name();
-  
+
   QLineEdit *edit = 0L;
-      
+
   if (name == "forceCreateModeBtn")
      edit = forceCreateModeEdit;
   else
@@ -449,7 +449,7 @@ void ShareDlgImpl::accessModifierBtnClicked()
     kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : edit is null! name=" << name << endl;
     return;
   }
-  
+
   FileModeDlgImpl dlg(this, edit);
 
   dlg.exec();
@@ -459,7 +459,7 @@ void ShareDlgImpl::changedSlot() {
   emit changed();
 }
 
-void ShareDlgImpl::pathUrlRq_textChanged( const QString & s)
+void ShareDlgImpl::pathUrlRq_textChanged( const QString & )
 {
   if (_fileView && ! _share->isSpecialSection())
      _fileView->load();

@@ -115,7 +115,7 @@ void PrinterDlgImpl::initDialog()
 
   // Security
 
-  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
+//  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
   guestAccountEdit->setText( _share->getValue("guest account") );
   printerAdminEdit->setText( _share->getValue("printer admin") );
   hostsAllowEdit->setText( _share->getValue("hosts allow") );
@@ -179,7 +179,7 @@ void PrinterDlgImpl::accept()
 
   // Security
 
-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
+//-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
   _share->setValue("guest account",guestAccountEdit->text( ) );
   _share->setValue("printer admin",printerAdminEdit->text( ) );
   _share->setValue("hosts allow",hostsAllowEdit->text( ) );

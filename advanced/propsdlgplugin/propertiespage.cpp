@@ -165,14 +165,18 @@ bool PropertiesPage::save() {
       kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: updateSambaShare failed!" << endl;
       return false;
   }      
+ 
+  return save(m_nfsFile, m_sambaFile, m_nfsChanged, m_sambaChanged); 
+}  
   
-  
-  QString nfsFile = KNFSShare::instance()->exportsPath();
+bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool samba) 
+{  
+  QString nfsFileName = KNFSShare::instance()->exportsPath();
   bool nfsNeedsKDEsu = false;
   
-  if (m_nfsChanged) {
-      if (QFileInfo(nfsFile).isWritable()) {
-          m_nfsFile->saveTo(nfsFile);
+  if (nfs) {
+      if (QFileInfo(nfsFileName).isWritable()) {
+          nfsFile->saveTo(nfsFileName);
       } else {
           nfsNeedsKDEsu = true;
           kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs needs kdesu." << endl;
@@ -181,11 +185,11 @@ bool PropertiesPage::save() {
     kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs has not changed." << endl;
 
   
-  QString sambaFile = KSambaShare::instance()->smbConfPath();
+  QString sambaFileName = KSambaShare::instance()->smbConfPath();
   bool sambaNeedsKDEsu = false;
-  if (m_sambaChanged) {
-      if (QFileInfo(sambaFile).isWritable()) {
-          m_sambaFile->saveTo(sambaFile);
+  if (samba) {
+      if (QFileInfo(sambaFileName).isWritable()) {
+          sambaFile->saveTo(sambaFileName);
       } else {
           sambaNeedsKDEsu = true;
           kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba needs kdesu." << endl;
@@ -205,17 +209,17 @@ bool PropertiesPage::save() {
      QString command;
      
      if (nfsNeedsKDEsu) {
-         m_nfsFile->saveTo(nfsTempFile.name());
+         nfsFile->saveTo(nfsTempFile.name());
          command += QString("cp %1 %2;exportfs -ra;")
         .arg(KProcess::quote( nfsTempFile.name() ))
-        .arg(KProcess::quote( nfsFile ));
+        .arg(KProcess::quote( nfsFileName ));
      }         
      
      if (sambaNeedsKDEsu) {
-         m_sambaFile->saveTo(sambaTempFile.name());
+         sambaFile->saveTo(sambaTempFile.name());
          command += QString("cp %1 %2;")
         .arg(KProcess::quote( sambaTempFile.name() ))
-        .arg(KProcess::quote( sambaFile ));
+        .arg(KProcess::quote( sambaFileName ));
      }       
          
      proc<<"kdesu" << "-d" << "-c"<<command;

@@ -38,6 +38,7 @@ public:
   
   bool save();
 
+  static bool save(NFSFile* nfsFile, SambaFile* sambFile, bool nfs, bool samba); 
 public slots:
   void load();
     

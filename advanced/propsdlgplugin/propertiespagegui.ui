@@ -1,0 +1,368 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>PropertiesPageGUI</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>PropertiesPageGUI</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>299</width>
+            <height>332</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <vbox>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <widget class="QCheckBox">
+            <property name="name">
+                <cstring>shareChk</cstring>
+            </property>
+            <property name="text">
+                <string>S&amp;hare this folder in the local network</string>
+            </property>
+            <property name="accel">
+                <string>Alt+H</string>
+            </property>
+            <property name="checked">
+                <bool>true</bool>
+            </property>
+        </widget>
+        <widget class="Line">
+            <property name="name">
+                <cstring>line1</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>HLine</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Sunken</enum>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+        </widget>
+        <widget class="QFrame">
+            <property name="name">
+                <cstring>frame4</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+                <enum>Raised</enum>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>nfsChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Share with &amp;NFS (Linux/UNIX®)</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+N</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>nfsGrp</cstring>
+                    </property>
+                    <property name="title">
+                        <string>NFS Options</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>publicNFSChk</cstring>
+                            </property>
+                            <property name="text">
+                                <string>Pu&amp;blic</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+B</string>
+                            </property>
+                            <property name="checked">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>writableNFSChk</cstring>
+                            </property>
+                            <property name="text">
+                                <string>W&amp;ritable</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+R</string>
+                            </property>
+                            <property name="checked">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout4</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>moreNFSBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>More NFS Op&amp;tions</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+T</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer3</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>156</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+                <widget class="QCheckBox">
+                    <property name="name">
+                        <cstring>sambaChk</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Share with S&amp;amba (Microsoft® Windows®)</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+A</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QGroupBox">
+                    <property name="name">
+                        <cstring>sambaGrp</cstring>
+                    </property>
+                    <property name="title">
+                        <string>Samba Options</string>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>publicSambaChk</cstring>
+                            </property>
+                            <property name="text">
+                                <string>P&amp;ublic</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+U</string>
+                            </property>
+                            <property name="checked">
+                                <bool>true</bool>
+                            </property>
+                        </widget>
+                        <widget class="QCheckBox">
+                            <property name="name">
+                                <cstring>writableSambaChk</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Writable</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+W</string>
+                            </property>
+                            <property name="checked">
+                                <bool>false</bool>
+                            </property>
+                        </widget>
+                        <widget class="QLayoutWidget">
+                            <property name="name">
+                                <cstring>layout3</cstring>
+                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="KPushButton">
+                                    <property name="name">
+                                        <cstring>moreSambaBtn</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Mor&amp;e Samba Options</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+E</string>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer4_2</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
+                        </widget>
+                    </vbox>
+                </widget>
+            </vbox>
+        </widget>
+        <spacer>
+            <property name="name">
+                <cstring>spacer4</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Vertical</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>40</height>
+                </size>
+            </property>
+        </spacer>
+    </vbox>
+</widget>
+<connections>
+    <connection>
+        <sender>sambaChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>sambaGrp</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>nfsChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>nfsGrp</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>publicSambaChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>writableSambaChk</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>publicNFSChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>writableNFSChk</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>shareChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>frame4</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>shareChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>sambaChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>publicSambaChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>writableSambaChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>nfsChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>publicNFSChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>writableNFSChk</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>moreNFSBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>moreNFSBtn_clicked()</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">propertiespagegui.ui.h</include>
+</includes>
+<signals>
+    <signal>changed()</signal>
+</signals>
+<slots>
+    <slot access="private">changedSlot()</slot>
+    <slot>moreNFSBtn_clicked()</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

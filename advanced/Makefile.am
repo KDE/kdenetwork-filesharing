@@ -1,0 +1,1 @@
+SUBDIRS = nfs propsdlgplugin 

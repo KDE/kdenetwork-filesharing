@@ -86,7 +86,7 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
     return;
   }
 
-  initGUI();      
+  initGUI();
 }
 
 KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
@@ -108,7 +108,7 @@ void KSambaPropertiesDialogPlugin::initGUI() {
     createConfigWidget(m_stack);
     m_stack->addWidget(m_configWidget,0);
     m_stack->raiseWidget(m_configWidget);
-  } 
+  }
   else {
     createShareWidget(m_stack);
     m_stack->addWidget(m_shareWidget,0);
@@ -126,17 +126,16 @@ QString KSambaPropertiesDialogPlugin::getSambaConf() {
 
 SambaFile* KSambaPropertiesDialogPlugin::getSambaFile() {
   if (m_sambaFile == 0L) {
-
     if (getSambaConf().isNull())
       return 0L;
 
-    m_sambaFile = new SambaFile( getSambaConf(), false );     
+    m_sambaFile = new SambaFile( getSambaConf(), false );
 
     if ( ! m_sambaFile->openFile()) {
       delete m_sambaFile;
       m_sambaFile = 0L;
       return 0L;
-    }   
+    }
   }
 
   return m_sambaFile;
@@ -148,7 +147,7 @@ SambaShare* KSambaPropertiesDialogPlugin::getGlobalShare() {
   if (getSambaFile() == 0L)
     return 0L;
 
-  return getSambaFile()->getShare("global");     
+  return getSambaFile()->getShare("global");
 }
 
 
@@ -182,10 +181,10 @@ QString KSambaPropertiesDialogPlugin::getNetbiosName() {
 
   QString *s = getGlobalShare()->find("netbios name");
 
-  if (!s) 
+  if (!s)
     return QString::null;
 
-  return QString(*s);         
+  return QString(*s);
 }
 
 QString KSambaPropertiesDialogPlugin::getLocalPathFromUrl(const KURL & url) {
@@ -201,7 +200,7 @@ QString KSambaPropertiesDialogPlugin::getLocalPathFromUrl(const KURL & url) {
 
     if (getNetbiosName().lower() != url.host().lower())
         return QString::null;
-  }          
+  }
 
   if (getSambaFile() == 0L)
     return QString::null;
@@ -233,7 +232,7 @@ void KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
                               i18n("Error while opening file"));
     delete m_shareWidget;
     m_shareWidget = 0L;
-    return;                              
+    return;
   }
 
 

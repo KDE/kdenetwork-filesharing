@@ -294,7 +294,7 @@ void KFileShareConfig::save()
     QFile file(FILESHARECONF);
     if ( ! file.open(IO_WriteOnly)) {
         KMessageBox::detailedError(this, 
-            i18n("Could not save settings!"),
+            i18n("Could not save settings."),
             i18n("Could not open file '%1' for writing: %2").arg(FILESHARECONF).arg(
              file.errorString() ),
             i18n("Saving failed"));

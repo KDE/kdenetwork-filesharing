@@ -64,6 +64,8 @@ Q_OBJECT
     
     SambaShare* _share;
     
+    void handleUnsupportedWidget(const QString &, QWidget*);
+    
   protected slots:
     void changedSlot();
     

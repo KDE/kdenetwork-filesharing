@@ -32,8 +32,10 @@
 #include <qcheckbox.h>
 #include <qspinbox.h>
 #include <qcombobox.h>
+#include <qtooltip.h>
 
 #include <kurlrequester.h> 
+#include <klocale.h>
  
 #include "sambashare.h"
 #include "dictmanager.h" 
@@ -52,12 +54,17 @@ DictManager::DictManager(SambaShare* share):
 DictManager::~DictManager() {
 }
 
+void DictManager::handleUnsupportedWidget(const QString & s, QWidget* w) {
+  w->setEnabled(false);
+  QToolTip::add(w,i18n("The option <em>%1</em> is not supported by your Samba version").arg(s));
+}
+
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {
   if (_share->optionSupported(key)) {
     lineEditDict.insert(key,lineEdit);
     connect(lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
   } else
-    lineEdit->setEnabled(false);
+    handleUnsupportedWidget(key,lineEdit);
 }
 
 void DictManager::add(const QString & key, QCheckBox* checkBox){
@@ -65,7 +72,7 @@ void DictManager::add(const QString & key, QCheckBox* checkBox){
     checkBoxDict.insert(key,checkBox);
     connect(checkBox, SIGNAL(clicked()), this, SLOT(changedSlot()));
   } else
-    checkBox->setEnabled(false);
+    handleUnsupportedWidget(key,checkBox);
 }
 
 void DictManager::add(const QString & key, KURLRequester* urlRq){
@@ -73,7 +80,7 @@ void DictManager::add(const QString & key, KURLRequester* urlRq){
     urlRequesterDict.insert(key,urlRq);
     connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
   } else
-    urlRq->setEnabled(false);
+    handleUnsupportedWidget(key,urlRq);
 }
 
 void DictManager::add(const QString & key, QSpinBox* spinBox){
@@ -81,7 +88,7 @@ void DictManager::add(const QString & key, QSpinBox* spinBox){
     spinBoxDict.insert(key,spinBox);
     connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changedSlot()));
   } else
-    spinBox->setEnabled(false);
+    handleUnsupportedWidget(key,spinBox);
 }
               
 void DictManager::add(const QString & key, QComboBox* comboBox){
@@ -89,7 +96,7 @@ void DictManager::add(const QString & key, QComboBox* comboBox){
     comboBoxDict.insert(key,comboBox);
     connect(comboBox, SIGNAL(activated(int)), this, SLOT(changedSlot()));
   } else
-    comboBox->setEnabled(false);
+    handleUnsupportedWidget(key,comboBox);
 }
 
 

@@ -81,14 +81,14 @@
                         <enum>Sunken</enum>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>&lt;b&gt;Name / Adress field&lt;/b&gt;
+                        <string>&lt;b&gt;Name / Address field&lt;/b&gt;
 &lt;p&gt;
-Here you can enter the host name or adress.&lt;br&gt;
+Here you can enter the host name or address.&lt;br&gt;
 The host may be specified in a number of ways:
 &lt;p&gt;
 &lt;i&gt;single host&lt;/i&gt;
 &lt;p&gt;
- This is the most common format. You may specify a host either by an abbreviated name recognized be the resolver, the fully qualified domain name, or an IP address.
+ This is the most common format. You may specify a host either by an abbreviated name recognized by the resolver, the fully qualified domain name, or an IP address.
 &lt;/p&gt;
 
 &lt;i&gt;netgroups&lt;/i&gt;
@@ -117,8 +117,8 @@ The host may be specified in a number of ways:
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Public access&lt;/b&gt;
 &lt;p&gt;
-If you check this, the host adress will be a single wildcard , which means public access.
-This is just the same as if you would enter a wildcard in the adress field.
+If you check this, the host address will be a single wildcard , which means public access.
+This is just the same as if you would enter a wildcard in the address field.
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -176,7 +176,7 @@ The default is to disallow any request which changes the filesystem
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Insecure&lt;/b&gt;
 &lt;p&gt;
-If this option is checked, it isn't required that requests originate on an internet port less than IPPORT_RESERVED (1024).
+If this option is checked, it is not required that requests originate on an internet port less than IPPORT_RESERVED (1024).
 &lt;/p&gt;
 &lt;p&gt;
 If unsure leave it unchecked.
@@ -193,7 +193,7 @@ If unsure leave it unchecked.
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Sync&lt;/b&gt;
 &lt;p&gt;
-This option requests that all file writes be committed to disc before the write request completes. This is required for complete safety of data in the face of a server crash, but incurs a performance hit.
+This option requests that all file writes be committed to disk before the write request completes. This is required for complete safety of data in the face of a server crash, but incurs a performance hit.
 &lt;/p&gt;
 &lt;p&gt;
 The default is to allow the server to write the data out whenever it is ready.
@@ -213,7 +213,7 @@ The default is to allow the server to write the data out whenever it is ready.
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No wdelay&lt;/b&gt;
 &lt;p&gt;
-This option only has effect if sync is also set. The NFS server will normally delay committing a write request to disc slightly if it suspects that another related write request may be in progress or may arrive soon. This allows multiple write requests to be committed to disc with the one operation which can improve performance. If an NFS server received mainly small unrelated requests, this behaviour could actually reduce performance, so no wdelay is available to turn it off. &lt;/p&gt;</string>
+This option only has effect if sync is also set. The NFS server will normally delay committing a write request to disk slightly if it suspects that another related write request may be in progress or may arrive soon. This allows multiple write requests to be committed to disk with the one operation which can improve performance. If an NFS server received mainly small unrelated requests, this behavior could actually reduce performance, so no wdelay is available to turn it off. &lt;/p&gt;</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="4" column="0">
@@ -229,7 +229,7 @@ This option only has effect if sync is also set. The NFS server will normally de
 This option is based on the option of the same name provided in IRIX NFS. Normally, if a server exports two filesystems one of which is mounted on the other, then the client will have to mount both filesystems explicitly to get access to them. If it just mounts the parent, it will see an empty directory at the place where the other filesystem is mounted. That filesystem is "hidden".
 &lt;/p&gt;
 &lt;p&gt;
-Setting the nohide option on a filesystem causes it not to be hidden, and an appropriately authorised client will be able to move from the parent to that filesystem without noticing the change.
+Setting the nohide option on a filesystem causes it not to be hidden, and an appropriately authorized client will be able to move from the parent to that filesystem without noticing the change.
 &lt;/p&gt;
 &lt;p&gt;
 However, some NFS clients do not cope well with this situation as, for instance, it is then possible for two files in the one apparent filesystem to have the same inode number.
@@ -255,7 +255,7 @@ This option can be very useful in some situations, but it should be used with du
 This option disables subtree checking, which has mild security implications, but can improve reliability is some circumstances.
 &lt;/p&gt;
 &lt;p&gt;
-If a subdirectory of a filesystem is exported, but the whole filesystem isn't then whenever a NFS request arrives, the server must check not only that the accessed file is in the appropriate filesystem (which is easy) but also that it is in the exported tree (which is harder). This check is called the subtree_check.
+If a subdirectory of a filesystem is exported, but the whole filesystem is not, then whenever a NFS request arrives, the server must check not only that the accessed file is in the appropriate filesystem (which is easy) but also that it is in the exported tree (which is harder). This check is called the subtree_check.
 &lt;/p&gt;
 &lt;p&gt;
 In order to perform this check, the server must include some information about the location of the file in the "filehandle" that is given to the client. This can cause problems with accessing files that are renamed while a client has them open (though in many simple cases it will still work).

@@ -103,7 +103,6 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
   if (! m_sambaShare )
      return true;
 
-
   bool isPublic = m_sambaShare->getBoolValue("public");
   if (!isPublic)
      return true;
@@ -151,27 +150,28 @@ bool LinuxPermissionChecker::checkUserPermissions(const QString & user) {
 }
 
 bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, bool showMessageBox) {
-  if (m_sambaShare->getBoolValue("read only")) {
+  // If no write permissions are given, we don't need to check them.
+  if (m_sambaShare->getBoolValue("read only"))
+     return true;
   
-    if (! ((m_fi.permission(QFileInfo::WriteOther)) ||
-           (m_fi.permission(QFileInfo::WriteUser) && user == m_fi.owner()) ||
-           (m_fi.permission(QFileInfo::WriteGroup) && isUserInGroup(user, m_fi.group())))
-       )
-    {
-     if (!showMessageBox)
+  if (! ((m_fi.permission(QFileInfo::WriteOther)) ||
+          (m_fi.permission(QFileInfo::WriteUser) && user == m_fi.owner()) ||
+          (m_fi.permission(QFileInfo::WriteGroup) && isUserInGroup(user, m_fi.group())))
+      )
+  {
+    if (!showMessageBox)
+      return false;
+    
+    if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
+        0L,i18n(
+          "<qt>You have specified read access to the user <i>%1</i> for this directory, but "
+          "the user doesn't have the needed write permissions !<br>" 
+          "Do you want to continue nevertheless ?</qt>").arg(user)
+          ,i18n("Warning")
+          ,KStdGuiItem::cont()
+          ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
         return false;
-     
-     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-         0L,i18n(
-           "<qt>You have specified read access to the user <i>%1</i> for this directory, but "
-           "the user doesn't have the needed write permissions !<br>" 
-           "Do you want to continue nevertheless ?</qt>").arg(user)
-           ,i18n("Warning")
-           ,KStdGuiItem::cont()
-           ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
-         return false;
-    }
-  }    
+  }
   
   return true;
 }

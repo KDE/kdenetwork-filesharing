@@ -66,9 +66,6 @@
 #include <krestrictedline.h>
 #include <kjanuswidget.h>
 
-#include <assert.h>
-#include <iostream.h>
-
 #include "smbpasswdfile.h"
 #include "sambafile.h"
 #include "common.h"
@@ -86,22 +83,25 @@
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")
 {
+  if (!share) {
+    kdWarning() << "ShareDlgImpl::Constructor : share parameter is null!" << endl;
+    return;    
+  }
+  
   _dictMngr = new DictManager(share);
   _share = share;
-	assert(_share);
+  
   initDialog();
   initAdvancedTab();
 }
 
 void ShareDlgImpl::initDialog()
 {
-	// Base settings
-  _fileView = 0L;
-
-	assert(_share);
-  
   if (!_share)
      return;
+	
+  // Base settings
+  _fileView = 0L;
 
 	pathUrlRq->setMode(2+8+16);
 
@@ -352,9 +352,6 @@ void ShareDlgImpl::loadHiddenFilesView()
 void ShareDlgImpl::accept()
 {
 	// Base settings
-
-	assert(_share);
-  
   if (!_share)
      return;
 
@@ -403,9 +400,11 @@ void ShareDlgImpl::homeChkToggled(bool b)
 
 void ShareDlgImpl::accessModifierBtnClicked()
 {
-  kdDebug() << "clicked" << endl;
-
-  assert(QObject::sender());
+  if (!QObject::sender()) {
+    kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : QObject::sender() is null!" << endl;
+    return;
+  }
+  
   
   QString name = QObject::sender()->name();
   
@@ -435,7 +434,10 @@ void ShareDlgImpl::accessModifierBtnClicked()
   if (name == "directorySecurityMaskBtn")
      edit = directorySecurityMaskEdit;
 
-  assert(edit);
+  if (!edit) {
+    kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : edit is null! name=" << name << endl;
+    return;
+  }
   
   FileModeDlgImpl dlg(this, edit);
 

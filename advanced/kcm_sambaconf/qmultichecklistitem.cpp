@@ -45,7 +45,7 @@ QMultiCheckListItem::QMultiCheckListItem( QListView *parent=0) :
 }
     
 void QMultiCheckListItem::setOn(int column, bool b) {
-  if (column >= checkBoxColumns.size()) {
+  if (column >= (int) checkBoxColumns.size()) {
     checkBoxColumns.resize(column*2);
     checkStates.resize(column*2);
   }
@@ -65,7 +65,7 @@ bool QMultiCheckListItem::isDisabled(int column) {
 }
 
 void QMultiCheckListItem::toggle(int column) {
-  if (column >= checkBoxColumns.size()) {
+  if (column >= (int) checkBoxColumns.size()) {
     checkBoxColumns.resize(column*2);
     checkStates.resize(column*2);
   }
@@ -78,7 +78,7 @@ void QMultiCheckListItem::toggle(int column) {
 }
 
 void QMultiCheckListItem::setDisabled(int column, bool b) {
-  if (column >= disableStates.size()) {
+  if (column >= (int) disableStates.size()) {
     disableStates.resize(column*2);
   }
   

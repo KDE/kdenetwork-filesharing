@@ -288,8 +288,13 @@ void UserTabImpl::addRejectedUserBtnClicked()
 
     QString name = item->text(0);
 
-    if (item->parent() == _groupsFolder)
+    if (name.contains(' ')) 
+        name = "\""+name+"\"";
+           
+    
+    if (item->parent() == _groupsFolder) {
         name = "+"+name;
+    }
 
     new KListViewItem(rejectedUserListView, name, item->text(1), item->text(2));
 

@@ -32,19 +32,17 @@ class SambaShare;
 class QWidget;
 
 /**
-A class to check if the Samba permissions specified in the SambaShare fit 
-to the un?x permissions of the directory. E.g. a user specifies a SambaShare as writeable
-for the public, but the guest account has no write permissions for the directory of the
-SambaShare. This will cause a dialog (which can be turned of)  to popup and inform the
-user about the missing rights and ask him to continue nevertheless or to cancel.
-This class works for all un?x systems not only for Linux, but I couldn't call the
-class Un?xPermissionChecker ;-)
-
-@author Jan Schaefer
-*/
+ * A class to check if the Samba permissions specified in the SambaShare fit 
+ * to the un?x permissions of the directory. E.g. a user specifies a SambaShare as writeable
+ * for the public, but the guest account has no write permissions for the directory of the
+ * SambaShare. This will cause a dialog (which can be turned of)  to popup and inform the
+ * user about the missing rights and ask him to continue nevertheless or to cancel.
+ * This class works for all un?x systems not only for Linux, but I couldn't call the
+ * class Un?xPermissionChecker ;-)
+ * @author Jan Schaefer
+ */
 class LinuxPermissionChecker{
 public:
-    
     LinuxPermissionChecker(SambaShare*,QWidget* parent );
     ~LinuxPermissionChecker();
 
@@ -97,11 +95,9 @@ protected:
      */
     bool checkUserReadPermissions(const QString & user,bool showMessageBox = true);
         
-
     QWidget* m_parent;
     SambaShare* m_sambaShare;
     QFileInfo m_fi;    
-
 };
 
 #endif

@@ -26,8 +26,6 @@
  *                                                                            *
  ******************************************************************************/
 
-#include <iostream.h>
- 
 #include <kdebug.h>
 #include <qstringlist.h>
 

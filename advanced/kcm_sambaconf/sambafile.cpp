@@ -345,7 +345,7 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
 
 
   KProcess testParam;
-  testParam.setExecutable("testparm");
+  testParam << "testparm";
   testParam << "-s" << "/dev/null";
 
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),

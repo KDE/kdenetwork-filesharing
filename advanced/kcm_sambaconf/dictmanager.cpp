@@ -26,7 +26,6 @@
  *                                                                            *
  ******************************************************************************/
  
-#include <iostream.h> 
  
 #include <qlineedit.h>
 #include <qcheckbox.h>

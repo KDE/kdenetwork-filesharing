@@ -193,6 +193,8 @@ void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen
  **/
 KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile *file)
 {
+  kdWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!" << endl;
+  return KURL("");
 }
 
 bool SmbPasswdFile::enableUser(const SambaUser & user) {

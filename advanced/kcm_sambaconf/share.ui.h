@@ -195,20 +195,21 @@ void KcmShareDlg::oplocksChk_toggled( bool b)
 void KcmShareDlg::lockingChk_toggled( bool b)
 {
   // Its Dangerous to disable locking !
-	
+/*	
     if (!b)  {
 	enableLockingWarnPix->setPixmap(SmallIcon("messagebox_warning"));    
 	enableLockingWarnPix->show();
     } else {
 	enableLockingWarnPix->hide();
     }
-    
+*/    
 
 }
 
 
 void KcmShareDlg::fakeOplocksChk_toggled( bool b)
 {
+/*
     if (b)  {
 	fakeOplocksWarnPix->setPixmap(SmallIcon("messagebox_info"));    
 	fakeOplocksWarnPix->setText(i18n("Better use the real oplocks support than this parameter"));
@@ -217,15 +218,16 @@ void KcmShareDlg::fakeOplocksChk_toggled( bool b)
     } else {
 	fakeOplocksWarnPix->hide();
     }
-
+*/
 }
 
 
 void KcmShareDlg::oplockContentionLimitSpin_valueChanged( int i)
 {
+/*    
     oplockContentionLimitWarnPix->setMaximumWidth(32767);
     oplockContentionLimitWarnPix->setPixmap(SmallIcon("messagebox_critical"));
-   
+*/   
     //oplockContentionLimitWarnPix->show();
     
 }

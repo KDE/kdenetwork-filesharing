@@ -56,13 +56,21 @@ QStringList SambaUserList::getUserNames()
 }
 
 
+SmbPasswdFile::SmbPasswdFile() {
+}
+
+
 SmbPasswdFile::SmbPasswdFile(const KURL & url)
 {
-  _url = url;
+  setUrl(url);
 }
 
 SmbPasswdFile::~SmbPasswdFile()
 {
+}
+
+void SmbPasswdFile::setUrl(const KURL & url) {
+  _url = url;
 }
 
 /**
@@ -170,7 +178,7 @@ bool SmbPasswdFile::changePassword(const SambaUser & user)
 }
 
 
-void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *proc, char *buffer, int buflen)
+void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen)
 {
   _smbpasswdOutput+=QString::fromLatin1(buffer,buflen);
 }
@@ -208,6 +216,15 @@ bool SmbPasswdFile::setNoPassword(const SambaUser & user) {
 bool SmbPasswdFile::setMachineTrustAccount(const SambaUser & user) {
   QStringList l;
   l << "-m" << user.name; 
+  return executeSmbpasswd(l);
+}
+
+bool SmbPasswdFile::joinADomain(const QString & domain, const QString & server, 
+      const QString & user, const QString & password) {
+  QStringList l;
+  l << "-j" << domain;
+  l << "-r" << server;
+  l << "-U" << user << "%" << password;
   return executeSmbpasswd(l);
 }
 

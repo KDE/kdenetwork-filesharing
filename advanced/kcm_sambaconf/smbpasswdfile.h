@@ -77,9 +77,12 @@ class SmbPasswdFile : public QObject
 {
 Q_OBJECT
 public: 
+  SmbPasswdFile();
 	SmbPasswdFile(const KURL &);
 	~SmbPasswdFile();
 
+  void setUrl(const KURL &);
+  
   /**
    * Returns a list of all users stored in
    * the smbpasswd file
@@ -117,6 +120,8 @@ public:
   
   bool setMachineTrustAccount(const SambaUser &);
 
+  bool joinADomain(const QString &, const QString &, const QString &, const QString &);
+  
   /**
    * Returns the Url of the smbpasswd file
    * specified in the [global] section of

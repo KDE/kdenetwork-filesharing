@@ -10,6 +10,7 @@
 
 void PropertiesPageGUI::changedSlot()
 {
+    m_hasChanged = true;
     emit changed();
 }
 
@@ -17,4 +18,16 @@ void PropertiesPageGUI::changedSlot()
 void PropertiesPageGUI::moreNFSBtn_clicked()
 {
 
+}
+
+
+void PropertiesPageGUI::urlRqTextChanged( const QString & )
+{
+
+}
+
+
+bool PropertiesPageGUI::hasChanged()
+{
+    return m_hasChanged;
 }

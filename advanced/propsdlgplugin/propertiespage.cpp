@@ -20,6 +20,8 @@
 #include <qcheckbox.h>
 #include <qtooltip.h>
 #include <qbuttongroup.h>
+#include <qfileinfo.h>
+#include <qlabel.h>
 #include <kpushbutton.h>
 
 #include <kfileshare.h>
@@ -28,6 +30,8 @@
 #include <klocale.h>
 #include <kurl.h>
 #include <kdebug.h>
+#include <kfile.h>
+#include <kurlrequester.h>
 
 #include "../nfs/nfsfile.h"
 #include "../nfs/nfsentry.h"
@@ -35,11 +39,28 @@
 
 #include "propertiespage.h"
 
-PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items) 
-  : PropertiesPageGUI(parent), m_items(items), m_nfsFile(0), m_nfsEntry(0)
+PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUrl) 
+  : PropertiesPageGUI(parent), m_items(items), m_nfsFile(0), m_nfsEntry(0),
+  m_enterUrl(enterUrl)
 {
-  // currently only one dir is allowed
-  m_path = m_items.first()->url().path(1);
+  if (m_enterUrl) {
+    shareChk->hide();
+    urlRq->setMode(KFile::Directory |
+                   KFile::ExistingOnly |
+                   KFile::LocalOnly );
+  } else {
+    urlRq->hide();
+    folderLbl->hide();
+  }
+  
+  if (m_items.isEmpty()) {
+    shareFrame->setDisabled(true);
+  } else {
+    shareFrame->setEnabled(true);
+    // currently only one dir is allowed
+    m_path = m_items.first()->url().path(1);
+  }
+  
   
   bool nfsShared = KNFSShare::instance()->isDirectoryShared(m_path);
   bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_path);
@@ -57,7 +78,8 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items)
   if (!KFileShare::nfsEnabled()) 
       disableNFS(i18n("The administrator does not allow sharing with Samba"));  
  
-  shareChk->setChecked(nfsShared || sambaShared);
+  if (!m_enterUrl)      
+      shareChk->setChecked(nfsShared || sambaShared);
   
   m_nfsFile = new NFSFile(KNFSShare::instance()->exportsPath());
   
@@ -177,6 +199,14 @@ void PropertiesPage::moreNFSBtn_clicked() {
     loadNFSEntry();
     emit changed();    
   }
+}
+
+void PropertiesPage::urlRqTextChanged( const QString & s) {
+  QFileInfo info(s);
+  if (info.exists() && info.isDir()) {
+    shareFrame->setEnabled(true);
+    m_path = s;
+  }    
 }
 
 #include "propertiespage.moc"

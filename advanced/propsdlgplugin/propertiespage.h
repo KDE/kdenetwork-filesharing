@@ -30,7 +30,7 @@ class PropertiesPage : public PropertiesPageGUI
 {
 Q_OBJECT
 public:
-  PropertiesPage(QWidget* parent, KFileItemList items);
+  PropertiesPage(QWidget* parent, KFileItemList items, bool enterUrl=false);
   virtual ~PropertiesPage();
   
   bool save();
@@ -42,11 +42,12 @@ protected:
   KFileItemList m_items;  
   NFSFile *m_nfsFile;
   NFSEntry *m_nfsEntry;
+  bool m_enterUrl;
   
 protected slots:
   // inherited from PropertiesPageGUI
   virtual void moreNFSBtn_clicked();
-  
+  virtual void urlRqTextChanged( const QString & );
 private:
   bool loadNFS();  
   void loadNFSEntry();  

@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>299</width>
-            <height>332</height>
+            <width>433</width>
+            <height>348</height>
         </rect>
     </property>
     <property name="caption">
@@ -22,6 +22,29 @@
         <property name="margin">
             <number>0</number>
         </property>
+        <widget class="QLayoutWidget">
+            <property name="name">
+                <cstring>layout6</cstring>
+            </property>
+            <hbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="QLabel">
+                    <property name="name">
+                        <cstring>folderLbl</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Folder:</string>
+                    </property>
+                </widget>
+                <widget class="KURLRequester">
+                    <property name="name">
+                        <cstring>urlRq</cstring>
+                    </property>
+                </widget>
+            </hbox>
+        </widget>
         <widget class="QCheckBox">
             <property name="name">
                 <cstring>shareChk</cstring>
@@ -52,7 +75,7 @@
         </widget>
         <widget class="QFrame">
             <property name="name">
-                <cstring>frame4</cstring>
+                <cstring>shareFrame</cstring>
             </property>
             <property name="frameShape">
                 <enum>NoFrame</enum>
@@ -92,33 +115,60 @@
                         <property name="name">
                             <cstring>unnamed</cstring>
                         </property>
-                        <widget class="QCheckBox">
+                        <widget class="QLayoutWidget">
                             <property name="name">
-                                <cstring>publicNFSChk</cstring>
+                                <cstring>layout6</cstring>
                             </property>
-                            <property name="text">
-                                <string>Pu&amp;blic</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+B</string>
-                            </property>
-                            <property name="checked">
-                                <bool>true</bool>
-                            </property>
-                        </widget>
-                        <widget class="QCheckBox">
-                            <property name="name">
-                                <cstring>writableNFSChk</cstring>
-                            </property>
-                            <property name="text">
-                                <string>W&amp;ritable</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+R</string>
-                            </property>
-                            <property name="checked">
-                                <bool>false</bool>
-                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>publicNFSChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Pu&amp;blic</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+B</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>writableNFSChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>W&amp;ritable</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+R</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer5</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
                         </widget>
                         <widget class="QLayoutWidget">
                             <property name="name">
@@ -185,33 +235,83 @@
                         <property name="name">
                             <cstring>unnamed</cstring>
                         </property>
-                        <widget class="QCheckBox">
+                        <widget class="QLayoutWidget">
                             <property name="name">
-                                <cstring>publicSambaChk</cstring>
+                                <cstring>layout3</cstring>
                             </property>
-                            <property name="text">
-                                <string>P&amp;ublic</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+U</string>
-                            </property>
-                            <property name="checked">
-                                <bool>true</bool>
-                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel1</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Name:</string>
+                                    </property>
+                                </widget>
+                                <widget class="KLineEdit">
+                                    <property name="name">
+                                        <cstring>sambaNameEdit</cstring>
+                                    </property>
+                                </widget>
+                            </hbox>
                         </widget>
-                        <widget class="QCheckBox">
+                        <widget class="QLayoutWidget">
                             <property name="name">
-                                <cstring>writableSambaChk</cstring>
+                                <cstring>layout5</cstring>
                             </property>
-                            <property name="text">
-                                <string>&amp;Writable</string>
-                            </property>
-                            <property name="accel">
-                                <string>Alt+W</string>
-                            </property>
-                            <property name="checked">
-                                <bool>false</bool>
-                            </property>
+                            <hbox>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>publicSambaChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>P&amp;ublic</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+U</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>writableSambaChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>&amp;Writable</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+W</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>false</bool>
+                                    </property>
+                                </widget>
+                                <spacer>
+                                    <property name="name">
+                                        <cstring>spacer4_3</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Horizontal</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </hbox>
                         </widget>
                         <widget class="QLayoutWidget">
                             <property name="name">
@@ -268,7 +368,7 @@
             <property name="sizeHint">
                 <size>
                     <width>20</width>
-                    <height>40</height>
+                    <height>1</height>
                 </size>
             </property>
         </spacer>
@@ -302,7 +402,7 @@
     <connection>
         <sender>shareChk</sender>
         <signal>toggled(bool)</signal>
-        <receiver>frame4</receiver>
+        <receiver>shareFrame</receiver>
         <slot>setEnabled(bool)</slot>
     </connection>
     <connection>
@@ -353,16 +453,29 @@
         <receiver>PropertiesPageGUI</receiver>
         <slot>moreNFSBtn_clicked()</slot>
     </connection>
+    <connection>
+        <sender>urlRq</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>urlRqTextChanged(const QString&amp;)</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">propertiespagegui.ui.h</include>
 </includes>
+<variables>
+    <variable access="private">bool m_hasChanged;</variable>
+</variables>
 <signals>
     <signal>changed()</signal>
 </signals>
 <slots>
     <slot access="private">changedSlot()</slot>
     <slot>moreNFSBtn_clicked()</slot>
+    <slot>urlRqTextChanged( const QString &amp; )</slot>
 </slots>
+<functions>
+    <function returnType="bool">hasChanged()</function>
+</functions>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

@@ -96,10 +96,17 @@ HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool h
 
   setHidden(hidden);
   setVeto(veto);
+
+  _fileItem = fi;
 }
 
 HiddenListViewItem::~HiddenListViewItem()
 {
+}
+
+KFileItem* HiddenListViewItem::getFileItem()
+{
+  return _fileItem;
 }
 
 void HiddenListViewItem::setVeto(bool b)
@@ -174,6 +181,12 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
   connect( _dir, SIGNAL(newItems(const KFileItemList &)),
            this, SLOT(insertNewFiles(const KFileItemList &)));
 
+  connect( _dir, SIGNAL(deleteItem(KFileItem*)),
+           this, SLOT(deleteItem(KFileItem*)));
+
+  connect( _dir, SIGNAL(refreshItems(const KFileItemList &)),
+           this, SLOT(refreshItems(const KFileItemList &)));
+           
   connect( _hiddenActn, SIGNAL(toggled(bool)), this, SLOT(hiddenChkClicked(bool)));
   connect( _vetoActn, SIGNAL(toggled(bool)), this, SLOT(vetoChkClicked(bool)));
 }
@@ -193,7 +206,7 @@ void HiddenFileView::initListView()
 
   connect( _dlg->hiddenListView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
   connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,QListViewItem*,const QPoint&)),
-           this, SLOT(showContextMenu(QListViewItem*,const QPoint&)));
+           this, SLOT(showContextMenu()));
 
   connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));
   connect( _dlg->hideUnreadableChk, SIGNAL(toggled(bool)), this, SLOT(hideUnreadableChkClicked(bool)));
@@ -212,14 +225,14 @@ void HiddenFileView::save()
 {
   QString s = _dlg->hiddenEdit->text().stripWhiteSpace();
   // its important that the string ends with an '/'
-  // as Samba won't recognize the last entry
+  // otherwise Samba won't recognize the last entry
   if (s != "" && s.right(1)!="/")
       s+="/";
   _share->setValue("hide files", s);
 
   s = _dlg->vetoEdit->text().stripWhiteSpace();
   // its important that the string ends with an '/'
-  // as Samba won't recognize the last entry
+  // otherwise Samba won't recognize the last entry
   if (s != "" && s.right(1)!="/")
       s+="/";
   _share->setValue("veto files", s);
@@ -245,7 +258,28 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
   }
 }
 
-void HiddenFileView::showContextMenu(QListViewItem* l,const QPoint & p)
+void HiddenFileView::deleteItem( KFileItem *fileItem )
+{
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    if (item->getFileItem() == fileItem)
+    {
+      delete item;
+      break;
+    }
+  }
+    
+}
+
+void HiddenFileView::refreshItems( const KFileItemList& items )
+{
+  updateView();  
+}
+
+
+void HiddenFileView::showContextMenu()
 {
   _popup->exec(QCursor::pos());
 }
@@ -610,11 +644,6 @@ void ShareDlgImpl::initDialog()
 
   homeChk->setChecked(_share->getName().lower() == "homes");
 
-  if (_share->getName().lower() == "global")
-  {
-    _tabs->removePage( _tabs->page(HIDDENTABINDEX) );
-  }
-
   pathUrlRq->setURL( _share->getValue("path") );
 
   shareNameEdit->setText( _share->getName() );
@@ -711,18 +740,18 @@ ShareDlgImpl::~ShareDlgImpl()
 
 void ShareDlgImpl::tabChangedSlot(QWidget* w)
 {
-
   // We are only interrested in the Hidden files tab
-  if (HIDDENTABINDEX == _tabs->indexOf(w))
+  if ( QString(w->name()) == "hiddenFilesTab" )
      loadHiddenFilesView();
 
 }
 
 void ShareDlgImpl::loadHiddenFilesView()
 {
+
   if (_fileView)
      return;
-
+     
   _fileView = new HiddenFileView( this, _share );
 
   if ( ! _share->isSpecialSection())

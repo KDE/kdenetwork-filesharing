@@ -53,6 +53,9 @@
             <property name="name">
                 <cstring>_tabs</cstring>
             </property>
+            <property name="tabPosition">
+                <enum>Top</enum>
+            </property>
             <widget class="QWidget">
                 <property name="name">
                     <cstring>baseTab</cstring>
@@ -1556,7 +1559,7 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>hiddenFilesTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>&amp;Hidden files</string>

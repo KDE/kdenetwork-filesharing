@@ -64,6 +64,8 @@ public:
   bool isHidden();
 
   virtual void paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment);
+
+  KFileItem* getFileItem();
 protected:
   KFileItem *_fileItem;
   bool _hidden;
@@ -132,11 +134,15 @@ protected:
   void updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst);
 
 protected slots:
+  // slots for KDirListener :
   void insertNewFiles(const KFileItemList &newone);
+  void deleteItem( KFileItem *_fileItem );
+  void refreshItems( const KFileItemList& items );
+  
   void selectionChanged();
   void hiddenChkClicked(bool b);
   void vetoChkClicked(bool b);
-  void showContextMenu(QListViewItem*,const QPoint&);
+  void showContextMenu();
   void updateView();
   void hideDotFilesChkClicked(bool);
   void hideUnreadableChkClicked(bool);

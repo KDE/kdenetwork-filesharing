@@ -900,6 +900,28 @@
                                         <bool>true</bool>
                                     </property>
                                 </column>
+                                <column>
+                                    <property name="text">
+                                        <string>Disabled</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <column>
+                                    <property name="text">
+                                        <string>No Password</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
                                 <property name="name">
                                     <cstring>sambaUsersListView</cstring>
                                 </property>
@@ -4790,27 +4812,6 @@ This is only available if the SSL libraries have been compiled on your system an
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>winbindEnumUsersChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Winbind enum users</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLineEdit" row="1" column="2">
-                                    <property name="name">
-                                        <cstring>winbindGidEdit</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="QLineEdit" row="2" column="2">
-                                    <property name="name">
-                                        <cstring>templateHomedirEdit</cstring>
-                                    </property>
-                                </widget>
                                 <widget class="QLabel" row="0" column="0">
                                     <property name="name">
                                         <cstring>TextLabel21</cstring>
@@ -4819,25 +4820,14 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <string>Winbind UID:</string>
                                     </property>
                                 </widget>
-                                <widget class="QLabel" row="3" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>TextLabel23</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Template shell:</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>TextLabel24</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Winbind separator:</string>
-                                    </property>
-                                </widget>
                                 <widget class="QLineEdit" row="0" column="2">
                                     <property name="name">
                                         <cstring>winbindUidEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="1" column="2">
+                                    <property name="name">
+                                        <cstring>winbindGidEdit</cstring>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="1" column="0">
@@ -4856,12 +4846,35 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <string>Template homedir:</string>
                                     </property>
                                 </widget>
-                                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
+                                <widget class="QLineEdit" row="2" column="2">
                                     <property name="name">
-                                        <cstring>winbindEnumGroupsChk</cstring>
+                                        <cstring>templateHomedirEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="3" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>TextLabel23</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Winbind enum groups</string>
+                                        <string>Template shell:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="3" column="2">
+                                    <property name="name">
+                                        <cstring>templateShellEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="4" column="2">
+                                    <property name="name">
+                                        <cstring>winbindSeparatorEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>TextLabel24</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Winbind separator:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLayoutWidget" row="5" column="2">
@@ -4916,7 +4929,39 @@ This is only available if the SSL libraries have been compiled on your system an
                                         </spacer>
                                     </hbox>
                                 </widget>
-                                <spacer row="8" column="1">
+                                <widget class="QLabel" row="5" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>TextLabel25</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Winbind cache time:</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>winbindEnumUsersChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Winbind enum users</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>winbindEnumGroupsChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Winbind enum groups</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="8" column="0" rowspan="1" colspan="3">
+                                    <property name="name">
+                                        <cstring>windbindUseDefaultDomainChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Windbind use default domain</string>
+                                    </property>
+                                </widget>
+                                <spacer row="9" column="1">
                                     <property name="name">
                                         <cstring>Spacer34</cstring>
                                     </property>
@@ -4928,29 +4973,11 @@ This is only available if the SSL libraries have been compiled on your system an
                                     </property>
                                     <property name="sizeHint">
                                         <size>
-                                            <width>0</width>
-                                            <height>117</height>
+                                            <width>20</width>
+                                            <height>140</height>
                                         </size>
                                     </property>
                                 </spacer>
-                                <widget class="QLineEdit" row="3" column="2">
-                                    <property name="name">
-                                        <cstring>templateShellEdit</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="QLineEdit" row="4" column="2">
-                                    <property name="name">
-                                        <cstring>winbindSeparatorEdit</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="5" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>TextLabel25</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Winbind cache time:</string>
-                                    </property>
-                                </widget>
                             </grid>
                         </widget>
                         <widget class="QWidget">

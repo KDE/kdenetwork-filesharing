@@ -18,11 +18,17 @@
 */
 #include <qstring.h>
 #include <qvbox.h>
+#include <qlayout.h>
+#include <qlabel.h>
 
 #include <kgenericfactory.h>
 #include <kdebug.h>
+#include <kpushbutton.h>
 #include <kfileshare.h>
 #include <kmessagebox.h>
+#include <kprocess.h>
+#include <kstandarddirs.h>
+#include <kdialog.h>
 
 #include "propertiespage.h"
 #include "propsdlgshareplugin.h"
@@ -46,19 +52,56 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
       kdDebug() << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;
       return;
   }   
-       
-  d = new Private();
-
+  
+ 
   QVBox* vbox = properties->addVBoxPage(i18n("&Share"));                            
   properties->setFileSharingPage(vbox);
   
-  d->page = new PropertiesPage(vbox, properties->items());
+  if (KFileShare::authorization() == KFileShare::UserNotAllowed) {
+  
+        QWidget* widget = new QWidget( vbox );
+        QVBoxLayout * vLayout = new QVBoxLayout( widget );
+        vLayout->setSpacing( KDialog::spacingHint() );
+        vLayout->setMargin( 0 );
+        
+        
+        if (KFileShare::sharingEnabled()) {
+          vLayout->addWidget(
+              new QLabel( i18n("You need to be authorized to share directories."), 
+                          widget ));
+        } else {
+          vLayout->addWidget(
+              new QLabel( i18n("File sharing is disabled."), widget));
+        }                    
+                    
+        KPushButton* btn = new KPushButton( i18n("Configure File Sharing..."), widget );
+        connect( btn, SIGNAL( clicked() ), SLOT( slotConfigureFileSharing() ) );
+        btn->setDefault(false);
+        QHBoxLayout* hBox = new QHBoxLayout( (QWidget *)0L );
+        hBox->addWidget( btn, 0, Qt::AlignLeft );
+        vLayout->addLayout(hBox);
+        vLayout->addStretch( 10 ); // align items on top
+        return;
+  }                    
+       
+
+  d = new Private();
+  
+  d->page = new PropertiesPage(vbox, properties->items(),false);
   connect(d->page, SIGNAL(changed()), 
           this, SIGNAL(changed()));
   
   kdDebug() << "Fileshare properties dialog plugin loaded" << endl;
   
 }                            
+
+void PropsDlgSharePlugin::slotConfigureFileSharing()
+{
+    KProcess proc;
+    proc << KStandardDirs::findExe("kdesu") << "kcmshell" << "fileshare";
+    proc.start( KProcess::DontCare );
+}
+
 
 PropsDlgSharePlugin::~PropsDlgSharePlugin()
 {

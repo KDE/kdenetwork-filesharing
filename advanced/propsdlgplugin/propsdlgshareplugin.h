@@ -29,6 +29,10 @@ public:
   PropsDlgSharePlugin( KPropertiesDialog *dlg, const char *, const QStringList & );
   virtual ~PropsDlgSharePlugin();
   virtual void applyChanges();
+
+protected slots:
+    void slotConfigureFileSharing();
+  
 private:
   class Private;
   Private *d;

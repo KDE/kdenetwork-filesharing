@@ -5,13 +5,13 @@
     copyright            : (C) 2002 by Christian Nitschkowski,
     email                : segfault_ii@web.de
 
-    copyright            : (C) 2002 by Jan Schäfer
+    copyright            : (C) 2002-2003 by Jan Schäfer
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
 /******************************************************************************
 *                                                                            *
-*  This file is part of KSambaPlugin.                                        * 
+*  This file is part of KSambaPlugin.                                        *
 *                                                                            *
 *  KSambaPlugin is free software; you can redistribute it and/or modify      *
 *  it under the terms of the GNU General Public License as published by      *
@@ -29,7 +29,7 @@
 *                                                                            *
 ******************************************************************************/
 
-#include <assert.h> 
+#include <assert.h>
 #include <unistd.h>
 
 #include <qlayout.h>
@@ -42,7 +42,7 @@
 #include <qtabwidget.h>
 #include <qtabbar.h>
 #include <qvbox.h>
-#include <qlayout.h>
+#include <qlabel.h>
 
 #include <klocale.h>
 #include <kglobal.h>
@@ -180,19 +180,19 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
   _dictMngr = 0L;
   _sambaFile = 0L;
   m_smbConfConfigWidget = 0L;
-  
-  
+
+
   QBoxLayout * l = new QHBoxLayout( this );
   l->setAutoAdd( TRUE );
-  
+
   QString smbFile = SambaFile::findSambaConf();
   if (smbFile.isNull()) {
      createSmbConfigWidget();
      return;
   }
-  
+
   slotSpecifySmbConf(smbFile);
-  
+
 };
 
 
@@ -202,7 +202,7 @@ KcmSambaConf::~KcmSambaConf() {
 
 void KcmSambaConf::createSmbConfigWidget() {
   m_smbConfConfigWidget = new SmbConfConfigWidget(this);
-  connect( m_smbConfConfigWidget, SIGNAL(smbConfChoosed(const QString &)), 
+  connect( m_smbConfConfigWidget, SIGNAL(smbConfChoosed(const QString &)),
            this, SLOT(slotSpecifySmbConf(const QString &)));
 }
 
@@ -210,10 +210,11 @@ void KcmSambaConf::slotSpecifySmbConf(const QString & smbConf) {
   if (m_smbConfConfigWidget) {
      m_smbConfConfigWidget->hide();
   }
-     
+
   init();
   initAdvancedTab();
   load(smbConf);
+
 
   if (getuid() != 0) {
     for (int i=0;i<_interface->mainTab->count();i++) {
@@ -221,7 +222,7 @@ void KcmSambaConf::slotSpecifySmbConf(const QString & smbConf) {
       w->setEnabled(false);
     }
   }
-  
+
   _interface->show();
 }
 
@@ -243,8 +244,8 @@ void KcmSambaConf::init() {
   connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
   connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
 
-  connect( _interface->domainRadio, SIGNAL(toggled(bool)), 
-          _interface->joinADomainBtn, SLOT( setEnabled(bool) ));           
+  connect( _interface->domainRadio, SIGNAL(toggled(bool)),
+          _interface->joinADomainBtn, SLOT( setEnabled(bool) ));
 
   connect(_interface->nullPasswordsChk,SIGNAL(toggled(bool)),
           this, SLOT(nullPasswordsEnabled(bool)));
@@ -254,6 +255,10 @@ void KcmSambaConf::init() {
 
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
           this, SLOT( removeSambaUserBtnClicked() ));
+
+  _interface->removeSambaUserBtn->setIconSet(SmallIcon("1rightarrow"));
+  _interface->addSambaUserBtn->setIconSet(SmallIcon("1leftarrow"));
+
 
   connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
@@ -268,7 +273,7 @@ void KcmSambaConf::init() {
 }
 
 
-void KcmSambaConf::initAdvancedTab() 
+void KcmSambaConf::initAdvancedTab()
 {
   QVBoxLayout *l = new QVBoxLayout(_interface->advancedFrame);
   l->setAutoAdd(true);
@@ -287,45 +292,47 @@ void KcmSambaConf::initAdvancedTab()
     w = _interface->advancedTab->page(i);
     label = _interface->advancedTab->label(i);
 
-    if (label.lower() == "security")
+    if (label == i18n("Security"))
       icon = SmallIcon("password");
     else
-    if (label.lower() == "logging")
+    if (label == i18n("Logging"))
       icon = SmallIcon("history");
     else
-    if (label.lower() == "tuning")
+    if (label == i18n("Tuning"))
       icon = SmallIcon("launch");
     else
-    if (label.lower() == "filenames")
+    if (label == i18n("Filenames"))
       icon = SmallIcon("folder");
     else
-    if (label.lower() == "locking")
+    if (label == i18n("Locking"))
       icon = SmallIcon("lock");
     else
-    if (label.lower() == "printing")
+    if (label == i18n("Printing"))
       icon = SmallIcon("fileprint");
     else
-    if (label.lower() == "logon")
+    if (label == i18n("Logon"))
       icon = SmallIcon("kdmconfig");
     else
-    if (label.lower() == "protocol")
+    if (label == i18n("Protocol"))
       icon = SmallIcon("core");
     else
-    if (label.lower() == "coding")
+    if (label == i18n("Charset"))
       icon = SmallIcon("charset");
     else
-    if (label.lower() == "socket")
+    if (label == i18n("Socket"))
         icon = SmallIcon("socket");
-//			 icon = SmallIcon("connect_creating");
     else
-    if (label.lower() == "ssl")
+    if (label == i18n("SSL"))
       icon = SmallIcon("encrypted");
     else
-    if (label.lower() == "browsing")
+    if (label == i18n("Browsing"))
       icon = SmallIcon("konqueror");
     else
-    if (label.lower() == "misc")
+    if (label == i18n("Misc"))
       icon = SmallIcon("misc");
+    else
+    if (label == i18n("Commands"))
+      icon = SmallIcon("konsole");
     else {
       icon = QPixmap(16,16);
       icon.fill();
@@ -343,13 +350,15 @@ void KcmSambaConf::initAdvancedTab()
 
   }
 
-  w = _interface->mainTab->page(6);
+  w = _interface->mainTab->page(5);
   _interface->mainTab->removePage(w);
   delete w;
+	_interface->advancedWarningPixLbl->setPixmap(DesktopIcon("messagebox_warning"));
+
 
 }
 
-void KcmSambaConf::editShare() 
+void KcmSambaConf::editShare()
 {
   ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->shareListView->selectedItem());
 
@@ -360,6 +369,7 @@ void KcmSambaConf::editShare()
   connect(dlg, SIGNAL(changed()), this, SLOT(configChanged()));
   dlg->exec();
   item->updateShare();
+
   disconnect(dlg, SIGNAL(changed()), this, SLOT(configChanged()));
 
   delete dlg;
@@ -409,8 +419,8 @@ void KcmSambaConf::editPrinter()
 
   PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,item->getShare());
   dlg->exec();
-
   item->updateShare();
+
   delete dlg;
 
   emit changed(true);
@@ -436,7 +446,7 @@ void KcmSambaConf::addPrinter()
   delete dlg;
 }
 
-void KcmSambaConf::removePrinter() 
+void KcmSambaConf::removePrinter()
 {
   ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->printerListView->selectedItem());
 
@@ -471,6 +481,7 @@ void KcmSambaConf::editPrinterDefaults()
   dlg->printerGrp->setEnabled(false);
   dlg->identifierGrp->setEnabled(false);
   dlg->exec();
+
   delete dlg;
 
   emit changed(true);
@@ -552,10 +563,11 @@ void KcmSambaConf::fillFields()
   loadSecurity( share );
   loadTuning( share );
   loadLogging( share );
+  loadDomain( share );
+  loadWins( share );
   loadPrinting( share );
   loadFilenames( share );
   loadLocking( share );
-  loadDomain( share );
   loadProtocol( share );
   loadSocket( share );
   loadSSL( share );
@@ -566,6 +578,7 @@ void KcmSambaConf::fillFields()
   loadVFS( share );
   loadLDAP( share );
   loadBrowsing( share );
+  loadCommands( share );
   loadMisc( share );
   loadDebug( share );
 
@@ -605,39 +618,20 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
   if ( s == "share" ) i = 0; else
   if ( s == "user" ) i = 1; else
   if ( s == "server" ) i = 2; else
-  if ( s == "domain" ) i = 3;
+  if ( s == "domain" ) i = 3; else
+  if ( s == "ads" ) i = 4;
 
-  _interface->securityLevelBtnGrp->setButton(i);  
-
-}
-
-void KcmSambaConf::loadDomain(SambaShare* share) 
-{
-  _dictMngr->add("wins proxy",_interface->winsProxyChk);
-  _dictMngr->add("dns proxy",_interface->dnsProxyChk);
-  _dictMngr->add("preferred master",_interface->preferredMasterChk);
-  _dictMngr->add("local master",_interface->localMasterChk);
-  _dictMngr->add("domain master",_interface->domainMasterChk);
-  _dictMngr->add("domain logons",_interface->domainLogonsChk);
-
-  _dictMngr->add("machine password timeout", _interface->machinePasswordTimeoutSpin);
-
-
-  _dictMngr->add("wins server", _interface->winsServerEdit);
-  _dictMngr->add("wins hook", _interface->winsHookEdit);
-
-  _interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
-  _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
-
-  _dictMngr->add("os level", _interface->osLevelSpin);
+  _interface->securityLevelBtnGrp->setButton(i);
 
 }
 
-void KcmSambaConf::loadSecurity(SambaShare* share) 
+
+void KcmSambaConf::loadSecurity(SambaShare*)
 {
 
-  int i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest",false,true),Qt::ExactMatch));
-  _interface->mapToGuestCombo->setCurrentItem(i);
+  _dictMngr->add("map to guest",_interface->mapToGuestCombo,
+                 new QStringList(QStringList() << "Never" << "Bad User" << "Bad Password" ));
+
 
   _dictMngr->add("password server", _interface->passwordServerEdit);
   _dictMngr->add("passwd chat", _interface->passwdChatEdit);
@@ -656,13 +650,15 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
   _dictMngr->add("passwd chat debug",_interface->passwdChatDebugChk);
   _dictMngr->add("unix password sync",_interface->unixPasswordSyncChk);
   _dictMngr->add("use rhosts",_interface->useRhostsChk);
-  _dictMngr->add("lanman auth",_interface->lanmanAuthChk);
+  _dictMngr->add("hide local users",_interface->hideLocalUsersChk);
+
+
   _dictMngr->add("allow trusted domains",_interface->allowTrustedDomainsChk);
   _dictMngr->add("obey pam restrictions",_interface->obeyPamRestrictionsChk);
   _dictMngr->add("pam password change",_interface->pamPasswordChangeChk);
   _dictMngr->add("restrict anonymous",_interface->restrictAnonymousChk);
-  _dictMngr->add("alternate permissions",_interface->alternatePermissionsChk);
   _dictMngr->add("null passwords",_interface->nullPasswordsChk);
+  _dictMngr->add("paranoid server security",_interface->paranoidServerSecurityChk);
 
   _dictMngr->add("smb passwd file",_interface->smbPasswdFileUrlRq);
   _dictMngr->add("passwd program",_interface->passwdProgramUrlRq);
@@ -670,6 +666,29 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
   _dictMngr->add("hosts equiv",_interface->hostsEquivUrlRq);
   _dictMngr->add("private dir",_interface->privateDirUrlRq);
 
+  // Authentification
+  
+  _dictMngr->add("lanman auth",_interface->lanmanAuthChk);
+  _dictMngr->add("ntlm auth",_interface->ntlmAuthChk);
+  _dictMngr->add("use spnego",_interface->useSpnegoChk);
+  _dictMngr->add("server schannel",_interface->serverSchannelCombo,
+                 new QStringList(QStringList() << "Yes" << "No" << "Auto" )); 
+  _dictMngr->add("server signing",_interface->serverSigningCombo,
+                 new QStringList(QStringList() << "Auto" << "Mandatory" << "Disabled" )); 
+  
+  _dictMngr->add("client lanman auth",_interface->clientLanmanAuthChk);
+  _dictMngr->add("client plaintext auth",_interface->clientPlaintextAuthChk);
+  _dictMngr->add("client ntlmv2 auth",_interface->clientNTLMv2AuthChk);
+  _dictMngr->add("client use spnego",_interface->clientUseSpnegoChk);
+  _dictMngr->add("client schannel",_interface->clientSchannelCombo,
+                 new QStringList(QStringList() << "Yes" << "No" << "Auto" )); 
+  _dictMngr->add("client signing",_interface->clientSigningCombo,
+                 new QStringList(QStringList() << "Auto" << "Mandatory" << "Disabled" )); 
+
+                   
+  
+  
+  
 }
 
 void KcmSambaConf::loadLogging(SambaShare* ) 
@@ -678,7 +697,7 @@ void KcmSambaConf::loadLogging(SambaShare* )
 
   _dictMngr->add("max log size", _interface->maxLogSizeSpin);
   _dictMngr->add("syslog", _interface->syslogSpin);
-  _dictMngr->add("log level", _interface->logLevelSpin);
+  _dictMngr->add("log level", _interface->logLevelEdit);
 
   _dictMngr->add("status",_interface->statusChk);
   _dictMngr->add("debug uid",_interface->debugUidChk);
@@ -691,7 +710,7 @@ void KcmSambaConf::loadLogging(SambaShare* )
 
 }
 
-void KcmSambaConf::loadTuning(SambaShare* ) 
+void KcmSambaConf::loadTuning(SambaShare* )
 {
   _dictMngr->add("change notify timeout", _interface->changeNotifyTimeoutSpin);
   _dictMngr->add("deadtime", _interface->deadtimeSpin);
@@ -701,10 +720,11 @@ void KcmSambaConf::loadTuning(SambaShare* )
   _dictMngr->add("read size", _interface->readSizeSpin);
   _dictMngr->add("max disk size", _interface->maxDiskSizeSpin);
   _dictMngr->add("stat cache size", _interface->statCacheSizeSpin);
+  _dictMngr->add("max smbd processes", _interface->maxSmbdProcessesSpin);
+  _dictMngr->add("name cache timeout", _interface->nameCacheTimeoutSpin);
 
   _dictMngr->add("getwd cache",_interface->getwdCacheChk);
   _dictMngr->add("use mmap",_interface->useMmapChk);
-  _dictMngr->add("paranoid server security",_interface->paranoidServerSecurityChk);
   _dictMngr->add("hostname lookups",_interface->hostnameLookupsChk);
   _dictMngr->add("kernel change notify",_interface->kernelChangeNotifyChk);
 
@@ -713,15 +733,40 @@ void KcmSambaConf::loadTuning(SambaShare* )
 void KcmSambaConf::loadLocking(SambaShare* ) 
 {
   _dictMngr->add("kernel oplocks",_interface->kernelOplocksChk);
-  _dictMngr->add("oplock break wait time",_interface->oplockBreakWaitTimeSpin);
   _dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
+  _dictMngr->add("pid directory",_interface->pidDirectoryUrlRq);
+  _dictMngr->add("oplock break wait time",_interface->oplockBreakWaitTimeSpin);
   _dictMngr->add("lock spin time",_interface->lockSpinTimeSpin);
   _dictMngr->add("lock spin count",_interface->lockSpinCountSpin);
+  
 
 }
 
+void KcmSambaConf::loadDomain(SambaShare*)
+{
+  _dictMngr->add("preferred master",_interface->preferredMasterChk);
+  _dictMngr->add("local master",_interface->localMasterChk);
+  _dictMngr->add("domain master",_interface->domainMasterChk);
+  _dictMngr->add("domain logons",_interface->domainLogonsChk);
+  _dictMngr->add("machine password timeout", _interface->machinePasswordTimeoutSpin);
+  _dictMngr->add("os level", _interface->osLevelSpin);
+  _dictMngr->add("domain admin group", _interface->domainAdminGroupEdit);
+  _dictMngr->add("domain guest group", _interface->domainGuestGroupEdit);
 
-void KcmSambaConf::loadPrinting(SambaShare* ) 
+}
+
+void KcmSambaConf::loadWins(SambaShare* share)
+{
+  _dictMngr->add("wins proxy",_interface->winsProxyChk);
+  _dictMngr->add("dns proxy",_interface->dnsProxyChk);
+  _dictMngr->add("wins server", _interface->winsServerEdit);
+  _dictMngr->add("wins hook", _interface->winsHookEdit);
+  _interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
+  _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
+}
+
+
+void KcmSambaConf::loadPrinting(SambaShare* )
 {
   _dictMngr->add("load printers",_interface->loadPrintersChk);
   _dictMngr->add("disable spoolss",_interface->disableSpoolssChk);
@@ -733,6 +778,7 @@ void KcmSambaConf::loadPrinting(SambaShare* )
 
   _dictMngr->add("printcap name",_interface->printcapNameUrlRq);
   _dictMngr->add("os2 driver map",_interface->os2DriverMapUrlRq);
+  _dictMngr->add("printer driver file",_interface->printerDriverFileUrlRq);
 
   _dictMngr->add("total print jobs", _interface->totalPrintJobsSpin);
 }
@@ -742,14 +788,13 @@ void KcmSambaConf::loadFilenames(SambaShare* )
   _dictMngr->add("strip dot",_interface->stripDotChk);
   _dictMngr->add("stat cache",_interface->statCacheChk);
 
-  _dictMngr->add("character set", _interface->characterSetEdit);
 
   _dictMngr->add("mangled stack", _interface->mangledStackSpin);
   _dictMngr->add("mangle prefix", _interface->manglePrefixSpin);
 
 }
 
-void KcmSambaConf::loadProtocol(SambaShare* share) 
+void KcmSambaConf::loadProtocol(SambaShare*)
 {
   // Protocol
 
@@ -757,14 +802,13 @@ void KcmSambaConf::loadProtocol(SambaShare* share)
   _dictMngr->add("read raw",_interface->readRawChk);
   _dictMngr->add("read bmpx",_interface->readBmpxChk);
   _dictMngr->add("large readwrite",_interface->largeReadWriteChk);
-  _dictMngr->add("nt acl support",_interface->ntAclSupportChk);
   _dictMngr->add("nt smb support",_interface->ntSmbSupportChk);
   _dictMngr->add("nt pipe support",_interface->ntPipeSupportChk);
   _dictMngr->add("time server",_interface->timeServerChk);
+  _dictMngr->add("unix extensions",_interface->unixExtensionsChk);
 
   _dictMngr->add("max mux", _interface->maxMuxSpin);
   _dictMngr->add("max xmit", _interface->maxXmitSpin);
-  _dictMngr->add("max packet", _interface->maxPacketSpin);
   _dictMngr->add("max ttl", _interface->maxTtlSpin);
   _dictMngr->add("max wins ttl", _interface->maxWinsTtlSpin);
   _dictMngr->add("min wins ttl", _interface->minWinsTtlSpin);
@@ -773,10 +817,17 @@ void KcmSambaConf::loadProtocol(SambaShare* share)
   _dictMngr->add("name resolve order", _interface->nameResolveOrderEdit);
   _dictMngr->add("smb ports", _interface->smbPortsEdit);
 
-  setComboIndexToValue(_interface->announceAsCombo,"announce as",share);
-  setComboIndexToValue(_interface->protocolCombo,"protocol",share);
-  setComboIndexToValue(_interface->maxProtocolCombo,"max protocol",share);
-  setComboIndexToValue(_interface->minProtocolCombo,"min protocol",share);
+  _dictMngr->add("announce as", _interface->announceAsCombo,
+                 new QStringList(QStringList() << "NT" << "NT workstation" << "win95" << "WfW")); 
+                  
+  _dictMngr->add("protocol", _interface->protocolCombo,
+                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus" )); 
+
+  _dictMngr->add("max protocol", _interface->maxProtocolCombo,
+                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus")); 
+
+  _dictMngr->add("min protocol", _interface->minProtocolCombo,
+                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus")); 
 
 }
 
@@ -811,13 +862,13 @@ void KcmSambaConf::loadSocket(SambaShare* share)
 
 }
 
-void KcmSambaConf::loadSSL(SambaShare* share) 
+void KcmSambaConf::loadSSL(SambaShare*) 
 {
   // SSL
 
-  int i = _interface->sslVersionCombo->listBox()->index(_interface->sslVersionCombo->listBox()->findItem(share->getValue("ssl version",false,true),Qt::ExactMatch));
-  _interface->sslVersionCombo->setCurrentItem(i);
-
+  _dictMngr->add("ssl version",_interface->sslVersionCombo,
+                 new QStringList(QStringList() << "ssl2" << "ssl3" << "ssl2or3" << "tls1" ));
+  
   _dictMngr->add("ssl",_interface->sslChk);
   _dictMngr->add("ssl require server cert",_interface->sslRequireServercertChk);
   _dictMngr->add("ssl compatibility",_interface->sslCompatibilityChk);
@@ -862,7 +913,7 @@ void KcmSambaConf::loadLogon(SambaShare* )
 }
 
 
-void KcmSambaConf::loadCharset(SambaShare* ) 
+void KcmSambaConf::loadCharset(SambaShare* )
 {
   _dictMngr->add("coding system", _interface->codingSystemEdit);
   _dictMngr->add("client code page", _interface->clientCodePageEdit);
@@ -870,28 +921,35 @@ void KcmSambaConf::loadCharset(SambaShare* )
   _dictMngr->add("display charset", _interface->displayCharsetEdit);
   _dictMngr->add("unix charset", _interface->unixCharsetEdit);
   _dictMngr->add("dos charset", _interface->dosCharsetEdit);
+  _dictMngr->add("character set", _interface->characterSetEdit);
+  _dictMngr->add("valid chars", _interface->validCharsEdit);
   
   _dictMngr->add("unicode",_interface->unicodeChk);
 }
 
-void KcmSambaConf::loadWinbind(SambaShare* ) 
+void KcmSambaConf::loadWinbind(SambaShare* )
 {
   _dictMngr->add("winbind uid", _interface->winbindUidEdit);
   _dictMngr->add("winbind gid", _interface->winbindGidEdit);
   _dictMngr->add("template homedir", _interface->templateHomedirEdit);
   _dictMngr->add("template shell", _interface->templateShellEdit);
   _dictMngr->add("winbind separator", _interface->winbindSeparatorEdit);
+  _dictMngr->add("template primary group", _interface->templatePrimaryGroupEdit);
 
   _dictMngr->add("winbind cache time", _interface->winbindCacheTimeSpin);
+  _dictMngr->add("acl compatibility",_interface->aclCompatibilityCombo,
+                 new QStringList(QStringList() << "winnt" << "win2k" << ""));
 
   _dictMngr->add("winbind enum users",_interface->winbindEnumUsersChk);
   _dictMngr->add("winbind enum groups",_interface->winbindEnumGroupsChk);
-  _dictMngr->add("windbind use default domain",_interface->windbindUseDefaultDomainChk);
+  _dictMngr->add("winbind use default domain",_interface->winbindUseDefaultDomainChk);
+  _dictMngr->add("winbind trusted domains only",_interface->winbindTrustedDomainsOnlyChk);
+  _dictMngr->add("winbind enable local accounts",_interface->winbindEnableLocalAccountsChk);
 
 
 }
 
-void KcmSambaConf::loadNetbios(SambaShare* ) 
+void KcmSambaConf::loadNetbios(SambaShare* )
 {
   _dictMngr->add("disable netbios",_interface->disableNetbiosChk);
   
@@ -914,17 +972,41 @@ void KcmSambaConf::loadLDAP(SambaShare*)
   _dictMngr->add("ldap idmap suffix", _interface->ldapIdmapSuffixEdit);
   _dictMngr->add("ldap filter", _interface->ldapFilterEdit);
   _dictMngr->add("ldap admin dn", _interface->ldapAdminDnEdit);
+  _dictMngr->add("idmap backend", _interface->idmapBackendEdit);
+  
   _dictMngr->add("ldap delete dn",_interface->ldapDeleteDnChk);
+  
+  _dictMngr->add("ldap ssl", _interface->ldapSslCombo,
+                 new QStringList(QStringList() << "No" << "Start_tls" << "Yes"));
+  
+  _dictMngr->add("ldap sync", _interface->ldapSyncCombo,
+                 new QStringList(QStringList() << "Yes" << "No" << "Only"));
 
+                 
 }
 
-void KcmSambaConf::loadBrowsing(SambaShare* share) 
+void KcmSambaConf::loadBrowsing(SambaShare*) 
 {
   _dictMngr->add("enhanced browsing",_interface->enhancedBrowsingChk);
   _dictMngr->add("browse list",_interface->browseListChk);
   _dictMngr->add("lm interval", _interface->lmIntervalSpin);
+  _dictMngr->add("remote browse sync", _interface->remoteBrowseSyncEdit);
+  _dictMngr->add("preload", _interface->preloadEdit);
+  
+  _dictMngr->add("lm announce", _interface->lmAnnounceCombo,
+                 new QStringList(QStringList() << "Yes" << "No" << "Auto"));
+}
 
-  setComboFromAutoValue(_interface->lmAnnounceCombo,"lm announce",share);
+void KcmSambaConf::loadCommands(SambaShare*) 
+{
+  _dictMngr->add("add share command", _interface->addShareCommandEdit);
+  _dictMngr->add("change share command", _interface->changeShareCommandEdit);
+  _dictMngr->add("delete share command", _interface->deleteShareCommandEdit);
+  _dictMngr->add("message command", _interface->messageCommandEdit);
+  _dictMngr->add("dfree command", _interface->dfreeCommandEdit);
+  _dictMngr->add("set quota command", _interface->setQuotaCommandEdit);
+  _dictMngr->add("get quota command", _interface->getQuotaCommandEdit);
+  _dictMngr->add("panic action", _interface->panicActionEdit);
 
 }
 
@@ -935,51 +1017,18 @@ void KcmSambaConf::setComboIndexToValue(QComboBox* box, const QString & value, S
 }
 
 
-/**
-* Sets a combo box with the three entries yes, no, auto in that order
-* to the corresponding index.
-*/
-void KcmSambaConf::setComboFromAutoValue(QComboBox* box, const QString & key, SambaShare* share) 
+void KcmSambaConf::loadMisc(SambaShare*)
 {
-  QString value = share->getValue(key,false,true);
-  value = value.lower();
-  int i=2;
-
-  if (value == "yes" ||
-      value == "true" ||
-      value == "1")
-      i = 0;
-  else
-  if (value == "no" ||
-      value == "false" ||
-      value == "0")
-      i = 1;
-
-  box->setCurrentItem(i);
-}
-
-
-void KcmSambaConf::loadMisc(SambaShare*) 
-{
-  _dictMngr->add("add share command", _interface->addShareCommandEdit);
-  _dictMngr->add("change share command", _interface->changeShareCommandEdit);
-  _dictMngr->add("delete share command", _interface->deleteShareCommandEdit);
-  _dictMngr->add("panic action", _interface->panicActionEdit);
-  _dictMngr->add("preload", _interface->preloadEdit);
   _dictMngr->add("preload modules", _interface->preloadModulesEdit);
   _dictMngr->add("default service", _interface->defaultServiceEdit);
-  _dictMngr->add("message command", _interface->messageCommandEdit);
-  _dictMngr->add("dfree command", _interface->dfreeCommandEdit);
-  _dictMngr->add("valid chars", _interface->validCharsEdit);
   _dictMngr->add("remote announce", _interface->remoteAnnounceEdit);
-  _dictMngr->add("remote browse sync", _interface->remoteBrowseSyncEdit);
   _dictMngr->add("homedir map", _interface->homedirMapEdit);
   _dictMngr->add("source environment", _interface->sourceEnvironmentEdit);
 
-  _dictMngr->add("pid directory",_interface->pidDirectoryUrlRq);
   _dictMngr->add("utmp directory",_interface->utmpDirectoryUrlRq);
   _dictMngr->add("wtmp directory",_interface->wtmpDirectoryUrlRq);
 
+  _dictMngr->add("NIS homedir", _interface->nisHomedirChk);
   _dictMngr->add("time offset", _interface->timeOffsetSpin);
 }
 
@@ -1067,7 +1116,7 @@ void KcmSambaConf::slotMouseButtonPressed(int,QListViewItem* item,const QPoint &
     return;
 
   SambaShare* share = _sambaFile->getShare("global");
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );    
+  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
   QMultiCheckListItem* i = static_cast<QMultiCheckListItem*>(item);
   SambaUser user( item->text(0), item->text(1).toInt() );
   user.isDisabled = i->isOn(COL_DISABLED);
@@ -1187,7 +1236,7 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
     SambaUser user( item->text(0), item->text(1).toInt() );
     
     QCString password;
-    int passResult = KPasswordDialog::getNewPassword(password, 
+    int passResult = KPasswordDialog::getNewPassword(password,
                         i18n("Please enter a password for the user "+user.name));
     if (passResult != KPasswordDialog::Accepted)
        return;
@@ -1228,6 +1277,7 @@ void KcmSambaConf::save() {
     case 1 : s = "user";break;
     case 2 : s = "server";break;
     case 3 : s = "domain";break;
+    case 4 : s = "ads";break;
   }
 
   share->setValue("security",s);
@@ -1248,13 +1298,6 @@ void KcmSambaConf::save() {
   s = socketOptions();
   share->setValue("socket options",s,false,true);
 
-  switch( _interface->lmAnnounceCombo->currentItem() ) {
-    case 0 : s = "Yes";break;
-    case 1 : s = "No";break;
-    case 2 : s = "Auto";break;
-  }
-
-  share->setValue("lm announce",s,false,true);
 
   _dictMngr->save( share,false,true );
 

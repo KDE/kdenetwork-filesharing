@@ -197,6 +197,9 @@ HiddenFileView::~HiddenFileView()
 
 void HiddenFileView::load()
 {
+  if (_dlg->hiddenListView)
+    _dlg->hiddenListView->clear();
+    
   _dir->openURL( _dlg->pathUrlRq->url() );
 }
 

@@ -51,6 +51,10 @@ public:
   QString name;
   int uid;
   int gid;
+  bool isUserAccount;
+  bool hasNoPassword;
+  bool isDisabled;
+  bool isWorkstationTrustAccount;
 };
 
 /**
@@ -83,6 +87,11 @@ public:
   SambaUserList getSambaUserList();
 
   /**
+   * Calls smbpasswd with the given arguments
+   **/
+  bool executeSmbpasswd(const QStringList & args);
+  
+  /**
    * Tries to add the passed user to the smbpasswd file
    * returns true if successful otherwise false
    **/
@@ -99,6 +108,14 @@ public:
    * if it fails returns false otherwise true
    **/
   bool changePassword(const SambaUser &);
+  
+  bool enableUser(const SambaUser &);
+  
+  bool disableUser(const SambaUser &);
+  
+  bool setNoPassword(const SambaUser &);
+  
+  bool setMachineTrustAccount(const SambaUser &);
 
   /**
    * Returns the Url of the smbpasswd file

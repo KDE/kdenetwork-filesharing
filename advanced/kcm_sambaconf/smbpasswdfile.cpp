@@ -91,6 +91,10 @@ SambaUserList SmbPasswdFile::getSambaUserList()
 
       SambaUser* user = new SambaUser(l[0],l[1].toInt());
       user->gid = getUserGID(l[0]);
+      user->isUserAccount = l[4].contains('U');
+      user->hasNoPassword = l[4].contains('N');;
+      user->isDisabled = l[4].contains('D');;
+      user->isWorkstationTrustAccount = l[4].contains('W');;
       list.append(user);
     }
     f.close();
@@ -99,6 +103,25 @@ SambaUserList SmbPasswdFile::getSambaUserList()
   return list;
 }
 
+bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
+  KProcess p;
+  p << "smbpasswd" << args;
+
+  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
+           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
+
+  _smbpasswdOutput = "";
+    
+  bool result = p.start(KProcess::Block,KProcess::Stdout);
+
+  if (result)
+  {
+    kdDebug() << _smbpasswdOutput << endl;
+  }
+
+  return result;
+}
+  
 /**
  * Tries to add the passed user to the smbpasswd file
  * returns true if successful otherwise false
@@ -136,22 +159,9 @@ bool SmbPasswdFile::addUser(const SambaUser & user)
  **/
 bool SmbPasswdFile::removeUser(const SambaUser & user)
 {
-  KProcess p;
-  p << "smbpasswd" << "-x" << user.name;
-
-  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
-           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
-
-  _smbpasswdOutput = "";
-
-  bool result = p.start(KProcess::Block,KProcess::Stdout);
-
-  if (result)
-  {
-    kdDebug() << _smbpasswdOutput << endl;
-  }
-
-  return result;
+  QStringList l;
+  l << "-x" << user.name; 
+  return executeSmbpasswd(l);
 }
 
 bool SmbPasswdFile::changePassword(const SambaUser & user)
@@ -176,5 +186,30 @@ void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *proc, char *buffer, int bu
 KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile *file)
 {
 }
+
+bool SmbPasswdFile::enableUser(const SambaUser & user) {
+  QStringList l;
+  l << "-e" << user.name; 
+  return executeSmbpasswd(l);
+}
+  
+bool SmbPasswdFile::disableUser(const SambaUser & user) {
+  QStringList l;
+  l << "-d" << user.name; 
+  return executeSmbpasswd(l);
+}
+  
+bool SmbPasswdFile::setNoPassword(const SambaUser & user) {
+  QStringList l;
+  l << "-n" << user.name; 
+  return executeSmbpasswd(l);
+}
+  
+bool SmbPasswdFile::setMachineTrustAccount(const SambaUser & user) {
+  QStringList l;
+  l << "-m" << user.name; 
+  return executeSmbpasswd(l);
+}
+
 
 #include "smbpasswdfile.moc"

@@ -44,7 +44,7 @@ class NFSFile;
 class NFSDialogImpl : public NFSDialog
 {
 Q_OBJECT
-public: 
+public:
 	NFSDialogImpl(QWidget * parent, NFSEntry* entry, bool showPath=false);
 	NFSDialogImpl(QWidget * parent, NFSFile* file, const QString & path,bool showPath=false);
 	~NFSDialogImpl();
@@ -64,11 +64,11 @@ protected slots:
   void slotAddHost();
   void slotRemoveHost();
   void slotModifyHost();
-  void virtual specifyPathSlot();
-  void virtual setModified();
-  void virtual shareStateChanged( int state );
+  virtual void specifyPathSlot();
+  virtual void setModified();
+  virtual void shareStateChanged( int state );
 signals:
-	void modified();
+  void modified();
 };
 
 #endif

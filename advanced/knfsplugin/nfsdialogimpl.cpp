@@ -45,7 +45,7 @@
 #include "nfshostdlg.h"
 #include "nfsfile.h"
 
-NFSDialogImpl::NFSDialogImpl(QWidget * parent, NFSEntry* entry, bool showPath=false)
+NFSDialogImpl::NFSDialogImpl(QWidget * parent, NFSEntry* entry, bool showPath)
  : NFSDialog(parent)
 {
 	_showPath = showPath;
@@ -59,9 +59,9 @@ NFSDialogImpl::NFSDialogImpl(QWidget * parent, NFSEntry* entry, bool showPath=fa
 
 NFSDialogImpl::NFSDialogImpl(
 	QWidget * parent,
-	NFSFile* file, 
-  const QString & _path, 
-  bool showPath=false)
+	NFSFile* file,
+        const QString & _path,
+        bool showPath)
 {
 	_showPath = showPath;
   nfsFile = file;
@@ -103,7 +103,7 @@ void NFSDialogImpl::init(NFSEntry * entry)
   {
 
     pathEdit->setText(nfsEntry->getPath());
-    
+
     HostIterator it = nfsEntry->getHosts();
 
     NFSHost* host;
@@ -236,7 +236,7 @@ void NFSDialogImpl::specifyPathSlot()
 {
 	QString newPath = KFileDialog::getExistingDirectory("/",
         		this,i18n("Choose a directory to share"));
-      
+
 	NFSEntry* entry = nfsFile->getEntryByPath(newPath);
 
 	if (entry && entry != nfsEntry)

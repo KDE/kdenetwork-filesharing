@@ -41,8 +41,9 @@
 
 
 #include "nfsfile.h"
+#include <ktempfile.h>
 
-NFSFile::NFSFile(const KURL & url, bool readonly = true)
+NFSFile::NFSFile(const KURL & url, bool readonly)
 {
 //  _entries.setAutoDelete(true);
   _url = url;
@@ -153,109 +154,90 @@ void NFSFile::load()
 
 }
 
-QString NFSFile::getTempFileName()
-{
-  QString username("???");
-  struct passwd *user = getpwuid( getuid() );
-  if ( user )
-       username=user->pw_name;
-  return QString("/tmp/knfsplugin-%1-%2-%3").arg(username).arg(getpid()).arg(time(0));
-}
-
-
 void NFSFile::save()
 {
+  KTempFile tempFile;
 
-  QString tempFileName = getTempFileName();
-
-  QFile tempF(tempFileName);
   QFile f(_url.path());
 
   // I use two files to preserve the user comments
 
   if ( f.open(IO_ReadOnly) )
   {
-    if (tempF.open(IO_ReadWrite) )
+    QTextStream t( &f );
+
+    QString s;
+    QString ts;
+    QString origLine;
+
+    EntryList list(_entries);
+
+    while ( !t.eof() )
     {
-      QTextStream t( &f );
-      QTextStream ttmp( &tempF );
 
-      QString s;
-      QString ts;
-      QString origLine;
-
-      EntryList list(_entries);
-
-      while ( !t.eof() )
+      QString s= "";
+      do
       {
+        origLine = t.readLine();
+        ts = origLine.stripWhiteSpace();
 
-        QString s= "";
-        do
+        // preserve comments
+        if (ts.startsWith("#"))
         {
-          origLine = t.readLine();
-          ts = origLine.stripWhiteSpace();
-
-          // preserve comments
-          if (ts.startsWith("#"))
-          {
-            ttmp << origLine << endl;
-            continue;
-          }
-
-          s+=ts;
-          if (s.endsWith("\\"))
-             s=s.left(s.length()-1);
+          (*tempFile.textStream()) << origLine << endl;
+          continue;
         }
-        while (ts.endsWith("\\"));  // If line ends with \ append the next line
 
-        if (s.stripWhiteSpace() == "")
-           continue;
-
-        QString path = s.left( s.find(" ",0)); // Get the path
-
-        NFSEntry* entry = getEntryByPath(path);
-
-        if (entry)
-        {
-          list.remove(entry);
-          ttmp << entry->toString() << endl;;
-        }
+        s+=ts;
+        if (s.endsWith("\\"))
+          s=s.left(s.length()-1);
       }
+      while (ts.endsWith("\\"));  // If line ends with \ append the next line
 
-      NFSEntry *entry;
-      for ( entry = list.first(); entry; entry = list.next() )
-          ttmp << entry->toString() << endl;
+      if (s.stripWhiteSpace() == "")
+        continue;
 
-      tempF.close();
-    } //~ tempF.open
+      QString path = s.left( s.find(" ",0)); // Get the path
+
+      NFSEntry* entry = getEntryByPath(path);
+
+      if (entry)
+      {
+        list.remove(entry);
+        (*tempFile.textStream()) << entry->toString() << endl;;
+      }
+    }
+
+    NFSEntry *entry;
+    for ( entry = list.first(); entry; entry = list.next() )
+      (*tempFile.textStream()) << entry->toString() << endl;
 
     f.close();
-  } //~ f.open
 
+    tempFile.close();
 
-
-  if (QFileInfo(_url.path()).exists() && QFileInfo(tempFileName).exists())
-  {
-
-    QString command=QString("cp %1 %2; chmod 644 %3").arg(tempFileName).arg(_url.path()).arg(_url.path());
+    QString command = "cp ";
+    command += KProcess::quote( tempFile.name() );
+    command += " ";
+    command += KProcess::quote( _url.path() );
+    command += "; chmod 644 ";
+    command += KProcess::quote( _url.path() );
 
     if (restartNFSServer)
-       command +=";exportfs -ra";
+      command +=";exportfs -ra";
 
     KProcess *proc = new KProcess();
 
     if (!QFileInfo(_url.path()).isWritable() )
-       *proc<<"kdesu"<<"-c"<<command;
+      *proc<<"kdesu"<<"-c"<<command;
 
     if (!proc->start(KProcess::Block))
       KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(_url.path()));
 
-    delete(proc);
+    delete proc;
   }
 
-  unlink(tempFileName);
-
-
+  tempFile.setAutoDelete( true );
 }
 
 QString NFSFile::guessPath()

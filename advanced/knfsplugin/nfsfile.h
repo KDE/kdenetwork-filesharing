@@ -41,7 +41,7 @@ typedef QPtrList<NFSEntry> EntryList;
 typedef QPtrListIterator<NFSEntry> EntryIterator;
 
 class NFSFile {
-public: 
+public:
 	NFSFile(const KURL & , bool = true);
 	~NFSFile();
 
@@ -66,8 +66,6 @@ protected:
   KURL _url;
   bool _readonly;
   EntryList _entries;
-
-  QString getTempFileName();
 };
 
 #endif

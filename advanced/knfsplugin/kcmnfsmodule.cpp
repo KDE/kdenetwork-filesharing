@@ -153,9 +153,8 @@ QString KCmNfsModule::quickHelp() const
 
 const KAboutData* KCmNfsModule::aboutData() const
 {
-	KAboutData * about = new KAboutData("kcmnfs",i18n("KNFSPlugin"),"0.1a");
-  
-  return about;
+	KAboutData * about = new KAboutData("kcmnfs",I18N_NOOP("KNFSPlugin"),"0.1a");
+	return about;
 }
 
 

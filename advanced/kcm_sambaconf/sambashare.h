@@ -31,6 +31,7 @@
 
 #include <qdict.h>
 #include <qstring.h>
+#include <qstringlist.h>
 #include <qptrlist.h>
 
 class SambaConfigFile;

@@ -72,7 +72,9 @@ protected:
   QString smbconf;
   QString sharePath;
   SambaShare* _share;
-  void initValues(const QString & share, SambaFile & sambaFile);
+  SambaFile* _sambaFile;
+
+  void initValues();
   void init();
   
   KonqInterface* createShareWidget(QWidget* parent);

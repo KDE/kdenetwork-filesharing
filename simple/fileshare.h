@@ -23,6 +23,7 @@
 class QRadioButton;
 class QLabel;
 class QBoxLayout;
+class ControlCenterGUI;
 class KFileShareConfig  : public KCModule
 {
   Q_OBJECT
@@ -35,14 +36,13 @@ class KFileShareConfig  : public KCModule
   void defaults();
   QString quickHelp() const;
 
+ protected:  
+   ControlCenterGUI* m_ccgui;
+ 
  protected slots:
   void configChanged() { emit changed( true ); };
-
- protected:
-    QRadioButton *noSharing;
-    QRadioButton *sharing;
-    
-    void createShareListView(QBoxLayout* layout);    
+  void updateShareListView(); 
+  
 };
 
 #endif

@@ -15,62 +15,88 @@
   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 #include <unistd.h>
-#include <kdebug.h>
+
 #include <qlayout.h>
 #include <qvbuttongroup.h>
 #include <qvgroupbox.h> 
 #include <qlabel.h>
+#include <qdir.h>
+#include <qradiobutton.h>
+#include <qcheckbox.h>
+#include <qtooltip.h>
+
+#include <kdebug.h>
 #include <kdialog.h>
 #include <kgenericfactory.h>
-#include <qradiobutton.h>
 #include <klistview.h>
 #include <kiconloader.h>
-
-#include "fileshare.h"
 #include <knfsshare.h>
 #include <ksambashare.h>
-
-#include <qdir.h>
 #include <kstandarddirs.h>
+#include <ksimpleconfig.h>
+#include <kmessagebox.h>
+#include <kapp.h>
+
+#include "controlcenter.h"
+#include "fileshare.h"
 
 typedef KGenericFactory<KFileShareConfig, QWidget > ShareFactory;
 K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 
 
+#define FILESHARECONF "/etc/security/fileshare.conf"
+
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
     KCModule(ShareFactory::instance(), parent, name)
 {
-  QBoxLayout* layout = new QVBoxLayout(this,
-				       KDialog::marginHint(),
+  QBoxLayout* layout = new QVBoxLayout(this,0,
 				       KDialog::spacingHint());
+
+/*  
   QVButtonGroup *box = new QVButtonGroup( i18n("File Sharing"), this );
   box->layout()->setSpacing( KDialog::spacingHint() );
-  connect( box, SIGNAL( clicked( int )), this, SLOT(configChanged()));
   layout->addWidget(box);
   noSharing=new QRadioButton( i18n("Do &not allow users to share files"), box );
   sharing=new QRadioButton( i18n("&Allow users to share files from their HOME folder"),  box);
+*/
+   m_ccgui = new ControlCenterGUI(this);
+   connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
+   
 
    QString path = QString::fromLatin1("/usr/sbin");
-   QString smbExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
+   QString sambaExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
    QString nfsExec = KStandardDirs::findExe( QString::fromLatin1("rpc.nfsd"), path );
 
-  if ( nfsExec.isEmpty() && smbExec.isEmpty())
+   
+  if ( nfsExec.isEmpty() && sambaExec.isEmpty())
   {
-      QLabel* info = new QLabel( this );
-      layout->addWidget(info);
-      info->setText(i18n("SMB and NFS servers are not installed on this machine, to enable this module the servers must be installed."));
-      info->show();
-      noSharing->setEnabled( false );
-      sharing->setEnabled( false );
+      m_ccgui->setEnabled( false );
   }
   else
-  {  
-      createShareListView(layout);
+  {   
+      if (nfsExec.isEmpty()) {
+        m_ccgui->nfsChk->setDisabled(true);
+        m_ccgui->nfsChk->setChecked(false);
+        QToolTip::add(m_ccgui->nfsChk,i18n("No NFS server installed on this system"));
+      } 
       
-      if(getuid() == 0)
-          load();
-  }
+      if (sambaExec.isEmpty()) {
+        m_ccgui->sambaChk->setDisabled(true);
+        m_ccgui->sambaChk->setChecked(false);
+        QToolTip::add(m_ccgui->sambaChk,i18n("No Samba server installed on this system"));
+      }
+          
+      m_ccgui->infoLbl->hide();      
+      layout->addWidget(m_ccgui);
+      updateShareListView();
+      connect( KNFSShare::instance(), SIGNAL( changed()), 
+               this, SLOT(updateShareListView()));
+      connect( KSambaShare::instance(), SIGNAL( changed()), 
+               this, SLOT(updateShareListView()));
 
+               
+  }
+  
   if(getuid() == 0)
   {
       setButtons(Help|Apply);
@@ -78,19 +104,15 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
   else
   {
       setButtons(Help);
-      noSharing->setEnabled( false );
-      sharing->setEnabled( false );
+      m_ccgui->shareGrp->setEnabled( false );
   }
 
-  layout->addStretch();
-  
+  load();
 }
 
-void KFileShareConfig::createShareListView(QBoxLayout* layout) 
+void KFileShareConfig::updateShareListView() 
 {
-      QGroupBox *grpBox = new QVGroupBox( i18n("Shared Folders"), this);
-      layout->addWidget(grpBox);
-      
+      m_ccgui->listView->clear();
       KNFSShare* nfs = KNFSShare::instance();
       KSambaShare* samba = KSambaShare::instance();
       
@@ -109,14 +131,8 @@ void KFileShareConfig::createShareListView(QBoxLayout* layout)
       QPixmap okPix = SmallIcon("button_ok");
       QPixmap cancelPix = SmallIcon("button_cancel");
       
-      KListView* listView = new KListView( grpBox );
-      listView->setSelectionMode(QListView::NoSelection);
-      listView->addColumn(i18n("Path"));
-      listView->addColumn(i18n("Samba"));
-      listView->addColumn(i18n("NFS"));
-      
       for ( QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
-        KListViewItem* item = new KListViewItem(listView);
+        KListViewItem* item = new KListViewItem(m_ccgui->listView);
         item->setText(0,*it);
         item->setPixmap(0, folderPix);
         
@@ -131,37 +147,28 @@ void KFileShareConfig::createShareListView(QBoxLayout* layout)
           item->setPixmap(2,cancelPix);
 
       }
+      
 }
+
 
 void KFileShareConfig::load()
 {
-    QFile file( "/etc/security/fileshare.conf");
-    if ( !file.open( IO_ReadWrite ) )
-    {
-        // The defaults if the directory /etc/security or /etc/security/fileshare.conf doesn't exist
-        noSharing->setChecked( true );
-        sharing->setChecked( false );
-    }
-    else
-    {
-        QString str = file.readAll();
-        if ( str=="RESTRICT=yes")
-        {
-            sharing->setChecked( false );
-            noSharing->setChecked( true );
-        }
-        else if( str=="RESTRICT=no")
-        {
-            sharing->setChecked( true );
-            noSharing->setChecked( false );
-        }
-        else
-        {
-            sharing->setChecked( false );
-            noSharing->setChecked( true );
-        }
-    }
+    KSimpleConfig config(QString::fromLatin1(FILESHARECONF),true);
+    bool restrict = config.readEntry("RESTRICT", "yes") == "yes";
+    m_ccgui->shareGrp->setChecked( ! restrict );
+    
+    if (config.readEntry("SHARINGMODE", "simple") == "simple")
+        m_ccgui->simpleRadio->setChecked(true);
+    else        
+        m_ccgui->advancedRadio->setChecked(true);
+          
 
+    m_ccgui->sambaChk->setChecked( 
+          config.readEntry("SAMBA", "yes") == "yes");
+
+    m_ccgui->nfsChk->setChecked( 
+          config.readEntry("NFS", "yes") == "yes");
+          
 }
 
 void KFileShareConfig::save()
@@ -170,26 +177,35 @@ void KFileShareConfig::save()
     if ( !dir.exists())
         dir.mkdir("/etc/security");
 
-    QString str;
-    //write file
-    if ( noSharing->isChecked())
-    {
-        str="RESTRICT=yes";
-    }
-    else
-    {
-        str="RESTRICT=no";
-    }
-    QFile file("/etc/security/fileshare.conf");
-    if ( file.open(IO_WriteOnly))
-        file.writeBlock( str.latin1(), str.length());
+    QFile file(FILESHARECONF);
+    if ( ! file.open(IO_WriteOnly)) {
+        KMessageBox::detailedError(this, 
+            i18n("Could not save settings!"),
+            i18n("Could not open file '%1' for writing: %2").arg(FILESHARECONF).arg(
+             file.errorString() ),
+            i18n("Saving failed"));
+        return;
+    }        
+        
+    QTextStream stream(&file);
+    stream << "RESTRICT=";
+    stream << (m_ccgui->shareGrp->isChecked() ? "no" : "yes");        
+        
+    stream << "\nSHARINGMODE=";
+    stream << (m_ccgui->simpleRadio->isChecked() ? "simple" : "advanced");        
+
+    stream << "\nSAMBA=";
+    stream << (m_ccgui->sambaChk->isChecked() ? "yes" : "no");        
+        
+    stream << "\nNFS=";
+    stream << (m_ccgui->nfsChk->isChecked() ? "yes" : "no");        
+                
     file.close();
 }
 
 void KFileShareConfig::defaults()
 {
-    noSharing->setChecked( true );
-    sharing->setChecked( false );
+    m_ccgui->shareGrp->setChecked( false );
 }
 
 QString KFileShareConfig::quickHelp() const
@@ -197,7 +213,7 @@ QString KFileShareConfig::quickHelp() const
     return i18n("<h1>File Sharing</h1><p>This module can be used "
     		    "to enable file sharing over the network using "
 				"the \"Network File System\" (NFS) or SMB in Konqueror. "
-				"The latter enables you to share your files with Windows(TM) "
+				"The latter enables you to share your files with Windows(R) "
 				"computers on your network.</p>");
 }
 

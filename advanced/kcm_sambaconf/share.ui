@@ -1,4 +1,5 @@
 <!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>KcmShareDlg</class>
 <comment>
 /******************************************************************************
  *                                                                            *
@@ -20,7 +21,6 @@
  *                                                                            *
  ******************************************************************************/
 </comment>
-<class>KcmShareDlg</class>
 <widget class="QDialog">
     <property name="name">
         <cstring>KcmShareDlg</cstring>
@@ -1526,83 +1526,6 @@
                                 </property>
                             </spacer>
                         </vbox>
-                    </widget>
-                </hbox>
-            </widget>
-            <widget class="QWidget">
-                <property name="name">
-                    <cstring>hiddenTab</cstring>
-                </property>
-                <attribute name="title">
-                    <string>Hidden files</string>
-                </attribute>
-                <hbox>
-                    <property name="name">
-                        <cstring>unnamed</cstring>
-                    </property>
-                    <property name="margin">
-                        <number>11</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
-                    </property>
-                    <widget class="QListView">
-                        <column>
-                            <property name="text">
-                                <string>Filename</string>
-                            </property>
-                            <property name="clickable">
-                                <bool>true</bool>
-                            </property>
-                            <property name="resizeable">
-                                <bool>true</bool>
-                            </property>
-                        </column>
-                        <column>
-                            <property name="text">
-                                <string>Hidden</string>
-                            </property>
-                            <property name="clickable">
-                                <bool>true</bool>
-                            </property>
-                            <property name="resizeable">
-                                <bool>true</bool>
-                            </property>
-                        </column>
-                        <column>
-                            <property name="text">
-                                <string>Accessible</string>
-                            </property>
-                            <property name="clickable">
-                                <bool>true</bool>
-                            </property>
-                            <property name="resizeable">
-                                <bool>true</bool>
-                            </property>
-                        </column>
-                    <item>
-                        <property name="text">
-                            <string>New Item</string>
-                        </property>
-                        <property name="text">
-                            <string></string>
-                        </property>
-                        <property name="text">
-                            <string></string>
-                        </property>
-                        <property name="pixmap">
-                            <pixmap></pixmap>
-                        </property>
-                        <property name="pixmap">
-                            <pixmap></pixmap>
-                        </property>
-                        <property name="pixmap">
-                            <pixmap></pixmap>
-                        </property>
-                    </item>
-                        <property name="name">
-                            <cstring>ListView3</cstring>
-                        </property>
                     </widget>
                 </hbox>
             </widget>

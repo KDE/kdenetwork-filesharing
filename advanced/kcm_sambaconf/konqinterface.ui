@@ -1,15 +1,16 @@
 <!DOCTYPE UI><UI version="3.0" stdsetdef="1">
-<class>Form1</class>
+<class>KonqInterface</class>
+<author>Jan Schäfer &lt;janschaefer@users.sourceforge.net&gt;</author>
 <widget class="QWidget">
     <property name="name">
-        <cstring>Form1</cstring>
+        <cstring>konqinterface</cstring>
     </property>
     <property name="geometry">
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>429</width>
-            <height>427</height>
+            <width>368</width>
+            <height>388</height>
         </rect>
     </property>
     <property name="caption">
@@ -20,33 +21,61 @@
             <cstring>unnamed</cstring>
         </property>
         <property name="margin">
-            <number>11</number>
+            <number>0</number>
         </property>
         <property name="spacing">
             <number>6</number>
         </property>
-        <widget class="QRadioButton">
+        <widget class="QButtonGroup">
             <property name="name">
-                <cstring>notSharedRadio</cstring>
+                <cstring>btnGrp</cstring>
             </property>
-            <property name="text">
-                <string>&amp;Not shared</string>
+            <property name="lineWidth">
+                <number>0</number>
             </property>
-            <property name="checked">
-                <bool>false</bool>
+            <property name="title">
+                <string></string>
             </property>
-        </widget>
-        <widget class="QRadioButton">
-            <property name="name">
-                <cstring>sharedRadio</cstring>
-            </property>
-            <property name="text">
-                <string>&amp;Shared</string>
-            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>5</number>
+                </property>
+                <property name="spacing">
+                    <number>5</number>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>notSharedRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Not shared</string>
+                    </property>
+                    <property name="checked">
+                        <bool>false</bool>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>1</number>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>sharedRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>&amp;Shared</string>
+                    </property>
+                    <property name="buttonGroupId">
+                        <number>0</number>
+                    </property>
+                </widget>
+            </vbox>
         </widget>
         <widget class="QGroupBox">
             <property name="name">
-                <cstring>baseOptionsGrp</cstring>
+                <cstring>baseGrp</cstring>
             </property>
             <property name="title">
                 <string>Base Options</string>
@@ -65,10 +94,22 @@
                     <property name="name">
                         <cstring>commentEdit</cstring>
                     </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Comment</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is a text field that is seen next to a share when a client does a queries the server, either via the network neighborhood or via net view to list what shares are available.</string>
+                    </property>
                 </widget>
                 <widget class="QLineEdit" row="0" column="1">
                     <property name="name">
                         <cstring>nameEdit</cstring>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Name of the share</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is the name of the share</string>
                     </property>
                 </widget>
                 <widget class="QLabel" row="0" column="0">
@@ -84,6 +125,12 @@
                     <property name="buddy" stdset="0">
                         <cstring>nameEdit</cstring>
                     </property>
+                    <property name="toolTip" stdset="0">
+                        <string></string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is the name of the share</string>
+                    </property>
                 </widget>
                 <widget class="QLabel" row="1" column="0">
                     <property name="name">
@@ -95,12 +142,15 @@
                     <property name="buddy" stdset="0">
                         <cstring>commentEdit</cstring>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is a text field that is seen next to a share when a client does a queries the server, either via the network neighborhood or via net view to list what shares are available.</string>
+                    </property>
                 </widget>
             </grid>
         </widget>
         <widget class="QGroupBox">
             <property name="name">
-                <cstring>securityOptionsGrp</cstring>
+                <cstring>securityGrp</cstring>
             </property>
             <property name="title">
                 <string>Security Options</string>
@@ -119,10 +169,16 @@
                     <property name="name">
                         <cstring>denyEdit</cstring>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                    </property>
                 </widget>
                 <widget class="QLineEdit" row="2" column="1">
                     <property name="name">
                         <cstring>allowEdit</cstring>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                     </property>
                 </widget>
                 <widget class="QLabel" row="3" column="0">
@@ -135,6 +191,9 @@
                     <property name="buddy" stdset="0">
                         <cstring>denyEdit</cstring>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
+                    </property>
                 </widget>
                 <widget class="QLabel" row="2" column="0">
                     <property name="name">
@@ -145,6 +204,9 @@
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>allowEdit</cstring>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
                     </property>
                 </widget>
                 <widget class="QLabel" row="1" column="0">
@@ -157,10 +219,19 @@
                     <property name="buddy" stdset="0">
                         <cstring>guestEdit</cstring>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
+                    </property>
                 </widget>
                 <widget class="QLineEdit" row="1" column="1">
                     <property name="name">
                         <cstring>guestEdit</cstring>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string>Guest account</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="0" column="0">
@@ -170,6 +241,9 @@
                     <property name="text">
                         <string>&amp;Read only</string>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>If this is checked, then users of a service may not create or modify files in the service's directory.</string>
+                    </property>
                 </widget>
                 <widget class="QCheckBox" row="0" column="1">
                     <property name="name">
@@ -178,12 +252,15 @@
                     <property name="text">
                         <string>&amp;Guest ok</string>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>If this is checked , then no password is required to connect to the service. Privileges will be those of the guest account.</string>
+                    </property>
                 </widget>
             </grid>
         </widget>
         <widget class="QGroupBox">
             <property name="name">
-                <cstring>otherOptionsGrp</cstring>
+                <cstring>otherGrp</cstring>
             </property>
             <property name="title">
                 <string>Other Options</string>
@@ -200,15 +277,18 @@
                 </property>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>CheckBox14</cstring>
+                        <cstring>browseableChk</cstring>
                     </property>
                     <property name="text">
                         <string>&amp;Browseable</string>
                     </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This controls whether this share is seen in the list of available shares in a net view and in the browse list.</string>
+                    </property>
                 </widget>
                 <widget class="QCheckBox">
                     <property name="name">
-                        <cstring>CheckBox15</cstring>
+                        <cstring>availableChk</cstring>
                     </property>
                     <property name="sizePolicy">
                         <sizepolicy>
@@ -220,6 +300,9 @@
                     </property>
                     <property name="text">
                         <string>A&amp;vailable</string>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>Checkbox lets you \"turn off\" a service. If not checked, then ALL attempts to connect to the service will fail. Such failures are logged.</string>
                     </property>
                 </widget>
             </hbox>
@@ -284,9 +367,63 @@
         </spacer>
     </vbox>
 </widget>
+<connections>
+    <connection>
+        <sender>nameEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>commentEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>readOnlyChk</sender>
+        <signal>clicked()</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>guestOkChk</sender>
+        <signal>clicked()</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>guestEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>allowEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>denyEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>browseableChk</sender>
+        <signal>clicked()</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>availableChk</sender>
+        <signal>clicked()</signal>
+        <receiver>konqinterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+</connections>
 <tabstops>
-    <tabstop>notSharedRadio</tabstop>
-    <tabstop>sharedRadio</tabstop>
     <tabstop>nameEdit</tabstop>
     <tabstop>commentEdit</tabstop>
     <tabstop>readOnlyChk</tabstop>
@@ -294,8 +431,17 @@
     <tabstop>guestEdit</tabstop>
     <tabstop>allowEdit</tabstop>
     <tabstop>denyEdit</tabstop>
-    <tabstop>CheckBox14</tabstop>
-    <tabstop>CheckBox15</tabstop>
+    <tabstop>browseableChk</tabstop>
+    <tabstop>availableChk</tabstop>
 </tabstops>
+<includes>
+    <include location="local" impldecl="in implementation">konqinterface.ui.h</include>
+</includes>
+<signals>
+    <signal>changed()</signal>
+</signals>
+<slots>
+    <slot>changedSlot()</slot>
+</slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

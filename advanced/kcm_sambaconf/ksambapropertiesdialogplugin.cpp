@@ -35,6 +35,7 @@
 #include <kfiledialog.h>
 #include <kapp.h>
 
+#include "konqinterface.h"
 #include "ksambapropertiesdialogplugin.h"
 #include "sambafile.h"
 
@@ -67,7 +68,7 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
 
     	SambaFile sambaFile(smbconf);
       SambaShare globals = sambaFile.getShare("global");
-      
+
       QString *s = globals.find("netbios name");
       if (!s)
 				 return;

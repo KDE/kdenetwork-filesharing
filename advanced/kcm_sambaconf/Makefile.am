@@ -15,7 +15,11 @@ libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 
 ksambakonqiplugin_la_METASOURCES=AUTO
-ksambakonqiplugin_la_SOURCES = ksambapropertiesdialogplugin.cpp sambafile.cpp
+ksambakonqiplugin_la_SOURCES = \
+	ksambapropertiesdialogplugin.cpp \
+  konqinterface.ui \
+ 	sambafile.cpp
+
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
 
@@ -30,6 +34,7 @@ EXTRA_DIST = $(service_DATA) \
 	externals.h \
 	kcmsambaconf.desktop \
 	ksambapropertiesdialogplugin.cpp \
+  konqinterface.ui \
 	sambafile.cpp \
 	ksambapropertiesdialogplugin.h \
 	sambafile.h

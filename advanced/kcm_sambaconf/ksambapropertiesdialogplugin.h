@@ -33,6 +33,7 @@ class QLineEdit;
 class QVGroupBox;
 class QCheckBox;
 class QWidgetStack;
+class KonqInterface;
 
 class KSambaPropertiesDialogPlugin : public KPropsDlgPlugin
 {
@@ -51,25 +52,7 @@ protected:
   QFrame* frame;
   
   QWidget* initWidget;
-  QWidget* configWidget;
-
-  QRadioButton* sharedRadio;
-  QRadioButton* notSharedRadio;
-
-  QLineEdit* nameEdit;
-  QLineEdit* commentEdit;
-  QLineEdit* guestAccountEdit;
-  QCheckBox* readOnlyChk;
-  QCheckBox* guestOkChk;
-  QLineEdit* hostsAllowLineEdit;
-  QLineEdit* hostsDenyLineEdit;
-  QCheckBox* browseableChk;
-  QCheckBox* availableChk;
-
-  QVGroupBox* baseGrpBox;
-  QVGroupBox* secureGrpBox;
-  QVGroupBox* browseGrpBox;
-  QVGroupBox* miscGrpBox;
+  KonqInterface* configWidget;
 
   QWidgetStack *stack;
 

@@ -9,7 +9,7 @@ LDFLAGS =
 
 libkcm_kcm_sambaconf_la_METASOURCES=AUTO
 
-libkcm_kcm_sambaconf_la_SOURCES = sharetype.ui share.ui interface.ui home.ui kcm_sambaconf.cpp 
+libkcm_kcm_sambaconf_la_SOURCES = sharetype.ui share.ui interface.ui home.ui 
 libkcm_kcm_sambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 
 libkcm_kcm_sambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)     

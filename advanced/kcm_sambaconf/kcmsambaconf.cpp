@@ -5,7 +5,7 @@
     copyright            : (C) 2002 by Christian Nitschkowski,
     email                : segfault_ii@web.de
 
-    copyright            : (C) 2002-2003 by Jan Schäfer
+    copyright            : (C) 2002-2004 by Jan Schaefer
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
@@ -56,7 +56,7 @@
 #include <kmessagebox.h>
 #include <kjanuswidget.h>
 #include <klistview.h>
-#include <kconfig.h>
+#include <ksimpleconfig.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -491,12 +491,6 @@ void KcmSambaConf::editPrinterDefaults()
 
 void KcmSambaConf::loadBtnClicked() {
   load( _interface->configUrlRq->url());
-  
-  KConfig config("ksambaplugin");
-  config.setGroup("KSambaKonqiPlugin");
-  config.writeEntry("smb.conf",_interface->configUrlRq->url());
-  config.sync();
-  
 }
 
 void KcmSambaConf::load(const QString & smbFile) 
@@ -1261,6 +1255,8 @@ void KcmSambaConf::defaults() {
   emit changed(true);
 }
 
+#define FILESHARECONF "/etc/security/fileshare.conf"
+
 void KcmSambaConf::save() {
   SambaShare *share = _sambaFile->getShare("global");
   assert(share);
@@ -1270,6 +1266,9 @@ void KcmSambaConf::save() {
   // Base settings
 
   _smbconf = _interface->configUrlRq->url();
+  KSimpleConfig config(QString::fromLatin1(FILESHARECONF),false);
+  config.writeEntry("SMBCONF",_smbconf);
+  config.sync();
 
   // Security
 

@@ -45,6 +45,7 @@ class KFileShareConfig  : public KCModule
    QString m_fileShareGroup;
    bool m_restricted;
    bool m_rootPassNeeded;
+   QString m_smbConf;
    void showShareDialog(const KFileItemList & files);
    bool addGroupAccessesToFile(const QString & file);
    bool removeGroupAccessesFromFile(const QString & file);

@@ -215,6 +215,7 @@ void KFileShareConfig::load()
 
     m_rootPassNeeded = config.readEntry("ROOTPASSNEEDED", "yes") == "yes";
                     
+    m_smbConf = KSambaShare::instance()->smbConfPath();
 }
 
 bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
@@ -326,6 +327,8 @@ void KFileShareConfig::save()
     stream << "\nROOTPASSNEEDED=";
     stream << (m_rootPassNeeded ? "yes" : "no");        
     
+    stream << "\nSMBCONF=";
+    stream << m_smbConf;
     
     file.close();
 }

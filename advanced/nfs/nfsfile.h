@@ -42,6 +42,7 @@ public:
   EntryIterator getEntries();
 
   bool save();
+  bool saveTo(const QString& fileName);
   void saveTo(QTextStream * stream);  
   bool load();
 

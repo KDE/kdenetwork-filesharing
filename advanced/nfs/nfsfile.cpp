@@ -215,21 +215,26 @@ void NFSFile::saveTo(QTextStream * stream) {
   }
 }
 
-bool NFSFile::save()
-{
-  if (QFileInfo(_url.path()).isWritable() ) {
-    QFile file(_url.path());
+bool NFSFile::saveTo(const QString& fileName) {
+    QFile file(fileName);
     if (!file.open(IO_WriteOnly))
         return false;
         
     QTextStream stream(&file);        
     saveTo(&stream);
     file.close();
+    return true;
+}
+
+bool NFSFile::save()
+{
+  if (QFileInfo(_url.path()).isWritable() ) {
+    saveTo(_url.path());
   } else
   {
   
     KTempFile tempFile;
-    saveTo(tempFile.textStream());
+    saveTo(tempFile.name());
     tempFile.close();
     tempFile.setAutoDelete( true );
 

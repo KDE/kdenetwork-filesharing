@@ -39,7 +39,7 @@
 #include <kstandarddirs.h>
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
-#include <kapp.h>
+#include <kapplication.h>
 #include <kuser.h>
 #include <kurl.h>
 #include <kprocess.h>

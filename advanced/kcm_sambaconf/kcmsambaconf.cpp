@@ -37,6 +37,7 @@
 #include <qpainter.h>
 #include <qcheckbox.h>
 #include <qlistbox.h>
+#include <qradiobutton.h>
 
 
 #include <klocale.h>
@@ -47,7 +48,7 @@
 #include <kdebug.h>
 #include <kiconloader.h>
 #include <knuminput.h>
-
+#include <krestrictedline.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -428,6 +429,56 @@ void KcmSambaConf::load()
   _interface->syslogOnlyChk->setChecked( share->getBoolValue("syslog only",false,true));
   _interface->timestampChk->setChecked( share->getBoolValue("timestamp",false,true));
 
+  // WINS
+
+  _interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
+  _interface->winsProxyChk->setChecked( share->getBoolValue("wins proxy",false,true));
+  _interface->dnsProxyChk->setChecked( share->getBoolValue("dns proxy",false,true));
+  _interface->winsServerEdit->setText( share->getValue("wins server",false,true) );
+  _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
+
+  _interface->preferredMasterChk->setChecked( share->getBoolValue("preferred master",false,true));
+  _interface->localMasterChk->setChecked( share->getBoolValue("local master",false,true));
+  _interface->domainMasterChk->setChecked( share->getBoolValue("domain master",false,true));
+  _interface->domainLogonsChk->setChecked( share->getBoolValue("domain logons",false,true));
+
+  _interface->osLevelSpin->setValue( share->getValue("os level", false, true).toInt());
+
+
+
+  // Protocol
+
+  _interface->writeRawChk->setChecked( share->getBoolValue("write raw",false,true));
+  _interface->readRawChk->setChecked( share->getBoolValue("read raw",false,true));
+  _interface->readBmpxChk->setChecked( share->getBoolValue("read bmpx",false,true));
+  _interface->largeReadWriteChk->setChecked( share->getBoolValue("large readwrite",false,true));
+  _interface->ntAclSupportChk->setChecked( share->getBoolValue("nt acl support",false,true));
+  _interface->ntSmbSupportChk->setChecked( share->getBoolValue("nt smb support",false,true));
+  _interface->ntPipeSupportChk->setChecked( share->getBoolValue("nt pipe support",false,true));
+  _interface->timeServerChk->setChecked( share->getBoolValue("time server",false,true));
+
+  _interface->maxMuxInput->setValue( share->getValue("max mux", false, true).toInt());
+  _interface->maxXmitInput->setValue( share->getValue("max xmit", false, true).toInt());
+  _interface->maxPacketInput->setValue( share->getValue("max packet", false, true).toInt());
+  _interface->maxTtlInput->setValue( share->getValue("max ttl", false, true).toInt());
+  _interface->maxWinsTtlInput->setValue( share->getValue("max wins ttl", false, true).toInt());
+  _interface->minWinsTtlInput->setValue( share->getValue("min wins ttl", false, true).toInt());
+
+  i = _interface->announceAsCombo->listBox()->index(_interface->announceAsCombo->listBox()->findItem(share->getValue("announce as",false,true),Qt::ExactMatch));
+  _interface->announceAsCombo->setCurrentItem(i);
+
+  i = _interface->protocolCombo->listBox()->index(_interface->protocolCombo->listBox()->findItem(share->getValue("protocol",false,true),Qt::ExactMatch));
+  _interface->protocolCombo->setCurrentItem(i);
+
+  i = _interface->maxProtocolCombo->listBox()->index(_interface->maxProtocolCombo->listBox()->findItem(share->getValue("max protocol",false,true),Qt::ExactMatch));
+  _interface->maxProtocolCombo->setCurrentItem(i);
+
+  i = _interface->minProtocolCombo->listBox()->index(_interface->minProtocolCombo->listBox()->findItem(share->getValue("min protocol",false,true),Qt::ExactMatch));
+  _interface->minProtocolCombo->setCurrentItem(i);
+
+  _interface->announceVersionEdit->setText( share->getValue("announce version",false,true) );
+  _interface->nameResolveOrderEdit->setText( share->getValue("name resolve order",false,true) );
+
   connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
 }
 
@@ -514,6 +565,47 @@ void KcmSambaConf::save() {
   share->setValue("debug hires timestamp",_interface->microsecondsChk->isChecked(), false, true );
   share->setValue("syslog only",_interface->syslogOnlyChk->isChecked(), false, true );
   share->setValue("timestamp",_interface->timestampChk->isChecked(), false, true );
+
+
+  // WINS
+
+  share->setValue("wins support",_interface->winsSupportRadio->isChecked(), false,true);
+  share->setValue("wins proxy",_interface->winsProxyChk->isChecked(), false,true);
+  share->setValue("dns proxy",_interface->dnsProxyChk->isChecked(), false,true);
+  share->setValue("wins server",_interface->winsServerEdit->text(), false,true);
+
+  share->setValue("preferred master",_interface->preferredMasterChk->isChecked(), false,true);
+  share->setValue("local master",_interface->localMasterChk->isChecked(), false,true);
+  share->setValue("domain master",_interface->domainMasterChk->isChecked(), false,true);
+  share->setValue("domain logons",_interface->domainLogonsChk->isChecked(), false,true);
+
+  share->setValue("os level",QString::number(_interface->osLevelSpin->value()),  false, true);
+
+  // Protocol
+
+  share->setValue("write raw",_interface->writeRawChk->isChecked(), false,true);
+  share->setValue("read raw",_interface->readRawChk->isChecked(), false,true);
+  share->setValue("read bmpx",_interface->readBmpxChk->isChecked(), false,true);
+  share->setValue("large readwrite",_interface->largeReadWriteChk->isChecked(), false,true);
+  share->setValue("nt acl support",_interface->ntAclSupportChk->isChecked(), false,true);
+  share->setValue("nt smb support",_interface->ntSmbSupportChk->isChecked(), false,true);
+  share->setValue("nt pipe support",_interface->ntPipeSupportChk->isChecked(), false,true);
+  share->setValue("time server",_interface->timeServerChk->isChecked(), false,true);
+
+  share->setValue("max mux",QString::number(_interface->maxMuxInput->value()), false, true);
+  share->setValue("max xmit",QString::number(_interface->maxXmitInput->value()), false, true);
+  share->setValue("max packet",QString::number(_interface->maxPacketInput->value()), false, true);
+  share->setValue("max ttl",QString::number(_interface->maxTtlInput->value()), false, true);
+  share->setValue("max wins ttl",QString::number(_interface->maxWinsTtlInput->value()), false, true);
+  share->setValue("min wins ttl",QString::number(_interface->minWinsTtlInput->value()), false, true);
+
+  share->setValue("announce as",_interface->announceAsCombo->currentText(),false,true);
+  share->setValue("protocol",_interface->protocolCombo->currentText(),false,true);
+  share->setValue("max protocol",_interface->maxProtocolCombo->currentText(),false,true);
+  share->setValue("min protocol",_interface->minProtocolCombo->currentText(),false,true);
+
+  share->setValue("announce version",_interface->announceVersionEdit->text(), false,true);
+  share->setValue("name resolve order",_interface->nameResolveOrderEdit->text(), false,true);
 
 
   _sambaFile->slotApply();

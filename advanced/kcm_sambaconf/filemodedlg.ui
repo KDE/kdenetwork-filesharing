@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>FileModeDlg</class>
 <widget class="QDialog">
     <property name="name">
@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>355</width>
-            <height>202</height>
+            <width>370</width>
+            <height>220</height>
         </rect>
     </property>
     <property name="caption">
@@ -22,344 +22,59 @@
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
-        <property name="margin">
-            <number>11</number>
-        </property>
-        <property name="spacing">
-            <number>6</number>
-        </property>
-        <widget class="QLayoutWidget">
+        <widget class="QGroupBox">
             <property name="name">
-                <cstring>Layout22</cstring>
+                <cstring>GroupBox1</cstring>
             </property>
-            <hbox>
+            <property name="font">
+                <font>
+                </font>
+            </property>
+            <property name="title">
+                <string>Access Permissions</string>
+            </property>
+            <grid>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
                 <property name="margin">
-                    <number>0</number>
+                    <number>11</number>
                 </property>
                 <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget class="QGroupBox">
+                <widget class="Line" row="0" column="4" rowspan="4" colspan="1">
                     <property name="name">
-                        <cstring>GroupBox1</cstring>
+                        <cstring>Line4</cstring>
                     </property>
-                    <property name="font">
-                        <font>
-                            <bold>1</bold>
-                        </font>
+                    <property name="frameShape">
+                        <enum>VLine</enum>
                     </property>
-                    <property name="title">
-                        <string>Access Permissions</string>
+                    <property name="frameShadow">
+                        <enum>Sunken</enum>
                     </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <property name="margin">
-                            <number>11</number>
-                        </property>
-                        <property name="spacing">
-                            <number>6</number>
-                        </property>
-                        <widget class="QLayoutWidget">
-                            <property name="name">
-                                <cstring>Layout23</cstring>
-                            </property>
-                            <grid>
-                                <property name="name">
-                                    <cstring>unnamed</cstring>
-                                </property>
-                                <property name="margin">
-                                    <number>0</number>
-                                </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <widget class="QLabel" row="3" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel3</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Others</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="0" column="1">
-                                    <property name="name">
-                                        <cstring>TextLabel4</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Read</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="3" column="1">
-                                    <property name="name">
-                                        <cstring>othersReadChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="0" column="3">
-                                    <property name="name">
-                                        <cstring>TextLabel6</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Exec</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="0" column="2">
-                                    <property name="name">
-                                        <cstring>TextLabel5</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Write</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="2" column="2">
-                                    <property name="name">
-                                        <cstring>groupWriteChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="3" column="2">
-                                    <property name="name">
-                                        <cstring>othersWriteChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="1" column="2">
-                                    <property name="name">
-                                        <cstring>ownerWriteChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="3" column="3">
-                                    <property name="name">
-                                        <cstring>othersExecChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="2" column="1">
-                                    <property name="name">
-                                        <cstring>groupReadChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="1" column="1">
-                                    <property name="name">
-                                        <cstring>ownerReadChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="1" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel1</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Owner</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="2" column="3">
-                                    <property name="name">
-                                        <cstring>groupExecChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="2" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel2</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Group</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="1" column="3">
-                                    <property name="name">
-                                        <cstring>ownerExecChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string></string>
-                                    </property>
-                                </widget>
-                            </grid>
-                        </widget>
-                        <widget class="Line">
-                            <property name="name">
-                                <cstring>Line4</cstring>
-                            </property>
-                            <property name="frameShape">
-                                <enum>VLine</enum>
-                            </property>
-                            <property name="frameShadow">
-                                <enum>Sunken</enum>
-                            </property>
-                            <property name="orientation">
-                                <enum>Vertical</enum>
-                            </property>
-                        </widget>
-                        <widget class="QLayoutWidget">
-                            <property name="name">
-                                <cstring>Layout21</cstring>
-                            </property>
-                            <grid>
-                                <property name="name">
-                                    <cstring>unnamed</cstring>
-                                </property>
-                                <property name="margin">
-                                    <number>0</number>
-                                </property>
-                                <property name="spacing">
-                                    <number>4</number>
-                                </property>
-                                <widget class="QLabel" row="0" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel8</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Special</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="3" column="0">
-                                    <property name="name">
-                                        <cstring>stickyBitChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Sticky</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="2" column="0">
-                                    <property name="name">
-                                        <cstring>setGIDChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Set GID</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="1" column="0">
-                                    <property name="name">
-                                        <cstring>setUIDChk</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <bold>0</bold>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Set UID</string>
-                                    </property>
-                                </widget>
-                            </grid>
-                        </widget>
-                    </hbox>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
                 </widget>
-                <spacer>
+                <spacer row="4" column="1" rowspan="1" colspan="2">
+                    <property name="name">
+                        <cstring>Spacer37</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>43</height>
+                        </size>
+                    </property>
+                </spacer>
+                <spacer row="1" column="6" rowspan="2" colspan="1">
                     <property name="name">
                         <cstring>Spacer38</cstring>
                     </property>
@@ -371,30 +86,241 @@
                     </property>
                     <property name="sizeHint">
                         <size>
-                            <width>20</width>
+                            <width>70</width>
                             <height>20</height>
                         </size>
                     </property>
                 </spacer>
-            </hbox>
+                <widget class="QLabel" row="3" column="0">
+                    <property name="name">
+                        <cstring>TextLabel3</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Others</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="1">
+                    <property name="name">
+                        <cstring>TextLabel4</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Read</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="1">
+                    <property name="name">
+                        <cstring>othersReadChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="3">
+                    <property name="name">
+                        <cstring>TextLabel6</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Exec</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="2">
+                    <property name="name">
+                        <cstring>TextLabel5</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Write</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="2">
+                    <property name="name">
+                        <cstring>groupWriteChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="2">
+                    <property name="name">
+                        <cstring>othersWriteChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="2">
+                    <property name="name">
+                        <cstring>ownerWriteChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="3">
+                    <property name="name">
+                        <cstring>othersExecChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="1">
+                    <property name="name">
+                        <cstring>groupReadChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>ownerReadChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="1" column="0">
+                    <property name="name">
+                        <cstring>TextLabel1</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Owner</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="3">
+                    <property name="name">
+                        <cstring>groupExecChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="2" column="0">
+                    <property name="name">
+                        <cstring>TextLabel2</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Group</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="3">
+                    <property name="name">
+                        <cstring>ownerExecChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string></string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="3" column="5">
+                    <property name="name">
+                        <cstring>stickyBitChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Sticky</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="2" column="5">
+                    <property name="name">
+                        <cstring>setGIDChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Set GID</string>
+                    </property>
+                </widget>
+                <widget class="QCheckBox" row="1" column="5">
+                    <property name="name">
+                        <cstring>setUIDChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Set UID</string>
+                    </property>
+                </widget>
+                <widget class="QLabel" row="0" column="5">
+                    <property name="name">
+                        <cstring>TextLabel8</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                        </font>
+                    </property>
+                    <property name="text">
+                        <string>Special</string>
+                    </property>
+                </widget>
+            </grid>
         </widget>
-        <spacer>
-            <property name="name">
-                <cstring>Spacer37</cstring>
-            </property>
-            <property name="orientation">
-                <enum>Vertical</enum>
-            </property>
-            <property name="sizeType">
-                <enum>Expanding</enum>
-            </property>
-            <property name="sizeHint">
-                <size>
-                    <width>20</width>
-                    <height>20</height>
-                </size>
-            </property>
-        </spacer>
         <widget class="QLayoutWidget">
             <property name="name">
                 <cstring>Layout1</cstring>
@@ -490,21 +416,21 @@
     </connection>
 </connections>
 <tabstops>
-    <tabstop>buttonOk</tabstop>
-    <tabstop>buttonCancel</tabstop>
     <tabstop>ownerReadChk</tabstop>
     <tabstop>ownerWriteChk</tabstop>
     <tabstop>ownerExecChk</tabstop>
     <tabstop>groupReadChk</tabstop>
     <tabstop>groupWriteChk</tabstop>
-    <tabstop>othersExecChk</tabstop>
-    <tabstop>othersReadChk</tabstop>
     <tabstop>groupExecChk</tabstop>
+    <tabstop>othersReadChk</tabstop>
     <tabstop>othersWriteChk</tabstop>
+    <tabstop>othersExecChk</tabstop>
     <tabstop>setUIDChk</tabstop>
     <tabstop>setGIDChk</tabstop>
     <tabstop>stickyBitChk</tabstop>
     <tabstop>buttonHelp</tabstop>
+    <tabstop>buttonOk</tabstop>
+    <tabstop>buttonCancel</tabstop>
 </tabstops>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

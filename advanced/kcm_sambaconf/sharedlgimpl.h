@@ -39,6 +39,7 @@
 #include <kfileitem.h>
 #include <klistview.h>
 
+
 #include "share.h"
 
 class SambaShare;
@@ -164,6 +165,9 @@ protected :
 	SambaShare* _share;
 
   HiddenFileView* _fileView;
+  KListViewItem* _groupsFolder;
+  KListViewItem* _usersFolder;
+
 
   void loadHiddenFilesView();
   void loadUserTable();

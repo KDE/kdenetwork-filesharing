@@ -60,11 +60,12 @@
 
 #include <assert.h>
 
-#include "passwd.h"
 #include "smbpasswdfile.h"
 #include "sambafile.h"
 #include "sharedlgimpl.h"
 #include "common.h"
+#include "passwd.h"
+
 
 #define COL_NAME 0
 #define COL_HIDDEN 1
@@ -583,13 +584,21 @@ void ShareDlgImpl::initDialog()
 
 	pathUrlRq->setMode(2+8+16);
 
-  homeChk->setChecked( _share->getName() == "homes" );
+
+  homeChk->setChecked(_share->getName().lower() == "homes");
+
+  if (_share->getName().lower() == "global")
+  {
+    tabs->removePage( tabs->page(HIDDENTABINDEX) );
+  }
+
   pathUrlRq->setURL( _share->getValue("path") );
 
   shareNameEdit->setText( _share->getName() );
 
-	commentEdit->setText( _share->getValue("comment") );
+	
 
+  commentEdit->setText( _share->getValue("comment") );
   availableBaseChk->setChecked( _share->getBoolValue("available") );
   browseableBaseChk->setChecked( _share->getBoolValue("browseable") );
   readOnlyBaseChk->setChecked( ! _share->getBoolValue("writeable") );
@@ -625,7 +634,10 @@ void ShareDlgImpl::initDialog()
   guestOnlyChk->setChecked( _share->getBoolValue("guest only") );
   userOnlyChk->setChecked( _share->getBoolValue("user only") );
   hostsAllowEdit->setText( _share->getValue("hosts allow") );
-  guestAccountEdit->setText( _share->getValue("guest account") );
+
+  guestAccountCombo->insertStringList( getUnixUsers() );
+  setComboToString(guestAccountCombo,_share->getValue("guest account"));
+
   hostsDenyEdit->setText( _share->getValue("hosts deny") );
   forceDirectorySecurityModeEdit->setText( _share->getValue("force directory security mode") );
   forceDirectoryModeEdit->setText( _share->getValue("force directory mode") );
@@ -637,7 +649,9 @@ void ShareDlgImpl::initDialog()
   securityMaskEdit->setText( _share->getValue("security mask") );
   createMaskEdit->setText( _share->getValue("create mask") );
   inheritPermissionsChk->setChecked( _share->getBoolValue("inherit permissions") );
-  
+  wideLinksChk->setChecked( _share->getBoolValue("wide links") );
+  followSymlinksChk->setChecked( _share->getBoolValue("follow symlinks") );
+
   // Advanced
 
   blockingLocksChk->setChecked( _share->getBoolValue("blocking locks") );
@@ -672,14 +686,17 @@ void ShareDlgImpl::loadUserTable()
   forceUserCombo->insertItem("");
   forceGroupCombo->insertItem("");
 
+  QStringList unixGroups = getUnixGroups();
+
   forceUserCombo->insertStringList( getUnixUsers() );
-  forceGroupCombo->insertStringList( getUnixGroups() );
+  forceGroupCombo->insertStringList( unixGroups );
 
   setComboToString(forceUserCombo, _share->getValue("force user"));
   setComboToString(forceGroupCombo, _share->getValue("force group"));
 
 
   possibleUserListView->setSelectionMode(QListView::Extended);
+  possibleUserListView->setAlternateBackground( Qt::white );
 
   QStringList validUsers = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("valid users"));
   QStringList readList = QStringList::split(QRegExp("[,\\s]+"),_share->getValue("read list"));
@@ -746,16 +763,27 @@ void ShareDlgImpl::loadUserTable()
     row++;
   }
 
+  _usersFolder = new KListViewItem(possibleUserListView, i18n("Samba Users"));
+  _groupsFolder = new KListViewItem(possibleUserListView, i18n("Unix Groups"));
+
+  _usersFolder->setPixmap(0,SmallIcon("folder"));
+  _groupsFolder->setPixmap(0,SmallIcon("folder"));
+
+
   SambaUser *user;
   for ( user = sambaList.first(); user; user = sambaList.next() )
   {
-    QStringList::Iterator it2;
+    QStringList::Iterator it;
 
-    it2=added.find(user->name);
-    if (it2 == added.end())
-        new KListViewItem(possibleUserListView, user->name);
+    it=added.find(user->name);
+    if (it == added.end())
+        new KListViewItem(_usersFolder, user->name);
   }
 
+  for (QStringList::Iterator it = unixGroups.begin(); it != unixGroups.end(); ++it)
+  {
+    new KListViewItem(_groupsFolder, *it);
+  }
 
 }
 
@@ -768,10 +796,18 @@ void ShareDlgImpl::addAllowedUserBtnClicked()
   QListViewItem* item;
   for ( item = list.first(); item; item = list.first() )
   {
+    if (item == _usersFolder ||
+        item == _groupsFolder)
+       continue;
+
     int row = userTable->numRows();
     userTable->setNumRows(row+1);
 
-    QTableItem* tableItem = new QTableItem( userTable,QTableItem::Never, item->text(0) );
+    QString name = item->text(0);
+    if (item->parent() == _groupsFolder)
+        name = "+"+name;
+
+    QTableItem* tableItem = new QTableItem( userTable,QTableItem::Never, name  );
     userTable->setItem(row,0,tableItem);
     QComboTableItem* comboItem = new QComboTableItem( userTable,accessRights);
     userTable->setItem(row,1,comboItem);
@@ -792,7 +828,17 @@ void ShareDlgImpl::removeAllowedUserBtnClicked()
     if (userTable->isRowSelected(i))
     {
       QTableItem* item = userTable->item(i,0);
-      new KListViewItem(possibleUserListView, item->text());
+      QString name = item->text();
+
+      if (name.left(1)=="+")
+      {
+          name = name.right(name.length()-1);
+          new KListViewItem(_groupsFolder, name);
+      } else
+          new KListViewItem(_usersFolder, name);
+
+
+
       rows.resize(j+1);
       rows[j] = i;
       j++;
@@ -911,7 +957,7 @@ void ShareDlgImpl::accept()
   _share->setValue("guest only",guestOnlyChk->isChecked( ) );
   _share->setValue("user only",userOnlyChk->isChecked( ) );
   _share->setValue("hosts allow",hostsAllowEdit->text( ) );
-  _share->setValue("guest account",guestAccountEdit->text( ) );
+  _share->setValue("guest account",guestAccountCombo->currentText( ) );
   _share->setValue("hosts deny",hostsDenyEdit->text( ) );
   _share->setValue("force directory security mode",forceDirectorySecurityModeEdit->text( ) );
   _share->setValue("force directory mode",forceDirectoryModeEdit->text( ) );
@@ -923,7 +969,9 @@ void ShareDlgImpl::accept()
   _share->setValue("security mask",securityMaskEdit->text( ) );
   _share->setValue("create mask",createMaskEdit->text( ) );
   _share->setValue("inherit permissions",inheritPermissionsChk->isChecked( ) );
-  
+  _share->setValue("wide links",wideLinksChk->isChecked( ) );
+  _share->setValue("follow symlinks",followSymlinksChk->isChecked( ) );
+
   // Advanced
 
   _share->setValue("blocking locks",blockingLocksChk->isChecked( ) );

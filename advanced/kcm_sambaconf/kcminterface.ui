@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KcmInterface</class>
 <comment>
 /******************************************************************************
@@ -30,7 +30,7 @@
             <x>0</x>
             <y>0</y>
             <width>634</width>
-            <height>576</height>
+            <height>578</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -268,7 +268,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>Share</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                         <property name="checked">
                                             <bool>true</bool>
@@ -286,7 +286,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>User</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -301,7 +301,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>Server</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -331,7 +331,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>ADS</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -763,7 +763,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                     <string>Edit Share</string>
                                 </property>
                                 <property name="accel">
-                                    <string>Alt+</string>
+                                    <string>Alt+ </string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -1389,7 +1389,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Obey PAM restrictions</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QCheckBox">
@@ -1404,7 +1404,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>PAM password change</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1443,7 +1443,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Paranoid server security</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1531,7 +1531,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Bind interfaces only</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QComboBox" row="0" column="1">
@@ -5776,7 +5776,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <string>UNIX extensions</string>
                                             </property>
                                             <property name="accel">
-                                                <string>Alt+</string>
+                                                <string>Alt+ </string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -6702,15 +6702,6 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>ldapMachineSuffixEdit</cstring>
                                     </property>
                                 </widget>
-                                <widget class="KLineEdit" row="0" column="1" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>ldapSuffixEdit</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                        </font>
-                                    </property>
-                                </widget>
                                 <widget class="QLabel" row="2" column="0">
                                     <property name="name">
                                         <cstring>TextLabel3_2_2_2_2</cstring>
@@ -6786,6 +6777,92 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>ldapAdminDnEdit</cstring>
                                     </property>
                                 </widget>
+                                <spacer row="12" column="0">
+                                    <property name="name">
+                                        <cstring>spacer46</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>130</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                                <widget class="QCheckBox" row="11" column="0">
+                                    <property name="name">
+                                        <cstring>ldapDeleteDnChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>LDAP delete d&amp;n</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="10" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel3_5_4_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>LDAP s&amp;ync:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>ldapSyncCombo</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="9" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel3_5_4</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>&amp;LDAP ssl:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>ldapSslCombo</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="7" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel3_4_2</cstring>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                        </font>
+                                    </property>
+                                    <property name="text">
+                                        <string>Idmap bac&amp;kend:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>idmapBackendEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="8" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel3_4_2_2</cstring>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                        </font>
+                                    </property>
+                                    <property name="text">
+                                        <string>LDAP replication sleep:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>idmapBackendEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="KLineEdit" row="7" column="1" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>idmapBackendEdit</cstring>
+                                    </property>
+                                    <property name="font">
+                                        <font>
+                                        </font>
+                                    </property>
+                                </widget>
                                 <widget class="KLineEdit" row="6" column="1" rowspan="1" colspan="2">
                                     <property name="name">
                                         <cstring>ldapAdminDnEdit</cstring>
@@ -6840,98 +6917,32 @@ This is only available if the SSL libraries have been compiled on your system an
                                         </font>
                                     </property>
                                 </widget>
-                                <widget class="QLabel" row="7" column="0">
+                                <widget class="KLineEdit" row="0" column="1" rowspan="1" colspan="2">
                                     <property name="name">
-                                        <cstring>TextLabel3_4_2</cstring>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>Idmap bac&amp;kend:</string>
-                                    </property>
-                                    <property name="buddy" stdset="0">
-                                        <cstring>idmapBackendEdit</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="KLineEdit" row="7" column="1" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>idmapBackendEdit</cstring>
+                                        <cstring>ldapSuffixEdit</cstring>
                                     </property>
                                     <property name="font">
                                         <font>
                                         </font>
                                     </property>
                                 </widget>
-                                <spacer row="11" column="0">
+                                <widget class="KIntSpinBox" row="8" column="1">
                                     <property name="name">
-                                        <cstring>spacer46</cstring>
+                                        <cstring>ldapReplicationSleepSpin</cstring>
                                     </property>
-                                    <property name="orientation">
-                                        <enum>Vertical</enum>
-                                    </property>
-                                    <property name="sizeType">
-                                        <enum>Expanding</enum>
-                                    </property>
-                                    <property name="sizeHint">
-                                        <size>
-                                            <width>20</width>
-                                            <height>170</height>
-                                        </size>
-                                    </property>
-                                </spacer>
-                                <widget class="QCheckBox" row="10" column="0">
-                                    <property name="name">
-                                        <cstring>ldapDeleteDnChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>LDAP delete d&amp;n</string>
+                                    <property name="maxValue">
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
-                                <widget class="QLabel" row="8" column="0">
+                                <widget class="QLabel" row="8" column="2">
                                     <property name="name">
-                                        <cstring>TextLabel3_5_4</cstring>
+                                        <cstring>textLabel3_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>&amp;LDAP ssl:</string>
-                                    </property>
-                                    <property name="buddy" stdset="0">
-                                        <cstring>ldapSslCombo</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="9" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel3_5_4_2</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>LDAP s&amp;ync:</string>
-                                    </property>
-                                    <property name="buddy" stdset="0">
-                                        <cstring>ldapSyncCombo</cstring>
+                                        <string>Milliseconds</string>
                                     </property>
                                 </widget>
                                 <widget class="QComboBox" row="9" column="1">
-                                    <item>
-                                        <property name="text">
-                                            <string>Yes</string>
-                                        </property>
-                                    </item>
-                                    <item>
-                                        <property name="text">
-                                            <string>No</string>
-                                        </property>
-                                    </item>
-                                    <item>
-                                        <property name="text">
-                                            <string>Only</string>
-                                        </property>
-                                    </item>
-                                    <property name="name">
-                                        <cstring>ldapSyncCombo</cstring>
-                                    </property>
-                                </widget>
-                                <widget class="QComboBox" row="8" column="1">
                                     <item>
                                         <property name="text">
                                             <string>Off</string>
@@ -6951,7 +6962,27 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>ldapSslCombo</cstring>
                                     </property>
                                 </widget>
-                                <spacer row="8" column="2">
+                                <widget class="QComboBox" row="10" column="1">
+                                    <item>
+                                        <property name="text">
+                                            <string>Yes</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>No</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>Only</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>ldapSyncCombo</cstring>
+                                    </property>
+                                </widget>
+                                <spacer row="9" column="2">
                                     <property name="name">
                                         <cstring>spacer88</cstring>
                                     </property>
@@ -6963,7 +6994,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                     </property>
                                     <property name="sizeHint">
                                         <size>
-                                            <width>40</width>
+                                            <width>330</width>
                                             <height>20</height>
                                         </size>
                                     </property>
@@ -7451,6 +7482,8 @@ This is only available if the SSL libraries have been compiled on your system an
         </widget>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <images>
     <image name="image0">
         <data format="XPM.GZ" length="4014">789cb595d9522a491086ef7d0ac2bc3326f2b074b3c4c45cb8218aa8ac2e1373d11b8b022a020a13f3ee93959955828071264e4c97d5c46756fdf557d6d23f0e527737b5d4c18fbdb769301d44a9a81f4c5207f16c345afcf9d71f7fefede7b229facb64b2a9ecfe6f7bfbf5692a4a5d3d8f1303080490e6c730c486b39f7c6d3857b28c65c35ec6c5fb86fd20ed29d784b3c5acf0b3e17cd6b58f94b53d4e855dfb1973e0dadf285bfd89e142ce71833974fe4e956dbc67b89873f11b651b6f32bbfe5055b6fede84f3be1f70bc65b8e4b9f66365db3ecd1c39e6fc052e0e57c2b9285762be142ef879d6c713c3a1e7455e86f958d84f7b327ec81c3bfd07e5a272d17191db1f096769c99803c7127f552e0ae340d84b8b3fec2b7beab76e38f2ad3e16846d7fb810a6feec1f968e45afabac7ad8b3acf34d948b1a8f2d6b3c52d6fcc0b930e547b8a2ec4bbef04ad8ae1f1e0917329a6fce4714bb7c878e25fe28ecf2ffa16cf5f3ca25e57bcb3e1f36bc538e8561219ccfa89f9ab0f50387ca763f4c84c3248c39cee78f86d7f1e04498f4441f1d4bff5b653b7fdf725efc95944b1aef58d67843d8e5eb52d92fe4982f944bc2c0e7254ef2b1f66f3b96fe2d6137df4765ab5755563d3c578e0b21f352b8942932c3b1b2af7c261c2511e70bf97c2779e73fab6cc7f394ed7839c7325e4559c78781306d77695f17b67e3063b9e4311f2aab3f5c58d6f8877249f95d3916063e2f4962c783b9b2affc226cdbe3dc71c4713e4fdd7c90513e154eb2499edbbf2ae78561286c0ac79f98bb61108afe9963c9efb3b0ed8f2f8ef9fb02efca81c6c78ee5fb33544e944796657c980a5b3f3072dc65567fdd40e3e098e33853ee0ad7a7bf56fe4f0d845de56735a86d802146f48ea92454bbd8c33ebd079b2adb3448e1119f708823aa431c5379c6177ca5f704df70fa55655343156638c777aa1f54165496788847788c27788ae57595af1aac70460a4bace0395e70ade225951ad72bbcc69b7595750de7a18e0d6c628b4a9b4a076ff10eef292b013e5049afabac6a380f1952c852ff1cbd3d56eaa04f2a79ca6981348aeb2a9f1abc16d683e939a35aa17954d94d0910ef0120c00284c60b44108b8ad5b00a9050bf2ccd63c6a5095d72e3916a1b6f811f76425ea0077df1b2a211d23aced9415b154c69c100abf0487399c113490c61647c40086378ded08870042fb40e260fcd551572d62105f38ca8be9207a33286c98646407b694e2bd9a2512b9c0f2df0c66f8029cd24967cb08fd986464c73f9601f1e7a305ff3221a402b13987c904a71ab8f18de49e392b2d1a2b5f0280fed2f0a77f06156f75b1f63dad31734f79678a119b5573416b4431e61f96d3e623a550b38a43dd9a1be0dca4ae7d303ad07908b008ebef5d1c51738c64b38a175342afe8a02484661691576e4a307a774366b742eee684f76567a2f745f0c49471476f9e8d3fdb0a49c4650e65dad0f658172e95446ec61573eba7006c64781f226f337b542fdcf290f17e461cd0b54b7ecd3015cd20dd3a3b3508057d9937cda13527f3579703ecc6cd29be7c5a8400daee854dbf98e780dcc393d72ff9bae284470bd7e6ed54b99ee8534dd0f0f7236cddbcdfff3976e0fd87a7fa8976b5679f8ccff465df3b0e33e552feabe6e3da8a72f1e76ddeb34c6293468ed9a545b2bb5496bd158f7f0cdf7a50c7d98c1644bed7ffd32ecfeced1586553b6fcfed4774ebdfce2f7f6bf95fd7f7edffb17cecfe5e4</data>
@@ -8167,6 +8200,7 @@ This is only available if the SSL libraries have been compiled on your system an
     <includehint>klineedit.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>klineedit.h</includehint>
+    <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>
     <includehint>kurlrequester.h</includehint>
     <includehint>klineedit.h</includehint>

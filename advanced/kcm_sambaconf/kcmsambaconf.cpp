@@ -975,6 +975,8 @@ void KcmSambaConf::loadLDAP(SambaShare*)
   _dictMngr->add("ldap admin dn", _interface->ldapAdminDnEdit);
   _dictMngr->add("idmap backend", _interface->idmapBackendEdit);
   
+  _dictMngr->add("ldap replication sleep",_interface->ldapReplicationSleepSpin);
+  
   _dictMngr->add("ldap delete dn",_interface->ldapDeleteDnChk);
   
   _dictMngr->add("ldap ssl", _interface->ldapSslCombo,

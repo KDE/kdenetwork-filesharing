@@ -43,6 +43,7 @@
 class KSimpleConfig;
 class KProcess;
 class KConfig;
+class KTempFile;
 
 class SambaFile;
 
@@ -120,8 +121,6 @@ public:
 
   static QString findSambaConf();
 
-	static bool boolFromText(const QString & value);
-  static QString textFromBool(bool value);
 
   int getSambaVersion();
 
@@ -160,8 +159,7 @@ protected:
 
 private:
   void copyConfigs(KConfig* first, KConfig* second);
-	QString getTempFileName();
-
+  KTempFile * _tempFile;
 public slots:
 
   /**
@@ -173,8 +171,9 @@ public slots:
 protected slots:
   void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
   void slotJobFinished( KIO::Job *);
+  void slotSaveJobFinished( KIO::Job *);
   void saveDone( KProcess*);
-  
+
 signals:
   void canceled(const QString &);
   void completed();  

@@ -2,7 +2,7 @@
                           sambafile.cpp  -  description
                             -------------------
     begin                : Son Apr 14 2002
-    copyright            : (C) 2002 by Jan Schäfer
+    copyright            : (C) 2002-2003 by Jan Schäfer
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
@@ -28,6 +28,7 @@
 
 #include <qfile.h>
 #include <qprocess.h>
+#include <qfileinfo.h>
 
 #include <ksimpleconfig.h>
 #include <kdebug.h>
@@ -88,6 +89,7 @@ SambaFile::SambaFile(const QString & _path, bool _readonly)
   _testParmValues = 0L;
   _sambaConfig = 0L;
   _sambaVersion = -1;
+  _tempFile = 0L;
 }
 
 SambaFile::~SambaFile()
@@ -102,27 +104,27 @@ bool SambaFile::isRemoteFile() {
   return ! KURL(path).isLocalFile();
 }
 
-QString SambaFile::getTempFileName()
-{
-  QString username("???");
-  struct passwd *user = getpwuid( getuid() );
-  if ( user )
-      username=user->pw_name;
-  return QString("/tmp/ksambaplugin-%1-%2-%3").arg(username).arg(getpid()).arg(time(0));
-}
-
 /** No descriptions */
 QString SambaFile::findShareByPath(const QString & path) const
 {
   QDictIterator<SambaShare> it(*_sambaConfig);
+  KURL url(path);
+  url.adjustPath(-1);
+
   for (  ; it.current(); ++it )
   {
     SambaShare* share = it.current();
 
     QString *s = share->find("path");
+    if (s) {
+        KURL curUrl(*s);
+        curUrl.adjustPath(-1);
 
-    if (s && *s==path)
-        return it.currentKey();
+        kdDebug() << url.path() << " =? " << curUrl.path() << endl;
+
+        if (url.path() == curUrl.path())
+            return it.currentKey();
+    }
   }
 
   return QString();
@@ -146,19 +148,17 @@ void SambaFile::slotApply()
   }
 
   // Create a temporary smb.conf file
-  //QString tmpFilename= getTempFileName();
-  KTempFile tmpFile;
-  tmpFile.setAutoDelete(false);
+  _tempFile = new KTempFile();
 
-  if (!saveTo(tmpFile.name())) {
-    KMessageBox::sorry(0,i18n("Couldn't save to temporary file %1").arg(tmpFile.name()));  
+  if (!saveTo(_tempFile->name())) {
+    KMessageBox::sorry(0,i18n("Couldn't save to temporary file %1").arg(_tempFile->name()));
     return;
   }
 
   QFileInfo fi(path);
+  KURL url(path);
 
   // Override the original smb.conf with the temporary file
-  QString cpCmd=QString("cp %1 %2").arg(tmpFile.name()).arg(path);
   QString chmodCmd=
     QString::number(
         (fi.permission(QFileInfo::ReadUser) ? 4 : 0)
@@ -173,34 +173,31 @@ void SambaFile::slotApply()
       + (fi.permission(QFileInfo::WriteOther) ? 2 : 0)
       + (fi.permission(QFileInfo::ExeOther) ? 1 : 0) );
 
-  QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(tmpFile.name()).arg(path).arg(chmodCmd).arg(path).arg(tmpFile.name());
-
   KProcess* proc = new KProcess();
-  *proc << "kdesu" << suCommand;
-//  *proc << "-t";
-//  *proc << "-c";
-//  *proc << "cp";
-//  *proc << "-v";
-//  *proc << tmpFile.name();
-//  *proc << path;
-//  proc->addArgument(suCommand);
-  //*proc << "kdesu" << "-c" << suCommand;
-//  proc->start();
 
-  connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT(saveDone(KProcess *)));
+  if (KURL(path).isLocalFile()) {
+    KMessageBox::information(0,i18n("Local File !"));
+    _tempFile->setAutoDelete(false); // Would otherwise be deleted before the command is executed!
+    QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(_tempFile->name()).arg(path).arg(path).arg(chmodCmd).arg(_tempFile->name());
+    *proc << "kdesu" << suCommand;
+    connect(proc, SIGNAL(processExited(KProcess *)), this, SLOT(saveDone(KProcess *)));
 
-  if (! proc->start())
-    KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
-  else
-    changed = false;
-  //proc->detach();
-  //delete proc;    
+    if (! proc->start())
+        KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
+    else
+        changed = false;
+  } else {
+    _tempFile->setAutoDelete(true);
+    KURL srcURL;
+    srcURL.setPath( _tempFile->name() );
 
-//  if (!proc.normalExit())    
-//     
-  //proc.exitStatus();  
+    KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
+    connect( job, SIGNAL( result( KIO::Job * ) ), this, SLOT( slotSaveJobFinished ( KIO::Job * ) ) );
+  }
 
-  //KMessageBox::information(0,i18n("Changes successfully saved !"));      
+
+
+  //KMessageBox::information(0,i18n("Changes successfully saved !"));
 
 
 }
@@ -208,6 +205,7 @@ void SambaFile::slotApply()
 void SambaFile::saveDone(KProcess *proc)
 {
   delete(proc);
+  delete _tempFile;
 }
 
   /**
@@ -482,24 +480,8 @@ QString SambaFile::findSambaConf()
   return QString::null;
 }
 
+void SambaFile::slotSaveJobFinished( KIO::Job * job ) {
 
-
-bool SambaFile::boolFromText(const QString & value)
-{
-  if (value.lower()=="yes" ||
-      value.lower()=="1" ||
-      value.lower()=="true")
-    return true;
-  else
-    return false;
-}
-
-QString SambaFile::textFromBool(bool value)
-{
-  if (value)
-    return "yes";
-  else
-    return "no";
 }
 
 void SambaFile::slotJobFinished( KIO::Job * job )
@@ -535,7 +517,7 @@ bool SambaFile::load()
   }
 }
 
-bool SambaFile::openFile() {  
+bool SambaFile::openFile() {
 
   QFile f(localPath);
 

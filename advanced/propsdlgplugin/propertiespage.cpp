@@ -35,6 +35,8 @@
 #include <kurlrequester.h>
 #include <kmessagebox.h>
 #include <klineedit.h>
+#include <kprocio.h>
+#include <ktempfile.h>
 
 // NFS related
 #include "../nfs/nfsfile.h"
@@ -158,19 +160,103 @@ bool PropertiesPage::save() {
       return false;
   }      
   
-  if (!saveNFS()) {
-      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: NFS saving failed." << endl;
+  updateNFSEntry();
+  if (!updateSambaShare()) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: updateSambaShare failed!" << endl;
       return false;
   }      
-      
-  if (!saveSamba()) {
-      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Samba saving failed." << endl;
-      return false;
-  }      
+  
+  
+  QString nfsFile = KNFSShare::instance()->exportsPath();
+  bool nfsNeedsKDEsu = false;
+  
+  if (m_nfsChanged) {
+      if (QFileInfo(nfsFile).isWritable()) {
+          m_nfsFile->saveTo(nfsFile);
+      } else {
+          nfsNeedsKDEsu = true;
+          kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs needs kdesu." << endl;
+      }          
+  } else
+    kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs has not changed." << endl;
+
+  
+  QString sambaFile = KSambaShare::instance()->smbConfPath();
+  bool sambaNeedsKDEsu = false;
+  if (m_sambaChanged) {
+      if (QFileInfo(sambaFile).isWritable()) {
+          m_sambaFile->saveTo(sambaFile);
+      } else {
+          sambaNeedsKDEsu = true;
+          kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba needs kdesu." << endl;
+      }          
+  } else
+    kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba has not changed." << endl;
+
+  
+  if (nfsNeedsKDEsu || sambaNeedsKDEsu) {
+     KTempFile nfsTempFile;
+     nfsTempFile.setAutoDelete(true);
+     KTempFile sambaTempFile;
+     sambaTempFile.setAutoDelete(true);
+     
+     KProcIO proc;
+
+     QString command;
+     
+     if (nfsNeedsKDEsu) {
+         m_nfsFile->saveTo(nfsTempFile.name());
+         command += QString("cp %1 %2;exportfs -ra;")
+        .arg(KProcess::quote( nfsTempFile.name() ))
+        .arg(KProcess::quote( nfsFile ));
+     }         
+     
+     if (sambaNeedsKDEsu) {
+         m_sambaFile->saveTo(sambaTempFile.name());
+         command += QString("cp %1 %2;")
+        .arg(KProcess::quote( sambaTempFile.name() ))
+        .arg(KProcess::quote( sambaFile ));
+     }       
+         
+     proc<<"kdesu" << "-d" << "-c"<<command;
+
+     if (!proc.start(KProcess::Block, true)) {
+       kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: kdesu command failed" << endl;
+       return false;
+     }      
+  }
   
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successfull." << endl;
   return true;
 }
+
+bool PropertiesPage::saveSamba() {
+  if (!updateSambaShare()) {
+    return false;
+  }
+      
+  if (m_sambaChanged) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: saving..." << endl;
+      return m_sambaFile->save();
+  }
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: samba has not changed." << endl;
+  return true;      
+}
+
+bool PropertiesPage::saveNFS() {
+  updateNFSEntry();
+  if (!m_nfsChanged) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: NFS did not change." << endl;
+      return true;
+  }      
+      
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: saving..." << endl;
+  return m_nfsFile->save();    
+}
+
+
+
 
 bool PropertiesPage::checkURL() {
 
@@ -249,7 +335,7 @@ bool PropertiesPage::checkURL() {
   }      
   
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder not shared yet" << endl;
-  
+  m_path = path;
   
   return true;
 }
@@ -291,17 +377,6 @@ void PropertiesPage::loadNFSEntry() {
     writableNFSChk->setChecked(!publicHost->readonly);
   } else
     publicNFSChk->setChecked(false);
-}
-
-bool PropertiesPage::saveNFS() {
-  updateNFSEntry();
-  if (!m_nfsChanged) {
-      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: NFS did not change." << endl;
-      return true;
-  }      
-      
-  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: saving..." << endl;
-  return m_nfsFile->save();    
 }
 
 void PropertiesPage::updateNFSEntry() {
@@ -486,19 +561,6 @@ void PropertiesPage::createNewSambaShare() {
   
 }
 
-bool PropertiesPage::saveSamba() {
-  if (!updateSambaShare()) {
-    return false;
-  }
-      
-  if (m_sambaChanged) {
-      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: saving..." << endl;
-      return m_sambaFile->save();
-  }
-  
-  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: samba has not changed." << endl;
-  return true;      
-}
 
 void PropertiesPage::moreSambaBtnClicked() {
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::moreSambaBtnClicked()" << endl;

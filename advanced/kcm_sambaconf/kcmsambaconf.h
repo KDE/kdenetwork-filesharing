@@ -71,7 +71,7 @@ class KcmSambaConf: public KCModule
 		KcmSambaConf(QWidget *parent = 0L, const char *name = 0L);
 		virtual ~KcmSambaConf();
 
-		void load();
+		void load(const QString &);
 		void save();
 		void defaults();
 		int buttons();
@@ -102,6 +102,7 @@ class KcmSambaConf: public KCModule
 		
 		DictManager* _dictMngr;
 
+    void init();
     void loadUserTab();
     void saveUserTab();
     bool getSocketBoolValue( const QString & str, const QString & name );
@@ -110,24 +111,25 @@ class KcmSambaConf: public KCModule
 		void setComboIndexToValue(QComboBox* box, const QString & value, SambaShare* share);
 		void setComboFromAutoValue(QComboBox* box, const QString & key, SambaShare* share); 
 		
-		void loadBaseSettings(SambaShare* share);
-		void loadDomain(SambaShare* share);
-		void loadSecurity(SambaShare* share);
-		void loadLogging(SambaShare* share);
-		void loadTuning(SambaShare* share);
-		void loadPrinting(SambaShare* share);
-		void loadFilenames(SambaShare* share);
-    void loadLocking(SambaShare* share);
-		void loadCoding(SambaShare* share);
-		void loadLogon(SambaShare* share);
-		void loadSocket(SambaShare* share);
-		void loadSSL(SambaShare* share);
-		void loadProtocol(SambaShare* share);
-		void loadWinbind(SambaShare* share);
-		void loadNetbios(SambaShare* share);
-		void loadVFS(SambaShare* share);
-		void loadBrowsing(SambaShare* share);
-		void loadMisc(SambaShare* share);
+		void loadBaseSettings(SambaShare*);
+		void loadDomain(SambaShare* );
+		void loadSecurity(SambaShare* );
+		void loadLogging(SambaShare* );
+		void loadTuning(SambaShare* );
+		void loadPrinting(SambaShare* );
+		void loadFilenames(SambaShare* );
+    void loadLocking(SambaShare* );
+		void loadCoding(SambaShare* );
+		void loadLogon(SambaShare* );
+		void loadSocket(SambaShare* );
+		void loadSSL(SambaShare* );
+		void loadProtocol(SambaShare* );
+		void loadWinbind(SambaShare* );
+		void loadNetbios(SambaShare* );
+		void loadVFS(SambaShare* );
+		void loadBrowsing(SambaShare* );
+		void loadMisc(SambaShare* );
+		void loadDebug(SambaShare* );
 		
     void initAdvancedTab();
 		
@@ -136,7 +138,12 @@ class KcmSambaConf: public KCModule
     void removeSambaUserBtnClicked();
     void sambaUserPasswordBtnClicked();
     void slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int);
-
+    void joinADomainBtnClicked();
+    void nullPasswordsEnabled(bool);
+    void loadBtnClicked();
+    void loadCanceled(const QString & msg);
+    void fillFields(); 
+    
   private:
 		KAboutData* _myAboutData;
 		KcmInterface* _interface;

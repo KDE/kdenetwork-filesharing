@@ -35,6 +35,7 @@
 #include <kprocess.h>
 #include <kmessagebox.h>
 #include <klocale.h>
+#include <ktempfile.h>
 
 #include <pwd.h>
 #include <time.h>
@@ -80,6 +81,7 @@ QStringList SambaConfigFile::getShareList()
 SambaFile::SambaFile(const QString & _path, bool _readonly)
 {
   path = _path;
+  localPath = _path;
   readonly = _readonly;
   changed = false;
   _testParmValues = 0L;
@@ -87,7 +89,7 @@ SambaFile::SambaFile(const QString & _path, bool _readonly)
 
 //  KSimpleConfig *config = new KSimpleConfig(path,readonly);
 //  _sambaConfig = getSambaConfigFile(config);
-  load();
+  //load();
 }
 
 SambaFile::~SambaFile()
@@ -96,6 +98,10 @@ SambaFile::~SambaFile()
   if (_testParmValues)
      delete _testParmValues;
 
+}
+
+bool SambaFile::isRemoteFile() {
+  return ! KURL(path).isLocalFile();
 }
 
 QString SambaFile::getTempFileName()
@@ -348,7 +354,7 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
   return _testParmValues;
 }
 
-void SambaFile::testParmStdOutReceived(KProcess *proc, char *buffer, int buflen)
+void SambaFile::testParmStdOutReceived(KProcess *, char *buffer, int buflen)
 {
   _parmOutput+=QString::fromLatin1(buffer,buflen);
 }
@@ -456,13 +462,46 @@ QString SambaFile::textFromBool(bool value)
   	 return "no";
 }
 
-void SambaFile::load()
+void SambaFile::slotJobFinished( KIO::Job * job )
 {
-  QFile f(path);
+  if (job->error())
+    emit canceled( job->errorString() );
+  else
+  {
+    openFile();
+    emit completed();
+  }
+}
 
+bool SambaFile::load()
+{
+  KURL url(path);
+  
+  if (!url.isLocalFile()) {
+    KTempFile tempFile;
+    localPath = tempFile.name();
+    KURL destURL;
+    destURL.setPath( localPath );
+    KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, true, false, true );
+//    emit started( d->m_job );
+    connect( job, SIGNAL( result( KIO::Job * ) ), this, SLOT( slotJobFinished ( KIO::Job * ) ) );
+    return true;
+  } else {
+    localPath = path;
+    bool ret = openFile();
+    if (ret)
+        emit completed();
+    return ret;
+  }
+}
 
-  if (!f.open(IO_ReadOnly))
-     return;
+bool SambaFile::openFile() {  
+  QFile f(localPath);
+
+  if (!f.open(IO_ReadOnly)) {
+    //throw SambaFileLoadException(QString("<qt>Could not open file <em>%1</em> for reading.</qt>").arg(path));
+    return false;
+  }
 
   QTextStream s(&f);
 
@@ -549,7 +588,8 @@ void SambaFile::load()
   }
 
   f.close();
-  
+
+  return true;  
 }
 
 bool SambaFile::saveTo(const QString & path)

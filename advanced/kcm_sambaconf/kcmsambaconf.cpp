@@ -67,6 +67,7 @@
 #include "smbpasswdfile.h"
 #include "passwd.h"
 #include "qmultichecklistitem.h"
+#include "joindomaindlg.h"
 
 
 #define COL_DISABLED 2
@@ -175,7 +176,12 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 	: KCModule(parent,name)
 {
-  load();
+  _dictMngr = 0L;
+  _sambaFile = 0L;
+  init();
+  
+  QString smbFile = SambaFile::findSambaConf();
+  load(smbFile);
   
   initAdvancedTab();
   
@@ -400,10 +406,8 @@ void KcmSambaConf::editPrinterDefaults()
   emit changed(true);
 }
 
-void KcmSambaConf::load() 
-{
-  kdDebug() << "loading" << endl;
 
+void KcmSambaConf::init() {
 	QBoxLayout * l = new QHBoxLayout( this );
 	l->setAutoAdd( TRUE );
 
@@ -422,22 +426,78 @@ void KcmSambaConf::load()
 
 	connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
 	connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
+  
+  connect( _interface->domainRadio, SIGNAL(toggled(bool)), 
+           _interface->joinADomainBtn, SLOT( setEnabled(bool) ));           
+  
+  connect(_interface->nullPasswordsChk,SIGNAL(toggled(bool)),
+          this, SLOT(nullPasswordsEnabled(bool)));
 
-  _smbconf = SambaFile::findSambaConf();
-	_sambaFile = new SambaFile(_smbconf,false);
+  connect( _interface->addSambaUserBtn, SIGNAL(clicked()),
+           this, SLOT( addSambaUserBtnClicked() ));
 
+  connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
+           this, SLOT( removeSambaUserBtnClicked() ));
 
+  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
+           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
+
+  connect( _interface->joinADomainBtn, SIGNAL(clicked()),
+           this, SLOT( joinADomainBtnClicked() ));
+           
+  connect( _interface->loadBtn, SIGNAL(clicked()),
+           this, SLOT( loadBtnClicked() ));
+  
+  
+  
+  connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
+  
+  
+  
+}
+
+void KcmSambaConf::loadBtnClicked() {
+  load( _interface->configUrlRq->url());
+}
+
+void KcmSambaConf::load(const QString & smbFile) 
+{
+  kdDebug() << "loading " << smbFile << endl;
+  _smbconf = smbFile;
+  
+  if (_sambaFile)
+     delete _sambaFile;
+     
+	
+  _sambaFile = new SambaFile(_smbconf,false);
+  
+  connect( _sambaFile, SIGNAL(completed()), this, SLOT(fillFields()));
+  connect( _sambaFile, SIGNAL(canceled(const QString &)), this, SLOT(loadCanceled(const QString &)));
+  
+  _sambaFile->load();
+  
+}
+
+void KcmSambaConf::loadCanceled(const QString & msg) {
+  KMessageBox::sorry(0L,i18n(msg).arg(_smbconf),
+                         i18n("Error while opening file"));
+}
+
+void KcmSambaConf::fillFields() 
+{
   // Fill the ListViews
 
   SambaShareList* list = _sambaFile->getSharedDirs();
 
   SambaShare *share = 0L;
+  _interface->shareListView->clear();
   for ( share = list->first(); share; share = list->next() )
   {
   	new ShareListViewItem(_interface->shareListView, share);
   }
 
   share = 0L;
+  _interface->printerListView->clear();
   list = _sambaFile->getSharedPrinters();
   for ( share = list->first(); share; share = list->next() )
   {
@@ -449,11 +509,16 @@ void KcmSambaConf::load()
   if ( !share)
      share = _sambaFile->newShare("global");
 
-	assert( share);
+	Q_ASSERT( share);
+  if (_dictMngr)
+     delete _dictMngr;
+     
   _dictMngr = new DictManager(share);
   
 
   _interface->configUrlRq->setURL( _smbconf );
+  _interface->configUrlRq->setMode( KFile::File | KFile::ExistingOnly);
+  
 	
 	loadBaseSettings( share );	
 	loadSecurity( share );
@@ -473,12 +538,12 @@ void KcmSambaConf::load()
 	loadVFS( share );
 	loadBrowsing( share );
 	loadMisc( share );
+  loadDebug( share );
 	
 	_dictMngr->load( share, false,true );
 	
   loadUserTab();
 
-  connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
   connect(_dictMngr, SIGNAL(changed()), this, SLOT(configChanged()));
 
 }
@@ -541,6 +606,7 @@ void KcmSambaConf::loadDomain(SambaShare* share)
 
 void KcmSambaConf::loadSecurity(SambaShare* share) 
 {
+
   int i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest",false,true),Qt::ExactMatch));
   _interface->mapToGuestCombo->setCurrentItem(i);
 
@@ -572,7 +638,7 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
 	
 }
 
-void KcmSambaConf::loadLogging(SambaShare* share) 
+void KcmSambaConf::loadLogging(SambaShare* ) 
 {
 	_dictMngr->add("log file",_interface->logFileUrlRq);
 
@@ -591,7 +657,7 @@ void KcmSambaConf::loadLogging(SambaShare* share)
 
 }
 
-void KcmSambaConf::loadTuning(SambaShare* share) 
+void KcmSambaConf::loadTuning(SambaShare* ) 
 {
 	_dictMngr->add("change notify timeout", _interface->changeNotifyTimeoutSpin);
 	_dictMngr->add("deadtime", _interface->deadtimeSpin);
@@ -607,16 +673,18 @@ void KcmSambaConf::loadTuning(SambaShare* share)
   
 }
 
-void KcmSambaConf::loadLocking(SambaShare* share) 
+void KcmSambaConf::loadLocking(SambaShare* ) 
 {
 	_dictMngr->add("kernel oplocks",_interface->kernelOplocksChk);
 	_dictMngr->add("oplock break wait time",_interface->oplockBreakWaitTimeSpin);
  	_dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
+ 	_dictMngr->add("lock spin time",_interface->lockSpinTimeSpin);
+ 	_dictMngr->add("lock spin count",_interface->lockSpinCountSpin);
 
 }
 
 
-void KcmSambaConf::loadPrinting(SambaShare* share) 
+void KcmSambaConf::loadPrinting(SambaShare* ) 
 {
 	_dictMngr->add("load printers",_interface->loadPrintersChk);
 	_dictMngr->add("disable spoolss",_interface->disableSpoolssChk);
@@ -632,7 +700,7 @@ void KcmSambaConf::loadPrinting(SambaShare* share)
 	_dictMngr->add("total print jobs", _interface->totalPrintJobsSpin);
 }
 
-void KcmSambaConf::loadFilenames(SambaShare* share) 
+void KcmSambaConf::loadFilenames(SambaShare* ) 
 {
 	_dictMngr->add("strip dot",_interface->stripDotChk);
 	_dictMngr->add("stat cache",_interface->statCacheChk);
@@ -733,7 +801,7 @@ void KcmSambaConf::loadSSL(SambaShare* share)
 	
 }
 
-void KcmSambaConf::loadLogon(SambaShare* share) 
+void KcmSambaConf::loadLogon(SambaShare* ) 
 {
 	// Logon
 	
@@ -747,14 +815,14 @@ void KcmSambaConf::loadLogon(SambaShare* share)
 }
 
 
-void KcmSambaConf::loadCoding(SambaShare* share) 
+void KcmSambaConf::loadCoding(SambaShare* ) 
 {
 	_dictMngr->add("coding system", _interface->codingSystemEdit);
 	_dictMngr->add("client code page", _interface->clientCodePageEdit);
 	_dictMngr->add("code page directory",_interface->codePageDirUrlRq);
 }
 
-void KcmSambaConf::loadWinbind(SambaShare* share) 
+void KcmSambaConf::loadWinbind(SambaShare* ) 
 {
 	_dictMngr->add("winbind uid", _interface->winbindUidEdit);
 	_dictMngr->add("winbind gid", _interface->winbindGidEdit);
@@ -771,13 +839,13 @@ void KcmSambaConf::loadWinbind(SambaShare* share)
 
 }
 
-void KcmSambaConf::loadNetbios(SambaShare* share) 
+void KcmSambaConf::loadNetbios(SambaShare* ) 
 {
 	_dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
 	_dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
 }
 
-void KcmSambaConf::loadVFS(SambaShare* share) 
+void KcmSambaConf::loadVFS(SambaShare*) 
 {
 	_dictMngr->add("host msdfs",_interface->hostMsdfsChk);
 
@@ -824,7 +892,7 @@ void KcmSambaConf::setComboFromAutoValue(QComboBox* box, const QString & key, Sa
 }
 
 
-void KcmSambaConf::loadMisc(SambaShare* share) 
+void KcmSambaConf::loadMisc(SambaShare*) 
 {
 	_dictMngr->add("addShare command", _interface->addShareCommandEdit);
 	_dictMngr->add("change share command", _interface->changeShareCommandEdit);
@@ -847,17 +915,29 @@ void KcmSambaConf::loadMisc(SambaShare* share)
 	_dictMngr->add("time offset", _interface->timeOffsetSpin);
 }
 
+void KcmSambaConf::loadDebug(SambaShare*) {
+	_dictMngr->add("nt status support", _interface->ntStatusSupportChk);
+}
+
 
 
 void KcmSambaConf::loadUserTab()
 {
+  // Remote editing of users isn't supported yet
+  if ( _sambaFile->isRemoteFile()) {
+    _interface->mainTab->page(3)->setEnabled(false);
+    return;
+  } else
+    _interface->mainTab->page(3)->setEnabled(true);
+  
+
   SambaShare* share = _sambaFile->getShare("global");
 
   QStringList added;
 
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
   SambaUserList sambaList = passwd.getSambaUserList();
-
+  _interface->sambaUsersListView->clear();
   SambaUser *user;
   for ( user = sambaList.first(); user; user = sambaList.next() )
   {
@@ -867,13 +947,17 @@ void KcmSambaConf::loadUserTab()
     item->setOn(COL_DISABLED,user->isDisabled);
     item->setOn(COL_NOPASSWORD,user->hasNoPassword);
     
+    if ( ! _interface->nullPasswordsChk->isOn())
+       item->setDisabled(COL_NOPASSWORD, true);
+    
     added.append(user->name);
 
     
   }
 
+  _interface->unixUsersListView->clear();
+  
   UnixUserList unixList = getUnixUserList();
-
   UnixUser *unixUser;
   for ( unixUser = unixList.first(); unixUser; unixUser = unixList.next() )
   {
@@ -887,19 +971,30 @@ void KcmSambaConf::loadUserTab()
   _interface->unixUsersListView->setSelectionMode(QListView::Extended);
   _interface->sambaUsersListView->setSelectionMode(QListView::Extended);
 
-  connect( _interface->addSambaUserBtn, SIGNAL(clicked()),
-           this, SLOT( addSambaUserBtnClicked() ));
+}
 
-  connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
-           this, SLOT( removeSambaUserBtnClicked() ));
-
-  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
-           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
-
+void KcmSambaConf::joinADomainBtnClicked() {
+  JoinDomainDlg *dlg = new JoinDomainDlg();
+  dlg->domainEdit->setText(_interface->workgroupEdit->text());
+  dlg->domainControllerEdit->setText(_interface->passwordServerEdit->text());
+  
+  int result = dlg->exec();
+  
+  if (result == QDialog::Accepted) {
+    SmbPasswdFile passwd;    
+    if (!passwd.joinADomain(dlg->domainEdit->text(),
+                            dlg->domainControllerEdit->text(),
+                            dlg->usernameEdit->text(),
+                            dlg->passwordEdit->text()))
+    {
+      KMessageBox::sorry(0,i18n("Joining the domain %1 failed.").arg(dlg->domainEdit->text()));
+    }
+  }
 
 }
 
-void KcmSambaConf::slotMouseButtonPressed(int btn,QListViewItem* item,const QPoint & p,int col) {
+
+void KcmSambaConf::slotMouseButtonPressed(int,QListViewItem* item,const QPoint &,int col) {
   if (col < 2)
     return;
     
@@ -910,17 +1005,38 @@ void KcmSambaConf::slotMouseButtonPressed(int btn,QListViewItem* item,const QPoi
   user.isDisabled = i->isOn(COL_DISABLED);
   user.hasNoPassword = i->isOn(COL_NOPASSWORD);
     
-  switch(col) {
-    case COL_DISABLED : 
-      if (i->isOn(col)) 
-        passwd.enableUser(user);
-      else
-        passwd.disableUser(user);
-      break;
-    case COL_NOPASSWORD : break;
-  }
+  if (!i->isDisabled(col))
+  {
+  
+    switch(col) {
+      case COL_DISABLED : 
+        if (i->isOn(col)) 
+          passwd.enableUser(user);
+        else
+          passwd.disableUser(user);
+        break;
+      case COL_NOPASSWORD : 
+        if (i->isOn(col)) {
+          sambaUserPasswordBtnClicked();                    
+          return; // the item is already set off by the btnClicked method
+        }
+        else
+          passwd.setNoPassword(user);
+        break;
+    }
     
-  i->toggle(col);
+    i->toggle(col);
+  }
+}
+
+void KcmSambaConf::nullPasswordsEnabled(bool b) 
+{
+  QListViewItemIterator it( _interface->sambaUsersListView );
+  for ( ; it.current(); ++it ) {
+    QMultiCheckListItem* sambaItem = static_cast<QMultiCheckListItem*>(it.current());
+    sambaItem->setDisabled(COL_NOPASSWORD,!b);
+    
+  }
 }
 
 void KcmSambaConf::saveUserTab()
@@ -992,6 +1108,8 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
     if (!passwd.changePassword(user))
     {
       KMessageBox::sorry(0,i18n("Changing the password of the user %1 failed.").arg(user.name));
+    } else {
+      static_cast<QMultiCheckListItem*>(item)->setOn(COL_NOPASSWORD,false);
     }
 
   }

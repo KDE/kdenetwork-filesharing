@@ -38,12 +38,23 @@
 #include <qstring.h>
 #include <qobject.h>
 #include <sambashare.h>
+#include <kio/job.h>
 
 class KSimpleConfig;
 class KProcess;
 class KConfig;
 
 class SambaFile;
+
+class SambaFileLoadException
+{
+  public:
+    SambaFileLoadException(const QString & msg) { message = msg; };
+    
+    QString getMessage() { return message; };
+  protected:
+    QString message;
+};
 
 class SambaConfigFile : public QDict<SambaShare>
 {
@@ -57,8 +68,6 @@ protected:
   SambaFile* _sambaFile;
   QStringList _shareList;
 };
-
-
 
 class SambaFile : public QObject
 {
@@ -114,10 +123,23 @@ public:
 	static bool boolFromText(const QString & value);
   static QString textFromBool(bool value);
 
+  /**
+   * Load all data from the smb.conf file
+   * Can load a remote file
+   **/
+  bool load();
+
+  /**
+   * Reads the local smb.conf
+   */
+  bool openFile();
+  
+  bool isRemoteFile();
 protected:
   bool readonly;
   bool changed;
   QString path;
+  QString localPath;
   SambaConfigFile *_sambaConfig;
   SambaShare* _testParmValues;
   QString _parmOutput;
@@ -126,10 +148,6 @@ protected:
   SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
   KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
 
-  /**
-   * Load all data from the smb.conf file
-   **/
-  void load();
 
   /**
    * Save all data to the specified file
@@ -151,7 +169,12 @@ public slots:
   void slotApply();
 protected slots:
   void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
-
+  void slotJobFinished( KIO::Job *);
+  
+signals:
+  void canceled(const QString &);
+  void completed();  
+  
 };
 
 #endif

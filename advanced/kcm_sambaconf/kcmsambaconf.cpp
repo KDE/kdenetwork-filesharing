@@ -193,7 +193,7 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 
   slotSpecifySmbConf(smbFile);
 
-};
+}
 
 
 KcmSambaConf::~KcmSambaConf() {

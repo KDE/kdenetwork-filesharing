@@ -46,8 +46,8 @@ SmbConfConfigWidget::SmbConfConfigWidget(QWidget* parent)
   QVBoxLayout *layout = new QVBoxLayout(this,5);
 
   QLabel *lbl = new QLabel(i18n("<p>The SAMBA configuration file <strong>'smb.conf'</strong>" \
-                                " could not be found!</p>" \
-                                "Make sure you have SAMBA installed.\n\n"), this);
+                                " could not be found;</p>" \
+                                "make sure you have SAMBA installed.\n\n"), this);
 
   QHBoxLayout *hbox = new QHBoxLayout(this);
   QPushButton *btn = new QPushButton(i18n("Specify Location"), this);
@@ -70,7 +70,7 @@ void SmbConfConfigWidget::btnPressed() {
             "*|All Files",0,i18n("Get smb.conf Location"));
 
   if ( ! QFileInfo(smbConf).isReadable() ) {
-    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read!</qt>").arg(smbConf),i18n("Could Not Read File"));
+    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read.</qt>").arg(smbConf),i18n("Could Not Read File"));
     return;
   }
 

@@ -151,7 +151,7 @@ bool SambaFile::slotApply()
   _tempFile->setAutoDelete(true);
 
   if (!saveTo(_tempFile->name())) {
-    kdDebug(5009) << "SambaFile::slotApply: Couldn't save to temporary file" << endl; 
+    kdDebug(5009) << "SambaFile::slotApply: Could not save to temporary file" << endl; 
     delete _tempFile;
     _tempFile = 0;
     return false;

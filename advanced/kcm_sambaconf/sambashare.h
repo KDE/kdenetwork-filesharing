@@ -62,8 +62,10 @@ public:
 
   /**
    * Sets the name of the share
+   * returns false if the name already exists and the testWetherExists
+   * parameter is set to true
    **/
-  void setName(const QString & name);
+  bool setName(const QString & name, bool testWetherExists=true);
 
   /**
    * Returns the value of the given parameter
@@ -73,7 +75,7 @@ public:
    * @param gobalValue if the gobal value should be returend
    * @param defaultValue if the default value should be returned or a null string
    **/
-  QString getValue(const QString & name, bool globalValue=true, bool defaultValue=true) const;
+  QString getValue(const QString & name, bool globalValue=true, bool defaultValue=true);
 
   /**
    * Same as above but for boolean parameters
@@ -81,12 +83,12 @@ public:
    * because you can't distinguish an unset parameter
    * from a false parameter
    **/
-  bool getBoolValue(const QString & name, bool globalValue=true, bool defaultValue=true) const;
+  bool getBoolValue(const QString & name, bool globalValue=true, bool defaultValue=true);
 
   /**
    * Returns the value from the [globals] section
    **/
-	QString getGlobalValue(const QString & name, bool defaultValue=true) const;
+	QString getGlobalValue(const QString & name, bool defaultValue=true);
 
   /**
    * Sets the parameter name to the given value
@@ -114,12 +116,12 @@ public:
    * Returns the default value of the parameter
    * @param name the name of the parameter
    **/
-	QString getDefaultValue(const QString & name) const;
+	QString getDefaultValue(const QString & name);
 
   /**
    * Same as above but for booleans
    **/
-  bool getDefaultBoolValue(const QString & name) const;
+  bool getDefaultBoolValue(const QString & name);
 
   /**
  	 * Returns the default synonym for the given parameter

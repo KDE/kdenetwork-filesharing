@@ -1,0 +1,177 @@
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<class>GroupConfigGUI</class>
+<widget class="QWidget">
+    <property name="name">
+        <cstring>GroupConfigGUI</cstring>
+    </property>
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>385</width>
+            <height>197</height>
+        </rect>
+    </property>
+    <property name="caption">
+        <string>Form1</string>
+    </property>
+    <grid>
+        <property name="name">
+            <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>0</number>
+        </property>
+        <widget class="QButtonGroup" row="0" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>buttonGroup1</cstring>
+            </property>
+            <property name="frameShape">
+                <enum>NoFrame</enum>
+            </property>
+            <property name="title">
+                <string></string>
+            </property>
+            <vbox>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>0</number>
+                </property>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>allUsersRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Allow all users to share folders</string>
+                    </property>
+                    <property name="checked">
+                        <bool>true</bool>
+                    </property>
+                </widget>
+                <widget class="QRadioButton">
+                    <property name="name">
+                        <cstring>groupUsersRadio</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Only users of the '%1' group are allowed to share folders</string>
+                    </property>
+                </widget>
+            </vbox>
+        </widget>
+        <widget class="QGroupBox" row="1" column="0" rowspan="1" colspan="2">
+            <property name="name">
+                <cstring>usersGrpBx</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="title">
+                <string>Users of the '%1' group</string>
+            </property>
+            <grid>
+                <property name="name">
+                    <cstring>unnamed</cstring>
+                </property>
+                <widget class="KListBox" row="0" column="0" rowspan="3" colspan="1">
+                    <property name="name">
+                        <cstring>listBox</cstring>
+                    </property>
+                </widget>
+                <widget class="KPushButton" row="0" column="1">
+                    <property name="name">
+                        <cstring>addBtn</cstring>
+                    </property>
+                    <property name="text">
+                        <string>Add User</string>
+                    </property>
+                </widget>
+                <widget class="KPushButton" row="1" column="1">
+                    <property name="name">
+                        <cstring>removeBtn</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="text">
+                        <string>Remove User</string>
+                    </property>
+                </widget>
+                <spacer row="2" column="1">
+                    <property name="name">
+                        <cstring>spacer6</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Vertical</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>40</height>
+                        </size>
+                    </property>
+                </spacer>
+            </grid>
+        </widget>
+        <spacer row="2" column="0">
+            <property name="name">
+                <cstring>spacer8</cstring>
+            </property>
+            <property name="orientation">
+                <enum>Horizontal</enum>
+            </property>
+            <property name="sizeType">
+                <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>40</width>
+                    <height>20</height>
+                </size>
+            </property>
+        </spacer>
+        <widget class="KPushButton" row="2" column="1">
+            <property name="name">
+                <cstring>otherGroupBtn</cstring>
+            </property>
+            <property name="enabled">
+                <bool>false</bool>
+            </property>
+            <property name="text">
+                <string>Use another group</string>
+            </property>
+        </widget>
+    </grid>
+</widget>
+<connections>
+    <connection>
+        <sender>groupUsersRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>usersGrpBx</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>groupUsersRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>otherGroupBtn</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>listBox</sender>
+        <signal>selectionChanged(QListBoxItem*)</signal>
+        <receiver>GroupConfigGUI</receiver>
+        <slot>listBox_selectionChanged(QListBoxItem*)</slot>
+    </connection>
+</connections>
+<includes>
+    <include location="local" impldecl="in implementation">groupconfiggui.ui.h</include>
+</includes>
+<slots>
+    <slot>listBox_selectionChanged( QListBoxItem * i )</slot>
+</slots>
+<layoutdefaults spacing="6" margin="11"/>
+</UI>

@@ -19,11 +19,15 @@
 #ifndef __fileshare_h__
 #define __fileshare_h__
 
+#include <kfileitem.h>
+
 #include "kcmodule.h"
 class QRadioButton;
 class QLabel;
 class QBoxLayout;
 class ControlCenterGUI;
+class QListViewItem;
+
 class KFileShareConfig  : public KCModule
 {
   Q_OBJECT
@@ -31,17 +35,24 @@ class KFileShareConfig  : public KCModule
  public:
   KFileShareConfig(QWidget *parent, const char *name, const QStringList &);
 
-  void load();
-  void save();
-  void defaults();
-  QString quickHelp() const;
+  virtual void load();
+  virtual void save();
+  virtual void defaults();
+  virtual QString quickHelp() const;
 
  protected:  
    ControlCenterGUI* m_ccgui;
- 
+   QString m_fileShareGroup;
+   bool m_restricted;
+   void showShareDialog(const KFileItemList & files);
  protected slots:
   void configChanged() { emit changed( true ); };
   void updateShareListView(); 
+  void allowedUsersBtnClicked();
+  
+  virtual void addShareBtnClicked();
+  virtual void changeShareBtnClicked();
+  virtual void removeShareBtnClicked();
   
 };
 

@@ -8,15 +8,7 @@
 *****************************************************************************/
 
 
-void ControlCenterGUI::changedSlot()
+void GroupConfigGUI::listBox_selectionChanged( QListBoxItem * i)
 {
-    emit changed();
-}
-
-void ControlCenterGUI::listView_selectionChanged()
-{
-    bool empty = listView->selectedItems ().isEmpty();
-    changeShareBtn->setDisabled(empty );
-    removeShareBtn->setDisabled(empty );
-
+    removeBtn->setEnabled(i);
 }

@@ -24,9 +24,12 @@
 #include <qradiobutton.h>
 #include <qcheckbox.h>
 #include <qtooltip.h>
+#include <qvbox.h>
 
+#include <kpushbutton.h>
 #include <kdebug.h>
 #include <kdialog.h>
+#include <kdialogbase.h>
 #include <kgenericfactory.h>
 #include <klistview.h>
 #include <kiconloader.h>
@@ -36,9 +39,15 @@
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
 #include <kapp.h>
+#include <kuser.h>
+#include <kurl.h>
+
+#include "../advanced/propsdlgplugin/propertiespage.h"
+#include "../advanced/nfs/nfsfile.h"
 
 #include "controlcenter.h"
 #include "fileshare.h"
+#include "groupconfigdlg.h"
 
 typedef KGenericFactory<KFileShareConfig, QWidget > ShareFactory;
 K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
@@ -61,6 +70,8 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
 */
    m_ccgui = new ControlCenterGUI(this);
    connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
+   connect( m_ccgui->allowedUsersBtn, SIGNAL( clicked()), 
+            this, SLOT(allowedUsersBtnClicked()));
    
 
    QString path = QString::fromLatin1("/usr/sbin");
@@ -100,11 +111,20 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
   if(getuid() == 0)
   {
       setButtons(Help|Apply);
+      connect( m_ccgui->addShareBtn, SIGNAL(clicked()),
+               this, SLOT(addShareBtnClicked()));
+      connect( m_ccgui->changeShareBtn, SIGNAL(clicked()),
+               this, SLOT(changeShareBtnClicked()));
+      connect( m_ccgui->removeShareBtn, SIGNAL(clicked()),
+               this, SLOT(removeShareBtnClicked()));
+               
+      m_ccgui->shareBtnPnl->setEnabled(true);        
+      m_ccgui->listView->setSelectionMode(QListView::Extended);       
   }
   else
   {
       setButtons(Help);
-      m_ccgui->shareGrp->setEnabled( false );
+      m_ccgui->shareGrp->setDisabled( true );
   }
 
   load();
@@ -150,18 +170,30 @@ void KFileShareConfig::updateShareListView()
       
 }
 
+void KFileShareConfig::allowedUsersBtnClicked() {
+  GroupConfigDlg dlg(this,m_fileShareGroup,m_restricted);
+  if (dlg.exec() == QDialog::Accepted) {
+      m_fileShareGroup = dlg.fileShareGroup().name();
+      m_restricted = dlg.restricted();
+      configChanged();
+  }      
+
+}
 
 void KFileShareConfig::load()
 {
     KSimpleConfig config(QString::fromLatin1(FILESHARECONF),true);
-    bool restrict = config.readEntry("RESTRICT", "yes") == "yes";
-    m_ccgui->shareGrp->setChecked( ! restrict );
+
+    m_ccgui->shareGrp->setChecked( config.readEntry("FILESHARING", "yes") == "yes" );
+    
+    m_restricted = config.readEntry("RESTRICT", "yes") == "yes";
     
     if (config.readEntry("SHARINGMODE", "simple") == "simple")
         m_ccgui->simpleRadio->setChecked(true);
     else        
         m_ccgui->advancedRadio->setChecked(true);
           
+    m_fileShareGroup = config.readEntry("FILESHAREGROUP", "fileshare");
 
     m_ccgui->sambaChk->setChecked( 
           config.readEntry("SAMBA", "yes") == "yes");
@@ -187,19 +219,29 @@ void KFileShareConfig::save()
         return;
     }        
         
+    
     QTextStream stream(&file);
-    stream << "RESTRICT=";
-    stream << (m_ccgui->shareGrp->isChecked() ? "no" : "yes");        
+    
+    stream << "FILESHARING=";
+    stream << (m_ccgui->shareGrp->isChecked() ? "yes" : "no");        
+    
+    stream << "\nRESTRICT=";
+    stream << (m_restricted ? "yes" : "no");        
         
     stream << "\nSHARINGMODE=";
     stream << (m_ccgui->simpleRadio->isChecked() ? "simple" : "advanced");        
 
+    stream << "\nFILESHAREGROUP=";
+    stream << m_fileShareGroup;    
+    
     stream << "\nSAMBA=";
     stream << (m_ccgui->sambaChk->isChecked() ? "yes" : "no");        
         
     stream << "\nNFS=";
     stream << (m_ccgui->nfsChk->isChecked() ? "yes" : "no");        
                 
+    
+    
     file.close();
 }
 
@@ -215,6 +257,53 @@ QString KFileShareConfig::quickHelp() const
 				"the \"Network File System\" (NFS) or SMB in Konqueror. "
 				"The latter enables you to share your files with Windows(R) "
 				"computers on your network.</p>");
+}
+
+void KFileShareConfig::addShareBtnClicked() {
+  showShareDialog(KFileItemList());
+}
+
+void KFileShareConfig::showShareDialog(const KFileItemList & files) {
+  KDialogBase* dlg = new KDialogBase(this,"sharedlg", true,
+                i18n("Share Folder"), KDialogBase::Ok|KDialogBase::Cancel, 
+                KDialogBase::Ok, true);
+                
+  QVBox* vbox = dlg->makeVBoxMainWidget();
+  
+  PropertiesPage* page = new PropertiesPage(vbox,files,true);
+  if (dlg->exec() == QDialog::Accepted) {
+    if ( page->hasChanged() ) {
+         page->save();
+         updateShareListView();
+    }
+  }  
+  
+}
+
+void KFileShareConfig::changeShareBtnClicked() {
+  KFileItemList files;
+  QPtrList<QListViewItem> items = m_ccgui->listView->selectedItems();
+  
+  QListViewItem* item;
+  for ( item = items.first(); item; item = items.next() ) {
+      files.append(new KFileItem(KURL(items.first()->text(0)),"",0));
+  }
+  
+  showShareDialog(files);
+}
+
+void KFileShareConfig::removeShareBtnClicked() {
+  
+  QPtrList<QListViewItem> items = m_ccgui->listView->selectedItems();
+  QListViewItem *item;
+  NFSFile nfsFile(KNFSShare::instance()->exportsPath());
+  nfsFile.load();
+  for ( item = items.first(); item; item = items.next() ) {
+      nfsFile.removeEntryByPath(item->text(0));
+  }
+  
+  nfsFile.save();
+  updateShareListView();
 }
 
 #include "fileshare.moc"

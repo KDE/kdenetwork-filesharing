@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>600</width>
-            <height>519</height>
+            <width>631</width>
+            <height>540</height>
         </rect>
     </property>
     <property name="caption">
@@ -311,7 +311,7 @@
             <property name="title">
                 <string>Shared Folders</string>
             </property>
-            <vbox>
+            <hbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
@@ -356,7 +356,85 @@
                         <enum>NoSelection</enum>
                     </property>
                 </widget>
-            </vbox>
+                <widget class="QFrame">
+                    <property name="name">
+                        <cstring>shareBtnPnl</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="frameShape">
+                        <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                        <enum>Plain</enum>
+                    </property>
+                    <vbox>
+                        <property name="name">
+                            <cstring>unnamed</cstring>
+                        </property>
+                        <property name="margin">
+                            <number>0</number>
+                        </property>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>addShareBtn</cstring>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Add...</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+A</string>
+                            </property>
+                        </widget>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>removeShareBtn</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>&amp;Remove</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+R</string>
+                            </property>
+                        </widget>
+                        <widget class="KPushButton">
+                            <property name="name">
+                                <cstring>changeShareBtn</cstring>
+                            </property>
+                            <property name="enabled">
+                                <bool>false</bool>
+                            </property>
+                            <property name="text">
+                                <string>C&amp;hange...</string>
+                            </property>
+                            <property name="accel">
+                                <string>Alt+H</string>
+                            </property>
+                        </widget>
+                        <spacer>
+                            <property name="name">
+                                <cstring>spacer2</cstring>
+                            </property>
+                            <property name="orientation">
+                                <enum>Vertical</enum>
+                            </property>
+                            <property name="sizeType">
+                                <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
+                        </spacer>
+                    </vbox>
+                </widget>
+            </hbox>
         </widget>
     </vbox>
 </widget>
@@ -397,6 +475,12 @@
         <receiver>ControlCenterGUI</receiver>
         <slot>changedSlot()</slot>
     </connection>
+    <connection>
+        <sender>listView</sender>
+        <signal>selectionChanged()</signal>
+        <receiver>ControlCenterGUI</receiver>
+        <slot>listView_selectionChanged()</slot>
+    </connection>
 </connections>
 <tabstops>
     <tabstop>sambaChk</tabstop>
@@ -411,6 +495,7 @@
 </signals>
 <slots>
     <slot access="private">changedSlot()</slot>
+    <slot>listView_selectionChanged()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

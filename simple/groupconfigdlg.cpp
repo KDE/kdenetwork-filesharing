@@ -49,16 +49,18 @@ static bool userMod(const QString & user, const QValueList<KUserGroup> & groups)
 
 
 GroupConfigDlg::GroupConfigDlg(QWidget * parent,
-      const QString & fileShareGroup, bool restricted) 
+      const QString & fileShareGroup, bool restricted,
+      bool rootPassNeeded) 
   : KDialogBase(parent,"groupconfigdlg", true,
                 i18n("Allowed Users"), Ok|Cancel, Ok, true) ,
   m_fileShareGroup(fileShareGroup),
-  m_restricted(restricted)               
+  m_restricted(restricted) ,
+  m_rootPassNeeded(rootPassNeeded)              
    
 {
-  initUsers();
   initGUI();
-  updateListBox();
+
+  setFileShareGroup(m_fileShareGroup);
 }
 
 GroupConfigDlg::~GroupConfigDlg() {
@@ -76,7 +78,7 @@ void GroupConfigDlg::initGUI() {
   
   m_gui->allUsersRadio->setChecked(!m_restricted);
   m_gui->groupUsersRadio->setChecked(m_restricted);
-            
+  m_gui->writeAccessChk->setChecked(!m_rootPassNeeded);            
           
   connect( m_gui->addBtn, SIGNAL(clicked()),
            this, SLOT(slotAddUser()));
@@ -177,8 +179,18 @@ bool GroupConfigDlg::removeUser(const KUser & user, const KUserGroup & group) {
   return true;
 }
 
+bool GroupConfigDlg::rootPassNeeded() {
+  return m_rootPassNeeded;
+}
 
 void GroupConfigDlg::slotOk() {
+  m_restricted = m_gui->groupUsersRadio->isChecked();
+  m_rootPassNeeded = ! m_gui->writeAccessChk->isChecked();
+  if (m_restricted && !m_fileShareGroup.isValid()) {
+    KMessageBox::sorry(this,i18n("You have to choose a valid group."));
+    return;
+  }
+
   QValueList<KUser> addedUsers = m_users;
   removeList(addedUsers,m_origUsers);
   QValueList<KUser> removedUsers = m_origUsers;
@@ -193,7 +205,6 @@ void GroupConfigDlg::slotOk() {
     removeUser(*it, m_fileShareGroup);
   }
               
-  m_restricted = m_gui->groupUsersRadio->isChecked();
   
   KDialogBase::slotOk();
 }
@@ -304,11 +315,24 @@ void GroupConfigDlg::slotChangeGroup() {
 
 void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
   m_fileShareGroup = group;
-  m_gui->groupUsersRadio->setText(
+  
+  if (m_fileShareGroup.isValid()) {
+    initUsers();
+    updateListBox();
+    m_gui->groupUsersRadio->setText(
           i18n("Only users of the '%1' group are allowed to share folders")
           .arg(m_fileShareGroup.name()));
-  m_gui->usersGrpBx->setTitle(i18n("Users of the '%1' group")
+    m_gui->usersGrpBx->setTitle(i18n("Users of the '%1' group")
           .arg(m_fileShareGroup.name()));
+    m_gui->otherGroupBtn->setText(i18n("Change Group..."));          
+    m_gui->usersGrpBx->show();
+  } else {
+    m_gui->groupUsersRadio->setText(i18n("Only users of a certain group are allowed to share folders"));
+    m_gui->otherGroupBtn->setText(i18n("Choose Group..."));
+    m_gui->usersGrpBx->hide();
+  }    
+
+  
   
 }
 
@@ -356,6 +380,15 @@ bool GroupConfigDlg::deleteGroup(const QString & s) {
 }
 
 bool GroupConfigDlg::createFileShareGroup(const QString & s) {
+  if (s.isEmpty()) {
+      KMessageBox::sorry(this,i18n("Please choose a valid group."));
+      return false;
+  }
+
+  if (KMessageBox::No == KMessageBox::questionYesNo(this,
+      i18n("This group '%1' does not exit. Should it be created?").arg(s)))
+      return false;
+      
   //debug("CreateFileShareGroup: "+s);
   KProcess proc;
   proc << "groupadd" << s;

@@ -37,7 +37,7 @@
 typedef KGenericFactory<PropsDlgSharePlugin, KPropertiesDialog> PropsDlgSharePluginFactory;
 
 K_EXPORT_COMPONENT_FACTORY( fileshare_propsdlgplugin,
-                            PropsDlgSharePluginFactory("fileshare_propsdlgplugin") );
+                            PropsDlgSharePluginFactory("fileshare_propsdlgplugin") )
 
 class PropsDlgSharePlugin::Private                            
 {

@@ -29,6 +29,7 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <ktempfile.h>
+#include <ksambashare.h>
 
 #include <pwd.h>
 #include <time.h>
@@ -452,28 +453,7 @@ void SambaFile::parseParmStdOutput()
 **/
 QString SambaFile::findSambaConf()
 {
-  KConfig config("ksambaplugin");
-  // Perhaps the user has defined the path
-  config.setGroup("KSambaKonqiPlugin");
-  QString sambaConf = config.readPathEntry("smb.conf");
-
-  if ( QFileInfo(sambaConf).exists() )
-    return sambaConf;
-
-  if ( QFileInfo("/etc/samba/smb.conf").exists() )
-    return "/etc/samba/smb.conf";
-
-  if ( QFileInfo("/etc/smb.conf").exists() )
-    return "/etc/smb.conf";
-
-  if ( QFileInfo("/usr/local/samba/lib/smb.conf").exists() )
-    return "/usr/local/samba/lib/smb.conf";
-
-  if ( QFileInfo("/usr/samba/lib/smb.conf").exists() )
-    return "/usr/samba/lib/smb.conf";
-
-
-  return QString::null;
+    return KSambaShare::instance()->smbConfPath();
 }
 
 void SambaFile::slotSaveJobFinished( KIO::Job * job ) {

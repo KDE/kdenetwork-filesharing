@@ -67,6 +67,7 @@ public:
   void writeValue(const QString & share, const QString & optionName, const QString & value);
   void writeValue(const QString & share, const QString & optionName, bool value);
 
+  SambaShare* newShare(const QString & name);
   SambaShare* newShare(const QString & name, const QString & path);
   SambaShare* newPrinter(const QString & name, const QString & printer);
 

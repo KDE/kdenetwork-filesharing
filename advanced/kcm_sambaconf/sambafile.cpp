@@ -218,31 +218,40 @@ void SambaFile::renameShare(const QString & oldName, const QString & newName)
 
 }
 
-SambaShare* SambaFile::newShare(const QString & name, const QString & path)
+
+SambaShare* SambaFile::newShare(const QString & name)
 {
   if (sambaConfig->find(name))
      return 0L;
 
   SambaShare* share = new SambaShare(name,sambaConfig);
-  share->setValue("path",path);
   sambaConfig->insert(name,share);
 
   changed = true;
+
+  return share;
+
+}
+
+SambaShare* SambaFile::newShare(const QString & name, const QString & path)
+{
+	SambaShare* share = newShare(name);
+
+	if (share)
+	   share->setValue("path",path);
 
   return share;
 }
 
 SambaShare* SambaFile::newPrinter(const QString & name, const QString & printer)
 {
-  if (sambaConfig->find(name))
-     return 0L;
+	SambaShare* share = newShare(name);
 
-  SambaShare* share = new SambaShare(name,sambaConfig);
-  share->setValue("printable",true);
-  share->setValue("printer name",printer);
-  sambaConfig->insert(name,share);
-
-  changed = true;
+	if (share)
+  {
+	  share->setValue("printable",true);
+  	share->setValue("printer name",printer);
+  }
 
   return share;
 }
@@ -456,7 +465,7 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
     for (QMap<QString,QString>::Iterator it2 = entries.begin(); it2 != entries.end(); ++it2 )
     {
        if (it2.data()!="")
-          share->setValue(it2.key(),it2.data());
+          share->setValue(it2.key(),QString(it2.data()));
     }
 
   }

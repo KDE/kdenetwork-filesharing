@@ -23,7 +23,6 @@
 #include <kdialogbase.h>
 #include <qvaluelist.h>
 #include <kuser.h>
-#include <kgroup.h>
 
 class GroupConfigGUI;
 

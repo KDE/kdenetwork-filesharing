@@ -27,7 +27,7 @@
 #include <qhbox.h>
 
 #include <klocale.h>
-#include <kgroup.h>
+#include <kuser.h>
 #include <kdebug.h>
 #include <kmessagebox.h>
 #include <kinputdialog.h>

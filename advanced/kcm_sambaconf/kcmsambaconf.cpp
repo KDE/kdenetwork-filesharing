@@ -172,7 +172,7 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 	: KCModule(parent,name)
 {
   _dictMngr = new DictManager();
-
+  
   load();
   initAdvancedTab();
 };
@@ -462,6 +462,8 @@ void KcmSambaConf::load()
   loadUserTab();
 
   connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
+  connect(_dictMngr, SIGNAL(changed()), this, SLOT(configChanged()));
+
 }
 
 

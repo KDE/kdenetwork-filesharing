@@ -31,7 +31,11 @@
 
 class QString;
 class QComboBox;
+class QFileInfo;
+class SambaShare;
+
 
 void setComboToString(QComboBox* combo,const QString & s);
-
+bool checkIfUnixPermissions(SambaShare* share);
+bool checkPublicPermissions(const QFileInfo & fi, SambaShare* share);
 #endif

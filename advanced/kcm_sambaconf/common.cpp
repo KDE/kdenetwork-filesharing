@@ -29,9 +29,72 @@
 #include <qstring.h>
 #include <qcombobox.h>
 #include <qlistbox.h>
+#include <qfileinfo.h>
+
+#include <kmessagebox.h>
+#include <klocale.h>
+
+#include "passwd.h"
+#include "sambashare.h"
+#include "common.h"
 
 void setComboToString(QComboBox* combo,const QString & s)
 {
   int i = combo->listBox()->index(combo->listBox()->findItem(s,Qt::ExactMatch));
   combo->setCurrentItem(i);
 }
+
+/** 
+ * Checks wether the UNIX permissions fit to the 
+ * permissions specified in the SambaShare.
+ * If there are less permissions on the UNIX side
+ * a message box is shown to inform the user.
+ * @return true if all is ok, false if the user choosed to correct something
+ */
+bool checkIfUnixPermissions(SambaShare* share) {
+  if (!share) 
+     return true;
+     
+  QString path = share->getValue("path");
+  QFileInfo fi(path);
+  
+  if ( ! fi.exists()) 
+     return true;
+  
+  if (! checkPublicPermissions(fi,share))
+     return false;     
+       
+  return true;     
+}
+
+bool checkPublicPermissions(const QFileInfo & fi, SambaShare* share) {
+  bool isPublic = share->getBoolValue("public");
+  if (!isPublic)
+     return true;
+  
+  bool readOnly = share->getBoolValue("read only");
+  QString guestAccount = share->getValue("guest account");
+  
+  if (!readOnly) {
+  
+    if (! ((fi.permission(QFileInfo::WriteOther)) ||
+           (fi.permission(QFileInfo::WriteUser) && guestAccount == fi.owner()) ||
+           (fi.permission(QFileInfo::WriteGroup) && isUserInGroup(guestAccount, fi.group())))
+       )
+    {       
+       if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
+         0L,i18n(
+           "<qt>You have specified public write access for this directory, but "
+           "the guest account <i>%1</i> doesn't have UNIX write permissions !<br>" 
+           "Do you want to continue nevertheless ?</qt>").arg(guestAccount)
+           ,i18n("Warning")
+           ,KStdGuiItem::cont()
+           ,"KSambaPlugin_guestAccountHasNoWritePermissionsWarning"))
+         return false;
+     }   
+  }
+  
+  return true;
+}
+
+

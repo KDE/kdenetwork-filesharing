@@ -4,6 +4,8 @@
     begin                : Mon Apr  8 13:35:56 CEST 2002
     copyright            : (C) 2002 by Christian Nitschkowski
     email                : segfault_ii@web.de
+    copyright            : (C) 2002-2003 by Jan Schäfer
+    email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
 /******************************************************************************
@@ -110,13 +112,13 @@ class KcmSambaConf: public KCModule
     int getSocketIntValue( const QString & str, const QString & name );
     QString socketOptions();
     void setComboIndexToValue(QComboBox* box, const QString & value, SambaShare* share);
-    void setComboFromAutoValue(QComboBox* box, const QString & key, SambaShare* share); 
 
-    void loadBaseSettings(SambaShare*);
-    void loadDomain(SambaShare* );
+    void loadBaseSettings(SambaShare*s=0L);
     void loadSecurity(SambaShare* );
     void loadLogging(SambaShare* );
     void loadTuning(SambaShare* );
+    void loadDomain(SambaShare* );
+    void loadWins(SambaShare* );
     void loadPrinting(SambaShare* );
     void loadFilenames(SambaShare* );
     void loadLocking(SambaShare* );
@@ -129,6 +131,7 @@ class KcmSambaConf: public KCModule
     void loadNetbios(SambaShare* );
     void loadVFS(SambaShare* );
     void loadBrowsing(SambaShare* );
+    void loadCommands(SambaShare*);
     void loadMisc(SambaShare* );
     void loadDebug(SambaShare* );
     void loadLDAP(SambaShare*);

@@ -72,7 +72,7 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
 {
   propDialog = dlg;
   
-  kdWarning() << "KSambaPlugin : " << "Starting Konqueror plugin on " << propDialog->kurl().url() << endl;
+//  kdWarning() << "KSambaPlugin : " << "Starting Konqueror plugin on " << propDialog->kurl().url() << endl;
 
   smbconf = SambaFile::findSambaConf();
 	sharePath = propDialog->kurl().path();
@@ -80,38 +80,45 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   _share = 0L;
 
   if (smbconf == "")
-    kdWarning() << "KSambaPlugin : " << "Sambafile coudn't be found !" << endl;
+    kdDebug() << "KSambaPlugin : " << "Sambafile coudn't be found !" << endl;
   else
-    kdWarning() << "KSambaPlugin : " << "Sambafile is : " << smbconf << endl;
+    kdDebug() << "KSambaPlugin : " << "Sambafile is : " << smbconf << endl;
     
-  kdWarning() << "KSambaPlugin : " << "Check if we have a local directory ..." << endl;
+//  kdWarning() << "KSambaPlugin : " << "Check if we have a local directory ..." << endl;
   
   // Only accept local files
   if (smbconf != "" && !propDialog->kurl().isLocalFile())
   {
-    kdWarning() << "KSambaPlugin : " << "We have a non local directory " << endl;
+    //kdWarning() << "KSambaPlugin : " << "We have a non local directory " << endl;
 
   	// Except smb files
   	if (propDialog->kurl().protocol().lower()=="smb")
     {
-      kdWarning() << "KSambaPlugin : " << "Path is an smb protocol " << endl;
+      //kdWarning() << "KSambaPlugin : " << "Path is an smb protocol " << endl;
 
       _sambaFile = new SambaFile(smbconf,false);
+      if ( ! _sambaFile->load() )
+      {
+        KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(smbconf),
+                              i18n("Error while opening file"));
+        return;                       
+      }
+      
       SambaShare* globals = _sambaFile->getShare("global");
 
       QString *s = globals->find("netbios name");
       if (!s) {
-         kdWarning() << "KSambaPlugin : " << "Coudn't find netbios name ! Aborting. " << endl;
+//         kdWarning() << "KSambaPlugin : " << "Coudn't find netbios name ! Aborting. " << endl;
 				 return;
       }
-      kdWarning() << "KSambaPlugin : " << "Netbios name is " << s->lower() << endl;
-      kdWarning() << "KSambaPlugin : " << "Host of file is " << propDialog->kurl().host().lower() << endl;
+  //    kdWarning() << "KSambaPlugin : " << "Netbios name is " << s->lower() << endl;
+    //  kdWarning() << "KSambaPlugin : " << "Host of file is " << propDialog->kurl().host().lower() << endl;
          
       // If we are on a smb directory of our host get it.
      	if (propDialog->kurl().host().lower() != "localhost" &&
           propDialog->kurl().host().lower() !=s->lower())
       {
-         kdWarning() << "KSambaPlugin : " << "No file of our host, aborting " << endl;
+      //   kdWarning() << "KSambaPlugin : " << "No file of our host, aborting " << endl;
       	 return;
       }
 
@@ -120,20 +127,20 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
       QString path = _share->getValue("path",false);
 
       if (path.isEmpty()) {
-         kdWarning() << "KSambaPlugin : " << "Path entry is empty " << endl;
+        // kdWarning() << "KSambaPlugin : " << "Path entry is empty " << endl;
       	 return;
       }
       
-      kdWarning() << "KSambaPlugin : " << "Local path : " << path << endl;
+//      kdWarning() << "KSambaPlugin : " << "Local path : " << path << endl;
 
       sharePath = path;
     }
     else {
-       kdWarning() << "KSambaPlugin : " << "No local file and not the smb protocol, aborting " << endl;
+  //     kdWarning() << "KSambaPlugin : " << "No local file and not the smb protocol, aborting " << endl;
   		 return;
     }
   } else {
-    kdWarning() << "KSambaPlugin : " << "It is a local file or smbconf was not found " << endl;
+ //   kdWarning() << "KSambaPlugin : " << "It is a local file or smbconf was not found " << endl;
   }
 
   frame = propDialog->addPage(i18n("Sam&ba"));
@@ -150,11 +157,11 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   stack->addWidget(configWidget,1);
 
   if (smbconf == "") {
-     kdWarning() << "Smbconf was not found show configWidget" << endl;
+   //  kdWarning() << "Smbconf was not found show configWidget" << endl;
      stack->raiseWidget(configWidget);
   }
   else {
-     kdWarning() << "Smbconf was found show shareWidget"<< endl;
+     //kdWarning() << "Smbconf was found show shareWidget"<< endl;
   	 stack->raiseWidget(shareWidget);
   }
 
@@ -201,6 +208,13 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
     if (!_sambaFile)
        _sambaFile = new SambaFile(smbconf,false);
 
+    if ( ! _sambaFile->openFile() )  {
+        KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(smbconf),
+                              i18n("Error while opening file"));
+      return shareWidget;                       
+    }
+      
+       
     QString shareName = _sambaFile->findShareByPath(sharePath);
 
 

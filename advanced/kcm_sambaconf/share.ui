@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KcmShareDlg</class>
 <comment>
 /******************************************************************************
@@ -1877,9 +1877,6 @@ Only change something if you know what you are doing.</string>
                                                     <property name="text">
                                                         <string>Hide traili&amp;ng dot</string>
                                                     </property>
-                                                    <property name="accel">
-                                                        <string>Alt+N</string>
-                                                    </property>
                                                 </widget>
                                             </vbox>
                                         </widget>
@@ -2248,89 +2245,62 @@ Only change something if you know what you are doing.</string>
                                             <property name="title">
                                                 <string>O&amp;plocks</string>
                                             </property>
-                                            <widget class="QCheckBox">
+                                            <grid>
                                                 <property name="name">
-                                                    <cstring>level2OplocksChk</cstring>
+                                                    <cstring>unnamed</cstring>
                                                 </property>
-                                                <property name="geometry">
-                                                    <rect>
-                                                        <x>11</x>
-                                                        <y>21</y>
-                                                        <width>149</width>
-                                                        <height>20</height>
-                                                    </rect>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Le&amp;vel2 oplocks</string>
-                                                </property>
-                                            </widget>
-                                            <widget class="KIntSpinBox">
-                                                <property name="name">
-                                                    <cstring>oplockContentionLimitSpin</cstring>
-                                                </property>
-                                                <property name="geometry">
-                                                    <rect>
-                                                        <x>166</x>
-                                                        <y>47</y>
-                                                        <width>103</width>
-                                                        <height>22</height>
-                                                    </rect>
-                                                </property>
-                                                <property name="buttonSymbols">
-                                                    <enum>UpDownArrows</enum>
-                                                </property>
-                                                <property name="maxValue">
-                                                    <number>2147483647</number>
-                                                </property>
-                                            </widget>
-                                            <spacer>
-                                                <property name="name">
-                                                    <cstring>spacer23</cstring>
-                                                </property>
-                                                <property name="orientation">
-                                                    <enum>Horizontal</enum>
-                                                </property>
-                                                <property name="sizeType">
-                                                    <enum>Expanding</enum>
-                                                </property>
-                                                <property name="sizeHint">
-                                                    <size>
-                                                        <width>299</width>
-                                                        <height>20</height>
-                                                    </size>
-                                                </property>
-                                                <property name="geometry">
-                                                    <rect>
-                                                        <x>275</x>
-                                                        <y>48</y>
-                                                        <width>299</width>
-                                                        <height>20</height>
-                                                    </rect>
-                                                </property>
-                                            </spacer>
-                                            <widget class="QLabel">
-                                                <property name="name">
-                                                    <cstring>TextLabel5_3_3_2_2</cstring>
-                                                </property>
-                                                <property name="geometry">
-                                                    <rect>
-                                                        <x>11</x>
-                                                        <y>47</y>
-                                                        <width>149</width>
-                                                        <height>22</height>
-                                                    </rect>
-                                                </property>
-                                                <property name="font">
-                                                    <font>
-                                                    </font>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Oplock contention li&amp;mit:</string>
-                                                </property>
-                                                <property name="buddy" stdset="0">
-                                                    <cstring>oplockContentionLimitSpin</cstring>
-                                                </property>
-                                            </widget>
+                                                <widget class="KIntSpinBox" row="1" column="1">
+                                                    <property name="name">
+                                                        <cstring>oplockContentionLimitSpin</cstring>
+                                                    </property>
+                                                    <property name="buttonSymbols">
+                                                        <enum>UpDownArrows</enum>
+                                                    </property>
+                                                    <property name="maxValue">
+                                                        <number>2147483647</number>
+                                                    </property>
+                                                </widget>
+                                                <spacer row="1" column="2">
+                                                    <property name="name">
+                                                        <cstring>spacer23</cstring>
+                                                    </property>
+                                                    <property name="orientation">
+                                                        <enum>Horizontal</enum>
+                                                    </property>
+                                                    <property name="sizeType">
+                                                        <enum>Expanding</enum>
+                                                    </property>
+                                                    <property name="sizeHint">
+                                                        <size>
+                                                            <width>299</width>
+                                                            <height>20</height>
+                                                        </size>
+                                                    </property>
+                                                </spacer>
+                                                <widget class="QLabel" row="1" column="0">
+                                                    <property name="name">
+                                                        <cstring>TextLabel5_3_3_2_2</cstring>
+                                                    </property>
+                                                    <property name="font">
+                                                        <font>
+                                                        </font>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Oplock contention li&amp;mit:</string>
+                                                    </property>
+                                                    <property name="buddy" stdset="0">
+                                                        <cstring>oplockContentionLimitSpin</cstring>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QCheckBox" row="0" column="0">
+                                                    <property name="name">
+                                                        <cstring>level2OplocksChk</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Le&amp;vel2 oplocks</string>
+                                                    </property>
+                                                </widget>
+                                            </grid>
                                         </widget>
                                         <widget class="QCheckBox">
                                             <property name="name">

@@ -29,7 +29,7 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>600</width>
+            <width>664</width>
             <height>460</height>
         </rect>
     </property>
@@ -48,14 +48,14 @@
         </property>
         <widget class="QTabWidget">
             <property name="name">
-                <cstring>tabs</cstring>
+                <cstring>mainTab</cstring>
             </property>
             <widget class="QWidget">
                 <property name="name">
                     <cstring>base</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Base settings</string>
+                    <string>&amp;Base settings</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -308,7 +308,7 @@
                     <cstring>shareTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Shares</string>
+                    <string>&amp;Shares</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -453,7 +453,7 @@
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Printers</string>
+                    <string>&amp;Printers</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -598,7 +598,7 @@
                     <cstring>security</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Security</string>
+                    <string>Se&amp;curity</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -1141,7 +1141,7 @@
                     <cstring>wdomain</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Domain / Wins</string>
+                    <string>&amp;Domain / Wins</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -1495,7 +1495,7 @@
                     <cstring>advanced</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Advanced</string>
+                    <string>&amp;Advanced</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -2109,6 +2109,667 @@
                         </property>
                     </spacer>
                 </vbox>
+            </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>P&amp;rotocol</string>
+                </attribute>
+                <grid>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <spacer row="1" column="0">
+                        <property name="name" stdset="0">
+                            <cstring>Spacer16</cstring>
+                        </property>
+                        <property name="orientation">
+                            <enum>Vertical</enum>
+                        </property>
+                        <property name="sizeType">
+                            <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                    </spacer>
+                    <widget class="QLayoutWidget" row="0" column="1">
+                        <property name="name">
+                            <cstring>Layout28</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox10</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>10</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="title">
+                                    <string>Protocol options</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QCheckBox" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>readBmpxChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>read bmpx</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>largeReadWriteChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>large readwrite</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>readRawChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>read raw</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>CheckBox33</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>time server</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>ntPipeSupportChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>nt pipe support</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>ntSmbSupportChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>nt smb support</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>ntAclSupportChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>nt acl support</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>writeRawChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>write raw</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <spacer row="1" column="2">
+                                        <property name="name" stdset="0">
+                                            <cstring>Spacer19_2</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </grid>
+                            </widget>
+                            <widget class="QFrame">
+                                <property name="name">
+                                    <cstring>Frame3</cstring>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>10</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>Box</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>Sunken</enum>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel" row="4" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4_2_4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max wins ttl</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4_2_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max ttl</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4_2_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max packet</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>maxPacketInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>2147483647</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="2">
+                                        <property name="name">
+                                            <cstring>TextLabel6_5</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>sec</string>
+                                            <comment>seconds</comment>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>maxTtlInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>2147483647</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="4" column="2">
+                                        <property name="name">
+                                            <cstring>TextLabel6_5_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>sec</string>
+                                            <comment>seconds</comment>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="4" column="1">
+                                        <property name="name">
+                                            <cstring>maxWinsTtlInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>2147483647</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="5" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4_2_5</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Min wins ttl</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="5" column="2">
+                                        <property name="name">
+                                            <cstring>TextLabel6_5_2_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>sec</string>
+                                            <comment>seconds</comment>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="5" column="1">
+                                        <property name="name">
+                                            <cstring>minWinsTtlInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>2147483647</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max xmit</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel4_4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max mux</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>maxMuxInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>maxXmitInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                        <property name="maxValue">
+                                            <number>65535</number>
+                                        </property>
+                                    </widget>
+                                </grid>
+                            </widget>
+                        </vbox>
+                    </widget>
+                    <widget class="QLayoutWidget" row="0" column="0">
+                        <property name="name">
+                            <cstring>Layout34</cstring>
+                        </property>
+                        <vbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox9</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Protocol version</string>
+                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>11</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QComboBox" row="2" column="1">
+                                        <item>
+                                            <property name="text">
+                                                <string>NT1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN2</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>CORE</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>COREPLUS</string>
+                                            </property>
+                                        </item>
+                                        <property name="name">
+                                            <cstring>protocolCombo</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>announceVersionEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>4.2</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel2_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Announce version</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="4" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel1_3_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Min Protocol</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QComboBox" row="3" column="1">
+                                        <item>
+                                            <property name="text">
+                                                <string>NT1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN2</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>CORE</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>COREPLUS</string>
+                                            </property>
+                                        </item>
+                                        <property name="name">
+                                            <cstring>maxProtocolCombo</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel3_6</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Announce as</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel1_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Protocol</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel1_3_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Max protocol</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QComboBox" row="4" column="1">
+                                        <item>
+                                            <property name="text">
+                                                <string>NT1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN2</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>LANMAN1</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>CORE</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>COREPLUS</string>
+                                            </property>
+                                        </item>
+                                        <property name="name">
+                                            <cstring>minProtocolCombo</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <widget class="QComboBox" row="0" column="1">
+                                        <item>
+                                            <property name="text">
+                                                <string>NT</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>NT Workstation</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>win95</string>
+                                            </property>
+                                        </item>
+                                        <item>
+                                            <property name="text">
+                                                <string>WfW</string>
+                                            </property>
+                                        </item>
+                                        <property name="name">
+                                            <cstring>announceAsCombo</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                    </widget>
+                                    <spacer row="0" column="2">
+                                        <property name="name" stdset="0">
+                                            <cstring>Spacer18</cstring>
+                                        </property>
+                                        <property name="orientation">
+                                            <enum>Horizontal</enum>
+                                        </property>
+                                        <property name="sizeType">
+                                            <enum>Expanding</enum>
+                                        </property>
+                                        <property name="sizeHint">
+                                            <size>
+                                                <width>20</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                    </spacer>
+                                </grid>
+                            </widget>
+                            <widget class="QLayoutWidget">
+                                <property name="name">
+                                    <cstring>Layout32</cstring>
+                                </property>
+                                <hbox>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QLabel">
+                                        <property name="name">
+                                            <cstring>TextLabel5_4</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Name resolve order</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit">
+                                        <property name="name">
+                                            <cstring>nameResolveOrderEdit</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>7</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>150</width>
+                                                <height>0</height>
+                                            </size>
+                                        </property>
+                                        <property name="text">
+                                            <string>lmhosts host wins bcast</string>
+                                        </property>
+                                    </widget>
+                                </hbox>
+                            </widget>
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer15</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </vbox>
+                    </widget>
+                </grid>
             </widget>
         </widget>
     </vbox>

@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>533</width>
-            <height>346</height>
+            <height>351</height>
         </rect>
     </property>
     <property name="caption">
@@ -1119,6 +1119,18 @@
         <receiver>shareNameEdit</receiver>
         <slot>setDisabled(bool)</slot>
     </connection>
+    <connection>
+        <sender>buttonCancel</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmPrinterDlg</receiver>
+        <slot>reject()</slot>
+    </connection>
+    <connection>
+        <sender>buttonOk</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmPrinterDlg</receiver>
+        <slot>accept()</slot>
+    </connection>
 </connections>
 <tabstops>
     <tabstop>printerAdminEdit</tabstop>
@@ -1144,6 +1156,8 @@
 </includes>
 <slots>
     <slot>init()</slot>
+    <slot>accept()</slot>
+    <slot>reject()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

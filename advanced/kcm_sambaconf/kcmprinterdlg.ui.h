@@ -11,3 +11,13 @@ void KcmPrinterDlg::init()
 {
     printerPixLbl->setPixmap(DesktopIcon("printer1"));
 }
+
+void KcmPrinterDlg::accept()
+{
+    QDialog::accept();
+}
+
+void KcmPrinterDlg::reject()
+{
+    QDialog::reject();
+}

@@ -29,8 +29,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>581</width>
-            <height>530</height>
+            <width>608</width>
+            <height>545</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -44,12 +44,12 @@
     <property name="caption">
         <string>Form1</string>
     </property>
-    <hbox>
+    <vbox>
         <property name="name">
             <cstring>unnamed</cstring>
         </property>
         <property name="margin">
-            <number>0</number>
+            <number>11</number>
         </property>
         <property name="spacing">
             <number>6</number>
@@ -5438,7 +5438,7 @@ This is only available if the SSL libraries have been compiled on your system an
                 </hbox>
             </widget>
         </widget>
-    </hbox>
+    </vbox>
 </widget>
 <images>
     <image name="image0">
@@ -5571,12 +5571,6 @@ This is only available if the SSL libraries have been compiled on your system an
         <signal>activated(int)</signal>
         <receiver>KcmInterface</receiver>
         <slot>lmAnnounceCombo_activated(int)</slot>
-    </connection>
-    <connection>
-        <sender>mapToGuestCombo</sender>
-        <signal>activated(int)</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>mapToGuestCombo_activated(int)</slot>
     </connection>
     <connection>
         <sender>allowGuestLoginsChk</sender>
@@ -5715,6 +5709,36 @@ This is only available if the SSL libraries have been compiled on your system an
         <signal>toggled(bool)</signal>
         <receiver>microsecondsChk</receiver>
         <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>mapToGuestCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>mapToGuestCombo</sender>
+        <signal>activated(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>mapToGuestCombo_activated(int)</slot>
+    </connection>
+    <connection>
+        <sender>passwordLevelSpin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>usernameMapUrlRq</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>interfacesEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
     </connection>
 </connections>
 <includes>

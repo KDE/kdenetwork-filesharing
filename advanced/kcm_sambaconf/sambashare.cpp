@@ -72,7 +72,7 @@ bool SambaShare::setName(const QString & name, bool testWetherExists)
  * if no value is set yet the default value
  * will be returned.
  **/
-QString SambaShare::getValue(const QString & name, bool globalValue=true, bool defaultValue=true)
+QString SambaShare::getValue(const QString & name, bool globalValue, bool defaultValue)
 {
 	QString synonym = getSynonym(name);
 
@@ -90,19 +90,19 @@ QString SambaShare::getValue(const QString & name, bool globalValue=true, bool d
 	else
   	 ret = "";
 
-	if (name == "read only")
+	if (name=="writable" || name=="write ok" || name=="writeable")
   	 ret = SambaFile::textFromBool( ! SambaFile::boolFromText(ret) );
 
   return ret;
 }
 
-bool SambaShare::getBoolValue(const QString & name, bool globalValue=true, bool defaultValue=true)
+bool SambaShare::getBoolValue(const QString & name, bool globalValue, bool defaultValue)
 {
 	return SambaFile::boolFromText(getValue(name,globalValue,defaultValue));
 }
 
 
-QString SambaShare::getGlobalValue(const QString & name, bool defaultValue=true)
+QString SambaShare::getGlobalValue(const QString & name, bool defaultValue)
 {
 	if (!_sambaFile)
   	 return getValue(name,false,defaultValue);
@@ -145,9 +145,9 @@ QString SambaShare::getSynonym(const QString & name) const
 	if (lname == "printer") return "printer name";
 	if (lname == "protocol") return "max protocol";
 	if (lname == "public") return "guest ok";
-	if (lname == "writable") return "writeable";
-	if (lname == "write ok") return "writeable";
-	if (lname == "read only") return "writeable";
+	if (lname == "writable") return "read only";
+	if (lname == "write ok") return "read only";
+	if (lname == "read only") return "read only";
 	if (lname == "root") return "root directory";
 	if (lname == "root") return "root dir";
 	if (lname == "timestamp logs") return "debug timestamp";
@@ -157,7 +157,7 @@ QString SambaShare::getSynonym(const QString & name) const
   return lname;
 }
 
-void SambaShare::setValue(const QString & name, const QString & value, bool globalValue=true, bool defaultValue=true)
+void SambaShare::setValue(const QString & name, const QString & value, bool globalValue, bool defaultValue)
 {
   QString synonym = getSynonym(name);
 
@@ -170,9 +170,9 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   if (getName().lower() == "global")
      globalValue = false;
 
-  if (name=="read only")
+  if (name=="writable" || name=="write ok" || name=="writeable")
   {
-		synonym = "writeable";
+		synonym = "read only";
     newValue = SambaFile::textFromBool(!SambaFile::boolFromText(value));
   }
 
@@ -212,12 +212,12 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 	replace(synonym,new QString(newValue));
 }
 
-void SambaShare::setValue(const QString & name, bool value, bool globalValue=true, bool defaultValue=true)
+void SambaShare::setValue(const QString & name, bool value, bool globalValue, bool defaultValue)
 {
 	setValue(name,SambaFile::textFromBool(value),globalValue, defaultValue);
 }
 
-void SambaShare::setValue(const QString & name, int value, bool globalValue=true, bool defaultValue=true)
+void SambaShare::setValue(const QString & name, int value, bool globalValue, bool defaultValue)
 {
 	setValue(name,QString::number(value),globalValue, defaultValue);
 }

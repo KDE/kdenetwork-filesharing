@@ -94,6 +94,7 @@ protected slots:
   void slotSharedChanged(int state);
   void slotSpecifySmbConf();
   void moreOptionsBtnPressed();
+  void changedSlot();
 
 private: // Private methods
   QString findSambaConf() const;

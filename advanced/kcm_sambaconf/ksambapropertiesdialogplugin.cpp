@@ -166,10 +166,6 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 
   shareWidget = new KonqInterface(parent);
 
-  connect(shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
-  connect(shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
-  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
-  				 this, SLOT(moreOptionsBtnPressed()));
 
 	if ( QFileInfo(smbconf).exists() )
 	{
@@ -196,6 +192,11 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
       initValues();
     }
 	}
+  
+  connect(shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
+  connect(shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
+  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
+  				 this, SLOT(moreOptionsBtnPressed()));
   
   return shareWidget;
 }
@@ -365,8 +366,12 @@ void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 
   // We already have the base settings
   dlg->_tabs->removePage(dlg->baseTab);
+  
+  connect( dlg, SIGNAL(changed()), this, SIGNAL(changed()));
   dlg->exec();
-
+//  disconnect( dlg, SIGNAL(changed()), this, SLOT(changedSlot()));
+  delete dlg;
+  
   initValues();
 }
 
@@ -391,6 +396,8 @@ void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
 
 }
 
-
+void KSambaPropertiesDialogPlugin::changedSlot() {
+  emit changed();
+}
 
 #include "ksambapropertiesdialogplugin.moc"

@@ -141,7 +141,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
     x = x+w+margin;
   }
 
-  if (_share->getBoolValue("writable"))
+  if (!_share->getBoolValue("read only"))
   {
     p.drawPixmap(x,0,SmallIcon("edit"));
     x = x+w+margin;
@@ -268,12 +268,13 @@ void KcmSambaConf::editShare()
   	 return;
 
   ShareDlgImpl* dlg = new ShareDlgImpl(_interface,item->getShare());
+  connect(dlg, SIGNAL(changed()), this, SLOT(configChanged()));
   dlg->exec();
-  
   item->updateShare();
+  disconnect(dlg, SIGNAL(changed()), this, SLOT(configChanged()));
 
-	emit changed(true);
   delete dlg;
+
 }
 
 void KcmSambaConf::addShare()

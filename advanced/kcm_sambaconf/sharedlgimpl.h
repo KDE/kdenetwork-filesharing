@@ -86,8 +86,11 @@ protected slots:
 	virtual void accept();
   virtual void homeChkToggled(bool);
   virtual void accessModifierBtnClicked();
+  virtual void changedSlot();
 
   void tabChangedSlot(QWidget* w);
+signals:
+  void changed();
 };
 
 

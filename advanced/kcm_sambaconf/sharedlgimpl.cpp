@@ -67,6 +67,7 @@
 #include <kjanuswidget.h>
 
 #include <assert.h>
+#include <iostream.h>
 
 #include "smbpasswdfile.h"
 #include "sambafile.h"
@@ -112,9 +113,9 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("available",availableBaseChk);
   _dictMngr->add("browseable",browseableBaseChk);
   _dictMngr->add("public",publicBaseChk);
-    
-  readOnlyBaseChk->setChecked( ! _share->getBoolValue("writeable") );
 
+  _dictMngr->add("read only",readOnlyBaseChk);
+      
   // User settings
 
   _userTab = new UserTabImpl(this,_share);
@@ -142,8 +143,11 @@ void ShareDlgImpl::initDialog()
   // Security tab
   
   _dictMngr->add("guest only",guestOnlyChk);
-  _dictMngr->add("only user",onlyUserChk);
   _dictMngr->add("hosts allow",hostsAllowEdit);
+  
+  _dictMngr->add("only user",onlyUserChk);
+  _dictMngr->add("username",userNameEdit);  
+  
   
   guestAccountCombo->insertStringList( getUnixUsers() );
   setComboToString(guestAccountCombo,_share->getValue("guest account"));
@@ -190,11 +194,37 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("sync always",syncAlwaysChk);
   _dictMngr->add("status",statusChk);
 
+  // VFS
+  
+  _dictMngr->add("vfs object",vfsObjectEdit);
+  _dictMngr->add("vfs options",vfsOptionsEdit);
+  _dictMngr->add("msdfs root",msdfsRootChk);
+
+  // Misc
+  
+  _dictMngr->add("preexec",preexecEdit);
+  _dictMngr->add("postexec",postexecEdit);
+  _dictMngr->add("root preexec",rootPreexecEdit);
+  _dictMngr->add("root postexec",rootPostexecEdit);
+  
+  _dictMngr->add("preexec close",preexecCloseChk);
+  _dictMngr->add("root preexec close",rootPreexecCloseChk);
+  
+  _dictMngr->add("volume",volumeEdit);
+  _dictMngr->add("fstype",fstypeEdit);
+  _dictMngr->add("magic script",magicScriptEdit);
+  _dictMngr->add("magic output",magicOutputEdit);
+  _dictMngr->add("dont descend",dontDescendEdit);
+  _dictMngr->add("set directory",setDirectoryChk);
+  _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
+    
+  
   _dictMngr->load( _share );
   
   _fileView = 0L;
 
   connect( _tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
+  connect(_dictMngr, SIGNAL(changed()), this, SLOT(changedSlot()));
 }
 
 ShareDlgImpl::~ShareDlgImpl()
@@ -317,8 +347,6 @@ void ShareDlgImpl::accept()
 	else
     _share->setName(shareNameEdit->text());
 
-  _share->setValue("writeable", ! readOnlyBaseChk->isChecked( ) );
-
   // User settings
 
   _userTab->save();
@@ -398,5 +426,8 @@ void ShareDlgImpl::accessModifierBtnClicked()
   dlg.exec();
 }
 
+void ShareDlgImpl::changedSlot() {
+  emit changed();
+}
 
 #include "sharedlgimpl.moc"

@@ -159,3 +159,21 @@ void KcmShareDlg::accessModifierBtnClicked()
   
     
 }
+
+
+void KcmShareDlg::changedSlot()
+{
+
+}
+
+
+void KcmShareDlg::publicBaseChk_toggled( bool b)
+{
+    guestOnlyChk->setEnabled(b);
+    if (!b) {
+       guestOnlyChk->setChecked(false);
+   }
+    guestAccountCombo->setEnabled(b);
+    guestAccountLbl->setEnabled(b);
+    
+}

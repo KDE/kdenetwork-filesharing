@@ -137,9 +137,9 @@ QString SambaShare::getSynonym(const QString & name) const
   return lname;
 }
 
-void SambaShare::setValue(const QString & name, const QString & value)
+void SambaShare::setValue(const QString & name, const QString & value, bool globalValue=true, bool defaultValue=true)
 {
-	QString synonym = getSynonym(name);
+  QString synonym = getSynonym(name);
 
   QString newValue = value;
 
@@ -149,13 +149,34 @@ void SambaShare::setValue(const QString & name, const QString & value)
     newValue = SambaFile::textFromBool(!SambaFile::boolFromText(value));
   }
 
+  QString global = "";
+
+	if (globalValue)
+  {
+		global = getGlobalValue(synonym, false);
+
+  	if ( newValue == global )
+    {
+			remove(synonym);
+			return;
+    }
+  }
+
+  if (defaultValue && global=="")
+  {
+  	if ( newValue == getDefaultValue(synonym) )
+    {
+			remove(synonym);
+    	return;
+   	}
+  }
 
 	replace(synonym,new QString(newValue));
 }
 
-void SambaShare::setValue(const QString & name, bool value)
+void SambaShare::setValue(const QString & name, bool value, bool globalValue=true, bool defaultValue=true)
 {
-	replace(name,new QString(SambaFile::textFromBool(value)));
+	setValue(name,SambaFile::textFromBool(value),globalValue, defaultValue);
 }
 
 /**
@@ -185,9 +206,8 @@ QString SambaShare::getDefaultValue(const QString & name) const
 	if (lname == "force directory security mode") return "00";
 	if (lname == "inherit permissions") return "no";
 	if (lname == "guest ok") return "no";
-	if (lname == "public") return "no";
 	if (lname == "guest only") return "no";
-	if (lname == "only user") return "no";
+	if (lname == "user only") return "no";
 
   // Logging options
 
@@ -201,7 +221,7 @@ QString SambaShare::getDefaultValue(const QString & name) const
 	if (lname == "write cache size") return "0";
   
   // Filename Handling
-  
+
 	if (lname == "default case") return "lower";
 	if (lname == "case sensitive") return "no";
 	if (lname == "preserve case") return "yes";

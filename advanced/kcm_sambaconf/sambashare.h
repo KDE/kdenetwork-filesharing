@@ -92,13 +92,18 @@ public:
    * Sets the parameter name to the given value
    * @param value the value of the parameter
    * @param name the name of the parameter
+   * @param globalValue if true then the value is only set if it is different from the global value
+   * @param defaultValue if true then the value is only set if it is different from the default value
+   *                     if globalValue and defaultValue is true then the value is set when a global value
+   *                     exists and it it is different from it. If no global value exists then it is only
+   *                     set if different from the default value.
    **/
-  void setValue(const QString & name,const QString & value);
+  void setValue(const QString & name,const QString & value, bool globalValue=true, bool defaultValue=true);
 
   /**
    * Same as above but for boolean parameters
    **/
-  void setValue(const QString & name, bool value);
+  void setValue(const QString & name, bool value, bool globalValue=true, bool defaultValue=true);
 
   /**
    * Returns the default value of the parameter

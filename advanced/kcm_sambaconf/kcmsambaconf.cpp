@@ -137,9 +137,9 @@ QPixmap ShareListViewItem::createPropertyPixmap()
   return QPixmap(pix);
 }
 
-KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name):KCModule(parent,name)
+KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
+	: KCModule(parent,name)
 {
-
 	load();
 };
 
@@ -158,6 +158,9 @@ void KcmSambaConf::editShare()
   ShareDlgImpl* dlg = new ShareDlgImpl(_interface,item->getShare());
   dlg->exec();
   
+  item->updateShare();
+
+	emit changed(true);
   delete dlg;
 }
 
@@ -172,6 +175,10 @@ void KcmSambaConf::addShare()
 
   if (dlg->result() == QDialog::Rejected )
   	 removeShare();
+  else
+	   emit changed(true);
+
+  delete dlg;
 }
 
 void KcmSambaConf::removeShare()
@@ -184,6 +191,8 @@ void KcmSambaConf::removeShare()
 	SambaShare *share = item->getShare();
   delete item;
   _sambaFile->removeShare(share);
+
+  emit changed(true);
 }
 
 
@@ -197,12 +206,10 @@ void KcmSambaConf::editPrinter()
   PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,item->getShare());
   dlg->exec();
   
-  if (dlg->result() == QDialog::Accepted)
-  {
-  	item->updateShare();
-  }
-
+	item->updateShare();
   delete dlg;
+
+  emit changed(true);
 }
 
 void KcmSambaConf::addPrinter()
@@ -216,6 +223,10 @@ void KcmSambaConf::addPrinter()
 
   if (dlg->result() == QDialog::Rejected )
   	 removePrinter();
+  else
+		emit changed(true);
+
+  delete dlg;
 }
 
 void KcmSambaConf::removePrinter() 
@@ -228,6 +239,8 @@ void KcmSambaConf::removePrinter()
 	SambaShare *share = item->getShare();
   delete item;
   _sambaFile->removeShare(share);
+  
+	emit changed(true);
 }
 
 void KcmSambaConf::editShareDefaults()
@@ -238,6 +251,9 @@ void KcmSambaConf::editShareDefaults()
   dlg->directoryGrp->setEnabled(false);
   dlg->identifierGrp->setEnabled(false);
   dlg->exec();
+  delete dlg;
+	
+  emit changed(true);
 }
 
 void KcmSambaConf::editPrinterDefaults()
@@ -248,6 +264,9 @@ void KcmSambaConf::editPrinterDefaults()
   dlg->printerGrp->setEnabled(false);
   dlg->identifierGrp->setEnabled(false);
   dlg->exec();
+  delete dlg;
+	
+  emit changed(true);
 }
 
 void KcmSambaConf::socketOptionsBtnClicked()
@@ -282,7 +301,7 @@ void KcmSambaConf::load()
 	connect ( _interface->socketOptionsBtn, SIGNAL(clicked()), this, SLOT(socketOptionsBtnClicked()));
   
   _smbconf = SambaFile::findSambaConf();
-	_sambaFile = new SambaFile(_smbconf);
+	_sambaFile = new SambaFile(_smbconf,false);
 
 
   // Fill the ListViews
@@ -306,6 +325,8 @@ void KcmSambaConf::load()
 
   if ( !share)
      share = _sambaFile->newShare("global");
+
+	assert( share);
 
   // Base settings
 
@@ -337,7 +358,8 @@ void KcmSambaConf::defaults() {
 
 void KcmSambaConf::save() {
 	// insert your saving code here...
-	emit changed(true);
+  _sambaFile->slotApply();
+
 }
 
 int KcmSambaConf::buttons () {

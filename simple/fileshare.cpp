@@ -42,6 +42,7 @@
 #include <kapp.h>
 #include <kuser.h>
 #include <kurl.h>
+#include <kprocess.h>
 
 #include "../advanced/propsdlgplugin/propertiespage.h"
 #include "../advanced/nfs/nfsfile.h"
@@ -179,14 +180,16 @@ void KFileShareConfig::updateShareListView()
 }
 
 void KFileShareConfig::allowedUsersBtnClicked() {
-  GroupConfigDlg dlg(this,m_fileShareGroup,m_restricted);
+  GroupConfigDlg dlg(this,m_fileShareGroup,m_restricted,m_rootPassNeeded);
   if (dlg.exec() == QDialog::Accepted) {
       m_fileShareGroup = dlg.fileShareGroup().name();
       m_restricted = dlg.restricted();
+      m_rootPassNeeded = dlg.rootPassNeeded();      
       configChanged();
   }      
 
 }
+
 
 void KFileShareConfig::load()
 {
@@ -208,11 +211,82 @@ void KFileShareConfig::load()
 
     m_ccgui->nfsChk->setChecked( 
           config.readEntry("NFS", "yes") == "yes");
-          
+
+    m_rootPassNeeded = config.readEntry("ROOTPASSNEEDED", "yes") == "yes";
+                    
+}
+
+bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
+  KProcess chgrp;
+  chgrp << "chgrp" << m_fileShareGroup << file;
+  KProcess chmod;
+  chmod << "chmod" << "g=rw" << file;
+  
+  if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
+      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
+      return false;
+      
+  }      
+      
+  if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
+      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
+      return false;
+  }
+  
+  return true;
+  
+}
+
+bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
+  KProcess chgrp;
+  chgrp << "chgrp" << "root" << file;
+  KProcess chmod;
+  chmod << "chmod" << "g=r" << file;
+  
+  if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
+      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
+      return false;
+      
+  }      
+      
+  if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
+      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
+      return false;
+  }
+  
+  return true;
+}  
+
+
+bool KFileShareConfig::setGroupAccesses() {
+  if (m_rootPassNeeded || ! m_ccgui->sambaChk->isChecked()) {
+      if (!removeGroupAccessesFromFile(KSambaShare::instance()->smbConfPath()))
+          return false;
+  }
+  
+  if (m_rootPassNeeded || ! m_ccgui->nfsChk->isChecked()) {          
+      if (!removeGroupAccessesFromFile(KNFSShare::instance()->exportsPath()))
+          return false;
+  }
+  
+  if (! m_rootPassNeeded && m_ccgui->sambaChk->isChecked()) {
+      if (!addGroupAccessesToFile(KSambaShare::instance()->smbConfPath()))
+          return false;
+  }
+
+  if (! m_rootPassNeeded && m_ccgui->nfsChk->isChecked()) {
+      if (!addGroupAccessesToFile(KNFSShare::instance()->exportsPath()))
+          return false;
+  }
+  
+
+  return true;
 }
 
 void KFileShareConfig::save()
 {
+    setGroupAccesses();
+
     QDir dir("/etc/security");
     if ( !dir.exists())
         dir.mkdir("/etc/security");
@@ -248,6 +322,8 @@ void KFileShareConfig::save()
     stream << "\nNFS=";
     stream << (m_ccgui->nfsChk->isChecked() ? "yes" : "no");        
                 
+    stream << "\nROOTPASSNEEDED=";
+    stream << (m_rootPassNeeded ? "yes" : "no");        
     
     
     file.close();

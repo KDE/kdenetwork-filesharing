@@ -44,7 +44,12 @@ class KFileShareConfig  : public KCModule
    ControlCenterGUI* m_ccgui;
    QString m_fileShareGroup;
    bool m_restricted;
+   bool m_rootPassNeeded;
    void showShareDialog(const KFileItemList & files);
+   bool addGroupAccessesToFile(const QString & file);
+   bool removeGroupAccessesFromFile(const QString & file);
+   bool setGroupAccesses();
+   
  protected slots:
   void configChanged() { emit changed( true ); };
   void updateShareListView(); 

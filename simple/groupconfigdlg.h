@@ -30,10 +30,12 @@ class GroupConfigDlg : public KDialogBase
 {
 Q_OBJECT
 public: 
-  GroupConfigDlg(QWidget * parent, const QString & fileShareGroup, bool restricted);
+  GroupConfigDlg(QWidget * parent, const QString & fileShareGroup, bool restricted, 
+                 bool rootPassNeeded);
   ~GroupConfigDlg();
   KUserGroup fileShareGroup() { return m_fileShareGroup; }
   bool restricted();
+  bool rootPassNeeded();
 protected:
   GroupConfigGUI* m_gui;
   
@@ -59,6 +61,7 @@ private:
   QValueList<KUser> m_users;
   KUserGroup m_fileShareGroup;
   bool m_restricted;
+  bool m_rootPassNeeded;
 };
 
 #endif

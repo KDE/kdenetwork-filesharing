@@ -49,7 +49,7 @@ SambaShare::SambaShare(const QString & name, SambaConfigFile* sambaFile)
   setAutoDelete(true);
 }
 
-QString SambaShare::getName() const
+const QString& SambaShare::getName() const
 {
   return _name;
 }

@@ -59,7 +59,7 @@ public:
   /** 
    * Returns the name of the share
    **/
-  QString getName() const;
+  const QString& getName() const;
 
 
   /**

@@ -46,7 +46,6 @@ static QString fromPrettyString(const QString & s);
 static void removeList(QValueList<KUser> & from, const QValueList<KUser> & that);
 static bool userMod(const QString & user, const QValueList<KUserGroup> & groups);
 
-static void debug(const QString & s);
 
 
 GroupConfigDlg::GroupConfigDlg(QWidget * parent,
@@ -197,10 +196,6 @@ void GroupConfigDlg::slotOk() {
   m_restricted = m_gui->groupUsersRadio->isChecked();
   
   KDialogBase::slotOk();
-}
-
-void debug(const QString & s) {
-  KMessageBox::information(0,s);
 }
 
 bool userMod(const QString & user, const QValueList<KUserGroup> & groups) {

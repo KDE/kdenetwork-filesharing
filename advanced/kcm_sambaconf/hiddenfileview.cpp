@@ -185,6 +185,7 @@ void HiddenFileView::initListView()
 
 HiddenFileView::~HiddenFileView()
 {
+    delete _dir;
 }
 
 void HiddenFileView::load()

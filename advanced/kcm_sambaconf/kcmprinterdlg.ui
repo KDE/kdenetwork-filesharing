@@ -301,14 +301,6 @@
                                     <string>Public</string>
                                 </property>
                             </widget>
-                            <widget class="QCheckBox">
-                                <property name="name">
-                                    <cstring>printableBaseChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Printable</string>
-                                </property>
-                            </widget>
                         </hbox>
                     </widget>
                     <spacer>
@@ -347,22 +339,6 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
-                        <property name="name">
-                            <cstring>printableChk</cstring>
-                        </property>
-                        <property name="text">
-                            <string>printable</string>
-                        </property>
-                    </widget>
-                    <widget class="QCheckBox" row="0" column="2">
-                        <property name="name">
-                            <cstring>postscriptChk</cstring>
-                        </property>
-                        <property name="text">
-                            <string>postscript</string>
-                        </property>
-                    </widget>
                     <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
                         <property name="name">
                             <cstring>printerDriverLbl</cstring>
@@ -565,6 +541,14 @@
                                 </property>
                             </spacer>
                         </hbox>
+                    </widget>
+                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                        <property name="name">
+                            <cstring>postscriptChk</cstring>
+                        </property>
+                        <property name="text">
+                            <string>postscript</string>
+                        </property>
                     </widget>
                 </grid>
             </widget>

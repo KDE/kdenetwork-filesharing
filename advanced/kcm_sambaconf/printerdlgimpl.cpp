@@ -96,7 +96,6 @@ void PrinterDlgImpl::initDialog()
 
   availableBaseChk->setChecked( _share->getBoolValue("available") );
   browseableBaseChk->setChecked( _share->getBoolValue("browseable") );
-  printableBaseChk->setChecked( _share->getBoolValue("printable") );
   publicBaseChk->setChecked( _share->getBoolValue("public") );
 
   // Users
@@ -107,7 +106,6 @@ void PrinterDlgImpl::initDialog()
 
   // Printing
 
-  printableChk->setChecked( _share->getBoolValue("printable") );
   postscriptChk->setChecked( _share->getBoolValue("postscript") );
 
   maxPrintJobsInput->setValue( _share->getValue("max print jobs").toInt() );
@@ -169,7 +167,6 @@ void PrinterDlgImpl::accept()
 
   _share->setValue("available",availableBaseChk->isChecked( ) );
   _share->setValue("browseable",browseableBaseChk->isChecked( ) );
-  _share->setValue("printable",printableBaseChk->isChecked( ) );
   _share->setValue("public",publicBaseChk->isChecked( ) );
 
   // users
@@ -178,7 +175,6 @@ void PrinterDlgImpl::accept()
 
   // Printing
 
-  _share->setValue("printable",printableChk->isChecked());
   _share->setValue("postscript",postscriptChk->isChecked( ) );
 
   _share->setValue("max print jobs", QString("%1").arg(maxPrintJobsInput->value()) );

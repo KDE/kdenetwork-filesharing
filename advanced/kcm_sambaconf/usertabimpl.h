@@ -31,6 +31,7 @@
 
 #include "usertab.h"
 #include "common.h"
+#include "qstringlist.h"
 
 /**
   *@author Jan Schäfer
@@ -38,6 +39,7 @@
 
 class KListViewItem;
 class SambaShare;
+
 /**
  * Implements the usertab.ui interface
  * A Widget where you can add SambaUsers to the valid users, rejected users,
@@ -46,25 +48,48 @@ class SambaShare;
 class UserTabImpl : public UserTab
 {
 Q_OBJECT
-public: 
+public:
 	UserTabImpl(QWidget* parent, SambaShare* share);
 	~UserTabImpl();
 
   void load();
   void save();
-protected:
+private:
   SambaShare* _share;
-
-  KListViewItem* _groupsFolder;
-  KListViewItem* _usersFolder;
+  QStringList _specifiedUsers;
+  QStringList _specifiedGroups;
 
   void setAllowedUser(int, const QString &);
+  void removeDuplicates( QStringList & validUsers, QStringList & readList,
+                         QStringList & writeList, QStringList & adminUsers,
+                         QStringList & invalidUsers);
+
+  void removeAll(QStringList & entryList, QStringList & fromList);
+  void addListToUserTable(const QStringList & list, int accessRight);
+  void loadForceCombos();
+
+  void loadUsers(const QString & validUsersStr,
+                 const QString & readListStr,
+                 const QString & writeListStr,
+                 const QString & adminUsersStr,
+                 const QString & invalidUsersStr);
+
+  void saveUsers(QString & validUsersStr,
+                 QString & readListStr,
+                 QString & writeListStr,
+                 QString & adminUsersStr,
+                 QString & invalidUsersStr);
+
+  bool nameIsGroup(const QString & name);
+  QString removeGroupTag(const QString & name);
+  QString removeQuotationMarks(const QString & name);
+  void addUserToUserTable(const QString & user, int accessRight);
 
 protected slots:
-  virtual void addAllowedUserBtnClicked();
-  virtual void removeAllowedUserBtnClicked();
-  virtual void addRejectedUserBtnClicked();
-  virtual void removeRejectedUserBtnClicked();
+  virtual void addUserBtnClicked();
+  virtual void addGroupBtnClicked();
+  virtual void removeSelectedBtnClicked();
+  virtual void expertBtnClicked();
 };
 
 #endif

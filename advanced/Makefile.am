@@ -1,1 +1,1 @@
-SUBDIRS = nfs propsdlgplugin 
+SUBDIRS = nfs kcm_sambaconf propsdlgplugin 

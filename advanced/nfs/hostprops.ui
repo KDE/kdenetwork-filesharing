@@ -264,7 +264,7 @@ In order to perform this check, the server must include some information about t
 subtree checking is also used to make sure that files inside directories to which only root has access can only be accessed if the filesystem is exported with no_root_squash (see below), even the file itself allows more general access.
 &lt;/p&gt;
 &lt;p&gt;
-As a general guide, a home directory filesystem, which is normally exported at the root and may see lots of file renames, should be exported with subtree checking disabled. A filesystem which is mostly readonly, and at least doesn't see many file renames (e.g. /usr or /var) and for which subdirectories may be exported, should probably be exported with subtree checks enabled.
+As a general guide, a home directory filesystem, which is normally exported at the root and may see lots of file renames, should be exported with subtree checking disabled. A filesystem which is mostly read-only, and at least does not see many file renames (e.g. /usr or /var) and for which subdirectories may be exported, should probably be exported with subtree checks enabled.
 &lt;/p&gt;</string>
                     </property>
                 </widget>

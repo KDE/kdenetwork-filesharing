@@ -157,7 +157,7 @@ bool NFSHostDlg::saveName(NFSHost* host) {
     if (name.isEmpty()) {
       KMessageBox::sorry(this,
               i18n("Please enter a hostname or an IP address.").arg(name),
-              i18n("No Hostname/IP-Address!"));
+              i18n("No Hostname/IP-Address."));
       m_gui->nameEdit->setFocus();
       return false;
     } else {

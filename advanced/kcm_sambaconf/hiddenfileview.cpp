@@ -386,7 +386,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
           int result = KMessageBox::questionYesNo(_dlg,i18n(
             "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
             "do you want to uncheck all files matching <b>'%1'</b>? <br>"
-            "(If you say no, no files matching '%1' will be unchecked)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+            "(If you say no, no files matching '%1' will be unchecked.)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
             i18n("Wildcarded String"));
 
           QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );

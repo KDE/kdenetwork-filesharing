@@ -11,13 +11,11 @@ libkcm_kcmsambaconf_la_SOURCES = \
       printerdlgimpl.cpp \
       kcmsambaconf.cpp \
       joindomaindlg.ui 
+libkcm_kcmsambaconf_la_COMPILE_FIRST = usertab.h share.h
       
 
 libkcm_kcmsambaconf_la_LIBADD = \
       -lkdeprint \
-      $(LIB_KDEUI) \
-      $(LIB_KDECORE) \
-      $(LIB_QT) \
       libfilesharesamba.la
       
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -45,4 +43,4 @@ libfilesharesamba_la_SOURCES = \
     expertuserdlg.ui
 
 
-KDE 3.2: xdg_apps_DATA = kcmsambaconf.desktop
+xdg_apps_DATA = kcmsambaconf.desktop

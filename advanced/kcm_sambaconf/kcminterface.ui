@@ -1384,6 +1384,9 @@
                                                 <verstretch>0</verstretch>
                                             </sizepolicy>
                                         </property>
+                                        <property name="maxValue">
+                                            <number>2147483647</number>
+                                        </property>
                                     </widget>
                                     <spacer>
                                         <property name="name">
@@ -1740,7 +1743,7 @@ Only change something if you know what you are doing !</string>
                                                                         </font>
                                                                     </property>
                                                                     <property name="maxValue">
-                                                                        <number>30</number>
+                                                                        <number>2147483647</number>
                                                                     </property>
                                                                 </widget>
                                                                 <spacer>
@@ -1786,7 +1789,7 @@ Only change something if you know what you are doing !</string>
                                                                         </font>
                                                                     </property>
                                                                     <property name="maxValue">
-                                                                        <number>30</number>
+                                                                        <number>2147483647</number>
                                                                     </property>
                                                                 </widget>
                                                                 <spacer>
@@ -1963,7 +1966,7 @@ Only change something if you know what you are doing !</string>
                                                                 </font>
                                                             </property>
                                                             <property name="maxValue">
-                                                                <number>30</number>
+                                                                <number>2147483647</number>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="0" column="0">
@@ -2523,6 +2526,9 @@ Only change something if you know what you are doing !</string>
                                                     <property name="name">
                                                         <cstring>syslogSpin</cstring>
                                                     </property>
+                                                    <property name="maxValue">
+                                                        <number>4</number>
+                                                    </property>
                                                 </widget>
                                                 <spacer>
                                                     <property name="name">
@@ -2750,7 +2756,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>deadtimeSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>3600</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="2" column="1">
@@ -2758,7 +2764,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>keepaliveSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>3600</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="3" column="1">
@@ -2766,7 +2772,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>lpqCacheTimeSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>3600</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="4" column="1">
@@ -2774,7 +2780,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>maxSmbdProcessesSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>10000</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="5" column="1">
@@ -2782,7 +2788,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>maxDiskSizeSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>1000000</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="6" column="1">
@@ -2790,7 +2796,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>maxOpenFilesSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>10000000</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="7" column="1">
@@ -2806,7 +2812,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>statCacheSizeSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>1000</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="9" column="0">
@@ -2830,7 +2836,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>changeNotifyTimeoutSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>3600</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                             </grid>
@@ -3391,7 +3397,7 @@ Only change something if you know what you are doing !</string>
                                                 <bool>false</bool>
                                             </property>
                                             <property name="maxValue">
-                                                <number>100000</number>
+                                                <number>2147483647</number>
                                             </property>
                                         </widget>
                                         <widget class="KIntSpinBox" row="2" column="2">
@@ -3402,7 +3408,7 @@ Only change something if you know what you are doing !</string>
                                                 <bool>false</bool>
                                             </property>
                                             <property name="maxValue">
-                                                <number>100000</number>
+                                                <number>2147483647</number>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="5" column="0">
@@ -3461,7 +3467,7 @@ Only change something if you know what you are doing !</string>
                                                 <bool>false</bool>
                                             </property>
                                             <property name="maxValue">
-                                                <number>100000</number>
+                                                <number>2147483647</number>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="2" column="0">
@@ -3488,7 +3494,7 @@ Only change something if you know what you are doing !</string>
                                                 <bool>false</bool>
                                             </property>
                                             <property name="maxValue">
-                                                <number>100000</number>
+                                                <number>2147483647</number>
                                             </property>
                                         </widget>
                                         <spacer row="0" column="3">
@@ -3637,6 +3643,9 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <widget class="KIntSpinBox">
                                                             <property name="name">
                                                                 <cstring>sslEntropyBytesSpin</cstring>
+                                                            </property>
+                                                            <property name="maxValue">
+                                                                <number>2147483647</number>
                                                             </property>
                                                         </widget>
                                                     </hbox>
@@ -4398,6 +4407,9 @@ This is only available if the SSL libraries have been compiled on your system an
                                                     <property name="name">
                                                         <cstring>maxMuxSpin</cstring>
                                                     </property>
+                                                    <property name="maxValue">
+                                                        <number>2147483647</number>
+                                                    </property>
                                                     <property name="minValue">
                                                         <number>0</number>
                                                     </property>
@@ -4642,7 +4654,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>lmIntervalSpin</cstring>
                                     </property>
                                     <property name="maxValue">
-                                        <number>3600</number>
+                                        <number>2147483647</number>
                                     </property>
                                 </widget>
                                 <widget class="QComboBox" row="2" column="1">
@@ -4805,6 +4817,9 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <widget class="KIntSpinBox">
                                             <property name="name">
                                                 <cstring>winbindCacheTimeSpin</cstring>
+                                            </property>
+                                            <property name="maxValue">
+                                                <number>2147483647</number>
                                             </property>
                                             <property name="minValue">
                                                 <number>0</number>

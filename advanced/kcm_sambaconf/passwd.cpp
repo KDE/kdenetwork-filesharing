@@ -115,8 +115,6 @@ int getUserGID(const QString & name)
 
   struct passwd* p;
 
-  cout << "getUserGID : " << name << endl;
-  
   p = getpwnam(name);
 
   if (p)
@@ -137,4 +135,30 @@ int getGroupGID(const QString & name)
     return g->gr_gid;
 
   return -1;
+}
+
+bool isUserInGroup(const QString & user, const QString & group) {
+  struct group* g;
+
+  while ((g = getgrent()))
+  {
+    if (g && QString(g->gr_name) == group) {
+       char** names = g->gr_mem;
+       
+       int i = 0;
+       char* name = names[0];
+       while (name != 0L) {
+          i++;
+          if (QString(name) == user) {
+            endgrent();
+            return true;
+          }
+          name = names[i];
+       }
+       break;
+    }
+  }
+  
+  endgrent();
+  return false;
 }

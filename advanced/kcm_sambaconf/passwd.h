@@ -50,7 +50,7 @@ QStringList getUnixGroups();
 int getUserUID(const QString &);
 int getUserGID(const QString &);
 int getGroupGID(const QString &);
-
+bool isUserInGroup(const QString &, const QString &);
 
 
 #endif

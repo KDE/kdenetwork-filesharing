@@ -137,7 +137,7 @@ void GroupConfigDlg::slotAddUser() {
   stringList.sort();
   
   QString userName = KInputDialog::getItem(
-            i18n("Select a user"),
+            i18n("Select User"),
             i18n("Select a user:"),
             stringList);
             
@@ -322,7 +322,7 @@ void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
     m_gui->groupUsersRadio->setText(
           i18n("Only users of the '%1' group are allowed to share folders")
           .arg(m_fileShareGroup.name()));
-    m_gui->usersGrpBx->setTitle(i18n("Users of the '%1' group")
+    m_gui->usersGrpBx->setTitle(i18n("Users of the '%1' Group")
           .arg(m_fileShareGroup.name()));
     m_gui->otherGroupBtn->setText(i18n("Change Group..."));          
     m_gui->usersGrpBx->show();
@@ -348,7 +348,7 @@ bool GroupConfigDlg::addUsersToGroup(QValueList<KUser> users,const KUserGroup & 
 
 bool GroupConfigDlg::emptyGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this, 
-        i18n("Do you really want to remove all users from group '%1' ?").arg(s))) {
+        i18n("Do you really want to remove all users from group '%1'?").arg(s))) {
       return false;        
   }
 
@@ -365,7 +365,7 @@ bool GroupConfigDlg::emptyGroup(const QString & s) {
 
 bool GroupConfigDlg::deleteGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this, 
-        i18n("Do you really want to delete group '%1' ?").arg(s))) {
+        i18n("Do you really want to delete group '%1'?").arg(s))) {
       return false;        
   }
         

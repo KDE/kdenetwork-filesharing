@@ -1,6 +1,6 @@
 /***************************************************************************
     begin                : Tue May 17 2003
-    copyright            : (C) 2003 by Jan Schäfer
+    copyright            : (C) 2003 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -114,8 +114,8 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>public read access</b> for this directory, but "
-           "the guest account <b>%1</b> doesn't have the needed read permissions !<br>" 
-           "Do you want to continue nevertheless ?</qt>").arg(guestAccount)
+           "the guest account <b>%1</b> doesn't have the needed read permissions!<br>" 
+           "Do you want to continue nevertheless?</qt>").arg(guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoReadPermissionsWarning"))
@@ -128,8 +128,8 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>public write access</b> for this directory, but "
-           "the guest account <b>%1</b> doesn't have the needed write permissions !<br>" 
-           "Do you want to continue nevertheless ?</qt>").arg(guestAccount)
+           "the guest account <b>%1</b> doesn't have the needed write permissions!<br>" 
+           "Do you want to continue nevertheless?</qt>").arg(guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoWritePermissionsWarning"))
@@ -165,8 +165,8 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
         0L,i18n(
           "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this directory, but "
-          "the user doesn't have the needed write permissions !<br>" 
-          "Do you want to continue nevertheless ?</qt>").arg(user)
+          "the user doesn't have the needed write permissions!<br>" 
+          "Do you want to continue nevertheless?</qt>").arg(user)
           ,i18n("Warning")
           ,KStdGuiItem::cont()
           ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
@@ -188,8 +188,8 @@ bool LinuxPermissionChecker::checkUserReadPermissions(const QString & user, bool
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
-           "the user doesn't have the needed read permissions !<br>" 
-           "Do you want to continue nevertheless ?</qt>").arg(user)
+           "the user doesn't have the needed read permissions!<br>" 
+           "Do you want to continue nevertheless?</qt>").arg(user)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_userHasNoReadPermissionsWarning"))

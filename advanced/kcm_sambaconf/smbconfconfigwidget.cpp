@@ -2,7 +2,7 @@
                           smbconfconfigwidget.cpp  -  description
                              -------------------
     begin                : Tue May 16 2003
-    copyright            : (C) 2003 by Jan Schäfer
+    copyright            : (C) 2003 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -70,7 +70,7 @@ void SmbConfConfigWidget::btnPressed() {
             "*|All Files",0,i18n("Get smb.conf Location"));
 
   if ( ! QFileInfo(smbConf).isReadable() ) {
-    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read !</qt>").arg(smbConf),i18n("File could not be read"));
+    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read!</qt>").arg(smbConf),i18n("Could Not Read File"));
     return;
   }
 

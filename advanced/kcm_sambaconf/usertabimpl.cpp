@@ -2,7 +2,7 @@
                           usertabimpl.cpp  -  description
                              -------------------
     begin                : Mon Jul 15 2002
-    copyright            : (C) 2002 by Jan Schäfer
+    copyright            : (C) 2002 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -275,7 +275,7 @@ void UserTabImpl::addUserBtnClicked()
 
     delete dlg;
   } else {
-    QString name = KLineEditDlg::getText(i18n("Add user"),i18n("Name:"));
+    QString name = KLineEditDlg::getText(i18n("Add User"),i18n("Name:"));
     addUserToUserTable(name,0);
   }
 }

@@ -12,7 +12,7 @@
 
 void NFSDialogGUI::listView_selectionChanged()
 {
-    bool b = 0 != listView->selectedItems ().count();
-    modifyHostBtn->setEnabled(b);
-    removeHostBtn->setEnabled(b);
+    bool empty = listView->selectedItems().isEmpty();
+    modifyHostBtn->setDisabled(empty);
+    removeHostBtn->setDisabled(empty);
 }

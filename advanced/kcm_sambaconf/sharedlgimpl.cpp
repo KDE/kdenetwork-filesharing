@@ -96,6 +96,7 @@ ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 void ShareDlgImpl::initDialog()
 {
 	// Base settings
+  _fileView = 0L;
 
 	assert(_share);
   
@@ -180,6 +181,8 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("strict locking",strictLockingChk);
   _dictMngr->add("share modes",shareModesChk);
   _dictMngr->add("oplocks",oplocksChk);
+  _dictMngr->add("veto oplock files",vetoOplockFilesEdit);
+  
 
   _dictMngr->add("oplock contention limit",oplockContentionLimitSpin);
   _dictMngr->add("strict sync",strictSyncChk);
@@ -221,7 +224,6 @@ void ShareDlgImpl::initDialog()
   
   _dictMngr->load( _share );
   
-  _fileView = 0L;
 
   connect( _tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
   connect(_dictMngr, SIGNAL(changed()), this, SLOT(changedSlot()));
@@ -265,6 +267,9 @@ void ShareDlgImpl::initAdvancedTab()
 		else
 		if (label.lower() == "printing")
 			 icon = SmallIcon("fileprint");
+		else
+		if (label.lower() == "locking")
+			 icon = SmallIcon("lock");
 		else
 		if (label.lower() == "logon")
 			 icon = SmallIcon("kdmconfig");
@@ -429,5 +434,12 @@ void ShareDlgImpl::accessModifierBtnClicked()
 void ShareDlgImpl::changedSlot() {
   emit changed();
 }
+
+void ShareDlgImpl::pathUrlRq_textChanged( const QString & s)
+{
+  if (_fileView && ! _share->isSpecialSection())
+     _fileView->load();
+}
+
 
 #include "sharedlgimpl.moc"

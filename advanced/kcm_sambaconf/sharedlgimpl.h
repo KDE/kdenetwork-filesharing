@@ -87,6 +87,7 @@ protected slots:
   virtual void homeChkToggled(bool);
   virtual void accessModifierBtnClicked();
   virtual void changedSlot();
+  virtual void pathUrlRq_textChanged( const QString & );
 
   void tabChangedSlot(QWidget* w);
 signals:

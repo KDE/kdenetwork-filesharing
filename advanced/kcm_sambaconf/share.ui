@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>KcmShareDlg</class>
 <comment>
 /******************************************************************************
@@ -492,6 +492,23 @@
                             <enum>Sunken</enum>
                         </property>
                     </widget>
+                    <widget class="QFrame">
+                        <property name="name">
+                            <cstring>Frame7_2</cstring>
+                        </property>
+                        <property name="minimumSize">
+                            <size>
+                                <width>0</width>
+                                <height>20</height>
+                            </size>
+                        </property>
+                        <property name="frameShape">
+                            <enum>NoFrame</enum>
+                        </property>
+                        <property name="frameShadow">
+                            <enum>Plain</enum>
+                        </property>
+                    </widget>
                     <widget class="QLabel">
                         <property name="name">
                             <cstring>TextLabel2_4_2</cstring>
@@ -529,7 +546,7 @@
                         <property name="sizeHint">
                             <size>
                                 <width>0</width>
-                                <height>80</height>
+                                <height>30</height>
                             </size>
                         </property>
                     </spacer>
@@ -560,7 +577,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -571,7 +588,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -582,7 +599,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -593,7 +610,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -604,7 +621,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -615,7 +632,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -626,7 +643,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -637,7 +654,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -901,7 +918,7 @@ Only change something if you know what you are doing !</string>
                                     <cstring>unnamed</cstring>
                                 </property>
                                 <property name="margin">
-                                    <number>11</number>
+                                    <number>0</number>
                                 </property>
                                 <property name="spacing">
                                     <number>6</number>
@@ -1933,100 +1950,309 @@ Only change something if you know what you are doing !</string>
                             <attribute name="title">
                                 <string>Locking</string>
                             </attribute>
-                            <grid>
+                            <vbox>
                                 <property name="name">
                                     <cstring>unnamed</cstring>
                                 </property>
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <widget class="QCheckBox" row="6" column="0">
+                                <widget class="QLayoutWidget">
                                     <property name="name">
-                                        <cstring>oplocksChk</cstring>
+                                        <cstring>layout56</cstring>
                                     </property>
-                                    <property name="text">
-                                        <string>oplocks</string>
-                                    </property>
+                                    <hbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>lockingChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>enable locking</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLabel">
+                                            <property name="name">
+                                                <cstring>enableLockingWarnPix</cstring>
+                                            </property>
+                                            <property name="sizePolicy">
+                                                <sizepolicy>
+                                                    <hsizetype>0</hsizetype>
+                                                    <vsizetype>0</vsizetype>
+                                                    <horstretch>0</horstretch>
+                                                    <verstretch>0</verstretch>
+                                                </sizepolicy>
+                                            </property>
+                                            <property name="font">
+                                                <font>
+                                                    <bold>1</bold>
+                                                </font>
+                                            </property>
+                                            <property name="text">
+                                                <string>This may result in data corruption</string>
+                                            </property>
+                                            <property name="scaledContents">
+                                                <bool>true</bool>
+                                            </property>
+                                        </widget>
+                                        <spacer>
+                                            <property name="name">
+                                                <cstring>spacer61</cstring>
+                                            </property>
+                                            <property name="orientation">
+                                                <enum>Horizontal</enum>
+                                            </property>
+                                            <property name="sizeType">
+                                                <enum>Expanding</enum>
+                                            </property>
+                                            <property name="sizeHint">
+                                                <size>
+                                                    <width>40</width>
+                                                    <height>20</height>
+                                                </size>
+                                            </property>
+                                        </spacer>
+                                    </hbox>
                                 </widget>
-                                <widget class="QCheckBox" row="4" column="0">
+                                <widget class="QGroupBox">
                                     <property name="name">
-                                        <cstring>strictLockingChk</cstring>
+                                        <cstring>groupBox47</cstring>
                                     </property>
-                                    <property name="text">
-                                        <string>strict locking</string>
+                                    <property name="enabled">
+                                        <bool>false</bool>
                                     </property>
+                                    <property name="title">
+                                        <string></string>
+                                    </property>
+                                    <vbox>
+                                        <property name="name">
+                                            <cstring>unnamed</cstring>
+                                        </property>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>blockingLocksChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>blocking locks</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>posixLockingChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>posix locking</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>strictLockingChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>strict locking</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>shareModesChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>share modes</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>oplocksChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>issue opportunistic locks (oplocks) </string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QGroupBox">
+                                            <property name="name">
+                                                <cstring>groupBox20</cstring>
+                                            </property>
+                                            <property name="title">
+                                                <string></string>
+                                            </property>
+                                            <grid>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QCheckBox" row="0" column="0">
+                                                    <property name="name">
+                                                        <cstring>level2OplocksChk</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>level2 oplocks</string>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QLayoutWidget" row="1" column="1">
+                                                    <property name="name">
+                                                        <cstring>layout18</cstring>
+                                                    </property>
+                                                    <hbox>
+                                                        <property name="name">
+                                                            <cstring>unnamed</cstring>
+                                                        </property>
+                                                        <widget class="KIntSpinBox">
+                                                            <property name="name">
+                                                                <cstring>oplockContentionLimitSpin</cstring>
+                                                            </property>
+                                                            <property name="buttonSymbols">
+                                                                <enum>UpDownArrows</enum>
+                                                            </property>
+                                                            <property name="maxValue">
+                                                                <number>2147483647</number>
+                                                            </property>
+                                                        </widget>
+                                                        <widget class="QLabel">
+                                                            <property name="name">
+                                                                <cstring>oplockContentionLimitWarnPix</cstring>
+                                                            </property>
+                                                            <property name="sizePolicy">
+                                                                <sizepolicy>
+                                                                    <hsizetype>0</hsizetype>
+                                                                    <vsizetype>0</vsizetype>
+                                                                    <horstretch>0</horstretch>
+                                                                    <verstretch>0</verstretch>
+                                                                </sizepolicy>
+                                                            </property>
+                                                            <property name="maximumSize">
+                                                                <size>
+                                                                    <width>0</width>
+                                                                    <height>32767</height>
+                                                                </size>
+                                                            </property>
+                                                            <property name="font">
+                                                                <font>
+                                                                    <bold>1</bold>
+                                                                </font>
+                                                            </property>
+                                                            <property name="text">
+                                                                <string>Warning ... !</string>
+                                                            </property>
+                                                            <property name="scaledContents">
+                                                                <bool>true</bool>
+                                                            </property>
+                                                            <property name="toolTip" stdset="0">
+                                                                <string>Do not change this parameter unless you have read and understand the SAMBA oplock code !</string>
+                                                            </property>
+                                                        </widget>
+                                                        <spacer>
+                                                            <property name="name">
+                                                                <cstring>spacer17_2</cstring>
+                                                            </property>
+                                                            <property name="orientation">
+                                                                <enum>Horizontal</enum>
+                                                            </property>
+                                                            <property name="sizeType">
+                                                                <enum>Expanding</enum>
+                                                            </property>
+                                                            <property name="sizeHint">
+                                                                <size>
+                                                                    <width>220</width>
+                                                                    <height>20</height>
+                                                                </size>
+                                                            </property>
+                                                        </spacer>
+                                                    </hbox>
+                                                </widget>
+                                                <widget class="QLabel" row="2" column="0">
+                                                    <property name="name">
+                                                        <cstring>textLabel1_2</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Veto oplock files</string>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QLineEdit" row="2" column="1">
+                                                    <property name="name">
+                                                        <cstring>vetoOplockFilesEdit</cstring>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QLabel" row="1" column="0">
+                                                    <property name="name">
+                                                        <cstring>TextLabel5_3_3_2_2</cstring>
+                                                    </property>
+                                                    <property name="font">
+                                                        <font>
+                                                            <italic>1</italic>
+                                                        </font>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Oplock contention limit</string>
+                                                    </property>
+                                                </widget>
+                                            </grid>
+                                        </widget>
+                                        <widget class="QLayoutWidget">
+                                            <property name="name">
+                                                <cstring>layout17</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QCheckBox">
+                                                    <property name="name">
+                                                        <cstring>fakeOplocksChk</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>fake oplocks</string>
+                                                    </property>
+                                                    <property name="checked">
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QLabel">
+                                                    <property name="name">
+                                                        <cstring>fakeOplocksWarnPix</cstring>
+                                                    </property>
+                                                    <property name="sizePolicy">
+                                                        <sizepolicy>
+                                                            <hsizetype>0</hsizetype>
+                                                            <vsizetype>0</vsizetype>
+                                                            <horstretch>0</horstretch>
+                                                            <verstretch>0</verstretch>
+                                                        </sizepolicy>
+                                                    </property>
+                                                    <property name="font">
+                                                        <font>
+                                                            <bold>1</bold>
+                                                        </font>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Better use the real oplocks support than this parameter</string>
+                                                    </property>
+                                                    <property name="scaledContents">
+                                                        <bool>true</bool>
+                                                    </property>
+                                                </widget>
+                                                <spacer>
+                                                    <property name="name">
+                                                        <cstring>spacer61_2</cstring>
+                                                    </property>
+                                                    <property name="orientation">
+                                                        <enum>Horizontal</enum>
+                                                    </property>
+                                                    <property name="sizeType">
+                                                        <enum>Expanding</enum>
+                                                    </property>
+                                                    <property name="sizeHint">
+                                                        <size>
+                                                            <width>110</width>
+                                                            <height>20</height>
+                                                        </size>
+                                                    </property>
+                                                </spacer>
+                                            </hbox>
+                                        </widget>
+                                    </vbox>
                                 </widget>
-                                <widget class="QCheckBox" row="1" column="0">
-                                    <property name="name">
-                                        <cstring>fakeOplocksChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>fake oplocks</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="0" column="0">
-                                    <property name="name">
-                                        <cstring>blockingLocksChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>blocking locks</string>
-                                    </property>
-                                </widget>
-                                <widget class="KIntSpinBox" row="8" column="1">
-                                    <property name="name">
-                                        <cstring>oplockContentionLimitSpin</cstring>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>UpDownArrows</enum>
-                                    </property>
-                                    <property name="maxValue">
-                                        <number>2147483647</number>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="5" column="0">
-                                    <property name="name">
-                                        <cstring>shareModesChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>share modes</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="2" column="0">
-                                    <property name="name">
-                                        <cstring>lockingChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>locking</string>
-                                    </property>
-                                </widget>
-                                <widget class="QLabel" row="8" column="0">
-                                    <property name="name">
-                                        <cstring>TextLabel5_3_3_2</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Oplock contention limit</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="3" column="0">
-                                    <property name="name">
-                                        <cstring>posixLockingChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>posix locking</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="7" column="0">
-                                    <property name="name">
-                                        <cstring>level2OplocksChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>level2 oplocks</string>
-                                    </property>
-                                </widget>
-                                <spacer row="9" column="0">
+                                <spacer>
                                     <property name="name">
                                         <cstring>Spacer51</cstring>
                                     </property>
@@ -2038,29 +2264,12 @@ Only change something if you know what you are doing !</string>
                                     </property>
                                     <property name="sizeHint">
                                         <size>
-                                            <width>0</width>
-                                            <height>30</height>
+                                            <width>20</width>
+                                            <height>20</height>
                                         </size>
                                     </property>
                                 </spacer>
-                                <spacer row="8" column="2">
-                                    <property name="name">
-                                        <cstring>Spacer52</cstring>
-                                    </property>
-                                    <property name="orientation">
-                                        <enum>Horizontal</enum>
-                                    </property>
-                                    <property name="sizeType">
-                                        <enum>Expanding</enum>
-                                    </property>
-                                    <property name="sizeHint">
-                                        <size>
-                                            <width>30</width>
-                                            <height>0</height>
-                                        </size>
-                                    </property>
-                                </spacer>
-                            </grid>
+                            </vbox>
                         </widget>
                         <widget class="QWidget">
                             <property name="name">
@@ -2076,9 +2285,23 @@ Only change something if you know what you are doing !</string>
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
+                                <spacer row="3" column="1">
+                                    <property name="name">
+                                        <cstring>Spacer14</cstring>
+                                    </property>
+                                    <property name="orientation">
+                                        <enum>Vertical</enum>
+                                    </property>
+                                    <property name="sizeType">
+                                        <enum>Expanding</enum>
+                                    </property>
+                                    <property name="sizeHint">
+                                        <size>
+                                            <width>20</width>
+                                            <height>200</height>
+                                        </size>
+                                    </property>
+                                </spacer>
                                 <widget class="QLineEdit" row="0" column="1">
                                     <property name="name">
                                         <cstring>vfsObjectEdit</cstring>
@@ -2100,11 +2323,6 @@ Only change something if you know what you are doing !</string>
                                         <string>Vfs options</string>
                                     </property>
                                 </widget>
-                                <widget class="QLineEdit" row="1" column="1">
-                                    <property name="name">
-                                        <cstring>vfsOptionsEdit</cstring>
-                                    </property>
-                                </widget>
                                 <widget class="QCheckBox" row="2" column="0">
                                     <property name="name">
                                         <cstring>msdfsRootChk</cstring>
@@ -2113,23 +2331,11 @@ Only change something if you know what you are doing !</string>
                                         <string>msdfs root</string>
                                     </property>
                                 </widget>
-                                <spacer row="3" column="0">
+                                <widget class="QLineEdit" row="1" column="1">
                                     <property name="name">
-                                        <cstring>Spacer14</cstring>
+                                        <cstring>vfsOptionsEdit</cstring>
                                     </property>
-                                    <property name="orientation">
-                                        <enum>Vertical</enum>
-                                    </property>
-                                    <property name="sizeType">
-                                        <enum>Expanding</enum>
-                                    </property>
-                                    <property name="sizeHint">
-                                        <size>
-                                            <width>0</width>
-                                            <height>30</height>
-                                        </size>
-                                    </property>
-                                </spacer>
+                                </widget>
                             </grid>
                         </widget>
                         <widget class="QWidget">
@@ -2411,7 +2617,7 @@ Only change something if you know what you are doing !</string>
                         <string>Help</string>
                     </property>
                     <property name="accel">
-                        <number>4144</number>
+                        <string>F1</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2442,7 +2648,7 @@ Only change something if you know what you are doing !</string>
                         <string>OK</string>
                     </property>
                     <property name="accel">
-                        <number>0</number>
+                        <string></string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2459,7 +2665,7 @@ Only change something if you know what you are doing !</string>
                         <string>Cancel</string>
                     </property>
                     <property name="accel">
-                        <number>0</number>
+                        <string></string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2483,12 +2689,6 @@ Only change something if you know what you are doing !</string>
     </connection>
     <connection>
         <sender>shareNameEdit</sender>
-        <signal>textChanged(const QString&amp;)</signal>
-        <receiver>KcmShareDlg</receiver>
-        <slot>checkValues()</slot>
-    </connection>
-    <connection>
-        <sender>pathUrlRq</sender>
         <signal>textChanged(const QString&amp;)</signal>
         <receiver>KcmShareDlg</receiver>
         <slot>checkValues()</slot>
@@ -2577,6 +2777,42 @@ Only change something if you know what you are doing !</string>
         <receiver>KcmShareDlg</receiver>
         <slot>publicBaseChk_toggled(bool)</slot>
     </connection>
+    <connection>
+        <sender>pathUrlRq</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>pathUrlRq_textChanged(const QString&amp;)</slot>
+    </connection>
+    <connection>
+        <sender>lockingChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>groupBox47</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>oplocksChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>groupBox20</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>lockingChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>lockingChk_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>fakeOplocksChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>fakeOplocksChk_toggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>oplockContentionLimitSpin</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>oplockContentionLimitSpin_valueChanged(int)</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
@@ -2596,6 +2832,30 @@ Only change something if you know what you are doing !</string>
     <slot access="protected">accessModifierBtnClicked()</slot>
     <slot access="protected">changedSlot()</slot>
     <slot>publicBaseChk_toggled( bool b )</slot>
+    <slot>pathUrlRq_textChanged( const QString &amp; )</slot>
+    <slot>oplocksChk_toggled( bool b )</slot>
+    <slot>lockingChk_toggled( bool b )</slot>
+    <slot>fakeOplocksChk_toggled( bool b )</slot>
+    <slot>oplockContentionLimitSpin_valueChanged( int i )</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+</includehints>
 </UI>

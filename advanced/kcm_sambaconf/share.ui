@@ -330,6 +330,12 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
                     <widget class="QGroupBox">
                         <property name="name">
                             <cstring>groupBox19</cstring>
@@ -340,6 +346,12 @@
                         <grid>
                             <property name="name">
                                 <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
                             </property>
                             <widget class="QComboBox" row="0" column="1">
                                 <property name="name">
@@ -407,6 +419,12 @@
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
                             <widget class="QLineEdit" row="1" column="1">
                                 <property name="name">
                                     <cstring>hostsDenyEdit</cstring>
@@ -463,6 +481,12 @@
                         <vbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
                             </property>
                             <widget class="QCheckBox">
                                 <property name="name">
@@ -542,6 +566,12 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
                     <widget class="KListView">
                         <column>
                             <property name="text">
@@ -550,7 +580,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -561,7 +591,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -572,7 +602,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -583,7 +613,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -594,7 +624,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -605,7 +635,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -616,7 +646,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -627,7 +657,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -638,7 +668,7 @@
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizable">
+                            <property name="resizeable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -717,6 +747,12 @@
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
                                     <widget class="QLabel" row="1" column="0">
                                         <property name="name">
                                             <cstring>TextLabel2_2</cstring>
@@ -774,6 +810,12 @@
                                 <grid>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
                                     </property>
                                     <widget class="QCheckBox" row="1" column="0">
                                         <property name="name">
@@ -914,6 +956,12 @@ Only change something if you know what you are doing !</string>
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
                     <widget class="QTabWidget">
                         <property name="name">
                             <cstring>advancedDumpTab</cstring>
@@ -932,6 +980,9 @@ Only change something if you know what you are doing !</string>
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
+                                <property name="spacing">
+                                    <number>6</number>
+                                </property>
                                 <widget class="QGroupBox" row="1" column="0">
                                     <property name="name">
                                         <cstring>groupBox57</cstring>
@@ -942,6 +993,12 @@ Only change something if you know what you are doing !</string>
                                     <vbox>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
+                                        </property>
+                                        <property name="margin">
+                                            <number>11</number>
+                                        </property>
+                                        <property name="spacing">
+                                            <number>6</number>
                                         </property>
                                         <widget class="QCheckBox">
                                             <property name="name">
@@ -979,6 +1036,12 @@ Only change something if you know what you are doing !</string>
                                     <grid>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
+                                        </property>
+                                        <property name="margin">
+                                            <number>11</number>
+                                        </property>
+                                        <property name="spacing">
+                                            <number>6</number>
                                         </property>
                                         <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="3">
                                             <property name="name">
@@ -1511,6 +1574,12 @@ Only change something if you know what you are doing !</string>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
                                         </property>
+                                        <property name="margin">
+                                            <number>11</number>
+                                        </property>
+                                        <property name="spacing">
+                                            <number>6</number>
+                                        </property>
                                         <widget class="QCheckBox">
                                             <property name="name">
                                                 <cstring>inheritPermissionsChk</cstring>
@@ -1561,6 +1630,9 @@ Only change something if you know what you are doing !</string>
                                 </property>
                                 <property name="margin">
                                     <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>6</number>
                                 </property>
                                 <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="2">
                                     <property name="name">
@@ -1764,6 +1836,9 @@ Only change something if you know what you are doing !</string>
                                 </property>
                                 <property name="margin">
                                     <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>6</number>
                                 </property>
                                 <widget class="QLayoutWidget" row="0" column="1">
                                     <property name="name">
@@ -2095,6 +2170,12 @@ Only change something if you know what you are doing !</string>
                                 <property name="name">
                                     <cstring>unnamed</cstring>
                                 </property>
+                                <property name="margin">
+                                    <number>11</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>6</number>
+                                </property>
                                 <widget class="QCheckBox">
                                     <property name="name">
                                         <cstring>lockingChk</cstring>
@@ -2111,7 +2192,7 @@ Only change something if you know what you are doing !</string>
                                         <bool>false</bool>
                                     </property>
                                     <property name="frameShape">
-                                        <enum>GroupBoxPanel</enum>
+                                        <enum>MShape</enum>
                                     </property>
                                     <property name="title">
                                         <string>Locki&amp;ng</string>
@@ -2119,6 +2200,12 @@ Only change something if you know what you are doing !</string>
                                     <vbox>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
+                                        </property>
+                                        <property name="margin">
+                                            <number>11</number>
+                                        </property>
+                                        <property name="spacing">
+                                            <number>6</number>
                                         </property>
                                         <widget class="QCheckBox">
                                             <property name="name">
@@ -2188,6 +2275,12 @@ Only change something if you know what you are doing !</string>
                                                 <grid>
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <property name="margin">
+                                                        <number>11</number>
+                                                    </property>
+                                                    <property name="spacing">
+                                                        <number>6</number>
                                                     </property>
                                                     <widget class="QCheckBox" row="0" column="0">
                                                         <property name="name">
@@ -2273,6 +2366,9 @@ Only change something if you know what you are doing !</string>
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
+                                <property name="spacing">
+                                    <number>6</number>
+                                </property>
                                 <spacer row="3" column="1">
                                     <property name="name">
                                         <cstring>Spacer14</cstring>
@@ -2337,6 +2433,9 @@ Only change something if you know what you are doing !</string>
                                 </property>
                                 <property name="margin">
                                     <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>6</number>
                                 </property>
                                 <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
                                     <property name="name">
@@ -2450,6 +2549,9 @@ Only change something if you know what you are doing !</string>
                                 </property>
                                 <property name="margin">
                                     <number>0</number>
+                                </property>
+                                <property name="spacing">
+                                    <number>6</number>
                                 </property>
                                 <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
                                     <property name="name">
@@ -2608,7 +2710,7 @@ Only change something if you know what you are doing !</string>
                         <string>&amp;Help</string>
                     </property>
                     <property name="accel">
-                        <string>F1</string>
+                        <number>4144</number>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2639,7 +2741,7 @@ Only change something if you know what you are doing !</string>
                         <string>&amp;OK</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+O</string>
+                        <number>8388687</number>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2656,7 +2758,7 @@ Only change something if you know what you are doing !</string>
                         <string>&amp;Cancel</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+C</string>
+                        <number>8388675</number>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2989,25 +3091,4 @@ Only change something if you know what you are doing !</string>
     <slot>oplockContentionLimitSpin_valueChanged( int i )</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kurlrequester.h</includehint>
-    <includehint>klineedit.h</includehint>
-    <includehint>kpushbutton.h</includehint>
-    <includehint>klineedit.h</includehint>
-    <includehint>klineedit.h</includehint>
-    <includehint>klistview.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>krestrictedline.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-</includehints>
 </UI>

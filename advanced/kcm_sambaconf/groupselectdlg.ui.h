@@ -21,13 +21,14 @@ void GroupSelectDlg::init(const QStringList & specifiedGroups)
 
 void GroupSelectDlg::accept()
 {
-  QListViewItemIterator it( groupListView, QListViewItemIterator::Selected );
+  QListViewItemIterator it( groupListView);
 
   for ( ; it.current(); ++it ) {
-      selectedGroups << it.current()->text(0);
+      if ( it.current()->isSelected() )
+	  selectedGroups << it.current()->text(0);
   }	
   
-  access = accessBtnGrp->selectedId();
+  access = accessBtnGrp->id(accessBtnGrp->selected());
   
   if (unixRadio->isChecked())
       groupKind = "+";

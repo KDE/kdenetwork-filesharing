@@ -24,13 +24,14 @@ void UserSelectDlg::init(const QStringList & specifiedUsers, SambaShare* share)
 
 void UserSelectDlg::accept()
 {
-  QListViewItemIterator it( userListView, QListViewItemIterator::Selected );
+  QListViewItemIterator it( userListView);
 
   for ( ; it.current(); ++it ) {
-      selectedUsers << it.current()->text(0);
+      if ( it.current()->isSelected() )
+	  selectedUsers << it.current()->text(0);
   }	
   
-  access = accessBtnGrp->selectedId();
+  access = accessBtnGrp->id(accessBtnGrp->selected());
   
   QDialog::accept();
 

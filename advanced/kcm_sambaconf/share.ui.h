@@ -118,3 +118,13 @@ void KcmShareDlg::homeChkToggled( bool )
 {
 
 }
+
+void KcmShareDlg::addAllowedUserBtnClicked()
+{
+
+}
+
+void KcmShareDlg::removeAllowedUserBtnClicked()
+{
+
+}

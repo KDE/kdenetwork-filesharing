@@ -29,8 +29,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>549</width>
-            <height>432</height>
+            <width>576</width>
+            <height>437</height>
         </rect>
     </property>
     <property name="caption">
@@ -324,101 +324,59 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QGroupBox">
+                    <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>GroupBox18</cstring>
-                        </property>
-                        <property name="title">
-                            <string>Allowed users</string>
+                            <cstring>Layout16</cstring>
                         </property>
                         <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <property name="margin">
-                                <number>11</number>
+                                <number>0</number>
                             </property>
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QListView">
+                            <widget class="QTable">
                                 <column>
                                     <property name="text">
-                                        <string>User</string>
-                                    </property>
-                                    <property name="clickable">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="resizeable">
-                                        <bool>true</bool>
+                                        <string>Allowed Users</string>
                                     </property>
                                 </column>
                                 <column>
                                     <property name="text">
-                                        <string>Write access</string>
-                                    </property>
-                                    <property name="clickable">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="resizeable">
-                                        <bool>true</bool>
+                                        <string>Access Rights</string>
                                     </property>
                                 </column>
-                                <column>
-                                    <property name="text">
-                                        <string>Read only</string>
-                                    </property>
-                                    <property name="clickable">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="resizeable">
-                                        <bool>true</bool>
-                                    </property>
-                                </column>
-                                <column>
-                                    <property name="text">
-                                        <string>Admin</string>
-                                    </property>
-                                    <property name="clickable">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="resizeable">
-                                        <bool>true</bool>
-                                    </property>
-                                </column>
-                            <item>
-                                <property name="text">
-                                    <string>New Item</string>
-                                </property>
-                                <property name="text">
-                                    <string></string>
-                                </property>
-                                <property name="text">
-                                    <string></string>
-                                </property>
-                                <property name="text">
-                                    <string></string>
-                                </property>
-                                <property name="pixmap">
-                                    <pixmap></pixmap>
-                                </property>
-                                <property name="pixmap">
-                                    <pixmap></pixmap>
-                                </property>
-                                <property name="pixmap">
-                                    <pixmap></pixmap>
-                                </property>
-                                <property name="pixmap">
-                                    <pixmap></pixmap>
-                                </property>
-                            </item>
                                 <property name="name">
-                                    <cstring>ListView1</cstring>
+                                    <cstring>userTable</cstring>
+                                </property>
+                                <property name="resizePolicy">
+                                    <enum>AutoOneFit</enum>
+                                </property>
+                                <property name="numRows">
+                                    <number>0</number>
+                                </property>
+                                <property name="numCols">
+                                    <number>2</number>
+                                </property>
+                                <property name="showGrid">
+                                    <bool>false</bool>
+                                </property>
+                                <property name="columnMovingEnabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="selectionMode">
+                                    <enum>MultiRow</enum>
+                                </property>
+                                <property name="focusStyle">
+                                    <enum>FollowStyle</enum>
                                 </property>
                             </widget>
                             <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>Layout24</cstring>
+                                    <cstring>Layout13</cstring>
                                 </property>
                                 <vbox>
                                     <property name="name">
@@ -432,37 +390,45 @@
                                     </property>
                                     <widget class="QPushButton">
                                         <property name="name">
-                                            <cstring>PushButton13</cstring>
+                                            <cstring>addAllowedUserBtn</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Add</string>
+                                            <string>&lt;</string>
                                         </property>
                                     </widget>
                                     <widget class="QPushButton">
                                         <property name="name">
-                                            <cstring>PushButton15</cstring>
+                                            <cstring>removeAllowedUserBtn</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Modify</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QPushButton">
-                                        <property name="name">
-                                            <cstring>PushButton14</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Remove</string>
+                                            <string>&gt;</string>
                                         </property>
                                     </widget>
                                 </vbox>
+                            </widget>
+                            <widget class="KListView">
+                                <column>
+                                    <property name="text">
+                                        <string>Possible Users</string>
+                                    </property>
+                                    <property name="clickable">
+                                        <bool>true</bool>
+                                    </property>
+                                    <property name="resizeable">
+                                        <bool>true</bool>
+                                    </property>
+                                </column>
+                                <property name="name">
+                                    <cstring>possibleUserListView</cstring>
+                                </property>
                             </widget>
                         </hbox>
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout32</cstring>
+                            <cstring>Layout16</cstring>
                         </property>
-                        <grid>
+                        <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
@@ -472,12 +438,7 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLineEdit" row="0" column="1">
-                                <property name="name">
-                                    <cstring>invalidUsersEdit</cstring>
-                                </property>
-                            </widget>
-                            <widget class="QLabel" row="0" column="0">
+                            <widget class="QLabel">
                                 <property name="name">
                                     <cstring>TextLabel8</cstring>
                                 </property>
@@ -485,7 +446,28 @@
                                     <string>Rejected users</string>
                                 </property>
                             </widget>
-                            <widget class="QLabel" row="1" column="0">
+                            <widget class="QLineEdit">
+                                <property name="name">
+                                    <cstring>invalidUsersEdit</cstring>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QLayoutWidget">
+                        <property name="name">
+                            <cstring>Layout15</cstring>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>0</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QLabel">
                                 <property name="name">
                                     <cstring>TextLabel12</cstring>
                                 </property>
@@ -493,15 +475,29 @@
                                     <string>Force user</string>
                                 </property>
                             </widget>
-                            <widget class="QPushButton" row="0" column="2">
+                            <widget class="QComboBox">
                                 <property name="name">
-                                    <cstring>PushButton5</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>...</string>
+                                    <cstring>forceUserCombo</cstring>
                                 </property>
                             </widget>
-                            <widget class="QLabel" row="2" column="0">
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer8</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QLabel">
                                 <property name="name">
                                     <cstring>TextLabel13</cstring>
                                 </property>
@@ -509,33 +505,12 @@
                                     <string>Force group</string>
                                 </property>
                             </widget>
-                            <widget class="QLineEdit" row="2" column="1">
+                            <widget class="QComboBox">
                                 <property name="name">
-                                    <cstring>forceGroupEdit</cstring>
+                                    <cstring>forceGroupCombo</cstring>
                                 </property>
                             </widget>
-                            <widget class="QPushButton" row="2" column="2">
-                                <property name="name">
-                                    <cstring>PushButton5_3</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>...</string>
-                                </property>
-                            </widget>
-                            <widget class="QLineEdit" row="1" column="1">
-                                <property name="name">
-                                    <cstring>forceUserEdit</cstring>
-                                </property>
-                            </widget>
-                            <widget class="QPushButton" row="1" column="2">
-                                <property name="name">
-                                    <cstring>PushButton5_2</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>...</string>
-                                </property>
-                            </widget>
-                        </grid>
+                        </hbox>
                     </widget>
                 </vbox>
             </widget>
@@ -1529,6 +1504,201 @@
                     </widget>
                 </hbox>
             </widget>
+            <widget class="QWidget">
+                <property name="name">
+                    <cstring>tab</cstring>
+                </property>
+                <attribute name="title">
+                    <string>&amp;Hidden files</string>
+                </attribute>
+                <vbox>
+                    <property name="name">
+                        <cstring>unnamed</cstring>
+                    </property>
+                    <property name="margin">
+                        <number>11</number>
+                    </property>
+                    <property name="spacing">
+                        <number>6</number>
+                    </property>
+                    <widget class="KListView">
+                        <column>
+                            <property name="text">
+                                <string>Name</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Hidden</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Veto</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Size</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Date</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Permissions</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Owner</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Group</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizeable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <property name="name">
+                            <cstring>hiddenListView</cstring>
+                        </property>
+                        <property name="showSortIndicator">
+                            <bool>true</bool>
+                        </property>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>selGrpBx</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Selected files</string>
+                        </property>
+                        <hbox>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>hiddenChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Hide</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>vetoChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>&amp;Veto</string>
+                                </property>
+                            </widget>
+                        </hbox>
+                    </widget>
+                    <widget class="QGroupBox">
+                        <property name="name">
+                            <cstring>GroupBox13_2</cstring>
+                        </property>
+                        <property name="title">
+                            <string>Manual configuration</string>
+                        </property>
+                        <grid>
+                            <property name="name">
+                                <cstring>unnamed</cstring>
+                            </property>
+                            <property name="margin">
+                                <number>11</number>
+                            </property>
+                            <property name="spacing">
+                                <number>6</number>
+                            </property>
+                            <widget class="QLabel" row="0" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel1_3</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Hidden files</string>
+                                </property>
+                            </widget>
+                            <widget class="QLabel" row="1" column="0">
+                                <property name="name">
+                                    <cstring>TextLabel2_2</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Veto files</string>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="0" column="1">
+                                <property name="name">
+                                    <cstring>hiddenEdit</cstring>
+                                </property>
+                            </widget>
+                            <widget class="QLineEdit" row="1" column="1">
+                                <property name="name">
+                                    <cstring>vetoEdit</cstring>
+                                </property>
+                            </widget>
+                        </grid>
+                    </widget>
+                </vbox>
+            </widget>
         </widget>
         <widget class="QLayoutWidget">
             <property name="name">
@@ -1641,6 +1811,18 @@
         <receiver>KcmShareDlg</receiver>
         <slot>homeChkToggled(bool)</slot>
     </connection>
+    <connection>
+        <sender>addAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>addAllowedUserBtnClicked()</slot>
+    </connection>
+    <connection>
+        <sender>removeAllowedUserBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>removeAllowedUserBtnClicked()</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
@@ -1653,6 +1835,8 @@
     <slot access="private" specifier="non virtual">init()</slot>
     <slot>trytoAccept()</slot>
     <slot>homeChkToggled( bool )</slot>
+    <slot>addAllowedUserBtnClicked()</slot>
+    <slot>removeAllowedUserBtnClicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

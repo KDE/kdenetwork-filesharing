@@ -114,26 +114,43 @@ void SambaFile::slotApply()
 
   KSimpleConfig* config = 0L;
 
-/*
-  KProcess *proc = new KProcess();
-  *proc << "cp" << path << tmpFilename;
-  if (!proc->start(KProcess::Block))
-  {
-    KMessageBox::error(0,i18n("Error while trying to create %1.").arg(tmpFilename));
-    return;
-  }
-  else
-*/
   config = getSimpleConfig(sambaConfig, tmpFilename);
   config->sync();
 
+  QFileInfo fi(path);
+
   // Override the original smb.conf with the temporary file
-  QString suCommand=QString("cp %1 %2; chmod 644 %3").arg(tmpFilename).arg(path).arg(path);
+  QString cpCmd=QString("cp %1 %2").arg(tmpFilename).arg(path);
+  QString chmodCmd=
+    QString::number(
+        (fi.permission(QFileInfo::ReadUser) ? 4 : 0)
+      + (fi.permission(QFileInfo::WriteUser) ? 2 : 0)
+      + (fi.permission(QFileInfo::ExeUser) ? 1 : 0) )
+    + QString::number(
+        (fi.permission(QFileInfo::ReadGroup) ? 4 : 0)
+      + (fi.permission(QFileInfo::WriteGroup) ? 2 : 0)
+      + (fi.permission(QFileInfo::ExeGroup) ? 1 : 0) )
+    + QString::number(
+        (fi.permission(QFileInfo::ReadOther) ? 4 : 0)
+      + (fi.permission(QFileInfo::WriteOther) ? 2 : 0)
+      + (fi.permission(QFileInfo::ExeOther) ? 1 : 0) );
+
+
+
   KProcess* proc = new KProcess();
 
   // if file is not writable do a kdesu
   if (!QFileInfo(path).isWritable() )
-    *proc<<"kdesu"<<"-c"<<suCommand;
+    *proc<<"kdesu"<<"-c"<<cpCmd+";"+"chmod "+chmodCmd+" "+path;
+  else
+  {
+    *proc << "cp" << tmpFilename << path;
+    proc->start(KProcess::Block);
+    delete proc;
+    proc = new KProcess();
+    *proc << "chmod" << chmodCmd << path;
+    proc->start(KProcess::Block);
+  }
 
   if (!proc->start(KProcess::Block))
     KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
@@ -277,18 +294,15 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
 
   KProcess testParam;
   testParam.setExecutable("testparm");
-  testParam << "-s";
+  testParam << "-s" << "/dev/null";
 
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
            this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
 
   if (testParam.start(KProcess::Block,KProcess::Stdout))
   {
-    kdDebug() << "testparm successfully started" << endl;
     parseParmStdOutput();
   }
-  else
-    kdDebug() << "testparm failed !" << endl;
 
   return _testParmValues;
 }

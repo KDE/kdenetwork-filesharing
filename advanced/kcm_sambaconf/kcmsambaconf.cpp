@@ -560,10 +560,11 @@ void KcmSambaConf::fillFields()
   loadSocket( share );
   loadSSL( share );
   loadLogon( share );
-  loadCoding( share );
+  loadCharset( share );
   loadWinbind( share );
   loadNetbios( share );
   loadVFS( share );
+  loadLDAP( share );
   loadBrowsing( share );
   loadMisc( share );
   loadDebug( share );
@@ -641,10 +642,14 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
   _dictMngr->add("password server", _interface->passwordServerEdit);
   _dictMngr->add("passwd chat", _interface->passwdChatEdit);
   _dictMngr->add("root directory", _interface->rootDirectoryEdit);
+  _dictMngr->add("passdb backend", _interface->passdbBackendEdit);
+  _dictMngr->add("auth methods", _interface->authMethodsEdit);
+  _dictMngr->add("realm", _interface->realmEdit);
 
   _dictMngr->add("password level", _interface->passwordLevelSpin);
   _dictMngr->add("min passwd length", _interface->minPasswdLengthSpin);
   _dictMngr->add("username level", _interface->usernameLevelSpin);
+  _dictMngr->add("algorithmic rid base", _interface->algorithmicRidBaseSpin);
 
   _dictMngr->add("encrypt passwords",_interface->encryptPasswordsChk);
   _dictMngr->add("update encrypted",_interface->updateEncryptedChk);
@@ -663,6 +668,7 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
   _dictMngr->add("passwd program",_interface->passwdProgramUrlRq);
   _dictMngr->add("username map",_interface->usernameMapUrlRq);
   _dictMngr->add("hosts equiv",_interface->hostsEquivUrlRq);
+  _dictMngr->add("private dir",_interface->privateDirUrlRq);
 
 }
 
@@ -698,6 +704,9 @@ void KcmSambaConf::loadTuning(SambaShare* )
 
   _dictMngr->add("getwd cache",_interface->getwdCacheChk);
   _dictMngr->add("use mmap",_interface->useMmapChk);
+  _dictMngr->add("paranoid server security",_interface->paranoidServerSecurityChk);
+  _dictMngr->add("hostname lookups",_interface->hostnameLookupsChk);
+  _dictMngr->add("kernel change notify",_interface->kernelChangeNotifyChk);
 
 }
 
@@ -736,6 +745,7 @@ void KcmSambaConf::loadFilenames(SambaShare* )
   _dictMngr->add("character set", _interface->characterSetEdit);
 
   _dictMngr->add("mangled stack", _interface->mangledStackSpin);
+  _dictMngr->add("mangle prefix", _interface->manglePrefixSpin);
 
 }
 
@@ -761,6 +771,7 @@ void KcmSambaConf::loadProtocol(SambaShare* share)
 
   _dictMngr->add("announce version", _interface->announceVersionEdit);
   _dictMngr->add("name resolve order", _interface->nameResolveOrderEdit);
+  _dictMngr->add("smb ports", _interface->smbPortsEdit);
 
   setComboIndexToValue(_interface->announceAsCombo,"announce as",share);
   setComboIndexToValue(_interface->protocolCombo,"protocol",share);
@@ -834,7 +845,15 @@ void KcmSambaConf::loadLogon(SambaShare* )
   // Logon
 
   _dictMngr->add("add user script", _interface->addUserScriptEdit);
+  _dictMngr->add("add group script", _interface->addGroupScriptEdit);
+  _dictMngr->add("add machine script", _interface->addMachineScriptEdit);
+  _dictMngr->add("add user to group script", _interface->addUserToGroupScriptEdit);
   _dictMngr->add("delete user script", _interface->deleteUserScriptEdit);
+  _dictMngr->add("delete group script", _interface->deleteGroupScriptEdit);
+  _dictMngr->add("delete user from group script", _interface->deleteUserFromGroupScriptEdit);
+  _dictMngr->add("set primary group script", _interface->addGroupScriptEdit);
+  _dictMngr->add("shutdown script", _interface->shutdownScriptEdit);
+  _dictMngr->add("abort shutdown script", _interface->abortShutdownScriptEdit);
   _dictMngr->add("logon script", _interface->logonScriptEdit);
   _dictMngr->add("logon drive", _interface->logonDriveEdit);
   _dictMngr->add("logon path",_interface->logonPathUrlRq);
@@ -843,11 +862,16 @@ void KcmSambaConf::loadLogon(SambaShare* )
 }
 
 
-void KcmSambaConf::loadCoding(SambaShare* ) 
+void KcmSambaConf::loadCharset(SambaShare* ) 
 {
   _dictMngr->add("coding system", _interface->codingSystemEdit);
   _dictMngr->add("client code page", _interface->clientCodePageEdit);
   _dictMngr->add("code page directory",_interface->codePageDirUrlRq);
+  _dictMngr->add("display charset", _interface->displayCharsetEdit);
+  _dictMngr->add("unix charset", _interface->unixCharsetEdit);
+  _dictMngr->add("dos charset", _interface->dosCharsetEdit);
+  
+  _dictMngr->add("unicode",_interface->unicodeChk);
 }
 
 void KcmSambaConf::loadWinbind(SambaShare* ) 
@@ -869,6 +893,8 @@ void KcmSambaConf::loadWinbind(SambaShare* )
 
 void KcmSambaConf::loadNetbios(SambaShare* ) 
 {
+  _dictMngr->add("disable netbios",_interface->disableNetbiosChk);
+  
   _dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
   _dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
 }
@@ -876,6 +902,19 @@ void KcmSambaConf::loadNetbios(SambaShare* )
 void KcmSambaConf::loadVFS(SambaShare*) 
 {
   _dictMngr->add("host msdfs",_interface->hostMsdfsChk);
+
+}
+
+void KcmSambaConf::loadLDAP(SambaShare*) 
+{
+  _dictMngr->add("ldap suffix", _interface->ldapSuffixEdit);
+  _dictMngr->add("ldap machine suffix", _interface->ldapMachineSuffixEdit);
+  _dictMngr->add("ldap user suffix", _interface->ldapUserSuffixEdit);
+  _dictMngr->add("ldap group suffix", _interface->ldapGroupSuffixEdit);
+  _dictMngr->add("ldap idmap suffix", _interface->ldapIdmapSuffixEdit);
+  _dictMngr->add("ldap filter", _interface->ldapFilterEdit);
+  _dictMngr->add("ldap admin dn", _interface->ldapAdminDnEdit);
+  _dictMngr->add("ldap delete dn",_interface->ldapDeleteDnChk);
 
 }
 
@@ -922,11 +961,12 @@ void KcmSambaConf::setComboFromAutoValue(QComboBox* box, const QString & key, Sa
 
 void KcmSambaConf::loadMisc(SambaShare*) 
 {
-  _dictMngr->add("addShare command", _interface->addShareCommandEdit);
+  _dictMngr->add("add share command", _interface->addShareCommandEdit);
   _dictMngr->add("change share command", _interface->changeShareCommandEdit);
   _dictMngr->add("delete share command", _interface->deleteShareCommandEdit);
   _dictMngr->add("panic action", _interface->panicActionEdit);
   _dictMngr->add("preload", _interface->preloadEdit);
+  _dictMngr->add("preload modules", _interface->preloadModulesEdit);
   _dictMngr->add("default service", _interface->defaultServiceEdit);
   _dictMngr->add("message command", _interface->messageCommandEdit);
   _dictMngr->add("dfree command", _interface->dfreeCommandEdit);
@@ -1082,17 +1122,29 @@ void KcmSambaConf::addSambaUserBtnClicked()
   for ( item = list.first(); item; item = list.first() )
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
-    if (!passwd.addUser(user))
+    
+    QCString password;
+    int passResult = KPasswordDialog::getNewPassword(password, 
+                        i18n("<qt>Please enter a password for the user <b>%1</b></qt>").arg(user.name));
+    if (passResult != KPasswordDialog::Accepted) {
+       list.remove(item);
+       continue;
+    }       
+    
+    if (!passwd.addUser(user,password))
     {
-      KMessageBox::sorry(0,i18n("Adding the user %1 to the Samba user database failed.").arg(user.name));
+      KMessageBox::sorry(0,i18n("<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>").arg(user.name));
       break;
     }
 
     QMultiCheckListItem* sambaItem = new QMultiCheckListItem(_interface->sambaUsersListView);
     sambaItem->setText(0,user.name);
     sambaItem->setText(1,QString::number(user.uid));
-    sambaItem->setOn(COL_DISABLED,user.isDisabled);
-    sambaItem->setOn(COL_NOPASSWORD,user.hasNoPassword);
+    sambaItem->setOn(COL_DISABLED,false);
+    sambaItem->setOn(COL_NOPASSWORD,false);
+    if ( ! _interface->nullPasswordsChk->isOn())
+      sambaItem->setDisabled(COL_NOPASSWORD, true);
+    
 
     list.remove(item);
     delete item;
@@ -1133,7 +1185,14 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
   for ( item = list.first(); item; item = list.next() )
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
-    if (!passwd.changePassword(user))
+    
+    QCString password;
+    int passResult = KPasswordDialog::getNewPassword(password, 
+                        i18n("Please enter a password for the user "+user.name));
+    if (passResult != KPasswordDialog::Accepted)
+       return;
+    
+    if (!passwd.changePassword(user,password))
     {
       KMessageBox::sorry(0,i18n("Changing the password of the user %1 failed.").arg(user.name));
     } else {
@@ -1151,8 +1210,6 @@ void KcmSambaConf::defaults() {
 }
 
 void KcmSambaConf::save() {
-  // insert your saving code here...
-
   SambaShare *share = _sambaFile->getShare("global");
   assert(share);
 

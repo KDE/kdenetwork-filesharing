@@ -87,10 +87,7 @@ SambaFile::SambaFile(const QString & _path, bool _readonly)
   changed = false;
   _testParmValues = 0L;
   _sambaConfig = 0L;
-
-//  KSimpleConfig *config = new KSimpleConfig(path,readonly);
-//  _sambaConfig = getSambaConfigFile(config);
-  //load();
+  _sambaVersion = -1;
 }
 
 SambaFile::~SambaFile()
@@ -337,6 +334,31 @@ SambaShareList* SambaFile::getSharedPrinters() const
   return list;
 }
 
+int SambaFile::getSambaVersion() {
+  if (_sambaVersion > -1)
+    return _sambaVersion;
+    
+  KProcess testParam;
+  testParam << "testparm";
+  testParam << "-V";
+  _parmOutput = QString("");
+  _sambaVersion = 2;
+      
+  connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
+          this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
+
+          
+          
+  if (testParam.start(KProcess::Block,KProcess::Stdout)) {
+    if (_parmOutput.find("3") > -1)
+      _sambaVersion = 3;
+  } 
+
+  kdDebug() << "Samba version = " << _sambaVersion << endl;
+    
+  return _sambaVersion;
+}
+
 
 SambaShare* SambaFile::getTestParmValues(bool reload)
 {
@@ -346,19 +368,23 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
 
   KProcess testParam;
   testParam << "testparm";
-  testParam << "-s" << "/dev/null";
+  testParam << "-s"; 
+  
+  if (getSambaVersion() == 3)
+     testParam << "-v";
 
+
+  testParam << "/dev/null";
+  _parmOutput = QString("");
+  
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
           this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
-
-
 
   if (testParam.start(KProcess::Block,KProcess::Stdout))
   {
     parseParmStdOutput();
   } else
     _testParmValues = new SambaShare(_sambaConfig);
-
 
   return _testParmValues;
 }
@@ -409,9 +435,14 @@ void SambaFile::parseParmStdOutput()
       continue;
 
     // parameter
-    name = QStringList::split("=",line)[0].stripWhiteSpace();
-    value = QStringList::split("=",line)[1].stripWhiteSpace();
+    // parameter
+    int i = line.find("=");
 
+    if (i>-1) {
+      name = line.left(i).stripWhiteSpace();
+      value = line.right( line.length()-i-1).stripWhiteSpace();
+    }
+    
     _testParmValues->setValue(name,value,false,false);
   }
 
@@ -583,12 +614,9 @@ bool SambaFile::openFile() {
     {
       name = completeLine.left(i).stripWhiteSpace();
       value = completeLine.right( completeLine.length()-i-1).stripWhiteSpace();
-//      name = QStringList::split("=",completeLine)[0].stripWhiteSpace();
-//      value = QStringList::split("=",completeLine)[1].stripWhiteSpace();
 
       if (currentShare)
       {
-
         currentShare->setComments(name,comments);
         currentShare->setValue(name,value,true,true);
 

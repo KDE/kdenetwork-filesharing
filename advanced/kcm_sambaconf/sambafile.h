@@ -123,6 +123,8 @@ public:
 	static bool boolFromText(const QString & value);
   static QString textFromBool(bool value);
 
+  int getSambaVersion();
+
   /**
    * Load all data from the smb.conf file
    * Can load a remote file
@@ -143,6 +145,7 @@ protected:
   SambaConfigFile *_sambaConfig;
   SambaShare* _testParmValues;
   QString _parmOutput;
+  int _sambaVersion;
 
   void parseParmStdOutput();
   SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);

@@ -120,7 +120,7 @@ class KcmSambaConf: public KCModule
     void loadPrinting(SambaShare* );
     void loadFilenames(SambaShare* );
     void loadLocking(SambaShare* );
-    void loadCoding(SambaShare* );
+    void loadCharset(SambaShare*);
     void loadLogon(SambaShare* );
     void loadSocket(SambaShare* );
     void loadSSL(SambaShare* );
@@ -131,6 +131,7 @@ class KcmSambaConf: public KCModule
     void loadBrowsing(SambaShare* );
     void loadMisc(SambaShare* );
     void loadDebug(SambaShare* );
+    void loadLDAP(SambaShare*);
 
     void initAdvancedTab();
 

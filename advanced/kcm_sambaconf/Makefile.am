@@ -43,7 +43,9 @@ EXTRA_DIST = $(service_DATA) \
   qmultichecklistitem.h \
   joindomaindlh.ui.h
 
-xdg_apps_DATA = kcmsambaconf.desktop
+#KDE 3.2: xdg_apps_DATA = kcmsambaconf.desktop
+mydata_DATA = kcmsambaconf.desktop
+mydatadir = $(kde_appsdir)/Settings/Network
 
 ## what's going on with this file I don't know
 ## I'm just an automake automaton --exa

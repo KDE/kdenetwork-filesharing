@@ -138,6 +138,8 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("hide dot files",hideDotFilesChk);
   _dictMngr->add("strip dot",hideTrailingDotChk);
   _dictMngr->add("hide unreadable",hideUnreadableChk);
+  _dictMngr->add("hide unwriteable files",hideUnwriteableFilesChk);
+  _dictMngr->add("hide special files",hideSpecialFilesChk);
   _dictMngr->add("dos filemode",dosFilemodeChk);
   _dictMngr->add("dos filetimes",dosFiletimesChk);
   _dictMngr->add("dos filetime resolution",dosFiletimeResolutionChk);
@@ -175,6 +177,7 @@ void ShareDlgImpl::initDialog()
   
   _dictMngr->add("force unknown acl user",forceUnknownAclUserChk);
   _dictMngr->add("profile acls",profileAclsChk);
+  _dictMngr->add("map acl inherit",mapAclInheritChk);
   
   
   // Advanced
@@ -203,6 +206,7 @@ void ShareDlgImpl::initDialog()
   
   _dictMngr->add("sync always",syncAlwaysChk);
   _dictMngr->add("status",statusChk);
+  _dictMngr->add("use sendfile",useSendfileChk);
   
   _dictMngr->add("csc policy",cscPolicyCombo);
   
@@ -212,7 +216,7 @@ void ShareDlgImpl::initDialog()
   
   _dictMngr->add("vfs object",vfsObjectEdit);
   _dictMngr->add("vfs options",vfsOptionsEdit);
-  _dictMngr->add("msdfs root",msdfsRootChk);
+  _dictMngr->add("vfs objects",vfsObjectsEdit);
 
   // Misc
   
@@ -232,6 +236,8 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("set directory",setDirectoryChk);
   _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
     
+  _dictMngr->add("msdfs root",msdfsRootChk);
+  _dictMngr->add("msdfs proxy",msdfsProxyChk);
   
   _dictMngr->load( _share );
   

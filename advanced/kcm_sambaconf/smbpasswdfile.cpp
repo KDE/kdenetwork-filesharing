@@ -134,15 +134,10 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
  * Tries to add the passed user to the smbpasswd file
  * returns true if successful otherwise false
  **/
-bool SmbPasswdFile::addUser(const SambaUser & user)
+bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 {
   KProcess p;
   p << "smbpasswd" << "-a" << user.name;
-
-  QCString password;
-  int passResult = KPasswordDialog::getNewPassword(password, i18n("Please enter a password for the user "+user.name));
-  if (passResult != KPasswordDialog::Accepted)
-     return false;
 
   p << password;
 
@@ -172,9 +167,9 @@ bool SmbPasswdFile::removeUser(const SambaUser & user)
   return executeSmbpasswd(l);
 }
 
-bool SmbPasswdFile::changePassword(const SambaUser & user)
+bool SmbPasswdFile::changePassword(const SambaUser & user, const QString & newPassword)
 {
-  return addUser(user);
+  return addUser(user,newPassword);
 }
 
 

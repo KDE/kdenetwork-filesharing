@@ -98,7 +98,7 @@ public:
    * Tries to add the passed user to the smbpasswd file
    * returns true if successful otherwise false
    **/
-  bool addUser(const SambaUser &);
+  bool addUser(const SambaUser &, const QString & password);
 
   /**
    * Tries to remove the passed user from the smbpasswd file
@@ -110,7 +110,7 @@ public:
    * Tries to change the password of the passed user
    * if it fails returns false otherwise true
    **/
-  bool changePassword(const SambaUser &);
+  bool changePassword(const SambaUser &, const QString & password);
   
   bool enableUser(const SambaUser &);
   

@@ -113,8 +113,8 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
   {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
-           "<qt>You have specified public read access for this directory, but "
-           "the guest account <i>%1</i> doesn't have the needed read permissions !<br>" 
+           "<qt>You have specified <b>public read access</b> for this directory, but "
+           "the guest account <b>%1</b> doesn't have the needed read permissions !<br>" 
            "Do you want to continue nevertheless ?</qt>").arg(guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
@@ -127,8 +127,8 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
   {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
-           "<qt>You have specified public write access for this directory, but "
-           "the guest account <i>%1</i> doesn't have the needed write permissions !<br>" 
+           "<qt>You have specified <b>public write access</b> for this directory, but "
+           "the guest account <b>%1</b> doesn't have the needed write permissions !<br>" 
            "Do you want to continue nevertheless ?</qt>").arg(guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
@@ -164,7 +164,7 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
     
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
         0L,i18n(
-          "<qt>You have specified read access to the user <i>%1</i> for this directory, but "
+          "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
           "the user doesn't have the needed write permissions !<br>" 
           "Do you want to continue nevertheless ?</qt>").arg(user)
           ,i18n("Warning")
@@ -187,7 +187,7 @@ bool LinuxPermissionChecker::checkUserReadPermissions(const QString & user, bool
         
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
-           "<qt>You have specified read access to the user <i>%1</i> for this directory, but "
+           "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
            "the user doesn't have the needed read permissions !<br>" 
            "Do you want to continue nevertheless ?</qt>").arg(user)
            ,i18n("Warning")

@@ -505,6 +505,7 @@ bool SambaFile::load()
 }
 
 bool SambaFile::openFile() {  
+
   QFile f(localPath);
 
   if (!f.open(IO_ReadOnly)) {
@@ -589,7 +590,7 @@ bool SambaFile::openFile() {
       {
 
         currentShare->setComments(name,comments);
-        currentShare->setValue(name,value,false,true);
+        currentShare->setValue(name,value,true,true);
 
         comments.clear();
       }

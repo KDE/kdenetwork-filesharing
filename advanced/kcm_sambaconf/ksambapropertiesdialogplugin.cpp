@@ -272,7 +272,7 @@ void KSambaPropertiesDialogPlugin::initValues()
   }     
 
   SambaShare* share = getActiveShare();     
-
+  kdDebug() << share->getName() << endl;
   m_shareWidget->nameEdit->setText( share->getName() );
   m_shareWidget->commentEdit->setText( share->getValue("comment") );
   m_shareWidget->readOnlyChk->setChecked( share->getBoolValue("read only") );
@@ -319,6 +319,8 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
     if (!getActiveShare())
     {
       QString shareName = properties->kurl().fileName();
+      // Windows could have problems with longer names
+      shareName = shareName.left(12).upper();
 
       if ( getSambaFile()->getShare(shareName) == 0L)
           shareName = getSambaFile()->getUnusedName(shareName);
@@ -381,9 +383,12 @@ bool KSambaPropertiesDialogPlugin::checkValues()
 
   LinuxPermissionChecker linuxChecker(getActiveShare(),properties);
   
-  if ( ! linuxChecker.checkPublicPermissions()) 
-     return false;
+//  if ( ! linuxChecker.checkPublicPermissions()) 
+//     return false;
   
+  if ( ! linuxChecker.checkAllPermissions())
+    return false;     
+     
   return true;
 }
 

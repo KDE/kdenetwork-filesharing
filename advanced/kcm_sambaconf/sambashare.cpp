@@ -36,7 +36,7 @@ SambaShare::SambaShare(SambaConfigFile* sambaFile)
 	: QDict<QString>(10,false)
 {
   _sambaFile = sambaFile;
-	_name = "";
+	setName("defaults");
   setAutoDelete(true);
 }
 
@@ -84,16 +84,16 @@ QString SambaShare::getValue(const QString & name, bool globalValue, bool defaul
   QString* str = find(synonym);
   QString ret;
 
-  if (str)
+  if (str) {
   	 ret = *str;
+  }     
   else
   if (globalValue)
 		 ret = getGlobalValue(synonym,defaultValue);
 	else
   if (defaultValue)
      ret = getDefaultValue(synonym);
-//	else
-  //	 ret = "";
+
 
 	if (name=="writable" || name=="write ok" || name=="writeable")
   	 ret = SambaFile::textFromBool( ! SambaFile::boolFromText(ret) );
@@ -166,7 +166,6 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 {
   QString synonym = getSynonym(name);
 
-  
   QString newValue = value;
 
   if (newValue.isNull())
@@ -202,6 +201,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   {
   	if ( newValue.stripWhiteSpace().lower() == getDefaultValue(synonym).stripWhiteSpace().lower() )
     {
+      kdDebug() << getName() << " global: " << global << " remove " << synonym << endl;
 			remove(synonym);
       _optionList.remove(synonym);
     	return;

@@ -87,26 +87,26 @@
                         <string>&lt;b&gt;Name / Adress field&lt;/b&gt;
 &lt;p&gt;
 Here you can enter the host name or adress.&lt;br&gt;
-The host may be specified in a number of ways: 
+The host may be specified in a number of ways:
 &lt;p&gt;
 &lt;i&gt;single host&lt;/i&gt;
 &lt;p&gt;
- This is the most common format. You may specify a host either by an abbreviated name recognized be the resolver, the fully qualified domain name, or an IP address. 
+ This is the most common format. You may specify a host either by an abbreviated name recognized be the resolver, the fully qualified domain name, or an IP address.
 &lt;/p&gt;
 
 &lt;i&gt;netgroups&lt;/i&gt;
 &lt;p&gt;
- NIS netgroups may be given as @group. Only the host part of each netgroup members is consider in checking for membership. Empty host parts or those containing a single dash (-) are ignored. 
+ NIS netgroups may be given as @group. Only the host part of each netgroup members is consider in checking for membership. Empty host parts or those containing a single dash (-) are ignored.
 &lt;/p&gt;
 
 &lt;i&gt;wildcards&lt;/i&gt;
 &lt;p&gt;
- Machine names may contain the wildcard characters * and ?. This can be used to make the exports file more compact; for instance, *.cs.foo.edu matches all hosts in the domain cs.foo.edu. However, these wildcard characters do not match the dots in a domain name, so the above pattern does not include hosts such as a.b.cs.foo.edu. 
+ Machine names may contain the wildcard characters * and ?. This can be used to make the exports file more compact; for instance, *.cs.foo.edu matches all hosts in the domain cs.foo.edu. However, these wildcard characters do not match the dots in a domain name, so the above pattern does not include hosts such as a.b.cs.foo.edu.
 &lt;/p&gt;
 
 &lt;i&gt;IP networks&lt;/i&gt;
 &lt;p&gt;
- You can also export directories to all hosts on an IP (sub-) network simultaneously. This is done by specifying an IP address and netmask pair as address/netmask where the netmask can be specified in dotted-decimal format, or as a contiguous mask length (for example, either `/255.255.252.0' or `/22' appended to the network base address result in identical subnetworks with 10 bits of host). 
+ You can also export directories to all hosts on an IP (sub-) network simultaneously. This is done by specifying an IP address and netmask pair as address/netmask where the netmask can be specified in dotted-decimal format, or as a contiguous mask length (for example, either `/255.255.252.0' or `/22' appended to the network base address result in identical subnetworks with 10 bits of host).
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -211,7 +211,7 @@ If unsure leave it unchecked.
 This option requests that all file writes be committed to disc before the write request completes. This is required for complete safety of data in the face of a server crash, but incurs a performance hit.
 &lt;/p&gt;
 &lt;p&gt;
-The default is to allow the server to write the data out whenever it is ready. 
+The default is to allow the server to write the data out whenever it is ready.
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -247,19 +247,19 @@ This option only has effect if sync is also set. The NFS server will normally de
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No hide&lt;/b&gt;
 &lt;p&gt;
-This option is based on the option of the same name provided in IRIX NFS. Normally, if a server exports two filesystems one of which is mounted on the other, then the client will have to mount both filesystems explicitly to get access to them. If it just mounts the parent, it will see an empty directory at the place where the other filesystem is mounted. That filesystem is "hidden". 
+This option is based on the option of the same name provided in IRIX NFS. Normally, if a server exports two filesystems one of which is mounted on the other, then the client will have to mount both filesystems explicitly to get access to them. If it just mounts the parent, it will see an empty directory at the place where the other filesystem is mounted. That filesystem is "hidden".
 &lt;/p&gt;
 &lt;p&gt;
-Setting the nohide option on a filesystem causes it not to be hidden, and an appropriately authorised client will be able to move from the parent to that filesystem without noticing the change. 
+Setting the nohide option on a filesystem causes it not to be hidden, and an appropriately authorised client will be able to move from the parent to that filesystem without noticing the change.
 &lt;/p&gt;
 &lt;p&gt;
-However, some NFS clients do not cope well with this situation as, for instance, it is then possible for two files in the one apparent filesystem to have the same inode number. 
+However, some NFS clients do not cope well with this situation as, for instance, it is then possible for two files in the one apparent filesystem to have the same inode number.
 &lt;/p&gt;
 &lt;p&gt;
-The nohide option is currently only effective on single host exports. It does not work reliably with netgroup, subnet, or wildcard exports. 
+The nohide option is currently only effective on single host exports. It does not work reliably with netgroup, subnet, or wildcard exports.
 &lt;/p&gt;
 &lt;p&gt;
-This option can be very useful in some situations, but it should be used with due care, and only after confirming that the client system copes with the situation effectively. 
+This option can be very useful in some situations, but it should be used with due care, and only after confirming that the client system copes with the situation effectively.
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -276,19 +276,19 @@ This option can be very useful in some situations, but it should be used with du
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No subtree check&lt;/b&gt;
 &lt;p&gt;
-This option disables subtree checking, which has mild security implications, but can improve reliability is some circumstances. 
+This option disables subtree checking, which has mild security implications, but can improve reliability is some circumstances.
 &lt;/p&gt;
 &lt;p&gt;
-If a subdirectory of a filesystem is exported, but the whole filesystem isn't then whenever a NFS request arrives, the server must check not only that the accessed file is in the appropriate filesystem (which is easy) but also that it is in the exported tree (which is harder). This check is called the subtree_check. 
+If a subdirectory of a filesystem is exported, but the whole filesystem isn't then whenever a NFS request arrives, the server must check not only that the accessed file is in the appropriate filesystem (which is easy) but also that it is in the exported tree (which is harder). This check is called the subtree_check.
 &lt;/p&gt;
 &lt;p&gt;
-In order to perform this check, the server must include some information about the location of the file in the "filehandle" that is given to the client. This can cause problems with accessing files that are renamed while a client has them open (though in many simple cases it will still work). 
+In order to perform this check, the server must include some information about the location of the file in the "filehandle" that is given to the client. This can cause problems with accessing files that are renamed while a client has them open (though in many simple cases it will still work).
 &lt;/p&gt;
 &lt;p&gt;
-subtree checking is also used to make sure that files inside directories to which only root has access can only be accessed if the filesystem is exported with no_root_squash (see below), even the file itself allows more general access. 
+subtree checking is also used to make sure that files inside directories to which only root has access can only be accessed if the filesystem is exported with no_root_squash (see below), even the file itself allows more general access.
 &lt;/p&gt;
 &lt;p&gt;
-As a general guide, a home directory filesystem, which is normally exported at the root and may see lots of file renames, should be exported with subtree checking disabled. A filesystem which is mostly readonly, and at least doesn't see many file renames (e.g. /usr or /var) and for which subdirectories may be exported, should probably be exported with subtree checks enabled. 
+As a general guide, a home directory filesystem, which is normally exported at the root and may see lots of file renames, should be exported with subtree checking disabled. A filesystem which is mostly readonly, and at least doesn't see many file renames (e.g. /usr or /var) and for which subdirectories may be exported, should probably be exported with subtree checks enabled.
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -305,10 +305,10 @@ As a general guide, a home directory filesystem, which is normally exported at t
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Insecure locks&lt;/b&gt;
 &lt;p&gt;
-This option tells the NFS server not to require authentication of locking requests (i.e. requests which use the NLM protocol). Normally the NFS server will require a lock request to hold a credential for a user who has read access to the file. With this flag no access checks will be performed. 
+This option tells the NFS server not to require authentication of locking requests (i.e. requests which use the NLM protocol). Normally the NFS server will require a lock request to hold a credential for a user who has read access to the file. With this flag no access checks will be performed.
 &lt;/p&gt;
 &lt;p&gt;
-Early NFS client implementations did not send credentials with lock requests, and many current NFS clients still exist which are based on the old implementations. Use this flag if you find that you can only lock files which are world readable. 
+Early NFS client implementations did not send credentials with lock requests, and many current NFS clients still exist which are based on the old implementations. Use this flag if you find that you can only lock files which are world readable.
 &lt;/p&gt;</string>
                     </property>
                 </widget>
@@ -327,7 +327,7 @@ Early NFS client implementations did not send credentials with lock requests, an
                 </sizepolicy>
             </property>
             <property name="title">
-                <string>User mapping</string>
+                <string>User Mapping</string>
             </property>
             <property name="alignment">
                 <set>AlignAuto</set>
@@ -371,11 +371,11 @@ Map all uids and gids to the anonymous user. Useful for NFS-exported public FTP 
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No root squash&lt;/b&gt;
 &lt;p&gt;
-Turn of root squashing. This option is mainly useful for diskless clients. 
+Turn of root squashing. This option is mainly useful for diskless clients.
 &lt;/p&gt;
 &lt;i&gt;root squashing&lt;/i&gt;
 &lt;p&gt;
-Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does not apply to any other uids that might be equally sensitive, such as user bin. 
+Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does not apply to any other uids that might be equally sensitive, such as user bin.
 &lt;/p&gt;</string>
                     </property>
                 </widget>

@@ -243,7 +243,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                                 <cstring>TextLabel6</cstring>
                             </property>
                             <property name="text">
-                                <string>Enter your workgroup</string>
+                                <string>Enter your workgroup:</string>
                             </property>
                         </widget>
                         <widget class="KRestrictedLine">
@@ -292,7 +292,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                                 <cstring>TextLabel7</cstring>
                             </property>
                             <property name="text">
-                                <string>Enter your NetBIOS-name (optional)</string>
+                                <string>Enter your NetBIOS-name (optional):</string>
                             </property>
                         </widget>
                         <widget class="KRestrictedLine">
@@ -347,7 +347,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                                 <cstring>TextLabel1_3</cstring>
                             </property>
                             <property name="text">
-                                <string>Enter a description for your computer (optional)</string>
+                                <string>Enter a description for your computer (optional):</string>
                             </property>
                         </widget>
                         <widget class="QLineEdit">
@@ -397,7 +397,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                 </rect>
             </property>
             <property name="text">
-                <string>Launch advanced config-dialog now</string>
+                <string>Launch Advanced Config-Dialog Now</string>
             </property>
         </widget>
         <widget class="QLayoutWidget">
@@ -493,7 +493,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                 </rect>
             </property>
             <property name="text">
-                <string>&lt;h3&gt;Server identification&lt;/h3&gt;</string>
+                <string>&lt;h3&gt;Server Identification&lt;/h3&gt;</string>
             </property>
         </widget>
         <widget class="QLabel">
@@ -627,7 +627,7 @@ They're only pre-defined security settings to make the configuration easier for 
                     <cstring>TextLabel2_3</cstring>
                 </property>
                 <property name="text">
-                    <string>&lt;h3&gt;Security level-selection&lt;/h3&gt;</string>
+                    <string>&lt;h3&gt;Security Level-Selection&lt;/h3&gt;</string>
                 </property>
             </widget>
             <spacer row="3" column="1">
@@ -764,7 +764,7 @@ They're only pre-defined security settings to make the configuration easier for 
                                     <cstring>CheckBox6</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Encrypted Passwords</string>
+                                    <string>Encrypted passwords</string>
                                 </property>
                                 <property name="checked">
                                     <bool>true</bool>
@@ -887,7 +887,7 @@ They're only pre-defined security settings to make the configuration easier for 
                     <cstring>homesChk</cstring>
                 </property>
                 <property name="text">
-                    <string>Share the users home-directories</string>
+                    <string>Share the users' home-directories</string>
                 </property>
             </widget>
             <widget class="QLayoutWidget" row="2" column="1">
@@ -909,7 +909,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <cstring>delDirBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Delete share</string>
+                            <string>Delete Share</string>
                         </property>
                     </widget>
                     <widget class="KPushButton" row="1" column="1">
@@ -917,7 +917,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <cstring>editDirBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Edit share</string>
+                            <string>Edit Share</string>
                         </property>
                     </widget>
                     <widget class="QListView" row="0" column="0" rowspan="1" colspan="3">
@@ -966,7 +966,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <cstring>addDirBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Add share</string>
+                            <string>Add Share</string>
                         </property>
                     </widget>
                 </grid>
@@ -992,7 +992,7 @@ If you want to share the users home-directories, simply select the option below 
                     <cstring>TextLabel1_4_2</cstring>
                 </property>
                 <property name="text">
-                    <string>&lt;h3&gt;Share directories&lt;/h3&gt;</string>
+                    <string>&lt;h3&gt;Share Directories&lt;/h3&gt;</string>
                 </property>
             </widget>
         </grid>
@@ -1099,7 +1099,7 @@ If you want to share the users home-directories, simply select the option below 
                     <cstring>TextLabel1_4</cstring>
                 </property>
                 <property name="text">
-                    <string>&lt;h3&gt;Share printers&lt;/h3&gt;</string>
+                    <string>&lt;h3&gt;Share Printers&lt;/h3&gt;</string>
                 </property>
             </widget>
             <widget class="QLabel" row="1" column="1">
@@ -1135,7 +1135,7 @@ If you want to share all your printers simply select the option below the list a
                     <widget class="QListView" row="0" column="0" rowspan="1" colspan="3">
                         <column>
                             <property name="text">
-                                <string>Printer queue</string>
+                                <string>Printer Queue</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -1178,7 +1178,7 @@ If you want to share all your printers simply select the option below the list a
                             <cstring>delPrnBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Delete share</string>
+                            <string>Delete Share</string>
                         </property>
                     </widget>
                     <widget class="KPushButton" row="1" column="1">
@@ -1186,7 +1186,7 @@ If you want to share all your printers simply select the option below the list a
                             <cstring>editPrnBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Edit share</string>
+                            <string>Edit Share</string>
                         </property>
                     </widget>
                     <widget class="KPushButton" row="1" column="0">
@@ -1194,7 +1194,7 @@ If you want to share all your printers simply select the option below the list a
                             <cstring>addPrnBtn</cstring>
                         </property>
                         <property name="text">
-                            <string>Add share</string>
+                            <string>Add Share</string>
                         </property>
                     </widget>
                 </grid>
@@ -1248,7 +1248,7 @@ If you want to share all your printers simply select the option below the list a
                             <bool>false</bool>
                         </property>
                         <property name="title">
-                            <string>Save the configuration to this file</string>
+                            <string>Save Configuration to This File</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -1346,7 +1346,7 @@ If you want to share all your printers simply select the option below the list a
                     <cstring>TextLabel2_2</cstring>
                 </property>
                 <property name="text">
-                    <string>&lt;h3&gt;Configuration finished&lt;/h3&gt;</string>
+                    <string>&lt;h3&gt;Configuration Finished&lt;/h3&gt;</string>
                 </property>
             </widget>
             <widget class="QLabel" row="1" column="1">
@@ -1368,7 +1368,7 @@ If you don't want to overwrite the samba-server's working configuration (or if y
                     <cstring>CheckBox8</cstring>
                 </property>
                 <property name="text">
-                    <string>Launch the advanced config-dialog after saving.</string>
+                    <string>Launch the advanced config-dialog after saving</string>
                 </property>
             </widget>
             <spacer row="4" column="1">

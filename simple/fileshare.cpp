@@ -35,6 +35,7 @@
 #include <kiconloader.h>
 #include <knfsshare.h>
 #include <ksambashare.h>
+#include <kfileshare.h>
 #include <kstandarddirs.h>
 #include <ksimpleconfig.h>
 #include <kmessagebox.h>
@@ -58,6 +59,8 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
     KCModule(ShareFactory::instance(), parent, name)
 {
+  KGlobal::locale()->insertCatalogue("kfileshare");                            
+
   QBoxLayout* layout = new QVBoxLayout(this,0,
 				       KDialog::spacingHint());
 
@@ -108,21 +111,24 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
                
   }
   
-  if(getuid() == 0)
+  if((getuid() == 0) || 
+     ((KFileShare::shareMode() == KFileShare::Advanced) &&
+      (KFileShare::authorization() == KFileShare::Authorized)))
   {
-      setButtons(Help|Apply);
       connect( m_ccgui->addShareBtn, SIGNAL(clicked()),
                this, SLOT(addShareBtnClicked()));
       connect( m_ccgui->changeShareBtn, SIGNAL(clicked()),
                this, SLOT(changeShareBtnClicked()));
       connect( m_ccgui->removeShareBtn, SIGNAL(clicked()),
                this, SLOT(removeShareBtnClicked()));
-               
-      m_ccgui->shareBtnPnl->setEnabled(true);        
       m_ccgui->listView->setSelectionMode(QListView::Extended);       
+      m_ccgui->shareBtnPnl->setEnabled(true);        
   }
-  else
-  {
+  
+  
+  if (getuid()==0) {               
+      setButtons(Help|Apply);
+  } else {
       setButtons(Help);
       m_ccgui->shareGrp->setDisabled( true );
   }

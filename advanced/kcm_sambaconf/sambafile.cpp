@@ -423,7 +423,7 @@ void SambaFile::parseParmStdOutput()
 * Try to find the samba config file position
 * First tries the config file, then checks
 * several common positions
-* If nothing is found returns ""
+* If nothing is found returns QString::null
 **/
 QString SambaFile::findSambaConf()
 {

@@ -5,7 +5,7 @@
     copyright            : (C) 2002 by Christian Nitschkowski,
     email                : segfault_ii@web.de
 
-    copyright            : (C) 2002-2003 by Jan Schäfer
+    copyright            : (C) 2002-2003 by Jan Schï¿½er
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 
@@ -301,7 +301,7 @@ void KcmSambaConf::initAdvancedTab()
     if (label == i18n("Tuning"))
       icon = SmallIcon("launch");
     else
-    if (label == i18n("Filenames"))
+    if (label == i18n("File names"))
       icon = SmallIcon("folder");
     else
     if (label == i18n("Locking"))

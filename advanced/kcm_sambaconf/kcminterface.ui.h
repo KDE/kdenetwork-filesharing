@@ -84,7 +84,7 @@ void KcmInterface::userRadio_clicked()
 void KcmInterface::serverRadio_clicked()
 {
     securityLevelHelpLbl->setText(i18n("Use the <i>server</i> security level if you have a big network "
-			         "and the samba server should validate the username/password "
+			         "and the samba server should validate the user name/password "
 			         "by passing it to another SMB server, such as an NT box."));
 }
 
@@ -92,7 +92,7 @@ void KcmInterface::serverRadio_clicked()
 void KcmInterface::domainRadio_clicked()
 {
  securityLevelHelpLbl->setText(i18n("Use the <i>domain</i> security level if you have a big network "
-			      "and the samba server should validate the username/password "
+			      "and the samba server should validate the user name/password "
 			      "by passing it to a Windows NT Primary or Backup Domain Controller."));
 }
 			      

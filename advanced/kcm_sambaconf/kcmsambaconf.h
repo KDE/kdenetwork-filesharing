@@ -26,7 +26,7 @@
 
 class SambaShare;
 class SambaFile;
-
+class QPixmap;
 /**
  * A QListViewItem which holds a SambaShare object
  **/
@@ -40,6 +40,7 @@ public:
 
 protected:
  	SambaShare* _share;
+  QPixmap createPropertyPixmap();
 };
 
 
@@ -67,6 +68,9 @@ class KcmSambaConf: public KCModule
     void editPrinter();
     void addPrinter();
     void removePrinter();
+    
+    void editShareDefaults();
+    void editPrinterDefaults();
 
 	protected:
   	/**

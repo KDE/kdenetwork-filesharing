@@ -15,8 +15,9 @@
  *                                                                         *
  ***************************************************************************/
 
-#include "sambafile.h"
+#include <kdebug.h>
 
+#include "sambafile.h"
 #include "sambashare.h"
 
 SambaShare::SambaShare(SambaConfigFile* sambaFile)
@@ -54,17 +55,19 @@ void SambaShare::setName(const QString & name)
 QString SambaShare::getValue(const QString & name, bool globalValue=true, bool defaultValue=true) const
 {
 	QString synonym = getSynonym(name);
-  
-  QString* str = find(name);
+
+  QString* str = find(synonym);
   QString ret;
 
-  if (!str && globalValue)
-		 ret = getGlobalValue(name,defaultValue);
+  if (str)
+  	 ret = *str;
+  else
+  if (globalValue)
+		 ret = getGlobalValue(synonym,defaultValue);
 	else
-  if (!str && defaultValue)
-     ret = getDefaultValue(name);
+  if (defaultValue)
+     ret = getDefaultValue(synonym);
 	else
-	if (!str)
   	 ret = "";
 
 	if (name == "read only")
@@ -147,7 +150,7 @@ void SambaShare::setValue(const QString & name, const QString & value)
   }
 
 
-	replace(synonym,new QString(value));
+	replace(synonym,new QString(newValue));
 }
 
 void SambaShare::setValue(const QString & name, bool value)

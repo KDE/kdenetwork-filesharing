@@ -784,6 +784,11 @@
                                                         <property name="name">
                                                             <cstring>encryptPasswordChk</cstring>
                                                         </property>
+                                                        <property name="font">
+                                                            <font>
+                                                                <bold>1</bold>
+                                                            </font>
+                                                        </property>
                                                         <property name="text">
                                                             <string>encrypt passwords</string>
                                                         </property>
@@ -1153,56 +1158,40 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QGroupBox">
+                    <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>GroupBox3</cstring>
+                            <cstring>Layout29</cstring>
                         </property>
-                        <property name="title">
-                            <string>Domain settings</string>
-                        </property>
-                        <vbox>
+                        <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <property name="margin">
-                                <number>11</number>
+                                <number>0</number>
                             </property>
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLayoutWidget">
+                            <widget class="QGroupBox">
                                 <property name="name">
-                                    <cstring>Layout107</cstring>
+                                    <cstring>GroupBox3</cstring>
                                 </property>
-                                <grid>
+                                <property name="title">
+                                    <string>Domain settings</string>
+                                </property>
+                                <vbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
                                     <property name="margin">
-                                        <number>0</number>
+                                        <number>11</number>
                                     </property>
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
-                                    <widget class="QCheckBox" row="1" column="0">
+                                    <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>local</cstring>
-                                        </property>
-                                        <property name="sizePolicy">
-                                            <sizepolicy>
-                                                <hsizetype>0</hsizetype>
-                                                <vsizetype>0</vsizetype>
-                                                <horstretch>0</horstretch>
-                                                <verstretch>0</verstretch>
-                                            </sizepolicy>
-                                        </property>
-                                        <property name="text">
-                                            <string>Local master</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="0" column="0">
-                                        <property name="name">
-                                            <cstring>preferredMaster</cstring>
+                                            <cstring>preferredMasterChk</cstring>
                                         </property>
                                         <property name="sizePolicy">
                                             <sizepolicy>
@@ -1216,57 +1205,9 @@
                                             <string>Preferred master</string>
                                         </property>
                                     </widget>
-                                    <widget class="QCheckBox" row="0" column="1">
+                                    <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>logons</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Domain logons</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="1" column="1">
-                                        <property name="name">
-                                            <cstring>domainMaster</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Domain master</string>
-                                        </property>
-                                    </widget>
-                                </grid>
-                            </widget>
-                            <widget class="QLayoutWidget">
-                                <property name="name">
-                                    <cstring>Layout16</cstring>
-                                </property>
-                                <hbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QLabel">
-                                        <property name="name">
-                                            <cstring>TextLabel5</cstring>
-                                        </property>
-                                        <property name="sizePolicy">
-                                            <sizepolicy>
-                                                <hsizetype>0</hsizetype>
-                                                <vsizetype>5</vsizetype>
-                                                <horstretch>0</horstretch>
-                                                <verstretch>0</verstretch>
-                                            </sizepolicy>
-                                        </property>
-                                        <property name="text">
-                                            <string>OS Level</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="KIntSpinBox">
-                                        <property name="name">
-                                            <cstring>oslevel</cstring>
+                                            <cstring>localMasterChk</cstring>
                                         </property>
                                         <property name="sizePolicy">
                                             <sizepolicy>
@@ -1276,62 +1217,110 @@
                                                 <verstretch>0</verstretch>
                                             </sizepolicy>
                                         </property>
+                                        <property name="text">
+                                            <string>Local master</string>
+                                        </property>
                                     </widget>
-                                    <spacer>
-                                        <property name="name" stdset="0">
-                                            <cstring>Spacer14</cstring>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>domainMasterChk</cstring>
                                         </property>
-                                        <property name="orientation">
-                                            <enum>Horizontal</enum>
+                                        <property name="text">
+                                            <string>Domain master</string>
                                         </property>
-                                        <property name="sizeType">
-                                            <enum>Preferred</enum>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>domainLogonsChk</cstring>
                                         </property>
-                                        <property name="sizeHint">
-                                            <size>
-                                                <width>20</width>
-                                                <height>20</height>
-                                            </size>
+                                        <property name="text">
+                                            <string>Domain logons</string>
                                         </property>
-                                    </spacer>
-                                </hbox>
+                                    </widget>
+                                    <widget class="QLayoutWidget">
+                                        <property name="name">
+                                            <cstring>Layout16</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>TextLabel5</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>0</hsizetype>
+                                                        <vsizetype>5</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                                <property name="text">
+                                                    <string>OS Level</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="KIntSpinBox">
+                                                <property name="name">
+                                                    <cstring>osLevelSpin</cstring>
+                                                </property>
+                                                <property name="sizePolicy">
+                                                    <sizepolicy>
+                                                        <hsizetype>0</hsizetype>
+                                                        <vsizetype>0</vsizetype>
+                                                        <horstretch>0</horstretch>
+                                                        <verstretch>0</verstretch>
+                                                    </sizepolicy>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name" stdset="0">
+                                                    <cstring>Spacer14</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Horizontal</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Preferred</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>20</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </hbox>
+                                    </widget>
+                                </vbox>
                             </widget>
-                        </vbox>
-                    </widget>
-                    <widget class="QButtonGroup">
-                        <property name="name">
-                            <cstring>ButtonGroup7</cstring>
-                        </property>
-                        <property name="title">
-                            <string>Wins settings</string>
-                        </property>
-                        <hbox>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>11</number>
-                            </property>
-                            <property name="spacing">
-                                <number>6</number>
-                            </property>
-                            <widget class="QLayoutWidget">
+                            <widget class="QButtonGroup">
                                 <property name="name">
-                                    <cstring>Layout41</cstring>
+                                    <cstring>ButtonGroup7</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Wins settings</string>
                                 </property>
                                 <vbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
                                     <property name="margin">
-                                        <number>0</number>
+                                        <number>11</number>
                                     </property>
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
                                     <widget class="QRadioButton">
                                         <property name="name">
-                                            <cstring>nowins</cstring>
+                                            <cstring>noWinsSupportRadio</cstring>
                                         </property>
                                         <property name="text">
                                             <string>Deactivate Wins</string>
@@ -1345,128 +1334,150 @@
                                     </widget>
                                     <widget class="QRadioButton">
                                         <property name="name">
-                                            <cstring>wins</cstring>
+                                            <cstring>winsSupportRadio</cstring>
                                         </property>
                                         <property name="text">
                                             <string>Act as a Wins server</string>
                                         </property>
                                     </widget>
+                                    <widget class="QFrame">
+                                        <property name="name">
+                                            <cstring>Frame6</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>5</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>170</width>
+                                                <height>20</height>
+                                            </size>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>NoFrame</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Raised</enum>
+                                        </property>
+                                        <widget class="QCheckBox">
+                                            <property name="name">
+                                                <cstring>dnsProxyChk</cstring>
+                                            </property>
+                                            <property name="enabled">
+                                                <bool>false</bool>
+                                            </property>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>30</x>
+                                                    <y>0</y>
+                                                    <width>140</width>
+                                                    <height>19</height>
+                                                </rect>
+                                            </property>
+                                            <property name="text">
+                                                <string>DNS proxy support</string>
+                                            </property>
+                                        </widget>
+                                    </widget>
                                     <widget class="QRadioButton">
                                         <property name="name">
-                                            <cstring>otherwins</cstring>
+                                            <cstring>otherWinsRadio</cstring>
                                         </property>
                                         <property name="text">
                                             <string>Use another Wins server</string>
                                         </property>
                                     </widget>
-                                    <widget class="QLayoutWidget">
+                                    <widget class="QFrame">
                                         <property name="name">
-                                            <cstring>Layout40</cstring>
+                                            <cstring>Frame7</cstring>
                                         </property>
-                                        <hbox>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="minimumSize">
+                                            <size>
+                                                <width>170</width>
+                                                <height>25</height>
+                                            </size>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>NoFrame</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Raised</enum>
+                                        </property>
+                                        <widget class="KRestrictedLine">
                                             <property name="name">
-                                                <cstring>unnamed</cstring>
+                                                <cstring>winsServerEdit</cstring>
                                             </property>
-                                            <property name="margin">
-                                                <number>0</number>
+                                            <property name="enabled">
+                                                <bool>false</bool>
                                             </property>
-                                            <property name="spacing">
-                                                <number>6</number>
+                                            <property name="geometry">
+                                                <rect>
+                                                    <x>30</x>
+                                                    <y>0</y>
+                                                    <width>140</width>
+                                                    <height>20</height>
+                                                </rect>
                                             </property>
-                                            <spacer>
-                                                <property name="name" stdset="0">
-                                                    <cstring>Spacer51</cstring>
-                                                </property>
-                                                <property name="orientation">
-                                                    <enum>Horizontal</enum>
-                                                </property>
-                                                <property name="sizeType">
-                                                    <enum>Expanding</enum>
-                                                </property>
-                                                <property name="sizeHint">
-                                                    <size>
-                                                        <width>20</width>
-                                                        <height>20</height>
-                                                    </size>
-                                                </property>
-                                            </spacer>
-                                            <widget class="KRestrictedLine">
-                                                <property name="name">
-                                                    <cstring>winsip</cstring>
-                                                </property>
-                                                <property name="enabled">
-                                                    <bool>false</bool>
-                                                </property>
-                                                <property name="text">
-                                                    <string>0.0.0.0</string>
-                                                </property>
-                                                <property name="maxLength">
-                                                    <number>15</number>
-                                                </property>
-                                                <property name="urlDropsEnabled" stdset="0">
-                                                    <bool>false</bool>
-                                                </property>
-                                                <property name="validChars">
-                                                    <string>1234567890.</string>
-                                                </property>
-                                            </widget>
-                                        </hbox>
+                                            <property name="text">
+                                                <string>0.0.0.0</string>
+                                            </property>
+                                            <property name="maxLength">
+                                                <number>15</number>
+                                            </property>
+                                            <property name="urlDropsEnabled" stdset="0">
+                                                <bool>false</bool>
+                                            </property>
+                                            <property name="validChars">
+                                                <string>1234567890.</string>
+                                            </property>
+                                        </widget>
                                     </widget>
-                                </vbox>
-                            </widget>
-                            <widget class="QLayoutWidget">
-                                <property name="name">
-                                    <cstring>Layout15</cstring>
-                                </property>
-                                <vbox>
-                                    <property name="name">
-                                        <cstring>unnamed</cstring>
-                                    </property>
-                                    <property name="margin">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
+                                    <widget class="QFrame">
+                                        <property name="name">
+                                            <cstring>Frame8</cstring>
+                                        </property>
+                                        <property name="frameShape">
+                                            <enum>HLine</enum>
+                                        </property>
+                                        <property name="frameShadow">
+                                            <enum>Sunken</enum>
+                                        </property>
+                                    </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>winsproxy</cstring>
+                                            <cstring>winsProxyChk</cstring>
                                         </property>
                                         <property name="enabled">
-                                            <bool>false</bool>
+                                            <bool>true</bool>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>5</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
                                         </property>
                                         <property name="text">
                                             <string>Wins proxy support</string>
                                         </property>
                                     </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>dnsproxy</cstring>
-                                        </property>
-                                        <property name="enabled">
-                                            <bool>false</bool>
-                                        </property>
-                                        <property name="text">
-                                            <string>DNS proxy support</string>
-                                        </property>
-                                    </widget>
-                                    <spacer>
-                                        <property name="name" stdset="0">
-                                            <cstring>Spacer39</cstring>
-                                        </property>
-                                        <property name="orientation">
-                                            <enum>Vertical</enum>
-                                        </property>
-                                        <property name="sizeType">
-                                            <enum>Expanding</enum>
-                                        </property>
-                                        <property name="sizeHint">
-                                            <size>
-                                                <width>20</width>
-                                                <height>20</height>
-                                            </size>
-                                        </property>
-                                    </spacer>
                                 </vbox>
                             </widget>
                         </hbox>
@@ -2183,64 +2194,7 @@
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
-                                    <widget class="QCheckBox" row="2" column="0">
-                                        <property name="name">
-                                            <cstring>readBmpxChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>read bmpx</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="3" column="0">
-                                        <property name="name">
-                                            <cstring>largeReadWriteChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>large readwrite</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="1" column="0">
-                                        <property name="name">
-                                            <cstring>readRawChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>read raw</string>
-                                        </property>
-                                        <property name="checked">
-                                            <bool>true</bool>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="3" column="1">
-                                        <property name="name">
-                                            <cstring>CheckBox33</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>time server</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="2" column="1">
-                                        <property name="name">
-                                            <cstring>ntPipeSupportChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>nt pipe support</string>
-                                        </property>
-                                        <property name="checked">
-                                            <bool>true</bool>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="1" column="1">
-                                        <property name="name">
-                                            <cstring>ntSmbSupportChk</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>nt smb support</string>
-                                        </property>
-                                        <property name="checked">
-                                            <bool>true</bool>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox" row="0" column="1">
+                                    <widget class="QCheckBox" row="0" column="0">
                                         <property name="name">
                                             <cstring>ntAclSupportChk</cstring>
                                         </property>
@@ -2251,12 +2205,94 @@
                                             <bool>true</bool>
                                         </property>
                                     </widget>
-                                    <widget class="QCheckBox" row="0" column="0">
+                                    <widget class="QCheckBox" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>timeServerChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>time server</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>largeReadWriteChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>large readwrite</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="3" column="0">
+                                        <property name="name">
+                                            <cstring>readBmpxChk</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>read bmpx</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>readRawChk</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>read raw</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="1" column="1">
                                         <property name="name">
                                             <cstring>writeRawChk</cstring>
                                         </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
                                         <property name="text">
                                             <string>write raw</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>ntPipeSupportChk</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>nt pipe support</string>
+                                        </property>
+                                        <property name="checked">
+                                            <bool>true</bool>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>ntSmbSupportChk</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
+                                        <property name="text">
+                                            <string>nt smb support</string>
                                         </property>
                                         <property name="checked">
                                             <bool>true</bool>
@@ -2313,6 +2349,11 @@
                                         <property name="name">
                                             <cstring>TextLabel4_4_2_4</cstring>
                                         </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
                                         <property name="text">
                                             <string>Max wins ttl</string>
                                         </property>
@@ -2321,6 +2362,11 @@
                                         <property name="name">
                                             <cstring>TextLabel4_4_2_3</cstring>
                                         </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
                                         <property name="text">
                                             <string>Max ttl</string>
                                         </property>
@@ -2328,6 +2374,18 @@
                                     <widget class="QLabel" row="2" column="0">
                                         <property name="name">
                                             <cstring>TextLabel4_4_2_2</cstring>
+                                        </property>
+                                        <property name="paletteForegroundColor">
+                                            <color>
+                                                <red>0</red>
+                                                <green>0</green>
+                                                <blue>0</blue>
+                                            </color>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
                                         </property>
                                         <property name="text">
                                             <string>Max packet</string>
@@ -2388,6 +2446,11 @@
                                         <property name="name">
                                             <cstring>TextLabel4_4_2_5</cstring>
                                         </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
                                         <property name="text">
                                             <string>Min wins ttl</string>
                                         </property>
@@ -2416,6 +2479,11 @@
                                         <property name="name">
                                             <cstring>TextLabel4_4_2</cstring>
                                         </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
+                                        </property>
                                         <property name="text">
                                             <string>Max xmit</string>
                                         </property>
@@ -2423,6 +2491,11 @@
                                     <widget class="QLabel" row="0" column="0">
                                         <property name="name">
                                             <cstring>TextLabel4_4</cstring>
+                                        </property>
+                                        <property name="font">
+                                            <font>
+                                                <italic>1</italic>
+                                            </font>
                                         </property>
                                         <property name="text">
                                             <string>Max mux</string>
@@ -2776,24 +2849,6 @@
 </widget>
 <connections>
     <connection>
-        <sender>otherwins</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>winsip</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>otherwins</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>winsproxy</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>otherwins</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>dnsproxy</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
         <sender>timestampChk</sender>
         <signal>toggled(bool)</signal>
         <receiver>microsecondsChk</receiver>
@@ -3116,6 +3171,138 @@
         <signal>stateChanged(int)</signal>
         <receiver>KcmInterface</receiver>
         <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>writeRawChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>readRawChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>readBmpxChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>largeReadWriteChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>ntAclSupportChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>ntSmbSupportChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>ntPipeSupportChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>timeServerChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>announceAsCombo</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>announceVersionEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>protocolCombo</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxProtocolCombo</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>minProtocolCombo</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>nameResolveOrderEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxMuxInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxXmitInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxPacketInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxTtlInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>maxWinsTtlInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>minWinsTtlInput</sender>
+        <signal>valueChanged(int)</signal>
+        <receiver>KcmInterface</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>otherWinsRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>winsServerEdit</receiver>
+        <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>winsSupportRadio</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>dnsProxyChk</receiver>
+        <slot>setEnabled(bool)</slot>
     </connection>
 </connections>
 <includes>

@@ -35,3 +35,5 @@ void KonqInterface::moreOptionsPressed()
 {
 
 }
+
+

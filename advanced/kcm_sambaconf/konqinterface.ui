@@ -1,4 +1,5 @@
 <!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<class>KonqInterface</class>
 <comment>
 /******************************************************************************
  *                                                                            *
@@ -20,7 +21,6 @@
  *                                                                            *
  ******************************************************************************/
 </comment>
-<class>KonqInterface</class>
 <author>Jan Schäfer &lt;janschaefer@users.sourceforge.net&gt;</author>
 <widget class="QWidget">
     <property name="name">
@@ -31,7 +31,7 @@
             <x>0</x>
             <y>0</y>
             <width>368</width>
-            <height>388</height>
+            <height>397</height>
         </rect>
     </property>
     <property name="caption">
@@ -98,6 +98,11 @@
             <property name="name">
                 <cstring>baseGrp</cstring>
             </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
+            </property>
             <property name="title">
                 <string>Base Options</string>
             </property>
@@ -115,6 +120,11 @@
                     <property name="name">
                         <cstring>commentEdit</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="toolTip" stdset="0">
                         <string>Comment</string>
                     </property>
@@ -126,6 +136,11 @@
                     <property name="name">
                         <cstring>nameEdit</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="toolTip" stdset="0">
                         <string>Name of the share</string>
                     </property>
@@ -136,6 +151,11 @@
                 <widget class="QLabel" row="0" column="0">
                     <property name="name">
                         <cstring>TextLabel1_2</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="text">
                         <string>&amp;Name</string>
@@ -157,6 +177,11 @@
                     <property name="name">
                         <cstring>TextLabel5_2</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="text">
                         <string>&amp;Comment</string>
                     </property>
@@ -173,6 +198,11 @@
             <property name="name">
                 <cstring>securityGrp</cstring>
             </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
+            </property>
             <property name="title">
                 <string>Security Options</string>
             </property>
@@ -186,17 +216,27 @@
                 <property name="spacing">
                     <number>6</number>
                 </property>
-                <widget class="QLineEdit" row="3" column="1">
+                <widget class="QLineEdit" row="3" column="1" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>denyEdit</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
                     </property>
                 </widget>
-                <widget class="QLineEdit" row="2" column="1">
+                <widget class="QLineEdit" row="2" column="1" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>allowEdit</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -205,6 +245,11 @@
                 <widget class="QLabel" row="3" column="0">
                     <property name="name">
                         <cstring>TextLabel6</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="text">
                         <string>Hosts &amp;deny</string>
@@ -220,6 +265,11 @@
                     <property name="name">
                         <cstring>TextLabel5</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="text">
                         <string>&amp;Hosts allow</string>
                     </property>
@@ -234,22 +284,16 @@
                     <property name="name">
                         <cstring>TextLabel1</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="text">
                         <string>Guest &amp;account</string>
                     </property>
                     <property name="buddy" stdset="0">
-                        <cstring>guestEdit</cstring>
-                    </property>
-                    <property name="whatsThis" stdset="0">
-                        <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
-                    </property>
-                </widget>
-                <widget class="QLineEdit" row="1" column="1">
-                    <property name="name">
-                        <cstring>guestEdit</cstring>
-                    </property>
-                    <property name="toolTip" stdset="0">
-                        <string>Guest account</string>
+                        <cstring>guestAccountCombo</cstring>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
@@ -259,6 +303,11 @@
                     <property name="name">
                         <cstring>readOnlyChk</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="text">
                         <string>&amp;Read only</string>
                     </property>
@@ -266,22 +315,68 @@
                         <string>If this is checked, then users of a service may not create or modify files in the service's directory.</string>
                     </property>
                 </widget>
-                <widget class="QCheckBox" row="0" column="1">
+                <widget class="QCheckBox" row="0" column="1" rowspan="1" colspan="2">
                     <property name="name">
                         <cstring>guestOkChk</cstring>
                     </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
                     <property name="text">
-                        <string>&amp;Guest ok</string>
+                        <string>&amp;Guests allowed</string>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                        <string></string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>If this is checked , then no password is required to connect to the service. Privileges will be those of the guest account.</string>
                     </property>
                 </widget>
+                <widget class="QComboBox" row="1" column="1">
+                    <property name="name">
+                        <cstring>guestAccountCombo</cstring>
+                    </property>
+                    <property name="enabled">
+                        <bool>false</bool>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
+                    </property>
+                    <property name="whatsThis" stdset="0">
+                        <string>This is a username which will be used for access this directory if guests are allowed</string>
+                    </property>
+                </widget>
+                <spacer row="1" column="2">
+                    <property name="name">
+                        <cstring>Spacer3</cstring>
+                    </property>
+                    <property name="orientation">
+                        <enum>Horizontal</enum>
+                    </property>
+                    <property name="sizeType">
+                        <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>30</width>
+                            <height>0</height>
+                        </size>
+                    </property>
+                </spacer>
             </grid>
         </widget>
         <widget class="QGroupBox">
             <property name="name">
                 <cstring>otherGrp</cstring>
+            </property>
+            <property name="font">
+                <font>
+                    <bold>1</bold>
+                </font>
             </property>
             <property name="title">
                 <string>Other Options</string>
@@ -299,6 +394,11 @@
                 <widget class="QCheckBox">
                     <property name="name">
                         <cstring>browseableChk</cstring>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="text">
                         <string>&amp;Browseable</string>
@@ -318,6 +418,11 @@
                             <horstretch>10</horstretch>
                             <verstretch>0</verstretch>
                         </sizepolicy>
+                    </property>
+                    <property name="font">
+                        <font>
+                            <bold>0</bold>
+                        </font>
                     </property>
                     <property name="text">
                         <string>A&amp;vailable</string>
@@ -343,7 +448,7 @@
                     <number>6</number>
                 </property>
                 <spacer>
-                    <property name="name" stdset="0">
+                    <property name="name">
                         <cstring>Spacer9</cstring>
                     </property>
                     <property name="orientation">
@@ -355,7 +460,7 @@
                     <property name="sizeHint">
                         <size>
                             <width>20</width>
-                            <height>20</height>
+                            <height>0</height>
                         </size>
                     </property>
                 </spacer>
@@ -370,7 +475,7 @@
             </hbox>
         </widget>
         <spacer>
-            <property name="name" stdset="0">
+            <property name="name">
                 <cstring>Spacer8</cstring>
             </property>
             <property name="orientation">
@@ -381,7 +486,7 @@
             </property>
             <property name="sizeHint">
                 <size>
-                    <width>20</width>
+                    <width>0</width>
                     <height>20</height>
                 </size>
             </property>
@@ -414,12 +519,6 @@
         <slot>changedSlot()</slot>
     </connection>
     <connection>
-        <sender>guestEdit</sender>
-        <signal>textChanged(const QString&amp;)</signal>
-        <receiver>konqinterface</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
         <sender>allowEdit</sender>
         <signal>textChanged(const QString&amp;)</signal>
         <receiver>konqinterface</receiver>
@@ -445,9 +544,15 @@
     </connection>
     <connection>
         <sender>moreOptionsBtn</sender>
-        <signal>pressed()</signal>
+        <signal>clicked()</signal>
         <receiver>konqinterface</receiver>
         <slot>moreOptionsPressed()</slot>
+    </connection>
+    <connection>
+        <sender>guestOkChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>guestAccountCombo</receiver>
+        <slot>setEnabled(bool)</slot>
     </connection>
 </connections>
 <tabstops>
@@ -455,7 +560,6 @@
     <tabstop>commentEdit</tabstop>
     <tabstop>readOnlyChk</tabstop>
     <tabstop>guestOkChk</tabstop>
-    <tabstop>guestEdit</tabstop>
     <tabstop>allowEdit</tabstop>
     <tabstop>denyEdit</tabstop>
     <tabstop>browseableChk</tabstop>

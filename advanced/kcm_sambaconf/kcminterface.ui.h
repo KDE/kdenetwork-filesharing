@@ -57,5 +57,82 @@ void KcmInterface::changedSlot()
 void KcmInterface::securityLevelCombo_activated( int i )
 {
    passwordServerEdit->setDisabled(i<2);
+   allowGuestLoginsChk->setDisabled(i==0);
+   
     
+}
+
+
+void KcmInterface::shareRadio_clicked()
+{
+    securityLevelHelpLbl->setText("Use the <i>share</i> security level if you have a home network "
+			         "or a small office network.<br> It allows everyone to read the list "
+		                     "of all your shared directories and printers before a login is required.");
+}
+
+
+void KcmInterface::userRadio_clicked()
+{
+    securityLevelHelpLbl->setText("Use the <i>user</i> security level if you have a bigger network "
+			         "and you don't want to allow everyone to read your list of shared "
+		                     "direcories and printers without a login.<p>"
+			"If you want to run your Samba server as a <b>Primary Domain controller</b> (PDC) "
+			"you also have to set this option.");
+}
+
+void KcmInterface::serverRadio_clicked()
+{
+    securityLevelHelpLbl->setText("Use the <i>server</i> security level if you have a big network "
+			         "and the samba server should validate the username/password "
+			         "by passing it to another SMB server, such as an NT box.");
+}
+
+
+void KcmInterface::domainRadio_clicked()
+{
+ securityLevelHelpLbl->setText("Use the <i>domain</i> security level if you have a big network "
+			      "and the samba server should validate the username/password "
+			      "by passing it to a Windows NT Primary or Backup Domain Controller.");
+}
+			      
+			
+
+
+
+void KcmInterface::KURLLabel1_leftClickedURL()
+{
+    KProcess* p = new KProcess();
+    
+    *p << "konqueror";
+    *p << "man:smb.conf";
+    p->start();
+    
+    
+    
+}
+
+
+
+
+void KcmInterface::lmAnnounceCombo_activated( int i)
+{
+    lmIntervalSpin->setEnabled(i==0);
+}
+
+
+
+
+void KcmInterface::allowGuestLoginsChk_toggled( bool b)
+{
+    int i = 0;
+    if (b) 
+	i = 1;
+    
+    mapToGuestCombo->setCurrentItem(i);
+}
+
+
+void KcmInterface::mapToGuestCombo_activated( int i)
+{
+    allowGuestLoginsChk->setChecked(i>0);
 }

@@ -1,5 +1,5 @@
 /***************************************************************************
-                          sambapage.h  -  description
+                   ksambapropertiesdialogplugin.h  -  description
                              -------------------
     begin                : Son Apr 14 2002
     copyright            : (C) 2002 by Jan Schäfer
@@ -59,6 +59,8 @@ public:
   virtual void applyChanges();
 
 protected:
+  bool _wasShared;
+
   KPropertiesDialog* propDialog;
 
   QFrame* frame;
@@ -75,7 +77,14 @@ protected:
   SambaFile* _sambaFile;
 
   void initValues();
+  void saveValuesToShare();
   void init();
+  
+  /**
+   * Checks wether or not the entered Values are correct
+   * @return fals if not correct otherwise true
+   */
+  bool checkValues();
   
   KonqInterface* createShareWidget(QWidget* parent);
   QWidget* createConfigWidget(QWidget* parent);

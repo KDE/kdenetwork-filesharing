@@ -39,6 +39,7 @@
 #include <qwidgetstack.h>
 #include <qwhatsthis.h>
 #include <qtabwidget.h>
+#include <qcombobox.h>
 
 #include <kgenericfactory.h>
 #include <klocale.h>
@@ -52,6 +53,8 @@
 #include "sambafile.h"
 #include "share.h"
 #include "sharedlgimpl.h"
+#include "passwd.h"
+#include "common.h"
 
 #include <assert.h>
 
@@ -165,6 +168,8 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 
   connect(shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
   connect(shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
+  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
+  				 this, SLOT(moreOptionsBtnPressed()));
 
 	if ( QFileInfo(smbconf).exists() )
 	{
@@ -180,9 +185,12 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
       shareWidget->baseGrp->setEnabled(false);
       shareWidget->securityGrp->setEnabled(false);
       shareWidget->otherGrp->setEnabled(false);
+			shareWidget->moreOptionsBtn->setEnabled(false);
+      _wasShared = false;
     }
     else
     {
+      _wasShared = true;
       _share = _sambaFile->getShare(shareName);
       shareWidget->sharedRadio->setChecked(true);
       initValues();
@@ -195,7 +203,7 @@ KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
 {
   if (_sambaFile)
-     delete _sambaFile;
+    delete _sambaFile;
 }
 
 
@@ -208,14 +216,28 @@ void KSambaPropertiesDialogPlugin::initValues()
   shareWidget->commentEdit->setText( _share->getValue("comment") );
   shareWidget->readOnlyChk->setChecked( _share->getBoolValue("read only") );
   shareWidget->guestOkChk->setChecked( _share->getBoolValue("guest ok") );
-  shareWidget->guestEdit->setText( _share->getValue("guest account") );
   shareWidget->allowEdit->setText( _share->getValue("hosts allow") );
   shareWidget->denyEdit->setText( _share->getValue("hosts deny") );
   shareWidget->browseableChk->setChecked( _share->getBoolValue("browseable") );
   shareWidget->availableChk->setChecked( _share->getBoolValue("available") );
+  shareWidget->guestAccountCombo->insertStringList( getUnixUsers() );
+	setComboToString(shareWidget->guestAccountCombo,_share->getValue("guest account"));
 
-  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
-  				 this, SLOT(moreOptionsBtnPressed()));
+  
+
+}
+
+void KSambaPropertiesDialogPlugin::saveValuesToShare() 
+{
+  	_share->setValue("comment",shareWidget->commentEdit->text());
+    _share->setValue("read only", shareWidget->readOnlyChk->isChecked());
+    _share->setValue("guest ok", shareWidget->guestOkChk->isChecked());
+    _share->setValue("guest account",shareWidget->guestAccountCombo->currentText());
+
+    _share->setValue("hosts allow", shareWidget->allowEdit->text());
+    _share->setValue("hosts deny", shareWidget->denyEdit->text());
+    _share->setValue("browseable", shareWidget->browseableChk->isChecked());
+    _share->setValue("available", shareWidget->availableChk->isChecked());
 
 }
 
@@ -226,11 +248,8 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
     shareWidget->baseGrp->setEnabled(false);
     shareWidget->securityGrp->setEnabled(false);
     shareWidget->otherGrp->setEnabled(false);
-		
-		if (_share)
-			_sambaFile->removeShare(_share);
-			
-		_share = 0L;
+		shareWidget->moreOptionsBtn->setEnabled(false);
+
   }
   else  // shared
   {
@@ -239,7 +258,7 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
       QString shareName = propDialog->kurl().fileName();
 
       if (_sambaFile->getShare(shareName))
-          shareName = _sambaFile->getUnusedName();
+          shareName = _sambaFile->getUnusedName(shareName);
 
       _share = _sambaFile->newShare(shareName,sharePath);
       initValues();
@@ -248,24 +267,69 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
     shareWidget->baseGrp->setEnabled(true);
     shareWidget->securityGrp->setEnabled(true);
     shareWidget->otherGrp->setEnabled(true);
+		shareWidget->moreOptionsBtn->setEnabled(true);
+   
+
   }
   
   emit changed();
 }
 
 
+bool KSambaPropertiesDialogPlugin::checkValues()
+{
+  if (shareWidget->nameEdit->text().isEmpty())  {
+    KMessageBox::information(frame,i18n("Please enter a name for the shared directory."),i18n("Information"));
+    shareWidget->nameEdit->setFocus();
+    return false;
+  } 
+  
+  if (shareWidget->nameEdit->text().length() > 12) {
+    if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
+      frame,i18n(
+        "<qt>The name of the share has more than <b>12</b> characters ! <br>"
+        "This can lead to problems with Microsoft Windows(R) clients. <br>"
+        "Do you really want to continue ?</qt>")
+        ,i18n("Warning")
+        ,KStdGuiItem::cont()
+        ,"KSambaPlugin_12CharacterWarning"))
+    {
+      shareWidget->nameEdit->setFocus();
+      return false;  
+    }
+
+  } 
+  
+  if (shareWidget->nameEdit->text().contains(' ')) {
+    if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
+      frame,i18n(
+        "<qt>The name of the share contains a <b>space</b> character ! <br>"
+        "This can lead to problems with Microsoft Windows(R) clients. <br>"
+        "Do you really want to continue ?</qt>"
+        ),i18n("Warning")
+        ,KStdGuiItem::cont()
+        ,"KSambaPlugin_SpaceCharacterWarning"))
+    {
+      shareWidget->nameEdit->setFocus();
+      return false;  
+    }
+  }
+  
+
+  return true;
+}
+
 /** No descriptions */
 void KSambaPropertiesDialogPlugin::applyChanges()
 {
   if (_share && shareWidget->sharedRadio->isChecked())
   {
-    if (shareWidget->nameEdit->text().isEmpty())
+  	if (!checkValues())
     {
-       KMessageBox::information(frame,i18n("Please enter a name for the shared directory."),i18n("Information"));
-       shareWidget->nameEdit->setFocus();
        properties->abortApplying();
        return;
     }
+    
 
     QString shareName = shareWidget->nameEdit->text();
 
@@ -278,18 +342,16 @@ void KSambaPropertiesDialogPlugin::applyChanges()
        return;
     }
 
-  	_share->setValue("comment",shareWidget->commentEdit->text());
-    _share->setValue("read only", shareWidget->readOnlyChk->isChecked());
-    _share->setValue("guest ok", shareWidget->guestOkChk->isChecked());
-    _share->setValue("guest account", shareWidget->guestEdit->text());
-    _share->setValue("hosts allow", shareWidget->allowEdit->text());
-    _share->setValue("hosts deny", shareWidget->denyEdit->text());
-    _share->setValue("browseable", shareWidget->browseableChk->isChecked());
-    _share->setValue("available", shareWidget->availableChk->isChecked());
-
+		saveValuesToShare();
   }
-
-  _sambaFile->slotApply();
+  
+  if (shareWidget->sharedRadio->isChecked())
+    _sambaFile->slotApply();
+  else
+  if (_wasShared) {
+    _sambaFile->removeShare(_share);
+    _sambaFile->slotApply();
+  }
 
   return;
 
@@ -297,12 +359,15 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 
 void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 {
+	saveValuesToShare();
+	
 	ShareDlgImpl *dlg = new ShareDlgImpl(shareWidget,_share);
 
   // We already have the base settings
   dlg->_tabs->removePage(dlg->baseTab);
   dlg->exec();
 
+  initValues();
 }
 
 

@@ -58,6 +58,11 @@ protected:
 };
 
 
+class KJanusWidget;
+class QLineEdit;
+class QCheckBox;
+class QSpinBox;
+
 class KcmSambaConf: public KCModule
 {
 	Q_OBJECT
@@ -85,18 +90,50 @@ class KcmSambaConf: public KCModule
     
     void editShareDefaults();
     void editPrinterDefaults();
+		
 
-    void socketOptionsBtnClicked();
 	protected:
   	/**
      * The path of the smb.conf file
      **/
   	QString _smbconf;
 		SambaFile* _sambaFile;
+		QDict<QLineEdit> lineEditDict;
+		QDict<QCheckBox> checkBoxDict;
+		QDict<KURLRequester> urlRequesterDict;
+		QDict<QSpinBox> spinBoxDict;
+		
+		
 
     void loadUserTab();
     void saveUserTab();
-
+    bool getSocketBoolValue( const QString & str, const QString & name );
+		int getSocketIntValue( const QString & str, const QString & name );
+		QString socketOptions();
+		void setComboIndexToValue(QComboBox* box, const QString & value, SambaShare* share);
+		void setComboFromAutoValue(QComboBox* box, const QString & key, SambaShare* share); 
+		
+		void loadBaseSettings(SambaShare* share);
+		void loadDomain(SambaShare* share);
+		void loadSecurity(SambaShare* share);
+		void loadLogging(SambaShare* share);
+		void loadTuning(SambaShare* share);
+		void loadPrinting(SambaShare* share);
+		void loadFilenames(SambaShare* share);
+		void loadCoding(SambaShare* share);
+		void loadLogon(SambaShare* share);
+		void loadSocket(SambaShare* share);
+		void loadSSL(SambaShare* share);
+		void loadProtocol(SambaShare* share);
+		void loadWinbind(SambaShare* share);
+		void loadNetbios(SambaShare* share);
+		void loadVFS(SambaShare* share);
+		void loadBrowsing(SambaShare* share);
+		void loadMisc(SambaShare* share);
+		
+		void loadDicts(SambaShare* share);
+		void saveDicts(SambaShare* share);
+		
   protected slots:
     void addSambaUserBtnClicked();
     void removeSambaUserBtnClicked();
@@ -105,6 +142,7 @@ class KcmSambaConf: public KCModule
   private:
 		KAboutData* _myAboutData;
 		KcmInterface* _interface;
+		KJanusWidget* _janus;
 };
 
 #endif

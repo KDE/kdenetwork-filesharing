@@ -1,31 +1,37 @@
 /****************************************************************************
 ** ui.h extension file, included from the uic-generated form implementation.
 **
-** If you wish to add, delete or rename slots use Qt Designer which will
-** update this file, preserving your code. Create an init() slot in place of
-** a constructor, and a destroy() slot in place of a destructor.
+** If you wish to add, delete or rename functions or slots use
+** Qt Designer which will update this file, preserving your code. Create an
+** init() function in place of a constructor, and a destroy() function in
+** place of a destructor.
 *****************************************************************************/
 
 
-void UserTab::addAllowedUserBtnClicked()
+void UserTab::addUserBtnClicked()
 {
 
 }
 
-void UserTab::removeAllowedUserBtnClicked()
+
+void UserTab::removeSelectedBtnClicked()
 {
 
 }
 
-void UserTab::addRejectedUserBtnClicked()
+
+void UserTab::addGroupBtnClicked()
 {
 
 }
 
-void UserTab::removeRejectedUserBtnClicked()
+
+
+void UserTab::expertBtnClicked()
 {
 
 }
+
 
 void UserTab::changedSlot()
 {

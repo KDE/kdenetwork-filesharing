@@ -3,8 +3,6 @@ kde_module_LTLIBRARIES = \
 	knfskonqiplugin.la \
   kcm_kcmnfsmodule.la
 
-knfskonqiplugin_la_METASOURCES = AUTO
-kcm_kcmnfsmodule_la_METASOURCES = AUTO
 
 kcm_kcmnfsmodule_la_SOURCES = \
 	cmdialogimpl.cpp \

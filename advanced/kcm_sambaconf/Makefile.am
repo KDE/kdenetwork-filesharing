@@ -33,18 +33,13 @@ EXTRA_DIST = $(service_DATA) \
 	externals.h \
 	kcmsambaconf.desktop \
 	ksambapropertiesdialogplugin.cpp \
-  konqinterface.ui \
+  	konqinterface.ui \
 	sambafile.cpp \
 	ksambapropertiesdialogplugin.h \
 	sambafile.h
 
-install-data-local:
-	$(mkinstalldirs) ${KDEDIR}/applnk/Settings/Network/
-	$(INSTALL_DATA) $(srcdir)/kcmsambaconf.desktop ${KDEDIR}/applnk/Settings/Network/kcmsambaconf.desktop
-
-uninstall-local:
-	-rm -f ${KDEDIR}/applnk/Settings/Network/kcmsambaconf.desktop
-
+apps_DATA = kcmsambaconf.desktop
+appsdir = $(kde_appsdir)/Settings/Network
 
 #messages:
 #	$(XGETTEXT) $(libkcm_kcm_sambaconf_la_SOURCES) -o $(podir)/kcm_sambaconf.pot

@@ -226,6 +226,11 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
     shareWidget->baseGrp->setEnabled(false);
     shareWidget->securityGrp->setEnabled(false);
     shareWidget->otherGrp->setEnabled(false);
+		
+		if (_share)
+			_sambaFile->removeShare(_share);
+			
+		_share = 0L;
   }
   else  // shared
   {
@@ -280,18 +285,11 @@ void KSambaPropertiesDialogPlugin::applyChanges()
     _share->setValue("hosts allow", shareWidget->allowEdit->text());
     _share->setValue("hosts deny", shareWidget->denyEdit->text());
     _share->setValue("browseable", shareWidget->browseableChk->isChecked());
-    _share->setValue("availabe", shareWidget->availableChk->isChecked());
+    _share->setValue("available", shareWidget->availableChk->isChecked());
 
   }
 
-  if (_share && shareWidget->notSharedRadio->isChecked())
-  {
-    _sambaFile->removeShare(_share);
-    _share = 0L;
-  }
-
-  if (_share)
-     _sambaFile->slotApply();
+  _sambaFile->slotApply();
 
   return;
 

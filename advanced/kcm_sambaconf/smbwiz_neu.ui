@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>wizard</class>
 <widget class="QWizard">
     <property name="name">
@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>600</width>
-            <height>546</height>
+            <height>555</height>
         </rect>
     </property>
     <property name="caption">
@@ -56,6 +56,12 @@
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <widget class="QLabel">
                         <property name="name">
@@ -89,6 +95,12 @@
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                 </vbox>
             </widget>
@@ -119,7 +131,7 @@ If you don't like wizards like this or if you want to see an advanced configurat
                     <cstring>controlBtn_2_2</cstring>
                 </property>
                 <property name="text">
-                    <string>Launch advanced config-dialog now</string>
+                    <string>Launch Advanced Configuration Dialog Now</string>
                 </property>
             </widget>
             <spacer row="3" column="1">
@@ -131,6 +143,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                 </property>
                 <property name="sizeType">
                     <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
                 </property>
             </spacer>
         </grid>
@@ -151,6 +169,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
             </property>
             <property name="sizeType">
                 <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>100</width>
+                    <height>20</height>
+                </size>
             </property>
             <property name="geometry">
                 <rect>
@@ -207,6 +231,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                             <property name="sizeType">
                                 <enum>Expanding</enum>
                             </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
                         </spacer>
                         <widget class="QLabel">
                             <property name="name">
@@ -249,6 +279,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                             </property>
                             <property name="sizeType">
                                 <enum>Expanding</enum>
+                            </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
                             </property>
                         </spacer>
                         <widget class="QLabel">
@@ -299,6 +335,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                             <property name="sizeType">
                                 <enum>Expanding</enum>
                             </property>
+                            <property name="sizeHint">
+                                <size>
+                                    <width>20</width>
+                                    <height>20</height>
+                                </size>
+                            </property>
                         </spacer>
                         <widget class="QLabel">
                             <property name="name">
@@ -326,6 +368,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
             </property>
             <property name="sizeType">
                 <enum>Expanding</enum>
+            </property>
+            <property name="sizeHint">
+                <size>
+                    <width>20</width>
+                    <height>24</height>
+                </size>
             </property>
             <property name="geometry">
                 <rect>
@@ -384,6 +432,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                     <property name="sizeType">
                         <enum>Expanding</enum>
                     </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
+                    </property>
                 </spacer>
                 <widget class="QLabel">
                     <property name="name">
@@ -416,6 +470,12 @@ If you don't like wizards like this or if you want to see an advanced configurat
                     </property>
                     <property name="sizeType">
                         <enum>Expanding</enum>
+                    </property>
+                    <property name="sizeHint">
+                        <size>
+                            <width>20</width>
+                            <height>20</height>
+                        </size>
                     </property>
                 </spacer>
             </vbox>
@@ -514,6 +574,12 @@ They're only pre-defined security settings to make the configuration easier for 
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <widget class="QLabel">
                         <property name="name">
@@ -547,6 +613,12 @@ They're only pre-defined security settings to make the configuration easier for 
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                 </vbox>
             </widget>
@@ -567,6 +639,12 @@ They're only pre-defined security settings to make the configuration easier for 
                 </property>
                 <property name="sizeType">
                     <enum>Expanding</enum>
+                </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
                 </property>
             </spacer>
             <widget class="QLayoutWidget" row="2" column="1">
@@ -706,6 +784,12 @@ They're only pre-defined security settings to make the configuration easier for 
                 <property name="sizeType">
                     <enum>Expanding</enum>
                 </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
             </spacer>
         </grid>
     </widget>
@@ -750,6 +834,12 @@ They're only pre-defined security settings to make the configuration easier for 
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <widget class="QLabel">
                         <property name="name">
@@ -782,6 +872,12 @@ They're only pre-defined security settings to make the configuration easier for 
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
                         </property>
                     </spacer>
                 </vbox>
@@ -832,7 +928,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -843,7 +939,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -854,7 +950,7 @@ They're only pre-defined security settings to make the configuration easier for 
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -942,6 +1038,12 @@ If you want to share the users home-directories, simply select the option below 
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <widget class="QLabel">
                         <property name="name">
@@ -974,6 +1076,12 @@ If you want to share the users home-directories, simply select the option below 
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
                         </property>
                     </spacer>
                 </vbox>
@@ -1032,7 +1140,7 @@ If you want to share all your printers simply select the option below the list a
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -1043,7 +1151,7 @@ If you want to share all your printers simply select the option below the list a
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -1054,7 +1162,7 @@ If you want to share all your printers simply select the option below the list a
                             <property name="clickable">
                                 <bool>true</bool>
                             </property>
-                            <property name="resizeable">
+                            <property name="resizable">
                                 <bool>true</bool>
                             </property>
                         </column>
@@ -1185,6 +1293,12 @@ If you want to share all your printers simply select the option below the list a
                         <property name="sizeType">
                             <enum>Expanding</enum>
                         </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
+                        </property>
                     </spacer>
                     <widget class="QLabel">
                         <property name="name">
@@ -1217,6 +1331,12 @@ If you want to share all your printers simply select the option below the list a
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
+                        </property>
+                        <property name="sizeHint">
+                            <size>
+                                <width>20</width>
+                                <height>20</height>
+                            </size>
                         </property>
                     </spacer>
                 </vbox>
@@ -1261,6 +1381,12 @@ If you don't want to overwrite the samba-server's working configuration (or if y
                 <property name="sizeType">
                     <enum>Expanding</enum>
                 </property>
+                <property name="sizeHint">
+                    <size>
+                        <width>20</width>
+                        <height>20</height>
+                    </size>
+                </property>
             </spacer>
         </grid>
     </widget>
@@ -1288,4 +1414,19 @@ If you don't want to overwrite the samba-server's working configuration (or if y
     </connection>
 </connections>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
 </UI>

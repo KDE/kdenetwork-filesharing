@@ -144,7 +144,7 @@ QWidget* KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
                    						  "Make sure you have SAMBA installed.\n\n"), w);
 
 	QHBoxLayout *hbox = new QHBoxLayout(w);
-	QPushButton *btn = new QPushButton(i18n("Specify location"), w);
+	QPushButton *btn = new QPushButton(i18n("Specify Location"), w);
   connect(btn, SIGNAL(pressed()), this, SLOT( slotSpecifySmbConf()));
  	
   btn->setDefault(false);
@@ -288,9 +288,9 @@ bool KSambaPropertiesDialogPlugin::checkValues()
   if (shareWidget->nameEdit->text().length() > 12) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
       frame,i18n(
-        "<qt>The name of the share has more than <b>12</b> characters ! <br>"
+        "<qt>The name of the share has more than <b>12</b> characters! <br>"
         "This can lead to problems with Microsoft Windows(R) clients. <br>"
-        "Do you really want to continue ?</qt>")
+        "Do you really want to continue?</qt>")
         ,i18n("Warning")
         ,KStdGuiItem::cont()
         ,"KSambaPlugin_12CharacterWarning"))
@@ -304,9 +304,9 @@ bool KSambaPropertiesDialogPlugin::checkValues()
   if (shareWidget->nameEdit->text().contains(' ')) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
       frame,i18n(
-        "<qt>The name of the share contains a <b>space</b> character ! <br>"
+        "<qt>The name of the share contains a <b>space</b> character! <br>"
         "This can lead to problems with Microsoft Windows(R) clients. <br>"
-        "Do you really want to continue ?</qt>"
+        "Do you really want to continue?</qt>"
         ),i18n("Warning")
         ,KStdGuiItem::cont()
         ,"KSambaPlugin_SpaceCharacterWarning"))
@@ -336,7 +336,7 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 
     if (!_share->setName(shareName))
     {
-       KMessageBox::sorry(frame,i18n("The samba share name '%1' already exists !").arg(shareName),i18n("Information"));
+       KMessageBox::sorry(frame,i18n("The samba share name '%1' already exists!").arg(shareName),i18n("Information"));
        shareWidget->nameEdit->setText(_sambaFile->getUnusedName());
        shareWidget->nameEdit->setFocus();
        properties->abortApplying();
@@ -380,8 +380,8 @@ void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
 {
 
 	smbconf = KFileDialog::getOpenFileName("/",
-   					"smb.conf|Samba conf. file\n"
-        		"*|All files",0,i18n("Get smb.conf location"));
+   					"smb.conf|Samba conf. File\n"
+        		"*|All Files",0,i18n("Get smb.conf Location"));
 
 	if ( QFileInfo(smbconf).exists() )
   {

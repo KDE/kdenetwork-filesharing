@@ -350,10 +350,10 @@ void HiddenFileView::hiddenChkClicked(bool b)
              p.find("?") > -1 )
         {
           int result = KMessageBox::questionYesNo(_dlg,i18n(
-            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b> ! "
-            "Do you want to unhide all files matching <b>'%1'</b> ? <br>"
+            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>! "
+            "Do you want to unhide all files matching <b>'%1'</b>? <br>"
             "(If you say no, no file matching '%1' will be unhidden)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
-            i18n("Wildcarded string"));
+            i18n("Wildcarded String"));
 
           QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
 
@@ -410,10 +410,10 @@ void HiddenFileView::vetoChkClicked(bool b)
              p.find("?") > -1 )
         {
           int result = KMessageBox::questionYesNo(_dlg,i18n(
-            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b> ! "
-            "Do you want to unveto all files matching <b>'%1'</b> ? <br>"
+            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>! "
+            "Do you want to unveto all files matching <b>'%1'</b>? <br>"
             "(If you say no, no file matching '%1' will be unvetoed)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
-            i18n("Wildcarded string"));
+            i18n("Wildcarded String"));
 
           QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
 

@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>FileModeDlg</class>
 <widget class="QDialog">
     <property name="name">
@@ -8,12 +8,12 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>322</width>
-            <height>182</height>
+            <width>355</width>
+            <height>202</height>
         </rect>
     </property>
     <property name="caption">
-        <string>Access modifiers</string>
+        <string>Access Modifiers</string>
     </property>
     <property name="sizeGripEnabled">
         <bool>true</bool>
@@ -52,7 +52,7 @@
                         </font>
                     </property>
                     <property name="title">
-                        <string>Access permissions</string>
+                        <string>Access Permissions</string>
                     </property>
                     <hbox>
                         <property name="name">
@@ -279,7 +279,7 @@
                             <property name="name">
                                 <cstring>Line4</cstring>
                             </property>
-                            <property name="frameShape" stdset="0">
+                            <property name="frameShape">
                                 <enum>VLine</enum>
                             </property>
                             <property name="frameShadow">
@@ -360,7 +360,7 @@
                     </hbox>
                 </widget>
                 <spacer>
-                    <property name="name" stdset="0">
+                    <property name="name">
                         <cstring>Spacer38</cstring>
                     </property>
                     <property name="orientation">
@@ -379,7 +379,7 @@
             </hbox>
         </widget>
         <spacer>
-            <property name="name" stdset="0">
+            <property name="name">
                 <cstring>Spacer37</cstring>
             </property>
             <property name="orientation">
@@ -414,17 +414,17 @@
                         <cstring>buttonHelp</cstring>
                     </property>
                     <property name="text">
-                        <string>Help</string>
+                        <string>&amp;Help</string>
                     </property>
                     <property name="accel">
-                        <number>4144</number>
+                        <string>F1</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
                     </property>
                 </widget>
                 <spacer>
-                    <property name="name" stdset="0">
+                    <property name="name">
                         <cstring>Horizontal Spacing2</cstring>
                     </property>
                     <property name="orientation">
@@ -445,10 +445,10 @@
                         <cstring>buttonOk</cstring>
                     </property>
                     <property name="text">
-                        <string>OK</string>
+                        <string>&amp;OK</string>
                     </property>
                     <property name="accel">
-                        <number>0</number>
+                        <string>Alt+O</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -462,10 +462,10 @@
                         <cstring>buttonCancel</cstring>
                     </property>
                     <property name="text">
-                        <string>Cancel</string>
+                        <string>&amp;Cancel</string>
                     </property>
                     <property name="accel">
-                        <number>0</number>
+                        <string>Alt+C</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>

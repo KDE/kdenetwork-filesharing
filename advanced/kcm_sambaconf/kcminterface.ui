@@ -29,8 +29,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>603</width>
-            <height>563</height>
+            <width>635</width>
+            <height>608</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -63,7 +63,7 @@
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>Base settings</string>
+                    <string>Base Settings</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -100,7 +100,7 @@
                                     <enum>MShadow</enum>
                                 </property>
                                 <property name="text">
-                                    <string>Samba Configfile</string>
+                                    <string>Samba config file:</string>
                                 </property>
                             </widget>
                             <widget class="KURLRequester">
@@ -116,11 +116,10 @@
                         </property>
                         <property name="font">
                             <font>
-                                <bold>1</bold>
                             </font>
                         </property>
                         <property name="title">
-                            <string>Server &amp;identification</string>
+                            <string>Server &amp;Identification</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -138,11 +137,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Workgroup</string>
+                                    <string>Workgroup:</string>
                                 </property>
                             </widget>
                             <widget class="KLineEdit" row="0" column="1">
@@ -151,7 +149,6 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="toolTip" stdset="0">
@@ -164,7 +161,6 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                             </widget>
@@ -174,7 +170,6 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                             </widget>
@@ -184,11 +179,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Server string</string>
+                                    <string>Server string:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -197,11 +191,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>NetBIOS Name</string>
+                                    <string>NetBIOS name:</string>
                                 </property>
                             </widget>
                         </grid>
@@ -212,11 +205,10 @@
                         </property>
                         <property name="font">
                             <font>
-                                <bold>1</bold>
                             </font>
                         </property>
                         <property name="title">
-                            <string>Security level</string>
+                            <string>Security Level</string>
                         </property>
                         <hbox>
                             <property name="name">
@@ -309,7 +301,6 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
@@ -333,11 +324,10 @@
                         </property>
                         <property name="font">
                             <font>
-                                <bold>1</bold>
                             </font>
                         </property>
                         <property name="title">
-                            <string>Further options</string>
+                            <string>Further Options</string>
                         </property>
                         <grid>
                             <property name="name">
@@ -355,11 +345,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>Password server address/name</string>
+                                    <string>Password server address/name:</string>
                                 </property>
                             </widget>
                             <widget class="QCheckBox" row="1" column="0">
@@ -371,11 +360,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>allow guest logins</string>
+                                    <string>Allow guest logins</string>
                                 </property>
                             </widget>
                             <widget class="QLineEdit" row="0" column="1">
@@ -392,11 +380,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>encrypt passwords  </string>
+                                    <string>Encrypt passwords  </string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="2" column="1">
@@ -405,7 +392,6 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
@@ -438,7 +424,7 @@
                                             </font>
                                         </property>
                                         <property name="text">
-                                            <string>Guest account</string>
+                                            <string>Guest account:</string>
                                         </property>
                                     </widget>
                                     <widget class="QComboBox">
@@ -447,6 +433,7 @@
                                         </property>
                                         <property name="font">
                                             <font>
+                                                <bold>1</bold>
                                             </font>
                                         </property>
                                     </widget>
@@ -477,7 +464,6 @@
                         </property>
                         <property name="font">
                             <font>
-                                <bold>1</bold>
                             </font>
                         </property>
                         <property name="title">
@@ -507,11 +493,10 @@
                                 </property>
                                 <property name="font">
                                     <font>
-                                        <bold>0</bold>
                                     </font>
                                 </property>
                                 <property name="text">
-                                    <string>For detailed help about every option please look at :</string>
+                                    <string>For detailed help about every option please look at:</string>
                                 </property>
                                 <property name="alignment">
                                     <set>AlignVCenter</set>
@@ -668,7 +653,7 @@
                                     <cstring>editDefaultShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Edit &amp;defaults</string>
+                                    <string>Edit &amp;Defaults</string>
                                 </property>
                             </widget>
                             <spacer>
@@ -693,7 +678,7 @@
                                     <cstring>addShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Add new share</string>
+                                    <string>&amp;Add New Share</string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -701,7 +686,7 @@
                                     <cstring>editShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Edit share</string>
+                                    <string>&amp;Edit Share</string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -709,7 +694,7 @@
                                     <cstring>removeShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Remove share</string>
+                                    <string>&amp;Remove Share</string>
                                 </property>
                             </widget>
                         </hbox>
@@ -813,7 +798,7 @@
                                     <cstring>editDefaultPrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Edit &amp;defaults</string>
+                                    <string>Edit &amp;Defaults</string>
                                 </property>
                             </widget>
                             <spacer>
@@ -838,7 +823,7 @@
                                     <cstring>addPrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Add new printer</string>
+                                    <string>&amp;Add New Printer</string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -846,7 +831,7 @@
                                     <cstring>editPrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Edit printer</string>
+                                    <string>&amp;Edit Printer</string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -854,7 +839,7 @@
                                     <cstring>removePrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Remove printer</string>
+                                    <string>&amp;Remove Printer</string>
                                 </property>
                             </widget>
                         </hbox>
@@ -1028,7 +1013,7 @@
                     <cstring>wdomain</cstring>
                 </property>
                 <attribute name="title">
-                    <string>&amp;Domain / Wins</string>
+                    <string>&amp;Domain/Wins</string>
                 </attribute>
                 <grid>
                     <property name="name">
@@ -1062,7 +1047,7 @@
                             <cstring>ButtonGroup7</cstring>
                         </property>
                         <property name="title">
-                            <string>Wins settings</string>
+                            <string>Wins Settings</string>
                         </property>
                         <widget class="QRadioButton">
                             <property name="name">
@@ -1130,22 +1115,6 @@
                             </property>
                             <property name="frameShadow">
                                 <enum>Sunken</enum>
-                            </property>
-                        </widget>
-                        <widget class="QRadioButton">
-                            <property name="name">
-                                <cstring>winsSupportRadio</cstring>
-                            </property>
-                            <property name="geometry">
-                                <rect>
-                                    <x>11</x>
-                                    <y>43</y>
-                                    <width>283</width>
-                                    <height>19</height>
-                                </rect>
-                            </property>
-                            <property name="text">
-                                <string>Act as a Wins server</string>
                             </property>
                         </widget>
                         <widget class="KLineEdit">
@@ -1226,7 +1195,7 @@
                                     <rect>
                                         <x>30</x>
                                         <y>0</y>
-                                        <width>140</width>
+                                        <width>250</width>
                                         <height>19</height>
                                     </rect>
                                 </property>
@@ -1251,6 +1220,22 @@
                                 </rect>
                             </property>
                         </widget>
+                        <widget class="QRadioButton">
+                            <property name="name">
+                                <cstring>winsSupportRadio</cstring>
+                            </property>
+                            <property name="geometry">
+                                <rect>
+                                    <x>11</x>
+                                    <y>43</y>
+                                    <width>283</width>
+                                    <height>19</height>
+                                </rect>
+                            </property>
+                            <property name="text">
+                                <string>Act as a Wins server</string>
+                            </property>
+                        </widget>
                         <widget class="QLabel">
                             <property name="name">
                                 <cstring>winsHookLbl</cstring>
@@ -1262,12 +1247,12 @@
                                 <rect>
                                     <x>40</x>
                                     <y>90</y>
-                                    <width>80</width>
+                                    <width>90</width>
                                     <height>20</height>
                                 </rect>
                             </property>
                             <property name="text">
-                                <string>Wins hook</string>
+                                <string>Wins hook:</string>
                             </property>
                         </widget>
                     </widget>
@@ -1276,7 +1261,7 @@
                             <cstring>GroupBox3</cstring>
                         </property>
                         <property name="title">
-                            <string>Domain settings</string>
+                            <string>Domain Settings</string>
                         </property>
                         <vbox>
                             <property name="name">
@@ -1363,7 +1348,7 @@
                                             </sizepolicy>
                                         </property>
                                         <property name="text">
-                                            <string>OS Level</string>
+                                            <string>OS level:</string>
                                         </property>
                                     </widget>
                                     <widget class="KIntSpinBox">
@@ -1541,7 +1526,7 @@ Only change something if you know what you are doing !</string>
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>AdvancedDump</string>
+                    <string>Advanced Dump</string>
                 </attribute>
                 <hbox>
                     <property name="name">
@@ -1608,7 +1593,7 @@ Only change something if you know what you are doing !</string>
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>Map to guest</string>
+                                                <string>Map to guest:</string>
                                             </property>
                                         </widget>
                                         <widget class="QComboBox">
@@ -1684,7 +1669,6 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>1</bold>
                                                         </font>
                                                     </property>
                                                     <property name="title">
@@ -1706,11 +1690,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>update encrypted</string>
+                                                                <string>Update encrypted</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLayoutWidget" row="1" column="1">
@@ -1733,6 +1716,7 @@ Only change something if you know what you are doing !</string>
                                                                     </property>
                                                                     <property name="font">
                                                                         <font>
+                                                                            <bold>1</bold>
                                                                         </font>
                                                                     </property>
                                                                     <property name="maxValue">
@@ -1778,6 +1762,7 @@ Only change something if you know what you are doing !</string>
                                                                     </property>
                                                                     <property name="font">
                                                                         <font>
+                                                                            <bold>1</bold>
                                                                         </font>
                                                                     </property>
                                                                     <property name="maxValue">
@@ -1809,7 +1794,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -1819,7 +1803,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -1829,7 +1812,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -1839,11 +1821,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>null passwords</string>
+                                                                <string>Null passwords</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QCheckBox" row="6" column="0">
@@ -1852,7 +1833,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
@@ -1865,11 +1845,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Password level</string>
+                                                                <string>Password level:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="2" column="0">
@@ -1878,11 +1857,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Min passwd length</string>
+                                                                <string>Min passwd length:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="3" column="0">
@@ -1891,11 +1869,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Smb passwd file</string>
+                                                                <string>Smb passwd file:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="4" column="0">
@@ -1904,11 +1881,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Passwd program</string>
+                                                                <string>Passwd program:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="5" column="0">
@@ -1917,11 +1893,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Passwd chat</string>
+                                                                <string>Passwd chat:</string>
                                                             </property>
                                                         </widget>
                                                     </grid>
@@ -1932,7 +1907,6 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>1</bold>
                                                         </font>
                                                     </property>
                                                     <property name="title">
@@ -1954,7 +1928,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="maxValue">
@@ -1967,11 +1940,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Username level</string>
+                                                                <string>Username level:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="1" column="0">
@@ -1980,11 +1952,10 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Username map</string>
+                                                                <string>Username map:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="KURLRequester" row="1" column="1">
@@ -1993,7 +1964,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
-                                                                    <bold>0</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -2007,11 +1977,10 @@ Only change something if you know what you are doing !</string>
                                             </property>
                                             <property name="font">
                                                 <font>
-                                                    <bold>1</bold>
                                                 </font>
                                             </property>
                                             <property name="title">
-                                                <string>&amp;Other options</string>
+                                                <string>&amp;Other Options</string>
                                             </property>
                                             <vbox>
                                                 <property name="name">
@@ -2043,6 +2012,7 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
+                                                                    <bold>1</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -2052,6 +2022,7 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                             <property name="font">
                                                                 <font>
+                                                                    <bold>1</bold>
                                                                 </font>
                                                             </property>
                                                         </widget>
@@ -2064,7 +2035,7 @@ Only change something if you know what you are doing !</string>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Root directory</string>
+                                                                <string>Root directory:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="QLabel" row="1" column="0">
@@ -2076,7 +2047,7 @@ Only change something if you know what you are doing !</string>
                                                                 </font>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Hosts equiv</string>
+                                                                <string>Hosts equiv:</string>
                                                             </property>
                                                         </widget>
                                                     </grid>
@@ -2087,11 +2058,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>use rhosts</string>
+                                                        <string>Use rhosts</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2100,7 +2070,6 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
@@ -2113,11 +2082,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>allow trusted domains</string>
+                                                        <string>Allow trusted domains</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2126,11 +2094,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>obey pam restrictions</string>
+                                                        <string>Obey PAM restrictions</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2139,11 +2106,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>pam password change</string>
+                                                        <string>PAM password change</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2152,11 +2118,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>restrict anonymous</string>
+                                                        <string>Restrict anonymous</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2165,11 +2130,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>alternate permissions</string>
+                                                        <string>Alternate permissions</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -2178,11 +2142,10 @@ Only change something if you know what you are doing !</string>
                                                     </property>
                                                     <property name="font">
                                                         <font>
-                                                            <bold>0</bold>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>unix password sync</string>
+                                                        <string>Unix password sync</string>
                                                     </property>
                                                 </widget>
                                             </vbox>
@@ -2344,7 +2307,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel4_3_2_2_2_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Log file</string>
+                                                <string>Log file:</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="7" column="0">
@@ -2360,7 +2323,7 @@ Only change something if you know what you are doing !</string>
                                                 </sizepolicy>
                                             </property>
                                             <property name="text">
-                                                <string>debug pid</string>
+                                                <string>Debug pid</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="4" column="0">
@@ -2376,7 +2339,7 @@ Only change something if you know what you are doing !</string>
                                                 </sizepolicy>
                                             </property>
                                             <property name="text">
-                                                <string>syslog only</string>
+                                                <string>Syslog only</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="3" column="0">
@@ -2384,7 +2347,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel5_3_2_2_2_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Syslog</string>
+                                                <string>Syslog:</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="8" column="0">
@@ -2392,7 +2355,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>debugUidChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>debug uid</string>
+                                                <string>Debug uid</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="1" column="0">
@@ -2400,7 +2363,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel2_2_2_2_2_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Max log size</string>
+                                                <string>Max log size:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="2" column="0">
@@ -2422,7 +2385,7 @@ Only change something if you know what you are doing !</string>
                                                 </size>
                                             </property>
                                             <property name="text">
-                                                <string>Log level</string>
+                                                <string>Log level:</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="5" column="0">
@@ -2430,7 +2393,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>statusChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>status</string>
+                                                <string>Status</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -2550,7 +2513,7 @@ Only change something if you know what you are doing !</string>
                                                 </sizepolicy>
                                             </property>
                                             <property name="text">
-                                                <string>timestamp</string>
+                                                <string>Timestamp</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>false</bool>
@@ -2564,7 +2527,7 @@ Only change something if you know what you are doing !</string>
                                                 <bool>false</bool>
                                             </property>
                                             <property name="text">
-                                                <string>microseconds</string>
+                                                <string>Microseconds</string>
                                             </property>
                                         </widget>
                                     </grid>
@@ -2593,7 +2556,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_2_2_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Max open files</string>
+                                        <string>Max open files:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="5" column="0">
@@ -2601,7 +2564,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_2_2_5</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Max disk size</string>
+                                        <string>Max disk size:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="2" column="0">
@@ -2609,7 +2572,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Keepalive</string>
+                                        <string>Keepalive:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="8" column="0">
@@ -2617,7 +2580,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_2_2_3_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Stat cache size</string>
+                                        <string>Stat cache size:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="3" column="0">
@@ -2625,7 +2588,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Lpq cache time</string>
+                                        <string>Lpq cache time:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="7" column="0">
@@ -2633,7 +2596,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_2_2_2_2_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Read size</string>
+                                        <string>Read size:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="4" column="0">
@@ -2641,7 +2604,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_3_2_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Max smbd processes</string>
+                                        <string>Max smbd processes:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="1" column="0">
@@ -2649,7 +2612,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_2_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Deadtime</string>
+                                        <string>Deadtime:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="0" column="0">
@@ -2657,7 +2620,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_5</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Change notify timeout</string>
+                                        <string>Change notify timeout:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="0" column="2">
@@ -2816,7 +2779,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>useMmapChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>use mmap</string>
+                                        <string>Use mmap</string>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="0" column="1">
@@ -2868,7 +2831,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel4_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>os2 driver map</string>
+                                        <string>os2 driver map:</string>
                                     </property>
                                 </widget>
                                 <widget class="KURLRequester" row="8" column="1" rowspan="1" colspan="2">
@@ -2886,7 +2849,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel2_2_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>enumports command</string>
+                                        <string>enumports command:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="5" column="1" rowspan="1" colspan="2">
@@ -2899,7 +2862,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel3_3_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>addprinter command</string>
+                                        <string>addprinter command:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="6" column="0">
@@ -2907,7 +2870,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel3_3_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>deleteprinter command</string>
+                                        <string>deleteprinter command:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="6" column="1" rowspan="1" colspan="2">
@@ -2925,7 +2888,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel1_3_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Printcap name</string>
+                                        <string>Printcap name:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="3" column="0">
@@ -2933,7 +2896,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel1_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Total print jobs</string>
+                                        <string>Total print jobs:</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
@@ -2941,7 +2904,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>loadPrintersChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>load printers</string>
+                                        <string>Load printers</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="2">
@@ -2949,7 +2912,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>disableSpoolssChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>disable spoolss</string>
+                                        <string>Disable spoolss</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
@@ -2957,7 +2920,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>showAddPrinterWizardChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>show add printer wizard</string>
+                                        <string>Show add printer wizard</string>
                                     </property>
                                 </widget>
                                 <spacer row="3" column="2">
@@ -3009,7 +2972,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>stripDotChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>strip dot</string>
+                                        <string>Strip dot</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="3">
@@ -3017,7 +2980,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>statCacheChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>stat cache</string>
+                                        <string>Stat cache</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="2" column="1" rowspan="1" colspan="2">
@@ -3030,7 +2993,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel5_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>character set</string>
+                                        <string>Character set:</string>
                                     </property>
                                 </widget>
                                 <spacer row="3" column="2">
@@ -3080,7 +3043,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel6_2_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>mangled stack</string>
+                                        <string>Mangled stack:</string>
                                     </property>
                                 </widget>
                             </grid>
@@ -3104,7 +3067,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>kernelOplocksChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>kernel oplocks</string>
+                                        <string>Kernel oplocks</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="2" column="0">
@@ -3117,7 +3080,7 @@ Only change something if you know what you are doing !</string>
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>Oplock break wait time</string>
+                                        <string>Oplock break wait time:</string>
                                     </property>
                                     <property name="alignment">
                                         <set>AlignVCenter</set>
@@ -3128,7 +3091,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel5_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Lock directory</string>
+                                        <string>Lock directory:</string>
                                     </property>
                                 </widget>
                                 <widget class="KURLRequester" row="1" column="1">
@@ -3233,7 +3196,7 @@ Only change something if you know what you are doing !</string>
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>Client code page</string>
+                                        <string>Client code page:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="0" column="0">
@@ -3245,7 +3208,7 @@ Only change something if you know what you are doing !</string>
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>Coding system</string>
+                                        <string>Coding system:</string>
                                     </property>
                                 </widget>
                                 <widget class="KURLRequester" row="2" column="1">
@@ -3266,7 +3229,7 @@ Only change something if you know what you are doing !</string>
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>Code page directory</string>
+                                        <string>Code page directory:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="1" column="1">
@@ -3319,7 +3282,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel7_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Add user script</string>
+                                        <string>Add user script:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="1" column="0">
@@ -3327,7 +3290,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel7_2_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Delete user script</string>
+                                        <string>Delete user script:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="0" column="1">
@@ -3345,7 +3308,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel7_2_3</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Logon script</string>
+                                        <string>Logon script:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="2" column="1">
@@ -3380,7 +3343,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel8_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Logon home</string>
+                                        <string>Logon home:</string>
                                     </property>
                                 </widget>
                                 <widget class="KURLRequester" row="5" column="1">
@@ -3393,7 +3356,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel7_2_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Logon drive</string>
+                                        <string>Logon drive:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="4" column="0">
@@ -3401,7 +3364,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel8_2_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Logon path</string>
+                                        <string>Logon path:</string>
                                     </property>
                                 </widget>
                                 <widget class="KURLRequester" row="4" column="1">
@@ -3447,7 +3410,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel15</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Socket address</string>
+                                                <string>Socket address:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit">
@@ -3462,7 +3425,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>GroupBox7</cstring>
                                     </property>
                                     <property name="title">
-                                        <string>Socket options</string>
+                                        <string>Socket Options</string>
                                     </property>
                                     <grid>
                                         <property name="name">
@@ -3487,7 +3450,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>SO_SNDBUFChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>SO_SNDBUF</string>
+                                                <string>SO_SNDBUF:</string>
                                             </property>
                                         </widget>
                                         <widget class="KIntSpinBox" row="3" column="2">
@@ -3541,7 +3504,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>SO_RCVLOWATChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>SO_RCVLOWAT</string>
+                                                <string>SO_RCVLOWAT:</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="4" column="0">
@@ -3557,7 +3520,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>SO_SNDLOWATChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>SO_SNDLOWAT</string>
+                                                <string>SO_SNDLOWAT:</string>
                                             </property>
                                         </widget>
                                         <widget class="KIntSpinBox" row="0" column="2">
@@ -3584,7 +3547,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>SO_RCVBUFChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>SO_RCVBUF</string>
+                                                <string>SO_RCVBUF:</string>
                                             </property>
                                         </widget>
                                         <widget class="KIntSpinBox" row="1" column="2">
@@ -3711,7 +3674,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel2_4_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL hosts</string>
+                                                        <string>SSL hosts:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLayoutWidget" row="6" column="1">
@@ -3738,7 +3701,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                                 <cstring>TextLabel12_2_2</cstring>
                                                             </property>
                                                             <property name="text">
-                                                                <string>SSL entropy bytes</string>
+                                                                <string>SSL entropy bytes:</string>
                                                             </property>
                                                         </widget>
                                                         <widget class="KIntSpinBox">
@@ -3776,7 +3739,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel14_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL ciphers</string>
+                                                        <string>SSL ciphers:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="2" column="0">
@@ -3784,7 +3747,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel3_7</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL hosts resign</string>
+                                                        <string>SSL hosts resign:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLayoutWidget" row="0" column="1">
@@ -3858,7 +3821,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel4_4</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL CA certDir</string>
+                                                        <string>SSL CA certDir:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="KURLRequester" row="4" column="1">
@@ -3871,7 +3834,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel11_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL entropy file</string>
+                                                        <string>SSL entropy file:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="5" column="0">
@@ -3879,7 +3842,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel10_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL egd socket</string>
+                                                        <string>SSL egd socket:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="0" column="0">
@@ -3887,7 +3850,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel15_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL version</string>
+                                                        <string>SSL version:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="1" column="1">
@@ -3900,7 +3863,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel5_4_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL CA certFile</string>
+                                                        <string>SSL CA certFile:</string>
                                                     </property>
                                                 </widget>
                                             </grid>
@@ -3937,7 +3900,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel9_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL client key</string>
+                                                        <string>SSL client key:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
@@ -3958,7 +3921,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel6_6_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL server cert</string>
+                                                        <string>SSL server cert:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="1" column="2">
@@ -3966,7 +3929,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel8_4</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL client cert</string>
+                                                        <string>SSL client cert:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="KURLRequester" row="1" column="1">
@@ -3984,7 +3947,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel7_5</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>SSL server key</string>
+                                                        <string>SSL server key:</string>
                                                     </property>
                                                 </widget>
                                             </grid>
@@ -4046,7 +4009,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>TextLabel5_4_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Name resolve order</string>
+                                                <string>Name resolve order:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit">
@@ -4182,7 +4145,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel1_3_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max protocol</string>
+                                                        <string>Max protocol:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="1" column="0">
@@ -4190,7 +4153,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel2_3_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Announce version</string>
+                                                        <string>Announce version:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="1" column="1">
@@ -4214,7 +4177,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel3_6_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Announce as</string>
+                                                        <string>Announce as:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="4" column="0">
@@ -4222,7 +4185,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel1_3_3_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Min Protocol</string>
+                                                        <string>Min protocol:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="2" column="0">
@@ -4230,7 +4193,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel1_3_4_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Protocol</string>
+                                                        <string>Protocol:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QComboBox" row="0" column="1">
@@ -4347,7 +4310,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Min wins ttl</string>
+                                                        <string>Min wins ttl:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="KIntSpinBox" row="3" column="1">
@@ -4389,7 +4352,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max packet</string>
+                                                        <string>Max packet:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="3" column="2">
@@ -4433,7 +4396,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max xmit</string>
+                                                        <string>Max xmit:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="0" column="0">
@@ -4446,7 +4409,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max mux</string>
+                                                        <string>Max mux:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="4" column="0">
@@ -4459,7 +4422,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max wins ttl</string>
+                                                        <string>Max wins ttl:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="KIntSpinBox" row="5" column="1">
@@ -4483,7 +4446,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Max ttl</string>
+                                                        <string>Max ttl:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="4" column="2">
@@ -4560,7 +4523,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>read bmpx</string>
+                                                <string>Read bmpx</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="1" column="0">
@@ -4568,7 +4531,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>timeServerChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>time server</string>
+                                                <string>Time server</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="0" column="1">
@@ -4581,7 +4544,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>read raw</string>
+                                                <string>Read raw</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -4597,7 +4560,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>nt pipe support</string>
+                                                <string>NT pipe support</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -4613,7 +4576,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>write raw</string>
+                                                <string>Write raw</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -4641,7 +4604,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>ntAclSupportChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>nt acl support</string>
+                                                <string>NT ACL support</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -4657,7 +4620,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 </font>
                                             </property>
                                             <property name="text">
-                                                <string>nt smb support</string>
+                                                <string>NT SMB support</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -4668,7 +4631,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>largeReadWriteChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>large readwrite</string>
+                                                <string>Large readwrite</string>
                                             </property>
                                         </widget>
                                     </grid>
@@ -4714,7 +4677,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>browseListChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>browse list</string>
+                                        <string>Browse list</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="3" column="2">
@@ -4730,7 +4693,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>LM interval</string>
+                                        <string>LM interval:</string>
                                     </property>
                                 </widget>
                                 <spacer row="4" column="0">
@@ -4783,7 +4746,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel3_5</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>LM announce</string>
+                                        <string>LM announce:</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
@@ -4791,7 +4754,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>enhancedBrowsingChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>enhanced browsing</string>
+                                        <string>Enhanced browsing</string>
                                     </property>
                                 </widget>
                                 <spacer row="3" column="3">
@@ -4835,7 +4798,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>winbindEnumUsersChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>winbind enum users</string>
+                                        <string>Winbind enum users</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="1" column="2">
@@ -4853,7 +4816,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel21</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Winbind uid</string>
+                                        <string>Winbind UID:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="3" column="0" rowspan="1" colspan="2">
@@ -4861,7 +4824,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel23</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Template shell</string>
+                                        <string>Template shell:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
@@ -4869,7 +4832,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel24</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Winbind separator</string>
+                                        <string>Winbind separator:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLineEdit" row="0" column="2">
@@ -4882,7 +4845,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel21_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Winbind gid</string>
+                                        <string>Winbind GID:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="2" column="0" rowspan="1" colspan="2">
@@ -4890,7 +4853,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel22</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Template homedir</string>
+                                        <string>Template homedir:</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
@@ -4898,7 +4861,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>winbindEnumGroupsChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>winbind enum groups</string>
+                                        <string>Winbind enum groups</string>
                                     </property>
                                 </widget>
                                 <widget class="QLayoutWidget" row="5" column="2">
@@ -4985,7 +4948,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>TextLabel25</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Winbind cache time</string>
+                                        <string>Winbind cache time:</string>
                                     </property>
                                 </widget>
                             </grid>
@@ -5016,7 +4979,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>NetBIOS aliases</string>
+                                        <string>NetBIOS aliases:</string>
                                     </property>
                                 </widget>
                                 <widget class="KLineEdit" row="0" column="1">
@@ -5037,7 +5000,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         </font>
                                     </property>
                                     <property name="text">
-                                        <string>NetBIOS scope</string>
+                                        <string>NetBIOS scope:</string>
                                     </property>
                                 </widget>
                                 <widget class="KLineEdit" row="1" column="1">
@@ -5090,7 +5053,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>hostMsdfsChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>host msdfs</string>
+                                        <string>Host msdfs</string>
                                     </property>
                                 </widget>
                                 <spacer>
@@ -5164,7 +5127,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>CheckBox68</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>hide local users</string>
+                                                <string>Hide local users</string>
                                             </property>
                                         </widget>
                                         <spacer>
@@ -5239,7 +5202,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel20</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Panic action</string>
+                                                        <string>Panic action:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="2" column="0">
@@ -5247,7 +5210,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel3_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Delete share command</string>
+                                                        <string>Delete share command:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="0" column="1">
@@ -5265,7 +5228,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel4_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Preload</string>
+                                                        <string>Preload:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="1" column="1">
@@ -5278,7 +5241,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel7_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Utmp directory</string>
+                                                        <string>Utmp directory:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="0" column="0">
@@ -5286,7 +5249,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel1_5</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Add share command</string>
+                                                        <string>Add share command:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="6" column="0">
@@ -5294,7 +5257,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel6_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Pid directory</string>
+                                                        <string>Pid directory:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="1" column="0">
@@ -5302,7 +5265,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Change share command</string>
+                                                        <string>Change share command:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="KURLRequester" row="6" column="1">
@@ -5315,7 +5278,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel8_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Wtmp directory</string>
+                                                        <string>Wtmp directory:</string>
                                                     </property>
                                                 </widget>
                                             </grid>
@@ -5356,7 +5319,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel9</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Default service</string>
+                                                        <string>Default service:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="2" column="0">
@@ -5364,7 +5327,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel11</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Dfree command</string>
+                                                        <string>Dfree command:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="8" column="1">
@@ -5377,7 +5340,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel19</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Source environment</string>
+                                                        <string>Source environment:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="2" column="1">
@@ -5400,7 +5363,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel16</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Homedir map</string>
+                                                        <string>Homedir map:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="4" column="0">
@@ -5408,7 +5371,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel13</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Remote announce</string>
+                                                        <string>Remote announce:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="0" column="1">
@@ -5431,7 +5394,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel14</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Remote browse sync</string>
+                                                        <string>Remote browse sync:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="7" column="0">
@@ -5439,7 +5402,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel17</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Time offset</string>
+                                                        <string>Time offset:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLabel" row="1" column="0">
@@ -5447,7 +5410,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel10</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Message command</string>
+                                                        <string>Message command:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="4" column="1">
@@ -5460,7 +5423,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>TextLabel12</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Valid chars</string>
+                                                        <string>Valid chars:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLayoutWidget" row="7" column="1">

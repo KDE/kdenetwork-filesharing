@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>KonqInterface</class>
 <comment>
 /******************************************************************************
@@ -31,7 +31,7 @@
             <x>0</x>
             <y>0</y>
             <width>368</width>
-            <height>397</height>
+            <height>413</height>
         </rect>
     </property>
     <property name="caption">
@@ -158,7 +158,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Name</string>
+                        <string>&amp;Name:</string>
                     </property>
                     <property name="textFormat">
                         <enum>PlainText</enum>
@@ -183,7 +183,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Comment</string>
+                        <string>&amp;Comment:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>commentEdit</cstring>
@@ -252,7 +252,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>Hosts &amp;deny</string>
+                        <string>Hosts &amp;deny:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>denyEdit</cstring>
@@ -271,7 +271,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Hosts allow</string>
+                        <string>&amp;Hosts allow:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>allowEdit</cstring>
@@ -290,7 +290,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>Guest &amp;account</string>
+                        <string>Guest &amp;account:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>guestAccountCombo</cstring>

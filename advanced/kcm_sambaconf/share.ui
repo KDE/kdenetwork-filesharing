@@ -29,12 +29,12 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>617</width>
+            <width>669</width>
             <height>502</height>
         </rect>
     </property>
     <property name="caption">
-        <string>Add/Edit a share</string>
+        <string>Add/Edit Share</string>
     </property>
     <property name="sizeGripEnabled">
         <bool>true</bool>
@@ -61,7 +61,7 @@
                     <cstring>baseTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>&amp;Base settings</string>
+                    <string>&amp;Base Settings</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -167,7 +167,7 @@
                                                     <bool>true</bool>
                                                 </property>
                                                 <property name="text">
-                                                    <string>Path</string>
+                                                    <string>Path:</string>
                                                 </property>
                                             </widget>
                                             <widget class="KURLRequester">
@@ -185,7 +185,7 @@
                                             <cstring>homeChk</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>share all home directories</string>
+                                            <string>Share all home directories</string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -214,7 +214,7 @@
                                     <cstring>Lbl_shareName</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Name</string>
+                                    <string>Name:</string>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="1" column="0">
@@ -222,7 +222,7 @@
                                     <cstring>TextLabel3</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Comment</string>
+                                    <string>Comment:</string>
                                 </property>
                             </widget>
                             <widget class="KLineEdit" row="1" column="1">
@@ -242,7 +242,7 @@
                             <cstring>GroupBox4</cstring>
                         </property>
                         <property name="title">
-                            <string>Main properties</string>
+                            <string>Main Properties</string>
                         </property>
                         <hbox>
                             <property name="name">
@@ -259,7 +259,7 @@
                                     <cstring>readOnlyBaseChk</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Read Only</string>
+                                    <string>Read only</string>
                                 </property>
                                 <property name="checked">
                                     <bool>true</bool>
@@ -270,7 +270,7 @@
                                     <cstring>publicBaseChk</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Guest ok</string>
+                                    <string>Guest OK</string>
                                 </property>
                             </widget>
                             <widget class="QCheckBox">
@@ -354,7 +354,7 @@
                                     <cstring>TextLabel5</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>&amp;Hosts allow</string>
+                                    <string>&amp;Hosts allow:</string>
                                 </property>
                                 <property name="buddy" stdset="0">
                                     <cstring>hostsAllowEdit</cstring>
@@ -368,7 +368,7 @@
                                     <cstring>TextLabel6</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Hosts &amp;deny</string>
+                                    <string>Hosts &amp;deny:</string>
                                 </property>
                                 <property name="buddy" stdset="0">
                                     <cstring>hostsDenyEdit</cstring>
@@ -423,7 +423,7 @@
                                     <bool>false</bool>
                                 </property>
                                 <property name="text">
-                                    <string>Guest &amp;account</string>
+                                    <string>Guest &amp;account:</string>
                                 </property>
                                 <property name="buddy" stdset="0">
                                     <cstring>guestAccountCombo</cstring>
@@ -557,7 +557,7 @@
                     <cstring>hiddenFilesTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>&amp;Hidden files</string>
+                    <string>&amp;Hidden Files</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -670,7 +670,7 @@
                             <cstring>selGrpBx</cstring>
                         </property>
                         <property name="title">
-                            <string>Selected files</string>
+                            <string>Selected Files</string>
                         </property>
                         <hbox>
                             <property name="name">
@@ -705,7 +705,7 @@
                             <cstring>GroupBox13_2</cstring>
                         </property>
                         <property name="title">
-                            <string>Manual configuration</string>
+                            <string>Manual Configuration</string>
                         </property>
                         <vbox>
                             <property name="name">
@@ -736,7 +736,7 @@
                                             <cstring>TextLabel1_3</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Hidden files</string>
+                                            <string>Hidden files:</string>
                                         </property>
                                     </widget>
                                     <widget class="QLineEdit" row="0" column="1">
@@ -749,7 +749,7 @@
                                             <cstring>TextLabel2_2</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Veto files</string>
+                                            <string>Veto files:</string>
                                         </property>
                                     </widget>
                                     <widget class="QLineEdit" row="1" column="1">
@@ -890,7 +890,7 @@ Only change something if you know what you are doing !</string>
                     <cstring>tab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>AdvancedDump</string>
+                    <string>Advanced Dump</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -942,7 +942,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>GroupBox11_2</cstring>
                                             </property>
                                             <property name="title">
-                                                <string>Force modes</string>
+                                                <string>Force Modes</string>
                                             </property>
                                             <grid>
                                                 <property name="name">
@@ -959,7 +959,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_3_2_2_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Force directory security mode</string>
+                                                        <string>Force directory security mode:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -973,7 +973,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_3_2_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Force security mode</string>
+                                                        <string>Force security mode:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -987,7 +987,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_3_2_2_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Force directory mode</string>
+                                                        <string>Force directory mode:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1001,7 +1001,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_3_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Force create mode</string>
+                                                        <string>Force create mode:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1178,7 +1178,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_4_2_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Directory security mask</string>
+                                                        <string>Directory security mask:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1192,7 +1192,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_4_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Security mask</string>
+                                                        <string>Security mask:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1206,7 +1206,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_4_2_3</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Directory mask</string>
+                                                        <string>Directory mask:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1328,7 +1328,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>TextLabel5_2_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Create mask</string>
+                                                        <string>Create mask:</string>
                                                     </property>
                                                     <property name="buddy" stdset="0">
                                                         <cstring>allowEdit</cstring>
@@ -1450,7 +1450,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>statusChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>enable logging of connections to a status file that smbstatus can read</string>
+                                        <string>Enable logging of connections to a status file that smbstatus can read</string>
                                     </property>
                                 </widget>
                                 <spacer>
@@ -1511,7 +1511,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel5_3_2_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Write cache size</string>
+                                        <string>Write cache size:</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="1" column="0">
@@ -1522,7 +1522,7 @@ Only change something if you know what you are doing !</string>
                                         <bool>false</bool>
                                     </property>
                                     <property name="text">
-                                        <string>sync always</string>
+                                        <string>Sync always</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="0" column="0">
@@ -1530,7 +1530,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>strictSyncChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>strict sync</string>
+                                        <string>Strict sync</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="2" column="0" rowspan="1" colspan="2">
@@ -1538,7 +1538,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>strictAllocateChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>strict allocate</string>
+                                        <string>Strict allocate</string>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="3" column="1">
@@ -1557,7 +1557,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel5_3_4</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Maximum number of simultaneous connections</string>
+                                        <string>Maximum number of simultaneous connections:</string>
                                     </property>
                                 </widget>
                                 <widget class="KIntSpinBox" row="4" column="1">
@@ -1659,7 +1659,7 @@ Only change something if you know what you are doing !</string>
                                                 </sizepolicy>
                                             </property>
                                             <property name="title">
-                                                <string>Other options</string>
+                                                <string>Other Options</string>
                                             </property>
                                             <widget class="QCheckBox">
                                                 <property name="name">
@@ -1700,7 +1700,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>dosFilemodeChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>dos filemode</string>
+                                                        <string>DOS file mode</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -1708,7 +1708,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>dosFiletimesChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>dos filetimes</string>
+                                                        <string>DOS file times</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -1716,7 +1716,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>dosFiletimeResolutionChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>dos filetime resolution</string>
+                                                        <string>DOS file time resolution</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox">
@@ -1724,7 +1724,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>deleteReadonlyChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>delete readonly</string>
+                                                        <string>Delete read-only</string>
                                                     </property>
                                                     <property name="checked">
                                                         <bool>false</bool>
@@ -1747,7 +1747,7 @@ Only change something if you know what you are doing !</string>
                                         </sizepolicy>
                                     </property>
                                     <property name="title">
-                                        <string>Name mangling</string>
+                                        <string>Name Mangling</string>
                                     </property>
                                     <grid>
                                         <property name="name">
@@ -1772,7 +1772,7 @@ Only change something if you know what you are doing !</string>
                                                 </sizepolicy>
                                             </property>
                                             <property name="text">
-                                                <string>Mangling char</string>
+                                                <string>Mangling char:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLayoutWidget" row="6" column="1">
@@ -1824,7 +1824,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel1_5</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Mangled map</string>
+                                                <string>Mangled map:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="7" column="1">
@@ -1837,7 +1837,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>mangledNamesChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>enable name mangling</string>
+                                                <string>Enable name mangling</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="1" column="0">
@@ -1845,7 +1845,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>mangleCaseChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>mangle case</string>
+                                                <string>Mangle case</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="2" column="0">
@@ -1853,7 +1853,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>caseSensitiveChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>case sensitive</string>
+                                                <string>Case sensitive</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox" row="3" column="0">
@@ -1861,7 +1861,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>preserveCaseChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>preserve case</string>
+                                                <string>Preserve case</string>
                                             </property>
                                             <property name="checked">
                                                 <bool>true</bool>
@@ -1872,7 +1872,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>shortPreserveCaseChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>short preserve case</string>
+                                                <string>Short preserve case</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="5" column="0">
@@ -1880,7 +1880,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel2_3</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Default case</string>
+                                                <string>Default case:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLayoutWidget" row="5" column="1">
@@ -1900,12 +1900,12 @@ Only change something if you know what you are doing !</string>
                                                 <widget class="QComboBox">
                                                     <item>
                                                         <property name="text">
-                                                            <string>lower</string>
+                                                            <string>Lower</string>
                                                         </property>
                                                     </item>
                                                     <item>
                                                         <property name="text">
-                                                            <string>upper</string>
+                                                            <string>Upper</string>
                                                         </property>
                                                     </item>
                                                     <property name="name">
@@ -1970,7 +1970,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>lockingChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>enable locking</string>
+                                                <string>Enable locking</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel">
@@ -2035,7 +2035,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>blockingLocksChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>blocking locks</string>
+                                                <string>Blocking locks</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -2043,7 +2043,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>posixLockingChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>posix locking</string>
+                                                <string>Posix locking</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -2051,7 +2051,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>strictLockingChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>strict locking</string>
+                                                <string>Strict locking</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -2059,7 +2059,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>shareModesChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>share modes</string>
+                                                <string>Share modes</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -2067,7 +2067,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>oplocksChk</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>issue opportunistic locks (oplocks) </string>
+                                                <string>Issue opportunistic locks (oplocks) </string>
                                             </property>
                                         </widget>
                                         <widget class="QGroupBox">
@@ -2086,7 +2086,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>level2OplocksChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>level2 oplocks</string>
+                                                        <string>Level2 oplocks</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLayoutWidget" row="1" column="1">
@@ -2165,7 +2165,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>textLabel1_2</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Veto oplock files</string>
+                                                        <string>Veto oplock files:</string>
                                                     </property>
                                                 </widget>
                                                 <widget class="QLineEdit" row="2" column="1">
@@ -2183,7 +2183,7 @@ Only change something if you know what you are doing !</string>
                                                         </font>
                                                     </property>
                                                     <property name="text">
-                                                        <string>Oplock contention limit</string>
+                                                        <string>Oplock contention limit:</string>
                                                     </property>
                                                 </widget>
                                             </grid>
@@ -2201,7 +2201,7 @@ Only change something if you know what you are doing !</string>
                                                         <cstring>fakeOplocksChk</cstring>
                                                     </property>
                                                     <property name="text">
-                                                        <string>fake oplocks</string>
+                                                        <string>Fake oplocks</string>
                                                     </property>
                                                     <property name="checked">
                                                         <bool>true</bool>
@@ -2312,7 +2312,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel1_6</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Vfs object</string>
+                                        <string>Vfs object:</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="1" column="0">
@@ -2320,7 +2320,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>TextLabel1_6_2</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>Vfs options</string>
+                                        <string>Vfs options:</string>
                                     </property>
                                 </widget>
                                 <widget class="QCheckBox" row="2" column="0">
@@ -2374,7 +2374,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel4</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Postexec</string>
+                                                <string>Postexec:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="1" column="0">
@@ -2382,7 +2382,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel5_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Root preexec</string>
+                                                <string>Root preexec:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLabel" row="0" column="0">
@@ -2390,7 +2390,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Preexec</string>
+                                                <string>Preexec:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="0" column="1">
@@ -2403,7 +2403,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel5_2_4</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Root postexec</string>
+                                                <string>Root postexec:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="2" column="1">
@@ -2494,7 +2494,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel6_2_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Fstype</string>
+                                                <string>Fstype:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="1" column="1">
@@ -2512,7 +2512,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel6_2_3</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Magic script</string>
+                                                <string>Magic script:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="0" column="1">
@@ -2525,7 +2525,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel6_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Volume</string>
+                                                <string>Volume:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="3" column="1">
@@ -2538,7 +2538,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel6_2_2_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Magic output</string>
+                                                <string>Magic output:</string>
                                             </property>
                                         </widget>
                                         <widget class="QLineEdit" row="4" column="1">
@@ -2551,7 +2551,7 @@ Only change something if you know what you are doing !</string>
                                                 <cstring>TextLabel6_2_3_2</cstring>
                                             </property>
                                             <property name="text">
-                                                <string>Dont descend</string>
+                                                <string>Dont descend:</string>
                                             </property>
                                         </widget>
                                     </grid>
@@ -2569,7 +2569,7 @@ Only change something if you know what you are doing !</string>
                                         <cstring>fakeDirectoryCreateTimesChk</cstring>
                                     </property>
                                     <property name="text">
-                                        <string>fake directory create times</string>
+                                        <string>Fake directory create times</string>
                                     </property>
                                 </widget>
                                 <spacer>
@@ -2614,7 +2614,7 @@ Only change something if you know what you are doing !</string>
                         <cstring>buttonHelp</cstring>
                     </property>
                     <property name="text">
-                        <string>Help</string>
+                        <string>&amp;Help</string>
                     </property>
                     <property name="accel">
                         <string>F1</string>
@@ -2645,10 +2645,10 @@ Only change something if you know what you are doing !</string>
                         <cstring>buttonOk</cstring>
                     </property>
                     <property name="text">
-                        <string>OK</string>
+                        <string>&amp;OK</string>
                     </property>
                     <property name="accel">
-                        <string></string>
+                        <string>Alt+O</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -2662,10 +2662,10 @@ Only change something if you know what you are doing !</string>
                         <cstring>buttonCancel</cstring>
                     </property>
                     <property name="text">
-                        <string>Cancel</string>
+                        <string>&amp;Cancel</string>
                     </property>
                     <property name="accel">
-                        <string></string>
+                        <string>Alt+C</string>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>

@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
 <class>UserTab</class>
 <widget class="QWidget">
     <property name="name">
@@ -206,7 +206,7 @@
                                     <property name="clickable">
                                         <bool>true</bool>
                                     </property>
-                                    <property name="resizeable">
+                                    <property name="resizable">
                                         <bool>true</bool>
                                     </property>
                                 </column>
@@ -217,7 +217,7 @@
                                     <property name="clickable">
                                         <bool>true</bool>
                                     </property>
-                                    <property name="resizeable">
+                                    <property name="resizable">
                                         <bool>true</bool>
                                     </property>
                                 </column>
@@ -228,7 +228,7 @@
                                     <property name="clickable">
                                         <bool>true</bool>
                                     </property>
-                                    <property name="resizeable">
+                                    <property name="resizable">
                                         <bool>true</bool>
                                     </property>
                                 </column>
@@ -321,7 +321,7 @@
                         <property name="clickable">
                             <bool>true</bool>
                         </property>
-                        <property name="resizeable">
+                        <property name="resizable">
                             <bool>true</bool>
                         </property>
                     </column>
@@ -332,7 +332,7 @@
                         <property name="clickable">
                             <bool>true</bool>
                         </property>
-                        <property name="resizeable">
+                        <property name="resizable">
                             <bool>true</bool>
                         </property>
                     </column>
@@ -343,7 +343,7 @@
                         <property name="clickable">
                             <bool>true</bool>
                         </property>
-                        <property name="resizeable">
+                        <property name="resizable">
                             <bool>true</bool>
                         </property>
                     </column>
@@ -386,7 +386,7 @@
                         <cstring>TextLabel12</cstring>
                     </property>
                     <property name="text">
-                        <string>Force user</string>
+                        <string>Force user:</string>
                     </property>
                 </widget>
                 <widget class="QComboBox">
@@ -395,7 +395,7 @@
                     </property>
                 </widget>
                 <spacer>
-                    <property name="name" stdset="0">
+                    <property name="name">
                         <cstring>Spacer8</cstring>
                     </property>
                     <property name="orientation">
@@ -416,7 +416,7 @@
                         <cstring>TextLabel13</cstring>
                     </property>
                     <property name="text">
-                        <string>Force group</string>
+                        <string>Force group:</string>
                     </property>
                 </widget>
                 <widget class="QComboBox">
@@ -510,4 +510,8 @@
     <slot>changedSlot()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>klistview.h</includehint>
+    <includehint>klistview.h</includehint>
+</includehints>
 </UI>

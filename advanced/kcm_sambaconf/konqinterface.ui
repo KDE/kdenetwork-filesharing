@@ -282,7 +282,7 @@
                         <cstring>guestAccountCombo</cstring>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>This is a user name which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a user name is specified in a given service, the specified user name overrides this one.</string>
+                        <string>This is a username which will be used for access to services which are specified as guest ok. Whatever privileges this user has will be available to any client connecting to the guest service. Typically this user will exist in the password file, but will not have a valid login. The user account \"ftp\" is often a good choice for this parameter. If a username is specified in a given service, the specified username overrides this one.</string>
                     </property>
                 </widget>
                 <widget class="QCheckBox" row="0" column="0">
@@ -330,7 +330,7 @@
                         </font>
                     </property>
                     <property name="whatsThis" stdset="0">
-                        <string>This is a user name which will be used for access this directory if guests are allowed</string>
+                        <string>This is a username which will be used for access this directory if guests are allowed</string>
                     </property>
                 </widget>
             </grid>

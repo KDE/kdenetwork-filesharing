@@ -882,7 +882,7 @@ void ShareDlgImpl::homeChkToggled(bool b)
 
 void ShareDlgImpl::accessModifierBtnClicked()
 {
-  cout << "clicked" << endl;
+  kdDebug() << "clicked" << endl;
 
   assert(QObject::sender());
   

@@ -62,6 +62,7 @@ class KJanusWidget;
 class QLineEdit;
 class QCheckBox;
 class QSpinBox;
+class DictManager;
 
 class KcmSambaConf: public KCModule
 {
@@ -98,12 +99,8 @@ class KcmSambaConf: public KCModule
      **/
   	QString _smbconf;
 		SambaFile* _sambaFile;
-		QDict<QLineEdit> lineEditDict;
-		QDict<QCheckBox> checkBoxDict;
-		QDict<KURLRequester> urlRequesterDict;
-		QDict<QSpinBox> spinBoxDict;
 		
-		
+		DictManager* _dictMngr;
 
     void loadUserTab();
     void saveUserTab();
@@ -131,8 +128,7 @@ class KcmSambaConf: public KCModule
 		void loadBrowsing(SambaShare* share);
 		void loadMisc(SambaShare* share);
 		
-		void loadDicts(SambaShare* share);
-		void saveDicts(SambaShare* share);
+    void initAdvancedTab();
 		
   protected slots:
     void addSambaUserBtnClicked();

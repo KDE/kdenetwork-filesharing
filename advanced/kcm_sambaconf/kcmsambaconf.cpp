@@ -56,12 +56,13 @@
 #include <krestrictedline.h>
 #include <kmessagebox.h>
 #include <kjanuswidget.h>
+#include <klistview.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
 #include "sharedlgimpl.h"
 #include "printerdlgimpl.h"
-
+#include "dictmanager.h"
 #include "kcmsambaconf.h"
 #include "smbpasswdfile.h"
 #include "passwd.h"
@@ -168,15 +169,21 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 }
 
 KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
-	: KCModule(parent,name),
-	lineEditDict(40,false),
-	checkBoxDict(40,false),
-	urlRequesterDict(40,false),
-	spinBoxDict(40,false)
-	
+	: KCModule(parent,name)
 {
+  _dictMngr = new DictManager();
+
   load();
-	
+  initAdvancedTab();
+};
+
+
+KcmSambaConf::~KcmSambaConf() {
+  delete _dictMngr;
+}
+
+void KcmSambaConf::initAdvancedTab() 
+{
 	QVBoxLayout *l = new QVBoxLayout(_interface->advancedFrame);
 	l->setAutoAdd(true);
 	l->setMargin(0);
@@ -250,12 +257,8 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 	w = _interface->mainTab->page(6);
 	_interface->mainTab->removePage(w);
 	delete w;
-};
 
-
-KcmSambaConf::~KcmSambaConf() {
 }
-
 
 void KcmSambaConf::editShare() 
 {
@@ -454,53 +457,23 @@ void KcmSambaConf::load()
 	loadBrowsing( share );
 	loadMisc( share );
 	
-	loadDicts( share );
+	_dictMngr->load( share, false,true );
 	
   loadUserTab();
 
   connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
 }
 
-void KcmSambaConf::loadDicts(SambaShare* share) 
-{
-	QDictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
-	 
-	for( ; checkBoxIt.current(); ++checkBoxIt )	{
-		checkBoxIt.current()->setChecked(share->getBoolValue(checkBoxIt.currentKey(),false,true));
-		
-	}
-		
-	QDictIterator<QLineEdit> lineEditIt( lineEditDict ); 
-	 
-	for( ; lineEditIt.current(); ++lineEditIt )	{
-		lineEditIt.current()->setText(share->getValue(lineEditIt.currentKey(),false,true));
-	}
-
-	QDictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
- 
-	for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
-		urlRequesterIt.current()->setURL(share->getValue(urlRequesterIt.currentKey(),false,true));
-	}
-
-	QDictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
-	 
-	for( ; spinBoxIt.current(); ++spinBoxIt )	{
-		spinBoxIt.current()->setValue(share->getValue(spinBoxIt.currentKey(),false,true).toInt());
-	}
-		
-}
-
-
 
 void KcmSambaConf::loadBaseSettings(SambaShare* share) 
 {
 
-	lineEditDict.insert("workgroup", _interface->workgroupEdit);
-	lineEditDict.insert("server string", _interface->serverStringEdit);
-	lineEditDict.insert("netbios name", _interface->netbiosNameEdit);
-	lineEditDict.insert("netbios aliases", _interface->netbiosAliasesEdit);
-	lineEditDict.insert("netbios scope", _interface->netbiosScopeEdit);
-	lineEditDict.insert("interfaces", _interface->interfacesEdit);
+	_dictMngr->add("workgroup", _interface->workgroupEdit);
+	_dictMngr->add("server string", _interface->serverStringEdit);
+	_dictMngr->add("netbios name", _interface->netbiosNameEdit);
+	_dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
+	_dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
+	_dictMngr->add("interfaces", _interface->interfacesEdit);
 
   _interface->guestAccountCombo->insertStringList( getUnixUsers() );
 	setComboIndexToValue(_interface->guestAccountCombo,"guest account",share);
@@ -509,9 +482,9 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
 	
 	_interface->allowGuestLoginsChk->setChecked( value.lower()!="never" );
 	
-	checkBoxDict.insert("guest ok",_interface->allowGuestLoginsChk);
+	_dictMngr->add("guest ok",_interface->allowGuestLoginsChk);
 
-	checkBoxDict.insert("bind interfaces only",_interface->bindInterfacesOnlyChk);
+	_dictMngr->add("bind interfaces only",_interface->bindInterfacesOnlyChk);
 
 	QString s = share->getValue("security",false,true).lower();
 	int i = 0;
@@ -527,23 +500,23 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
 
 void KcmSambaConf::loadDomain(SambaShare* share) 
 {
-	checkBoxDict.insert("wins proxy",_interface->winsProxyChk);
-	checkBoxDict.insert("dns proxy",_interface->dnsProxyChk);
-	checkBoxDict.insert("preferred master",_interface->preferredMasterChk);
-	checkBoxDict.insert("local master",_interface->localMasterChk);
-	checkBoxDict.insert("domain master",_interface->domainMasterChk);
-	checkBoxDict.insert("domain logons",_interface->domainLogonsChk);
+	_dictMngr->add("wins proxy",_interface->winsProxyChk);
+	_dictMngr->add("dns proxy",_interface->dnsProxyChk);
+	_dictMngr->add("preferred master",_interface->preferredMasterChk);
+	_dictMngr->add("local master",_interface->localMasterChk);
+	_dictMngr->add("domain master",_interface->domainMasterChk);
+	_dictMngr->add("domain logons",_interface->domainLogonsChk);
 	
-	spinBoxDict.insert("machine password timeout", _interface->machinePasswordTimeoutSpin);
+	_dictMngr->add("machine password timeout", _interface->machinePasswordTimeoutSpin);
 
 	
-	lineEditDict.insert("wins server", _interface->winsServerEdit);
-	lineEditDict.insert("wins hook", _interface->winsHookEdit);
+	_dictMngr->add("wins server", _interface->winsServerEdit);
+	_dictMngr->add("wins hook", _interface->winsHookEdit);
 	
 	_interface->winsSupportRadio->setChecked( share->getBoolValue("wins support",false,true));
   _interface->otherWinsRadio->setChecked( share->getValue("wins server",false,true) != "" );
 
-	spinBoxDict.insert("os level", _interface->osLevelSpin);
+	_dictMngr->add("os level", _interface->osLevelSpin);
 
 }
 
@@ -552,93 +525,93 @@ void KcmSambaConf::loadSecurity(SambaShare* share)
   int i = _interface->mapToGuestCombo->listBox()->index(_interface->mapToGuestCombo->listBox()->findItem(share->getValue("map to guest",false,true),Qt::ExactMatch));
   _interface->mapToGuestCombo->setCurrentItem(i);
 
-	lineEditDict.insert("password server", _interface->passwordServerEdit);
-	lineEditDict.insert("passwd chat", _interface->passwdChatEdit);
-	lineEditDict.insert("root directory", _interface->rootDirectoryEdit);
+	_dictMngr->add("password server", _interface->passwordServerEdit);
+	_dictMngr->add("passwd chat", _interface->passwdChatEdit);
+	_dictMngr->add("root directory", _interface->rootDirectoryEdit);
 
-	spinBoxDict.insert("password level", _interface->passwordLevelSpin);
-	spinBoxDict.insert("min passwd length", _interface->minPasswdLengthSpin);
-	spinBoxDict.insert("username level", _interface->usernameLevelSpin);
+	_dictMngr->add("password level", _interface->passwordLevelSpin);
+	_dictMngr->add("min passwd length", _interface->minPasswdLengthSpin);
+	_dictMngr->add("username level", _interface->usernameLevelSpin);
 	
-	checkBoxDict.insert("encrypt passwords",_interface->encryptPasswordsChk);
-	checkBoxDict.insert("update encrypted",_interface->updateEncryptedChk);
-	checkBoxDict.insert("passwd chat debug",_interface->passwdChatDebugChk);
-	checkBoxDict.insert("unix password sync",_interface->unixPasswordSyncChk);
-	checkBoxDict.insert("use rhosts",_interface->useRhostsChk);
-	checkBoxDict.insert("lanman auth",_interface->lanmanAuthChk);
-	checkBoxDict.insert("allow trusted domains",_interface->allowTrustedDomainsChk);
-	checkBoxDict.insert("obey pam restrictions",_interface->obeyPamRestrictionsChk);
-	checkBoxDict.insert("pam password change",_interface->pamPasswordChangeChk);
-	checkBoxDict.insert("restrict anonymous",_interface->restrictAnonymousChk);
-	checkBoxDict.insert("alternate permissions",_interface->alternatePermissionsChk);
-	checkBoxDict.insert("null passwords",_interface->nullPasswordsChk);
+	_dictMngr->add("encrypt passwords",_interface->encryptPasswordsChk);
+	_dictMngr->add("update encrypted",_interface->updateEncryptedChk);
+	_dictMngr->add("passwd chat debug",_interface->passwdChatDebugChk);
+	_dictMngr->add("unix password sync",_interface->unixPasswordSyncChk);
+	_dictMngr->add("use rhosts",_interface->useRhostsChk);
+	_dictMngr->add("lanman auth",_interface->lanmanAuthChk);
+	_dictMngr->add("allow trusted domains",_interface->allowTrustedDomainsChk);
+	_dictMngr->add("obey pam restrictions",_interface->obeyPamRestrictionsChk);
+	_dictMngr->add("pam password change",_interface->pamPasswordChangeChk);
+	_dictMngr->add("restrict anonymous",_interface->restrictAnonymousChk);
+	_dictMngr->add("alternate permissions",_interface->alternatePermissionsChk);
+	_dictMngr->add("null passwords",_interface->nullPasswordsChk);
 		
-	urlRequesterDict.insert("smb passwd file",_interface->smbPasswdFileUrlRq);
-	urlRequesterDict.insert("passwd program",_interface->passwdProgramUrlRq);
-	urlRequesterDict.insert("username map",_interface->usernameMapUrlRq);
-	urlRequesterDict.insert("hosts equiv",_interface->hostsEquivUrlRq);
+	_dictMngr->add("smb passwd file",_interface->smbPasswdFileUrlRq);
+	_dictMngr->add("passwd program",_interface->passwdProgramUrlRq);
+	_dictMngr->add("username map",_interface->usernameMapUrlRq);
+	_dictMngr->add("hosts equiv",_interface->hostsEquivUrlRq);
 	
 }
 
 void KcmSambaConf::loadLogging(SambaShare* share) 
 {
-	urlRequesterDict.insert("log file",_interface->logFileUrlRq);
+	_dictMngr->add("log file",_interface->logFileUrlRq);
 
-	spinBoxDict.insert("max log size", _interface->maxLogSizeSpin);
-	spinBoxDict.insert("syslog", _interface->syslogSpin);
-	spinBoxDict.insert("log level", _interface->logLevelSpin);
+	_dictMngr->add("max log size", _interface->maxLogSizeSpin);
+	_dictMngr->add("syslog", _interface->syslogSpin);
+	_dictMngr->add("log level", _interface->logLevelSpin);
 
-	checkBoxDict.insert("status",_interface->statusChk);
-	checkBoxDict.insert("debug uid",_interface->debugUidChk);
-	checkBoxDict.insert("debug pid",_interface->debugPidChk);
-	checkBoxDict.insert("debug hires timestamp",_interface->microsecondsChk);
-	checkBoxDict.insert("syslog only",_interface->syslogOnlyChk);
-	checkBoxDict.insert("debug timestamp",_interface->timestampChk);
-	checkBoxDict.insert("use mmap",_interface->useMmapChk);
+	_dictMngr->add("status",_interface->statusChk);
+	_dictMngr->add("debug uid",_interface->debugUidChk);
+	_dictMngr->add("debug pid",_interface->debugPidChk);
+	_dictMngr->add("debug hires timestamp",_interface->microsecondsChk);
+	_dictMngr->add("syslog only",_interface->syslogOnlyChk);
+	_dictMngr->add("debug timestamp",_interface->timestampChk);
+	_dictMngr->add("use mmap",_interface->useMmapChk);
   
 
 }
 
 void KcmSambaConf::loadTuning(SambaShare* share) 
 {
-	spinBoxDict.insert("change notify timeout", _interface->changeNotifyTimeoutSpin);
-	spinBoxDict.insert("deadtime", _interface->deadtimeSpin);
-	spinBoxDict.insert("keepalive", _interface->keepaliveSpin);
-	spinBoxDict.insert("lpq cache time", _interface->lpqCacheTimeSpin);
-	spinBoxDict.insert("max open files", _interface->maxOpenFilesSpin);
-	spinBoxDict.insert("read size", _interface->readSizeSpin);
-	spinBoxDict.insert("max disk size", _interface->maxDiskSizeSpin);
-	spinBoxDict.insert("stat cache size", _interface->statCacheSizeSpin);
+	_dictMngr->add("change notify timeout", _interface->changeNotifyTimeoutSpin);
+	_dictMngr->add("deadtime", _interface->deadtimeSpin);
+	_dictMngr->add("keepalive", _interface->keepaliveSpin);
+	_dictMngr->add("lpq cache time", _interface->lpqCacheTimeSpin);
+	_dictMngr->add("max open files", _interface->maxOpenFilesSpin);
+	_dictMngr->add("read size", _interface->readSizeSpin);
+	_dictMngr->add("max disk size", _interface->maxDiskSizeSpin);
+	_dictMngr->add("stat cache size", _interface->statCacheSizeSpin);
   
-	checkBoxDict.insert("getwd cache",_interface->getwdCacheChk);
-	checkBoxDict.insert("use mmap",_interface->useMmapChk);
+	_dictMngr->add("getwd cache",_interface->getwdCacheChk);
+	_dictMngr->add("use mmap",_interface->useMmapChk);
   
 }
 
 void KcmSambaConf::loadPrinting(SambaShare* share) 
 {
-	checkBoxDict.insert("load printers",_interface->loadPrintersChk);
-	checkBoxDict.insert("disable spoolss",_interface->disableSpoolssChk);
-	checkBoxDict.insert("show add printer wizard",_interface->showAddPrinterWizardChk);
+	_dictMngr->add("load printers",_interface->loadPrintersChk);
+	_dictMngr->add("disable spoolss",_interface->disableSpoolssChk);
+	_dictMngr->add("show add printer wizard",_interface->showAddPrinterWizardChk);
 	
-	lineEditDict.insert("addprinter command", _interface->addprinterCommandEdit);
-	lineEditDict.insert("deleteprinter command", _interface->deleteprinterCommandEdit);
-	lineEditDict.insert("enumports command", _interface->enumportsCommandEdit);
+	_dictMngr->add("addprinter command", _interface->addprinterCommandEdit);
+	_dictMngr->add("deleteprinter command", _interface->deleteprinterCommandEdit);
+	_dictMngr->add("enumports command", _interface->enumportsCommandEdit);
 	
-	urlRequesterDict.insert("printcap name",_interface->printcapNameUrlRq);
-	urlRequesterDict.insert("os2 driver map",_interface->os2DriverMapUrlRq);
+	_dictMngr->add("printcap name",_interface->printcapNameUrlRq);
+	_dictMngr->add("os2 driver map",_interface->os2DriverMapUrlRq);
 	
-	spinBoxDict.insert("total print jobs", _interface->totalPrintJobsSpin);
+	_dictMngr->add("total print jobs", _interface->totalPrintJobsSpin);
 }
 
 void KcmSambaConf::loadFilenames(SambaShare* share) 
 {
-	checkBoxDict.insert("strip dot",_interface->stripDotChk);
-	checkBoxDict.insert("stat cache",_interface->statCacheChk);
+	_dictMngr->add("strip dot",_interface->stripDotChk);
+	_dictMngr->add("stat cache",_interface->statCacheChk);
   
-	lineEditDict.insert("character set", _interface->characterSetEdit);
+	_dictMngr->add("character set", _interface->characterSetEdit);
 	
-	spinBoxDict.insert("mangled stack", _interface->mangledStackSpin);
+	_dictMngr->add("mangled stack", _interface->mangledStackSpin);
 
 }
 
@@ -646,24 +619,24 @@ void KcmSambaConf::loadProtocol(SambaShare* share)
 {
   // Protocol
 
-	checkBoxDict.insert("write raw",_interface->writeRawChk);
-	checkBoxDict.insert("read raw",_interface->readRawChk);
-	checkBoxDict.insert("read bmpx",_interface->readBmpxChk);
-	checkBoxDict.insert("large readwrite",_interface->largeReadWriteChk);
-	checkBoxDict.insert("nt acl support",_interface->ntAclSupportChk);
-	checkBoxDict.insert("nt smb support",_interface->ntSmbSupportChk);
-	checkBoxDict.insert("nt pipe support",_interface->ntPipeSupportChk);
-	checkBoxDict.insert("time server",_interface->timeServerChk);
+	_dictMngr->add("write raw",_interface->writeRawChk);
+	_dictMngr->add("read raw",_interface->readRawChk);
+	_dictMngr->add("read bmpx",_interface->readBmpxChk);
+	_dictMngr->add("large readwrite",_interface->largeReadWriteChk);
+	_dictMngr->add("nt acl support",_interface->ntAclSupportChk);
+	_dictMngr->add("nt smb support",_interface->ntSmbSupportChk);
+	_dictMngr->add("nt pipe support",_interface->ntPipeSupportChk);
+	_dictMngr->add("time server",_interface->timeServerChk);
   
-	spinBoxDict.insert("max mux", _interface->maxMuxSpin);
-	spinBoxDict.insert("max xmit", _interface->maxXmitSpin);
-	spinBoxDict.insert("max packet", _interface->maxPacketSpin);
-	spinBoxDict.insert("max ttl", _interface->maxTtlSpin);
-	spinBoxDict.insert("max wins ttl", _interface->maxWinsTtlSpin);
-	spinBoxDict.insert("min wins ttl", _interface->minWinsTtlSpin);
+	_dictMngr->add("max mux", _interface->maxMuxSpin);
+	_dictMngr->add("max xmit", _interface->maxXmitSpin);
+	_dictMngr->add("max packet", _interface->maxPacketSpin);
+	_dictMngr->add("max ttl", _interface->maxTtlSpin);
+	_dictMngr->add("max wins ttl", _interface->maxWinsTtlSpin);
+	_dictMngr->add("min wins ttl", _interface->minWinsTtlSpin);
 
-	lineEditDict.insert("announce version", _interface->announceVersionEdit);
-	lineEditDict.insert("name resolve order", _interface->nameResolveOrderEdit);
+	_dictMngr->add("announce version", _interface->announceVersionEdit);
+	_dictMngr->add("name resolve order", _interface->nameResolveOrderEdit);
 		  
 	setComboIndexToValue(_interface->announceAsCombo,"announce as",share);
 	setComboIndexToValue(_interface->protocolCombo,"protocol",share);
@@ -676,7 +649,7 @@ void KcmSambaConf::loadSocket(SambaShare* share)
 {
 	// SOCKET options
 	
-	lineEditDict.insert("socket address", _interface->socketAddressEdit);
+	_dictMngr->add("socket address", _interface->socketAddressEdit);
   
 	QString s = share->getValue("socket options");
   s = s.simplifyWhiteSpace();
@@ -710,25 +683,25 @@ void KcmSambaConf::loadSSL(SambaShare* share)
   int i = _interface->sslVersionCombo->listBox()->index(_interface->sslVersionCombo->listBox()->findItem(share->getValue("ssl version",false,true),Qt::ExactMatch));
   _interface->sslVersionCombo->setCurrentItem(i);
 	
-	checkBoxDict.insert("ssl",_interface->sslChk);
-	checkBoxDict.insert("ssl require server cert",_interface->sslRequireServercertChk);
-	checkBoxDict.insert("ssl compatibility",_interface->sslCompatibilityChk);
-	checkBoxDict.insert("ssl require clientcert",_interface->sslRequireClientcertChk);
+	_dictMngr->add("ssl",_interface->sslChk);
+	_dictMngr->add("ssl require server cert",_interface->sslRequireServercertChk);
+	_dictMngr->add("ssl compatibility",_interface->sslCompatibilityChk);
+	_dictMngr->add("ssl require clientcert",_interface->sslRequireClientcertChk);
 	
-	lineEditDict.insert("ssl hosts edit", _interface->sslHostsEdit);
-	lineEditDict.insert("ssl hosts resign", _interface->sslHostsResignEdit);
-	lineEditDict.insert("ssl egd socket", _interface->sslEgdSocketEdit);
-	lineEditDict.insert("ssl ciphers edit", _interface->sslCiphersEdit);
+	_dictMngr->add("ssl hosts edit", _interface->sslHostsEdit);
+	_dictMngr->add("ssl hosts resign", _interface->sslHostsResignEdit);
+	_dictMngr->add("ssl egd socket", _interface->sslEgdSocketEdit);
+	_dictMngr->add("ssl ciphers edit", _interface->sslCiphersEdit);
 	
-	urlRequesterDict.insert("ssl CA cert dir",_interface->sslCACertDirUrlRq);
-	urlRequesterDict.insert("ssl CA cert file",_interface->sslCACertFileUrlRq);
-	urlRequesterDict.insert("ssl entropy file",_interface->sslEntropyFileUrlRq);
-	urlRequesterDict.insert("ssl client cert",_interface->sslClientCertUrlRq);
-	urlRequesterDict.insert("ssl client key",_interface->sslClientKeyUrlRq);
-	urlRequesterDict.insert("ssl server cert",_interface->sslServerCertUrlRq);
-	urlRequesterDict.insert("ssl server key",_interface->sslServerKeyUrlRq);
+	_dictMngr->add("ssl CA cert dir",_interface->sslCACertDirUrlRq);
+	_dictMngr->add("ssl CA cert file",_interface->sslCACertFileUrlRq);
+	_dictMngr->add("ssl entropy file",_interface->sslEntropyFileUrlRq);
+	_dictMngr->add("ssl client cert",_interface->sslClientCertUrlRq);
+	_dictMngr->add("ssl client key",_interface->sslClientKeyUrlRq);
+	_dictMngr->add("ssl server cert",_interface->sslServerCertUrlRq);
+	_dictMngr->add("ssl server key",_interface->sslServerKeyUrlRq);
 	
-	spinBoxDict.insert("ssl entropy bytes", _interface->sslEntropyBytesSpin);
+	_dictMngr->add("ssl entropy bytes", _interface->sslEntropyBytesSpin);
 	
 }
 
@@ -736,56 +709,56 @@ void KcmSambaConf::loadLogon(SambaShare* share)
 {
 	// Logon
 	
-	lineEditDict.insert("add user script", _interface->addUserScriptEdit);
-	lineEditDict.insert("delete user script", _interface->deleteUserScriptEdit);
-	lineEditDict.insert("logon script", _interface->logonScriptEdit);
-	lineEditDict.insert("logon drive", _interface->logonDriveEdit);
-	urlRequesterDict.insert("logon path",_interface->logonPathUrlRq);
-	urlRequesterDict.insert("logon home",_interface->logonHomeUrlRq);
+	_dictMngr->add("add user script", _interface->addUserScriptEdit);
+	_dictMngr->add("delete user script", _interface->deleteUserScriptEdit);
+	_dictMngr->add("logon script", _interface->logonScriptEdit);
+	_dictMngr->add("logon drive", _interface->logonDriveEdit);
+	_dictMngr->add("logon path",_interface->logonPathUrlRq);
+	_dictMngr->add("logon home",_interface->logonHomeUrlRq);
 	
 }
 
 
 void KcmSambaConf::loadCoding(SambaShare* share) 
 {
-	lineEditDict.insert("coding system", _interface->codingSystemEdit);
-	lineEditDict.insert("client code page", _interface->clientCodePageEdit);
-	urlRequesterDict.insert("code page directory",_interface->codePageDirUrlRq);
+	_dictMngr->add("coding system", _interface->codingSystemEdit);
+	_dictMngr->add("client code page", _interface->clientCodePageEdit);
+	_dictMngr->add("code page directory",_interface->codePageDirUrlRq);
 }
 
 void KcmSambaConf::loadWinbind(SambaShare* share) 
 {
-	lineEditDict.insert("winbind uid", _interface->winbindUidEdit);
-	lineEditDict.insert("winbind gid", _interface->winbindGidEdit);
-	lineEditDict.insert("template homedir", _interface->templateHomedirEdit);
-	lineEditDict.insert("template shell", _interface->templateShellEdit);
-	lineEditDict.insert("winbind separator", _interface->winbindSeparatorEdit);
+	_dictMngr->add("winbind uid", _interface->winbindUidEdit);
+	_dictMngr->add("winbind gid", _interface->winbindGidEdit);
+	_dictMngr->add("template homedir", _interface->templateHomedirEdit);
+	_dictMngr->add("template shell", _interface->templateShellEdit);
+	_dictMngr->add("winbind separator", _interface->winbindSeparatorEdit);
 
-	spinBoxDict.insert("winbind cache time", _interface->winbindCacheTimeSpin);
+	_dictMngr->add("winbind cache time", _interface->winbindCacheTimeSpin);
 	
-	checkBoxDict.insert("winbind enum users",_interface->winbindEnumUsersChk);
-	checkBoxDict.insert("winbind enum groups",_interface->winbindEnumGroupsChk);
+	_dictMngr->add("winbind enum users",_interface->winbindEnumUsersChk);
+	_dictMngr->add("winbind enum groups",_interface->winbindEnumGroupsChk);
 	
 
 }
 
 void KcmSambaConf::loadNetbios(SambaShare* share) 
 {
-	lineEditDict.insert("netbios aliases", _interface->netbiosAliasesEdit);
-	lineEditDict.insert("netbios scope", _interface->netbiosScopeEdit);
+	_dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
+	_dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
 }
 
 void KcmSambaConf::loadVFS(SambaShare* share) 
 {
-	checkBoxDict.insert("host msdfs",_interface->hostMsdfsChk);
+	_dictMngr->add("host msdfs",_interface->hostMsdfsChk);
 
 }
 
 void KcmSambaConf::loadBrowsing(SambaShare* share) 
 {
-	checkBoxDict.insert("enhanced browsing",_interface->enhancedBrowsingChk);
-	checkBoxDict.insert("browse list",_interface->browseListChk);
-	spinBoxDict.insert("lm interval", _interface->lmIntervalSpin);
+	_dictMngr->add("enhanced browsing",_interface->enhancedBrowsingChk);
+	_dictMngr->add("browse list",_interface->browseListChk);
+	_dictMngr->add("lm interval", _interface->lmIntervalSpin);
 	
 	setComboFromAutoValue(_interface->lmAnnounceCombo,"lm announce",share);
 	
@@ -824,26 +797,26 @@ void KcmSambaConf::setComboFromAutoValue(QComboBox* box, const QString & key, Sa
 
 void KcmSambaConf::loadMisc(SambaShare* share) 
 {
-	lineEditDict.insert("addShare command", _interface->addShareCommandEdit);
-	lineEditDict.insert("change share command", _interface->changeShareCommandEdit);
-	lineEditDict.insert("delete share command", _interface->deleteShareCommandEdit);
-	lineEditDict.insert("panic action", _interface->panicActionEdit);
-	lineEditDict.insert("preload", _interface->preloadEdit);
-	lineEditDict.insert("default service", _interface->defaultServiceEdit);
-	lineEditDict.insert("message command", _interface->messageCommandEdit);
-	lineEditDict.insert("dfree command", _interface->dfreeCommandEdit);
-	lineEditDict.insert("valid chars", _interface->validCharsEdit);
-	lineEditDict.insert("remote announce", _interface->remoteAnnounceEdit);
-	lineEditDict.insert("remote browse sync", _interface->remoteBrowseSyncEdit);
-	lineEditDict.insert("homedir map", _interface->homedirMapEdit);
-	lineEditDict.insert("source environment", _interface->sourceEnvironmentEdit);
+	_dictMngr->add("addShare command", _interface->addShareCommandEdit);
+	_dictMngr->add("change share command", _interface->changeShareCommandEdit);
+	_dictMngr->add("delete share command", _interface->deleteShareCommandEdit);
+	_dictMngr->add("panic action", _interface->panicActionEdit);
+	_dictMngr->add("preload", _interface->preloadEdit);
+	_dictMngr->add("default service", _interface->defaultServiceEdit);
+	_dictMngr->add("message command", _interface->messageCommandEdit);
+	_dictMngr->add("dfree command", _interface->dfreeCommandEdit);
+	_dictMngr->add("valid chars", _interface->validCharsEdit);
+	_dictMngr->add("remote announce", _interface->remoteAnnounceEdit);
+	_dictMngr->add("remote browse sync", _interface->remoteBrowseSyncEdit);
+	_dictMngr->add("homedir map", _interface->homedirMapEdit);
+	_dictMngr->add("source environment", _interface->sourceEnvironmentEdit);
 
-	urlRequesterDict.insert("lock directory",_interface->lockDirectoryUrlRq);
-	urlRequesterDict.insert("pid directory",_interface->pidDirectoryUrlRq);
-	urlRequesterDict.insert("utmp directory",_interface->utmpDirectoryUrlRq);
-	urlRequesterDict.insert("wtmp directory",_interface->wtmpDirectoryUrlRq);
+	_dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
+	_dictMngr->add("pid directory",_interface->pidDirectoryUrlRq);
+	_dictMngr->add("utmp directory",_interface->utmpDirectoryUrlRq);
+	_dictMngr->add("wtmp directory",_interface->wtmpDirectoryUrlRq);
 
-	spinBoxDict.insert("time offset", _interface->timeOffsetSpin);
+	_dictMngr->add("time offset", _interface->timeOffsetSpin);
 }
 
 
@@ -966,34 +939,6 @@ void KcmSambaConf::defaults() {
 	emit changed(true);
 }
 
-void KcmSambaConf::saveDicts(SambaShare* share) 
-{
-	QDictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
-	 
-	for( ; checkBoxIt.current(); ++checkBoxIt )	{
-		share->setValue(checkBoxIt.currentKey(),checkBoxIt.current()->isChecked(), false, true );
-	}
-		
-	QDictIterator<QLineEdit> lineEditIt( lineEditDict ); 
-	 
-	for( ; lineEditIt.current(); ++lineEditIt )	{
-		share->setValue(lineEditIt.currentKey(),lineEditIt.current()->text(), false, true );
-	}
-
-	QDictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
- 
-	for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
-		share->setValue(urlRequesterIt.currentKey(),urlRequesterIt.current()->url(), false, true );
-	}
-
-	QDictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
-	 
-	for( ; spinBoxIt.current(); ++spinBoxIt )	{
-		share->setValue(spinBoxIt.currentKey(),spinBoxIt.current()->value(), false, true );
-	}
-		
-}
-
 void KcmSambaConf::save() {
 	// insert your saving code here...
 
@@ -1043,7 +988,7 @@ void KcmSambaConf::save() {
 	
 	share->setValue("lm announce",s,false,true);
 	
-	saveDicts( share );
+	_dictMngr->save( share,false,true );
 		
   _sambaFile->slotApply();
 

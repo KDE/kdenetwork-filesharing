@@ -37,7 +37,6 @@
 #include <qstring.h>
 #include <kpropertiesdialog.h>
 
-class QFrame;
 class SambaFile;
 class QRadioButton;
 class QLineEdit;
@@ -53,52 +52,40 @@ Q_OBJECT
 public:
   KSambaPropertiesDialogPlugin( KPropertiesDialog *dlg,const char *, const QStringList &  );
   virtual ~KSambaPropertiesDialogPlugin();
-
-  QString addGlobalText(const QString & value, const QString & option, const SambaFile & sambaFile);
-
   virtual void applyChanges();
 
 protected:
-  bool _wasShared;
-
-  KPropertiesDialog* propDialog;
-
-  QFrame* frame;
-
-  KonqInterface* shareWidget;
-  QWidget* configWidget;
-
-  QWidgetStack *stack;
-
-  /**  */
-  QString smbconf;
-  QString sharePath;
-  SambaShare* _share;
-  SambaFile* _sambaFile;
-
   void initValues();
   void saveValuesToShare();
-  void init();
-  
-  /**
-   * Checks wether or not the entered Values are correct
-   * @return fals if not correct otherwise true
-   */
+  void initGUI();
   bool checkValues();
   
-  KonqInterface* createShareWidget(QWidget* parent);
-  QWidget* createConfigWidget(QWidget* parent);
+  void createShareWidget(QWidget* parent);
+  void createConfigWidget(QWidget* parent);
+  
+  QString getSambaConf();
+  SambaFile* getSambaFile();
+  SambaShare* getGlobalShare();
+  QString getSharePath();
+  SambaShare* getActiveShare();
+  QString getNetbiosName();
+  QString getLocalPathFromUrl(const KURL & url);
+
+private:
+  bool m_wasShared;
+  QString m_sambaConf;
+  QString m_sharePath;
+  SambaShare* m_activeShare;
+  SambaFile* m_sambaFile;
+  KonqInterface* m_shareWidget;
+  QWidget* m_configWidget;
+  QWidgetStack *m_stack;
+
 
 protected slots:
-
   void slotSharedChanged(int state);
   void slotSpecifySmbConf();
   void moreOptionsBtnPressed();
-  void changedSlot();
-
-private: // Private methods
-  QString findSambaConf() const;
-
 };
 
 #endif

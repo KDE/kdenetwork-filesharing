@@ -70,117 +70,163 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   							    const char *, const QStringList & )
   : KPropsDlgPlugin(dlg)
 {
-  propDialog = dlg;
+
+  // Initialize member variables
+  m_sambaFile = 0L;
+  m_activeShare = 0L;
+  m_sambaConf = QString::null;
+  m_sharePath = QString::null;
   
-//  kdWarning() << "KSambaPlugin : " << "Starting Konqueror plugin on " << propDialog->kurl().url() << endl;
+  m_sharePath = getLocalPathFromUrl(properties->kurl());
 
-  smbconf = SambaFile::findSambaConf();
-	sharePath = propDialog->kurl().path();
-  _sambaFile = 0L;
-  _share = 0L;
-
-  if (smbconf == "")
-    kdDebug() << "KSambaPlugin : " << "Sambafile coudn't be found !" << endl;
-  else
-    kdDebug() << "KSambaPlugin : " << "Sambafile is : " << smbconf << endl;
-    
-//  kdWarning() << "KSambaPlugin : " << "Check if we have a local directory ..." << endl;
-  
-  // Only accept local files
-  if (smbconf != "" && !propDialog->kurl().isLocalFile())
-  {
-    //kdWarning() << "KSambaPlugin : " << "We have a non local directory " << endl;
-
-  	// Except smb files
-  	if (propDialog->kurl().protocol().lower()=="smb")
-    {
-      //kdWarning() << "KSambaPlugin : " << "Path is an smb protocol " << endl;
-
-      _sambaFile = new SambaFile(smbconf,false);
-      if ( ! _sambaFile->load() )
-      {
-        KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(smbconf),
-                              i18n("Error while opening file"));
-        return;                       
-      }
-      
-      SambaShare* globals = _sambaFile->getShare("global");
-
-      QString *s = globals->find("netbios name");
-      if (!s) {
-//         kdWarning() << "KSambaPlugin : " << "Coudn't find netbios name ! Aborting. " << endl;
-				 return;
-      }
-  //    kdWarning() << "KSambaPlugin : " << "Netbios name is " << s->lower() << endl;
-    //  kdWarning() << "KSambaPlugin : " << "Host of file is " << propDialog->kurl().host().lower() << endl;
-         
-      // If we are on a smb directory of our host get it.
-     	if (propDialog->kurl().host().lower() != "localhost" &&
-          propDialog->kurl().host().lower() !=s->lower())
-      {
-      //   kdWarning() << "KSambaPlugin : " << "No file of our host, aborting " << endl;
-      	 return;
-      }
-
-      _share = _sambaFile->getShare( propDialog->kurl().fileName() );
-
-      QString path = _share->getValue("path",false);
-
-      if (path.isEmpty()) {
-        // kdWarning() << "KSambaPlugin : " << "Path entry is empty " << endl;
-      	 return;
-      }
-      
-//      kdWarning() << "KSambaPlugin : " << "Local path : " << path << endl;
-
-      sharePath = path;
-    }
-    else {
-  //     kdWarning() << "KSambaPlugin : " << "No local file and not the smb protocol, aborting " << endl;
-  		 return;
-    }
-  } else {
- //   kdWarning() << "KSambaPlugin : " << "It is a local file or smbconf was not found " << endl;
+  if (m_sharePath.isNull()) {
+     kdDebug() << "KSambaPropertiesDialogPlugin: URL is no local file !" << endl;
+     return;
   }
 
-  frame = propDialog->addPage(i18n("Sam&ba"));
+  initGUI();      
+}
 
-	stack = new QWidgetStack(frame);
+KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
+{
+  if (m_sambaFile)
+    delete m_sambaFile;
+}
 
+void KSambaPropertiesDialogPlugin::initGUI() {
+  QFrame* frame = properties->addPage(i18n("Sam&ba"));
+	m_stack = new QWidgetStack(frame);
   QVBoxLayout *stackLayout = new QVBoxLayout(frame);
-  stackLayout->addWidget(stack);
+  stackLayout->addWidget(m_stack);
   
- 	shareWidget = createShareWidget(stack);
-  configWidget = createConfigWidget(stack);
-
-  stack->addWidget(shareWidget,0);
-  stack->addWidget(configWidget,1);
-
-  if (smbconf == "") {
-   //  kdWarning() << "Smbconf was not found show configWidget" << endl;
-     stack->raiseWidget(configWidget);
-  }
+  m_shareWidget = 0L;
+  m_configWidget = 0L;
+  
+  if (getSambaConf().isNull()) {
+    createConfigWidget(m_stack);
+    m_stack->addWidget(m_configWidget,0);
+    m_stack->raiseWidget(m_configWidget);
+  } 
   else {
-     //kdWarning() << "Smbconf was found show shareWidget"<< endl;
-  	 stack->raiseWidget(shareWidget);
+    createShareWidget(m_stack);
+    m_stack->addWidget(m_shareWidget,0);
+    m_stack->raiseWidget(m_shareWidget);
   }
+}
 
+QString KSambaPropertiesDialogPlugin::getSambaConf() {
+  if (m_sambaConf.isNull()) {
+    m_sambaConf = SambaFile::findSambaConf();
+  }
+  
+  return m_sambaConf;
+}
+
+SambaFile* KSambaPropertiesDialogPlugin::getSambaFile() {
+  if (m_sambaFile == 0L) {
+    
+    if (getSambaConf().isNull())
+       return 0L;
+       
+    m_sambaFile = new SambaFile( getSambaConf(), false );     
+    
+    if ( ! m_sambaFile->openFile()) {
+      delete m_sambaFile;
+      m_sambaFile = 0L;
+      return 0L;
+    }   
+  }
+  
+  return m_sambaFile;
 }
 
 
-QWidget* KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
+
+SambaShare* KSambaPropertiesDialogPlugin::getGlobalShare() {
+  if (getSambaFile() == 0L)
+     return 0L;
+     
+  return getSambaFile()->getShare("global");     
+}
+
+
+QString KSambaPropertiesDialogPlugin::getSharePath() {
+  return m_sharePath;
+}
+
+SambaShare* KSambaPropertiesDialogPlugin::getActiveShare() {
+  if (m_activeShare == 0L) {
+  
+     if (getSambaFile() == 0L)
+        return 0L;
+     
+     if (getSharePath().isNull())
+        return 0L;
+     
+     QString shareName = getSambaFile()->findShareByPath(getSharePath());
+     if (shareName.isEmpty())
+        return 0L;
+     
+     m_activeShare = getSambaFile()->getShare(shareName);
+                      
+  }
+  
+  return m_activeShare;
+}
+
+QString KSambaPropertiesDialogPlugin::getNetbiosName() {
+  if (getGlobalShare() == 0L)
+     return 0L;
+     
+  QString *s = getGlobalShare()->find("netbios name");
+  
+  if (!s) 
+     return QString::null;
+     
+  return QString(*s);         
+}
+
+QString KSambaPropertiesDialogPlugin::getLocalPathFromUrl(const KURL & url) {
+  if (url.isLocalFile())
+     return url.path();
+     
+  if (url.protocol().lower() != "smb")
+     return QString::null;
+     
+  if (url.host().lower() != "localhost") {
+     if (getNetbiosName().isNull())
+        return QString::null;
+        
+     if (getNetbiosName().lower() != url.host().lower())
+        return QString::null;
+  }          
+  
+  if (getSambaFile() == 0L)
+     return QString::null;
+     
+  SambaShare* share = getSambaFile()->getShare( url.fileName() ); 
+  
+  if (share == 0L)
+     return QString::null;
+     
+  return share->getValue("path",false);     
+}
+
+
+
+void KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
 {
 
-	QWidget* w = new QWidget(parent,"configWidget");
+	m_configWidget = new QWidget(parent,"configWidget");
 
-  QVBoxLayout *layout = new QVBoxLayout(w,5);
+  QVBoxLayout *layout = new QVBoxLayout(m_configWidget,5);
 
   QLabel *lbl = new QLabel(i18n("<p>The SAMBA configuration file <strong>'smb.conf'</strong>" \
   															" could not be found!</p>" \
-                   						  "Make sure you have SAMBA installed.\n\n"), w);
+                   						  "Make sure you have SAMBA installed.\n\n"), m_configWidget);
 
-	QHBoxLayout *hbox = new QHBoxLayout(w);
-	QPushButton *btn = new QPushButton(i18n("Specify Location"), w);
+	QHBoxLayout *hbox = new QHBoxLayout(m_configWidget);
+	QPushButton *btn = new QPushButton(i18n("Specify Location"), m_configWidget);
   connect(btn, SIGNAL(pressed()), this, SLOT( slotSpecifySmbConf()));
  	
   btn->setDefault(false);
@@ -193,144 +239,136 @@ QWidget* KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
 	layout->addLayout(hbox);
   layout->addStretch();
 
-  return w;
-
 }
 
-KonqInterface* KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
+void KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 {
 
-  shareWidget = new KonqInterface(parent);
+  m_shareWidget = new KonqInterface(parent);
 
-
-	if ( QFileInfo(smbconf).exists() )
-	{
-    if (!_sambaFile)
-       _sambaFile = new SambaFile(smbconf,false);
-
-    if ( ! _sambaFile->openFile() )  {
-        KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(smbconf),
+  if ( getSambaFile() == 0L ) {
+        KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(getSambaConf()),
                               i18n("Error while opening file"));
-      return shareWidget;                       
-    }
-      
-       
-    QString shareName = _sambaFile->findShareByPath(sharePath);
-
-
-    if (shareName.isEmpty())
-    {
-      shareWidget->notSharedRadio->setChecked(true);
-      shareWidget->baseGrp->setEnabled(false);
-      shareWidget->securityGrp->setEnabled(false);
-      shareWidget->otherGrp->setEnabled(false);
-			shareWidget->moreOptionsBtn->setEnabled(false);
-      _wasShared = false;
-    }
-    else
-    {
-      _wasShared = true;
-      _share = _sambaFile->getShare(shareName);
-      shareWidget->sharedRadio->setChecked(true);
-      initValues();
-    }
-	}
+     delete m_shareWidget;
+     m_shareWidget = 0L;
+     return;                              
+  }
   
-  connect(shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
-  connect(shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
-  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
+  
+  QString shareName = getSambaFile()->findShareByPath(getSharePath());
+
+
+  if (shareName.isEmpty()) {
+     m_shareWidget->notSharedRadio->setChecked(true);
+     m_shareWidget->baseGrp->setEnabled(false);
+     m_shareWidget->securityGrp->setEnabled(false);
+     m_shareWidget->otherGrp->setEnabled(false);
+     m_shareWidget->moreOptionsBtn->setEnabled(false);
+     m_wasShared = false;
+  }
+  else {
+     m_wasShared = true;
+     m_activeShare = getSambaFile()->getShare(shareName);
+     m_shareWidget->sharedRadio->setChecked(true);
+     initValues();
+  }
+  
+  connect(m_shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
+  connect(m_shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
+  connect( m_shareWidget->moreOptionsBtn, SIGNAL(pressed()),
   				 this, SLOT(moreOptionsBtnPressed()));
   
-  return shareWidget;
-}
-
-KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
-{
-  if (_sambaFile)
-    delete _sambaFile;
 }
 
 
 
 void KSambaPropertiesDialogPlugin::initValues()
 {
-  assert(_share);
+  if (getActiveShare() == 0L) {
+     kdWarning() << "KSambaPropertiesDialogPlugin::initValues : getActiveShare == 0L !" << endl;
+     return;
+  }     
+     
+  SambaShare* share = getActiveShare();     
 
-  shareWidget->nameEdit->setText( _share->getName() );
-  shareWidget->commentEdit->setText( _share->getValue("comment") );
-  shareWidget->readOnlyChk->setChecked( _share->getBoolValue("read only") );
-  shareWidget->guestOkChk->setChecked( _share->getBoolValue("guest ok") );
-  shareWidget->allowEdit->setText( _share->getValue("hosts allow") );
-  shareWidget->denyEdit->setText( _share->getValue("hosts deny") );
-  shareWidget->browseableChk->setChecked( _share->getBoolValue("browseable") );
-  shareWidget->availableChk->setChecked( _share->getBoolValue("available") );
-  shareWidget->guestAccountCombo->insertStringList( getUnixUsers() );
-	setComboToString(shareWidget->guestAccountCombo,_share->getValue("guest account"));
-
-  
+  m_shareWidget->nameEdit->setText( share->getName() );
+  m_shareWidget->commentEdit->setText( share->getValue("comment") );
+  m_shareWidget->readOnlyChk->setChecked( share->getBoolValue("read only") );
+  m_shareWidget->guestOkChk->setChecked( share->getBoolValue("guest ok") );
+  m_shareWidget->allowEdit->setText( share->getValue("hosts allow") );
+  m_shareWidget->denyEdit->setText( share->getValue("hosts deny") );
+  m_shareWidget->browseableChk->setChecked( share->getBoolValue("browseable") );
+  m_shareWidget->availableChk->setChecked( share->getBoolValue("available") );
+  m_shareWidget->guestAccountCombo->insertStringList( getUnixUsers() );
+  setComboToString(m_shareWidget->guestAccountCombo,share->getValue("guest account"));
 
 }
 
 void KSambaPropertiesDialogPlugin::saveValuesToShare() 
 {
-  	_share->setValue("comment",shareWidget->commentEdit->text());
-    _share->setValue("read only", shareWidget->readOnlyChk->isChecked());
-    _share->setValue("guest ok", shareWidget->guestOkChk->isChecked());
-    _share->setValue("guest account",shareWidget->guestAccountCombo->currentText());
-
-    _share->setValue("hosts allow", shareWidget->allowEdit->text());
-    _share->setValue("hosts deny", shareWidget->denyEdit->text());
-    _share->setValue("browseable", shareWidget->browseableChk->isChecked());
-    _share->setValue("available", shareWidget->availableChk->isChecked());
-
+  if (getActiveShare() == 0L) {
+     kdWarning() << "KSambaPropertiesDialogPlugin::saveValuesToShare : getActiveShare == 0L !" << endl;
+     return;
+  }     
+  
+  SambaShare* share = getActiveShare();     
+  
+  share->setValue("comment",m_shareWidget->commentEdit->text());
+  share->setValue("read only", m_shareWidget->readOnlyChk->isChecked());
+  share->setValue("guest ok", m_shareWidget->guestOkChk->isChecked());
+  share->setValue("guest account",m_shareWidget->guestAccountCombo->currentText());
+  share->setValue("hosts allow", m_shareWidget->allowEdit->text());
+  share->setValue("hosts deny", m_shareWidget->denyEdit->text());
+  share->setValue("browseable", m_shareWidget->browseableChk->isChecked());
+  share->setValue("available", m_shareWidget->availableChk->isChecked());
 }
 
 void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
 {
-  if (state==1)
-  {  // Not Shared
-    shareWidget->baseGrp->setEnabled(false);
-    shareWidget->securityGrp->setEnabled(false);
-    shareWidget->otherGrp->setEnabled(false);
-		shareWidget->moreOptionsBtn->setEnabled(false);
-
+  if (state==1) // Not Shared
+  {  
+    m_shareWidget->baseGrp->setEnabled(false);
+    m_shareWidget->securityGrp->setEnabled(false);
+    m_shareWidget->otherGrp->setEnabled(false);
+    m_shareWidget->moreOptionsBtn->setEnabled(false);
   }
   else  // shared
   {
-    if (!_share)
+    if (!getActiveShare())
     {
-      QString shareName = propDialog->kurl().fileName();
+      QString shareName = properties->kurl().fileName();
 
-      if (_sambaFile->getShare(shareName))
-          shareName = _sambaFile->getUnusedName(shareName);
+      if ( getSambaFile()->getShare(shareName) == 0L)
+          shareName = getSambaFile()->getUnusedName(shareName);
 
-      _share = _sambaFile->newShare(shareName,sharePath);
+      m_activeShare = getSambaFile()->newShare(shareName,getSharePath());
       initValues();
     }
 
-    shareWidget->baseGrp->setEnabled(true);
-    shareWidget->securityGrp->setEnabled(true);
-    shareWidget->otherGrp->setEnabled(true);
-		shareWidget->moreOptionsBtn->setEnabled(true);
-   
-
+    m_shareWidget->baseGrp->setEnabled(true);
+    m_shareWidget->securityGrp->setEnabled(true);
+    m_shareWidget->otherGrp->setEnabled(true);
+    m_shareWidget->moreOptionsBtn->setEnabled(true);
   }
   
   emit changed();
 }
 
-
+/**
+ * Checks wether the entered values are correct
+ * @return false if not correct otherwise true
+ */
 bool KSambaPropertiesDialogPlugin::checkValues()
 {
-  if (shareWidget->nameEdit->text().isEmpty())  {
-    KMessageBox::information(frame,i18n("Please enter a name for the shared directory."),i18n("Information"));
-    shareWidget->nameEdit->setFocus();
+  if (m_shareWidget->nameEdit->text().isEmpty())  {
+    KMessageBox::information(properties,i18n("Please enter a name for the shared directory."),i18n("Information"));
+    m_shareWidget->nameEdit->setFocus();
     return false;
   } 
   
-  if (shareWidget->nameEdit->text().length() > 12) {
+  if (m_shareWidget->nameEdit->text().length() > 12) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-      frame,i18n(
+      properties,i18n(
         "<qt>The name of the share has more than <b>12</b> characters! <br>"
         "This can lead to problems with Microsoft Windows(R) clients. <br>"
         "Do you really want to continue?</qt>")
@@ -338,15 +376,15 @@ bool KSambaPropertiesDialogPlugin::checkValues()
         ,KStdGuiItem::cont()
         ,"KSambaPlugin_12CharacterWarning"))
     {
-      shareWidget->nameEdit->setFocus();
+      m_shareWidget->nameEdit->setFocus();
       return false;  
     }
 
   } 
   
-  if (shareWidget->nameEdit->text().contains(' ')) {
+  if (m_shareWidget->nameEdit->text().contains(' ')) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-      frame,i18n(
+      properties,i18n(
         "<qt>The name of the share contains a <b>space</b> character! <br>"
         "This can lead to problems with Microsoft Windows(R) clients. <br>"
         "Do you really want to continue?</qt>"
@@ -354,7 +392,7 @@ bool KSambaPropertiesDialogPlugin::checkValues()
         ,KStdGuiItem::cont()
         ,"KSambaPlugin_SpaceCharacterWarning"))
     {
-      shareWidget->nameEdit->setFocus();
+      m_shareWidget->nameEdit->setFocus();
       return false;  
     }
   }
@@ -366,7 +404,7 @@ bool KSambaPropertiesDialogPlugin::checkValues()
 /** No descriptions */
 void KSambaPropertiesDialogPlugin::applyChanges()
 {
-  if (_share && shareWidget->sharedRadio->isChecked())
+  if (getActiveShare() && m_shareWidget->sharedRadio->isChecked())
   {
   	if (!checkValues())
     {
@@ -375,13 +413,13 @@ void KSambaPropertiesDialogPlugin::applyChanges()
     }
     
 
-    QString shareName = shareWidget->nameEdit->text();
+    QString shareName = m_shareWidget->nameEdit->text();
 
-    if (!_share->setName(shareName))
+    if (! getActiveShare()->setName(shareName))
     {
-       KMessageBox::sorry(frame,i18n("The samba share name '%1' already exists!").arg(shareName),i18n("Information"));
-       shareWidget->nameEdit->setText(_sambaFile->getUnusedName());
-       shareWidget->nameEdit->setFocus();
+       KMessageBox::sorry(properties,i18n("The samba share name '%1' already exists!").arg(shareName),i18n("Information"));
+       m_shareWidget->nameEdit->setText(getSambaFile()->getUnusedName());
+       m_shareWidget->nameEdit->setFocus();
        properties->abortApplying();
        return;
     }
@@ -389,14 +427,13 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 		saveValuesToShare();
   }
   
-  if (shareWidget->sharedRadio->isChecked())
-    _sambaFile->slotApply();
-  else
-  if (_wasShared) {
-    _sambaFile->removeShare(_share);
-    _sambaFile->slotApply();
+  if (m_shareWidget->sharedRadio->isChecked())
+    getSambaFile()->slotApply();
+  else if (m_wasShared) {
+    getSambaFile()->removeShare(getActiveShare());
+    getSambaFile()->slotApply();
   }
-
+  
   return;
 
 }
@@ -405,7 +442,7 @@ void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 {
 	saveValuesToShare();
 	
-	ShareDlgImpl *dlg = new ShareDlgImpl(shareWidget,_share);
+	ShareDlgImpl *dlg = new ShareDlgImpl(m_shareWidget,getActiveShare());
 
   // We already have the base settings
   dlg->_tabs->removePage(dlg->baseTab);
@@ -422,25 +459,25 @@ void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
 {
 
-	smbconf = KFileDialog::getOpenFileName("/",
+	m_sambaConf = KFileDialog::getOpenFileName("/",
    					"smb.conf|Samba conf. File\n"
         		"*|All Files",0,i18n("Get smb.conf Location"));
 
-	if ( QFileInfo(smbconf).exists() )
-  {
-  	kapp->config()->setGroup("KSambaKonqiPlugin");
-    kapp->config()->writeEntry("smb.conf",smbconf);
-		kapp->config()->sync();
-
-		delete shareWidget;
-    shareWidget = createShareWidget(stack);
-    stack->raiseWidget(shareWidget);
+	
+  
+  if ( getSambaFile() == 0L ) {
+     KMessageBox::sorry(properties,i18n("<qt>The file <i>%1</i> could not be read !</qt>").arg(m_sambaConf),i18n("File could not be read"));
+     m_sambaConf = QString::null;
+     return;
   }
+     
+  kapp->config()->setGroup("KSambaKonqiPlugin");
+  kapp->config()->writeEntry("smb.conf",m_sambaConf);
+  kapp->config()->sync();
 
-}
-
-void KSambaPropertiesDialogPlugin::changedSlot() {
-  emit changed();
+  createShareWidget(m_stack);
+  m_stack->addWidget(m_shareWidget,1);
+  m_stack->raiseWidget(m_shareWidget);
 }
 
 #include "ksambapropertiesdialogplugin.moc"

@@ -29,6 +29,8 @@ libfilesharesamba_la_SOURCES = \
     sambashare.cpp \
     socketoptionsdlg.ui \
     common.cpp \
+    userselectdlg.ui \
+    groupselectdlg.ui \
     usertab.ui \
     usertabimpl.cpp \
     filemodedlg.ui \
@@ -40,8 +42,6 @@ libfilesharesamba_la_SOURCES = \
     qmultichecklistitem.cpp \
     smbconfconfigwidget.cpp \
     linuxpermissionchecker.cpp \
-    userselectdlg.ui \
-    groupselectdlg.ui \
     expertuserdlg.ui
 
 

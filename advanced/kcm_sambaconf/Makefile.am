@@ -7,6 +7,8 @@ METASOURCES=AUTO
 libkcm_kcmsambaconf_la_SOURCES = \
 	share.ui \
   kcminterface.ui \
+  kcmprinterdlg.ui \
+  printerdlgimpl.cpp \
   kcmsambaconf.cpp \
   sambafile.cpp \
   sambashare.cpp \

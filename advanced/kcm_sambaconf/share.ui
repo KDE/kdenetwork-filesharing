@@ -563,12 +563,6 @@
                     <property name="name">
                         <cstring>unnamed</cstring>
                     </property>
-                    <property name="margin">
-                        <number>11</number>
-                    </property>
-                    <property name="spacing">
-                        <number>6</number>
-                    </property>
                     <widget class="KListView">
                         <column>
                             <property name="text">
@@ -595,6 +589,17 @@
                         <column>
                             <property name="text">
                                 <string>Veto</string>
+                            </property>
+                            <property name="clickable">
+                                <bool>true</bool>
+                            </property>
+                            <property name="resizable">
+                                <bool>true</bool>
+                            </property>
+                        </column>
+                        <column>
+                            <property name="text">
+                                <string>Veto oplock</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -698,6 +703,14 @@
                                     <string>&amp;Veto</string>
                                 </property>
                             </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>vetoOplockChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>Veto &amp;oplock</string>
+                                </property>
+                            </widget>
                         </hbox>
                     </widget>
                     <widget class="QGroupBox">
@@ -719,31 +732,12 @@
                             </property>
                             <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>Layout13</cstring>
+                                    <cstring>layout18</cstring>
                                 </property>
                                 <grid>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
-                                    <property name="margin">
-                                        <number>0</number>
-                                    </property>
-                                    <property name="spacing">
-                                        <number>6</number>
-                                    </property>
-                                    <widget class="QLabel" row="0" column="0">
-                                        <property name="name">
-                                            <cstring>TextLabel1_3</cstring>
-                                        </property>
-                                        <property name="text">
-                                            <string>Hidden files:</string>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="0" column="1">
-                                        <property name="name">
-                                            <cstring>hiddenEdit</cstring>
-                                        </property>
-                                    </widget>
                                     <widget class="QLabel" row="1" column="0">
                                         <property name="name">
                                             <cstring>TextLabel2_2</cstring>
@@ -752,9 +746,35 @@
                                             <string>Veto files:</string>
                                         </property>
                                     </widget>
+                                    <widget class="QLabel" row="2" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel2_2_2</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Veto oplock files:</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>hiddenEdit</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLineEdit" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>vetoOplockEdit</cstring>
+                                        </property>
+                                    </widget>
                                     <widget class="QLineEdit" row="1" column="1">
                                         <property name="name">
                                             <cstring>vetoEdit</cstring>
+                                        </property>
+                                    </widget>
+                                    <widget class="QLabel" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>TextLabel1_3</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Hidden files:</string>
                                         </property>
                                     </widget>
                                 </grid>
@@ -2023,6 +2043,9 @@ Only change something if you know what you are doing !</string>
                                     <property name="enabled">
                                         <bool>false</bool>
                                     </property>
+                                    <property name="frameShape">
+                                        <enum>NoFrame</enum>
+                                    </property>
                                     <property name="title">
                                         <string></string>
                                     </property>
@@ -2073,6 +2096,9 @@ Only change something if you know what you are doing !</string>
                                         <widget class="QGroupBox">
                                             <property name="name">
                                                 <cstring>groupBox20</cstring>
+                                            </property>
+                                            <property name="frameShape">
+                                                <enum>NoFrame</enum>
                                             </property>
                                             <property name="title">
                                                 <string></string>
@@ -2159,19 +2185,6 @@ Only change something if you know what you are doing !</string>
                                                             </property>
                                                         </spacer>
                                                     </hbox>
-                                                </widget>
-                                                <widget class="QLabel" row="2" column="0">
-                                                    <property name="name">
-                                                        <cstring>textLabel1_2</cstring>
-                                                    </property>
-                                                    <property name="text">
-                                                        <string>Veto oplock files:</string>
-                                                    </property>
-                                                </widget>
-                                                <widget class="QLineEdit" row="2" column="1">
-                                                    <property name="name">
-                                                        <cstring>vetoOplockFilesEdit</cstring>
-                                                    </property>
                                                 </widget>
                                                 <widget class="QLabel" row="1" column="0">
                                                     <property name="name">
@@ -2812,6 +2825,12 @@ Only change something if you know what you are doing !</string>
         <signal>valueChanged(int)</signal>
         <receiver>KcmShareDlg</receiver>
         <slot>oplockContentionLimitSpin_valueChanged(int)</slot>
+    </connection>
+    <connection>
+        <sender>vetoOplockChk</sender>
+        <signal>stateChanged(int)</signal>
+        <receiver>KcmShareDlg</receiver>
+        <slot>changedSlot()</slot>
     </connection>
 </connections>
 <includes>

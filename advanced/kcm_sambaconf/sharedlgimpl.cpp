@@ -86,7 +86,7 @@
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")
 {
-  _dictMngr = new DictManager();
+  _dictMngr = new DictManager(share);
   _share = share;
 	assert(_share);
   initDialog();
@@ -181,7 +181,6 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("strict locking",strictLockingChk);
   _dictMngr->add("share modes",shareModesChk);
   _dictMngr->add("oplocks",oplocksChk);
-  _dictMngr->add("veto oplock files",vetoOplockFilesEdit);
   
 
   _dictMngr->add("oplock contention limit",oplockContentionLimitSpin);

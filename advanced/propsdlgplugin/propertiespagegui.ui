@@ -95,7 +95,7 @@
                         <cstring>nfsChk</cstring>
                     </property>
                     <property name="text">
-                        <string>Share with &amp;NFS (Linux/UNIX®)</string>
+                        <string>Share with &amp;NFS (Linux/UNIX)</string>
                     </property>
                     <property name="accel">
                         <string>Alt+N</string>
@@ -215,7 +215,7 @@
                         <cstring>sambaChk</cstring>
                     </property>
                     <property name="text">
-                        <string>Share with S&amp;amba (Microsoft® Windows®)</string>
+                        <string>Share with S&amp;amba (Microsoft(R) Windows(R))</string>
                     </property>
                     <property name="accel">
                         <string>Alt+A</string>
@@ -459,20 +459,54 @@
         <receiver>PropertiesPageGUI</receiver>
         <slot>urlRqTextChanged(const QString&amp;)</slot>
     </connection>
+    <connection>
+        <sender>sambaChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>sambaChkToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>sambaNameEdit</sender>
+        <signal>textChanged(const QString&amp;)</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+        <sender>publicSambaChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>publicSambaChkToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>publicNFSChk</sender>
+        <signal>toggled(bool)</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>publicNFSChkToggled(bool)</slot>
+    </connection>
+    <connection>
+        <sender>moreSambaBtn</sender>
+        <signal>clicked()</signal>
+        <receiver>PropertiesPageGUI</receiver>
+        <slot>moreSambaBtnClicked()</slot>
+    </connection>
 </connections>
 <includes>
     <include location="local" impldecl="in implementation">propertiespagegui.ui.h</include>
 </includes>
 <variables>
-    <variable access="private">bool m_hasChanged;</variable>
+    <variable>bool m_hasChanged;</variable>
 </variables>
 <signals>
     <signal>changed()</signal>
 </signals>
 <slots>
-    <slot access="private">changedSlot()</slot>
+    <slot access="protected">changedSlot()</slot>
     <slot>moreNFSBtn_clicked()</slot>
     <slot>urlRqTextChanged( const QString &amp; )</slot>
+    <slot>sambaChkToggled( bool )</slot>
+    <slot>publicSambaChkToggled( bool b )</slot>
+    <slot>publicNFSChkToggled( bool b )</slot>
+    <slot>moreSambaBtnClicked()</slot>
 </slots>
 <functions>
     <function returnType="bool">hasChanged()</function>

@@ -25,6 +25,9 @@
 
 class NFSFile;
 class NFSEntry;
+class SambaFile;
+class SambaShare;
+class QCheckBox;
 
 class PropertiesPage : public PropertiesPageGUI
 {
@@ -34,28 +37,47 @@ public:
   virtual ~PropertiesPage();
   
   bool save();
-  
+
+public slots:
+  void load();
+    
 protected:
-  bool load();
   
+  bool m_enterUrl;
   QString m_path;
   KFileItemList m_items;  
   NFSFile *m_nfsFile;
   NFSEntry *m_nfsEntry;
-  bool m_enterUrl;
+  
+  SambaFile *m_sambaFile;
+  SambaShare *m_sambaShare;
+  bool m_sambaChanged;
+  bool m_loaded;
   
 protected slots:
   // inherited from PropertiesPageGUI
   virtual void moreNFSBtn_clicked();
+  virtual void moreSambaBtnClicked();
   virtual void urlRqTextChanged( const QString & );
+  virtual void sambaChkToggled( bool b );
+  
 private:
   bool loadNFS();  
   void loadNFSEntry();  
   bool updateNFSEntry();
   bool saveNFS();
   
-  void disableNFS(const QString & message);
-  void disableSamba(const QString & message);
+  bool loadSamba();
+  void loadSambaShare();
+  bool updateSambaShare();
+  bool saveSamba();
+  
+  void setSambaShareBoolValue(const QString & value, QCheckBox* chk);
+  void createNewSambaShare();
+  QString getNewSambaName();
+  
+  void enableNFS(bool b,const QString & message);
+  void enableSamba(bool b,const QString & message);
   
 };
 

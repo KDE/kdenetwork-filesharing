@@ -29,6 +29,7 @@
 #include <kprocess.h>
 #include <kstandarddirs.h>
 #include <kdialog.h>
+#include <kglobal.h>
 
 #include "propertiespage.h"
 #include "propsdlgshareplugin.h"
@@ -48,6 +49,8 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
                     const char *, const QStringList & )
   : KPropsDlgPlugin(dlg), d(0)
 {
+  KGlobal::locale()->insertCatalogue("kfileshare");                            
+                            
   if (KFileShare::shareMode() == KFileShare::Simple) {     
       kdDebug() << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;
       return;
@@ -111,8 +114,8 @@ PropsDlgSharePlugin::~PropsDlgSharePlugin()
 void PropsDlgSharePlugin::applyChanges() 
 {
   if (!d->page->save()) {
-    KMessageBox::sorry(d->page,
-                i18n("Saving the changes failed"));
+//    KMessageBox::sorry(d->page,
+//                i18n("Saving the changes failed"));
 
     properties->abortApplying();
   }

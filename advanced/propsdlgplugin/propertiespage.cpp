@@ -23,6 +23,7 @@
 #include <qfileinfo.h>
 #include <qlabel.h>
 #include <kpushbutton.h>
+#include <qtimer.h>
 
 #include <kfileshare.h>
 #include <knfsshare.h>
@@ -32,16 +33,33 @@
 #include <kdebug.h>
 #include <kfile.h>
 #include <kurlrequester.h>
+#include <kmessagebox.h>
+#include <klineedit.h>
 
+// NFS related
 #include "../nfs/nfsfile.h"
 #include "../nfs/nfsentry.h"
 #include "../nfs/nfsdialog.h"
 
+// Samba related
+#include "../kcm_sambaconf/sambafile.h"
+#include "../kcm_sambaconf/sambashare.h"
+#include "../kcm_sambaconf/sharedlgimpl.h"
+
 #include "propertiespage.h"
 
+#define FILESHARE_DEBUG 5009
+
 PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUrl) 
-  : PropertiesPageGUI(parent), m_items(items), m_nfsFile(0), m_nfsEntry(0),
-  m_enterUrl(enterUrl)
+  : PropertiesPageGUI(parent), 
+  m_enterUrl(enterUrl), 
+  m_items(items), 
+  m_nfsFile(0), 
+  m_nfsEntry(0),
+  m_sambaFile(0), 
+  m_sambaShare(0),
+  m_sambaChanged(false),
+  m_loaded(false)
 {
   if (m_enterUrl) {
     shareChk->hide();
@@ -62,77 +80,91 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
   }
   
   
-  bool nfsShared = KNFSShare::instance()->isDirectoryShared(m_path);
-  bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_path);
-
-  nfsChk->setChecked(nfsShared);
-  sambaChk->setChecked(sambaShared);
-    
-  disableSamba(i18n("Not implemented yet"));
+  enableSamba(false,i18n("Reading Samba configuration file ..."));
+  enableNFS(false,i18n("Reading NFS configuration file ..."));
   
-//TODO  
-//+  if (!KFileShare::sambaEnabled()) {
-//+      disableSamba(i18n("The administrator does not allow sharing with Samba"));
-//+  }      
-  
-  if (!KFileShare::nfsEnabled()) 
-      disableNFS(i18n("The administrator does not allow sharing with Samba"));  
- 
-  if (!m_enterUrl)      
-      shareChk->setChecked(nfsShared || sambaShared);
-  
-  m_nfsFile = new NFSFile(KNFSShare::instance()->exportsPath());
-  
+      
+  //QTimer::singleShot(1, this, SLOT(load));
   load();
 }  
 
 PropertiesPage::~PropertiesPage() 
 {
   delete m_nfsFile;
+  delete m_sambaFile;
 }
 
-void PropertiesPage::disableNFS(const QString & message) {
-   nfsChk->setDisabled(true);
-   nfsGrp->setDisabled(true);
+void PropertiesPage::load() {
+  loadNFS();
+  loadSamba();
+
+  bool nfsShared = KNFSShare::instance()->isDirectoryShared(m_path);
+  bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_path);
+
+  nfsChk->setChecked(nfsShared);
+  sambaChk->setChecked(sambaShared);
+    
+  if (!m_enterUrl)      
+      shareChk->setChecked(nfsShared || sambaShared);
+  
+  m_loaded = true;
+}
+
+void PropertiesPage::enableNFS(bool b, const QString & message) {
+   nfsChk->setEnabled(b);
+   nfsGrp->setEnabled(b);
    QToolTip::add(nfsChk,message);
    QToolTip::add(nfsGrp,message);
 }
 
-void PropertiesPage::disableSamba(const QString & message) {
-   sambaChk->setDisabled(true);
-   sambaGrp->setDisabled(true);
+void PropertiesPage::enableSamba(bool b, const QString & message) {
+   sambaChk->setEnabled(b);
+   sambaGrp->setEnabled(b);
    QToolTip::add(sambaChk,message);
    QToolTip::add(sambaGrp,message);
 }
 
 
 bool PropertiesPage::save() {
+  if (!hasChanged()) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nothing changed." << endl;
+      return true;
+  }
+  
   bool nfsResult = saveNFS();
-  return nfsResult;
-}
-
-bool PropertiesPage::load() {
-  bool nfsResult = loadNFS();
-  return nfsResult;
+  bool sambaResult = saveSamba();
+  
+  return nfsResult && sambaResult;
 }
 
 bool PropertiesPage::loadNFS() {
-  if (!m_nfsFile->load()) {
+  if (!KFileShare::nfsEnabled()) {
+      enableNFS(false,i18n("The administrator does not allow sharing with NFS."));  
       return false;
   }      
-      
-  m_nfsEntry = m_nfsFile->getEntryByPath(m_path);
-  
-  if (!m_nfsEntry) {
-    nfsChk->setChecked(false);
-    return true;
-  }
-  
+
+  delete m_nfsFile;
+  m_nfsFile = new NFSFile(KNFSShare::instance()->exportsPath());
+
+  if (!m_nfsFile->load()) {
+      enableNFS(false,i18n("Error: Could not read NFS configuration file!"));
+      return false;
+  }      
+
+  enableNFS(true,"");
+        
   loadNFSEntry();
   return true; 
 }  
 
 void PropertiesPage::loadNFSEntry() {
+  m_nfsEntry = m_nfsFile->getEntryByPath(m_path);
+  
+  if (!m_nfsEntry) {
+    nfsChk->setChecked(false);
+    return;
+  }
+  
   NFSHost* publicHost = m_nfsEntry->getPublicHost();
 
   if (publicHost) {
@@ -201,9 +233,176 @@ void PropertiesPage::moreNFSBtn_clicked() {
   }
 }
 
+bool PropertiesPage::loadSamba() {
+  if (!KFileShare::sambaEnabled()) {
+      enableSamba(false,i18n("The administrator does not allow sharing with Samba."));
+      return false;
+  }      
+  
+  delete m_sambaFile;
+  m_sambaFile = new SambaFile(KSambaShare::instance()->smbConfPath(), false);
+  if (! m_sambaFile->load()) {
+      enableSamba(false,i18n("Error: Could not read Samba configuration file!"));
+      return false;
+  }
+  
+  enableSamba(true,"");
+  QString shareName = m_sambaFile->findShareByPath(m_path);
+  if (shareName.isNull()) {
+      sambaChk->setChecked(false);
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::loadSamba: shareName is null!"
+          << endl;
+      return false;
+  }
+
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::loadSamba: shareName="
+        << shareName << endl;    
+  
+  m_sambaShare = m_sambaFile->getShare(shareName);
+
+  loadSambaShare();
+  return true;
+}
+
+
+void PropertiesPage::loadSambaShare() {
+  if (! m_sambaShare) {
+      sambaChk->setChecked(false);
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::loadSambaShare: no share with name "
+          << m_sambaShare->getName() << endl;    
+      return;
+  }
+  
+  if (m_sambaShare->getBoolValue("public")) {
+    publicSambaChk->setChecked(true);
+    writableSambaChk->setChecked(m_sambaShare->getBoolValue("writable"));
+  } else
+    publicSambaChk->setChecked(false);
+
+    
+  sambaNameEdit->setText(m_sambaShare->getName() );    
+}
+
+void PropertiesPage::sambaChkToggled( bool b ) {
+  if (!m_loaded)
+      return;
+      
+  if (sambaNameEdit->text().isEmpty())      
+      sambaNameEdit->setText(getNewSambaName());
+}
+
+bool PropertiesPage::updateSambaShare() {
+
+  if (shareChk->isChecked() && 
+      sambaChk->isChecked()) 
+  {
+    if (!m_sambaShare) {
+      createNewSambaShare();
+      m_sambaChanged = true;
+    }      
+
+    setSambaShareBoolValue("public", publicSambaChk);
+    setSambaShareBoolValue("writable", writableSambaChk);
+
+    if (sambaNameEdit->text() != m_sambaShare->getName()) {
+      SambaShare* otherShare = m_sambaFile->getShare(sambaNameEdit->text());
+      if (otherShare && otherShare != m_sambaShare) {
+        // There is another Share with the same name
+        KMessageBox::sorry(this, i18n("<qt>There is already a share with the name <strong>%1</strong>.<br> Please choose another one.</qt>").arg(sambaNameEdit->text()));
+        sambaNameEdit->selectAll();
+        sambaNameEdit->setFocus();
+        return false;
+      }
+      m_sambaShare->setName(sambaNameEdit->text());
+      m_sambaChanged = true;
+    }
+          
+  } else {
+    if (m_sambaShare) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare: removing share" << endl;
+      m_sambaFile->removeShare(m_sambaShare);
+      m_sambaShare = 0;
+      m_sambaChanged = true;
+    }      
+  }    
+
+  return m_sambaChanged;
+}
+
+void PropertiesPage::setSambaShareBoolValue(const QString & value, 
+                          QCheckBox* chk) 
+{
+  bool v = m_sambaShare->getBoolValue(value);
+  if (v == chk->isChecked())
+      return;
+      
+  m_sambaShare->setValue(value,chk->isChecked());
+  m_sambaChanged = true;      
+}
+
+QString PropertiesPage::getNewSambaName() {
+  QString shareName = KURL(m_path).fileName();
+  
+  if (!sambaNameEdit->text().isEmpty())
+      shareName = sambaNameEdit->text();
+  
+  // Windows could have problems with longer names
+  shareName = shareName.left(12).upper();
+
+  if ( m_sambaFile->getShare(shareName) )
+      shareName = m_sambaFile->getUnusedName(shareName);
+      
+  return shareName;      
+}
+
+void PropertiesPage::createNewSambaShare() {
+
+  m_sambaShare = m_sambaFile->newShare(getNewSambaName(),m_path);
+
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::createNewSambaShare: " 
+              << m_sambaShare->getName() << endl;
+  
+}
+
+bool PropertiesPage::saveSamba() {
+  if (!updateSambaShare()) {
+    return false;
+  }
+      
+  if (m_sambaChanged) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: saving..." << endl;
+      return m_sambaFile->save();
+  }
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: samba has not changed." << endl;
+  return true;      
+}
+
+void PropertiesPage::moreSambaBtnClicked() {
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::moreSambaBtnClicked()" << endl;
+  updateSambaShare();
+  ShareDlgImpl* dlg = new ShareDlgImpl(this,m_sambaShare);
+  if (dlg->exec() == QDialog::Accepted &&
+      dlg->hasChanged()) {
+      m_sambaChanged = true;
+      changedSlot();
+      loadSambaShare();
+  }
+  delete dlg;
+}
+
 void PropertiesPage::urlRqTextChanged( const QString & s) {
   QFileInfo info(s);
   if (info.exists() && info.isDir()) {
+    if (KSambaShare::instance()->isDirectoryShared(s) ||
+        KNFSShare::instance()->isDirectoryShared(s))
+    {
+      KMessageBox::sorry(this,
+          i18n("This folder is already shared. Please choose another one."));
+      shareFrame->setDisabled(true);          
+      return;          
+    }        
+    
     shareFrame->setEnabled(true);
     m_path = s;
   }    

@@ -31,3 +31,32 @@ bool PropertiesPageGUI::hasChanged()
 {
     return m_hasChanged;
 }
+
+
+void PropertiesPageGUI::sambaChkToggled( bool )
+{
+
+}
+
+
+void PropertiesPageGUI::publicSambaChkToggled( bool b)
+{
+    if (!b) {
+	writableSambaChk->setChecked(false);
+    }
+}
+
+
+void PropertiesPageGUI::publicNFSChkToggled( bool b)
+{
+    if (!b) {
+	writableNFSChk->setChecked(false);
+    }
+
+}
+
+
+void PropertiesPageGUI::moreSambaBtnClicked()
+{
+
+}

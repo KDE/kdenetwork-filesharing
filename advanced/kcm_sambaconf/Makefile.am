@@ -21,7 +21,9 @@ libkcm_kcmsambaconf_la_SOURCES = \
   usertab.ui \
   usertabimpl.cpp \
   filemodedlg.ui \
-  filemodedlgimpl.cpp 
+  filemodedlgimpl.cpp \
+  hiddenfileview.cpp \
+  dictmanager.cpp
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -40,7 +42,9 @@ ksambakonqiplugin_la_SOURCES = \
   filemodedlg.ui \
   smbpasswdfile.cpp \
   passwd.cpp \
-  filemodedlgimpl.cpp 
+  filemodedlgimpl.cpp \
+  hiddenfileview.cpp \
+  dictmanager.cpp
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
@@ -67,7 +71,9 @@ EXTRA_DIST = $(service_DATA) \
   common.h \
   usertab.ui.h \
   filemodedlg.ui.h \
-  filemodedlgimpl.h
+  filemodedlgimpl.h \
+  hiddenfileview.h \
+  dictmanager.h
 
 
 apps_DATA = kcmsambaconf.desktop

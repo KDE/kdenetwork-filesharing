@@ -128,8 +128,10 @@ bool SambaFile::save() {
 
 void SambaFile::slotApply()
 {
-  if (readonly)
+  if (readonly) {
+      kdDebug(FILESHARE_DEBUG) << "SambaFile::slotApply: readonly=true" << endl;
       return;
+  }      
 
   // If we have write access to the smb.conf
   // we simply save the values to it
@@ -282,6 +284,11 @@ void SambaFile::removeShare(SambaShare* share)
   removeShare(share->getName());
 }
 
+void SambaFile::removeShareByPath(const QString & path) {
+  QString share = findShareByPath(path);
+  removeShare(share);
+}
+
 /** No descriptions */
 SambaShare* SambaFile::getShare(const QString & share) const
 {
@@ -400,45 +407,40 @@ void SambaFile::parseParmStdOutput()
 
   QString section="";
 
-
-
   while (!s.atEnd())
   {
     QString line = s.readLine().stripWhiteSpace();
-    QString name="";
-    QString value="";
 
     // empty lines
     if (line.isEmpty())
       continue;
 
     // comments
-    if ("#" == line.left(1))
+    if ('#' == line[0])
       continue;
 
     // sections
-    if ("[" == line.left(1))
+    if ('[' == line[0])
     {
       // get the name of the section
-      section = line.mid(1,line.length()-2);
-      section = section.lower();
+      section = line.mid(1,line.length()-2).lower();
       continue;
     }
 
     // we are only interested in the global section
-    if (section != "global")
+    if (section != KGlobal::staticQString("global"))
       continue;
 
     // parameter
     // parameter
-    int i = line.find("=");
+    int i = line.find('=');
 
     if (i>-1) {
-      name = line.left(i).stripWhiteSpace();
-      value = line.right( line.length()-i-1).stripWhiteSpace();
+      QString name = line.left(i).stripWhiteSpace();
+      QString value = line.mid(i+1).stripWhiteSpace();
+      _testParmValues->setValue(name,value,false,false);
     }
     
-    _testParmValues->setValue(name,value,false,false);
   }
 
 
@@ -526,16 +528,12 @@ bool SambaFile::openFile() {
 
   QTextStream s(&f);
 
-  if (_sambaConfig)
-    delete _sambaConfig;
+  delete _sambaConfig;
 
   _sambaConfig = new SambaConfigFile(this);
 
-  QString section="";
   SambaShare *currentShare = 0L;
   bool continuedLine = false; // is true if the line before ended with a backslash
-  QString name="";
-  QString value="";
   QString completeLine;
   QStringList comments;
 
@@ -546,39 +544,34 @@ bool SambaFile::openFile() {
     if (continuedLine)
     {
       completeLine += currentLine;
-      if ( currentLine.right(1) == "\\" )
-      {
-          continuedLine = true;
-          completeLine = completeLine.left( completeLine.length()-1 ); // remove the ending backslash
-          continue;
-      }
+      continuedLine = false;
     } else
       completeLine = currentLine;
+            
+    // is the line continued in the next line ?
+    if ( completeLine[completeLine.length()-1] == '\\' )
+    {
+      continuedLine = true;
+      // remove the ending backslash
+      completeLine.truncate( completeLine.length()-1 ); 
+      continue;
+    }
 
     // comments or empty lines
     if (completeLine.isEmpty() ||
-        "#" == completeLine.left(1) ||
-        ";" == completeLine.left(1))
+        '#' == completeLine[0] ||
+        ';' == completeLine[0])
     {
       comments.append(completeLine);
       continue;
     }
 
-    // is the line continued in the next line ?
-    if ( completeLine.right(1) == "\\" )
-    {
-      continuedLine = true;
-      completeLine = completeLine.left( completeLine.length()-1 ); // remove the ending backslash
-      continue;
-    }
-
-    continuedLine = false;
 
     // sections
-    if ("[" == completeLine.left(1))
+    if ('[' == completeLine[0])
     {
       // get the name of the section
-      section = completeLine.mid(1,completeLine.length()-2);
+      QString section = completeLine.mid(1,completeLine.length()-2);
       currentShare = new SambaShare(section,_sambaConfig);
       _sambaConfig->addShare(section,currentShare);
       currentShare->setComments(comments);
@@ -588,12 +581,12 @@ bool SambaFile::openFile() {
     }
 
     // parameter
-    int i = completeLine.find("=");
+    int i = completeLine.find('=');
 
     if (i>-1)
     {
-      name = completeLine.left(i).stripWhiteSpace();
-      value = completeLine.right( completeLine.length()-i-1).stripWhiteSpace();
+      QString name = completeLine.left(i).stripWhiteSpace();
+      QString value = completeLine.mid(i+1).stripWhiteSpace();
 
       if (currentShare)
       {

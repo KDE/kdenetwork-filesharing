@@ -336,10 +336,14 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
            this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
 
+
+  
   if (testParam.start(KProcess::Block,KProcess::Stdout))
   {
     parseParmStdOutput();
-  }
+  } else
+    _testParmValues = new SambaShare(_sambaConfig);
+
 
   return _testParmValues;
 }

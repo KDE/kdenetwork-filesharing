@@ -63,10 +63,6 @@ public:
   /** No descriptions */
   QString findShareByPath(const QString & path) const;
 
-  /** No descriptions */
-  void writeValue(const QString & share, const QString & optionName, const QString & value);
-  void writeValue(const QString & share, const QString & optionName, bool value);
-
   SambaShare* newShare(const QString & name);
   SambaShare* newShare(const QString & name, const QString & path);
   SambaShare* newPrinter(const QString & name, const QString & printer);
@@ -93,10 +89,6 @@ public:
    **/
 	QString getUnusedName() const;
 
-  /** No descriptions */
-  QString readValue(const QString & share, const QString & optionName);
-	bool readBoolValue(const QString & share, const QString & optionName);
-
   static QString findSambaConf();
 
 	static bool boolFromText(const QString & value);
@@ -106,9 +98,7 @@ protected:
   bool readonly;
   bool changed;
   QString path;
-  QString tmpFilename;
   SambaConfigFile *sambaConfig;
-	KSimpleConfig *config;
 
   SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
   KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
@@ -119,9 +109,13 @@ private:
 	QString getTempFileName();
 
 public slots: // Public slots
-  /** No descriptions */
+
+  /**
+   * Saves all changes to the smb.conf file
+   * if the user is not allowed she'll be asked
+   * for a root password
+   **/
   void slotApply();
-  void slotSaveDone(KProcess* proc);
 };
 
 #endif

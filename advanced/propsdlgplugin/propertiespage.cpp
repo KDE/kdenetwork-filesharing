@@ -502,6 +502,12 @@ bool PropertiesPage::updateSambaShare() {
     setSambaShareBoolValue("public", publicSambaChk);
     setSambaShareBoolValue("writable", writableSambaChk);
 
+    if (sambaNameEdit->text().isEmpty()) {
+        KMessageBox::sorry(this, i18n("You have to enter a name for the Samba share."));
+        sambaNameEdit->setFocus();
+        return false;
+    }
+    
     if (sambaNameEdit->text() != m_sambaShare->getName()) {
       SambaShare* otherShare = m_sambaFile->getShare(sambaNameEdit->text());
       if (otherShare && otherShare != m_sambaShare) {
@@ -538,7 +544,12 @@ void PropertiesPage::setSambaShareBoolValue(const QString & value,
 }
 
 QString PropertiesPage::getNewSambaName() {
-  QString shareName = KURL(m_path).fileName();
+  QString path = m_path;
+  if (path.isNull() && m_enterUrl) {
+    path = urlRq->url();
+  }
+  
+  QString shareName = KURL(path).fileName();
   
   if (!sambaNameEdit->text().isEmpty())
       shareName = sambaNameEdit->text();

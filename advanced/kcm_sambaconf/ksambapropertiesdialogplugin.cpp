@@ -1,30 +1,30 @@
 /***************************************************************************
                           KSambaPropertiesDialogPlugin.cpp  -  description
-                             -------------------
+                            -------------------
     begin                : Son Apr 14 2002
     copyright            : (C) 2002 by Jan Schäfer
     email                : janschaefer@users.sourceforge.net
- ***************************************************************************/
+***************************************************************************/
 
 /******************************************************************************
- *                                                                            *
- *  This file is part of KSambaPlugin.                                        *
- *                                                                            *
- *  KSambaPlugin is free software; you can redistribute it and/or modify      *
- *  it under the terms of the GNU General Public License as published by      *
- *  the Free Software Foundation; either version 2 of the License, or         *
- *  (at your option) any later version.                                       *
- *                                                                            *
- *  KSambaPlugin is distributed in the hope that it will be useful,           *
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of            *
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *
- *  GNU General Public License for more details.                              *
- *                                                                            *
- *  You should have received a copy of the GNU General Public License         *
- *  along with KSambaPlugin; if not, write to the Free Software                     *
- *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA  *
- *                                                                            *
- ******************************************************************************/
+*                                                                            *
+*  This file is part of KSambaPlugin.                                        *
+*                                                                            *
+*  KSambaPlugin is free software; you can redistribute it and/or modify      *
+*  it under the terms of the GNU General Public License as published by      *
+*  the Free Software Foundation; either version 2 of the License, or         *
+*  (at your option) any later version.                                       *
+*                                                                            *
+*  KSambaPlugin is distributed in the hope that it will be useful,           *
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of            *
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *
+*  GNU General Public License for more details.                              *
+*                                                                            *
+*  You should have received a copy of the GNU General Public License         *
+*  along with KSambaPlugin; if not, write to the Free Software                     *
+*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA  *
+*                                                                            *
+******************************************************************************/
 
 #include <qframe.h>
 #include <qlayout.h>
@@ -55,6 +55,7 @@
 #include "sharedlgimpl.h"
 #include "passwd.h"
 #include "common.h"
+#include "smbconfconfigwidget.h"
 
 #include <assert.h>
 
@@ -67,7 +68,7 @@ K_EXPORT_COMPONENT_FACTORY( ksambakonqiplugin,
 
 
 KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *dlg,
-  							    const char *, const QStringList & )
+                    const char *, const QStringList & )
   : KPropsDlgPlugin(dlg)
 {
 
@@ -76,12 +77,12 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
   m_activeShare = 0L;
   m_sambaConf = QString::null;
   m_sharePath = QString::null;
-  
+
   m_sharePath = getLocalPathFromUrl(properties->kurl());
 
   if (m_sharePath.isNull()) {
-     kdDebug() << "KSambaPropertiesDialogPlugin: URL is no local file !" << endl;
-     return;
+    kdDebug() << "KSambaPropertiesDialogPlugin: URL is no local file !" << endl;
+    return;
   }
 
   initGUI();      
@@ -95,13 +96,13 @@ KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
 
 void KSambaPropertiesDialogPlugin::initGUI() {
   QFrame* frame = properties->addPage(i18n("Sam&ba"));
-	m_stack = new QWidgetStack(frame);
+  m_stack = new QWidgetStack(frame);
   QVBoxLayout *stackLayout = new QVBoxLayout(frame);
   stackLayout->addWidget(m_stack);
-  
+
   m_shareWidget = 0L;
   m_configWidget = 0L;
-  
+
   if (getSambaConf().isNull()) {
     createConfigWidget(m_stack);
     m_stack->addWidget(m_configWidget,0);
@@ -118,25 +119,25 @@ QString KSambaPropertiesDialogPlugin::getSambaConf() {
   if (m_sambaConf.isNull()) {
     m_sambaConf = SambaFile::findSambaConf();
   }
-  
+
   return m_sambaConf;
 }
 
 SambaFile* KSambaPropertiesDialogPlugin::getSambaFile() {
   if (m_sambaFile == 0L) {
-    
+
     if (getSambaConf().isNull())
-       return 0L;
-       
+      return 0L;
+
     m_sambaFile = new SambaFile( getSambaConf(), false );     
-    
+
     if ( ! m_sambaFile->openFile()) {
       delete m_sambaFile;
       m_sambaFile = 0L;
       return 0L;
     }   
   }
-  
+
   return m_sambaFile;
 }
 
@@ -144,8 +145,8 @@ SambaFile* KSambaPropertiesDialogPlugin::getSambaFile() {
 
 SambaShare* KSambaPropertiesDialogPlugin::getGlobalShare() {
   if (getSambaFile() == 0L)
-     return 0L;
-     
+    return 0L;
+
   return getSambaFile()->getShare("global");     
 }
 
@@ -156,59 +157,59 @@ QString KSambaPropertiesDialogPlugin::getSharePath() {
 
 SambaShare* KSambaPropertiesDialogPlugin::getActiveShare() {
   if (m_activeShare == 0L) {
-  
-     if (getSambaFile() == 0L)
+
+    if (getSambaFile() == 0L)
         return 0L;
-     
-     if (getSharePath().isNull())
+
+    if (getSharePath().isNull())
         return 0L;
-     
-     QString shareName = getSambaFile()->findShareByPath(getSharePath());
-     if (shareName.isEmpty())
+
+    QString shareName = getSambaFile()->findShareByPath(getSharePath());
+    if (shareName.isEmpty())
         return 0L;
-     
-     m_activeShare = getSambaFile()->getShare(shareName);
-                      
+
+    m_activeShare = getSambaFile()->getShare(shareName);
+
   }
-  
+
   return m_activeShare;
 }
 
 QString KSambaPropertiesDialogPlugin::getNetbiosName() {
   if (getGlobalShare() == 0L)
-     return 0L;
-     
+    return 0L;
+
   QString *s = getGlobalShare()->find("netbios name");
-  
+
   if (!s) 
-     return QString::null;
-     
+    return QString::null;
+
   return QString(*s);         
 }
 
 QString KSambaPropertiesDialogPlugin::getLocalPathFromUrl(const KURL & url) {
   if (url.isLocalFile())
-     return url.path();
-     
+    return url.path();
+
   if (url.protocol().lower() != "smb")
-     return QString::null;
-     
+    return QString::null;
+
   if (url.host().lower() != "localhost") {
-     if (getNetbiosName().isNull())
+    if (getNetbiosName().isNull())
         return QString::null;
-        
-     if (getNetbiosName().lower() != url.host().lower())
+
+    if (getNetbiosName().lower() != url.host().lower())
         return QString::null;
   }          
-  
+
   if (getSambaFile() == 0L)
-     return QString::null;
-     
+    return QString::null;
+
   SambaShare* share = getSambaFile()->getShare( url.fileName() ); 
-  
+
   if (share == 0L)
-     return QString::null;
-     
+    return QString::null;
+
   return share->getValue("path",false);     
 }
 
@@ -216,29 +217,9 @@ QString KSambaPropertiesDialogPlugin::getLocalPathFromUrl(const KURL & url) {
 
 void KSambaPropertiesDialogPlugin::createConfigWidget(QWidget* parent)
 {
-
-	m_configWidget = new QWidget(parent,"configWidget");
-
-  QVBoxLayout *layout = new QVBoxLayout(m_configWidget,5);
-
-  QLabel *lbl = new QLabel(i18n("<p>The SAMBA configuration file <strong>'smb.conf'</strong>" \
-  															" could not be found!</p>" \
-                   						  "Make sure you have SAMBA installed.\n\n"), m_configWidget);
-
-	QHBoxLayout *hbox = new QHBoxLayout(m_configWidget);
-	QPushButton *btn = new QPushButton(i18n("Specify Location"), m_configWidget);
-  connect(btn, SIGNAL(pressed()), this, SLOT( slotSpecifySmbConf()));
- 	
-  btn->setDefault(false);
-  btn->setAutoDefault(false);
-
-  hbox->addStretch();
-  hbox->addWidget(btn);
-
-	layout->addWidget(lbl);
-	layout->addLayout(hbox);
-  layout->addStretch();
-
+  m_configWidget = new SmbConfConfigWidget(parent);
+  connect( m_configWidget, SIGNAL(smbConfChoosed(const QString &)), 
+           this, SLOT(slotSpecifySmbConf(const QString &)));
 }
 
 void KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
@@ -249,35 +230,35 @@ void KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
   if ( getSambaFile() == 0L ) {
         KMessageBox::sorry(0L,i18n("<qt>Couldn't open the file <em>%1</em>.</qt>").arg(getSambaConf()),
                               i18n("Error while opening file"));
-     delete m_shareWidget;
-     m_shareWidget = 0L;
-     return;                              
+    delete m_shareWidget;
+    m_shareWidget = 0L;
+    return;                              
   }
-  
-  
+
+
   QString shareName = getSambaFile()->findShareByPath(getSharePath());
 
 
   if (shareName.isEmpty()) {
-     m_shareWidget->notSharedRadio->setChecked(true);
-     m_shareWidget->baseGrp->setEnabled(false);
-     m_shareWidget->securityGrp->setEnabled(false);
-     m_shareWidget->otherGrp->setEnabled(false);
-     m_shareWidget->moreOptionsBtn->setEnabled(false);
-     m_wasShared = false;
+    m_shareWidget->notSharedRadio->setChecked(true);
+    m_shareWidget->baseGrp->setEnabled(false);
+    m_shareWidget->securityGrp->setEnabled(false);
+    m_shareWidget->otherGrp->setEnabled(false);
+    m_shareWidget->moreOptionsBtn->setEnabled(false);
+    m_wasShared = false;
   }
   else {
-     m_wasShared = true;
-     m_activeShare = getSambaFile()->getShare(shareName);
-     m_shareWidget->sharedRadio->setChecked(true);
-     initValues();
+    m_wasShared = true;
+    m_activeShare = getSambaFile()->getShare(shareName);
+    m_shareWidget->sharedRadio->setChecked(true);
+    initValues();
   }
-  
+
   connect(m_shareWidget->btnGrp, SIGNAL(clicked(int)), this, SLOT(slotSharedChanged(int)));
   connect(m_shareWidget, SIGNAL(changed()), this, SLOT(setDirty()));
-  connect( m_shareWidget->moreOptionsBtn, SIGNAL(pressed()),
-  				 this, SLOT(moreOptionsBtnPressed()));
-  
+  connect( m_shareWidget->moreOptionsBtn, SIGNAL(clicked()),
+          this, SLOT(moreOptionsBtnPressed()));
+
 }
 
 
@@ -285,10 +266,10 @@ void KSambaPropertiesDialogPlugin::createShareWidget(QWidget* parent)
 void KSambaPropertiesDialogPlugin::initValues()
 {
   if (getActiveShare() == 0L) {
-     kdWarning() << "KSambaPropertiesDialogPlugin::initValues : getActiveShare == 0L !" << endl;
-     return;
+    kdWarning() << "KSambaPropertiesDialogPlugin::initValues : getActiveShare == 0L !" << endl;
+    return;
   }     
-     
+
   SambaShare* share = getActiveShare();     
 
   m_shareWidget->nameEdit->setText( share->getName() );
@@ -307,12 +288,12 @@ void KSambaPropertiesDialogPlugin::initValues()
 void KSambaPropertiesDialogPlugin::saveValuesToShare() 
 {
   if (getActiveShare() == 0L) {
-     kdWarning() << "KSambaPropertiesDialogPlugin::saveValuesToShare : getActiveShare == 0L !" << endl;
-     return;
+    kdWarning() << "KSambaPropertiesDialogPlugin::saveValuesToShare : getActiveShare == 0L !" << endl;
+    return;
   }     
-  
+
   SambaShare* share = getActiveShare();     
-  
+
   share->setValue("comment",m_shareWidget->commentEdit->text());
   share->setValue("read only", m_shareWidget->readOnlyChk->isChecked());
   share->setValue("guest ok", m_shareWidget->guestOkChk->isChecked());
@@ -350,14 +331,14 @@ void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
     m_shareWidget->otherGrp->setEnabled(true);
     m_shareWidget->moreOptionsBtn->setEnabled(true);
   }
-  
+
   emit changed();
 }
 
 /**
- * Checks wether the entered values are correct
- * @return false if not correct otherwise true
- */
+* Checks wether the entered values are correct
+* @return false if not correct otherwise true
+*/
 bool KSambaPropertiesDialogPlugin::checkValues()
 {
   if (m_shareWidget->nameEdit->text().isEmpty())  {
@@ -365,7 +346,7 @@ bool KSambaPropertiesDialogPlugin::checkValues()
     m_shareWidget->nameEdit->setFocus();
     return false;
   } 
-  
+
   if (m_shareWidget->nameEdit->text().length() > 12) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
       properties,i18n(
@@ -381,7 +362,7 @@ bool KSambaPropertiesDialogPlugin::checkValues()
     }
 
   } 
-  
+
   if (m_shareWidget->nameEdit->text().contains(' ')) {
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
       properties,i18n(
@@ -396,85 +377,73 @@ bool KSambaPropertiesDialogPlugin::checkValues()
       return false;  
     }
   }
-  
 
+  if ( ! checkIfUnixPermissions( getActiveShare())) 
+     return false;
+  
   return true;
 }
 
 /** No descriptions */
 void KSambaPropertiesDialogPlugin::applyChanges()
 {
+  saveValuesToShare();
+
   if (getActiveShare() && m_shareWidget->sharedRadio->isChecked())
   {
-  	if (!checkValues())
+    if (!checkValues())
     {
-       properties->abortApplying();
-       return;
+      properties->abortApplying();
+      return;
     }
-    
+
 
     QString shareName = m_shareWidget->nameEdit->text();
 
     if (! getActiveShare()->setName(shareName))
     {
-       KMessageBox::sorry(properties,i18n("The samba share name '%1' already exists!").arg(shareName),i18n("Information"));
-       m_shareWidget->nameEdit->setText(getSambaFile()->getUnusedName());
-       m_shareWidget->nameEdit->setFocus();
-       properties->abortApplying();
-       return;
+      KMessageBox::sorry(properties,i18n("The samba share name '%1' already exists!").arg(shareName),i18n("Information"));
+      m_shareWidget->nameEdit->setText(getSambaFile()->getUnusedName());
+      m_shareWidget->nameEdit->setFocus();
+      properties->abortApplying();
+      return;
     }
 
-		saveValuesToShare();
+    
   }
-  
+
   if (m_shareWidget->sharedRadio->isChecked())
     getSambaFile()->slotApply();
   else if (m_wasShared) {
     getSambaFile()->removeShare(getActiveShare());
     getSambaFile()->slotApply();
   }
-  
+
   return;
 
 }
 
 void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 {
-	saveValuesToShare();
-	
-	ShareDlgImpl *dlg = new ShareDlgImpl(m_shareWidget,getActiveShare());
+  saveValuesToShare();
+
+  ShareDlgImpl *dlg = new ShareDlgImpl(m_shareWidget,getActiveShare());
 
   // We already have the base settings
   dlg->_tabs->removePage(dlg->baseTab);
-  
+
   connect( dlg, SIGNAL(changed()), this, SIGNAL(changed()));
   dlg->exec();
 //  disconnect( dlg, SIGNAL(changed()), this, SLOT(changedSlot()));
   delete dlg;
-  
+
   initValues();
 }
 
 
-void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
+void KSambaPropertiesDialogPlugin::slotSpecifySmbConf(const QString & smbConf)
 {
-
-	m_sambaConf = KFileDialog::getOpenFileName("/",
-   					"smb.conf|Samba conf. File\n"
-        		"*|All Files",0,i18n("Get smb.conf Location"));
-
-	
-  
-  if ( getSambaFile() == 0L ) {
-     KMessageBox::sorry(properties,i18n("<qt>The file <i>%1</i> could not be read !</qt>").arg(m_sambaConf),i18n("File could not be read"));
-     m_sambaConf = QString::null;
-     return;
-  }
-     
-  kapp->config()->setGroup("KSambaKonqiPlugin");
-  kapp->config()->writeEntry("smb.conf",m_sambaConf);
-  kapp->config()->sync();
-
+  m_sambaConf = smbConf;
   createShareWidget(m_stack);
   m_stack->addWidget(m_shareWidget,1);
   m_stack->raiseWidget(m_shareWidget);

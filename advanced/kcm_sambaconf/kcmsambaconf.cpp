@@ -44,7 +44,6 @@
 #include <qvbox.h>
 #include <qlayout.h>
 
-
 #include <klocale.h>
 #include <kglobal.h>
 #include <klineedit.h>
@@ -57,6 +56,7 @@
 #include <kmessagebox.h>
 #include <kjanuswidget.h>
 #include <klistview.h>
+#include <kconfig.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -68,6 +68,7 @@
 #include "passwd.h"
 #include "qmultichecklistitem.h"
 #include "joindomaindlg.h"
+#include "smbconfconfigwidget.h"
 
 
 #define COL_DISABLED 2
@@ -178,12 +179,41 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
 {
   _dictMngr = 0L;
   _sambaFile = 0L;
-  init();
-
+  m_smbConfConfigWidget = 0L;
+  
+  
+  QBoxLayout * l = new QHBoxLayout( this );
+  l->setAutoAdd( TRUE );
+  
   QString smbFile = SambaFile::findSambaConf();
-  load(smbFile);
+  if (smbFile.isNull()) {
+     createSmbConfigWidget();
+     return;
+  }
+  
+  slotSpecifySmbConf(smbFile);
+  
+};
 
+
+KcmSambaConf::~KcmSambaConf() {
+  delete _dictMngr;
+}
+
+void KcmSambaConf::createSmbConfigWidget() {
+  m_smbConfConfigWidget = new SmbConfConfigWidget(this);
+  connect( m_smbConfConfigWidget, SIGNAL(smbConfChoosed(const QString &)), 
+           this, SLOT(slotSpecifySmbConf(const QString &)));
+}
+
+void KcmSambaConf::slotSpecifySmbConf(const QString & smbConf) {
+  if (m_smbConfConfigWidget) {
+     m_smbConfConfigWidget->hide();
+  }
+     
+  init();
   initAdvancedTab();
+  load(smbConf);
 
   if (getuid() != 0) {
     for (int i=0;i<_interface->mainTab->count();i++) {
@@ -191,12 +221,52 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
       w->setEnabled(false);
     }
   }
-};
-
-
-KcmSambaConf::~KcmSambaConf() {
-  delete _dictMngr;
+  
+  _interface->show();
 }
+
+void KcmSambaConf::init() {
+
+  _interface = new KcmInterface(this);
+
+
+  connect ( _interface->sambaUserPasswordBtn, SIGNAL(clicked()), this, SLOT(sambaUserPasswordBtnClicked()));
+
+  connect ( _interface->editShareBtn, SIGNAL(clicked()), this, SLOT(editShare()));
+  connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
+  connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
+
+  connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
+  connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
+  connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
+
+  connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
+  connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
+
+  connect( _interface->domainRadio, SIGNAL(toggled(bool)), 
+          _interface->joinADomainBtn, SLOT( setEnabled(bool) ));           
+
+  connect(_interface->nullPasswordsChk,SIGNAL(toggled(bool)),
+          this, SLOT(nullPasswordsEnabled(bool)));
+
+  connect( _interface->addSambaUserBtn, SIGNAL(clicked()),
+          this, SLOT( addSambaUserBtnClicked() ));
+
+  connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
+          this, SLOT( removeSambaUserBtnClicked() ));
+
+  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
+          this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
+
+  connect( _interface->joinADomainBtn, SIGNAL(clicked()),
+          this, SLOT( joinADomainBtnClicked() ));
+
+  connect( _interface->loadBtn, SIGNAL(clicked()),
+          this, SLOT( loadBtnClicked() ));
+
+  connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
+}
+
 
 void KcmSambaConf::initAdvancedTab() 
 {
@@ -407,57 +477,15 @@ void KcmSambaConf::editPrinterDefaults()
 }
 
 
-void KcmSambaConf::init() {
-  QBoxLayout * l = new QHBoxLayout( this );
-  l->setAutoAdd( TRUE );
-
-  _interface = new KcmInterface(this);
-
-
-  connect ( _interface->sambaUserPasswordBtn, SIGNAL(clicked()), this, SLOT(sambaUserPasswordBtnClicked()));
-
-  connect ( _interface->editShareBtn, SIGNAL(clicked()), this, SLOT(editShare()));
-  connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
-  connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
-
-  connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
-  connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
-  connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
-
-  connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
-  connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
-
-  connect( _interface->domainRadio, SIGNAL(toggled(bool)), 
-          _interface->joinADomainBtn, SLOT( setEnabled(bool) ));           
-
-  connect(_interface->nullPasswordsChk,SIGNAL(toggled(bool)),
-          this, SLOT(nullPasswordsEnabled(bool)));
-
-  connect( _interface->addSambaUserBtn, SIGNAL(clicked()),
-          this, SLOT( addSambaUserBtnClicked() ));
-
-  connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
-          this, SLOT( removeSambaUserBtnClicked() ));
-
-  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
-          this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
-
-  connect( _interface->joinADomainBtn, SIGNAL(clicked()),
-          this, SLOT( joinADomainBtnClicked() ));
-
-  connect( _interface->loadBtn, SIGNAL(clicked()),
-          this, SLOT( loadBtnClicked() ));
-
-
-
-  connect( _interface, SIGNAL(changed()), this, SLOT(configChanged()));
-
-
-
-}
 
 void KcmSambaConf::loadBtnClicked() {
   load( _interface->configUrlRq->url());
+  
+  KConfig config("ksambaplugin");
+  config.setGroup("KSambaKonqiPlugin");
+  config.writeEntry("smb.conf",_interface->configUrlRq->url());
+  config.sync();
+  
 }
 
 void KcmSambaConf::load(const QString & smbFile) 
@@ -1283,7 +1311,8 @@ QString KcmSambaConf::socketOptions()
 
 
 int KcmSambaConf::buttons () {
-  return KCModule::Default|KCModule::Apply|KCModule::Help;
+  // KCModule::Default|KCModule::Apply|KCModule::Help;
+  return KCModule::Apply;
 }
 
 void KcmSambaConf::configChanged() {
@@ -1293,7 +1322,7 @@ void KcmSambaConf::configChanged() {
 
 QString KcmSambaConf::quickHelp() const
 {
-  return i18n("Helpful information about the kcmsambaconf module.");
+  return i18n("<h1>Samba Configuration</h1> here you can configure your SAMBA server.");
 }
 
 // ------------------------------------------------------------------------

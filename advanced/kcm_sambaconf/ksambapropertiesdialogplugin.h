@@ -45,6 +45,7 @@ class QCheckBox;
 class QWidgetStack;
 class KonqInterface;
 class SambaShare;
+class SmbConfConfigWidget;
 
 class KSambaPropertiesDialogPlugin : public KPropsDlgPlugin
 {
@@ -78,13 +79,13 @@ private:
   SambaShare* m_activeShare;
   SambaFile* m_sambaFile;
   KonqInterface* m_shareWidget;
-  QWidget* m_configWidget;
+  SmbConfConfigWidget* m_configWidget;
   QWidgetStack *m_stack;
 
 
 protected slots:
   void slotSharedChanged(int state);
-  void slotSpecifySmbConf();
+  void slotSpecifySmbConf(const QString &);
   void moreOptionsBtnPressed();
 };
 

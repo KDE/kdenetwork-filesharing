@@ -1431,7 +1431,7 @@ QString KcmSambaConf::quickHelp() const
 
 extern "C"
 {
-  KCModule *create_KcmSambaConf(QWidget *parent, const char *name)
+  KDE_EXPORT KCModule *create_KcmSambaConf(QWidget *parent, const char *name)
   {
     KGlobal::locale()->insertCatalogue("kfileshare");
     return new KcmSambaConf(parent, name);

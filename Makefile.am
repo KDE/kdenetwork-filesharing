@@ -1,1 +1,1 @@
-SUBDIRS = simple advanced
+SUBDIRS = advanced simple

@@ -60,6 +60,8 @@ public :
   ShareDlgImpl(QWidget* parent, SambaShare* share);
   ~ShareDlgImpl();
 
+  bool hasChanged() { return m_changed; };
+  
 protected :
 
 	/**
@@ -76,7 +78,7 @@ protected :
   HiddenFileView* _fileView;
   UserTabImpl* _userTab;
   KJanusWidget* _janus;
-  
+  bool m_changed;
   DictManager* _dictMngr;
 
   void loadHiddenFilesView();

@@ -176,7 +176,7 @@ void SambaFile::slotApply()
   KProcess* proc = new KProcess();
 
   if (KURL(path).isLocalFile()) {
-    KMessageBox::information(0,i18n("Local file!"));
+    kdDebug() << "SambaFile::slotApply: is local file!" << endl;
     _tempFile->setAutoDelete(false); // Would otherwise be deleted before the command is executed!
     QString suCommand=QString("cp %1 %2; chmod %3 %4; rm %5").arg(_tempFile->name()).arg(path).arg(path).arg(chmodCmd).arg(_tempFile->name());
     *proc << "kdesu" << suCommand;
@@ -187,6 +187,7 @@ void SambaFile::slotApply()
     else
         changed = false;
   } else {
+    kdDebug() << "SambaFile::slotApply: is remote file!" << endl;
     _tempFile->setAutoDelete(true);
     KURL srcURL;
     srcURL.setPath( _tempFile->name() );

@@ -164,7 +164,7 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
     
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
         0L,i18n(
-          "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
+          "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this directory, but "
           "the user doesn't have the needed write permissions !<br>" 
           "Do you want to continue nevertheless ?</qt>").arg(user)
           ,i18n("Warning")

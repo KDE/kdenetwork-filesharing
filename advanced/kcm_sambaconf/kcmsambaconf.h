@@ -33,57 +33,58 @@ class QPixmap;
 class ShareListViewItem : public QListViewItem
 {
 public:
- 	ShareListViewItem(QListView * parent, SambaShare* share);
+	ShareListViewItem(QListView * parent, SambaShare* share);
 
 	SambaShare* getShare() const;
-  void setShare(SambaShare* share);
+	void setShare(SambaShare* share);
 	void updateShare();
 
 protected:
- 	SambaShare* _share;
-  QPixmap createPropertyPixmap();
+	SambaShare* _share;
+	QPixmap createPropertyPixmap();
 };
 
 
 class KcmSambaConf: public KCModule
 {
 	Q_OBJECT
-	public:
-		KcmSambaConf(QWidget *parent = 0L, const char *name = 0L);
-		virtual ~KcmSambaConf();
 
-		void load();
-		void save();
-		void defaults();
-		int buttons();
-		QString quickHelp() const;
-		const KAboutData* aboutData() {return _myAboutData; };
+public:
+	KcmSambaConf(QWidget *parent = 0L, const char *name = 0L);
+	virtual ~KcmSambaConf();
 
-	public slots:
-		void configChanged();
+	void load();
+	void save();
+	void defaults();
+	int buttons();
+	QString quickHelp() const;
+	const KAboutData* aboutData() {return _myAboutData; };
 
-		void editShare();
-    void addShare();
-    void removeShare();
+public slots:
+	void configChanged();
 
-    void editPrinter();
-    void addPrinter();
-    void removePrinter();
+	void editShare();
+	void addShare();
+	void removeShare();
+
+	void editPrinter();
+	void addPrinter();
+	void removePrinter();
     
-    void editShareDefaults();
-    void editPrinterDefaults();
+	void editShareDefaults();
+	void editPrinterDefaults();
 
-    void socketOptionsBtnClicked();
-	protected:
-  	/**
-     * The path of the smb.conf file
-     **/
-  	QString _smbconf;
-		SambaFile* _sambaFile;
+	void socketOptionsBtnClicked();
+protected:
+	/**
+	* The path of the smb.conf file
+	**/
+	QString _smbconf;
+	SambaFile* _sambaFile;
 
-  private:
-		KAboutData* _myAboutData;
-		KcmInterface* _interface;
+private:
+	KAboutData* _myAboutData;
+	KcmInterface* _interface;
 };
 
 #endif

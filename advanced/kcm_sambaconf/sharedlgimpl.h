@@ -48,25 +48,25 @@ Q_OBJECT
 
 public :
 
-  ShareDlgImpl(QWidget* parent, SambaShare* share);
-  ~ShareDlgImpl();
+	ShareDlgImpl(QWidget* parent, SambaShare* share);
+	~ShareDlgImpl();
 
 protected :
 
 	/**
-   * Fills all dialog fields with the values
-   * of the SambaShare object
-   **/
-  void initDialog();
+	* Fills all dialog fields with the values
+	* of the SambaShare object
+	**/
+	void initDialog();
   
-  /**
-   * The share object to change with this dialog
-   **/
+	/**
+	* The share object to change with this dialog
+	**/
 	SambaShare* _share;
 
 protected slots:
 	virtual void accept();
-  virtual void homeChkToggled(bool);
+	virtual void homeChkToggled(bool);
 };
 
 

@@ -48,25 +48,25 @@ Q_OBJECT
 
 public :
 
-  PrinterDlgImpl(QWidget* parent, SambaShare* share);
-  ~PrinterDlgImpl();
+	PrinterDlgImpl(QWidget* parent, SambaShare* share);
+	~PrinterDlgImpl();
 
 protected :
 
 	/**
-   * Fills all dialog fields with the values
-   * of the SambaShare object
-   **/
-  void initDialog();
+	* Fills all dialog fields with the values
+	* of the SambaShare object
+	**/
+	void initDialog();
 
-  /**
-   * The share object to change with this dialog
-   **/
+	/**
+	* The share object to change with this dialog
+	**/
 	SambaShare* _share;
 
 protected slots:
 	void accept();
-  virtual void printersChkToggled(bool);
+	virtual void printersChkToggled(bool);
 };
 
 

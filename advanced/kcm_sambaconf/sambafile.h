@@ -48,7 +48,7 @@ class KConfig;
 class SambaConfigFile : public QDict<SambaShare>
 {
 public:
-  SambaConfigFile();
+	SambaConfigFile();
 };
 
 
@@ -60,62 +60,62 @@ public:
 	SambaFile(const QString & _path, bool _readonly=true);
 	~SambaFile();
 
-  /** No descriptions */
-  QString findShareByPath(const QString & path) const;
+	/** No descriptions */
+	QString findShareByPath(const QString & path) const;
 
-  SambaShare* newShare(const QString & name);
-  SambaShare* newShare(const QString & name, const QString & path);
-  SambaShare* newPrinter(const QString & name, const QString & printer);
+	SambaShare* newShare(const QString & name);
+	SambaShare* newShare(const QString & name, const QString & path);
+	SambaShare* newPrinter(const QString & name, const QString & printer);
 
-  void removeShare(const QString & share);
-  void removeShare(SambaShare* share);
+	void removeShare(const QString & share);
+	void removeShare(SambaShare* share);
 
 	void renameShare(const QString & oldName, const QString & newName);
 
-  SambaShare* getShare(const QString & share) const;
+	SambaShare* getShare(const QString & share) const;
 
-  /**
-   * Returns a list of all shared directories
-   **/
-  SambaShareList* getSharedDirs() const;
+	/**
+	* Returns a list of all shared directories
+	**/
+	SambaShareList* getSharedDirs() const;
 
-  /**
-   * Returns a list of all shared printers
-   **/
-  SambaShareList* getSharedPrinters() const;
+	/**
+	* Returns a list of all shared printers
+	**/
+	SambaShareList* getSharedPrinters() const;
 
-  /**
-   * Returns a name which isn't already used for a share
-   **/
+	/**
+	* Returns a name which isn't already used for a share
+	**/
 	QString getUnusedName() const;
 
-  static QString findSambaConf();
+	static QString findSambaConf();
 
 	static bool boolFromText(const QString & value);
-  static QString textFromBool(bool value);
+	static QString textFromBool(bool value);
 
 protected:
-  bool readonly;
-  bool changed;
-  QString path;
-  SambaConfigFile *sambaConfig;
+	bool readonly;
+	bool changed;
+	QString path;
+	SambaConfigFile *sambaConfig;
 
-  SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
-  KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
+	SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
+	KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
 
 
 private:
-  void copyConfigs(KConfig* first, KConfig* second);
+	void copyConfigs(KConfig* first, KConfig* second);
 	QString getTempFileName();
 
 public slots: // Public slots
 
-  /**
-   * Saves all changes to the smb.conf file
-   * if the user is not allowed she'll be asked
-   * for a root password
-   **/
-  void slotApply();
+	/**
+	* Saves all changes to the smb.conf file
+	* if the user is not allowed she'll be asked
+	* for a root password
+	**/
+	void slotApply();
 };
 
 #endif

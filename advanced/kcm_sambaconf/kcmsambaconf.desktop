@@ -1,7 +1,7 @@
 [Desktop Entry]
-DocPath=
+Encoding=UTF-8
 Exec=kcmshell kcmsambaconf
-Icon=samba
+Icon=kcmsambaconf
 Type=Application
 
 Terminal=false
@@ -11,6 +11,8 @@ X-KDE-ModuleType=Library
 X-KDE-SubstituteUID=false
 X-KDE-HasReadOnlyMode=false
 X-KDE-RootOnly=true
+Categories=X-KDE-Network
+OnlyShowIn=KDE
 
 Comment=KcmSambaConf - a KControl module for configuring a samba server
 Comment[bs]=KcmSambaConf - KControl modul za podešavanje samba servera
@@ -25,10 +27,14 @@ Comment[ja]=KcmSambaConf - sambaサーバを設定するKControlモジュール
 Comment[nl]=KcmSambaConf - een configuratiemodule voor het instellen van een sambaserver.
 Comment[pt]=KcmSambaConf - um módulo do KControl para configurar um servidor de Samba
 Comment[pt_BR]=KcmSambaConf - um módulo do Centro de Controle para a configuração de um servidor samba
+Comment[ru]=KcmSambaConf - модуль KControl для настройки сервера Samba
 Comment[sv]=IM Samba: en modul i Inställningscentralen för att anpassa en Samba-server
 Comment[uk]=KcmSambaConf - модуль налаштування сервера Samba для KControl
 Comment[ven]=KcmSambaConf - a KControl module yau dzudzanya siva ya samba
 Comment[xh]=KcmSambaConf - umnqongo womlinganiselo we KControl wokuqwalasela umncedisi we samba
+Comment[zh_CN]=KcmSambaConf - 用来设置 samba 服务器的 KControl 模块
+Comment[zh_TW]=KcmSambaConf - 用來設定 samba 伺服器的 KControl 模組
+Comment[zu]=KcmSambaConf - indlela ye-KControl yokuhlanganisela umlekeleli wesamba
 Keywords=KcmSambaConf,kcmsambaconf
 Keywords[de]=Samba
 Keywords[nl]=Kcm_SambaConf,kcmsambaconf,samba,smb,windows netwerken,server
@@ -59,4 +65,6 @@ Name[tr]=Samba Yapılandırması
 Name[uk]=Конфігурація Samba
 Name[ven]=Dzudzanyo ya Samba
 Name[xh]=Uqwalaselo lwencoko
+Name[zh_CN]=Samba 配置
+Name[zh_TW]=Samba 組態
 Name[zu]=Inhlanganiselo Ye Samba

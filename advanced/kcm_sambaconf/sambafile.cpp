@@ -1,30 +1,21 @@
-/***************************************************************************
-                          sambafile.cpp  -  description
-                            -------------------
-    begin                : Son Apr 14 2002
-    copyright            : (C) 2002-2003 by Jan Sch�er
-    email                : janschaefer@users.sourceforge.net
-***************************************************************************/
+/*
+  Copyright (c) 2002-2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
 
-/******************************************************************************
-*                                                                            *
-*  This file is part of KSambaPlugin.                                        *
-*                                                                            *
-*  KSambaPlugin is free software; you can redistribute it and/or modify      *
-*  it under the terms of the GNU General Public License as published by      *
-*  the Free Software Foundation; either version 2 of the License, or         *
-*  (at your option) any later version.                                       *
-*                                                                            *
-*  KSambaPlugin is distributed in the hope that it will be useful,           *
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of            *
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *
-*  GNU General Public License for more details.                              *
-*                                                                            *
-*  You should have received a copy of the GNU General Public License         *
-*  along with KSambaPlugin; if not, write to the Free Software                     *
-*  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA  *
-*                                                                            *
-******************************************************************************/
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+
+*/
 
 #include <qfile.h>
 #include <qprocess.h>
@@ -45,7 +36,7 @@
 
 #include "sambafile.h"
 
-
+#define FILESHARE_DEBUG 5009
 
 SambaConfigFile::SambaConfigFile(SambaFile* sambaFile)
 {
@@ -81,22 +72,21 @@ QStringList SambaConfigFile::getShareList()
 }
 
 SambaFile::SambaFile(const QString & _path, bool _readonly)
+  : readonly(_readonly), 
+    changed(false), 
+    path(_path), 
+    localPath(_path), 
+    _sambaConfig(0),
+    _testParmValues(0),
+    _sambaVersion(-1),
+    _tempFile(0)
 {
-  path = _path;
-  localPath = _path;
-  readonly = _readonly;
-  changed = false;
-  _testParmValues = 0L;
-  _sambaConfig = 0L;
-  _sambaVersion = -1;
-  _tempFile = 0L;
 }
 
 SambaFile::~SambaFile()
 {
   delete _sambaConfig;
-  if (_testParmValues)
-    delete _testParmValues;
+  delete _testParmValues;
 
 }
 
@@ -127,8 +117,14 @@ QString SambaFile::findShareByPath(const QString & path) const
     }
   }
 
-  return QString();
+  return QString::null;
 }
+
+bool SambaFile::save() {
+  slotApply();
+  return true;
+}
+
 
 void SambaFile::slotApply()
 {
@@ -498,6 +494,7 @@ void SambaFile::slotJobFinished( KIO::Job * job )
 
 bool SambaFile::load()
 {
+  kdDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path << endl;
   KURL url(path);
 
   if (!url.isLocalFile()) {

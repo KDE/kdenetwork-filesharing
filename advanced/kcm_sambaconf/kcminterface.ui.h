@@ -12,9 +12,11 @@ void KcmInterface::init()
     addShareBtn->setIconSet(SmallIcon("filenew"));
     editShareBtn->setIconSet(SmallIcon("edit"));
     removeShareBtn->setIconSet(SmallIcon("editdelete"));
+    editDefaultShareBtn->setIconSet(SmallIcon("queue"));
     
     addPrinterBtn->setIconSet(SmallIcon("filenew"));
     editPrinterBtn->setIconSet(SmallIcon("edit"));
     removePrinterBtn->setIconSet(SmallIcon("editdelete"));
+    editDefaultPrinterBtn->setIconSet(SmallIcon("print_class"));
     
 }

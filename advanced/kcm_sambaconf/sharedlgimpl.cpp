@@ -131,6 +131,7 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("mangled names",mangledNamesChk);
   _dictMngr->add("mangle case",mangleCaseChk);
   _dictMngr->add("mangling char",manglingCharEdit);
+  _dictMngr->add("mangling method",manglingMethodCombo);
   
   _dictMngr->add("default case",defaultCaseCombo);
 
@@ -164,12 +165,17 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("security mask",securityMaskEdit);
   _dictMngr->add("create mask",createMaskEdit);
   _dictMngr->add("inherit permissions",inheritPermissionsChk);
+  _dictMngr->add("inherit acls",inheritAclsChk);
   _dictMngr->add("wide links",wideLinksChk);
   _dictMngr->add("follow symlinks",followSymlinksChk);
     
   _dictMngr->add("map hidden",mapHiddenChk);
   _dictMngr->add("map archive",mapArchiveChk);
   _dictMngr->add("map system",mapSystemChk);
+  
+  _dictMngr->add("force unknown acl user",forceUnknownAclUserChk);
+  _dictMngr->add("profile acls",profileAclsChk);
+  
   
   // Advanced
 
@@ -192,9 +198,15 @@ void ShareDlgImpl::initDialog()
   
   _dictMngr->add("max connections",maxConnectionsSpin);
   _dictMngr->add("write cache size",writeCacheSizeSpin);
+  _dictMngr->add("block size",blockSizeSpin);
 
+  
   _dictMngr->add("sync always",syncAlwaysChk);
   _dictMngr->add("status",statusChk);
+  
+  _dictMngr->add("csc policy",cscPolicyCombo);
+  
+  
 
   // VFS
   

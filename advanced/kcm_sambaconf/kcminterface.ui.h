@@ -95,6 +95,11 @@ void KcmInterface::domainRadio_clicked()
 			      "by passing it to a Windows NT Primary or Backup Domain Controller.");
 }
 			      
+void KcmInterface::adsRadioClicked()
+{
+ securityLevelHelpLbl->setText("Use the <i>ADS</i> security level if you have a big network "
+			      "and the samba server should act as a domain member in an ADS realm.");
+}
 			
 
 
@@ -136,6 +141,8 @@ void KcmInterface::mapToGuestCombo_activated( int i)
 {
     allowGuestLoginsChk->setChecked(i>0);
 }
+
+
 
 
 

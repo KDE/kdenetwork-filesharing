@@ -43,6 +43,8 @@
 #include "smbpasswdfile.h"
 #include "passwd.h"
 
+#include <assert.h>
+
 UserTabImpl::UserTabImpl(QWidget* parent, SambaShare* share)
   : UserTab(parent)
 {

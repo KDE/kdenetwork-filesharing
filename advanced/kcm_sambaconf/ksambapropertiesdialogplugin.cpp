@@ -53,6 +53,7 @@
 #include "share.h"
 #include "sharedlgimpl.h"
 
+#include <assert.h>
 
 typedef KGenericFactory<KSambaPropertiesDialogPlugin, KPropertiesDialog> KSambaPropertiesDialogPluginFactory;
 

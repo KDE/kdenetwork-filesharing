@@ -60,11 +60,7 @@ INCLUDES= $(all_includes)
 servicedir = $(kde_servicesdir)
 service_DATA  = knfskonqiplugin.desktop
 
-EXTRA_DIST = \
-	$(service_DATA) \
-  kcmnfsmodule.desktop
-
-apps_DATA = kcmnfsmodule.deskto
+apps_DATA = kcmnfsmodule.desktop
 appsdir = $(kde_appsdir)/Settings/Network
 
 METASOURCES = AUTO

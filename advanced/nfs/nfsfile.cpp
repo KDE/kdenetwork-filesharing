@@ -86,6 +86,7 @@ bool NFSFile::removeEntryByPath(const QString & path) {
       return false;
       
   removeEntry(entry);      
+  return true;
 }
 
 EntryIterator NFSFile::getEntries()
@@ -227,28 +228,25 @@ bool NFSFile::save()
     KTempFile tempFile;
     saveTo(tempFile.textStream());
     tempFile.close();
+    tempFile.setAutoDelete( true );
 
     KProcIO proc;
 
-    QString command = "cp ";
-    command += KProcess::quote( tempFile.name() );
-    command += " ";
-    command += KProcess::quote( _url.path() );
-    command += "; chmod 644 ";
-    command += KProcess::quote( _url.path() );
+    QString command = QString("cp %1 %2")
+        .arg(KProcess::quote( tempFile.name() ))
+        .arg(KProcess::quote( _url.path() ));
 
     if (restartNFSServer)
       command +=";exportfs -ra";
 
     if (!QFileInfo(_url.path()).isWritable() )
-      proc<<"kdesu"<<"-c"<<command;
+      proc<<"kdesu" << "-d" << "-c"<<command;
 
     if (!proc.start(KProcess::Block, true)) {
       return false;
     }      
 
 
-    tempFile.setAutoDelete( true );
   }    
   return true;
 }

@@ -1,5 +1,5 @@
 METASOURCES = AUTO
-INCLUDES= $(all_includes)
+AM_CPPFLAGS= $(all_includes)
 
 noinst_LTLIBRARIES = libfilesharenfs.la
 
@@ -10,3 +10,4 @@ libfilesharenfs_la_SOURCES = \
     nfsdialoggui.ui \
     nfsfile.cpp \
     nfsentry.cpp 
+

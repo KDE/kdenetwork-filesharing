@@ -22,7 +22,6 @@ EXTRA_DIST = $(service_DATA) \
 	kcmsambaconf.cpp \
 	kcmsambaconf.h \
 	share.ui.h \
-	externals.h \
 	kcmsambaconf.desktop \
 	ksambapropertiesdialogplugin.cpp \
   konqinterface.ui.h \
@@ -36,12 +35,10 @@ EXTRA_DIST = $(service_DATA) \
   passwd.h \
   common.h \
   usertab.ui.h \
-  filemodedlg.ui.h \
   filemodedlgimpl.h \
   hiddenfileview.h \
   dictmanager.h \
-  qmultichecklistitem.h \
-  joindomaindlh.ui.h
+  qmultichecklistitem.h 
 
 #KDE 3.2: xdg_apps_DATA = kcmsambaconf.desktop
 mydata_DATA = kcmsambaconf.desktop
@@ -51,6 +48,9 @@ mydatadir = $(kde_appsdir)/Settings/Network
 ## I'm just an automake automaton --exa
 # DISTCLEANFILES = qmultichecklistitem.cpp
 
-#messages:
-#	$(XGETTEXT) $(libkcm_kcm_sambaconf_la_SOURCES) -o $(podir)/kcm_sambaconf.pot
+messages:
+	LIST=`find . -name \*.h -o -name \*.hh -o -name \*.H -o -name \*.hxx -o -name \*.hpp -o -name \*.cpp -o -name \*.cc -o -name \*.cxx -o -name \*.ecpp -o -name \*.C`; \
+	if test -n "$$LIST"; then \
+	 $(XGETTEXT) $$LIST -o $(podir)/kcm_sambaconf.pot; \
+	fi
 

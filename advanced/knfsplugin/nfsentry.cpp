@@ -284,10 +284,10 @@ void NFSHost::setParam(const QString & s)
      QString value = p.right(p.length()-i-1);
      kdDebug() << value << endl;
 
-    if (name="anongid")
+    if (name=="anongid")
        anongid = value.toInt();
 
-    if (name="anonuid")
+    if (name=="anonuid")
        anonuid = value.toInt();
   }
 
@@ -380,10 +380,10 @@ QString NFSEntry::getPath()
 void NFSEntry::setPath(const QString & path)
 {
   _path = path.stripWhiteSpace();
-  
+
   if (_path.right(1)=="/")
   	  _path.truncate(_path.length()-1);
-      
+
 
 }
 

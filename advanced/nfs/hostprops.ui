@@ -117,9 +117,6 @@ The host may be specified in a number of ways:
                     <property name="text">
                         <string>&amp;Public access</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+P</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Public access&lt;/b&gt;
 &lt;p&gt;
@@ -162,9 +159,6 @@ This is just the same as if you would enter a wildcard in the adress field.
                     <property name="text">
                         <string>&amp;Writable</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+W</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Writable&lt;/b&gt;
 &lt;p&gt;
@@ -182,9 +176,6 @@ The default is to disallow any request which changes the filesystem
                     <property name="text">
                         <string>&amp;Insecure</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+I</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Insecure&lt;/b&gt;
 &lt;p&gt;
@@ -201,9 +192,6 @@ If unsure leave it unchecked.
                     </property>
                     <property name="text">
                         <string>&amp;Sync</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+S</string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Sync&lt;/b&gt;
@@ -225,9 +213,6 @@ The default is to allow the server to write the data out whenever it is ready.
                     <property name="text">
                         <string>No w&amp;delay</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+D</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No wdelay&lt;/b&gt;
 &lt;p&gt;
@@ -240,9 +225,6 @@ This option only has effect if sync is also set. The NFS server will normally de
                     </property>
                     <property name="text">
                         <string>No &amp;hide</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+H</string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No hide&lt;/b&gt;
@@ -270,9 +252,6 @@ This option can be very useful in some situations, but it should be used with du
                     <property name="text">
                         <string>No su&amp;btree check</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+B</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No subtree check&lt;/b&gt;
 &lt;p&gt;
@@ -298,9 +277,6 @@ As a general guide, a home directory filesystem, which is normally exported at t
                     </property>
                     <property name="text">
                         <string>Insecure loc&amp;ks</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+K</string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;Insecure locks&lt;/b&gt;
@@ -349,9 +325,6 @@ Early NFS client implementations did not send credentials with lock requests, an
                     <property name="text">
                         <string>All s&amp;quash</string>
                     </property>
-                    <property name="accel">
-                        <string>Alt+Q</string>
-                    </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;All squash&lt;/b&gt;
 &lt;p&gt;
@@ -364,9 +337,6 @@ Map all uids and gids to the anonymous user. Useful for NFS-exported public FTP 
                     </property>
                     <property name="text">
                         <string>No &amp;root squash</string>
-                    </property>
-                    <property name="accel">
-                        <string>Alt+R</string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>&lt;b&gt;No root squash&lt;/b&gt;

@@ -45,6 +45,7 @@
 
 #include "../advanced/propsdlgplugin/propertiespage.h"
 #include "../advanced/nfs/nfsfile.h"
+#include "../advanced/kcm_sambaconf/sambafile.h"
 
 #include "controlcenter.h"
 #include "fileshare.h"
@@ -55,6 +56,7 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 
 
 #define FILESHARECONF "/etc/security/fileshare.conf"
+#define FILESHARE_DEBUG 5009
 
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
     KCModule(ShareFactory::instance(), parent, name)
@@ -269,21 +271,39 @@ void KFileShareConfig::addShareBtnClicked() {
   showShareDialog(KFileItemList());
 }
 
-void KFileShareConfig::showShareDialog(const KFileItemList & files) {
-  KDialogBase* dlg = new KDialogBase(this,"sharedlg", true,
-                i18n("Share Folder"), KDialogBase::Ok|KDialogBase::Cancel, 
-                KDialogBase::Ok, true);
-                
-  QVBox* vbox = dlg->makeVBoxMainWidget();
+
+PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
+  : KDialogBase(parent, "sharedlg", true,
+                i18n("Share Folder"), Ok|Cancel, Ok, true)
+{
+  QVBox* vbox = makeVBoxMainWidget();
   
-  PropertiesPage* page = new PropertiesPage(vbox,files,true);
+  m_page = new PropertiesPage(vbox,files,true);
+}  
+
+bool PropertiesPageDlg::hasChanged() {
+  return m_page->hasChanged();
+}
+
+void PropertiesPageDlg::slotOk() {
+  if (hasChanged()) {
+    if (!m_page->save())
+        return;
+  }
+
+  KDialogBase::slotOk();
+}
+
+
+
+void KFileShareConfig::showShareDialog(const KFileItemList & files) {
+  PropertiesPageDlg* dlg = new PropertiesPageDlg(this,files);              
   if (dlg->exec() == QDialog::Accepted) {
-    if ( page->hasChanged() ) {
-         page->save();
+    if ( dlg->hasChanged() ) {
          updateShareListView();
     }
   }  
-  
+  delete dlg;
 }
 
 void KFileShareConfig::changeShareBtnClicked() {
@@ -302,13 +322,39 @@ void KFileShareConfig::removeShareBtnClicked() {
   
   QPtrList<QListViewItem> items = m_ccgui->listView->selectedItems();
   QListViewItem *item;
-  NFSFile nfsFile(KNFSShare::instance()->exportsPath());
-  nfsFile.load();
+  
+  bool nfs = false;
+  bool samba = false;
+  
   for ( item = items.first(); item; item = items.next() ) {
-      nfsFile.removeEntryByPath(item->text(0));
+      
+      if (KNFSShare::instance()->isDirectoryShared(item->text(0)))
+          nfs = true;
+  
+      if (KSambaShare::instance()->isDirectoryShared(item->text(0)))
+          samba = true;
+  }
+
+  if (nfs) {
+    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
+    NFSFile nfsFile(KNFSShare::instance()->exportsPath());
+    nfsFile.load();
+    for ( item = items.first(); item; item = items.next() ) {
+        nfsFile.removeEntryByPath(item->text(0));
+    }
+    nfsFile.save();
   }
   
-  nfsFile.save();
+  if (samba) {
+    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;  
+    SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
+    smbFile.load();
+    for ( item = items.first(); item; item = items.next() ) {
+        smbFile.removeShareByPath(item->text(0));
+    }
+    smbFile.save();
+  }    
+  
   updateShareListView();
 }
 

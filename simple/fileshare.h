@@ -56,4 +56,21 @@ class KFileShareConfig  : public KCModule
   
 };
 
+class PropertiesPageDlg : public KDialogBase
+{
+Q_OBJECT
+public: 
+  PropertiesPageDlg(QWidget * parent, KFileItemList files);
+  ~PropertiesPageDlg() {};
+  bool hasChanged();
+protected:
+  PropertiesPage* m_page;
+  
+protected slots:
+  virtual void slotOk();
+
+};
+
+
+
 #endif

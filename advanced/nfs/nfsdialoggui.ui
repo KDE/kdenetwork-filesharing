@@ -39,12 +39,8 @@
                 <string>A list of allowed hosts</string>
             </property>
             <property name="whatsThis" stdset="0">
-                <string>Here you can see a list of hosts, which are allowed
-to access this directory.
-The first column shows you the name or adress of the host,
-the second column shows you the access parameters.
-You can edit both values by hitting the modify host button
-or by doubleclick.</string>
+                <string>Here you can see a list of hosts which are allowed to access this directory via NFS.
+The first column shows the name or adress of the host, the second column shows the access parameters. The name '*' donates public access.</string>
             </property>
             <grid>
                 <property name="name">

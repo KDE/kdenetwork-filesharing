@@ -40,6 +40,7 @@
 #include <qpixmap.h>
 #include <qbitmap.h>
 #include <qlayout.h>
+#include <qtabwidget.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -49,11 +50,14 @@
 #include <kdeprint/kmprinter.h>
 #include <kcombobox.h>
 #include <kiconloader.h>
+#include <klocale.h>
 
 #include <assert.h>
 
 #include "sambafile.h"
 #include "printerdlgimpl.h"
+#include "usertabimpl.h"
+#include "passwd.h"
 
 PrinterDlgImpl::PrinterDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmPrinterDlg(parent,"sharedlgimpl")
@@ -82,8 +86,7 @@ void PrinterDlgImpl::initDialog()
     }
   }
 
-	int i = queueCombo->listBox()->index(queueCombo->listBox()->findItem(_share->getValue("printer name"),Qt::ExactMatch));
-  queueCombo->setCurrentItem(i);
+  setComboToString(queueCombo,_share->getValue("printer name"));
 
   pathUrlRq->setURL( _share->getValue("path") );
   printersChk->setChecked( _share->getName() == "printers" );
@@ -96,15 +99,23 @@ void PrinterDlgImpl::initDialog()
   printableBaseChk->setChecked( _share->getBoolValue("printable") );
   publicBaseChk->setChecked( _share->getBoolValue("public") );
 
+  // Users
+
+  _userTab = new UserTabImpl(this,_share);
+  _tabs->insertTab(_userTab,i18n("&Users"),1);
+  _userTab->load();
+
   // Printing
 
   printableChk->setChecked( _share->getBoolValue("printable") );
   postscriptChk->setChecked( _share->getBoolValue("postscript") );
 
   maxPrintJobsInput->setValue( _share->getValue("max print jobs").toInt() );
-  printingCombo->setCurrentText( _share->getValue("printing") );
+  setComboToString(printingCombo,_share->getValue("printing"));
 
-  printerDriverEdit->setText( _share->getValue("printer friver") );
+  kdDebug() << _share->getValue("printing") << endl;
+
+  printerDriverEdit->setText( _share->getValue("printer driver") );
   printerDriverFileEdit->setText( _share->getValue("printer driver file") );
   printerDriverLocationEdit->setText( _share->getValue("printer driver location") );
 
@@ -120,8 +131,8 @@ void PrinterDlgImpl::initDialog()
 
   // Security
 
-//  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
-  guestAccountEdit->setText( _share->getValue("guest account") );
+  guestAccountCombo->insertStringList( getUnixUsers() );
+  setComboToString(guestAccountCombo,_share->getValue("guest account"));
   printerAdminEdit->setText( _share->getValue("printer admin") );
   hostsAllowEdit->setText( _share->getValue("hosts allow") );
   hostsDenyEdit->setText( _share->getValue("hosts deny") );
@@ -161,6 +172,10 @@ void PrinterDlgImpl::accept()
   _share->setValue("printable",printableBaseChk->isChecked( ) );
   _share->setValue("public",publicBaseChk->isChecked( ) );
 
+  // users
+
+  _userTab->save();
+
   // Printing
 
   _share->setValue("printable",printableChk->isChecked());
@@ -169,7 +184,7 @@ void PrinterDlgImpl::accept()
   _share->setValue("max print jobs", QString("%1").arg(maxPrintJobsInput->value()) );
   _share->setValue("printing",printingCombo->currentText( ) );
 
-  _share->setValue("printer friver",printerDriverEdit->text( ) );
+  _share->setValue("printer driver",printerDriverEdit->text( ) );
   _share->setValue("printer driver file",printerDriverFileEdit->text( ) );
   _share->setValue("printer driver location",printerDriverLocationEdit->text( ) );
 
@@ -186,7 +201,7 @@ void PrinterDlgImpl::accept()
   // Security
 
 //-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
-  _share->setValue("guest account",guestAccountEdit->text( ) );
+  _share->setValue("guest account",guestAccountCombo->currentText( ) );
   _share->setValue("printer admin",printerAdminEdit->text( ) );
   _share->setValue("hosts allow",hostsAllowEdit->text( ) );
   _share->setValue("hosts deny",hostsDenyEdit->text( ) );

@@ -38,6 +38,7 @@
 
 class SambaShare;
 class QWidget;
+class UserTabImpl;
 
 /**
  * This class implements the tcmprinterdlg.ui interface
@@ -63,6 +64,8 @@ protected :
    * The share object to change with this dialog
    **/
 	SambaShare* _share;
+
+  UserTabImpl* _userTab;
 
 protected slots:
 	void accept();

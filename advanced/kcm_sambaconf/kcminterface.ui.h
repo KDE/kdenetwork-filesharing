@@ -20,3 +20,4 @@ void KcmInterface::init()
     editDefaultPrinterBtn->setIconSet(SmallIcon("print_class"));
     
 }
+

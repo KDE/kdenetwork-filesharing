@@ -9,7 +9,7 @@
             <x>0</x>
             <y>0</y>
             <width>582</width>
-            <height>454</height>
+            <height>460</height>
         </rect>
     </property>
     <property name="caption">
@@ -63,6 +63,12 @@
                             <widget class="QLabel">
                                 <property name="name">
                                     <cstring>TextLabel1</cstring>
+                                </property>
+                                <property name="frameShape">
+                                    <enum>MShape</enum>
+                                </property>
+                                <property name="frameShadow">
+                                    <enum>MShadow</enum>
                                 </property>
                                 <property name="text">
                                     <string>Samba Configfile</string>
@@ -1149,7 +1155,7 @@
                         <property name="title">
                             <string>Domain settings</string>
                         </property>
-                        <grid>
+                        <vbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
@@ -1159,39 +1165,71 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QCheckBox" row="0" column="0">
+                            <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>preferredMaster</cstring>
+                                    <cstring>Layout107</cstring>
                                 </property>
-                                <property name="text">
-                                    <string>Preferred master</string>
-                                </property>
+                                <grid>
+                                    <property name="name">
+                                        <cstring>unnamed</cstring>
+                                    </property>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QCheckBox" row="1" column="0">
+                                        <property name="name">
+                                            <cstring>local</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Local master</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="0" column="0">
+                                        <property name="name">
+                                            <cstring>preferredMaster</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>0</hsizetype>
+                                                <vsizetype>0</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="text">
+                                            <string>Preferred master</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="0" column="1">
+                                        <property name="name">
+                                            <cstring>logons</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Domain logons</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="QCheckBox" row="1" column="1">
+                                        <property name="name">
+                                            <cstring>domainMaster</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>Domain master</string>
+                                        </property>
+                                    </widget>
+                                </grid>
                             </widget>
-                            <widget class="QCheckBox" row="1" column="0">
-                                <property name="name">
-                                    <cstring>local</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Local master</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="0" column="1">
-                                <property name="name">
-                                    <cstring>logons</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Domain logons</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="1" column="1">
-                                <property name="name">
-                                    <cstring>domainMaster</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>Domain master</string>
-                                </property>
-                            </widget>
-                            <widget class="QLayoutWidget" row="2" column="0">
+                            <widget class="QLayoutWidget">
                                 <property name="name">
                                     <cstring>Layout16</cstring>
                                 </property>
@@ -1211,7 +1249,7 @@
                                         </property>
                                         <property name="sizePolicy">
                                             <sizepolicy>
-                                                <hsizetype>5</hsizetype>
+                                                <hsizetype>0</hsizetype>
                                                 <vsizetype>5</vsizetype>
                                                 <horstretch>0</horstretch>
                                                 <verstretch>0</verstretch>
@@ -1253,7 +1291,7 @@
                                     </spacer>
                                 </hbox>
                             </widget>
-                        </grid>
+                        </vbox>
                     </widget>
                     <widget class="QButtonGroup">
                         <property name="name">
@@ -1466,7 +1504,7 @@
                     </property>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout58</cstring>
+                            <cstring>Layout31</cstring>
                         </property>
                         <hbox>
                             <property name="name">
@@ -1480,7 +1518,7 @@
                             </property>
                             <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>Layout57</cstring>
+                                    <cstring>Layout30</cstring>
                                 </property>
                                 <vbox>
                                     <property name="name">
@@ -1733,7 +1771,7 @@
                                                         <number>0</number>
                                                     </property>
                                                     <property name="spacing">
-                                                        <number>6</number>
+                                                        <number>8</number>
                                                     </property>
                                                     <widget class="QCheckBox" row="0" column="1">
                                                         <property name="name">
@@ -1766,6 +1804,14 @@
                                                         <property name="name">
                                                             <cstring>CheckBox52_2_3</cstring>
                                                         </property>
+                                                        <property name="sizePolicy">
+                                                            <sizepolicy>
+                                                                <hsizetype>0</hsizetype>
+                                                                <vsizetype>0</vsizetype>
+                                                                <horstretch>0</horstretch>
+                                                                <verstretch>0</verstretch>
+                                                            </sizepolicy>
+                                                        </property>
                                                         <property name="text">
                                                             <string>debug pid</string>
                                                         </property>
@@ -1774,6 +1820,14 @@
                                                         <property name="name">
                                                             <cstring>CheckBox52_2</cstring>
                                                         </property>
+                                                        <property name="sizePolicy">
+                                                            <sizepolicy>
+                                                                <hsizetype>0</hsizetype>
+                                                                <vsizetype>0</vsizetype>
+                                                                <horstretch>0</horstretch>
+                                                                <verstretch>0</verstretch>
+                                                            </sizepolicy>
+                                                        </property>
                                                         <property name="text">
                                                             <string>syslog only</string>
                                                         </property>
@@ -1781,6 +1835,14 @@
                                                     <widget class="QCheckBox" row="1" column="0">
                                                         <property name="name">
                                                             <cstring>CheckBox52_2_2</cstring>
+                                                        </property>
+                                                        <property name="sizePolicy">
+                                                            <sizepolicy>
+                                                                <hsizetype>0</hsizetype>
+                                                                <vsizetype>0</vsizetype>
+                                                                <horstretch>0</horstretch>
+                                                                <verstretch>0</verstretch>
+                                                            </sizepolicy>
                                                         </property>
                                                         <property name="text">
                                                             <string>timestamp</string>
@@ -1793,13 +1855,46 @@
                                             </widget>
                                         </vbox>
                                     </widget>
-                                    <widget class="QCheckBox">
+                                    <widget class="QLayoutWidget">
                                         <property name="name">
-                                            <cstring>getwdCacheChk</cstring>
+                                            <cstring>Layout29</cstring>
                                         </property>
-                                        <property name="text">
-                                            <string>getwd cache</string>
-                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="QPushButton">
+                                                <property name="name">
+                                                    <cstring>socketOptionsBtn</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Socket options</string>
+                                                </property>
+                                            </widget>
+                                            <spacer>
+                                                <property name="name" stdset="0">
+                                                    <cstring>Spacer19</cstring>
+                                                </property>
+                                                <property name="orientation">
+                                                    <enum>Horizontal</enum>
+                                                </property>
+                                                <property name="sizeType">
+                                                    <enum>Expanding</enum>
+                                                </property>
+                                                <property name="sizeHint">
+                                                    <size>
+                                                        <width>20</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </hbox>
                                     </widget>
                                 </vbox>
                             </widget>
@@ -1818,7 +1913,7 @@
                                         <number>11</number>
                                     </property>
                                     <property name="spacing">
-                                        <number>3</number>
+                                        <number>6</number>
                                     </property>
                                     <widget class="QLabel" row="1" column="0">
                                         <property name="name">
@@ -2009,174 +2104,17 @@
                                             <number>1000</number>
                                         </property>
                                     </widget>
+                                    <widget class="QCheckBox" row="9" column="0">
+                                        <property name="name">
+                                            <cstring>getwdCacheChk</cstring>
+                                        </property>
+                                        <property name="text">
+                                            <string>getwd cache</string>
+                                        </property>
+                                    </widget>
                                 </grid>
                             </widget>
                         </hbox>
-                    </widget>
-                    <widget class="QButtonGroup">
-                        <property name="name">
-                            <cstring>ButtonGroup2</cstring>
-                        </property>
-                        <property name="title">
-                            <string>Socket options</string>
-                        </property>
-                        <grid>
-                            <property name="name">
-                                <cstring>unnamed</cstring>
-                            </property>
-                            <property name="margin">
-                                <number>11</number>
-                            </property>
-                            <property name="spacing">
-                                <number>3</number>
-                            </property>
-                            <widget class="QCheckBox" row="0" column="1">
-                                <property name="name">
-                                    <cstring>SO_KEEPALIVEChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_KEEPALIVE</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="1" column="0">
-                                <property name="name">
-                                    <cstring>IPTOS_LOWDELAYChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>IPTOS_LOWDELAY</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="0" column="0">
-                                <property name="name">
-                                    <cstring>TCP_NODELAYChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>TCP_NODELAY</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="1" column="1">
-                                <property name="name">
-                                    <cstring>SO_REUSEADDRChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_REUSEADDR</string>
-                                </property>
-                            </widget>
-                            <widget class="QLabel" row="0" column="2">
-                                <property name="name">
-                                    <cstring>TextLabel6_5_3</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_SNDBUF</string>
-                                </property>
-                            </widget>
-                            <widget class="QLabel" row="1" column="2">
-                                <property name="name">
-                                    <cstring>TextLabel6_5_2_4</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_RCVBUF</string>
-                                </property>
-                            </widget>
-                            <widget class="QSpinBox" row="0" column="3">
-                                <property name="name">
-                                    <cstring>SO_SNDBUFSpin_2</cstring>
-                                </property>
-                                <property name="maxValue">
-                                    <number>100000</number>
-                                </property>
-                            </widget>
-                            <widget class="QLabel" row="3" column="2">
-                                <property name="name">
-                                    <cstring>TextLabel6_5_2_3_2</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_RCVLOWAT</string>
-                                </property>
-                            </widget>
-                            <widget class="QSpinBox" row="1" column="3">
-                                <property name="name">
-                                    <cstring>SO_RCVBUFSpin_2</cstring>
-                                </property>
-                                <property name="maxValue">
-                                    <number>100000</number>
-                                </property>
-                            </widget>
-                            <widget class="QSpinBox" row="2" column="3">
-                                <property name="name">
-                                    <cstring>SO_SNDLOWATSpin_2</cstring>
-                                </property>
-                                <property name="maxValue">
-                                    <number>100000</number>
-                                </property>
-                            </widget>
-                            <widget class="QSpinBox" row="3" column="3">
-                                <property name="name">
-                                    <cstring>SO_RCVLOWATSpin_2</cstring>
-                                </property>
-                                <property name="maxValue">
-                                    <number>100000</number>
-                                </property>
-                            </widget>
-                            <widget class="QLabel" row="2" column="2">
-                                <property name="name">
-                                    <cstring>TextLabel6_5_2_2_2</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_SNDLOWAT</string>
-                                </property>
-                            </widget>
-                            <spacer row="3" column="0">
-                                <property name="name" stdset="0">
-                                    <cstring>Spacer31</cstring>
-                                </property>
-                                <property name="orientation">
-                                    <enum>Vertical</enum>
-                                </property>
-                                <property name="sizeType">
-                                    <enum>Expanding</enum>
-                                </property>
-                                <property name="sizeHint">
-                                    <size>
-                                        <width>20</width>
-                                        <height>20</height>
-                                    </size>
-                                </property>
-                            </spacer>
-                            <widget class="QCheckBox" row="2" column="1">
-                                <property name="name">
-                                    <cstring>SO_BROADCASTChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>SO_BROADCAST</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox" row="2" column="0">
-                                <property name="name">
-                                    <cstring>IPTOS_THROUGHPUTChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>IPTOS_THROUGHPUT</string>
-                                </property>
-                            </widget>
-                            <spacer row="3" column="1">
-                                <property name="name" stdset="0">
-                                    <cstring>Spacer32</cstring>
-                                </property>
-                                <property name="orientation">
-                                    <enum>Vertical</enum>
-                                </property>
-                                <property name="sizeType">
-                                    <enum>Expanding</enum>
-                                </property>
-                                <property name="sizeHint">
-                                    <size>
-                                        <width>20</width>
-                                        <height>20</height>
-                                    </size>
-                                </property>
-                            </spacer>
-                        </grid>
                     </widget>
                     <spacer>
                         <property name="name" stdset="0">
@@ -2227,9 +2165,9 @@
     </connection>
 </connections>
 <includes>
-    <include location="local" impldecl="in implementation">kiconloader.h</include>
     <include location="global" impldecl="in declaration">qptrlist.h</include>
     <include location="global" impldecl="in declaration">share.h</include>
+    <include location="local" impldecl="in implementation">kiconloader.h</include>
     <include location="local" impldecl="in implementation">kcminterface.ui.h</include>
 </includes>
 <slots>

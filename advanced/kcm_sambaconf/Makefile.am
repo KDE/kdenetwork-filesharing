@@ -13,7 +13,7 @@ libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 ksambakonqiplugin_la_SOURCES = ksambapropertiesdialogplugin.cpp konqinterface.ui sambafile.cpp share.ui sharedlgimpl.cpp sambashare.cpp socketoptionsdlg.ui common.cpp usertab.ui usertabimpl.cpp filemodedlg.ui smbpasswdfile.cpp passwd.cpp filemodedlgimpl.cpp hiddenfileview.cpp dictmanager.cpp qmultichecklistitem.cpp smbconfconfigwidget.cpp linuxpermissionchecker.cpp
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
-ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module
+ksambakonqiplugin_la_LDFLAGS = $(all_libraries) $(KDE_PLUGIN) -module
 
 servicedir    = $(kde_servicesdir)
 service_DATA  = ksambakonqiplugin.desktop

@@ -38,5 +38,35 @@ void setComboToString(QComboBox* combo,const QString & s)
   combo->setCurrentItem(i);
 }
 
+bool boolFromText(const QString & value, bool testTrue)
+{
+  QString lower = value.lower();
+  
+  if (testTrue) {
+    if (lower=="yes" ||
+        lower=="1" ||
+        lower=="true" ||
+        lower=="on")
+      return true;
+    else
+      return false;
+  } else {
+    if (lower=="no" ||
+        lower=="0" ||
+        lower=="false" ||
+        lower=="off")
+      return false;
+    else
+      return true;
+  }
+}
+
+QString textFromBool(bool value)
+{
+  if (value)
+    return "yes";
+  else
+    return "no";
+}
 
 

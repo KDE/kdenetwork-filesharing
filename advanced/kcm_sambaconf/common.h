@@ -34,4 +34,7 @@ class QComboBox;
 
 
 void setComboToString(QComboBox*,const QString &);
+bool boolFromText(const QString & value,bool testTrue=true);
+QString textFromBool(bool value);
+
 #endif

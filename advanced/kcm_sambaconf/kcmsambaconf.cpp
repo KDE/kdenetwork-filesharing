@@ -2,8 +2,11 @@
                           kcmsambaconf.cpp  -  description
                              -------------------
     begin                : Mon Apr  8 13:35:56 CEST 2002
-    copyright            : (C) 2002 by Christian Nitschkowski
+    copyright            : (C) 2002 by Christian Nitschkowski,
     email                : segfault_ii@web.de
+
+    copyright            : (C) 2002 by Jan Schäfer
+    email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
 /***************************************************************************
@@ -14,37 +17,77 @@
  *   (at your option) any later version.                                   *
  *                                                                         *
  ***************************************************************************/
+#include <assert.h>
+
 #include <qlayout.h>
+#include <qgroupbox.h>
+
 
 #include <klocale.h>
 #include <kglobal.h>
 #include <klineedit.h>
 #include <kurlrequester.h>
-#include <kdeprint/kmmanager.h>
-#include <kdeprint/kmprinter.h>
 #include <kcombobox.h>
+#include <kdebug.h>
+#include <kiconloader.h>
+
+#include "sambashare.h"
+#include "sambafile.h"
+#include "sharedlgimpl.h"
+#include "printerdlgimpl.h"
 
 #include "kcmsambaconf.h"
 
+
+ShareListViewItem::ShareListViewItem(QListView * parent, SambaShare* share)
+	: QListViewItem(parent)
+{
+	setShare(share);
+}
+
+SambaShare* ShareListViewItem::getShare() const
+{
+	return _share;
+}
+
+void ShareListViewItem::setShare(SambaShare* share)
+{
+	assert(share);
+  _share = share;
+  setText(0,_share->getName());
+  
+  if (_share->isPrinter())
+  {
+  	setPixmap(0,SmallIcon("print_printer"));
+    setText(1,_share->getValue("printer name"));
+  }
+  else
+  {
+  	setPixmap(0,SmallIcon("folder"));
+    setText(1,_share->getValue("path"));
+  }
+
+}
+
+
 KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name):KCModule(parent,name)
 {
-	QPtrList<KMPrinter> *printerList = KMManager::self()->printerList();
+
 	QBoxLayout * l = new QHBoxLayout( this );
 	l->setAutoAdd( TRUE );
-	interface = new KcmInterface(this);
-//	shareDialog = new KcmShareDlg(this);
-//	interface->setShareDlg(shareDialog);
-	
-//	shareDialog->path->setMode(2+8+16);
-	
-	for (QPtrListIterator<KMPrinter> it(*printerList); it.current(); ++it){
-		if (!it.current()->isSpecial()){
-			shareDialog->queue->insertItem(it.current()->printerName());
-		}
-	}
-	
-//	connect ( interface, SIGNAL(editShare(shareData*)), shareDialog, SLOT(edit(shareData*)));
-	
+
+	_interface = new KcmInterface(this);
+
+	connect ( _interface->editShareBtn, SIGNAL(pressed()), this, SLOT(editShare()));
+	connect ( _interface->addShareBtn, SIGNAL(pressed()), this, SLOT(addShare()));
+	connect ( _interface->removeShareBtn, SIGNAL(pressed()), this, SLOT(removeShare()));
+
+	connect ( _interface->editPrinterBtn, SIGNAL(pressed()), this, SLOT(editPrinter()));
+	connect ( _interface->addPrinterBtn, SIGNAL(pressed()), this, SLOT(addPrinter()));
+	connect ( _interface->removePrinterBtn, SIGNAL(pressed()), this, SLOT(removePrinter()));
+
+	connect ( _interface->editDefaultPrinterBtn, SIGNAL(pressed()), this, SLOT(editPrinterDefaults()));
+	connect ( _interface->editDefaultShareBtn, SIGNAL(pressed()), this, SLOT(editShareDefaults()));
 	load();
 };
 
@@ -53,8 +96,124 @@ KcmSambaConf::~KcmSambaConf() {
 }
 
 
-void KcmSambaConf::load() {
-	// insert your loading code here...
+void KcmSambaConf::editShare() 
+{
+	ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->shareListView->selectedItem());
+  
+  if (!item)
+  	 return;
+
+  ShareDlgImpl* dlg = new ShareDlgImpl(_interface,item->getShare());
+  dlg->exec();
+}
+
+void KcmSambaConf::addShare()
+{
+	SambaShare* share = _sambaFile->newShare(_sambaFile->getUnusedName(),"");
+  ShareListViewItem* item = new ShareListViewItem( _interface->shareListView, share );
+  _interface->shareListView->setSelected(item,true);
+
+  ShareDlgImpl* dlg = new ShareDlgImpl(_interface,share);
+  dlg->exec();
+
+  if (dlg->result() == QDialog::Rejected )
+  	 removeShare();
+}
+
+void KcmSambaConf::removeShare()
+{
+	ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->shareListView->selectedItem());
+
+  if (!item)
+  	 return;
+
+	SambaShare *share = item->getShare();
+  delete item;
+  _sambaFile->removeShare(share);
+}
+
+
+void KcmSambaConf::editPrinter()
+{
+	ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->printerListView->selectedItem());
+
+  if (!item)
+  	 return;
+
+  PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,item->getShare());
+  dlg->exec();
+}
+
+void KcmSambaConf::addPrinter()
+{
+	SambaShare* share = _sambaFile->newPrinter(_sambaFile->getUnusedName(),"");
+  ShareListViewItem* item = new ShareListViewItem( _interface->shareListView, share );
+  _interface->printerListView->setSelected(item,true);
+
+  PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,share);
+  dlg->exec();
+
+  if (dlg->result() == QDialog::Rejected )
+  	 removePrinter();
+}
+
+void KcmSambaConf::removePrinter() 
+{
+	ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->printerListView->selectedItem());
+
+  if (!item)
+  	 return;
+
+	SambaShare *share = item->getShare();
+  delete item;
+  _sambaFile->removeShare(share);
+}
+
+void KcmSambaConf::editShareDefaults()
+{
+	SambaShare* share = _sambaFile->getShare("global");
+
+  ShareDlgImpl* dlg = new ShareDlgImpl(_interface,share);
+  dlg->directoryGrp->setEnabled(false);
+  dlg->identifierGrp->setEnabled(false);
+  dlg->exec();
+}
+
+void KcmSambaConf::editPrinterDefaults()
+{
+	SambaShare* share = _sambaFile->getShare("global");
+
+  PrinterDlgImpl* dlg = new PrinterDlgImpl(_interface,share);
+  dlg->printerGrp->setEnabled(false);
+  dlg->identifierGrp->setEnabled(false);
+  dlg->exec();
+}
+
+
+void KcmSambaConf::load() 
+{
+  _smbconf = SambaFile::findSambaConf();
+
+	_sambaFile = new SambaFile(_smbconf);
+
+  
+  // Fill the ListViews
+
+  SambaShareList* list = _sambaFile->getSharedDirs();
+
+  SambaShare *share = 0L;
+  for ( share = list->first(); share; share = list->next() )
+  {
+  	new ShareListViewItem(_interface->shareListView, share);
+  }
+
+  share = 0L;
+  list = _sambaFile->getSharedPrinters();
+  for ( share = list->first(); share; share = list->next() )
+  {
+  	new ShareListViewItem(_interface->printerListView, share);
+  }
+
 }
 
 void KcmSambaConf::defaults() {

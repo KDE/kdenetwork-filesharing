@@ -1,4 +1,17 @@
 [Desktop Entry]
+DocPath=
+Exec=kcmshell kcmsambaconf
+Icon=samba
+Type=Application
+
+Terminal=false
+X-KDE-FactoryName=KcmSambaConf
+X-KDE-Library=kcmsambaconf
+X-KDE-ModuleType=Library
+X-KDE-SubstituteUID=false
+X-KDE-HasReadOnlyMode=false
+X-KDE-RootOnly=true
+
 Comment=KcmSambaConf - a KControl module for configuring a samba server
 Comment[bs]=KcmSambaConf - KControl modul za podešavanje samba servera
 Comment[da]=KcmSambaConf - et KControl-modul for indstilling af en samba-server
@@ -16,9 +29,6 @@ Comment[sv]=IM Samba: en modul i Inställningscentralen för att anpassa en Samb
 Comment[uk]=KcmSambaConf - модуль налаштування сервера Samba для KControl
 Comment[ven]=KcmSambaConf - a KControl module yau dzudzanya siva ya samba
 Comment[xh]=KcmSambaConf - umnqongo womlinganiselo we KControl wokuqwalasela umncedisi we samba
-DocPath=
-Exec=kcmshell kcmsambaconf
-Icon=samba
 Keywords=KcmSambaConf,kcmsambaconf
 Keywords[de]=Samba
 Keywords[nl]=Kcm_SambaConf,kcmsambaconf,samba,smb,windows netwerken,server
@@ -50,13 +60,3 @@ Name[uk]=Конфігурація Samba
 Name[ven]=Dzudzanyo ya Samba
 Name[xh]=Uqwalaselo lwencoko
 Name[zu]=Inhlanganiselo Ye Samba
-SwallowExec=
-SwallowTitle=
-Terminal=false
-TerminalOptions=
-Type=Application
-X-KDE-FactoryName=KcmSambaConf
-X-KDE-Library=kcmsambaconf
-X-KDE-ModuleType=Library
-X-KDE-SubstituteUID=false
-X-KDE-Username=

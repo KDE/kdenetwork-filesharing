@@ -262,24 +262,25 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 
   if (!share.isEmpty() && shareWidget->notSharedRadio->isChecked())
   {
-    sambaFile.removeShare(share);
+    sambaFile.removeShare(_share);
+    _share = 0L;
   } 
   if (!share.isEmpty() && share != shareWidget->nameEdit->text())
   {
-  	sambaFile.renameShare(share, shareWidget->nameEdit->text());
+  	_share->setName( shareWidget->nameEdit->text() );
     share = shareWidget->nameEdit->text();
   }
 
   if (!share.isEmpty() && shareWidget->sharedRadio->isChecked());
   {
-    sambaFile.writeValue(share, "comment", shareWidget->commentEdit->text());
-    sambaFile.writeValue(share, "read only", shareWidget->readOnlyChk->isChecked());
-    sambaFile.writeValue(share, "guest ok", shareWidget->guestOkChk->isChecked());
-    sambaFile.writeValue(share, "guest account", shareWidget->guestEdit->text());
-    sambaFile.writeValue(share, "hosts allow", shareWidget->allowEdit->text());
-    sambaFile.writeValue(share, "hosts deny", shareWidget->denyEdit->text());
-    sambaFile.writeValue(share, "browseable", shareWidget->browseableChk->isChecked());
-    sambaFile.writeValue(share, "availabe", shareWidget->availableChk->isChecked());
+  	_share->setValue("comment",shareWidget->commentEdit->text());
+    _share->setValue("read only", shareWidget->readOnlyChk->isChecked());
+    _share->setValue("guest ok", shareWidget->guestOkChk->isChecked());
+    _share->setValue("guest account", shareWidget->guestEdit->text());
+    _share->setValue("hosts allow", shareWidget->allowEdit->text());
+    _share->setValue("hosts deny", shareWidget->denyEdit->text());
+    _share->setValue("browseable", shareWidget->browseableChk->isChecked());
+    _share->setValue("availabe", shareWidget->availableChk->isChecked());
   }
 
 

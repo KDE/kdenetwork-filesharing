@@ -47,6 +47,9 @@ typedef QPtrList<UnixUser> UnixUserList;
 UnixUserList getUnixUserList();
 QStringList getUnixUsers();
 QStringList getUnixGroups();
+int getUserUID(const QString &);
+int getUserGID(const QString &);
+int getGroupGID(const QString &);
 
 
 

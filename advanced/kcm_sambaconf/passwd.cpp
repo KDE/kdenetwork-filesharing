@@ -41,6 +41,8 @@ UnixUserList getUnixUserList()
 
   while ((p = getpwent()))
   {
+    if (!p) continue;
+
     UnixUser *u = new UnixUser();
     u->name = p->pw_name;
     u->uid = p->pw_uid;
@@ -62,7 +64,8 @@ QStringList getUnixUsers()
 
   while ((p = getpwent()))
   {
-    list.append(QString(p->pw_name));
+    if (p)
+       list.append(QString(p->pw_name));
   }
 
   endpwent();
@@ -80,7 +83,8 @@ QStringList getUnixGroups()
 
   while ((g = getgrent()))
   {
-    list.append(QString(g->gr_name));
+    if (g)
+       list.append(QString(g->gr_name));
   }
 
   endgrent();
@@ -90,3 +94,38 @@ QStringList getUnixGroups()
   return list;
 }
 
+int getUserUID(const QString & name)
+{
+  struct passwd* p;
+
+  p = getpwnam(name);
+
+  if (p)
+     return p->pw_uid;
+
+  return -1;
+}
+
+int getUserGID(const QString & name)
+{
+  struct passwd* p;
+
+  p = getpwnam(name);
+
+  if (p)
+    return p->pw_gid;
+
+  return -1;
+}
+
+int getGroupGID(const QString & name)
+{
+  struct group* g;
+
+  g = getgrnam(name);
+
+  if (g)
+    return g->gr_gid;
+
+  return -1;
+}

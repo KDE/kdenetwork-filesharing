@@ -205,6 +205,7 @@ bool SambaFile::slotApply()
     return (job->error()==0);
   }
 
+  return true;
 }
 
   /**

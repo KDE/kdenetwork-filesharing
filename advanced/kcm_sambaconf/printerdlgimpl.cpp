@@ -35,6 +35,11 @@
 #include <qcombobox.h>
 #include <qlabel.h>
 #include <qlistbox.h>
+#include <qpainter.h>
+#include <qgroupbox.h>
+#include <qpixmap.h>
+#include <qbitmap.h>
+#include <qlayout.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -43,7 +48,7 @@
 #include <kdeprint/kmmanager.h>
 #include <kdeprint/kmprinter.h>
 #include <kcombobox.h>
-#include <qgroupbox.h>
+#include <kiconloader.h>
 
 #include <assert.h>
 
@@ -133,6 +138,7 @@ void PrinterDlgImpl::initDialog()
   rootPostExecEdit->setText( _share->getValue("root postexec") );
 
   // Hidden files
+  
 }
 
 void PrinterDlgImpl::accept()
@@ -201,6 +207,55 @@ void PrinterDlgImpl::accept()
 
 PrinterDlgImpl::~PrinterDlgImpl()
 {
+}
+
+void PrinterDlgImpl::printersChkToggled(bool b)
+{
+	if (b)
+  {
+		shareNameEdit->setText("printers");
+    shareNameEdit->setEnabled(false);
+    
+    int dist = 10;
+		int w = 64 + dist;
+    int h = 64 + 2*dist;
+
+    QPixmap pix(w,h);
+    pix.fill(); // fill with white
+
+		QPixmap pix2 = DesktopIcon("printer1");
+
+    // Draw the printericon three times
+    QPainter p(&pix);
+    p.drawPixmap(dist+dist/2,0,pix2);
+    p.drawPixmap(dist/2,dist,pix2);
+    p.drawPixmap(dist+dist/2,2*dist,pix2);
+		p.end();
+
+  	QBitmap mask(w,h);
+
+    mask.fill(Qt::black); // everything is transparent
+
+    p.begin(&mask);
+    
+    p.setRasterOp(Qt::OrROP);
+    p.drawPixmap(dist+dist/2,0,*pix2.mask());
+    p.drawPixmap(dist/2,dist,*pix2.mask());
+    p.drawPixmap(dist+dist/2,2*dist,*pix2.mask());
+		p.end();
+
+		pix.setMask(mask);
+
+    printerPixLbl->setPixmap(pix);
+		pixFrame->layout()->setMargin( 2 );
+  }
+	else
+  {
+  	shareNameEdit->setEnabled(true);
+		shareNameEdit->setText( _share->getName() );
+		printerPixLbl->setPixmap(DesktopIcon("printer1"));
+		pixFrame->layout()->setMargin( 11 );
+  }
 }
 
 #include "printerdlgimpl.moc"

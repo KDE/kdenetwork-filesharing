@@ -21,3 +21,8 @@ void KcmPrinterDlg::reject()
 {
     QDialog::reject();
 }
+
+void KcmPrinterDlg::printersChkToggled( bool )
+{
+
+}

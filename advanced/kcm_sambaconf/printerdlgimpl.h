@@ -66,6 +66,7 @@ protected :
 
 protected slots:
 	void accept();
+  virtual void printersChkToggled(bool);
 };
 
 

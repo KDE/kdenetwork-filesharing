@@ -59,6 +59,7 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
   m_sambaFile(0), 
   m_sambaShare(0),
   m_sambaChanged(false),
+  m_nfsChanged(false),
   m_loaded(false)
 {
   if (m_items.isEmpty()) {
@@ -74,7 +75,9 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
     urlRq->setMode(KFile::Directory |
                    KFile::ExistingOnly |
                    KFile::LocalOnly );
-    urlRq->setURL(m_path);                   
+    urlRq->setURL(m_path);            
+    connect( urlRq, SIGNAL(textChanged(const QString&)),
+             this, SLOT(urlRqTextChanged(const QString&)));       
   } else {
     urlRq->hide();
     folderLbl->hide();
@@ -93,6 +96,24 @@ PropertiesPage::~PropertiesPage()
 {
   delete m_nfsFile;
   delete m_sambaFile;
+}
+
+void PropertiesPage::urlRqTextChanged(const QString&) {
+  if (!m_enterUrl)
+      return;
+      
+  KURL url(urlRq->url());
+  if (url.isLocalFile()) {
+      QFileInfo info(url.path(1));
+      if (info.exists() &&
+          info.isDir()) 
+      {
+         shareFrame->setEnabled(true);   
+         return;
+      }
+  }      
+  
+  shareFrame->setDisabled(true);
 }
 
 void PropertiesPage::load() {
@@ -132,15 +153,22 @@ bool PropertiesPage::save() {
       return true;
   }
   
-  if (!checkURL())
+  if (!checkURL()) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: url check failed." << endl;
       return false;
+  }      
   
-  if (!saveNFS())
+  if (!saveNFS()) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: NFS saving failed." << endl;
       return false;
+  }      
       
-  if (!saveSamba())
+  if (!saveSamba()) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Samba saving failed." << endl;
       return false;
+  }      
   
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successfull." << endl;
   return true;
 }
 
@@ -248,12 +276,14 @@ bool PropertiesPage::loadNFS() {
 
 void PropertiesPage::loadNFSEntry() {
   m_nfsEntry = m_nfsFile->getEntryByPath(m_path);
+  m_nfsChanged = false;
   
   if (!m_nfsEntry) {
     nfsChk->setChecked(false);
     return;
   }
   
+        
   NFSHost* publicHost = m_nfsEntry->getPublicHost();
 
   if (publicHost) {
@@ -265,18 +295,23 @@ void PropertiesPage::loadNFSEntry() {
 
 bool PropertiesPage::saveNFS() {
   updateNFSEntry();
+  if (!m_nfsChanged) {
+      kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: NFS did not change." << endl;
+      return true;
+  }      
+      
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: saving..." << endl;
   return m_nfsFile->save();    
 }
 
-bool PropertiesPage::updateNFSEntry() {
-  bool changed = false;
+void PropertiesPage::updateNFSEntry() {
   if (shareChk->isChecked() && 
       nfsChk->isChecked()) 
   {
     if (!m_nfsEntry) {
         m_nfsEntry = new NFSEntry(m_path);
         m_nfsFile->addEntry(m_nfsEntry);
-        changed = true;
+        m_nfsChanged = true;
     }
   
     NFSHost* publicHost = m_nfsEntry->getPublicHost();        
@@ -286,28 +321,26 @@ bool PropertiesPage::updateNFSEntry() {
           publicHost = new NFSHost("*");
           publicHost->allSquash=true;
           m_nfsEntry->addHost(publicHost);
-          changed = true;
+          m_nfsChanged = true;
       } 
       
       if (publicHost->readonly != !writableNFSChk->isChecked()) {
           publicHost->readonly  = !writableNFSChk->isChecked();
-          changed = true;
+          m_nfsChanged = true;
       }          
     } else {
       if (publicHost) {
           m_nfsEntry->removeHost(publicHost);
-          changed = true;
+          m_nfsChanged = true;
       }
     }
   } else { // unshare
     if (m_nfsEntry) {
       m_nfsFile->removeEntry(m_nfsEntry);
       m_nfsEntry = 0;
-      changed = true;
+      m_nfsChanged = true;
     } 
   }
-
-  return changed;      
 }
 
 void PropertiesPage::moreNFSBtn_clicked() {
@@ -316,8 +349,9 @@ void PropertiesPage::moreNFSBtn_clicked() {
   if (dlg->exec()==QDialog::Accepted &&
       dlg->modified()) 
   {
-    kdDebug() << "NFSDialog::ok" << endl;
+    kdDebug(FILESHARE_DEBUG) << "NFSDialog::ok" << endl;
     loadNFSEntry();
+    m_nfsChanged = true;
     emit changed();    
   }
 }
@@ -397,7 +431,7 @@ bool PropertiesPage::updateSambaShare() {
       SambaShare* otherShare = m_sambaFile->getShare(sambaNameEdit->text());
       if (otherShare && otherShare != m_sambaShare) {
         // There is another Share with the same name
-        KMessageBox::sorry(this, i18n("<qt>There is already a share with the name <strong>%1</strong>.<br> Please choose another one.</qt>").arg(sambaNameEdit->text()));
+        KMessageBox::sorry(this, i18n("<qt>There is already a share with the name <strong>%1</strong>.<br> Please choose another name.</qt>").arg(sambaNameEdit->text()));
         sambaNameEdit->selectAll();
         sambaNameEdit->setFocus();
         return false;
@@ -414,8 +448,7 @@ bool PropertiesPage::updateSambaShare() {
       m_sambaChanged = true;
     }      
   }    
-
-  return m_sambaChanged;
+  return true;
 }
 
 void PropertiesPage::setSambaShareBoolValue(const QString & value, 

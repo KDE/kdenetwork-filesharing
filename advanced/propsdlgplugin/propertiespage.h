@@ -52,6 +52,7 @@ protected:
   SambaFile *m_sambaFile;
   SambaShare *m_sambaShare;
   bool m_sambaChanged;
+  bool m_nfsChanged;
   bool m_loaded;
   
 protected slots:
@@ -59,11 +60,12 @@ protected slots:
   virtual void moreNFSBtn_clicked();
   virtual void moreSambaBtnClicked();
   virtual void sambaChkToggled( bool b );
+  virtual void urlRqTextChanged(const QString&);
   
 private:
   bool loadNFS();  
   void loadNFSEntry();  
-  bool updateNFSEntry();
+  void updateNFSEntry();
   bool saveNFS();
   
   bool loadSamba();

@@ -1,21 +1,21 @@
 /***************************************************************************
-                          passwd.h  -  description
+                          passwd.cpp  -  description
                              -------------------
-    begin                : Tue June 6 2002
-    copyright            : (C) 2002 by Jan Schäfer
-    email                : janschaefer@users.sourceforge.net
+    begin                : Mon Apr  8 13:35:56 CEST 2002
+    copyright            : (C) 2002 by Christian Nitschkowski
+    email                : segfault_ii@web.de
  ***************************************************************************/
 
 /******************************************************************************
  *                                                                            *
- *  This file is part of KSambaPlugin.                                          *
+ *  This file is part of KSambaPlugin.                                        *
  *                                                                            *
- *  KSambaPlugin is free software; you can redistribute it and/or modify            *
+ *  KSambaPlugin is free software; you can redistribute it and/or modify      *
  *  it under the terms of the GNU General Public License as published by      *
  *  the Free Software Foundation; either version 2 of the License, or         *
  *  (at your option) any later version.                                       *
  *                                                                            *
- *  KSambaPlugin is distributed in the hope that it will be useful,                 *
+ *  KSambaPlugin is distributed in the hope that it will be useful,           *
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of            *
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the             *
  *  GNU General Public License for more details.                              *
@@ -26,28 +26,67 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef PASSWD_H
-#define PASSWD_H
 
-#include <qstringlist.h>
-#include <qstring.h>
-#include <qptrlist.h>
+#include <sys/types.h>
+#include <pwd.h>
+#include <grp.h>
 
+#include "passwd.h"
 
-
-class UnixUser
+UnixUserList getUnixUserList()
 {
-public:
-  QString name;
-  int uid;
-};
+  UnixUserList list;
 
-typedef QPtrList<UnixUser> UnixUserList;
+  struct passwd* p;
 
-UnixUserList getUnixUserList();
-QStringList getUnixUsers();
-QStringList getUnixGroups();
+  while ((p = getpwent()))
+  {
+    UnixUser *u = new UnixUser();
+    u->name = p->pw_name;
+    u->uid = p->pw_uid;
+    list.append(u);
+  }
 
+  endpwent();
 
+  list.sort();
 
-#endif
+  return list;
+}
+
+QStringList getUnixUsers()
+{
+  QStringList list;
+
+  struct passwd* p;
+
+  while ((p = getpwent()))
+  {
+    list.append(QString(p->pw_name));
+  }
+
+  endpwent();
+
+  list.sort();
+
+  return list;
+}
+
+QStringList getUnixGroups()
+{
+  QStringList list;
+
+  struct group* g;
+
+  while ((g = getgrent()))
+  {
+    list.append(QString(g->gr_name));
+  }
+
+  endgrent();
+
+  list.sort();
+
+  return list;
+}
+

@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.1" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
 <class>KonqInterface</class>
 <comment>
 /******************************************************************************
@@ -31,7 +31,7 @@
             <x>0</x>
             <y>0</y>
             <width>368</width>
-            <height>413</height>
+            <height>417</height>
         </rect>
     </property>
     <property name="caption">
@@ -72,7 +72,7 @@
                         <cstring>notSharedRadio</cstring>
                     </property>
                     <property name="text">
-                        <string>&amp;Not shared</string>
+                        <string>Not share&amp;d</string>
                     </property>
                     <property name="checked">
                         <bool>false</bool>
@@ -103,7 +103,7 @@
                 </font>
             </property>
             <property name="title">
-                <string>Base Options</string>
+                <string>Bas&amp;e Options</string>
             </property>
             <grid>
                 <property name="name">
@@ -178,7 +178,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Comment:</string>
+                        <string>Commen&amp;t:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>commentEdit</cstring>
@@ -243,7 +243,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>Hosts &amp;deny:</string>
+                        <string>Hosts den&amp;y:</string>
                     </property>
                     <property name="buddy" stdset="0">
                         <cstring>denyEdit</cstring>
@@ -312,7 +312,7 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Guests allowed</string>
+                        <string>G&amp;uests allowed</string>
                     </property>
                     <property name="toolTip" stdset="0">
                         <string></string>
@@ -368,7 +368,10 @@
                         </font>
                     </property>
                     <property name="text">
-                        <string>&amp;Browseable</string>
+                        <string>Bro&amp;wseable</string>
+                    </property>
+                    <property name="accel">
+                        <string>Alt+W</string>
                     </property>
                     <property name="whatsThis" stdset="0">
                         <string>This controls whether this share is seen in the list of available shares in a net view and in the browse list.</string>
@@ -435,7 +438,7 @@
                         <cstring>moreOptionsBtn</cstring>
                     </property>
                     <property name="text">
-                        <string>&amp;More Options</string>
+                        <string>More Opt&amp;ions</string>
                     </property>
                 </widget>
             </hbox>
@@ -522,18 +525,19 @@
     </connection>
 </connections>
 <tabstops>
+    <tabstop>notSharedRadio</tabstop>
+    <tabstop>sharedRadio</tabstop>
     <tabstop>nameEdit</tabstop>
     <tabstop>commentEdit</tabstop>
     <tabstop>readOnlyChk</tabstop>
     <tabstop>guestOkChk</tabstop>
+    <tabstop>guestAccountCombo</tabstop>
     <tabstop>allowEdit</tabstop>
     <tabstop>denyEdit</tabstop>
     <tabstop>browseableChk</tabstop>
     <tabstop>availableChk</tabstop>
+    <tabstop>moreOptionsBtn</tabstop>
 </tabstops>
-<includes>
-    <include location="local" impldecl="in implementation">konqinterface.ui.h</include>
-</includes>
 <signals>
     <signal>changed()</signal>
 </signals>

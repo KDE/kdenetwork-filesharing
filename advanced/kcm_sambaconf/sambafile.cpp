@@ -53,6 +53,14 @@ QString SambaConfigFile::getDefaultValue(const QString & name)
   return s;
 }
 
+SambaShare* SambaConfigFile::addShare(const QString & name)
+{
+  SambaShare* newShare = new SambaShare(name,this);
+  addShare(name,newShare);
+  return newShare;
+}
+
+
 void SambaConfigFile::addShare(const QString & name, SambaShare* share)
 {
   insert(name,share),
@@ -565,8 +573,7 @@ bool SambaFile::openFile() {
     {
       // get the name of the section
       QString section = completeLine.mid(1,completeLine.length()-2);
-      currentShare = new SambaShare(section,_sambaConfig);
-      _sambaConfig->addShare(section,currentShare);
+      currentShare = _sambaConfig->addShare(section);
       currentShare->setComments(comments);
       comments.clear();
 
@@ -593,6 +600,11 @@ bool SambaFile::openFile() {
 
   f.close();
 
+  // Make sure there is a global share
+  if (!getShare("global")) {
+     _sambaConfig->addShare("global");
+  }
+  
   return true;  
 }
 

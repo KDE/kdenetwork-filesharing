@@ -53,6 +53,7 @@ public:
   QString getDefaultValue(const QString & name);
   QStringList getShareList();
   void addShare(const QString & name, SambaShare* share);
+  SambaShare* addShare(const QString & name);
   void removeShare(const QString & name);
 protected:
   SambaFile* _sambaFile;
@@ -81,7 +82,7 @@ public:
 	void renameShare(const QString & oldName, const QString & newName);
 
   SambaShare* getShare(const QString & share) const;
-
+  
   /**
    * Returns a list of all shared directories
    **/

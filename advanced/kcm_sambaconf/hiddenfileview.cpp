@@ -201,21 +201,21 @@ void HiddenFileView::save()
   QString s = _dlg->hiddenEdit->text().stripWhiteSpace();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
-  if (s != "" && s.right(1)!="/")
+  if ( (!s.isEmpty()) && (s.right(1)!="/"))
       s+="/";
   _share->setValue("hide files", s);
 
   s = _dlg->vetoEdit->text().stripWhiteSpace();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
-  if (s != "" && s.right(1)!="/")
+  if ( (!s.isEmpty()) && (s.right(1)!="/"))
       s+="/";
   _share->setValue("veto files", s);
 
   s = _dlg->vetoOplockEdit->text().stripWhiteSpace();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
-  if (s != "" && s.right(1)!="/")
+  if ( (!s.isEmpty()) && (s.right(1)!="/"))
       s+="/";
   _share->setValue("veto oplock files", s);
 
@@ -528,7 +528,7 @@ QPtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
   QPtrList<QRegExp> lst;
   bool cs = _share->getBoolValue("case sensitive");
 
-  if (s != "")
+  if (!s.isEmpty())
   {
     QStringList l = QStringList::split("/",s);
 

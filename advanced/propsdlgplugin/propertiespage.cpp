@@ -494,10 +494,20 @@ void PropertiesPage::sambaChkToggled( bool b ) {
 }
 
 bool PropertiesPage::updateSambaShare() {
-
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare" << endl;
+  
   if (shareChk->isChecked() && 
       sambaChk->isChecked()) 
   {
+    if (m_enterUrl) {
+      if (m_path != urlRq->url()) {
+        m_path = urlRq->url();
+      }
+    }
+  
+    kdDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare: m_path" 
+          << m_path << endl;
+    
     if (!m_sambaShare) {
       createNewSambaShare();
       m_sambaChanged = true;
@@ -522,6 +532,11 @@ bool PropertiesPage::updateSambaShare() {
         return false;
       }
       m_sambaShare->setName(sambaNameEdit->text());
+      m_sambaChanged = true;
+    }
+    
+    if (m_sambaShare->getValue("path") != m_path) {
+      m_sambaShare->setValue("path", m_path);
       m_sambaChanged = true;
     }
           
@@ -581,6 +596,8 @@ void PropertiesPage::moreSambaBtnClicked() {
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::moreSambaBtnClicked()" << endl;
   updateSambaShare();
   ShareDlgImpl* dlg = new ShareDlgImpl(this,m_sambaShare);
+  dlg->directoryGrp->hide();
+  dlg->pixmapFrame->hide();
   if (dlg->exec() == QDialog::Accepted &&
       dlg->hasChanged()) {
       m_sambaChanged = true;

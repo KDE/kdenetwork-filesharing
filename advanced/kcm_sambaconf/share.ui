@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>KcmShareDlg</class>
 <comment>
 /******************************************************************************
@@ -1866,22 +1866,22 @@ Only change something if you know what you are doing.</string>
                                             <property name="title">
                                                 <string>Other Options</string>
                                             </property>
-                                            <widget class="QCheckBox">
+                                            <vbox>
                                                 <property name="name">
-                                                    <cstring>hideTrailingDotChk</cstring>
+                                                    <cstring>unnamed</cstring>
                                                 </property>
-                                                <property name="geometry">
-                                                    <rect>
-                                                        <x>10</x>
-                                                        <y>20</y>
-                                                        <width>130</width>
-                                                        <height>20</height>
-                                                    </rect>
-                                                </property>
-                                                <property name="text">
-                                                    <string>Hide traili&amp;ng dot</string>
-                                                </property>
-                                            </widget>
+                                                <widget class="QCheckBox">
+                                                    <property name="name">
+                                                        <cstring>hideTrailingDotChk</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>Hide traili&amp;ng dot</string>
+                                                    </property>
+                                                    <property name="accel">
+                                                        <string>Alt+N</string>
+                                                    </property>
+                                                </widget>
+                                            </vbox>
                                         </widget>
                                         <widget class="QGroupBox">
                                             <property name="name">
@@ -2774,8 +2774,6 @@ Only change something if you know what you are doing.</string>
         </widget>
     </vbox>
 </widget>
-<customwidgets>
-</customwidgets>
 <connections>
     <connection>
         <sender>buttonCancel</sender>
@@ -3103,7 +3101,4 @@ Only change something if you know what you are doing.</string>
     <slot>buttonHelp_clicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>kpushbutton.h</includehint>
-</includehints>
 </UI>

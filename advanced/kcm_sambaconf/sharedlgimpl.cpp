@@ -30,11 +30,18 @@
 /**
  * @author Jan Schäfer
  **/
+
 #include <qcheckbox.h>
 #include <qlineedit.h>
 #include <qcombobox.h>
 #include <qlabel.h>
 #include <qgroupbox.h>
+#include <qlayout.h>
+#include <qtabwidget.h>
+#include <qregexp.h>
+#include <qstringlist.h>
+#include <qgrid.h>
+#include <qcursor.h>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -42,11 +49,543 @@
 #include <kdebug.h>
 #include <kcombobox.h>
 #include <kiconloader.h>
+#include <klocale.h>
+#include <kfiledetailview.h>
+#include <kdirlister.h>
+#include <kmessagebox.h>
+#include <kpopupmenu.h>
+#include <kaction.h>
 
 #include <assert.h>
 
 #include "sambafile.h"
 #include "sharedlgimpl.h"
+
+#define COL_NAME 0
+#define COL_HIDDEN 1
+#define COL_VETO 2
+#define COL_SIZE 3
+#define COL_DATE 4
+#define COL_PERM 5
+#define COL_OWNER 6
+#define COL_GROUP 7
+
+HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden, bool veto )
+  : KListViewItem( parent )
+{
+  setPixmap( COL_NAME, fi->pixmap(KIcon::SizeSmall));
+
+  setText( COL_NAME, fi->text() );
+  setText( COL_SIZE, KGlobal::locale()->formatNumber( fi->size(), 0));
+  setText( COL_DATE,  fi->timeString() );
+  setText( COL_PERM,  fi->permissionsString() );
+  setText( COL_OWNER, fi->user() );
+  setText( COL_GROUP, fi->group() );
+
+  setHidden(hidden);
+  setVeto(veto);
+}
+
+HiddenListViewItem::~HiddenListViewItem()
+{
+}
+
+void HiddenListViewItem::setVeto(bool b)
+{
+  _veto = b;
+  setText( COL_VETO, _veto ? i18n("Yes") : QString(""));
+}
+
+bool HiddenListViewItem::isVeto()
+{
+  return _veto;
+}
+
+void HiddenListViewItem::setHidden(bool b)
+{
+  _hidden = b;
+  setText( COL_HIDDEN, _hidden ? i18n("Yes") : QString("") );
+}
+
+bool HiddenListViewItem::isHidden()
+{
+  return _hidden;
+}
+
+void HiddenListViewItem::paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment)
+{
+  QColorGroup _cg = cg;
+
+  if (isVeto())
+     _cg.setColor(QColorGroup::Base,lightGray);
+
+  if (isHidden())
+     _cg.setColor(QColorGroup::Text,gray);
+
+  QListViewItem::paintCell(p, _cg, column, width, alignment);
+}
+
+
+
+
+HiddenFileView::HiddenFileView(QWidget* parent, SambaShare* share)
+  : QWidget( parent )
+{
+  _share = share;
+
+  _hiddenActn = new KToggleAction(i18n("&Hide"));
+  _vetoActn = new KToggleAction(i18n("&Veto"));
+
+  initListView();
+
+  QLayout *l = new QVBoxLayout(this);
+  l->setSpacing(5);
+  l->add(_listView);
+  _listView->show();
+
+
+  _selGrpBx = new QGroupBox(i18n("Selected files"),this);
+  _selGrpBx->setColumns(2);
+  _hiddenChk = new QCheckBox(i18n("&Hide"), _selGrpBx);
+  _hiddenChk->setTristate(true);
+  _vetoChk = new QCheckBox(i18n("&Veto"), _selGrpBx);
+  _vetoChk->setTristate(true);
+
+  connect( _hiddenChk, SIGNAL(toggled(bool)), this, SLOT( hiddenChkClicked(bool) ));
+  connect( _vetoChk, SIGNAL(toggled(bool)), this, SLOT( vetoChkClicked(bool) ));
+
+  l->add(_selGrpBx);
+
+  QGroupBox* grpBx = new QGroupBox(i18n("Manual configuration"),this);
+  grpBx->setColumns(2);
+  QLabel* lbl = new QLabel(i18n("Hidden files"),grpBx);
+  _hiddenEdit = new QLineEdit(grpBx);
+  _hiddenEdit->setText( _share->getValue("hide files") );
+  connect( _hiddenEdit, SIGNAL(textChanged(const QString &)), this, SLOT(updateView()));
+
+  lbl = new QLabel(i18n("Veto files"),grpBx);
+  _vetoEdit = new QLineEdit(grpBx);
+  _vetoEdit->setText( _share->getValue("veto files") );
+  connect( _vetoEdit, SIGNAL(textChanged(const QString &)), this, SLOT(updateView()));
+
+
+//  new QLabel(i18n("Hint")+" : ",grid);
+//  new QLabel(i18n("You have to separate the entries with a '/'. You can use the wildcards '*' and '?'"),grid);
+//  new QLabel(i18n("Example")+" : ",grid);
+//  new QLabel(i18n("*.tmp/*SECRET*/.*/file?.*/"),grid);
+
+  l->add(grpBx);
+
+  _dir = new KDirLister(true);
+
+  connect( _dir, SIGNAL(newItems(const KFileItemList &)),
+           this, SLOT(insertNewFiles(const KFileItemList &)));
+
+  connect( _hiddenActn, SIGNAL(toggled(bool)), this, SLOT(hiddenChkClicked(bool)));
+  connect( _vetoActn, SIGNAL(toggled(bool)), this, SLOT(vetoChkClicked(bool)));
+}
+
+void HiddenFileView::initListView()
+{
+  _listView = new KListView(this);
+  _listView->addColumn( i18n( "Name" ) );
+  _listView->addColumn( i18n( "Hidden" ) );
+  _listView->addColumn( i18n( "Veto" ) );
+  _listView->addColumn( i18n( "Size" ) );
+  _listView->addColumn( i18n( "Date" ) );
+  _listView->addColumn( i18n( "Permissions" ) );
+  _listView->addColumn( i18n( "Owner" ) );
+  _listView->addColumn( i18n( "Group" ) );
+  _listView->setShowSortIndicator( TRUE );
+
+  _listView->setMultiSelection(true);
+  _listView->setSelectionMode(QListView::Extended);
+  _listView->setAllColumnsShowFocus(true);
+
+  _hiddenList = createRegExpList(_share->getValue("hide files"));
+  _vetoList = createRegExpList(_share->getValue("veto files"));
+
+  _popup = new KPopupMenu(_listView);
+  _hiddenActn->plug(_popup);
+  _vetoActn->plug(_popup);
+
+  connect( _listView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
+  connect( _listView, SIGNAL(contextMenu(KListView*,QListViewItem*,const QPoint&)),
+           this, SLOT(showContextMenu(QListViewItem*,const QPoint&)));
+
+}
+
+HiddenFileView::~HiddenFileView()
+{
+}
+
+void HiddenFileView::load()
+{
+  _dir->openURL( KURL(_share->getValue("path")) );
+}
+
+void HiddenFileView::save()
+{
+  QString s = _hiddenEdit->text().stripWhiteSpace();
+  // its important that the string ends with an '/'
+  // as Samba won't recognize the last entry
+  if (s != "" && s.right(1)!="/")
+      s+="/";
+  _share->setValue("hide files", s);
+
+  s = _vetoEdit->text().stripWhiteSpace();
+  // its important that the string ends with an '/'
+  // as Samba won't recognize the last entry
+  if (s != "" && s.right(1)!="/")
+      s+="/";
+  _share->setValue("veto files", s);
+}
+
+void HiddenFileView::insertNewFiles(const KFileItemList &newone)
+{
+  if ( newone.isEmpty() )
+     return;
+
+  KFileItem *tmp;
+
+  int j=0;
+
+  for (KFileItemListIterator it(newone); (tmp = it.current()); ++it)
+  {
+    j++;
+
+    bool hidden = matchHidden(tmp->text());
+    bool veto = matchVeto(tmp->text());
+
+    HiddenListViewItem *item = new HiddenListViewItem( _listView, tmp, hidden, veto );
+  }
+}
+
+void HiddenFileView::showContextMenu(QListViewItem* l,const QPoint & p)
+{
+  _popup->exec(QCursor::pos());
+}
+
+
+void HiddenFileView::selectionChanged()
+{
+  bool veto = false;
+  bool noVeto = false;
+  bool hide = false;
+  bool noHide = false;
+
+  int n = 0;
+
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_listView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    if (!item->isSelected())
+       continue;
+
+    n++;
+
+    if (item->isVeto())
+       veto = true;
+    else
+       noVeto = true;
+
+    if (item->isHidden())
+       hide = true;
+    else
+       noHide = true;
+  }
+
+
+  _selGrpBx->setEnabled(n>0);
+
+  if (veto && noVeto)
+  {
+    _vetoChk->setTristate(true);
+    _vetoChk->setNoChange();
+    _vetoChk->update();
+  }
+  else
+  {
+    _vetoChk->setTristate(false);
+    _vetoChk->setChecked(veto);
+  }
+
+  if (hide && noHide)
+  {
+    _hiddenChk->setTristate(true);
+    _hiddenChk->setNoChange();
+    _hiddenChk->update();
+  }
+  else
+  {
+    _hiddenChk->setTristate(false);
+    _hiddenChk->setChecked(hide);
+  }
+}
+
+void HiddenFileView::hiddenChkClicked(bool b)
+{
+  // We don't save the old state so
+  // disable the tristate mode
+  _hiddenChk->setTristate(false);
+  _hiddenActn->setChecked(b);
+  _hiddenChk->setChecked(b);
+
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_listView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    if (item->isSelected())
+    {
+      // If we remove a file from the list
+      // perhaps it was a wildcard string
+      if (!b && item->isHidden())
+      {
+        QRegExp* rx = getHiddenMatch(item->text(0));
+        assert(rx);
+
+        QString p = rx->pattern();
+        if ( p.find("*") > -1 ||
+             p.find("?") > -1 )
+        {
+          int result = KMessageBox::questionYesNo(this,i18n(
+            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b> ! "
+            "Do you want to unhide all files matching <b>'%1'</b> ? <br>"
+            "(If you say no, no file matching '%1' will be unhidden)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+            i18n("Wildcarded string"));
+
+          QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
+
+          if (result == KMessageBox::No)
+          {
+            deselect(lst);
+            continue;
+          }
+          else
+          {
+            setHidden(lst,false);
+          }
+        }
+
+        _hiddenList.remove(rx);
+      }
+      else
+      if (b && !item->isHidden())
+      {
+        _hiddenList.append( new QRegExp(item->text(0)) );
+      }
+
+      item->setHidden(b);
+    }
+  }
+
+  updateEdit(_hiddenEdit, _hiddenList);
+  _listView->update();
+}
+
+void HiddenFileView::vetoChkClicked(bool b)
+{
+  // We don't save the old state so
+  // disable the tristate mode
+  _vetoChk->setTristate(false);
+  _vetoActn->setChecked(b);
+  _vetoChk->setChecked(b);
+
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_listView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    if (item->isSelected())
+    {
+      // If we remove a file from the list
+      // perhaps it was a wildcard string
+      if (!b && item->isVeto())
+      {
+        QRegExp* rx = getVetoMatch(item->text(0));
+        assert(rx);
+
+        QString p = rx->pattern();
+        if ( p.find("*") > -1 ||
+             p.find("?") > -1 )
+        {
+          int result = KMessageBox::questionYesNo(this,i18n(
+            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b> ! "
+            "Do you want to unveto all files matching <b>'%1'</b> ? <br>"
+            "(If you say no, no file matching '%1' will be unvetoed)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+            i18n("Wildcarded string"));
+
+          QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
+
+          if (result == KMessageBox::No)
+          {
+            deselect(lst);
+            continue;
+          }
+          else
+          {
+            setVeto(lst,false);
+          }
+        }
+
+        _vetoList.remove(rx);
+      }
+      else
+      if (b && !item->isVeto())
+      {
+        _vetoList.append( new QRegExp(item->text(0)) );
+      }
+
+      item->setVeto(b);
+    }
+
+
+  }
+
+  updateEdit(_vetoEdit, _vetoList);
+  _listView->update();
+}
+
+/**
+ * Sets the text of the QLineEdit edit to the entries of the passed QRegExp-List
+ **/
+void HiddenFileView::updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst)
+{
+  QString s="";
+
+  QRegExp* rx;
+  for(rx = static_cast<QRegExp*>(lst.first()); rx;
+      rx = static_cast<QRegExp*>(lst.next()) )
+  {
+    s+= rx->pattern()+QString("/");
+  }
+
+  edit->setText(s);
+}
+
+void HiddenFileView::setVeto(QPtrList<HiddenListViewItem> & lst, bool b)
+{
+  HiddenListViewItem* item;
+  for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
+      item = static_cast<HiddenListViewItem*>(lst.next()) )
+  {
+    item->setVeto(b);
+  }
+}
+
+void HiddenFileView::setHidden(QPtrList<HiddenListViewItem> & lst, bool b)
+{
+  HiddenListViewItem* item;
+  for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
+      item = static_cast<HiddenListViewItem*>(lst.next()) )
+  {
+    item->setHidden(b);
+  }
+}
+
+void HiddenFileView::deselect(QPtrList<HiddenListViewItem> & lst)
+{
+  HiddenListViewItem* item;
+  for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
+      item = static_cast<HiddenListViewItem*>(lst.next()) )
+  {
+    item->setSelected(false);
+  }
+}
+
+
+QPtrList<HiddenListViewItem> HiddenFileView::getMatchingItems(const QRegExp & rx)
+{
+  QPtrList<HiddenListViewItem> lst;
+
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_listView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    if (rx.exactMatch(item->text(0)))
+       lst.append(item);
+  }
+
+  return lst;
+}
+
+void HiddenFileView::updateView()
+{
+  _hiddenList = createRegExpList(_hiddenEdit->text());
+  _vetoList = createRegExpList(_vetoEdit->text());
+
+  HiddenListViewItem* item;
+  for (item = static_cast<HiddenListViewItem*>(_listView->firstChild());item;
+       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
+  {
+    item->setHidden(matchHidden(item->text(0)));
+    item->setVeto(matchVeto(item->text(0)));
+  }
+
+  _listView->repaint();
+}
+
+
+QPtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
+{
+  QPtrList<QRegExp> lst;
+  bool cs = _share->getBoolValue("case sensitive");
+
+  if (s != "")
+  {
+    QStringList l = QStringList::split("/",s);
+
+    for ( QStringList::Iterator it = l.begin(); it != l.end(); ++it ) {
+        lst.append( new QRegExp(*it,cs,true) );
+    }
+  }
+
+  return lst;
+}
+
+bool HiddenFileView::matchHidden(const QString & s)
+{
+  return matchRegExpList(s,_hiddenList);
+}
+
+bool HiddenFileView::matchVeto(const QString & s)
+{
+  return matchRegExpList(s,_vetoList);
+}
+
+bool HiddenFileView::matchRegExpList(const QString & s, QPtrList<QRegExp> & lst)
+{
+  if (getRegExpListMatch(s,lst))
+     return true;
+  else
+     return false;
+}
+
+
+QRegExp* HiddenFileView::getHiddenMatch(const QString & s)
+{
+  return getRegExpListMatch(s,_hiddenList);
+}
+
+QRegExp* HiddenFileView::getVetoMatch(const QString & s)
+{
+  return getRegExpListMatch(s,_vetoList);
+}
+
+QRegExp* HiddenFileView::getRegExpListMatch(const QString & s, QPtrList<QRegExp> & lst)
+{
+  QRegExp* rx;
+
+  for ( rx = lst.first(); rx; rx = lst.next() )
+  {
+    if (rx->exactMatch(s))
+       return rx;
+  }
+
+  return 0L;
+}
+
+
 
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")
@@ -144,17 +683,57 @@ void ShareDlgImpl::initDialog()
   statusChk->setChecked( _share->getBoolValue("status") );
 
   // Hidden files
+  createHiddenFilesTab();
+
+  connect( tabs, SIGNAL(currentChanged(QWidget*)), this, SLOT(tabChangedSlot(QWidget*)));
 }
 
 ShareDlgImpl::~ShareDlgImpl()
 {
 }
 
+void ShareDlgImpl::tabChangedSlot(QWidget* w)
+{
+
+  // We are only interrested in the Hidden files tab
+  if (w == _hiddenFilesTab)
+     createHiddenFilesView();
+
+}
+
+void ShareDlgImpl::createHiddenFilesTab()
+{
+  _hiddenFilesTab = new QFrame( tabs );
+  QVBoxLayout* l = new QVBoxLayout( _hiddenFilesTab );
+  l->setMargin(11);
+
+  tabs->addTab( _hiddenFilesTab, i18n("&Hidden files") );
+  _fileView = 0L;
+
+}
+
+void ShareDlgImpl::createHiddenFilesView()
+{
+  if (_fileView)
+     return;
+
+  if (_share->getValue("path") == "")
+  {
+    _hiddenFilesTab->drawText(10,10,i18n("No path specified !"));
+    return;
+  }
+
+  _fileView = new HiddenFileView( _hiddenFilesTab, _share );
+  _hiddenFilesTab->layout()->add(_fileView);
+  _fileView->show();
+  _fileView->load();
+
+
+}
+
 void ShareDlgImpl::accept()
 {
 	// Base settings
-
-  kdDebug() << "accept" << endl;
 
 	assert(_share);
   
@@ -241,6 +820,9 @@ void ShareDlgImpl::accept()
   _share->setValue("status",statusChk->isChecked( ) );
 
   // Hidden files
+  if (_fileView)
+      _fileView->save();
+
 
 	KcmShareDlg::accept();
 }
@@ -264,5 +846,6 @@ void ShareDlgImpl::homeChkToggled(bool b)
     directoryPixLbl->setPixmap(DesktopIcon("folder"));
   }
 }
+
 
 #include "sharedlgimpl.moc"

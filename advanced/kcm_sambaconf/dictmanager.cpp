@@ -32,12 +32,14 @@
 #include <qspinbox.h>
 #include <qcombobox.h>
 #include <qtooltip.h>
+#include <qstringlist.h>
 
 #include <kurlrequester.h> 
 #include <klocale.h>
  
 #include "sambashare.h"
 #include "dictmanager.h" 
+#include "common.h"
 
  
 DictManager::DictManager(SambaShare* share):
@@ -45,7 +47,8 @@ DictManager::DictManager(SambaShare* share):
   checkBoxDict(40,false),
   urlRequesterDict(40,false),
   spinBoxDict(40,false),
-  comboBoxDict(20,false)
+  comboBoxDict(20,false),
+  comboBoxValuesDict(20,false)
 {
   _share = share;
 }
@@ -90,9 +93,10 @@ void DictManager::add(const QString & key, QSpinBox* spinBox){
     handleUnsupportedWidget(key,spinBox);
 }
               
-void DictManager::add(const QString & key, QComboBox* comboBox){
+void DictManager::add(const QString & key, QComboBox* comboBox, QStringList* values){
   if (_share->optionSupported(key)) {
     comboBoxDict.insert(key,comboBox);
+    comboBoxValuesDict.insert(key,values);
     connect(comboBox, SIGNAL(activated(int)), this, SLOT(changedSlot()));
   } else
     handleUnsupportedWidget(key,comboBox);
@@ -124,13 +128,46 @@ void DictManager::load(SambaShare* share, bool globalValue, bool defaultValue){
     spinBoxIt.current()->setValue(share->getValue(spinBoxIt.currentKey(),globalValue,defaultValue).toInt());
   }
 
+  loadComboBoxes(share,globalValue,defaultValue);
+
+}
+
+void DictManager::loadComboBoxes(SambaShare* share, bool globalValue, bool defaultValue) {
   QDictIterator<QComboBox> comboBoxIt( comboBoxDict ); 
    
   for( ; comboBoxIt.current(); ++comboBoxIt )	{
-    comboBoxIt.current()->setCurrentText( share->getValue(comboBoxIt.currentKey(),globalValue,defaultValue) );
-  }
+    QStringList *v = comboBoxValuesDict[comboBoxIt.currentKey()];
+    QString value = share->getValue(comboBoxIt.currentKey(),globalValue,defaultValue);
 
+    if (value.isNull())
+        continue;
+        
+    value = value.lower();
+
+    
+    int comboIndex = 0;
+                                
+    QStringList::iterator it;
+    for ( it = v->begin(); it != v->end(); ++it ) {
+      QString lower = (*it).lower();      
+      if ( lower == "yes" &&
+           boolFromText(value))
+           break;
+
+      if ( lower == "no" &&
+           ! boolFromText(value,false))
+           break;
+
+      if ( lower == value ) 
+           break;                            
+      
+      comboIndex++;
+    }
+
+    comboBoxIt.current()->setCurrentItem(comboIndex);
+  }
 }
+
 
 void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
   QDictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
@@ -160,9 +197,12 @@ void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
   QDictIterator<QComboBox> comboBoxIt( comboBoxDict );
   
   for( ; comboBoxIt.current(); ++comboBoxIt )	{
-    share->setValue(comboBoxIt.currentKey(),comboBoxIt.current()->currentText(), globalValue, defaultValue );
+    QStringList* values = comboBoxValuesDict[comboBoxIt.currentKey()];
+    
+    int i = comboBoxIt.current()->currentItem();
+    share->setValue(comboBoxIt.currentKey(),(*values)[i], globalValue, defaultValue );
   }
-
+    
 }
 
 void DictManager::changedSlot() {

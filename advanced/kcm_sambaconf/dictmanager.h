@@ -36,6 +36,8 @@ class QSpinBox;
 class QComboBox;
 class QString;
 class SambaShare;
+class QStringList;
+
 /**
  * @author Jan Schäfer
  **/
@@ -50,7 +52,7 @@ Q_OBJECT
     void add(const QString &, QCheckBox*);
     void add(const QString &, KURLRequester*);
     void add(const QString &, QSpinBox*);
-    void add(const QString &, QComboBox*);
+    void add(const QString &, QComboBox*, QStringList*);
               
     void load(SambaShare* share, bool globalValue=true, bool defaultValue=true);
     void save(SambaShare* share, bool globalValue=true, bool defaultValue=true);
@@ -61,10 +63,12 @@ Q_OBJECT
     QDict<KURLRequester> urlRequesterDict;
     QDict<QSpinBox> spinBoxDict;
     QDict<QComboBox> comboBoxDict;
+    QDict<QStringList> comboBoxValuesDict;
     
     SambaShare* _share;
     
     void handleUnsupportedWidget(const QString &, QWidget*);
+    void loadComboBoxes(SambaShare*, bool, bool);
     
   protected slots:
     void changedSlot();

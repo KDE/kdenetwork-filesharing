@@ -67,6 +67,13 @@ bool SambaShare::setName(const QString & name, bool testWetherExists)
  return true;
 }
 
+bool SambaShare::optionSupported(const QString & name) 
+{
+  QString defaultValue = _sambaFile->getDefaultValue(name);
+//  kdDebug() << name << " = " << defaultValue << " null : " << defaultValue.isNull() << endl;
+  return ! defaultValue.isNull();
+}
+
 /**
  * Returns the value of the given parameter
  * if no value is set yet the default value
@@ -87,8 +94,8 @@ QString SambaShare::getValue(const QString & name, bool globalValue, bool defaul
 	else
   if (defaultValue)
      ret = getDefaultValue(synonym);
-	else
-  	 ret = "";
+//	else
+  //	 ret = "";
 
 	if (name=="writable" || name=="write ok" || name=="writeable")
   	 ret = SambaFile::textFromBool( ! SambaFile::boolFromText(ret) );

@@ -69,6 +69,12 @@ public:
   bool setName(const QString & name, bool testWetherExists=true);
 
   /**
+   * Tests wether or not the given option is supported by Samba.
+   * It does this by testing the output of testparm for this option
+   **/
+  bool optionSupported(const QString & name);
+  
+  /**
    * Returns the value of the given parameter
    * if the parameter doesn't exists, the
 	 * global and then the default value is returned.

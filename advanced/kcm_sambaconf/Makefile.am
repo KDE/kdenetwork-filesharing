@@ -13,7 +13,10 @@ libkcm_kcmsambaconf_la_SOURCES = \
   sambafile.cpp \
   sambashare.cpp \
   sharedlgimpl.cpp \
-  socketoptionsdlg.ui
+  socketoptionsdlg.ui \
+  smbpasswdfile.cpp \
+  passwd.h \
+  common.h
 
 libkcm_kcmsambaconf_la_LIBADD = -lkdeprint $(LIB_KDEUI) $(LIB_KDECORE) $(LIB_QT)
 libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
@@ -36,7 +39,6 @@ service_DATA  = ksambakonqiplugin.desktop
 EXTRA_DIST = $(service_DATA) \
 	kcmsambaconf.cpp \
 	kcmsambaconf.h \
-	interface.ui \
 	share.ui \
 	externals.h \
 	kcmsambaconf.desktop \
@@ -47,7 +49,8 @@ EXTRA_DIST = $(service_DATA) \
 	sambafile.h \
   sharedlgimpl.h \
   sambashare.h \
-  socketoptionsdlg.ui
+  socketoptionsdlg.ui \
+  smbpasswdfile.h
 
 
 apps_DATA = kcmsambaconf.desktop

@@ -71,12 +71,18 @@ void ShareListViewItem::updateShare()
 
   if (_share->isPrinter())
   {
-  	setPixmap(0,SmallIcon("print_printer"));
+  	if ( _share->getName() == "printers" )
+    	setPixmap(0,SmallIcon("print_class"));
+  	else
+    	setPixmap(0,SmallIcon("print_printer"));
     setText(1,_share->getValue("printer name"));
   }
   else
   {
-  	setPixmap(0,SmallIcon("folder"));
+  	if ( _share->getName() == "homes" )
+  		setPixmap(0,SmallIcon("folder_home"));
+    else
+  		setPixmap(0,SmallIcon("folder"));
     setText(1,_share->getValue("path"));
 	}
 

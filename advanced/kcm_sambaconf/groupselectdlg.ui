@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
 <class>GroupSelectDlg</class>
 <widget class="QDialog">
     <property name="name">
@@ -21,6 +21,12 @@
     <grid>
         <property name="name">
             <cstring>unnamed</cstring>
+        </property>
+        <property name="margin">
+            <number>11</number>
+        </property>
+        <property name="spacing">
+            <number>6</number>
         </property>
         <widget class="QLayoutWidget" row="4" column="0" rowspan="1" colspan="2">
             <property name="name">
@@ -61,7 +67,7 @@
                         <string>&amp;OK</string>
                     </property>
                     <property name="accel">
-                        <string></string>
+                        <number>0</number>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -78,7 +84,7 @@
                         <string>&amp;Cancel</string>
                     </property>
                     <property name="accel">
-                        <string></string>
+                        <number>0</number>
                     </property>
                     <property name="autoDefault">
                         <bool>true</bool>
@@ -133,6 +139,12 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
+                <property name="margin">
+                    <number>11</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
                 <widget class="QListView">
                     <column>
                         <property name="text">
@@ -141,7 +153,7 @@
                         <property name="clickable">
                             <bool>true</bool>
                         </property>
-                        <property name="resizable">
+                        <property name="resizeable">
                             <bool>true</bool>
                         </property>
                     </column>
@@ -152,7 +164,7 @@
                         <property name="clickable">
                             <bool>true</bool>
                         </property>
-                        <property name="resizable">
+                        <property name="resizeable">
                             <bool>true</bool>
                         </property>
                     </column>
@@ -192,6 +204,12 @@
                 <property name="name">
                     <cstring>unnamed</cstring>
                 </property>
+                <property name="margin">
+                    <number>11</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
+                </property>
                 <widget class="QRadioButton">
                     <property name="name">
                         <cstring>defaultRadio</cstring>
@@ -208,7 +226,7 @@
                         <string>&amp;Default</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+D</string>
+                        <number>8388676</number>
                     </property>
                     <property name="checked">
                         <bool>true</bool>
@@ -230,7 +248,7 @@
                         <string>&amp;Read access</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+R</string>
+                        <number>8388690</number>
                     </property>
                 </widget>
                 <widget class="QRadioButton">
@@ -249,7 +267,7 @@
                         <string>&amp;Write access</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+W</string>
+                        <number>8388695</number>
                     </property>
                 </widget>
                 <widget class="QRadioButton">
@@ -268,7 +286,7 @@
                         <string>&amp;Admin access</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+A</string>
+                        <number>8388673</number>
                     </property>
                 </widget>
                 <widget class="QRadioButton">
@@ -287,7 +305,7 @@
                         <string>&amp;No access at all</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+N</string>
+                        <number>8388686</number>
                     </property>
                 </widget>
             </vbox>
@@ -302,6 +320,12 @@
             <vbox>
                 <property name="name">
                     <cstring>unnamed</cstring>
+                </property>
+                <property name="margin">
+                    <number>11</number>
+                </property>
+                <property name="spacing">
+                    <number>6</number>
                 </property>
                 <widget class="QRadioButton">
                     <property name="name">
@@ -319,7 +343,7 @@
                         <string>&amp;Unix group</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+U</string>
+                        <number>8388693</number>
                     </property>
                     <property name="checked">
                         <bool>false</bool>
@@ -344,7 +368,7 @@
                         <string>NI&amp;S group</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+S</string>
+                        <number>8388691</number>
                     </property>
                     <property name="checked">
                         <bool>false</bool>
@@ -369,7 +393,7 @@
                         <string>Unix and NIS gr&amp;oup</string>
                     </property>
                     <property name="accel">
-                        <string>Alt+O</string>
+                        <number>8388687</number>
                     </property>
                     <property name="checked">
                         <bool>true</bool>
@@ -406,13 +430,16 @@
     <include location="local" impldecl="in implementation">groupselectdlg.ui.h</include>
 </includes>
 <variables>
-    <variable access="public">QString groupKind;</variable>
-    <variable access="public">int access;</variable>
-    <variable access="public">QStringList selectedGroups;</variable>
+    <variable>QString groupKind;</variable>
+    <variable>int access;</variable>
+    <variable>QStringList selectedGroups;</variable>
 </variables>
 <slots>
     <slot>init( const QStringList &amp; specifiedGroups )</slot>
     <slot access="protected">accept()</slot>
+    <slot returnType="QStringList">getSelectedGroups()</slot>
+    <slot returnType="int">getAccess()</slot>
+    <slot returnType="QString">getGroupKind()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

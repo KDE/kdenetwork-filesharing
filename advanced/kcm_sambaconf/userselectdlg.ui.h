@@ -35,3 +35,15 @@ void UserSelectDlg::accept()
   QDialog::accept();
 
 }
+
+
+QStringList UserSelectDlg::getSelectedUsers()
+{
+    return selectedUsers;
+}
+
+
+int UserSelectDlg::getAccess()
+{
+    return access;
+}

@@ -42,3 +42,21 @@ void GroupSelectDlg::accept()
 }
 
 
+
+
+QStringList GroupSelectDlg::getSelectedGroups()
+{
+    return selectedGroups;
+}
+
+
+int GroupSelectDlg::getAccess()
+{
+    return access;
+}
+
+
+QString GroupSelectDlg::getGroupKind()
+{
+    return groupKind;
+}

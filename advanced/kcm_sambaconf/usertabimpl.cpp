@@ -264,10 +264,12 @@ void UserTabImpl::addUserBtnClicked()
     UserSelectDlg *dlg = new UserSelectDlg();
     dlg->init(_specifiedUsers,_share);
 
+    QStringList selectedUsers = dlg->getSelectedUsers();
+
     if (dlg->exec()) {
-        for (QStringList::Iterator it = dlg->selectedUsers.begin(); it != dlg->selectedUsers.end(); ++it)
+        for (QStringList::Iterator it = selectedUsers.begin(); it != selectedUsers.end(); ++it)
         {
-            addUserToUserTable(*it,dlg->access);
+            addUserToUserTable(*it,dlg->getAccess());
         }
     }
 
@@ -307,13 +309,13 @@ void UserTabImpl::addGroupBtnClicked()
 {
   GroupSelectDlg *dlg = new GroupSelectDlg();
   dlg->init(_specifiedGroups);
-
+  QStringList selectedGroups = dlg->getSelectedGroups();
   if (dlg->exec()) {
-    for (QStringList::Iterator it = dlg->selectedGroups.begin(); it != dlg->selectedGroups.end(); ++it)
+    for (QStringList::Iterator it = selectedGroups.begin(); it != selectedGroups.end(); ++it)
     {
-        kdDebug() << "GroupKind: " << dlg->groupKind << endl;
-        QString name = dlg->groupKind + (*it);
-        addUserToUserTable(name,dlg->access);
+        kdDebug() << "GroupKind: " << dlg->getGroupKind() << endl;
+        QString name = dlg->getGroupKind() + (*it);
+        addUserToUserTable(name,dlg->getAccess());
     }
   }
 

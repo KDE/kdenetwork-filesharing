@@ -29,7 +29,7 @@
  *                                                                            *
  ******************************************************************************/
 
-#include <assert.h>
+#include <assert.h> 
 #include <unistd.h>
 
 #include <qlayout.h>
@@ -212,6 +212,9 @@ void KcmSambaConf::initAdvancedTab()
 		else
 		if (label.lower() == "filenames")
 			 icon = SmallIcon("folder");
+		else
+		if (label.lower() == "locking")
+			 icon = SmallIcon("lock");
 		else
 		if (label.lower() == "printing")
 			 icon = SmallIcon("fileprint");
@@ -446,6 +449,7 @@ void KcmSambaConf::load()
 	loadLogging( share );
 	loadPrinting( share );
 	loadFilenames( share );
+  loadLocking( share );
 	loadDomain( share );
 	loadProtocol( share );
 	loadSocket( share );
@@ -590,6 +594,15 @@ void KcmSambaConf::loadTuning(SambaShare* share)
 	_dictMngr->add("use mmap",_interface->useMmapChk);
   
 }
+
+void KcmSambaConf::loadLocking(SambaShare* share) 
+{
+	_dictMngr->add("kernel oplocks",_interface->kernelOplocksChk);
+	_dictMngr->add("oplock break wait time",_interface->oplockBreakWaitTimeSpin);
+ 	_dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
+
+}
+
 
 void KcmSambaConf::loadPrinting(SambaShare* share) 
 {
@@ -814,7 +827,6 @@ void KcmSambaConf::loadMisc(SambaShare* share)
 	_dictMngr->add("homedir map", _interface->homedirMapEdit);
 	_dictMngr->add("source environment", _interface->sourceEnvironmentEdit);
 
-	_dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
 	_dictMngr->add("pid directory",_interface->pidDirectoryUrlRq);
 	_dictMngr->add("utmp directory",_interface->utmpDirectoryUrlRq);
 	_dictMngr->add("wtmp directory",_interface->wtmpDirectoryUrlRq);

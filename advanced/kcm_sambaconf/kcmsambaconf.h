@@ -117,6 +117,7 @@ class KcmSambaConf: public KCModule
 		void loadTuning(SambaShare* share);
 		void loadPrinting(SambaShare* share);
 		void loadFilenames(SambaShare* share);
+    void loadLocking(SambaShare* share);
 		void loadCoding(SambaShare* share);
 		void loadLogon(SambaShare* share);
 		void loadSocket(SambaShare* share);

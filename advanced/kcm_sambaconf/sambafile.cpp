@@ -42,10 +42,19 @@
 
 
 
-SambaConfigFile::SambaConfigFile()
+SambaConfigFile::SambaConfigFile(SambaFile* sambaFile)
 {
   QDict<QString>(10,false);
   setAutoDelete(true);
+  _sambaFile = sambaFile;
+}
+
+QString SambaConfigFile::getDefaultValue(const QString & name)
+{
+  SambaShare* defaults = _sambaFile->getTestParmValues();
+  QString s = defaults->getValue(name,false,false);
+
+  return s;
 }
 
 SambaFile::SambaFile(const QString & _path, bool _readonly)
@@ -53,6 +62,7 @@ SambaFile::SambaFile(const QString & _path, bool _readonly)
   path = _path;
   readonly = _readonly;
   changed = false;
+  _testParmValues = 0L;
 
   KSimpleConfig *config = new KSimpleConfig(path,readonly);
 
@@ -62,6 +72,9 @@ SambaFile::SambaFile(const QString & _path, bool _readonly)
 SambaFile::~SambaFile()
 {
 	delete sambaConfig;
+  if (_testParmValues)
+     delete _testParmValues;
+
 }
 
 QString SambaFile::getTempFileName()
@@ -256,6 +269,86 @@ SambaShareList* SambaFile::getSharedPrinters() const
 }
 
 
+SambaShare* SambaFile::getTestParmValues(bool reload)
+{
+  if (_testParmValues && !reload)
+     return _testParmValues;
+
+
+  KProcess testParam;
+  testParam.setExecutable("testparm");
+  testParam << "-s";
+
+  connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
+           this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
+
+  if (testParam.start(KProcess::Block,KProcess::Stdout))
+  {
+    kdDebug() << "testparm successfully started" << endl;
+    parseParmStdOutput();
+  }
+  else
+    kdDebug() << "testparm failed !" << endl;
+
+  return _testParmValues;
+}
+
+void SambaFile::testParmStdOutReceived(KProcess *proc, char *buffer, int buflen)
+{
+  _parmOutput+=QString::fromLatin1(buffer,buflen);
+}
+
+void SambaFile::parseParmStdOutput()
+{
+
+  QTextIStream s(&_parmOutput);
+
+  if (_testParmValues)
+     delete _testParmValues;
+  _testParmValues = new SambaShare(sambaConfig);
+
+  QString section="";
+
+
+
+  while (!s.atEnd())
+  {
+    QString line = s.readLine().stripWhiteSpace();
+    QString name="";
+    QString value="";
+
+    // empty lines
+    if (line.isEmpty())
+       continue;
+
+    // comments
+    if ("#" == line.left(1))
+       continue;
+
+    // sections
+    if ("[" == line.left(1))
+    {
+      // get the name of the section
+      section = line.mid(1,line.length()-2);
+      section = section.lower();
+      continue;
+    }
+
+    // we are only interested in the global section
+    if (section != "global")
+       continue;
+
+    // parameter
+    name = QStringList::split("=",line)[0].stripWhiteSpace();
+    value = QStringList::split("=",line)[1].stripWhiteSpace();
+
+    _testParmValues->setValue(name,value,false,false);
+  }
+
+
+
+}
+
 /**
  * Try to find the samba config file position
  * First tries the config file, then checks
@@ -312,7 +405,7 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
 {
   QStringList groups = config->groupList();
 
-  SambaConfigFile* samba = new SambaConfigFile();
+  SambaConfigFile* samba = new SambaConfigFile(this);
 
   for ( QStringList::Iterator it = groups.begin(); it != groups.end(); ++it )
   {

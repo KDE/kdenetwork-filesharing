@@ -43,12 +43,15 @@ class KSimpleConfig;
 class KProcess;
 class KConfig;
 
-
+class SambaFile;
 
 class SambaConfigFile : public QDict<SambaShare>
 {
 public:
-  SambaConfigFile();
+  SambaConfigFile(SambaFile*);
+  QString getDefaultValue(const QString & name);
+protected:
+  SambaFile* _sambaFile;
 };
 
 
@@ -89,6 +92,15 @@ public:
    **/
 	QString getUnusedName() const;
 
+  /**
+   * Returns all values of the global section
+   * which are returned by the testparam program
+   * if the values were already loaded then these
+   * values are returned except the reload parameter
+   * is true
+   **/
+  SambaShare* getTestParmValues(bool reload=false);
+
   static QString findSambaConf();
 
 	static bool boolFromText(const QString & value);
@@ -99,16 +111,17 @@ protected:
   bool changed;
   QString path;
   SambaConfigFile *sambaConfig;
+  SambaShare* _testParmValues;
+  QString _parmOutput;
 
+  void parseParmStdOutput();
   SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
   KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
-
-
 private:
   void copyConfigs(KConfig* first, KConfig* second);
 	QString getTempFileName();
 
-public slots: // Public slots
+public slots:
 
   /**
    * Saves all changes to the smb.conf file
@@ -116,6 +129,9 @@ public slots: // Public slots
    * for a root password
    **/
   void slotApply();
+protected slots:
+  void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
+
 };
 
 #endif

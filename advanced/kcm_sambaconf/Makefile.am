@@ -45,7 +45,8 @@ ksambakonqiplugin_la_SOURCES = \
   passwd.cpp \
   filemodedlgimpl.cpp \
   hiddenfileview.cpp \
-  dictmanager.cpp   
+  dictmanager.cpp \
+  qmultichecklistitem.cpp
 
 ksambakonqiplugin_la_LIBADD = $(LIB_KIO)
 ksambakonqiplugin_la_LDFLAGS = $(all_libraries) -module

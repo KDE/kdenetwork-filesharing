@@ -236,9 +236,10 @@ SambaShare* SambaFile::newShare(const QString & name)
 SambaShare* SambaFile::newShare(const QString & name, const QString & path)
 {
 	SambaShare* share = newShare(name);
-
 	if (share)
+	{
 	   share->setValue("path",path);
+  }
 
   return share;
 }
@@ -563,6 +564,11 @@ bool SambaFile::saveTo(const QString & path)
        kdDebug() << *cmtIt << endl;
     }
 
+    // If there are no lines before the section add
+    // a blank line
+    if (comments.isEmpty())
+       s << endl;
+		
     // Add the name of the share / section
     s << "[" << share->getName() << "]" << endl;
 
@@ -582,6 +588,7 @@ bool SambaFile::saveTo(const QString & path)
       // Add the option
       s << *optionIt << " = " << *share->find(*optionIt) << endl;
     }
+		
 
   }
 

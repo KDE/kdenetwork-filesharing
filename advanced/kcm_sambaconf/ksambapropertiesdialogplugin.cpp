@@ -56,6 +56,7 @@
 #include "passwd.h"
 #include "common.h"
 #include "smbconfconfigwidget.h"
+#include "linuxpermissionchecker.h"
 
 #include <assert.h>
 
@@ -378,7 +379,9 @@ bool KSambaPropertiesDialogPlugin::checkValues()
     }
   }
 
-  if ( ! checkIfUnixPermissions( getActiveShare())) 
+  LinuxPermissionChecker linuxChecker(getActiveShare(),properties);
+  
+  if ( ! linuxChecker.checkPublicPermissions()) 
      return false;
   
   return true;

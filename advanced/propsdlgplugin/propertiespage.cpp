@@ -289,7 +289,7 @@ bool PropertiesPage::checkURL() {
   
   
   if (!url.isValid()) {
-      KMessageBox::sorry(this,i18n("Please enter a valid path!"));
+      KMessageBox::sorry(this,i18n("Please enter a valid path."));
       urlRq->setFocus();
       urlRq->lineEdit()->selectAll();
       return false;
@@ -298,7 +298,7 @@ bool PropertiesPage::checkURL() {
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is valid" << endl;
   
   if (!url.isLocalFile()) {
-      KMessageBox::sorry(this,i18n("Only local folders can be shared!"));
+      KMessageBox::sorry(this,i18n("Only local folders can be shared."));
       urlRq->setFocus();
       urlRq->lineEdit()->selectAll();
       return false;
@@ -310,7 +310,7 @@ bool PropertiesPage::checkURL() {
   
   if (!info.exists()) 
   {
-      KMessageBox::sorry(this,i18n("The folder does not exists!"));
+      KMessageBox::sorry(this,i18n("The folder does not exists."));
       urlRq->setFocus();
       urlRq->lineEdit()->selectAll();
       return false;
@@ -321,7 +321,7 @@ bool PropertiesPage::checkURL() {
   
   if (!info.isDir()) 
   {
-      KMessageBox::sorry(this,i18n("Only folders can be shared!"));
+      KMessageBox::sorry(this,i18n("Only folders can be shared."));
       urlRq->setFocus();
       urlRq->lineEdit()->selectAll();
       return false;
@@ -332,7 +332,7 @@ bool PropertiesPage::checkURL() {
   if (KSambaShare::instance()->isDirectoryShared(path) ||
       KNFSShare::instance()->isDirectoryShared(path))
   {
-      KMessageBox::sorry(this,i18n("The folder is already shared!"));
+      KMessageBox::sorry(this,i18n("The folder is already shared."));
       urlRq->setFocus();
       urlRq->lineEdit()->selectAll();
       return false;
@@ -354,7 +354,7 @@ bool PropertiesPage::loadNFS() {
   m_nfsFile = new NFSFile(KNFSShare::instance()->exportsPath());
 
   if (!m_nfsFile->load()) {
-      enableNFS(false,i18n("Error: Could not read NFS configuration file!"));
+      enableNFS(false,i18n("Error: could not read NFS configuration file."));
       return false;
   }      
 
@@ -444,7 +444,7 @@ bool PropertiesPage::loadSamba() {
   delete m_sambaFile;
   m_sambaFile = new SambaFile(KSambaShare::instance()->smbConfPath(), false);
   if (! m_sambaFile->load()) {
-      enableSamba(false,i18n("Error: Could not read Samba configuration file!"));
+      enableSamba(false,i18n("Error: could not read Samba configuration file."));
       return false;
   }
   

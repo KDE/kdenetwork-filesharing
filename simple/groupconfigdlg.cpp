@@ -121,7 +121,7 @@ void GroupConfigDlg::slotAddUser() {
   
   if (allUsers.count()==0) {
      KMessageBox::information(this,
-           i18n("All users are in the %1 group already!")
+           i18n("All users are in the %1 group already.")
            .arg(m_fileShareGroup.name()));
      return;           
   }
@@ -373,7 +373,7 @@ bool GroupConfigDlg::deleteGroup(const QString & s) {
   proc << "groupdel" << s;
   bool result = proc.start(KProcess::Block) && proc.normalExit();
   if (!result) {
-    KMessageBox::sorry(this,i18n("Deleting group '%1' failed!").arg(s));
+    KMessageBox::sorry(this,i18n("Deleting group '%1' failed.").arg(s));
   } 
   
   return result;
@@ -386,7 +386,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   }
 
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-      i18n("This group '%1' does not exit. Should it be created?").arg(s)))
+      i18n("This group '%1' does not exist; should it be created?").arg(s)))
       return false;
       
   //debug("CreateFileShareGroup: "+s);
@@ -394,7 +394,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   proc << "groupadd" << s;
   bool result = proc.start(KProcess::Block) && proc.normalExit();
   if (!result) {
-    KMessageBox::sorry(this,i18n("Creating group '%1' failed!").arg(s));
+    KMessageBox::sorry(this,i18n("Creation of group '%1' failed.").arg(s));
   } else {
     setFileShareGroup(KUserGroup(s));
   }

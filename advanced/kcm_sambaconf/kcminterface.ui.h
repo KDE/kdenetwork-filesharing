@@ -75,8 +75,8 @@ void KcmInterface::shareRadio_clicked()
 void KcmInterface::userRadio_clicked()
 {
     securityLevelHelpLbl->setText(i18n("Use the <i>user</i> security level if you have a bigger network "
-			         "and you don't want to allow everyone to read your list of shared "
-		                     "direcories and printers without a login.<p>"
+			         "and you do not want to allow everyone to read your list of shared "
+		                     "directories and printers without a login.<p>"
 			"If you want to run your Samba server as a <b>Primary Domain controller</b> (PDC) "
 			"you also have to set this option."));
 }

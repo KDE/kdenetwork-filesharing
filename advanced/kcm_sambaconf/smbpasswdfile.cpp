@@ -33,9 +33,13 @@
 
 #include <kurl.h>
 #include <kdebug.h>
+#include <kpassdlg.h>
+#include <klocale.h>
+#include <kprocess.h>
 
 #include "sambafile.h"
 #include "smbpasswdfile.h"
+#include "passwd.h"
 
 
 QStringList SambaUserList::getUserNames()
@@ -86,6 +90,7 @@ SambaUserList SmbPasswdFile::getSambaUserList()
       QStringList l = QStringList::split(":",s);
 
       SambaUser* user = new SambaUser(l[0],l[1].toInt());
+      user->gid = getUserGID(l[0]);
       list.append(user);
     }
     f.close();
@@ -98,17 +103,68 @@ SambaUserList SmbPasswdFile::getSambaUserList()
  * Tries to add the passed user to the smbpasswd file
  * returns true if successful otherwise false
  **/
-bool SmbPasswdFile::addUser(const SambaUser &)
+bool SmbPasswdFile::addUser(const SambaUser & user)
 {
+  KProcess p;
+  p << "smbpasswd" << "-a" << user.name;
+
+  QCString password;
+  int passResult = KPasswordDialog::getNewPassword(password, i18n("Please enter a password for the user "+user.name));
+  if (passResult != KPasswordDialog::Accepted)
+     return false;
+
+  p << password;
+
+  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
+           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
+
+  _smbpasswdOutput = "";
+
+  bool result = p.start(KProcess::Block,KProcess::Stdout);
+
+  if (result)
+  {
+    kdDebug() << _smbpasswdOutput << endl;
+  }
+
+  return result;
 }
 
 /**
  * Tries to remove the passed user from the smbpasswd file
  * returns true if successful otherwise false
  **/
-bool SmbPasswdFile::removeUser(const SambaUser &)
+bool SmbPasswdFile::removeUser(const SambaUser & user)
 {
+  KProcess p;
+  p << "smbpasswd" << "-x" << user.name;
+
+  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
+           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
+
+  _smbpasswdOutput = "";
+
+  bool result = p.start(KProcess::Block,KProcess::Stdout);
+
+  if (result)
+  {
+    kdDebug() << _smbpasswdOutput << endl;
+  }
+
+  return result;
 }
+
+bool SmbPasswdFile::changePassword(const SambaUser & user)
+{
+  return addUser(user);
+}
+
+
+void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *proc, char *buffer, int buflen)
+{
+  _smbpasswdOutput+=QString::fromLatin1(buffer,buflen);
+}
+
 
 /**
  * Returns the Url of the smbpasswd file
@@ -121,3 +177,4 @@ KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile *file)
 {
 }
 
+#include "smbpasswdfile.moc"

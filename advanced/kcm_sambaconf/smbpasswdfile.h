@@ -35,10 +35,10 @@
   */
 
 #include <qstring.h>
+#include <kurl.h>
 
-class KURL;
 class SambaFile;
-
+class KProcess;
 
 /**
  * Simple class to store a Samba User
@@ -50,6 +50,7 @@ public:
 
   QString name;
   int uid;
+  int gid;
 };
 
 /**
@@ -60,6 +61,7 @@ class SambaUserList : public QPtrList<SambaUser>
 public:
   QStringList getUserNames();
 };
+
 /**
  * This class represents the SAMBA smbpasswd file.
  * It provides :
@@ -67,7 +69,9 @@ public:
  * - adding a new user -> uses smbpasswd program
  * - removing an existing user -> uses smbpasswd program
  **/
-class SmbPasswdFile {
+class SmbPasswdFile : public QObject
+{
+Q_OBJECT
 public: 
 	SmbPasswdFile(const KURL &);
 	~SmbPasswdFile();
@@ -91,6 +95,12 @@ public:
   bool removeUser(const SambaUser &);
 
   /**
+   * Tries to change the password of the passed user
+   * if it fails returns false otherwise true
+   **/
+  bool changePassword(const SambaUser &);
+
+  /**
    * Returns the Url of the smbpasswd file
    * specified in the [global] section of
    * the smb.conf file.
@@ -100,6 +110,10 @@ public:
   static KURL getUrlFromSambaFile(const SambaFile *file);
 protected:
   KURL _url;
+  QString _smbpasswdOutput;
+
+protected slots:
+  void smbpasswdStdOutReceived(KProcess*,char*,int);
 };
 
 #endif

@@ -32,30 +32,25 @@
 #include <kfileitem.h>
 #include <klistview.h>
 
+#include "qmultichecklistitem.h"
+
 class KDirLister;
 class QRegExp;
 class ShareDlgImpl;
 class SambaShare;
 
-class HiddenListViewItem : public KListViewItem
+class HiddenListViewItem : public QMultiCheckListItem
 {
+Q_OBJECT
 public:
-  HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden, bool veto );
+  HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden, bool veto, bool vetoOplock );
   ~HiddenListViewItem();
-
-  void setVeto(bool b);
-  bool isVeto();
-
-  void setHidden(bool b);
-  bool isHidden();
 
   virtual void paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment);
 
   KFileItem* getFileItem();
 protected:
   KFileItem *_fileItem;
-  bool _hidden;
-  bool _veto;
 };
 
 class KToggleAction;
@@ -96,9 +91,11 @@ protected:
   KDirLister* _dir;
   QPtrList<QRegExp> _hiddenList;
   QPtrList<QRegExp> _vetoList;
+  QPtrList<QRegExp> _vetoOplockList;
 
   KToggleAction* _hiddenActn;
   KToggleAction* _vetoActn;
+  KToggleAction* _vetoOplockActn;
 
   KPopupMenu* _popup;
 
@@ -107,6 +104,7 @@ protected:
   QPtrList<QRegExp> createRegExpList(const QString & s);
   bool matchHidden(const QString & s);
   bool matchVeto(const QString & s);
+  bool matchVetoOplock(const QString & s);
   bool matchRegExpList(const QString & s, QPtrList<QRegExp> & lst);
 
   QRegExp* getHiddenMatch(const QString & s);
@@ -115,8 +113,7 @@ protected:
 
   QPtrList<HiddenListViewItem> getMatchingItems(const QRegExp & rx);
 
-  void setVeto(QPtrList<HiddenListViewItem> & lst, bool b);
-  void setHidden(QPtrList<HiddenListViewItem> & lst, bool b);
+  void setState(QPtrList<HiddenListViewItem> & lst,int column, bool b);
   void deselect(QPtrList<HiddenListViewItem> & lst);
 
   void updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst);
@@ -130,10 +127,14 @@ protected slots:
   void selectionChanged();
   void hiddenChkClicked(bool b);
   void vetoChkClicked(bool b);
+  void vetoOplockChkClicked(bool b);
+  void checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit,int column,QPtrList<QRegExp> &reqExpList,bool b);
+  void columnClicked(int column);
   void showContextMenu();
   void updateView();
   void hideDotFilesChkClicked(bool);
   void hideUnreadableChkClicked(bool);
+  void slotMouseButtonPressed( int button, QListViewItem * item, const QPoint & pos, int c );
 };
 
 #endif

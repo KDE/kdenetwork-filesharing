@@ -135,6 +135,7 @@ class KcmSambaConf: public KCModule
     void addSambaUserBtnClicked();
     void removeSambaUserBtnClicked();
     void sambaUserPasswordBtnClicked();
+    void slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int);
 
   private:
 		KAboutData* _myAboutData;

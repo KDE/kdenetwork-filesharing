@@ -53,16 +53,17 @@
 #define COL_NAME 0
 #define COL_HIDDEN 1
 #define COL_VETO 2
-#define COL_SIZE 3
-#define COL_DATE 4
-#define COL_PERM 5
-#define COL_OWNER 6
-#define COL_GROUP 7
+#define COL_VETO_OPLOCK 3
+#define COL_SIZE 4
+#define COL_DATE 5
+#define COL_PERM 6
+#define COL_OWNER 7
+#define COL_GROUP 8
 
 #define HIDDENTABINDEX 5
 
-HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden, bool veto )
-  : KListViewItem( parent )
+HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
+  : QMultiCheckListItem( parent )
 {
   setPixmap( COL_NAME, fi->pixmap(KIcon::SizeSmall));
 
@@ -73,8 +74,9 @@ HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool h
   setText( COL_OWNER, fi->user() );
   setText( COL_GROUP, fi->group() );
 
-  setHidden(hidden);
-  setVeto(veto);
+  setOn(COL_HIDDEN,hidden);
+  setOn(COL_VETO,veto);
+  setOn(COL_VETO_OPLOCK,vetoOplock);  
 
   _fileItem = fi;
 }
@@ -88,39 +90,18 @@ KFileItem* HiddenListViewItem::getFileItem()
   return _fileItem;
 }
 
-void HiddenListViewItem::setVeto(bool b)
-{
-  _veto = b;
-  setText( COL_VETO, _veto ? i18n("Yes") : QString(""));
-}
-
-bool HiddenListViewItem::isVeto()
-{
-  return _veto;
-}
-
-void HiddenListViewItem::setHidden(bool b)
-{
-  _hidden = b;
-  setText( COL_HIDDEN, _hidden ? i18n("Yes") : QString("") );
-}
-
-bool HiddenListViewItem::isHidden()
-{
-  return _hidden;
-}
 
 void HiddenListViewItem::paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment)
 {
   QColorGroup _cg = cg;
 
-  if (isVeto())
+  if (isOn(COL_VETO))
      _cg.setColor(QColorGroup::Base,lightGray);
 
-  if (isHidden())
+  if (isOn(COL_HIDDEN))
      _cg.setColor(QColorGroup::Text,gray);
 
-  QListViewItem::paintCell(p, _cg, column, width, alignment);
+  QMultiCheckListItem::paintCell(p, _cg, column, width, alignment);
 }
 
 
@@ -133,6 +114,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 
   _hiddenActn = new KToggleAction(i18n("&Hide"));
   _vetoActn = new KToggleAction(i18n("&Veto"));
+  _vetoOplockActn = new KToggleAction(i18n("&Veto oplock"));
 
   initListView();
 
@@ -141,6 +123,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 
   connect( _dlg->hiddenChk, SIGNAL(toggled(bool)), this, SLOT( hiddenChkClicked(bool) ));
   connect( _dlg->vetoChk, SIGNAL(toggled(bool)), this, SLOT( vetoChkClicked(bool) ));
+  connect( _dlg->vetoOplockChk, SIGNAL(toggled(bool)), this, SLOT( vetoOplockChkClicked(bool) ));
 
   _dlg->hiddenEdit->setText( _share->getValue("hide files") );
   connect( _dlg->hiddenEdit, SIGNAL(textChanged(const QString &)), this, SLOT(updateView()));
@@ -148,6 +131,8 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
   _dlg->vetoEdit->setText( _share->getValue("veto files") );
   connect( _dlg->vetoEdit, SIGNAL(textChanged(const QString &)), this, SLOT(updateView()));
 
+  _dlg->vetoOplockEdit->setText( _share->getValue("veto oplock files") );
+  connect( _dlg->vetoOplockEdit, SIGNAL(textChanged(const QString &)), this, SLOT(updateView()));
 
 //  new QLabel(i18n("Hint")+" : ",grid);
 //  new QLabel(i18n("You have to separate the entries with a '/'. You can use the wildcards '*' and '?'"),grid);
@@ -168,6 +153,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
            
   connect( _hiddenActn, SIGNAL(toggled(bool)), this, SLOT(hiddenChkClicked(bool)));
   connect( _vetoActn, SIGNAL(toggled(bool)), this, SLOT(vetoChkClicked(bool)));
+  connect( _vetoOplockActn, SIGNAL(toggled(bool)), this, SLOT(vetoOplockChkClicked(bool)));
 }
 
 void HiddenFileView::initListView()
@@ -178,10 +164,13 @@ void HiddenFileView::initListView()
 
   _hiddenList = createRegExpList(_share->getValue("hide files"));
   _vetoList = createRegExpList(_share->getValue("veto files"));
+  _vetoOplockList = createRegExpList(_share->getValue("veto oplock files"));
 
   _popup = new KPopupMenu(_dlg->hiddenListView);
+  
   _hiddenActn->plug(_popup);
   _vetoActn->plug(_popup);
+  _vetoOplockActn->plug(_popup);
 
   connect( _dlg->hiddenListView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
   connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,QListViewItem*,const QPoint&)),
@@ -189,6 +178,9 @@ void HiddenFileView::initListView()
 
   connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));
   connect( _dlg->hideUnreadableChk, SIGNAL(toggled(bool)), this, SLOT(hideUnreadableChkClicked(bool)));
+  
+  connect( _dlg->hiddenListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
+           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
 }
 
 HiddenFileView::~HiddenFileView()
@@ -218,6 +210,14 @@ void HiddenFileView::save()
   if (s != "" && s.right(1)!="/")
       s+="/";
   _share->setValue("veto files", s);
+
+  s = _dlg->vetoOplockEdit->text().stripWhiteSpace();
+  // its important that the string ends with an '/'
+  // otherwise Samba won't recognize the last entry
+  if (s != "" && s.right(1)!="/")
+      s+="/";
+  _share->setValue("veto oplock files", s);
+
 }
 
 void HiddenFileView::insertNewFiles(const KFileItemList &newone)
@@ -235,8 +235,23 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
 
     bool hidden = matchHidden(tmp->text());
     bool veto = matchVeto(tmp->text());
+    bool vetoOplock = matchVetoOplock(tmp->text());
 
-    HiddenListViewItem *item = new HiddenListViewItem( _dlg->hiddenListView, tmp, hidden, veto );
+    HiddenListViewItem *item = new HiddenListViewItem( _dlg->hiddenListView, tmp, hidden, veto, vetoOplock );
+    
+  }
+}
+
+
+
+void HiddenFileView::columnClicked(int column) {
+  
+
+  switch (column) {
+    case COL_HIDDEN : hiddenChkClicked( !_dlg->hiddenChk->isOn() );break;
+    case COL_VETO : vetoChkClicked( !_dlg->vetoChk->isOn() );break;
+    case COL_VETO_OPLOCK : vetoOplockChkClicked( !_dlg->vetoOplockChk->isOn() );break;
+    default : break;
   }
 }
 
@@ -273,6 +288,8 @@ void HiddenFileView::selectionChanged()
   bool noVeto = false;
   bool hide = false;
   bool noHide = false;
+  bool vetoOplock = false;
+  bool noVetoOplock = false;
 
   int n = 0;
 
@@ -285,12 +302,17 @@ void HiddenFileView::selectionChanged()
 
     n++;
 
-    if (item->isVeto())
+    if (item->isOn(COL_VETO))
        veto = true;
     else
        noVeto = true;
 
-    if (item->isHidden())
+    if (item->isOn(COL_VETO_OPLOCK))
+       vetoOplock = true;
+    else
+       noVetoOplock = true;
+    
+    if (item->isOn(COL_HIDDEN))
        hide = true;
     else
        noHide = true;
@@ -311,6 +333,19 @@ void HiddenFileView::selectionChanged()
     _dlg->vetoChk->setChecked(veto);
   }
 
+  if (vetoOplock && noVetoOplock)
+  {
+    _dlg->vetoOplockChk->setTristate(true);
+    _dlg->vetoOplockChk->setNoChange();
+    _dlg->vetoOplockChk->update();
+  }
+  else
+  {
+    _dlg->vetoOplockChk->setTristate(false);
+    _dlg->vetoOplockChk->setChecked(vetoOplock);
+  }
+  
+  
   if (hide && noHide)
   {
     _dlg->hiddenChk->setTristate(true);
@@ -324,14 +359,13 @@ void HiddenFileView::selectionChanged()
   }
 }
 
-void HiddenFileView::hiddenChkClicked(bool b)
-{
+void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit, int column,QPtrList<QRegExp> & reqExpList,bool b) {
   // We don't save the old state so
   // disable the tristate mode
-  _dlg->hiddenChk->setTristate(false);
-  _hiddenActn->setChecked(b);
-  _dlg->hiddenChk->setChecked(b);
-
+  chkBox->setTristate(false);
+  action->setChecked(b);
+  chkBox->setChecked(b);
+  
   HiddenListViewItem* item;
   for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
        item = static_cast<HiddenListViewItem*>(item->nextSibling()))
@@ -340,9 +374,9 @@ void HiddenFileView::hiddenChkClicked(bool b)
     {
       // If we remove a file from the list
       // perhaps it was a wildcard string
-      if (!b && item->isHidden())
+      if (!b && item->isOn(column))
       {
-        QRegExp* rx = getHiddenMatch(item->text(0));
+        QRegExp* rx = getRegExpListMatch(item->text(0),reqExpList);
         assert(rx);
 
         QString p = rx->pattern();
@@ -351,8 +385,8 @@ void HiddenFileView::hiddenChkClicked(bool b)
         {
           int result = KMessageBox::questionYesNo(_dlg,i18n(
             "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>! "
-            "Do you want to unhide all files matching <b>'%1'</b>? <br>"
-            "(If you say no, no file matching '%1' will be unhidden)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+            "Do you want to uncheck all files matching <b>'%1'</b>? <br>"
+            "(If you say no, no file matching '%1' will be unchecked)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
             i18n("Wildcarded String"));
 
           QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
@@ -364,86 +398,39 @@ void HiddenFileView::hiddenChkClicked(bool b)
           }
           else
           {
-            setHidden(lst,false);
+            setState(lst,column,false);
           }
         }
 
-        _hiddenList.remove(rx);
+        reqExpList.remove(rx);
       }
       else
-      if (b && !item->isHidden())
+      if (b && !item->isOn(column))
       {
-        _hiddenList.append( new QRegExp(item->text(0)) );
+        reqExpList.append( new QRegExp(item->text(0)) );
       }
 
-      item->setHidden(b);
+      item->setOn(column,b);
     }
   }
 
-  updateEdit(_dlg->hiddenEdit, _hiddenList);
+  updateEdit(edit, reqExpList);
   _dlg->hiddenListView->update();
+}
+
+void HiddenFileView::hiddenChkClicked(bool b)
+{
+    checkBoxClicked(_dlg->hiddenChk, _hiddenActn, _dlg->hiddenEdit, COL_HIDDEN,_hiddenList,b);
+
+}
+
+void HiddenFileView::vetoOplockChkClicked(bool b) {
+    checkBoxClicked(_dlg->vetoOplockChk, _vetoOplockActn, _dlg->vetoOplockEdit, COL_VETO_OPLOCK,_vetoOplockList,b);
 }
 
 void HiddenFileView::vetoChkClicked(bool b)
 {
-  // We don't save the old state so
-  // disable the tristate mode
-  _dlg->vetoChk->setTristate(false);
-  _vetoActn->setChecked(b);
-  _dlg->vetoChk->setChecked(b);
-
-  HiddenListViewItem* item;
-  for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
-       item = static_cast<HiddenListViewItem*>(item->nextSibling()))
-  {
-    if (item->isSelected())
-    {
-      // If we remove a file from the list
-      // perhaps it was a wildcard string
-      if (!b && item->isVeto())
-      {
-        QRegExp* rx = getVetoMatch(item->text(0));
-        assert(rx);
-
-        QString p = rx->pattern();
-        if ( p.find("*") > -1 ||
-             p.find("?") > -1 )
-        {
-          int result = KMessageBox::questionYesNo(_dlg,i18n(
-            "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>! "
-            "Do you want to unveto all files matching <b>'%1'</b>? <br>"
-            "(If you say no, no file matching '%1' will be unvetoed)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
-            i18n("Wildcarded String"));
-
-          QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
-
-          if (result == KMessageBox::No)
-          {
-            deselect(lst);
-            continue;
-          }
-          else
-          {
-            setVeto(lst,false);
-          }
-        }
-
-        _vetoList.remove(rx);
-      }
-      else
-      if (b && !item->isVeto())
-      {
-        _vetoList.append( new QRegExp(item->text(0)) );
-      }
-
-      item->setVeto(b);
-    }
-
-
-  }
-
-  updateEdit(_dlg->vetoEdit, _vetoList);
-  _dlg->hiddenListView->update();
+    checkBoxClicked(_dlg->vetoChk, _vetoActn, _dlg->vetoEdit, COL_VETO,_vetoList,b);
 }
 
 /**
@@ -463,25 +450,16 @@ void HiddenFileView::updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst)
   edit->setText(s);
 }
 
-void HiddenFileView::setVeto(QPtrList<HiddenListViewItem> & lst, bool b)
-{
+
+void HiddenFileView::setState(QPtrList<HiddenListViewItem> & lst, int column, bool b) {
   HiddenListViewItem* item;
   for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
       item = static_cast<HiddenListViewItem*>(lst.next()) )
   {
-    item->setVeto(b);
+    item->setOn(column,b);
   }
 }
 
-void HiddenFileView::setHidden(QPtrList<HiddenListViewItem> & lst, bool b)
-{
-  HiddenListViewItem* item;
-  for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
-      item = static_cast<HiddenListViewItem*>(lst.next()) )
-  {
-    item->setHidden(b);
-  }
-}
 
 void HiddenFileView::deselect(QPtrList<HiddenListViewItem> & lst)
 {
@@ -513,13 +491,15 @@ void HiddenFileView::updateView()
 {
   _hiddenList = createRegExpList(_dlg->hiddenEdit->text());
   _vetoList = createRegExpList(_dlg->vetoEdit->text());
+  _vetoOplockList = createRegExpList(_dlg->vetoOplockEdit->text());
 
   HiddenListViewItem* item;
   for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
        item = static_cast<HiddenListViewItem*>(item->nextSibling()))
   {
-    item->setHidden(matchHidden(item->text(0)));
-    item->setVeto(matchVeto(item->text(0)));
+    item->setOn(COL_HIDDEN,matchHidden(item->text(0)));
+    item->setOn(COL_VETO,matchVeto(item->text(0)));
+    item->setOn(COL_VETO_OPLOCK,matchVetoOplock(item->text(0)));
   }
 
   _dlg->hiddenListView->repaint();
@@ -556,6 +536,11 @@ bool HiddenFileView::matchHidden(const QString & s)
 bool HiddenFileView::matchVeto(const QString & s)
 {
   return matchRegExpList(s,_vetoList);
+}
+
+bool HiddenFileView::matchVetoOplock(const QString & s)
+{
+  return matchRegExpList(s,_vetoOplockList);
 }
 
 bool HiddenFileView::matchRegExpList(const QString & s, QPtrList<QRegExp> & lst)
@@ -599,5 +584,10 @@ void HiddenFileView::hideUnreadableChkClicked(bool b)
 {
   updateView();
 }
+
+void HiddenFileView::slotMouseButtonPressed( int button, QListViewItem * item, const QPoint & pos, int c ) {
+  columnClicked(c);
+}
+
 
 #include "hiddenfileview.moc"

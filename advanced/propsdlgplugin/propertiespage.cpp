@@ -61,22 +61,23 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
   m_sambaChanged(false),
   m_loaded(false)
 {
-  if (m_enterUrl) {
-    shareChk->hide();
-    urlRq->setMode(KFile::Directory |
-                   KFile::ExistingOnly |
-                   KFile::LocalOnly );
-  } else {
-    urlRq->hide();
-    folderLbl->hide();
-  }
-  
   if (m_items.isEmpty()) {
     shareFrame->setDisabled(true);
   } else {
     shareFrame->setEnabled(true);
     // currently only one dir is allowed
     m_path = m_items.first()->url().path(1);
+  }
+  
+  if (m_enterUrl) {
+    shareChk->hide();
+    urlRq->setMode(KFile::Directory |
+                   KFile::ExistingOnly |
+                   KFile::LocalOnly );
+    urlRq->setURL(m_path);                   
+  } else {
+    urlRq->hide();
+    folderLbl->hide();
   }
   
   
@@ -131,10 +132,98 @@ bool PropertiesPage::save() {
       return true;
   }
   
-  bool nfsResult = saveNFS();
-  bool sambaResult = saveSamba();
+  if (!checkURL())
+      return false;
   
-  return nfsResult && sambaResult;
+  if (!saveNFS())
+      return false;
+      
+  if (!saveSamba())
+      return false;
+  
+  return true;
+}
+
+bool PropertiesPage::checkURL() {
+
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL" << endl;
+  
+  if (!m_enterUrl)
+      return true;
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: enterUrl=true" << endl;
+  
+  KURL url(urlRq->url());      
+  QString path = url.path(1);        
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: m_path='" 
+        << m_path << "'" << endl;
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: path='" 
+        << path << "'" << endl;
+  
+  if (m_path == path) {
+    kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: paths are equal" << endl;
+    return true;
+  }    
+    
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: different path" << endl;
+  
+  
+  if (!url.isValid()) {
+      KMessageBox::sorry(this,i18n("Please enter a valid path!"));
+      urlRq->setFocus();
+      urlRq->lineEdit()->selectAll();
+      return false;
+  }
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is valid" << endl;
+  
+  if (!url.isLocalFile()) {
+      KMessageBox::sorry(this,i18n("Only local folders can be shared!"));
+      urlRq->setFocus();
+      urlRq->lineEdit()->selectAll();
+      return false;
+  }
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is local file" << endl;
+  
+  QFileInfo info(path);
+  
+  if (!info.exists()) 
+  {
+      KMessageBox::sorry(this,i18n("The folder does not exists!"));
+      urlRq->setFocus();
+      urlRq->lineEdit()->selectAll();
+      return false;
+  }
+
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder exits" << endl;
+  
+  
+  if (!info.isDir()) 
+  {
+      KMessageBox::sorry(this,i18n("Only folders can be shared!"));
+      urlRq->setFocus();
+      urlRq->lineEdit()->selectAll();
+      return false;
+  }
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: path is dir" << endl;
+  
+  if (KSambaShare::instance()->isDirectoryShared(path) ||
+      KNFSShare::instance()->isDirectoryShared(path))
+  {
+      KMessageBox::sorry(this,i18n("The folder is already shared!"));
+      urlRq->setFocus();
+      urlRq->lineEdit()->selectAll();
+      return false;
+  }      
+  
+  kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder not shared yet" << endl;
+  
+  
+  return true;
 }
 
 bool PropertiesPage::loadNFS() {
@@ -389,23 +478,6 @@ void PropertiesPage::moreSambaBtnClicked() {
       loadSambaShare();
   }
   delete dlg;
-}
-
-void PropertiesPage::urlRqTextChanged( const QString & s) {
-  QFileInfo info(s);
-  if (info.exists() && info.isDir()) {
-    if (KSambaShare::instance()->isDirectoryShared(s) ||
-        KNFSShare::instance()->isDirectoryShared(s))
-    {
-      KMessageBox::sorry(this,
-          i18n("This folder is already shared. Please choose another one."));
-      shareFrame->setDisabled(true);          
-      return;          
-    }        
-    
-    shareFrame->setEnabled(true);
-    m_path = s;
-  }    
 }
 
 #include "propertiespage.moc"

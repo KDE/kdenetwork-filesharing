@@ -52,6 +52,9 @@
             <property name="text">
                 <string>S&amp;hare this folder in the local network</string>
             </property>
+            <property name="accel">
+                <string>Alt+H</string>
+            </property>
             <property name="checked">
                 <bool>true</bool>
             </property>
@@ -427,12 +430,6 @@
         <slot>moreNFSBtn_clicked()</slot>
     </connection>
     <connection>
-        <sender>urlRq</sender>
-        <signal>textChanged(const QString&amp;)</signal>
-        <receiver>PropertiesPageGUI</receiver>
-        <slot>urlRqTextChanged(const QString&amp;)</slot>
-    </connection>
-    <connection>
         <sender>sambaChk</sender>
         <signal>toggled(bool)</signal>
         <receiver>PropertiesPageGUI</receiver>
@@ -475,7 +472,6 @@
 <slots>
     <slot access="protected">changedSlot()</slot>
     <slot>moreNFSBtn_clicked()</slot>
-    <slot>urlRqTextChanged( const QString &amp; )</slot>
     <slot>sambaChkToggled( bool )</slot>
     <slot>publicSambaChkToggled( bool b )</slot>
     <slot>publicNFSChkToggled( bool b )</slot>

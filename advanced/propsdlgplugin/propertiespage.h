@@ -58,7 +58,6 @@ protected slots:
   // inherited from PropertiesPageGUI
   virtual void moreNFSBtn_clicked();
   virtual void moreSambaBtnClicked();
-  virtual void urlRqTextChanged( const QString & );
   virtual void sambaChkToggled( bool b );
   
 private:
@@ -72,6 +71,7 @@ private:
   bool updateSambaShare();
   bool saveSamba();
   
+  bool checkURL();
   void setSambaShareBoolValue(const QString & value, QCheckBox* chk);
   void createNewSambaShare();
   QString getNewSambaName();

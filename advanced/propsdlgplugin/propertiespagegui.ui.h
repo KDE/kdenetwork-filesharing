@@ -21,12 +21,6 @@ void PropertiesPageGUI::moreNFSBtn_clicked()
 }
 
 
-void PropertiesPageGUI::urlRqTextChanged( const QString & )
-{
-
-}
-
-
 bool PropertiesPageGUI::hasChanged()
 {
     return m_hasChanged;

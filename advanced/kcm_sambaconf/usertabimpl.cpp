@@ -41,7 +41,7 @@
 #include <klocale.h>
 #include <kdebug.h>
 #include <kiconloader.h>
-#include <klineeditdlg.h>
+#include <kinputdialog.h>
 
 #include "usertabimpl.h"
 #include "sambashare.h"
@@ -275,8 +275,12 @@ void UserTabImpl::addUserBtnClicked()
 
     delete dlg;
   } else {
-    QString name = KLineEditDlg::getText(i18n("Add User"),i18n("Name:"));
-    addUserToUserTable(name,0);
+    bool ok;
+    QString name = KInputDialog::getText(i18n("Add User"),i18n("Name:"),
+                                         QString::null,&ok );
+                                         
+    if (ok)                                         
+        addUserToUserTable(name,0);
   }
 }
 

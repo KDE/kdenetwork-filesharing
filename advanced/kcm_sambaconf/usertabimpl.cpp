@@ -58,8 +58,6 @@ UserTabImpl::~UserTabImpl()
 
 void UserTabImpl::load()
 {
-  kdDebug() << "loading..." << endl;
-
   userTable->setColumnWidth(1, possibleUserListView->columnWidth(1));
   userTable->setColumnWidth(2, possibleUserListView->columnWidth(2));
 

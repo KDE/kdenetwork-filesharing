@@ -1,3 +1,4 @@
+KDE_ICON = AUTO
 kde_module_LTLIBRARIES = libkcm_kcmsambaconf.la ksambakonqiplugin.la
 
 

@@ -64,7 +64,8 @@ protected :
    **/
 	SambaShare* _share;
 
-
+protected slots:
+	virtual void accept();
 };
 
 

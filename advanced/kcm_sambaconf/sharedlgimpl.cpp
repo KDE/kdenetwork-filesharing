@@ -92,11 +92,11 @@ void ShareDlgImpl::initDialog()
   preserveCaseChk->setChecked( _share->getBoolValue("preserve case") );
   shortPreserveCaseChk->setChecked( _share->getBoolValue("short preserve case") );
   mangledNamesChk->setChecked( _share->getBoolValue("mangled names") );
-  mangeCaseChk->setChecked( _share->getBoolValue("mange case") );
+  mangleCaseChk->setChecked( _share->getBoolValue("mangle case") );
   manglingCharEdit->setText( _share->getValue("mangling char") );
 
   hideDotFilesChk->setChecked( _share->getBoolValue("hide dot files") );
-  hideTrailingDotChk->setChecked( _share->getBoolValue("hide trailing dot") );
+  hideTrailingDotChk->setChecked( _share->getBoolValue("strip dot") );
   hideUnreadableChk->setChecked( _share->getBoolValue("hide unreadable") );
   dosFilemodeChk->setChecked( _share->getBoolValue("dos filemode") );
   dosFiletimesChk->setChecked( _share->getBoolValue("dos filetimes") );
@@ -104,8 +104,8 @@ void ShareDlgImpl::initDialog()
   deleteReadonlyChk->setChecked( _share->getBoolValue("delete readonly") );
 
 
-  readOnlyChk->setChecked( _share->getBoolValue("read only") );
-  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
+//-  readOnlyChk->setChecked( _share->getBoolValue("read only") );
+//-  guestOkChk->setChecked( _share->getBoolValue("guest ok") );
   guestOnlyChk->setChecked( _share->getBoolValue("guest only") );
   userOnlyChk->setChecked( _share->getBoolValue("user only") );
   hostsAllowEdit->setText( _share->getValue("hosts allow") );
@@ -147,6 +147,101 @@ void ShareDlgImpl::initDialog()
 
 ShareDlgImpl::~ShareDlgImpl()
 {
+}
+
+void ShareDlgImpl::accept()
+{
+	// Base settings
+
+  kdDebug() << "accept" << endl;
+
+	assert(_share);
+  
+  if (!_share)
+     return;
+
+  if (homeChk->isChecked())
+  	 _share->setName("homes");
+	else
+    _share->setName(shareNameEdit->text());
+
+
+  _share->setValue("path",pathUrlRq->url() );
+
+
+	_share->setValue("comment",commentEdit->text( ) );
+
+  _share->setValue("available",availableBaseChk->isChecked( ) );
+  _share->setValue("browseable",browseableBaseChk->isChecked( ) );
+  _share->setValue("writeable", ! readOnlyBaseChk->isChecked( ) );
+  _share->setValue("public",publicBaseChk->isChecked( ) );
+
+  // User settings
+
+  _share->setValue("invalid users",invalidUsersEdit->text( ) );
+  _share->setValue("force user",forceUserEdit->text( ) );
+  _share->setValue("force group",forceGroupEdit->text( ) );
+
+  // Filename settings
+  
+  _share->setValue("default case",defaultCaseCombo->currentText( ) );
+  _share->setValue("case sensitive",caseSensitiveChk->isChecked( ) );
+  _share->setValue("preserve case",preserveCaseChk->isChecked( ) );
+  _share->setValue("short preserve case",shortPreserveCaseChk->isChecked( ) );
+  _share->setValue("mangled names",mangledNamesChk->isChecked( ) );
+  _share->setValue("mangle case",mangleCaseChk->isChecked( ) );
+  _share->setValue("mangling char",manglingCharEdit->text( ) );
+
+  _share->setValue("hide dot files",hideDotFilesChk->isChecked( ) );
+  _share->setValue("strip dot",hideTrailingDotChk->isChecked( ) );
+  _share->setValue("hide unreadable",hideUnreadableChk->isChecked( ) );
+  _share->setValue("dos filemode",dosFilemodeChk->isChecked( ) );
+  _share->setValue("dos filetimes",dosFiletimesChk->isChecked( ) );
+  _share->setValue("dos filetime resolution",dosFiletimeResolutionChk->isChecked( ) );
+  _share->setValue("delete readonly",deleteReadonlyChk->isChecked( ) );
+
+
+//-  _share->setValue("read only",readOnlyChk->isChecked( ) );
+//-  _share->setValue("guest ok",guestOkChk->isChecked( ) );
+  _share->setValue("guest only",guestOnlyChk->isChecked( ) );
+  _share->setValue("user only",userOnlyChk->isChecked( ) );
+  _share->setValue("hosts allow",hostsAllowEdit->text( ) );
+  _share->setValue("guest account",guestAccountEdit->text( ) );
+  _share->setValue("hosts deny",hostsDenyEdit->text( ) );
+  _share->setValue("force directory security mode",forceDirectorySecurityModeEdit->text( ) );
+  _share->setValue("force directory mode",forceDirectoryModeEdit->text( ) );
+  _share->setValue("force security mode",forceSecurityModeEdit->text( ) );
+
+  _share->setValue("force create mode",forceCreateModeEdit->text( ) );
+  _share->setValue("directory security mask",directorySecurityMaskEdit->text( ) );
+  _share->setValue("directory mask",directoryMaskEdit->text( ) );
+  _share->setValue("security mask",securityMaskEdit->text( ) );
+  _share->setValue("create mask",createMaskEdit->text( ) );
+  _share->setValue("inherit permissions",inheritPermissionsChk->isChecked( ) );
+  
+  // Advanced
+
+  _share->setValue("blocking locks",blockingLocksChk->isChecked( ) );
+  _share->setValue("fake oplocks",fakeOplocksChk->isChecked( ) );
+  _share->setValue("locking",lockingChk->isChecked( ) );
+  _share->setValue("level2 oplocks",level2OplocksChk->isChecked( ) );
+  _share->setValue("posix locking",posixLockingChk->isChecked( ) );
+  _share->setValue("strict locking",strictLockingChk->isChecked( ) );
+  _share->setValue("share modes",shareModesChk->isChecked( ) );
+  _share->setValue("oplocks",oplocksChk->isChecked( ) );
+
+  _share->setValue("oplock contention limit",QString::number(oplockContentionLimitInput->value()));
+  _share->setValue("strict sync",strictSyncChk->isChecked( ) );
+
+  _share->setValue("max connections",QString::number(maxConnectionsInput->value()) );
+  _share->setValue("write cache size",QString::number(writeCacheSizeInput->value()) );
+
+  _share->setValue("sync always",syncAlwaysChk->isChecked( ) );
+  _share->setValue("status",statusChk->isChecked( ) );
+
+  // Hidden files
+
+	KcmShareDlg::accept();
 }
 
 #include "sharedlgimpl.moc"

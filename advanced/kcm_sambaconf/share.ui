@@ -661,7 +661,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>mangeCaseChk</cstring>
+                                    <cstring>mangleCaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>mangle case</string>
@@ -871,7 +871,7 @@
                     </property>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout23</cstring>
+                            <cstring>Layout67</cstring>
                         </property>
                         <hbox>
                             <property name="name">
@@ -883,28 +883,6 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QCheckBox">
-                                <property name="name">
-                                    <cstring>readOnlyChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>&amp;Read only</string>
-                                </property>
-                                <property name="whatsThis" stdset="0">
-                                    <string>If this is checked, then users of a service may not create or modify files in the service's directory.</string>
-                                </property>
-                            </widget>
-                            <widget class="QCheckBox">
-                                <property name="name">
-                                    <cstring>guestOkChk</cstring>
-                                </property>
-                                <property name="text">
-                                    <string>&amp;Guest ok</string>
-                                </property>
-                                <property name="whatsThis" stdset="0">
-                                    <string>If this is checked , then no password is required to connect to the service. Privileges will be those of the guest account.</string>
-                                </property>
-                            </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
                                     <cstring>guestOnlyChk</cstring>
@@ -927,6 +905,23 @@
                                     <string>If this is checked , then no password is required to connect to the service. Privileges will be those of the guest account.</string>
                                 </property>
                             </widget>
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer43</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
                         </hbox>
                     </widget>
                     <widget class="QLayoutWidget">
@@ -1694,7 +1689,7 @@
         <sender>buttonOk</sender>
         <signal>clicked()</signal>
         <receiver>KcmShareDlg</receiver>
-        <slot>trytoAccept()</slot>
+        <slot>accept()</slot>
     </connection>
 </connections>
 <includes>

@@ -30,11 +30,6 @@
 #include "sambafile.h"
 
 
-SambaShare::SambaShare()
-{
-  QDict<QString>(10,false);
-  setAutoDelete(true);
-}
 
 SambaConfigFile::SambaConfigFile()
 {
@@ -130,6 +125,26 @@ void SambaFile::slotSaveDone(KProcess* proc)
 {
 }
 
+  /**
+   * Returns a name which isn't already used for a share
+   **/
+QString SambaFile::getUnusedName() const
+{
+	QString init = i18n("Unnamed");
+  QString s = init;
+
+  int i = 1;
+
+  while (sambaConfig->find(s))
+  {
+		s = init+QString("%1").arg(i);
+    i++;
+  }
+  
+  return s;
+}
+
+
 void SambaFile::writeValue(const QString & share, const QString & optionName, bool value)
 {
 	writeValue(share,optionName,textFromBool(value));
@@ -185,7 +200,7 @@ void SambaFile::renameShare(const QString & oldName, const QString & newName)
 
 	config->deleteGroup(oldName);
 
-  SambaShare *newShare = new SambaShare();
+  SambaShare *newShare = new SambaShare(sambaConfig);
   sambaConfig->insert(newName,newShare);
   config->setGroup(newName);
   
@@ -203,21 +218,35 @@ void SambaFile::renameShare(const QString & oldName, const QString & newName)
 
 }
 
-bool SambaFile::newShare(const QString & name, const QString & path)
+SambaShare* SambaFile::newShare(const QString & name, const QString & path)
 {
   if (sambaConfig->find(name))
-     return false;
+     return 0L;
 
-  SambaShare* share = new SambaShare();
-  share->insert("path",new QString(path));
+  SambaShare* share = new SambaShare(name,sambaConfig);
+  share->setValue("path",path);
   sambaConfig->insert(name,share);
-  config->setGroup(name);
-  config->writeEntry("path",path);
 
   changed = true;
 
-  return true;
+  return share;
 }
+
+SambaShare* SambaFile::newPrinter(const QString & name, const QString & printer)
+{
+  if (sambaConfig->find(name))
+     return 0L;
+
+  SambaShare* share = new SambaShare(name,sambaConfig);
+  share->setValue("printable",true);
+  share->setValue("printer name",printer);
+  sambaConfig->insert(name,share);
+
+  changed = true;
+
+  return share;
+}
+
 
 /** No descriptions */
 void SambaFile::removeShare(const QString & share)
@@ -228,17 +257,58 @@ void SambaFile::removeShare(const QString & share)
   config->deleteGroup(share);
 }
 
+void SambaFile::removeShare(SambaShare* share)
+{
+	removeShare(share->getName());
+}
 
 /** No descriptions */
-SambaShare SambaFile::getShare(const QString & share) const
+SambaShare* SambaFile::getShare(const QString & share) const
 {
 	SambaShare *s = sambaConfig->find(share);
 
-	if (s)
-  	return SambaShare(*s);
-  else
-  	return SambaShare();
+  return s;
 }
+
+/**
+ * Returns a list of all shared directories
+ **/
+SambaShareList* SambaFile::getSharedDirs() const
+{
+	SambaShareList* list = new SambaShareList();
+
+	QDictIterator<SambaShare> it(*sambaConfig);
+
+  for( ; it.current(); ++it )
+  {
+    if (!it.current()->isPrinter() &&
+    		 it.current()->getName() != "global")
+    {
+			list->append(it.current());
+    }
+  }
+
+  return list;
+}
+
+/**
+ * Returns a list of all shared printers
+ **/
+SambaShareList* SambaFile::getSharedPrinters() const
+{
+	SambaShareList* list = new SambaShareList();
+
+	QDictIterator<SambaShare> it(*sambaConfig);
+
+  for( ; it.current(); ++it )
+  {
+    if (it.current()->isPrinter())
+			list->append(it.current());
+  }
+
+  return list;
+}
+
 
 bool SambaFile::readBoolValue(const QString & share, const QString & optionName)
 {
@@ -318,6 +388,39 @@ QString SambaFile::readValue(const QString & share, const QString & optionName)
   return result;
 }
 
+/**
+ * Try to find the samba config file position
+ * First tries the config file, then checks
+ * several common positions
+ * If nothing is found returns ""
+ **/
+QString SambaFile::findSambaConf()
+{
+	KConfig config("ksambaplugin");
+	// Perhaps the user has defined the path
+	config.setGroup("KSambaKonqiPlugin");
+  QString sambaConf = config.readEntry("smb.conf");
+
+  if ( QFileInfo(sambaConf).exists() )
+     return sambaConf;
+
+  if ( QFileInfo("/etc/samba/smb.conf").exists() )
+     return "/etc/samba/smb.conf";
+
+  if ( QFileInfo("/etc/smb.conf").exists() )
+     return "/etc/smb.conf";
+
+  if ( QFileInfo("/usr/local/samba/lib/smb.conf").exists() )
+     return "/usr/local/samba/lib/smb.conf";
+
+  if ( QFileInfo("/usr/samba/lib/smb.conf").exists() )
+     return "/usr/samba/lib/smb.conf";
+
+
+  return "";
+}
+
+
 
 bool SambaFile::boolFromText(const QString & value)
 {
@@ -347,13 +450,13 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
   {
     QMap<QString,QString> entries = config->entryMap(*it);
 
-    SambaShare *share = new SambaShare();
+    SambaShare *share = new SambaShare(*it,samba);
     samba->insert(*it,share);
 
     for (QMap<QString,QString>::Iterator it2 = entries.begin(); it2 != entries.end(); ++it2 )
     {
        if (it2.data()!="")
-          share->insert(it2.key(),new QString(it2.data()));
+          share->setValue(it2.key(),it2.data());
     }
 
   }

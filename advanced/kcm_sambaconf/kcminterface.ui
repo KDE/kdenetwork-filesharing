@@ -8,7 +8,7 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>575</width>
+            <width>572</width>
             <height>433</height>
         </rect>
     </property>
@@ -230,7 +230,7 @@
                     <widget class="QListView">
                         <column>
                             <property name="text">
-                                <string>Share</string>
+                                <string>Name</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -241,7 +241,7 @@
                         </column>
                         <column>
                             <property name="text">
-                                <string>Value</string>
+                                <string>Path</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -251,7 +251,7 @@
                             </property>
                         </column>
                         <property name="name">
-                            <cstring>shareList</cstring>
+                            <cstring>shareListView</cstring>
                         </property>
                         <property name="allColumnsShowFocus">
                             <bool>true</bool>
@@ -268,7 +268,7 @@
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout2</cstring>
+                            <cstring>Layout44</cstring>
                         </property>
                         <hbox>
                             <property name="name">
@@ -280,43 +280,45 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="KPushButton">
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer21</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>KPushButton2</cstring>
+                                    <cstring>addShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Add new share</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image0</iconset>
+                                    <string>&amp;Add new share</string>
                                 </property>
                             </widget>
-                            <widget class="KPushButton">
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>BtnEdit</cstring>
-                                </property>
-                                <property name="enabled">
-                                    <bool>false</bool>
+                                    <cstring>editShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Edit share</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image1</iconset>
+                                    <string>&amp;Edit share</string>
                                 </property>
                             </widget>
-                            <widget class="KPushButton">
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>BtnDelete</cstring>
-                                </property>
-                                <property name="enabled">
-                                    <bool>false</bool>
+                                    <cstring>removeShareBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Delete share</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image2</iconset>
+                                    <string>&amp;Remove share</string>
                                 </property>
                             </widget>
                         </hbox>
@@ -343,7 +345,7 @@
                     <widget class="QListView">
                         <column>
                             <property name="text">
-                                <string>Printer</string>
+                                <string>Name</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -354,7 +356,7 @@
                         </column>
                         <column>
                             <property name="text">
-                                <string>Value</string>
+                                <string>Printer</string>
                             </property>
                             <property name="clickable">
                                 <bool>true</bool>
@@ -364,7 +366,7 @@
                             </property>
                         </column>
                         <property name="name">
-                            <cstring>shareList_2</cstring>
+                            <cstring>printerListView</cstring>
                         </property>
                         <property name="allColumnsShowFocus">
                             <bool>true</bool>
@@ -381,7 +383,7 @@
                     </widget>
                     <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>Layout2_2</cstring>
+                            <cstring>Layout44_2</cstring>
                         </property>
                         <hbox>
                             <property name="name">
@@ -393,43 +395,45 @@
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="KPushButton">
+                            <spacer>
+                                <property name="name" stdset="0">
+                                    <cstring>Spacer21_2</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Horizontal</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>KPushButton2_2</cstring>
+                                    <cstring>addPrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Add new printer</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image0</iconset>
+                                    <string>&amp;Add new printer</string>
                                 </property>
                             </widget>
-                            <widget class="KPushButton">
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>BtnEdit_2</cstring>
-                                </property>
-                                <property name="enabled">
-                                    <bool>false</bool>
+                                    <cstring>editPrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Edit printer</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image1</iconset>
+                                    <string>&amp;Edit printer</string>
                                 </property>
                             </widget>
-                            <widget class="KPushButton">
+                            <widget class="QPushButton">
                                 <property name="name">
-                                    <cstring>BtnDelete_2</cstring>
-                                </property>
-                                <property name="enabled">
-                                    <bool>false</bool>
+                                    <cstring>removePrinterBtn</cstring>
                                 </property>
                                 <property name="text">
-                                    <string>Delete printer</string>
-                                </property>
-                                <property name="iconSet">
-                                    <iconset>image2</iconset>
+                                    <string>&amp;Remove printer</string>
                                 </property>
                             </widget>
                         </hbox>
@@ -1822,17 +1826,6 @@
         </widget>
     </vbox>
 </widget>
-<images>
-    <image name="image0">
-        <data format="XPM.GZ" length="3262">789cb5d5c9522a491406e0bd4f41787646c7b950034274f4427146141cd18e5e2435a8282a93d38d7ef73e99e7cfbc5c096f742fdab4c4cfccbf4e0e057e5babf4bb9dcadab795e9cccceeb24a766b2695b57c3e1abdfff9d71fdf5756a3a422dfb528ae44abbfadacf66695ac72f4f45858f0504055f7e57ce7dcb0cdf9d6ba56b5cd790e27f08d73c336e79675548dfcfd4aef48dd8613f41f3837830bb811359d5face35a94c535e75c1d57e177e7669cc43afe0d6ec0199cc19bd6492dce12cd0fd449159ec0091c399ba481f95dc2196cbc13634d6e3e6914faefbd53b7f94ceab40a6f389b344d5d9ef7ad1bf17abe3e701e5b37b366b399b9fb4fe05ccdc7d626098e9d339362bd296c8ce6dd7e0f12939ac49960a3e3e9d21bfdd360cd3fc0859a9fd583fac08de73de77c1061fc3e8c7e9ac106e3af8273d7ff619da5be9ffac1ae9feb7091a5ce27ea2c5253e29c9b5ac3ed1f5dc06923768e83b5bf0b9ba6d6db850bf84d3da863ffab30f6836bde986f1b2ee0913a3398ef53b0aee7152ed4b4659da7b27f9a8fe03a7c0ffbf31907ebfc6a30ce870a6fcc87d559045f076bfd13d89fd755b0f66fc3fe3c76bdb13ecc3f8f723d8f9e7311d63757e711d6ff08d773fd3ceac246df4fdcf7c6fbe5032e743c1d5a17f5bc8ef3bff5d6fafc001745dd79a42e22359d3b1799dfdfe360ddbf1dd89f6f0bf6fb79aa0ef537e002eb7f5117d80fbe08d6f51e79637e3358be5cdef597f550ef4c9dfbf378f546fd218cf3a04eb08ecf617f1ecf6a3f3f7a0cd6f935609c0f0d60cc8f77d46554eafcb7e1ba9adce76d59fafde0a63aec4715f6f77f820d7ce78dfd5987fd795e07eb7cced56584fdcbbc31bf3318f3e343d8e8ff33da0bd6ff67a7de18df092e9d7b70a99ff774e38dfd2f83f5794fbcb13ee38df54cbdf5febdd97f6b9f334c6c78c019e75c70c9377ccb773cd4f665e69e1f7814ae477ee267193f5e4c2d65263272bad066e2b92417524b9981dc7ffa29f5223f5f7fa496326f9fead896b9bf855a4b9977fe58ca6cf0a6d49afbbdf0196f6ef1166f2fa5767897f7787f3123bf1d38b7f950ae91a40e645c27643a7c24a9e31f1997e8ca58fbda93d7137884d4299ff1395f48a5c58c8ebe94913deecb6b4f7c25a7b3e36ad8c43557b9f62933e44846c69cc8d593df53aecb6e6ccbf8335e97d6e026f14f99b69d0d112764e422a975207f7ba0016552615d6a5429a76221d39295f7a42554ca7523b5ac0eb945b7dca03b5723a721dd2fd5e92fd4e9da3af440237aa42769cf921ad2f8d7eba1094d6946737a91593dbb2aaff4b6bc6ff42eebe8c9badeedbed18724365c62d3255ab4f5f5f9d0444ddbb4211572196f133bb4bb54c73d07b427d794f6a5ce01b5e9903aa87144c7d45d5a8f7fdec6b44f3da9d1a6133a9576e66a9c4bbbf8f4bc854697d4a72bbaa62a1554a33145b445bbd4a598922f9eeb7fd196de3fff57e6efdf57fe01240121e9</data>
-    </image>
-    <image name="image1">
-        <data format="XPM.GZ" length="3806">789c85d6db52db481006e07b9ec295be4b6d75245992a5dada0bccd180c1e60c5b7bd13a818d6d0cb639a5f6dd7734fd8f1648b29b892fbee857cf680e52be7d6d5d0efaadafdfd6164b598ef2567e2b8fadafc56a3a7dfdf3af3fbeaf7d098296f9ebc7692bf8f2dbda97e1b295b70eef67650d9e189067ffd4964d385473db3af1722fb1f66afb9e97fbf63a45eaba59bfc0213cb34eea66eb73ed200d9240af5fd46efb4108efc079905aef5aa76dafed5b0fe110beac1d4adbd33c3faac33c14dbdfa8761484615bafdfa9232fb293c1633852d3c05ac244f3b40de7f0933af2e02b67bd5fb6e028b2fdf3084ee15bb8806f6ac741ecc7daff3d1cc1afd662acf90a4ed57454bbd36ec673a08e237d7e4ae114cf5baa3b7ea76d7d0c476a3ab7ce5c9e9e6137de426df299750ea76aa1da49bb83f171061789f6b7ae36db417d0f476a9a5a67618efdb05247585fda539bfa3adf777081e711b5a9a7e323385593ddef69e8eaf1028ee0a9b3ee2fde50c7beceaf883a71f3d583f1fc64d73bcdc344cf0b2dd55181f5d9720eb5fe8e3a76fd1dc029f2d7ea04f347f6792474f5f91a76e7f35c1d79e8ff589d62bec98331dff20ca7b87e6a9da7d81f92c1eefa09ecc663e73f0bcdf8757e72b5f83adfb207633dc8774e43ebbe759114ba5f044eb19e1436d67a73b5f8f0138c7a52c082fe7bceb8be82cb34b7de5567819aecf9cca3a8d0f7171fa93b6ebd4ed4893b5f87ced88f1bea667c158cf32207b060fecbc67a7d1f2e313f81da8d4fb6e152acf9c539b3793eb32e625fdfdfb45027be9e5f1a3be3fd82bc9418cf449d89e87cedc0aebf07751e6485bd3f816335cf61c9d5f6fd58447184f16caa4dffbade637516607fb4e152fba78edad48bac63b884e78db5bf7d751114f63a77e118b6df8fa28c539c8f0ac6f9e45375eae3fbf1a2ce037d7ee9c2313c8531ffb25417818e8f4367f4ff0c4b61bfbf64dfff656cfad7fdb5a94eddfbfab5b18e07ce05fdafc3982f796baceb65f74f59a6ee7b51c2385f72af767999a90bac2fdbef471577dc7948d429f60f5faab300efbf0c8eb17f1f1b6bfd85bac47cc82d1ceb7cc8032c656c8dfbcd88f4ff2bf67d525509f613f71aeb7ab233c63b80b1de7c0817b87fbbb15e7f53a7ee7dbc544b89efdfcc19cf7fa1ce449f8f3b6ab73f6803169ccf0876ebd35717d85fd475d63c15b0603db6e012de75c679d0f9ab4aec3fca61771e7d67ecc715ecf6ef8db3ce3fed37d6fdbaaeae0235c7708cebe25ce9fd98cf4aaacae69fe04a3d5c0e974c2ca665a6e55c70695a65da8d69b73ce231dff184a73c6bf2f73cff8ff6c08fbce025af9abc987f7d7ad79e3fe8c5d47ee515bf35f9f54ff9ee076df0266ff11b6fff32ffbefe8ea9bd6bd23dde6bf2b9c9774deaf36f9f0f4cedbea6f9f043fe67f58f4ced3a3d30e9010f9bfcf14fc77fc2a74ded019ff179932f7e52ff822f51bb677e577ccd5e932f7f18ff8599119f83a6f635b779f221ffbe7ec811c7dce1845362be2262cfacf0bff9ea7d9e8432caa9a0922abaa15b1ad5b57f9d3795fb662c1734a63b9ad0943d9a7dccd37d33fe7d9a9be4033dd28296b4a2276ed333bd7ccabfd6f5e9cd8e659dbab4419bb445dbb443bbd4a33dad3f5c36e3b9d1bcc9eed301f5e9908e684043933da6133aadebd7b94f79e198cee89c2ee892aee89a3cf229a0368514d5a977f911cf29a60e25940a9bba67422292492ee63b2e15b77fcc732c37722b2319d3b5dc912f1399ca4cee4d9bb3f7293fe6b93cc8a32c64292b799267799157937c9375e9ca866c7ecccb9639730fb22d3bb22b3dd933bf42f6cd480ec41c7be9ebd3beab3ff9bf86fcdfbfaffd03f9598e3a</data>
-    </image>
-    <image name="image2">
-        <data format="XPM.GZ" length="2317">789cadd4594fdb401007f0f77c8a28fb86aa21b6d78eadaa0fdc849240b849d587f5ae9d03c2198ea4ea77efeccc8028b805556581f0b3ff335edbbb2c2ed44f763bf585c5daedd44c47b66e87e6a6bee0ee2693d9b7ef5f7ed41a6158c7ef56520f1b9f6a8ddeb46eebddcb8bc203144235e9cb5b1562cd866372ea0799ce074d3fc84db1166b728ae6fc4c9cb255e91d36031b727ec8f6837c24d662ce67611a66e4486cc503ef28086d14507fc58e9ae2b158b3c192b3288db8fe526cc57bde3ad05a73de908db6da903bde71a86d4c0f137276dc64ab11d9c471ccf94771c656944fc2d8255c7fc84e02f139d92459c2f513b1139f7ab7a2c4b522f205bb158877c5b1b847ced139795b9c89b7c44ebcea9d462d9772bd63e3eb637f15c76c45ef2fcdd15c1f8833f15cecc47def4ca72ed3e4357616886fc5b178856cd1967c23cec4576227def1363a7386eb0fd8261027e2589c912d9aebbb62238ebd736d8a9cf3d7ec3c142f8b13f13ad9e52677f47cacb860c383b78df3c2c6e425b60dc527e284ad80ecd05cdf121bb632e242ceef7bbbd8168eeb697fb8c2258ef7fbbdd88869bd1678b648c867ec221487e244bc41c674c1f56db111a7e242ecffd9a812d325d76fb2cb504cfbb32cf14849f37562c3863b71c9ee4d3f3eaaf2a078bc9f97a4811c2c3828a084010cabf3941cc118cee01cd313b8804bb8826bb87979ada73cf6ba8529a6efe01e1e30f5008f3083392cc132acc0ea53c5737e086b78661dd31bb0096dbcca167cc56373d8c6cace9bfc0c8f8f307d8da38bf3d8815de8e19cb6f12787bdd7799aff84aebf8f55073256f0d8211cc171e5fd1ec0099c62a28f757dfc3cc5b14dcfaa59990fb07b88fd97f16e6f9eab3a1081aeccf73137c5648cd7e9e3bdae60ff0b7c1b83bff46f632e8116ce638ea38315be7f75def74ff177a600f301fe653ed69ff2dcfffdf9ff43ff17f39ffcc7f9cf2be79f2bf587f97795793b7f9563ffa22aaf2cb49553163f5b98bec2fe7e753cc25055e47b5355e2353265d400d735ae36355423b0eab79df97aff6285c5cc582935c675397bbd8b1b3f3fd77e0179473ee8</data>
-    </image>
-</images>
 <connections>
     <connection>
         <sender>otherwins</sender>
@@ -1853,37 +1846,19 @@
         <slot>setEnabled(bool)</slot>
     </connection>
     <connection>
-        <sender>KPushButton2</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>add()</slot>
-    </connection>
-    <connection>
-        <sender>BtnDelete</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>del()</slot>
-    </connection>
-    <connection>
-        <sender>BtnEdit</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>edit()</slot>
-    </connection>
-    <connection>
-        <sender>shareList</sender>
+        <sender>shareListView</sender>
         <signal>selectionChanged(QListViewItem*)</signal>
         <receiver>KcmInterface</receiver>
         <slot>updateShareData(QListViewItem*)</slot>
     </connection>
     <connection>
-        <sender>shareList</sender>
+        <sender>shareListView</sender>
         <signal>selectionChanged(QListViewItem*)</signal>
         <receiver>KcmInterface</receiver>
         <slot>selectedShare(QListViewItem*)</slot>
     </connection>
     <connection>
-        <sender>shareList</sender>
+        <sender>shareListView</sender>
         <signal>doubleClicked(QListViewItem*)</signal>
         <receiver>KcmInterface</receiver>
         <slot>selectAndEdit(QListViewItem*)</slot>
@@ -1899,6 +1874,7 @@
     <include location="global" impldecl="in declaration">share.h</include>
     <include location="global" impldecl="in declaration">sharedata.h</include>
     <include location="global" impldecl="in declaration">qptrlist.h</include>
+    <include location="local" impldecl="in implementation">kiconloader.h</include>
     <include location="local" impldecl="in implementation">kcminterface.ui.h</include>
 </includes>
 <variables>
@@ -1912,13 +1888,13 @@
 </signals>
 <slots>
     <slot>updateShareData( QListViewItem * item )</slot>
-    <slot>setShareDlg( KcmShareDlg * dlg )</slot>
-    <slot access="private" specifier="non virtual">edit()</slot>
+    <slot>editShare()</slot>
     <slot>rebuild()</slot>
-    <slot access="private" specifier="non virtual">add()</slot>
+    <slot>addShare()</slot>
     <slot>selectedShare( QListViewItem * item )</slot>
-    <slot access="private" specifier="non virtual">del()</slot>
-    <slot access="private" specifier="non virtual">selectAndEdit( QListViewItem * item )</slot>
+    <slot>delShare()</slot>
+    <slot>selectAndEdit( QListViewItem * item )</slot>
+    <slot>init()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

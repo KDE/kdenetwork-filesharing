@@ -422,6 +422,12 @@
         <receiver>konqinterface</receiver>
         <slot>changedSlot()</slot>
     </connection>
+    <connection>
+        <sender>moreOptionsBtn</sender>
+        <signal>pressed()</signal>
+        <receiver>konqinterface</receiver>
+        <slot>moreOptionsPressed()</slot>
+    </connection>
 </connections>
 <tabstops>
     <tabstop>nameEdit</tabstop>
@@ -442,6 +448,7 @@
 </signals>
 <slots>
     <slot>changedSlot()</slot>
+    <slot>moreOptionsPressed()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 </UI>

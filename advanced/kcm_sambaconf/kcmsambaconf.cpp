@@ -32,10 +32,10 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name):KCModule(parent,na
 	QBoxLayout * l = new QHBoxLayout( this );
 	l->setAutoAdd( TRUE );
 	interface = new KcmInterface(this);
-	shareDialog = new KcmShareDlg(this);
-	interface->setShareDlg(shareDialog);
+//	shareDialog = new KcmShareDlg(this);
+//	interface->setShareDlg(shareDialog);
 	
-	shareDialog->path->setMode(2+8+16);
+//	shareDialog->path->setMode(2+8+16);
 	
 	for (QPtrListIterator<KMPrinter> it(*printerList); it.current(); ++it){
 		if (!it.current()->isSpecial()){
@@ -43,7 +43,7 @@ KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name):KCModule(parent,na
 		}
 	}
 	
-	connect ( interface, SIGNAL(editShare(shareData*)), shareDialog, SLOT(edit(shareData*)));
+//	connect ( interface, SIGNAL(editShare(shareData*)), shareDialog, SLOT(edit(shareData*)));
 	
 	load();
 };

@@ -8,6 +8,7 @@
 
 void KcmInterface::updateShareData(QListViewItem* item)
 {
+/*
     shareData* current, * last;
     last = shares.last();
     for (current = shares.first(); current; current = shares.next()){
@@ -23,47 +24,20 @@ void KcmInterface::updateShareData(QListViewItem* item)
 	    }
 	}
     }
+*/
 }
 
-void KcmInterface::setShareDlg( KcmShareDlg * dlg )
+void KcmInterface::editShare()
 {
-    shareDialog = dlg;
-}
-
-void KcmInterface::edit()
-{
+/*
 	unsigned short int page = 0;
-	/** Finally emit editShare. */
+	// Finally emit editShare.
 	emit editShare(currentShareData);
-	/** Dis-/Enable the type-selection */
-	if (currentShareData->name == ""){
-	    shareDialog->typeSelect->setEnabled(true);
-	    shareDialog->enableUserSelection->setChecked(true);
-	    shareDialog->but->setChecked(false);
-	    shareDialog->selectUsers->setChecked(true);
-	}else{
-	    shareDialog->typeSelect->setEnabled(false);
-	}
-	/** Dis-/Enable the homes-/printers-selection */
+	
+	// Dis-/Enable the homes-/printers-selection
 	shareDialog->checkHomesAndPrinters();
-	/** Set the focus to the selected item */
+	// Set the focus to the selected item
 	if (shareList->selectedItem()){
-	    /** Check the items adjusted on page 0 */
-	    if (shareList->selectedItem()->text(0) == currentShareData->name){
-		    if (currentShareData->name == "[homes]"){
-		    shareDialog->homes->setFocus();
-		    shareDialog->homes->setChecked(true);
-		    shareDialog->printers->setChecked(false);
-		}else if (currentShareData->name == "[printers]"){
-		    shareDialog->printers->setFocus();
-		    shareDialog->printers->setChecked(true);
-		    shareDialog->homes->setChecked(false);
-		}else{
-		    shareDialog->shareName->setFocus();
-		    shareDialog->homes->setChecked(false);
-		    shareDialog->printers->setChecked(false);
-		}		
-	    }
 	    if (shareList->selectedItem()->text(0) == i18n("Base settings"))
 		shareDialog->base->setFocus();
 	    if (shareList->selectedItem()->text(0) == i18n("Type"))
@@ -78,7 +52,7 @@ void KcmInterface::edit()
 		shareDialog->read->setFocus();
 	    if (shareList->selectedItem()->text(0) == i18n("Public"))
 		shareDialog->publ->setFocus();
-	    /** Check the items adjusted on page 1 */
+	    // Check the items adjusted on page 1
 	    if (shareList->selectedItem()->text(0) == i18n("User settings")){
 		shareDialog->user->setFocus();
 		page = 1;
@@ -90,14 +64,17 @@ void KcmInterface::edit()
 	}else{
 	    if (currentShareData->name == ""){
 		shares.remove(currentShareData);
-		/** Temporary. shares should be set to auto-deletion */
+		// Temporary. shares should be set to auto-deletion
 		delete currentShareData;
 	    }
 	}
+*/
 }
+
 
 void KcmInterface::rebuild()
 {
+/*
     QListViewItem* item = currentShareData->listItem;
     if (item){
 	delete item;
@@ -162,12 +139,15 @@ void KcmInterface::rebuild()
 	item2->setText(0, i18n("Allowed groups"));
     shareList->setSelected(currentShareData->listItem, true);
     currentShareData->listItem->setVisible(true);
+*/
 }
 
-void KcmInterface::add()
+
+void KcmInterface::addShare()
 {
+/*
 	currentShareData = new shareData(0);
-	/** Fill the structure with default values */
+	// Fill the structure with default values
 	currentShareData->name="";
 	currentShareData->path="";
 	currentShareData->queue="";
@@ -175,34 +155,59 @@ void KcmInterface::add()
 	currentShareData->read=true;
 	currentShareData->publ=false;
 	currentShareData->directory=true;
-	/** Add the new share to the shares list */
+	// Add the new share to the shares list
 	shares.append(currentShareData);
-	/** Edit the share */
+	// Edit the share
 	edit();
+*/
 }
+
 
 void KcmInterface::selectedShare(QListViewItem* item)
 {
+/*
     bool enable = false;
     if (item){
 	enable = true;
     }
     BtnEdit->setEnabled(enable);
     BtnDelete->setEnabled(enable);
+*/
 }
 
-void KcmInterface::del()
+
+void KcmInterface::delShare()
 {
+/*
     shares.remove(currentShareData);
     delete currentShareData;
     currentShareData=0;
     BtnEdit->setEnabled(false);
     BtnDelete->setEnabled(false);
+*/
 }
+
 
 void KcmInterface::selectAndEdit( QListViewItem * item )
 {
+/*
     updateShareData(item);
     selectedShare(item);
     edit();
+*/
+}
+
+
+
+
+void KcmInterface::init()
+{
+    addShareBtn->setIconSet(SmallIcon("filenew"));
+    editShareBtn->setIconSet(SmallIcon("edit"));
+    removeShareBtn->setIconSet(SmallIcon("editdelete"));
+    
+    addPrinterBtn->setIconSet(SmallIcon("filenew"));
+    editPrinterBtn->setIconSet(SmallIcon("edit"));
+    removePrinterBtn->setIconSet(SmallIcon("editdelete"));
+    
 }

@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>579</width>
-            <height>380</height>
+            <width>549</width>
+            <height>432</height>
         </rect>
     </property>
     <property name="caption">
@@ -34,7 +34,7 @@
             </property>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>base</cstring>
+                    <cstring>baseTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>&amp;Base settings</string>
@@ -49,110 +49,199 @@
                     <property name="spacing">
                         <number>6</number>
                     </property>
-                    <widget class="QGroupBox">
+                    <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>homesGroup</cstring>
+                            <cstring>Layout65</cstring>
                         </property>
-                        <property name="title">
-                            <string>Directory</string>
-                        </property>
-                        <vbox>
+                        <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <property name="margin">
-                                <number>11</number>
+                                <number>0</number>
                             </property>
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLayoutWidget">
+                            <widget class="QLabel">
                                 <property name="name">
-                                    <cstring>Layout2</cstring>
+                                    <cstring>directoryPixLbl</cstring>
                                 </property>
-                                <hbox>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Pixmap</string>
+                                </property>
+                                <property name="scaledContents">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>directoryGroup</cstring>
+                                </property>
+                                <property name="title">
+                                    <string>Directory</string>
+                                </property>
+                                <vbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
                                     <property name="margin">
-                                        <number>0</number>
+                                        <number>11</number>
                                     </property>
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
-                                    <widget class="QLabel">
+                                    <widget class="QLayoutWidget">
                                         <property name="name">
-                                            <cstring>TextLabel1</cstring>
+                                            <cstring>Layout2</cstring>
                                         </property>
-                                        <property name="enabled">
-                                            <bool>false</bool>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>TextLabel1</cstring>
+                                                </property>
+                                                <property name="enabled">
+                                                    <bool>true</bool>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Path</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="KURLRequester">
+                                                <property name="name">
+                                                    <cstring>pathUrlRq</cstring>
+                                                </property>
+                                                <property name="enabled">
+                                                    <bool>true</bool>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>homeChk</cstring>
                                         </property>
                                         <property name="text">
-                                            <string>Path</string>
+                                            <string>share all home directories</string>
                                         </property>
                                     </widget>
-                                    <widget class="KURLRequester">
-                                        <property name="name">
-                                            <cstring>path</cstring>
-                                        </property>
-                                        <property name="enabled">
-                                            <bool>false</bool>
-                                        </property>
-                                    </widget>
-                                </hbox>
+                                </vbox>
                             </widget>
-                        </vbox>
+                        </hbox>
                     </widget>
-                    <widget class="QGroupBox">
+                    <widget class="QLayoutWidget">
                         <property name="name">
-                            <cstring>printersGroup</cstring>
+                            <cstring>Layout66</cstring>
                         </property>
-                        <property name="enabled">
-                            <bool>false</bool>
-                        </property>
-                        <property name="title">
-                            <string>Printer</string>
-                        </property>
-                        <vbox>
+                        <hbox>
                             <property name="name">
                                 <cstring>unnamed</cstring>
                             </property>
                             <property name="margin">
-                                <number>11</number>
+                                <number>0</number>
                             </property>
                             <property name="spacing">
                                 <number>6</number>
                             </property>
-                            <widget class="QLayoutWidget">
+                            <widget class="QLabel">
                                 <property name="name">
-                                    <cstring>Layout5</cstring>
+                                    <cstring>printerPixLbl</cstring>
                                 </property>
-                                <hbox>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>0</hsizetype>
+                                        <vsizetype>0</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="text">
+                                    <string>Pixmap</string>
+                                </property>
+                                <property name="scaledContents">
+                                    <bool>true</bool>
+                                </property>
+                            </widget>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>printerGroup</cstring>
+                                </property>
+                                <property name="enabled">
+                                    <bool>true</bool>
+                                </property>
+                                <property name="title">
+                                    <string>Printer</string>
+                                </property>
+                                <vbox>
                                     <property name="name">
                                         <cstring>unnamed</cstring>
                                     </property>
                                     <property name="margin">
-                                        <number>0</number>
+                                        <number>11</number>
                                     </property>
                                     <property name="spacing">
                                         <number>6</number>
                                     </property>
-                                    <widget class="QLabel">
+                                    <widget class="QLayoutWidget">
                                         <property name="name">
-                                            <cstring>TextLabel4</cstring>
+                                            <cstring>Layout5</cstring>
+                                        </property>
+                                        <hbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>0</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="QLabel">
+                                                <property name="name">
+                                                    <cstring>TextLabel4</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Queue</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="KComboBox">
+                                                <property name="name">
+                                                    <cstring>queueCombo</cstring>
+                                                </property>
+                                            </widget>
+                                        </hbox>
+                                    </widget>
+                                    <widget class="QCheckBox">
+                                        <property name="name">
+                                            <cstring>printersChk</cstring>
+                                        </property>
+                                        <property name="enabled">
+                                            <bool>true</bool>
                                         </property>
                                         <property name="text">
-                                            <string>Queue</string>
+                                            <string>share all printers</string>
                                         </property>
                                     </widget>
-                                    <widget class="KComboBox">
-                                        <property name="name">
-                                            <cstring>queue</cstring>
-                                        </property>
-                                    </widget>
-                                </hbox>
+                                </vbox>
                             </widget>
-                        </vbox>
+                        </hbox>
                     </widget>
                     <widget class="QGroupBox">
                         <property name="name">
@@ -189,12 +278,12 @@
                             </widget>
                             <widget class="KLineEdit" row="1" column="1">
                                 <property name="name">
-                                    <cstring>comment</cstring>
+                                    <cstring>commentEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="KLineEdit" row="0" column="1">
                                 <property name="name">
-                                    <cstring>shareName</cstring>
+                                    <cstring>shareNameEdit</cstring>
                                 </property>
                             </widget>
                         </grid>
@@ -218,7 +307,7 @@
                             </property>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>browse_2</cstring>
+                                    <cstring>availableBaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>Available</string>
@@ -226,7 +315,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>browse</cstring>
+                                    <cstring>browseableBaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>Browseable</string>
@@ -234,7 +323,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>read</cstring>
+                                    <cstring>readOnlyBaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>Read Only</string>
@@ -245,7 +334,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>publ</cstring>
+                                    <cstring>publicBaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>Public</string>
@@ -274,10 +363,10 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>user</cstring>
+                    <cstring>usersTab</cstring>
                 </property>
                 <attribute name="title">
-                    <string>User settings</string>
+                    <string>&amp;Users</string>
                 </attribute>
                 <vbox>
                     <property name="name">
@@ -439,7 +528,7 @@
                             </property>
                             <widget class="QLineEdit" row="0" column="1">
                                 <property name="name">
-                                    <cstring>LineEdit37</cstring>
+                                    <cstring>invalidUsersEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="QLabel" row="0" column="0">
@@ -476,7 +565,7 @@
                             </widget>
                             <widget class="QLineEdit" row="2" column="1">
                                 <property name="name">
-                                    <cstring>LineEdit42</cstring>
+                                    <cstring>forceGroupEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="QPushButton" row="2" column="2">
@@ -489,7 +578,7 @@
                             </widget>
                             <widget class="QLineEdit" row="1" column="1">
                                 <property name="name">
-                                    <cstring>LineEdit41</cstring>
+                                    <cstring>forceUserEdit</cstring>
                                 </property>
                             </widget>
                             <widget class="QPushButton" row="1" column="2">
@@ -506,7 +595,7 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>filenameTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>Filename settings</string>
@@ -580,7 +669,7 @@
                                             </property>
                                         </item>
                                         <property name="name">
-                                            <cstring>ComboBox1</cstring>
+                                            <cstring>defaultCaseCombo</cstring>
                                         </property>
                                         <property name="sizePolicy">
                                             <sizepolicy>
@@ -612,7 +701,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>CheckBox9</cstring>
+                                    <cstring>caseSensitiveChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>case sensitive</string>
@@ -620,7 +709,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>CheckBox11</cstring>
+                                    <cstring>preserveCaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>preserve case</string>
@@ -631,7 +720,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>CheckBox12_2</cstring>
+                                    <cstring>shortPreserveCaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>short preserve case</string>
@@ -639,7 +728,15 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>CheckBox12</cstring>
+                                    <cstring>mangledNamesChk</cstring>
+                                </property>
+                                <property name="text">
+                                    <string>enable name mangling</string>
+                                </property>
+                            </widget>
+                            <widget class="QCheckBox">
+                                <property name="name">
+                                    <cstring>mangeCaseChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>mangle case</string>
@@ -677,7 +774,7 @@
                                     </widget>
                                     <widget class="QLineEdit">
                                         <property name="name">
-                                            <cstring>LineEdit9</cstring>
+                                            <cstring>manglingCharEdit</cstring>
                                         </property>
                                         <property name="maximumSize">
                                             <size>
@@ -748,26 +845,7 @@
                                     </property>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox7</cstring>
-                                        </property>
-                                        <property name="sizePolicy">
-                                            <sizepolicy>
-                                                <hsizetype>7</hsizetype>
-                                                <vsizetype>0</vsizetype>
-                                                <horstretch>0</horstretch>
-                                                <verstretch>0</verstretch>
-                                            </sizepolicy>
-                                        </property>
-                                        <property name="text">
-                                            <string>ignore 8.3 convention</string>
-                                        </property>
-                                        <property name="checked">
-                                            <bool>true</bool>
-                                        </property>
-                                    </widget>
-                                    <widget class="QCheckBox">
-                                        <property name="name">
-                                            <cstring>CheckBox8</cstring>
+                                            <cstring>hideDotFilesChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>hide dot-files</string>
@@ -775,7 +853,7 @@
                                     </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox10</cstring>
+                                            <cstring>hideTrailingDotChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>hide trailing dot</string>
@@ -783,7 +861,7 @@
                                     </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox8_2</cstring>
+                                            <cstring>hideUnreadableChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>hide unreadable</string>
@@ -810,7 +888,7 @@
                                     </property>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox46</cstring>
+                                            <cstring>dosFilemodeChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>dos filemode</string>
@@ -818,7 +896,7 @@
                                     </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox47</cstring>
+                                            <cstring>dosFiletimesChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>dos filetimes</string>
@@ -826,7 +904,7 @@
                                     </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox47_2</cstring>
+                                            <cstring>dosFiletimeResolutionChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>dos filetime resolution</string>
@@ -834,7 +912,7 @@
                                     </widget>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox51</cstring>
+                                            <cstring>deleteReadonlyChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>delete readonly</string>
@@ -851,7 +929,7 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>securityTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>&amp;Security</string>
@@ -904,7 +982,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>guestOkChk_2</cstring>
+                                    <cstring>guestOnlyChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>Guest only</string>
@@ -915,7 +993,7 @@
                             </widget>
                             <widget class="QCheckBox">
                                 <property name="name">
-                                    <cstring>guestOkChk_2_2</cstring>
+                                    <cstring>userOnlyChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>User only</string>
@@ -956,7 +1034,7 @@
                             </widget>
                             <widget class="QLineEdit" row="1" column="1">
                                 <property name="name">
-                                    <cstring>allowEdit</cstring>
+                                    <cstring>hostsAllowEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -964,7 +1042,7 @@
                             </widget>
                             <widget class="QLineEdit" row="0" column="1">
                                 <property name="name">
-                                    <cstring>guestEdit</cstring>
+                                    <cstring>guestAccountEdit</cstring>
                                 </property>
                                 <property name="toolTip" stdset="0">
                                     <string>Guest account</string>
@@ -975,7 +1053,7 @@
                             </widget>
                             <widget class="QLineEdit" row="2" column="1">
                                 <property name="name">
-                                    <cstring>denyEdit</cstring>
+                                    <cstring>hostsDenyEdit</cstring>
                                 </property>
                                 <property name="whatsThis" stdset="0">
                                     <string>The opposite of hosts allow - hosts listed here are NOT permitted access to services unless the specific services have their own lists to override this one. Where the lists conflict, the allow list takes precedence.</string>
@@ -1058,7 +1136,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="3" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_2</cstring>
+                                            <cstring>forceDirectorySecurityModeEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1066,7 +1144,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="2" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_2_2_2</cstring>
+                                            <cstring>forceDirectoryModeEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1074,7 +1152,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="1" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_2_2</cstring>
+                                            <cstring>forceSecurityModeEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1124,7 +1202,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="0" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_2_2_2_2</cstring>
+                                            <cstring>forceCreateModeEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1165,7 +1243,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="3" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2</cstring>
+                                            <cstring>directorySecurityMaskEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1173,7 +1251,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="2" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_3</cstring>
+                                            <cstring>directoryMaskEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1181,7 +1259,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="1" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_3_2</cstring>
+                                            <cstring>securityMaskEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1189,7 +1267,7 @@
                                     </widget>
                                     <widget class="QLineEdit" row="0" column="1">
                                         <property name="name">
-                                            <cstring>allowEdit_2_3_2_2</cstring>
+                                            <cstring>createMaskEdit</cstring>
                                         </property>
                                         <property name="whatsThis" stdset="0">
                                             <string>This parameter is a comma, space, or tab delimited set of hosts which are permitted to access a service.</string>
@@ -1243,7 +1321,7 @@
                     </widget>
                     <widget class="QCheckBox">
                         <property name="name">
-                            <cstring>CheckBox28</cstring>
+                            <cstring>inheritPermissionsChk</cstring>
                         </property>
                         <property name="text">
                             <string>Inherit permissions</string>
@@ -1270,7 +1348,7 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>advancedTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>Advanced</string>
@@ -1304,7 +1382,7 @@
                             </property>
                             <widget class="QCheckBox" row="0" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_3</cstring>
+                                    <cstring>blockingLocksChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>blocking locks</string>
@@ -1312,7 +1390,7 @@
                             </widget>
                             <widget class="QCheckBox" row="1" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_4</cstring>
+                                    <cstring>fakeOplocksChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>fake oplocks</string>
@@ -1320,7 +1398,7 @@
                             </widget>
                             <widget class="QCheckBox" row="2" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_5</cstring>
+                                    <cstring>lockingChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>locking</string>
@@ -1328,7 +1406,7 @@
                             </widget>
                             <widget class="QCheckBox" row="7" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_6_2</cstring>
+                                    <cstring>level2OplocksChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>level2 oplocks</string>
@@ -1336,7 +1414,7 @@
                             </widget>
                             <widget class="QCheckBox" row="3" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_6_3</cstring>
+                                    <cstring>posixLockingChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>posix locking</string>
@@ -1344,7 +1422,7 @@
                             </widget>
                             <widget class="QCheckBox" row="4" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_6_3_2</cstring>
+                                    <cstring>strictLockingChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>strict locking</string>
@@ -1352,7 +1430,7 @@
                             </widget>
                             <widget class="QCheckBox" row="5" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_6_3_2_2</cstring>
+                                    <cstring>shareModesChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>share modes</string>
@@ -1360,7 +1438,7 @@
                             </widget>
                             <widget class="QCheckBox" row="6" column="0">
                                 <property name="name">
-                                    <cstring>CheckBox31_6</cstring>
+                                    <cstring>oplocksChk</cstring>
                                 </property>
                                 <property name="text">
                                     <string>oplocks</string>
@@ -1374,9 +1452,9 @@
                                     <string>Oplock contention limit</string>
                                 </property>
                             </widget>
-                            <widget class="QLineEdit" row="8" column="1">
+                            <widget class="KIntNumInput" row="8" column="1">
                                 <property name="name">
-                                    <cstring>LineEdit26_3</cstring>
+                                    <cstring>oplockContentionLimitInput</cstring>
                                 </property>
                             </widget>
                         </grid>
@@ -1414,7 +1492,7 @@
                                     </property>
                                     <widget class="QCheckBox" row="0" column="0">
                                         <property name="name">
-                                            <cstring>CheckBox31_7</cstring>
+                                            <cstring>strictSyncChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>strict sync</string>
@@ -1428,16 +1506,6 @@
                                             <string>Max connections</string>
                                         </property>
                                     </widget>
-                                    <widget class="QLineEdit" row="2" column="1">
-                                        <property name="name">
-                                            <cstring>LineEdit26_4</cstring>
-                                        </property>
-                                    </widget>
-                                    <widget class="QLineEdit" row="3" column="1">
-                                        <property name="name">
-                                            <cstring>LineEdit26_2_2</cstring>
-                                        </property>
-                                    </widget>
                                     <widget class="QLabel" row="3" column="0">
                                         <property name="name">
                                             <cstring>TextLabel5_3_2_2</cstring>
@@ -1448,10 +1516,26 @@
                                     </widget>
                                     <widget class="QCheckBox" row="1" column="0">
                                         <property name="name">
-                                            <cstring>CheckBox31_2_2</cstring>
+                                            <cstring>syncAlwaysChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>sync always</string>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="3" column="1">
+                                        <property name="name">
+                                            <cstring>writeCacheSizeInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
+                                        </property>
+                                    </widget>
+                                    <widget class="KIntNumInput" row="2" column="1">
+                                        <property name="name">
+                                            <cstring>maxConnectionsInput</cstring>
+                                        </property>
+                                        <property name="minValue">
+                                            <number>0</number>
                                         </property>
                                     </widget>
                                 </grid>
@@ -1475,7 +1559,7 @@
                                     </property>
                                     <widget class="QCheckBox">
                                         <property name="name">
-                                            <cstring>CheckBox52</cstring>
+                                            <cstring>statusChk</cstring>
                                         </property>
                                         <property name="text">
                                             <string>status</string>
@@ -1506,7 +1590,7 @@
             </widget>
             <widget class="QWidget">
                 <property name="name">
-                    <cstring>tab</cstring>
+                    <cstring>hiddenTab</cstring>
                 </property>
                 <attribute name="title">
                     <string>Hidden files</string>
@@ -1670,13 +1754,13 @@
         <slot>reject()</slot>
     </connection>
     <connection>
-        <sender>shareName</sender>
+        <sender>shareNameEdit</sender>
         <signal>textChanged(const QString&amp;)</signal>
         <receiver>KcmShareDlg</receiver>
         <slot>checkValues()</slot>
     </connection>
     <connection>
-        <sender>path</sender>
+        <sender>pathUrlRq</sender>
         <signal>textChanged(const QString&amp;)</signal>
         <receiver>KcmShareDlg</receiver>
         <slot>checkValues()</slot>
@@ -1690,8 +1774,9 @@
 </connections>
 <includes>
     <include location="global" impldecl="in declaration">sharedata.h</include>
-    <include location="global" impldecl="in implementation">kmessagebox.h</include>
+    <include location="local" impldecl="in implementation">kiconloader.h</include>
     <include location="global" impldecl="in implementation">qptrlist.h</include>
+    <include location="global" impldecl="in implementation">kmessagebox.h</include>
     <include location="local" impldecl="in implementation">share.ui.h</include>
 </includes>
 <variables>
@@ -1707,7 +1792,7 @@
     <slot access="private">checkValues()</slot>
     <slot>updateShareData()</slot>
     <slot>checkTypes( bool directory )</slot>
-    <slot access="private" specifier="non virtual">addUsers()</slot>
+    <slot access="private" specifier="non virtual">init()</slot>
     <slot access="private" specifier="non virtual">delUsers()</slot>
     <slot access="private" specifier="non virtual">createHomes( bool value )</slot>
     <slot access="private" specifier="non virtual">createPrinters( bool value )</slot>

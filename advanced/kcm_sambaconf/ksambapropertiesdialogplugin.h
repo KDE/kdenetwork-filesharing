@@ -34,6 +34,7 @@ class QVGroupBox;
 class QCheckBox;
 class QWidgetStack;
 class KonqInterface;
+class SambaShare;
 
 class KSambaPropertiesDialogPlugin : public KPropsDlgPlugin
 {
@@ -50,7 +51,7 @@ protected:
   KPropertiesDialog* propDialog;
 
   QFrame* frame;
-  
+
   KonqInterface* shareWidget;
   QWidget* configWidget;
 
@@ -59,6 +60,7 @@ protected:
   /**  */
   QString smbconf;
   QString sharePath;
+  SambaShare* _share;
   void initValues(const QString & share, SambaFile & sambaFile);
   void init();
   
@@ -69,6 +71,7 @@ protected slots:
 
   void slotSharedChanged(int state);
   void slotSpecifySmbConf();
+  void moreOptionsBtnPressed();
 
 private: // Private methods
   QString findSambaConf() const;

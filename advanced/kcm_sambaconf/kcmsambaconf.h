@@ -22,6 +22,26 @@
 #include <kcminterface.h>
 #include <share.h>
 #include <qptrlist.h>
+#include <qlistview.h>
+
+class SambaShare;
+class SambaFile;
+
+/**
+ * A QListViewItem which holds a SambaShare object
+ **/
+class ShareListViewItem : public QListViewItem
+{
+public:
+ 	ShareListViewItem(QListView * parent, SambaShare* share);
+
+	SambaShare* getShare() const;
+  void setShare(SambaShare* share);
+
+protected:
+ 	SambaShare* _share;
+};
+
 
 class KcmSambaConf: public KCModule
 {
@@ -35,16 +55,29 @@ class KcmSambaConf: public KCModule
 		void defaults();
 		int buttons();
 		QString quickHelp() const;
-		const KAboutData* aboutData() {return myAboutData; };
+		const KAboutData* aboutData() {return _myAboutData; };
 
 	public slots:
 		void configChanged();
 
-	private:
-		/** The add/edit-share dialog. */
-		KcmShareDlg* shareDialog;
-		KAboutData *myAboutData;
-		KcmInterface* interface;
+		void editShare();
+    void addShare();
+    void removeShare();
+
+    void editPrinter();
+    void addPrinter();
+    void removePrinter();
+
+	protected:
+  	/**
+     * The path of the smb.conf file
+     **/
+  	QString _smbconf;
+		SambaFile* _sambaFile;
+
+  private:
+		KAboutData* _myAboutData;
+		KcmInterface* _interface;
 };
 
 #endif

@@ -6,24 +6,24 @@
 ** a constructor, and a destroy() slot in place of a destructor.
 *****************************************************************************/
 
-
 void KcmShareDlg::edit( shareData * data )
 {
+/*
 	shareName->setText(data->name);
 	share = data;
 	if (data->directory){
 		if (data->name == "[homes]"){
-			homes->setChecked(true);
+			homesChk->setChecked(true);
 		}else{
-			path->setURL(data->path);
-			homes->setChecked(false);
+			pathUrlRq->setURL(data->path);
+			homesChk->setChecked(false);
 		}
 	}else{
 		if (data->name == "[printers]"){
-			printers->setChecked(true);
+			printersChk->setChecked(true);
 		}else{
 			queue->setCurrentItem(data->queue);
-			printers->setChecked(false);
+			printersChk->setChecked(false);
 		}
 	}
 	directory->setChecked(data->directory);
@@ -32,12 +32,14 @@ void KcmShareDlg::edit( shareData * data )
 	publ->setChecked(data->publ);
 	selectUsers->setChecked(data->users);
 	enableUserSelection->setChecked(data->enableUserSelection);
+*/
 }
 
 void KcmShareDlg::checkValues()
 {
+/*
 	bool state = true;
-	/** Check if the ok-button should be enabled */
+	// Check if the ok-button should be enabled 
 	if (directory->isChecked()){
 	    if (homes->isChecked()){
 		state = true;
@@ -57,10 +59,13 @@ void KcmShareDlg::checkValues()
 	    }
 	}
 	buttonOk->setEnabled(state);
+*/
 }
+
 
 void KcmShareDlg::updateShareData()
 {
+/*
     bool error = false;
     if (directory->isChecked()){
 	share->special = homes->isChecked();
@@ -88,11 +93,14 @@ void KcmShareDlg::updateShareData()
     share->publ = publ->isChecked();
     share->users = selectUsers->isChecked();
     share->enableUserSelection = selectUsers->isChecked();
+*/
 }
+
 
 
 void KcmShareDlg::checkTypes( bool directory )
 {
+/*
     bool temp = false;
     if (directory){	
 	if (!homes->isChecked()){
@@ -105,12 +113,18 @@ void KcmShareDlg::checkTypes( bool directory )
     }
     Lbl_shareName->setEnabled(temp);
     shareName->setEnabled(temp);
-   /* Lbl_shareName->setDisabled(homes->isChecked()|printers->isChecked());
-    shareName->setDisabled(homes->isChecked()|printers->isChecked());*/
+//    Lbl_shareName->setDisabled(homes->isChecked()|printers->isChecked());
+//    shareName->setDisabled(homes->isChecked()|printers->isChecked());
+*/
 }
 
-void KcmShareDlg::addUsers()
+
+void KcmShareDlg::init()
 {
+    directoryPixLbl->setPixmap(DesktopIcon("folder"));
+    printerPixLbl->setPixmap(DesktopIcon("printer1"));
+    
+/*
     QListBoxItem* item = 0;
     QPtrList<QListBoxItem>* selectedList = new QPtrList<QListBoxItem>;
     selectedList->setAutoDelete(false);
@@ -126,10 +140,13 @@ void KcmShareDlg::addUsers()
 	selected->insertItem(it.current());
     }
     delete selectedList;
+*/
 }
+
 
 void KcmShareDlg::delUsers()
 {
+/*
     QListBoxItem* item = 0;
     QPtrList<QListBoxItem>* selectedList = new QPtrList<QListBoxItem>;
     selectedList->setAutoDelete(false);
@@ -145,20 +162,29 @@ void KcmShareDlg::delUsers()
 	possible->insertItem(it.current());
     }
     delete selectedList;
+*/
 }
+
 
 void KcmShareDlg::createHomes( bool value )
 {
+/*
     homesExist = value;
+*/
 }
+
 
 void KcmShareDlg::createPrinters( bool value )
 {
+/*
     printersExist = value;
+*/
 }
+
 
 void KcmShareDlg::trytoAccept()
 {
+/*
     bool error = false;
     if (directory->isChecked()){
 	if (!homes->isChecked()){
@@ -179,10 +205,13 @@ void KcmShareDlg::trytoAccept()
 	updateShareData();
 	accept();
     }
+*/
 }
+
 
 void KcmShareDlg::checkHomesAndPrinters()
 {
+/*
     bool homesState = false;
     bool printersState = false;
     if (homesExist)
@@ -191,4 +220,5 @@ void KcmShareDlg::checkHomesAndPrinters()
 	printersState=true;
     homesGroup->setDisabled(homesState);
     printersGroup->setDisabled(printersState);
+*/
 }

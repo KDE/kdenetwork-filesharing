@@ -27,6 +27,7 @@
 #include <qpushbutton.h>
 #include <qwidgetstack.h>
 #include <qwhatsthis.h>
+#include <qtabwidget.h>
 
 #include <kgenericfactory.h>
 #include <klocale.h>
@@ -39,6 +40,7 @@
 #include "ksambapropertiesdialogplugin.h"
 #include "sambafile.h"
 #include "share.h"
+#include "sharedlgimpl.h"
 
 
 typedef KGenericFactory<KSambaPropertiesDialogPlugin, KPropertiesDialog> KSambaPropertiesDialogPluginFactory;
@@ -57,8 +59,9 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
 
   propDialog = dlg;
 
-  smbconf = findSambaConf();
+  smbconf = SambaFile::findSambaConf();
 	sharePath = propDialog->kurl().path();
+  
 
   // Only accept local files
   if (!propDialog->kurl().isLocalFile())
@@ -68,28 +71,28 @@ KSambaPropertiesDialogPlugin::KSambaPropertiesDialogPlugin( KPropertiesDialog *d
     {
 
     	SambaFile sambaFile(smbconf);
-      SambaShare globals = sambaFile.getShare("global");
+      SambaShare* globals = sambaFile.getShare("global");
 
-      QString *s = globals.find("netbios name");
+      QString *s = globals->find("netbios name");
       if (!s)
 				 return;
          
       // If we are on a smb directory of our host get it.
      	if (propDialog->kurl().host().lower()!=s->lower())
       	 return;
-         
-      SambaShare share = sambaFile.getShare( propDialog->kurl().fileName() );
-      
-      QString *path = share.find("path");
-      
-      if (!path)
+
+      _share = sambaFile.getShare( propDialog->kurl().fileName() );
+
+      QString path = _share->getValue("path",false);
+
+      if (path.isEmpty())
       	 return;
 
-      sharePath = QString(*path);
+      sharePath = path;
     }
     else
   		 return;
-  }
+  } 
 
   frame = propDialog->addPage(i18n("Sam&ba"));
 
@@ -176,43 +179,25 @@ KSambaPropertiesDialogPlugin::~KSambaPropertiesDialogPlugin()
 {
 }
 
-QString KSambaPropertiesDialogPlugin::findSambaConf() const
-{
-	// Perhaps the user has defined the path
-	kapp->config()->setGroup("KSambaKonqiPlugin");
-  QString sambaConf = kapp->config()->readEntry("smb.conf");
-
-  if ( QFileInfo(sambaConf).exists() )
-     return sambaConf;
-
-  if ( QFileInfo("/etc/samba/smb.conf").exists() )
-     return "/etc/samba/smb.conf";
-
-  if ( QFileInfo("/etc/smb.conf").exists() )
-     return "/etc/smb.conf";
-  
-  if ( QFileInfo("/usr/local/samba/lib/smb.conf").exists() )
-     return "/usr/local/samba/lib/smb.conf";
-
-  if ( QFileInfo("/usr/samba/lib/smb.conf").exists() )
-     return "/usr/samba/lib/smb.conf";
-
-
-  return "";
-}
 
 
 void KSambaPropertiesDialogPlugin::initValues(const QString & share, SambaFile & sambaFile)
 {
-  shareWidget->nameEdit->setText(share);
-  shareWidget->commentEdit->setText(sambaFile.readValue(share,"comment"));
-  shareWidget->readOnlyChk->setChecked(sambaFile.readBoolValue(share,"read only"));
-  shareWidget->guestOkChk->setChecked(sambaFile.readBoolValue(share,"guest ok"));
-  shareWidget->guestEdit->setText(addGlobalText(sambaFile.readValue(share,"guest account"),"guest account", sambaFile));;
-  shareWidget->allowEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts allow"),"hosts allow", sambaFile));
-  shareWidget->denyEdit->setText(addGlobalText(sambaFile.readValue(share,"hosts deny"),"hosts deny", sambaFile));
-  shareWidget->browseableChk->setChecked(sambaFile.readBoolValue(share,"browseable"));
-  shareWidget->availableChk->setChecked(sambaFile.readBoolValue(share,"available"));
+	_share = sambaFile.getShare(share);
+
+  shareWidget->nameEdit->setText( _share->getName() );
+  shareWidget->commentEdit->setText( _share->getValue("comment") );
+  shareWidget->readOnlyChk->setChecked( _share->getBoolValue("read only") );
+  shareWidget->guestOkChk->setChecked( _share->getBoolValue("guest ok") );
+  shareWidget->guestEdit->setText( _share->getValue("guest account") );
+  shareWidget->allowEdit->setText( _share->getValue("hosts allow") );
+  shareWidget->denyEdit->setText( _share->getValue("hosts deny") );
+  shareWidget->browseableChk->setChecked( _share->getBoolValue("browseable") );
+  shareWidget->availableChk->setChecked( _share->getBoolValue("available") );
+
+  connect( shareWidget->moreOptionsBtn, SIGNAL(pressed()),
+  				 this, SLOT(moreOptionsBtnPressed()));
+
 }
 
 void KSambaPropertiesDialogPlugin::slotSharedChanged(int state)
@@ -304,28 +289,16 @@ void KSambaPropertiesDialogPlugin::applyChanges()
 
 }
 
-
-
-/** No descriptions */
-QString KSambaPropertiesDialogPlugin::addGlobalText(const QString & value, const QString & option, const SambaFile & sambaFile)
+void KSambaPropertiesDialogPlugin::moreOptionsBtnPressed()
 {
-  if (!value.isEmpty())
-      return value;
+	ShareDlgImpl *dlg = new ShareDlgImpl(shareWidget,_share);
 
-  SambaShare globals = sambaFile.getShare("global");
-
-  QString *s = globals.find(option);
-
-  if (s)
-  {
-    return QString(*s);
-  }
-
-
-  return QString("");
-
+  // We already have the base settings
+  dlg->tabs->removePage(dlg->baseTab);
+  dlg->exec();
 
 }
+
 
 void KSambaPropertiesDialogPlugin::slotSpecifySmbConf()
 {

@@ -11,3 +11,8 @@ void KonqInterface::changedSlot()
 {
   emit changed();
 }
+
+void KonqInterface::moreOptionsPressed()
+{
+
+}

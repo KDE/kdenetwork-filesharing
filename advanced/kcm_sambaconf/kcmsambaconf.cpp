@@ -644,6 +644,7 @@ void KcmSambaConf::loadSecurity(SambaShare*)
   _dictMngr->add("min passwd length", _interface->minPasswdLengthSpin);
   _dictMngr->add("username level", _interface->usernameLevelSpin);
   _dictMngr->add("algorithmic rid base", _interface->algorithmicRidBaseSpin);
+  _dictMngr->add("passwd chat timeout", _interface->passwdChatTimeoutSpin);
 
   _dictMngr->add("encrypt passwords",_interface->encryptPasswordsChk);
   _dictMngr->add("update encrypted",_interface->updateEncryptedChk);

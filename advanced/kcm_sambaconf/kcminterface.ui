@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.0" stdsetdef="1">
 <class>KcmInterface</class>
 <comment>
 /******************************************************************************
@@ -29,8 +29,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>622</width>
-            <height>568</height>
+            <width>634</width>
+            <height>576</height>
         </rect>
     </property>
     <property name="sizePolicy">
@@ -49,7 +49,7 @@
             <cstring>unnamed</cstring>
         </property>
         <property name="margin">
-            <number>11</number>
+            <number>0</number>
         </property>
         <property name="spacing">
             <number>6</number>
@@ -268,7 +268,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>Share</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+ </string>
+                                            <string>Alt+</string>
                                         </property>
                                         <property name="checked">
                                             <bool>true</bool>
@@ -286,7 +286,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>User</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+ </string>
+                                            <string>Alt+</string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -301,7 +301,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>Server</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+ </string>
+                                            <string>Alt+</string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -331,7 +331,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                             <string>ADS</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+ </string>
+                                            <string>Alt+</string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -763,7 +763,7 @@ and reappear on the right side, as Unix users which aren't Samba users.
                                     <string>Edit Share</string>
                                 </property>
                                 <property name="accel">
-                                    <string>Alt+ </string>
+                                    <string>Alt+</string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -1389,7 +1389,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Obey PAM restrictions</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+ </string>
+                                                            <string>Alt+</string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QCheckBox">
@@ -1404,7 +1404,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>PAM password change</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+ </string>
+                                                            <string>Alt+</string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1443,7 +1443,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Paranoid server security</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+ </string>
+                                                            <string>Alt+</string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1531,7 +1531,7 @@ Only change something if you know what you are doing !</string>
                                                             <string>Bind interfaces only</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+ </string>
+                                                            <string>Alt+</string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QComboBox" row="0" column="1">
@@ -1632,7 +1632,6 @@ Only change something if you know what you are doing !</string>
                                                         </property>
                                                         <property name="font">
                                                             <font>
-                                                                <bold>1</bold>
                                                             </font>
                                                         </property>
                                                         <property name="maxValue">
@@ -1718,10 +1717,35 @@ Only change something if you know what you are doing !</string>
                                                 <property name="sizeHint">
                                                     <size>
                                                         <width>20</width>
-                                                        <height>20</height>
+                                                        <height>40</height>
                                                     </size>
                                                 </property>
                                             </spacer>
+                                            <widget class="QGroupBox" row="1" column="2">
+                                                <property name="name">
+                                                    <cstring>groupBox73</cstring>
+                                                </property>
+                                                <property name="title">
+                                                    <string>Migration</string>
+                                                </property>
+                                                <vbox>
+                                                    <property name="name">
+                                                        <cstring>unnamed</cstring>
+                                                    </property>
+                                                    <widget class="QCheckBox">
+                                                        <property name="name">
+                                                            <cstring>updateEncryptedChk</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Update encr&amp;ypted</string>
+                                                        </property>
+                                                    </widget>
+                                                </vbox>
+                                            </widget>
                                             <widget class="QGroupBox" row="0" column="0">
                                                 <property name="name">
                                                     <cstring>groupBox75</cstring>
@@ -1733,7 +1757,7 @@ Only change something if you know what you are doing !</string>
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="2">
+                                                    <widget class="QCheckBox" row="0" column="0" rowspan="1" colspan="4">
                                                         <property name="name">
                                                             <cstring>encryptPasswordsChk</cstring>
                                                         </property>
@@ -1763,9 +1787,42 @@ Only change something if you know what you are doing !</string>
                                                             <cstring>smbPasswdFileUrlRq</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="KURLRequester" row="1" column="1">
+                                                    <widget class="KURLRequester" row="1" column="1" rowspan="1" colspan="3">
                                                         <property name="name">
                                                             <cstring>smbPasswdFileUrlRq</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLabel" row="2" column="0">
+                                                        <property name="name">
+                                                            <cstring>TextLabel3_5_3_2</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Passdb bac&amp;kend:</string>
+                                                        </property>
+                                                        <property name="buddy" stdset="0">
+                                                            <cstring>passdbBackendEdit</cstring>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="KLineEdit" row="3" column="1" rowspan="1" colspan="3">
+                                                        <property name="name">
+                                                            <cstring>passwdChatEdit</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="KLineEdit" row="2" column="1" rowspan="1" colspan="3">
+                                                        <property name="name">
+                                                            <cstring>passdbBackendEdit</cstring>
                                                         </property>
                                                         <property name="font">
                                                             <font>
@@ -1787,40 +1844,7 @@ Only change something if you know what you are doing !</string>
                                                             <cstring>passwdChatEdit</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="QLabel" row="2" column="0">
-                                                        <property name="name">
-                                                            <cstring>TextLabel3_5_3_2</cstring>
-                                                        </property>
-                                                        <property name="font">
-                                                            <font>
-                                                            </font>
-                                                        </property>
-                                                        <property name="text">
-                                                            <string>Passdb bac&amp;kend:</string>
-                                                        </property>
-                                                        <property name="buddy" stdset="0">
-                                                            <cstring>passdbBackendEdit</cstring>
-                                                        </property>
-                                                    </widget>
-                                                    <widget class="KLineEdit" row="3" column="1">
-                                                        <property name="name">
-                                                            <cstring>passwdChatEdit</cstring>
-                                                        </property>
-                                                        <property name="font">
-                                                            <font>
-                                                            </font>
-                                                        </property>
-                                                    </widget>
-                                                    <widget class="KLineEdit" row="2" column="1">
-                                                        <property name="name">
-                                                            <cstring>passdbBackendEdit</cstring>
-                                                        </property>
-                                                        <property name="font">
-                                                            <font>
-                                                            </font>
-                                                        </property>
-                                                    </widget>
-                                                    <widget class="QCheckBox" row="4" column="0" rowspan="1" colspan="2">
+                                                    <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="4">
                                                         <property name="name">
                                                             <cstring>passwdChatDebugChk</cstring>
                                                         </property>
@@ -1832,56 +1856,36 @@ Only change something if you know what you are doing !</string>
                                                             <string>Passwd chat debug</string>
                                                         </property>
                                                     </widget>
-                                                </grid>
-                                            </widget>
-                                            <widget class="QGroupBox" row="0" column="1" rowspan="1" colspan="2">
-                                                <property name="name">
-                                                    <cstring>groupBox76</cstring>
-                                                </property>
-                                                <property name="title">
-                                                    <string>UNIX Passwords</string>
-                                                </property>
-                                                <grid>
-                                                    <property name="name">
-                                                        <cstring>unnamed</cstring>
-                                                    </property>
-                                                    <widget class="QLabel" row="0" column="0">
+                                                    <widget class="QLabel" row="4" column="3">
                                                         <property name="name">
-                                                            <cstring>TextLabel8_2_2_3_2</cstring>
+                                                            <cstring>TextLabel5_2_3_4_3</cstring>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>Sec</string>
+                                                            <comment>seconds</comment>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QLabel" row="4" column="0" rowspan="1" colspan="2">
+                                                        <property name="name">
+                                                            <cstring>TextLabel3_5_3_3</cstring>
                                                         </property>
                                                         <property name="font">
                                                             <font>
                                                             </font>
                                                         </property>
                                                         <property name="text">
-                                                            <string>Passwd program:</string>
+                                                            <string>Passwd chat timeout:</string>
                                                         </property>
                                                         <property name="buddy" stdset="0">
-                                                            <cstring>passwdProgramUrlRq</cstring>
+                                                            <cstring>passwdChatEdit</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="KURLRequester" row="0" column="1">
+                                                    <widget class="KIntSpinBox" row="4" column="2">
                                                         <property name="name">
-                                                            <cstring>passwdProgramUrlRq</cstring>
+                                                            <cstring>passwdChatTimeoutSpin</cstring>
                                                         </property>
-                                                        <property name="font">
-                                                            <font>
-                                                            </font>
-                                                        </property>
-                                                    </widget>
-                                                    <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="2">
-                                                        <property name="name">
-                                                            <cstring>unixPasswordSyncChk</cstring>
-                                                        </property>
-                                                        <property name="font">
-                                                            <font>
-                                                            </font>
-                                                        </property>
-                                                        <property name="text">
-                                                            <string>UNI&amp;X password sync</string>
-                                                        </property>
-                                                        <property name="accel">
-                                                            <string>Alt+X</string>
+                                                        <property name="maxValue">
+                                                            <number>2147483647</number>
                                                         </property>
                                                     </widget>
                                                 </grid>
@@ -1952,7 +1956,6 @@ Only change something if you know what you are doing !</string>
                                                         </property>
                                                         <property name="font">
                                                             <font>
-                                                                <bold>1</bold>
                                                             </font>
                                                         </property>
                                                         <property name="maxValue">
@@ -2003,7 +2006,6 @@ Only change something if you know what you are doing !</string>
                                                         </property>
                                                         <property name="font">
                                                             <font>
-                                                                <bold>1</bold>
                                                             </font>
                                                         </property>
                                                         <property name="maxValue">
@@ -2012,30 +2014,57 @@ Only change something if you know what you are doing !</string>
                                                     </widget>
                                                 </grid>
                                             </widget>
-                                            <widget class="QGroupBox" row="1" column="2">
+                                            <widget class="QGroupBox" row="0" column="1" rowspan="1" colspan="2">
                                                 <property name="name">
-                                                    <cstring>groupBox73</cstring>
+                                                    <cstring>groupBox76</cstring>
                                                 </property>
                                                 <property name="title">
-                                                    <string>Migration</string>
+                                                    <string>UNIX Passwords</string>
                                                 </property>
-                                                <vbox>
+                                                <grid>
                                                     <property name="name">
                                                         <cstring>unnamed</cstring>
                                                     </property>
-                                                    <widget class="QCheckBox">
+                                                    <widget class="QLabel" row="0" column="0">
                                                         <property name="name">
-                                                            <cstring>updateEncryptedChk</cstring>
+                                                            <cstring>TextLabel8_2_2_3_2</cstring>
                                                         </property>
                                                         <property name="font">
                                                             <font>
                                                             </font>
                                                         </property>
                                                         <property name="text">
-                                                            <string>Update encr&amp;ypted</string>
+                                                            <string>Passwd program:</string>
+                                                        </property>
+                                                        <property name="buddy" stdset="0">
+                                                            <cstring>passwdProgramUrlRq</cstring>
                                                         </property>
                                                     </widget>
-                                                </vbox>
+                                                    <widget class="KURLRequester" row="0" column="1">
+                                                        <property name="name">
+                                                            <cstring>passwdProgramUrlRq</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                    </widget>
+                                                    <widget class="QCheckBox" row="1" column="0" rowspan="1" colspan="2">
+                                                        <property name="name">
+                                                            <cstring>unixPasswordSyncChk</cstring>
+                                                        </property>
+                                                        <property name="font">
+                                                            <font>
+                                                            </font>
+                                                        </property>
+                                                        <property name="text">
+                                                            <string>UNI&amp;X password sync</string>
+                                                        </property>
+                                                        <property name="accel">
+                                                            <string>Alt+X</string>
+                                                        </property>
+                                                    </widget>
+                                                </grid>
                                             </widget>
                                         </grid>
                                     </widget>
@@ -5747,7 +5776,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <string>UNIX extensions</string>
                                             </property>
                                             <property name="accel">
-                                                <string>Alt+ </string>
+                                                <string>Alt+</string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -8037,12 +8066,13 @@ This is only available if the SSL libraries have been compiled on your system an
     <includehint>kpushbutton.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>klineedit.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
     <includehint>kurlrequester.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>kpushbutton.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
     <includehint>kurlrequester.h</includehint>
     <includehint>klineedit.h</includehint>
     <includehint>kpushbutton.h</includehint>

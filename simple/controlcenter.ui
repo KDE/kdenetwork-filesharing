@@ -8,8 +8,8 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>631</width>
-            <height>540</height>
+            <width>525</width>
+            <height>535</height>
         </rect>
     </property>
     <vbox>
@@ -19,7 +19,7 @@
         <property name="margin">
             <number>0</number>
         </property>
-        <widget class="QLabel">
+        <widget class="KRichTextLabel">
             <property name="name">
                 <cstring>infoLbl</cstring>
             </property>
@@ -100,7 +100,7 @@
                                 <number>0</number>
                             </property>
                         </widget>
-                        <widget class="QLabel">
+                        <widget class="KRichTextLabel">
                             <property name="name">
                                 <cstring>textLabel1</cstring>
                             </property>
@@ -165,7 +165,7 @@
                                 <number>0</number>
                             </property>
                         </widget>
-                        <widget class="QLabel">
+                        <widget class="KRichTextLabel">
                             <property name="name">
                                 <cstring>textLabel1_2</cstring>
                             </property>
@@ -418,7 +418,7 @@
         <receiver>nfsChk</receiver>
         <slot>setEnabled(bool)</slot>
     </connection>
-   <connection>
+    <connection>
         <sender>advancedRadio</sender>
         <signal>toggled(bool)</signal>
         <receiver>sambaChk</receiver>
@@ -477,4 +477,7 @@
     <slot>listView_selectionChanged()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>krichtextlabel.h</includehint>
+</includehints>
 </UI>

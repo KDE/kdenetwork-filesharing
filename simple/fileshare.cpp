@@ -43,6 +43,7 @@
 #include <kuser.h>
 #include <kurl.h>
 #include <kprocess.h>
+#include <krichtextlabel.h>
 
 #include "../advanced/propsdlgplugin/propertiespage.h"
 #include "../advanced/nfs/nfsfile.h"

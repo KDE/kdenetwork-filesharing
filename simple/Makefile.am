@@ -5,7 +5,8 @@ kde_module_LTLIBRARIES = kcm_fileshare.la
 kcm_fileshare_la_SOURCES = fileshare.cpp \
     controlcenter.ui \
     groupconfiggui.ui \
-    groupconfigdlg.cpp
+    groupconfigdlg.cpp \
+    krichtextlabel.cpp
 
 kcm_fileshare_la_LDFLAGS = $(all_libraries) -module -avoid-version -no-undefined
 kcm_fileshare_la_LIBADD = ../advanced/propsdlgplugin/libpropsdlgplugin_common.la \

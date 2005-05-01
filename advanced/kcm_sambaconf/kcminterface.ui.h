@@ -28,15 +28,15 @@
 
 void KcmInterface::init()
 {
-    addShareBtn->setIconSet(SmallIcon("filenew"));
-    editShareBtn->setIconSet(SmallIcon("edit"));
-    removeShareBtn->setIconSet(SmallIcon("editdelete"));
-    editDefaultShareBtn->setIconSet(SmallIcon("queue"));
+    addShareBtn->setIconSet(SmallIconSet("filenew"));
+    editShareBtn->setIconSet(SmallIconSet("edit"));
+    removeShareBtn->setIconSet(SmallIconSet("editdelete"));
+    editDefaultShareBtn->setIconSet(SmallIconSet("queue"));
     
-    addPrinterBtn->setIconSet(SmallIcon("filenew"));
-    editPrinterBtn->setIconSet(SmallIcon("edit"));
-    removePrinterBtn->setIconSet(SmallIcon("editdelete"));
-    editDefaultPrinterBtn->setIconSet(SmallIcon("print_class"));
+    addPrinterBtn->setIconSet(SmallIconSet("filenew"));
+    editPrinterBtn->setIconSet(SmallIconSet("edit"));
+    removePrinterBtn->setIconSet(SmallIconSet("editdelete"));
+    editDefaultPrinterBtn->setIconSet(SmallIconSet("print_class"));
 
     advancedWarningPixLbl->setPixmap(SmallIcon("messagebox_warning"));
 }

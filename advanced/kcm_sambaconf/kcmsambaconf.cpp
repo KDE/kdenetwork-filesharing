@@ -256,8 +256,8 @@ void KcmSambaConf::init() {
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
           this, SLOT( removeSambaUserBtnClicked() ));
 
-  _interface->removeSambaUserBtn->setIconSet(SmallIcon("1rightarrow"));
-  _interface->addSambaUserBtn->setIconSet(SmallIcon("1leftarrow"));
+  _interface->removeSambaUserBtn->setIconSet(SmallIconSet("1rightarrow"));
+  _interface->addSambaUserBtn->setIconSet(SmallIconSet("1leftarrow"));
 
 
   connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),

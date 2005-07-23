@@ -384,8 +384,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
         if (!rx && item->text(0)[0]=='.' && _dlg->hideDotFilesChk->isChecked()) {
             int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<qt>Some files you have selected are hidden because they start with a dot; "
-                    "do you want to uncheck all files starting with a dot?<br>"
-                    "(If you answer No, no files will be unchecked.)</qt>"),i18n("Files Starting With Dot"));
+                    "do you want to uncheck all files starting with a dot?</qt>"),i18n("Files Starting With Dot"),i18n("Uncheck Hidden"), i18n("Keep Hidden"));
                 
             if (result == KMessageBox::No) {
                 QPtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));
@@ -405,9 +404,8 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
 		    // TODO remove <b></b> and use <qt> instead
                     int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
-                    "do you want to uncheck all files matching <b>'%1'</b>? <br>"
-                    "(If you say no, no files matching '%1' will be unchecked.)").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
-                    i18n("Wildcarded String"));
+                    "do you want to uncheck all files matching <b>'%1'</b>?").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+                    i18n("Wildcarded String"),i18n("Uncheck Matches"),i18n("Keep Selected"));
             
                     QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
             

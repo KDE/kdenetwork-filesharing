@@ -34,13 +34,15 @@
 #include <qlineedit.h>
 #include <qcombobox.h>
 #include <qlabel.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qpainter.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qpixmap.h>
 #include <qbitmap.h>
 #include <qlayout.h>
 #include <qtabwidget.h>
+//Added by qt3to4:
+#include <Q3PtrList>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -81,9 +83,9 @@ void PrinterDlgImpl::initDialog()
   if (!_share)
      return;
 
-	QPtrList<KMPrinter> *printerList = KMManager::self()->printerListComplete();
+	Q3PtrList<KMPrinter> *printerList = KMManager::self()->printerListComplete();
 
-  for (QPtrListIterator<KMPrinter> it(*printerList); it.current(); ++it)
+  for (Q3PtrListIterator<KMPrinter> it(*printerList); it.current(); ++it)
   {
     if (!it.current()->isSpecial()){
       queueCombo->insertItem(it.current()->printerName());

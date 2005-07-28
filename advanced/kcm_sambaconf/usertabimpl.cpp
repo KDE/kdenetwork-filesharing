@@ -30,9 +30,11 @@
 
 #include <qcombobox.h>
 #include <qstringlist.h>
+//Added by qt3to4:
+#include <Q3MemArray>
 #include <passwd.h>
 #include <qregexp.h>
-#include <qtable.h>
+#include <q3table.h>
 #include <qcheckbox.h>
 #include <qpushbutton.h>
 #include <qlineedit.h>
@@ -178,7 +180,7 @@ void UserTabImpl::addUserToUserTable(const QString & user, int accessRight) {
     userTable->setNumRows(row+1);
     setAllowedUser(row, user);
 
-    QComboTableItem* comboItem = static_cast<QComboTableItem*>(userTable->item(row,3));
+    Q3ComboTableItem* comboItem = static_cast<Q3ComboTableItem*>(userTable->item(row,3));
     comboItem->setCurrentItem(accessRight);
 }
 
@@ -244,16 +246,16 @@ void UserTabImpl::setAllowedUser(int i, const QString & name)
         name2 = "\""+name2+"\"";
 
 
-    QTableItem* item = new QTableItem( userTable,QTableItem::Never, name2 );
+    Q3TableItem* item = new Q3TableItem( userTable,Q3TableItem::Never, name2 );
     userTable->setItem(i,0,item);
 
-    item = new QTableItem( userTable,QTableItem::Never, uid );
+    item = new Q3TableItem( userTable,Q3TableItem::Never, uid );
     userTable->setItem(i,1,item);
 
-    item = new QTableItem( userTable,QTableItem::Never, gid );
+    item = new Q3TableItem( userTable,Q3TableItem::Never, gid );
     userTable->setItem(i,2,item);
 
-    QComboTableItem* comboItem = new QComboTableItem( userTable,accessRights);
+    Q3ComboTableItem* comboItem = new Q3ComboTableItem( userTable,accessRights);
     userTable->setItem(i,3,comboItem);
 
 }
@@ -286,7 +288,7 @@ void UserTabImpl::addUserBtnClicked()
 
 void UserTabImpl::removeSelectedBtnClicked()
 {
-  QMemArray<int>rows;
+  Q3MemArray<int>rows;
 
   int j=0;
 
@@ -390,8 +392,8 @@ void UserTabImpl::saveUsers(QString & validUsersStr,
 
   for (int i=0; i<userTable->numRows(); i++)
   {
-    QTableItem* item = userTable->item(i,0);
-    QComboTableItem* comboItem = static_cast<QComboTableItem*>(userTable->item(i,3));
+    Q3TableItem* item = userTable->item(i,0);
+    Q3ComboTableItem* comboItem = static_cast<Q3ComboTableItem*>(userTable->item(i,3));
 
     if (! allowAllUsers && comboItem->currentItem() < 4)
        validUsers.append(item->text());

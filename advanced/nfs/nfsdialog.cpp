@@ -20,10 +20,13 @@
 
 #include <qradiobutton.h>
 #include <qpushbutton.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qlineedit.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qlayout.h>
+//Added by qt3to4:
+#include <QVBoxLayout>
+#include <Q3PtrList>
 
 #include <kdebug.h>
 #include <kmessagebox.h>
@@ -74,7 +77,7 @@ void NFSDialog::initSlots()
   connect( m_gui->removeHostBtn, SIGNAL(clicked()), this, SLOT( slotRemoveHost()));
   connect( m_gui->addHostBtn, SIGNAL(clicked()), this, SLOT( slotAddHost()));
   connect( m_gui->modifyHostBtn, SIGNAL(clicked()), this, SLOT( slotModifyHost()));
-  connect( m_gui->listView, SIGNAL(doubleClicked(QListViewItem*)), 
+  connect( m_gui->listView, SIGNAL(doubleClicked(Q3ListViewItem*)), 
            this, SLOT( slotModifyHost()));
 
 }
@@ -92,17 +95,17 @@ void NFSDialog::initListView()
   }
 }
 
-QListViewItem* NFSDialog::createItemFromHost(NFSHost* host)
+Q3ListViewItem* NFSDialog::createItemFromHost(NFSHost* host)
 {
   if (!host) 
     return 0;
 
-  QListViewItem* item = new QListViewItem(m_gui->listView);
+  Q3ListViewItem* item = new Q3ListViewItem(m_gui->listView);
   updateItem(item, host);
   return item;
 }
 
-void NFSDialog::updateItem(QListViewItem* item, NFSHost* host)
+void NFSDialog::updateItem(Q3ListViewItem* item, NFSHost* host)
 {
   item->setText(0,host->name);
   item->setText(1,host->paramString());
@@ -143,11 +146,11 @@ void NFSDialog::slotOk() {
 
 void NFSDialog::slotRemoveHost()
 {
-  QPtrList<QListViewItem> items = m_gui->listView->selectedItems();
+  Q3PtrList<Q3ListViewItem> items = m_gui->listView->selectedItems();
   if (items.count()==0)
       return;
   
-  QListViewItem *item;
+  Q3ListViewItem *item;
   for ( item = items.first(); item; item = items.next() ) {
     QString name = item->text(0);
     m_gui->listView->takeItem(item);
@@ -169,13 +172,13 @@ void NFSDialog::slotRemoveHost()
 
 void NFSDialog::slotModifyHost()
 {
-  QPtrList<QListViewItem> items = m_gui->listView->selectedItems();
+  Q3PtrList<Q3ListViewItem> items = m_gui->listView->selectedItems();
   if (items.count()==0)
       return;
   
   HostList hostList;
   
-  QListViewItem *item;
+  Q3ListViewItem *item;
   for ( item = items.first(); item; item = items.next() ) {
   
     NFSHost* host = m_workEntry->getHostByName(item->text(0));

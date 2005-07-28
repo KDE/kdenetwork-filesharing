@@ -18,8 +18,10 @@
 */
 
 #include <qfile.h>
-#include <qprocess.h>
+#include <q3process.h>
 #include <qfileinfo.h>
+//Added by qt3to4:
+#include <QTextStream>
 
 #include <ksimpleconfig.h>
 #include <kdebug.h>
@@ -41,7 +43,7 @@
 
 SambaConfigFile::SambaConfigFile(SambaFile* sambaFile)
 {
-  QDict<QString>(10,false);
+  Q3Dict<QString>(10,false);
   setAutoDelete(true);
   _sambaFile = sambaFile;
 }
@@ -107,7 +109,7 @@ bool SambaFile::isRemoteFile() {
 /** No descriptions */
 QString SambaFile::findShareByPath(const QString & path) const
 {
-  QDictIterator<SambaShare> it(*_sambaConfig);
+  Q3DictIterator<SambaShare> it(*_sambaConfig);
   KURL url(path);
   url.adjustPath(-1);
 
@@ -305,7 +307,7 @@ SambaShareList* SambaFile::getSharedDirs() const
 {
   SambaShareList* list = new SambaShareList();
 
-  QDictIterator<SambaShare> it(*_sambaConfig);
+  Q3DictIterator<SambaShare> it(*_sambaConfig);
 
   for( ; it.current(); ++it )
   {
@@ -326,7 +328,7 @@ SambaShareList* SambaFile::getSharedPrinters() const
 {
   SambaShareList* list = new SambaShareList();
 
-  QDictIterator<SambaShare> it(*_sambaConfig);
+  Q3DictIterator<SambaShare> it(*_sambaConfig);
 
   for( ; it.current(); ++it )
   {
@@ -505,7 +507,7 @@ bool SambaFile::openFile() {
 
   QFile f(localPath);
 
-  if (!f.open(IO_ReadOnly)) {
+  if (!f.open(QIODevice::ReadOnly)) {
     //throw SambaFileLoadException(QString("<qt>Could not open file <em>%1</em> for reading.</qt>").arg(path));
     return false;
   }
@@ -521,7 +523,7 @@ bool SambaFile::openFile() {
   QString completeLine;
   QStringList comments;
 
-  while (!s.eof())
+  while (!s.atEnd())
   {
     QString currentLine = s.readLine().stripWhiteSpace();
 
@@ -595,7 +597,7 @@ bool SambaFile::saveTo(const QString & path)
 {
   QFile f(path);
 
-  if (!f.open(IO_WriteOnly))
+  if (!f.open(QIODevice::WriteOnly))
     return false;
 
   QTextStream s(&f);
@@ -678,7 +680,7 @@ KSimpleConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QS
 {
   KSimpleConfig *config = new KSimpleConfig(path,false);
 
-  QDictIterator<SambaShare> it(*sambaConfig);
+  Q3DictIterator<SambaShare> it(*sambaConfig);
 
   for ( ; it.current(); ++it )
   {
@@ -686,7 +688,7 @@ KSimpleConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QS
 
     config->setGroup(it.currentKey());
 
-    QDictIterator<QString> it2(*share);
+    Q3DictIterator<QString> it2(*share);
 
     for (; it2.current(); ++it2 )
     {

@@ -22,11 +22,14 @@
 #include <kfileitem.h>
 
 #include "kcmodule.h"
+//Added by qt3to4:
+#include <QLabel>
+#include <QBoxLayout>
 class QRadioButton;
 class QLabel;
 class QBoxLayout;
 class ControlCenterGUI;
-class QListViewItem;
+class Q3ListViewItem;
 
 class KFileShareConfig  : public KCModule
 {

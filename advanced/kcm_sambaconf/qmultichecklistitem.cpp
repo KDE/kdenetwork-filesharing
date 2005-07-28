@@ -28,8 +28,10 @@
 
 #include <qpen.h>
 #include <qpainter.h>
-#include <qvbox.h>  
-#include <qheader.h>
+#include <q3vbox.h>  
+#include <q3header.h>
+//Added by qt3to4:
+#include <Q3PointArray>
 
 #include <kdebug.h>
 #include <kmessagebox.h>
@@ -40,8 +42,8 @@
 static const int BoxSize = 16;
 
 
-QMultiCheckListItem::QMultiCheckListItem( QListView *parent=0) :
-  QListViewItem(parent) {
+QMultiCheckListItem::QMultiCheckListItem( Q3ListView *parent=0) :
+  Q3ListViewItem(parent) {
 }
     
 void QMultiCheckListItem::setOn(int column, bool b) {
@@ -93,11 +95,11 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
   if ( !p )
     return;
 
-  QListView *lv = listView();
+  Q3ListView *lv = listView();
   if ( !lv )
     return;
 
-  QListViewItem::paintCell(p,cg,col,width,align );
+  Q3ListViewItem::paintCell(p,cg,col,width,align );
     
   int marg = lv->itemMargin();
 //  int width = BoxSize + marg*2;
@@ -111,7 +113,7 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
     // I use the text color of defaultStyles[0], normalcol in parent listview
 //    mcg.setColor( QColorGroup::Text, ((StyleListView*)lv)->normalcol );
     int x = 0;
-    if ( align == AlignCenter ) {
+    if ( align == Qt::AlignCenter ) {
       QFontMetrics fm( lv->font() );
       x = (width - BoxSize - fm.width(text(0)))/2;
     }
@@ -132,7 +134,7 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
     x++;
     y++;
     if ( checkStates.testBit(col) ) {
-      QPointArray a( 7*2 );
+      Q3PointArray a( 7*2 );
       int i, xx, yy;
       xx = x+1+marg;
       yy = y+5;

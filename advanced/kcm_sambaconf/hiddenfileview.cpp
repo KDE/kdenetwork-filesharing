@@ -32,8 +32,10 @@
 #include <qlineedit.h>
 #include <qregexp.h>
 #include <qstringlist.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qcursor.h>
+//Added by qt3to4:
+#include <Q3PtrList>
 
 
 #include <kpopupmenu.h>
@@ -62,7 +64,7 @@
 
 #define HIDDENTABINDEX 5
 
-HiddenListViewItem::HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
+HiddenListViewItem::HiddenListViewItem( Q3ListView *parent, KFileItem *fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
   : QMultiCheckListItem( parent )
 {
   setPixmap( COL_NAME, fi->pixmap(KIcon::SizeSmall));
@@ -159,7 +161,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 void HiddenFileView::initListView()
 {
   _dlg->hiddenListView->setMultiSelection(true);
-  _dlg->hiddenListView->setSelectionMode(QListView::Extended);
+  _dlg->hiddenListView->setSelectionMode(Q3ListView::Extended);
   _dlg->hiddenListView->setAllColumnsShowFocus(true);
 
   _hiddenList = createRegExpList(_share->getValue("hide files"));
@@ -173,14 +175,14 @@ void HiddenFileView::initListView()
   _vetoOplockActn->plug(_popup);
 
   connect( _dlg->hiddenListView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
-  connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,QListViewItem*,const QPoint&)),
+  connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,Q3ListViewItem*,const QPoint&)),
            this, SLOT(showContextMenu()));
 
   connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));
   connect( _dlg->hideUnreadableChk, SIGNAL(toggled(bool)), this, SLOT(hideUnreadableChkClicked(bool)));
 
-  connect( _dlg->hiddenListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
-           this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
+  connect( _dlg->hiddenListView, SIGNAL(mouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)),
+           this, SLOT(slotMouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)));
 }
 
 HiddenFileView::~HiddenFileView()
@@ -360,7 +362,7 @@ void HiddenFileView::selectionChanged()
   }
 }
 
-void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit, int column,QPtrList<QRegExp> & reqExpList,bool b) {
+void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit, int column,Q3PtrList<QRegExp> & reqExpList,bool b) {
   // We don't save the old state so
   // disable the tristate mode
   chkBox->setTristate(false);
@@ -387,7 +389,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                     "do you want to uncheck all files starting with a dot?</qt>"),i18n("Files Starting With Dot"),i18n("Uncheck Hidden"), i18n("Keep Hidden"));
                 
             if (result == KMessageBox::No) {
-                QPtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));
+                Q3PtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));
                 deselect(lst);
             } else {
                 _dlg->hideDotFilesChk->setChecked(false);
@@ -407,7 +409,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                     "do you want to uncheck all files matching <b>'%1'</b>?").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
                     i18n("Wildcarded String"),i18n("Uncheck Matches"),i18n("Keep Selected"));
             
-                    QPtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
+                    Q3PtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
             
                     if (result == KMessageBox::No) {
                         deselect(lst);
@@ -453,7 +455,7 @@ void HiddenFileView::vetoChkClicked(bool b)
 /**
  * Sets the text of the QLineEdit edit to the entries of the passed QRegExp-List
  **/
-void HiddenFileView::updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst)
+void HiddenFileView::updateEdit(QLineEdit* edit, Q3PtrList<QRegExp> & lst)
 {
   QString s="";
 
@@ -468,7 +470,7 @@ void HiddenFileView::updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst)
 }
 
 
-void HiddenFileView::setState(QPtrList<HiddenListViewItem> & lst, int column, bool b) {
+void HiddenFileView::setState(Q3PtrList<HiddenListViewItem> & lst, int column, bool b) {
   HiddenListViewItem* item;
   for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
       item = static_cast<HiddenListViewItem*>(lst.next()) )
@@ -478,7 +480,7 @@ void HiddenFileView::setState(QPtrList<HiddenListViewItem> & lst, int column, bo
 }
 
 
-void HiddenFileView::deselect(QPtrList<HiddenListViewItem> & lst)
+void HiddenFileView::deselect(Q3PtrList<HiddenListViewItem> & lst)
 {
   HiddenListViewItem* item;
   for(item = static_cast<HiddenListViewItem*>(lst.first()); item;
@@ -489,9 +491,9 @@ void HiddenFileView::deselect(QPtrList<HiddenListViewItem> & lst)
 }
 
 
-QPtrList<HiddenListViewItem> HiddenFileView::getMatchingItems(const QRegExp & rx)
+Q3PtrList<HiddenListViewItem> HiddenFileView::getMatchingItems(const QRegExp & rx)
 {
-  QPtrList<HiddenListViewItem> lst;
+  Q3PtrList<HiddenListViewItem> lst;
 
   HiddenListViewItem* item;
   for (item = static_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
@@ -523,9 +525,9 @@ void HiddenFileView::updateView()
 }
 
 
-QPtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
+Q3PtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
 {
-  QPtrList<QRegExp> lst;
+  Q3PtrList<QRegExp> lst;
   bool cs = _share->getBoolValue("case sensitive");
 
   if (!s.isEmpty())
@@ -542,7 +544,7 @@ QPtrList<QRegExp> HiddenFileView::createRegExpList(const QString & s)
 
 bool HiddenFileView::matchHidden(const QString & s)
 {
-  QPtrList<QRegExp> hiddenList(_hiddenList);
+  Q3PtrList<QRegExp> hiddenList(_hiddenList);
 
   if (_dlg->hideDotFilesChk->isChecked())
      hiddenList.append( new QRegExp(".*",false,true) );
@@ -560,7 +562,7 @@ bool HiddenFileView::matchVetoOplock(const QString & s)
   return matchRegExpList(s,_vetoOplockList);
 }
 
-bool HiddenFileView::matchRegExpList(const QString & s, QPtrList<QRegExp> & lst)
+bool HiddenFileView::matchRegExpList(const QString & s, Q3PtrList<QRegExp> & lst)
 {
   if (getRegExpListMatch(s,lst))
      return true;
@@ -579,7 +581,7 @@ QRegExp* HiddenFileView::getVetoMatch(const QString & s)
   return getRegExpListMatch(s,_vetoList);
 }
 
-QRegExp* HiddenFileView::getRegExpListMatch(const QString & s, QPtrList<QRegExp> & lst)
+QRegExp* HiddenFileView::getRegExpListMatch(const QString & s, Q3PtrList<QRegExp> & lst)
 {
   QRegExp* rx;
 
@@ -602,7 +604,7 @@ void HiddenFileView::hideUnreadableChkClicked(bool)
   updateView();
 }
 
-void HiddenFileView::slotMouseButtonPressed( int, QListViewItem*, const QPoint&, int c ) {
+void HiddenFileView::slotMouseButtonPressed( int, Q3ListViewItem*, const QPoint&, int c ) {
   columnClicked(c);
 }
 

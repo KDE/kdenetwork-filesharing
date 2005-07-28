@@ -33,16 +33,24 @@
 #include <unistd.h>
 
 #include <qlayout.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qpainter.h>
 #include <qcheckbox.h>
-#include <qlistbox.h>
+#include <q3listbox.h>
 #include <qradiobutton.h>
-#include <qbuttongroup.h>
+#include <q3buttongroup.h>
 #include <qtabwidget.h>
 #include <qtabbar.h>
-#include <qvbox.h>
+#include <q3vbox.h>
 #include <qlabel.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <Q3CString>
+#include <Q3PtrList>
+#include <Q3Frame>
+#include <QHBoxLayout>
+#include <QBoxLayout>
+#include <QVBoxLayout>
 
 #include <klocale.h>
 #include <kglobal.h>
@@ -75,8 +83,8 @@
 #define COL_NOPASSWORD 3
 
 
-ShareListViewItem::ShareListViewItem(QListView * parent, SambaShare* share)
-  : QListViewItem(parent)
+ShareListViewItem::ShareListViewItem(Q3ListView * parent, SambaShare* share)
+  : Q3ListViewItem(parent)
 {
   setShare(share);
 }
@@ -260,8 +268,8 @@ void KcmSambaConf::init() {
   _interface->addSambaUserBtn->setIconSet(SmallIconSet("1leftarrow"));
 
 
-  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,QListViewItem*,const QPoint &,int)),
-          this, SLOT(slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int)));
+  connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)),
+          this, SLOT(slotMouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)));
 
   connect( _interface->joinADomainBtn, SIGNAL(clicked()),
           this, SLOT( joinADomainBtnClicked() ));
@@ -283,7 +291,7 @@ void KcmSambaConf::initAdvancedTab()
   _janus->setShowIconsInTreeList(true);
 
   QWidget *w;
-  QFrame *f;
+  Q3Frame *f;
   QString label;
   QPixmap icon;
 
@@ -1082,8 +1090,8 @@ void KcmSambaConf::loadUserTab()
         new KListViewItem(_interface->unixUsersListView, unixUser->name, QString::number(unixUser->uid));
   }
 
-  _interface->unixUsersListView->setSelectionMode(QListView::Extended);
-  _interface->sambaUsersListView->setSelectionMode(QListView::Extended);
+  _interface->unixUsersListView->setSelectionMode(Q3ListView::Extended);
+  _interface->sambaUsersListView->setSelectionMode(Q3ListView::Extended);
 
 }
 
@@ -1108,7 +1116,7 @@ void KcmSambaConf::joinADomainBtnClicked() {
 }
 
 
-void KcmSambaConf::slotMouseButtonPressed(int,QListViewItem* item,const QPoint &,int col) {
+void KcmSambaConf::slotMouseButtonPressed(int,Q3ListViewItem* item,const QPoint &,int col) {
   if (col < 2)
     return;
 
@@ -1145,7 +1153,7 @@ void KcmSambaConf::slotMouseButtonPressed(int,QListViewItem* item,const QPoint &
 
 void KcmSambaConf::nullPasswordsEnabled(bool b) 
 {
-  QListViewItemIterator it( _interface->sambaUsersListView );
+  Q3ListViewItemIterator it( _interface->sambaUsersListView );
   for ( ; it.current(); ++it ) {
     QMultiCheckListItem* sambaItem = static_cast<QMultiCheckListItem*>(it.current());
     sambaItem->setDisabled(COL_NOPASSWORD,!b);
@@ -1159,17 +1167,17 @@ void KcmSambaConf::saveUserTab()
 
 void KcmSambaConf::addSambaUserBtnClicked()
 {
-  QPtrList<QListViewItem> list = _interface->unixUsersListView->selectedItems();
+  Q3PtrList<Q3ListViewItem> list = _interface->unixUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  QListViewItem* item;
+  Q3ListViewItem* item;
   for ( item = list.first(); item; item = list.first() )
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
-    QCString password;
+    Q3CString password;
     int passResult = KPasswordDialog::getNewPassword(password, 
                         i18n("<qt>Please enter a password for the user <b>%1</b></qt>").arg(user.name));
     if (passResult != KPasswordDialog::Accepted) {
@@ -1199,12 +1207,12 @@ void KcmSambaConf::addSambaUserBtnClicked()
 
 void KcmSambaConf::removeSambaUserBtnClicked()
 {
-  QPtrList<QListViewItem> list = _interface->sambaUsersListView->selectedItems();
+  Q3PtrList<Q3ListViewItem> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  QListViewItem* item;
+  Q3ListViewItem* item;
   for ( item = list.first(); item; item = list.first() )
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
@@ -1222,17 +1230,17 @@ void KcmSambaConf::removeSambaUserBtnClicked()
 
 void KcmSambaConf::sambaUserPasswordBtnClicked()
 {
-  QPtrList<QListViewItem> list = _interface->sambaUsersListView->selectedItems();
+  Q3PtrList<Q3ListViewItem> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  QListViewItem* item;
+  Q3ListViewItem* item;
   for ( item = list.first(); item; item = list.next() )
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
-    QCString password;
+    Q3CString password;
     int passResult = KPasswordDialog::getNewPassword(password,
                         i18n("Please enter a password for the user %1").arg(user.name));
     if (passResult != KPasswordDialog::Accepted)

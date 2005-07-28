@@ -23,9 +23,12 @@
 
 #include <kurl.h>
 #include "nfsentry.h"
+//Added by qt3to4:
+#include <QTextStream>
+#include <Q3PtrList>
 
-typedef QPtrList<NFSEntry> EntryList;
-typedef QPtrListIterator<NFSEntry> EntryIterator;
+typedef Q3PtrList<NFSEntry> EntryList;
+typedef Q3PtrListIterator<NFSEntry> EntryIterator;
 
 class QTextStream;
 

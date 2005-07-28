@@ -368,10 +368,10 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <string>Use the &lt;i&gt;share&lt;/i&gt; security level if you have a home network or a small office network.&lt;br&gt; It allows everyone to read all share names before a login is required.</string>
                                 </property>
                                 <property name="textFormat">
-                                    <enum>RichText</enum>
+                                    <enum>Qt::RichText</enum>
                                 </property>
                                 <property name="alignment">
-                                    <set>WordBreak|AlignTop</set>
+                                    <set>Qt::TextWordWrap|Qt::AlignTop</set>
                                 </property>
                                 <property name="indent">
                                     <number>5</number>
@@ -516,7 +516,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <cstring>spacer44</cstring>
                                         </property>
                                         <property name="orientation">
-                                            <enum>Horizontal</enum>
+                                            <enum>Qt::Horizontal</enum>
                                         </property>
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
@@ -585,7 +585,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <string>For detailed help about every option please look at:</string>
                                 </property>
                                 <property name="alignment">
-                                    <set>AlignVCenter</set>
+                                    <set>Qt::AlignVCenter</set>
                                 </property>
                             </widget>
                             <widget class="KURLLabel">
@@ -609,7 +609,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <cstring>Spacer38</cstring>
                                 </property>
                                 <property name="orientation">
-                                    <enum>Horizontal</enum>
+                                    <enum>Qt::Horizontal</enum>
                                 </property>
                                 <property name="sizeType">
                                     <enum>Expanding</enum>
@@ -628,7 +628,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                             <cstring>Spacer36</cstring>
                         </property>
                         <property name="orientation">
-                            <enum>Vertical</enum>
+                            <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
@@ -747,7 +747,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <cstring>Spacer21</cstring>
                                 </property>
                                 <property name="orientation">
-                                    <enum>Horizontal</enum>
+                                    <enum>Qt::Horizontal</enum>
                                 </property>
                                 <property name="sizeType">
                                     <enum>Expanding</enum>
@@ -895,7 +895,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <cstring>Spacer21_2</cstring>
                                 </property>
                                 <property name="orientation">
-                                    <enum>Horizontal</enum>
+                                    <enum>Qt::Horizontal</enum>
                                 </property>
                                 <property name="sizeType">
                                     <enum>Expanding</enum>
@@ -1061,7 +1061,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <cstring>spacer71_3</cstring>
                                         </property>
                                         <property name="orientation">
-                                            <enum>Vertical</enum>
+                                            <enum>Qt::Vertical</enum>
                                         </property>
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
@@ -1097,7 +1097,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <cstring>spacer71</cstring>
                                         </property>
                                         <property name="orientation">
-                                            <enum>Vertical</enum>
+                                            <enum>Qt::Vertical</enum>
                                         </property>
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
@@ -1130,7 +1130,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <cstring>spacer71_2</cstring>
                                         </property>
                                         <property name="orientation">
-                                            <enum>Vertical</enum>
+                                            <enum>Qt::Vertical</enum>
                                         </property>
                                         <property name="sizeType">
                                             <enum>Expanding</enum>
@@ -1238,7 +1238,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <cstring>Spacer26</cstring>
                                 </property>
                                 <property name="orientation">
-                                    <enum>Horizontal</enum>
+                                    <enum>Qt::Horizontal</enum>
                                 </property>
                                 <property name="sizeType">
                                     <enum>Expanding</enum>
@@ -1408,7 +1408,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>spacer90</cstring>
                                                 </property>
                                                 <property name="orientation">
-                                                    <enum>Vertical</enum>
+                                                    <enum>Qt::Vertical</enum>
                                                 </property>
                                                 <property name="sizeType">
                                                     <enum>Expanding</enum>
@@ -1668,7 +1668,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>Spacer37_2_2</cstring>
                                                         </property>
                                                         <property name="orientation">
-                                                            <enum>Horizontal</enum>
+                                                            <enum>Qt::Horizontal</enum>
                                                         </property>
                                                         <property name="sizeType">
                                                             <enum>Expanding</enum>
@@ -1712,7 +1712,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>Spacer37_2_2_2</cstring>
                                                         </property>
                                                         <property name="orientation">
-                                                            <enum>Horizontal</enum>
+                                                            <enum>Qt::Horizontal</enum>
                                                         </property>
                                                         <property name="sizeType">
                                                             <enum>Expanding</enum>
@@ -1784,7 +1784,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>spacer57</cstring>
                                                 </property>
                                                 <property name="orientation">
-                                                    <enum>Vertical</enum>
+                                                    <enum>Qt::Vertical</enum>
                                                 </property>
                                                 <property name="sizeType">
                                                     <enum>Expanding</enum>
@@ -2060,7 +2060,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>Spacer31_2</cstring>
                                                         </property>
                                                         <property name="orientation">
-                                                            <enum>Horizontal</enum>
+                                                            <enum>Qt::Horizontal</enum>
                                                         </property>
                                                         <property name="sizeType">
                                                             <enum>Expanding</enum>
@@ -2237,7 +2237,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>spacer52</cstring>
                                                 </property>
                                                 <property name="orientation">
-                                                    <enum>Horizontal</enum>
+                                                    <enum>Qt::Horizontal</enum>
                                                 </property>
                                                 <property name="sizeType">
                                                     <enum>Expanding</enum>
@@ -2290,7 +2290,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>spacer53</cstring>
                                                 </property>
                                                 <property name="orientation">
-                                                    <enum>Vertical</enum>
+                                                    <enum>Qt::Vertical</enum>
                                                 </property>
                                                 <property name="sizeType">
                                                     <enum>Expanding</enum>
@@ -2453,7 +2453,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>spacer54</cstring>
                                                         </property>
                                                         <property name="orientation">
-                                                            <enum>Horizontal</enum>
+                                                            <enum>Qt::Horizontal</enum>
                                                         </property>
                                                         <property name="sizeType">
                                                             <enum>Expanding</enum>
@@ -2587,7 +2587,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>spacer54_2</cstring>
                                                         </property>
                                                         <property name="orientation">
-                                                            <enum>Horizontal</enum>
+                                                            <enum>Qt::Horizontal</enum>
                                                         </property>
                                                         <property name="sizeType">
                                                             <enum>Expanding</enum>
@@ -2606,7 +2606,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>spacer55</cstring>
                                                 </property>
                                                 <property name="orientation">
-                                                    <enum>Vertical</enum>
+                                                    <enum>Qt::Vertical</enum>
                                                 </property>
                                                 <property name="sizeType">
                                                     <enum>Expanding</enum>
@@ -2725,7 +2725,7 @@ Only change something if you know what you are doing.</string>
                                                         <cstring>spacer60_3</cstring>
                                                     </property>
                                                     <property name="orientation">
-                                                        <enum>Horizontal</enum>
+                                                        <enum>Qt::Horizontal</enum>
                                                     </property>
                                                     <property name="sizeType">
                                                         <enum>Expanding</enum>
@@ -2901,7 +2901,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>Spacer114_2</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Vertical</enum>
+                                                <enum>Qt::Vertical</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -3029,7 +3029,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer61</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -3048,7 +3048,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer60</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -3139,7 +3139,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer62</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -3488,7 +3488,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>Spacer22</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -3689,7 +3689,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer48</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -3725,7 +3725,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>spacer58</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -3806,7 +3806,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer14</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Horizontal</enum>
+                                        <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Preferred</enum>
@@ -4055,7 +4055,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer59_2</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -4197,7 +4197,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>spacer60_2</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -4342,7 +4342,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer56</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -4388,7 +4388,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer61</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -4565,7 +4565,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer60</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -4608,7 +4608,7 @@ Only change something if you know what you are doing.</string>
                                                 <string>Oplock break &amp;wait time:</string>
                                             </property>
                                             <property name="alignment">
-                                                <set>AlignVCenter</set>
+                                                <set>Qt::AlignVCenter</set>
                                             </property>
                                             <property name="buddy" stdset="0">
                                                 <cstring>oplockBreakWaitTimeSpin</cstring>
@@ -4635,7 +4635,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>spacer101</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -4654,7 +4654,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>spacer59</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -4912,7 +4912,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer185</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -5031,7 +5031,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer64</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -5476,7 +5476,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>Spacer69</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -5495,7 +5495,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer62</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -5724,7 +5724,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                                 <cstring>Spacer223_2</cstring>
                                                             </property>
                                                             <property name="orientation">
-                                                                <enum>Horizontal</enum>
+                                                                <enum>Qt::Horizontal</enum>
                                                             </property>
                                                             <property name="sizeType">
                                                                 <enum>Expanding</enum>
@@ -5908,7 +5908,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer46</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -5944,7 +5944,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer63</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6030,7 +6030,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>spacer86</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -6188,7 +6188,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>spacer87</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -6463,7 +6463,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer40</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Horizontal</enum>
+                                        <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6548,7 +6548,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer39</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6723,7 +6723,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer35</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Horizontal</enum>
+                                        <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6819,7 +6819,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer34</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6855,7 +6855,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer220</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -6988,7 +6988,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer221</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7129,7 +7129,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>spacer46</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7334,7 +7334,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>spacer88</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Horizontal</enum>
+                                        <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7447,7 +7447,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>spacer52_2</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7638,7 +7638,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>spacer63</cstring>
                                             </property>
                                             <property name="orientation">
-                                                <enum>Horizontal</enum>
+                                                <enum>Qt::Horizontal</enum>
                                             </property>
                                             <property name="sizeType">
                                                 <enum>Expanding</enum>
@@ -7759,7 +7759,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>Spacer33</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7833,7 +7833,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                         <cstring>spacer81</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -7856,13 +7856,13 @@ This is only available if the SSL libraries have been compiled on your system an
 <connections>
     <connection>
         <sender>shareListView</sender>
-        <signal>doubleClicked(QListViewItem*)</signal>
+        <signal>doubleClicked(Q3ListViewItem*)</signal>
         <receiver>editShareBtn</receiver>
         <slot>animateClick()</slot>
     </connection>
     <connection>
         <sender>printerListView</sender>
-        <signal>doubleClicked(QListViewItem*)</signal>
+        <signal>doubleClicked(Q3ListViewItem*)</signal>
         <receiver>editPrinterBtn</receiver>
         <slot>animateClick()</slot>
     </connection>

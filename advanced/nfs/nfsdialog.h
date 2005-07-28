@@ -24,7 +24,7 @@
 
 class NFSEntry;
 class NFSHost;
-class QListViewItem;
+class Q3ListViewItem;
 class NFSFile;
 class NFSDialogGUI;
 
@@ -41,8 +41,8 @@ protected:
   NFSDialogGUI* m_gui;
   
   bool m_modified;
-  QListViewItem* createItemFromHost(NFSHost* host);
-  void updateItem(QListViewItem* item, NFSHost* host);
+  Q3ListViewItem* createItemFromHost(NFSHost* host);
+  void updateItem(Q3ListViewItem* item, NFSHost* host);
   void initGUI();
   void initListView();
   void initSlots();

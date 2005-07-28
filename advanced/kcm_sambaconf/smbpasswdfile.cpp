@@ -83,7 +83,7 @@ SambaUserList SmbPasswdFile::getSambaUserList()
 
   SambaUserList list;
 
-  if ( f.open(IO_ReadOnly) )
+  if ( f.open(QIODevice::ReadOnly) )
   {
     QTextStream t( &f );
     QString s;

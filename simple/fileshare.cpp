@@ -17,14 +17,18 @@
 #include <unistd.h>
 
 #include <qlayout.h>
-#include <qvbuttongroup.h>
-#include <qvgroupbox.h> 
 #include <qlabel.h>
 #include <qdir.h>
 #include <qradiobutton.h>
 #include <qcheckbox.h>
 #include <qtooltip.h>
-#include <qvbox.h>
+#include <q3vbox.h>
+//Added by qt3to4:
+#include <QPixmap>
+#include <QVBoxLayout>
+#include <QTextStream>
+#include <QBoxLayout>
+#include <Q3PtrList>
 
 #include <kpushbutton.h>
 #include <kdebug.h>
@@ -61,7 +65,7 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 #define FILESHARE_DEBUG 5009
 
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
-    KCModule(ShareFactory::instance(), parent, name)
+    KCModule(ShareFactory::instance(), parent/*, name*/)
 {
   KGlobal::locale()->insertCatalogue("kfileshare");                            
 
@@ -125,7 +129,7 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
                this, SLOT(changeShareBtnClicked()));
       connect( m_ccgui->removeShareBtn, SIGNAL(clicked()),
                this, SLOT(removeShareBtnClicked()));
-      m_ccgui->listView->setSelectionMode(QListView::Extended);       
+      m_ccgui->listView->setSelectionMode(Q3ListView::Extended);       
       m_ccgui->shareBtnPnl->setEnabled(true);        
   }
   
@@ -295,7 +299,7 @@ void KFileShareConfig::save()
         dir.mkdir("/etc/security");
 
     QFile file(FILESHARECONF);
-    if ( ! file.open(IO_WriteOnly)) {
+    if ( ! file.open(QIODevice::WriteOnly)) {
         KMessageBox::detailedError(this, 
             i18n("Could not save settings."),
             i18n("Could not open file '%1' for writing: %2").arg(FILESHARECONF).arg(
@@ -357,7 +361,7 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
   : KDialogBase(parent, "sharedlg", true,
                 i18n("Share Folder"), Ok|Cancel, Ok, true)
 {
-  QVBox* vbox = makeVBoxMainWidget();
+  Q3VBox* vbox = makeVBoxMainWidget();
   
   m_page = new PropertiesPage(vbox,files,true);
 }  
@@ -389,9 +393,9 @@ void KFileShareConfig::showShareDialog(const KFileItemList & files) {
 
 void KFileShareConfig::changeShareBtnClicked() {
   KFileItemList files;
-  QPtrList<QListViewItem> items = m_ccgui->listView->selectedItems();
+  Q3PtrList<Q3ListViewItem> items = m_ccgui->listView->selectedItems();
   
-  QListViewItem* item;
+  Q3ListViewItem* item;
   for ( item = items.first(); item; item = items.next() ) {
       files.append(new KFileItem(KURL(items.first()->text(0)),"",0));
   }
@@ -401,8 +405,8 @@ void KFileShareConfig::changeShareBtnClicked() {
 
 void KFileShareConfig::removeShareBtnClicked() {
   
-  QPtrList<QListViewItem> items = m_ccgui->listView->selectedItems();
-  QListViewItem *item;
+  Q3PtrList<Q3ListViewItem> items = m_ccgui->listView->selectedItems();
+  Q3ListViewItem *item;
   
   bool nfs = false;
   bool samba = false;

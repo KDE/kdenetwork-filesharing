@@ -34,7 +34,7 @@
  * @author Jan Schäfer
  **/
 
-#include <qptrlist.h>
+#include <q3ptrlist.h>
 
 #include "share.h"
 
@@ -42,7 +42,7 @@ class SambaShare;
 class QWidget;
 class KPopupMenu;
 class KToggleAction;
-class QGroupBox;
+class Q3GroupBox;
 class UserTabImpl;
 class HiddenFileView;
 class DictManager;

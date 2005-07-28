@@ -54,7 +54,7 @@
                 <cstring>_tabs</cstring>
             </property>
             <property name="tabPosition">
-                <enum>Top</enum>
+                <enum>Qt::DockTop</enum>
             </property>
             <widget class="QWidget">
                 <property name="name">
@@ -299,7 +299,7 @@
                             <cstring>Spacer42</cstring>
                         </property>
                         <property name="orientation">
-                            <enum>Vertical</enum>
+                            <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
@@ -357,7 +357,7 @@
                                     <cstring>Spacer27</cstring>
                                 </property>
                                 <property name="orientation">
-                                    <enum>Horizontal</enum>
+                                    <enum>Qt::Horizontal</enum>
                                 </property>
                                 <property name="sizeType">
                                     <enum>Expanding</enum>
@@ -535,7 +535,7 @@
                             <cstring>Spacer31</cstring>
                         </property>
                         <property name="orientation">
-                            <enum>Vertical</enum>
+                            <enum>Qt::Vertical</enum>
                         </property>
                         <property name="sizeType">
                             <enum>Expanding</enum>
@@ -1189,7 +1189,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer62</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -1671,7 +1671,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer53</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -1754,7 +1754,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer55</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Horizontal</enum>
+                                        <enum>Qt::Horizontal</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -1930,7 +1930,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer61</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -2016,7 +2016,7 @@ Only change something if you know what you are doing.</string>
                                                         <cstring>Spacer40_2</cstring>
                                                     </property>
                                                     <property name="orientation">
-                                                        <enum>Horizontal</enum>
+                                                        <enum>Qt::Horizontal</enum>
                                                     </property>
                                                     <property name="sizeType">
                                                         <enum>Expanding</enum>
@@ -2250,9 +2250,6 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>unnamed</cstring>
                                                 </property>
                                                 <widget class="KIntSpinBox" row="1" column="1">
-                                                    <property name="name">
-                                                        <cstring>oplockContentionLimitSpin</cstring>
-                                                    </property>
                                                     <property name="buttonSymbols">
                                                         <enum>UpDownArrows</enum>
                                                     </property>
@@ -2265,7 +2262,7 @@ Only change something if you know what you are doing.</string>
                                                         <cstring>spacer23</cstring>
                                                     </property>
                                                     <property name="orientation">
-                                                        <enum>Horizontal</enum>
+                                                        <enum>Qt::Horizontal</enum>
                                                     </property>
                                                     <property name="sizeType">
                                                         <enum>Expanding</enum>
@@ -2287,9 +2284,6 @@ Only change something if you know what you are doing.</string>
                                                     </property>
                                                     <property name="text">
                                                         <string>Oplock contention li&amp;mit:</string>
-                                                    </property>
-                                                    <property name="buddy" stdset="0">
-                                                        <cstring>oplockContentionLimitSpin</cstring>
                                                     </property>
                                                 </widget>
                                                 <widget class="QCheckBox" row="0" column="0">
@@ -2320,7 +2314,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer51</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -2356,7 +2350,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer14</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -2440,7 +2434,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer16</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -2572,7 +2566,7 @@ Only change something if you know what you are doing.</string>
                                         <cstring>Spacer15</cstring>
                                     </property>
                                     <property name="orientation">
-                                        <enum>Vertical</enum>
+                                        <enum>Qt::Vertical</enum>
                                     </property>
                                     <property name="sizeType">
                                         <enum>Expanding</enum>
@@ -2700,10 +2694,10 @@ Only change something if you know what you are doing.</string>
                 </widget>
                 <spacer>
                     <property name="name">
-                        <cstring>Horizontal Spacing2</cstring>
+                        <cstring>Qt::Horizontal Spacing2</cstring>
                     </property>
                     <property name="orientation">
-                        <enum>Horizontal</enum>
+                        <enum>Qt::Horizontal</enum>
                     </property>
                     <property name="sizeType">
                         <enum>Expanding</enum>
@@ -3050,6 +3044,13 @@ Only change something if you know what you are doing.</string>
     <include location="global" impldecl="in implementation">kprocess.h</include>
     <include location="local" impldecl="in implementation">share.ui.h</include>
 </includes>
+<customwidgets>
+    <customwidget>
+        <class>KIntSpinBox</class>
+        <header location="global">knuminput.h</header>
+        <container>0</container>
+    </customwidget>
+</customwidgets>
 <slots>
     <slot access="private">checkValues()</slot>
     <slot access="private" specifier="non virtual">init()</slot>

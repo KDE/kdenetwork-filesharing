@@ -29,10 +29,10 @@
 #ifndef SAMBASHARE_H
 #define SAMBASHARE_H
 
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstring.h>
 #include <qstringlist.h>
-#include <qptrlist.h>
+#include <q3ptrlist.h>
 
 class SambaConfigFile;
 class QStringList;
@@ -41,7 +41,7 @@ class QStringList;
  * A class which represents a Samba share
  * @author Jan Sch&auml;fer
  **/
-class SambaShare :public QDict<QString>
+class SambaShare :public Q3Dict<QString>
 {
 public:
 
@@ -198,7 +198,7 @@ protected:
    * the comments which stood above the option name
    * are stored in this QStringList
    **/
-  QDict<QStringList> _commentList;
+  Q3Dict<QStringList> _commentList;
 
   /**
    * The comments for this share
@@ -225,7 +225,7 @@ protected:
 
 };
 
-typedef QPtrList<SambaShare> SambaShareList;
+typedef Q3PtrList<SambaShare> SambaShareList;
 
 
 #endif

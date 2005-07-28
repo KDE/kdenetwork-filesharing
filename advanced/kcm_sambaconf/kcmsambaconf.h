@@ -34,8 +34,10 @@
 #include <kcmodule.h>
 #include <kcminterface.h>
 #include <share.h>
-#include <qptrlist.h>
-#include <qlistview.h>
+#include <q3ptrlist.h>
+#include <q3listview.h>
+//Added by qt3to4:
+#include <QPixmap>
 
 
 class SambaShare;
@@ -44,10 +46,10 @@ class QPixmap;
 /**
 * A QListViewItem which holds a SambaShare object
 **/
-class ShareListViewItem : public QListViewItem
+class ShareListViewItem : public Q3ListViewItem
 {
 public:
-  ShareListViewItem(QListView * parent, SambaShare* share);
+  ShareListViewItem(Q3ListView * parent, SambaShare* share);
 
   SambaShare* getShare() const;
   void setShare(SambaShare* share);
@@ -142,7 +144,7 @@ class KcmSambaConf: public KCModule
     void addSambaUserBtnClicked();
     void removeSambaUserBtnClicked();
     void sambaUserPasswordBtnClicked();
-    void slotMouseButtonPressed(int,QListViewItem*,const QPoint &,int);
+    void slotMouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int);
     void joinADomainBtnClicked();
     void nullPasswordsEnabled(bool);
     void loadBtnClicked();

@@ -18,9 +18,11 @@
 #include <qcheckbox.h>
 #include <qlayout.h>
 #include <qlineedit.h>
-#include <qwhatsthis.h>
-#include <qgroupbox.h>
-
+#include <q3whatsthis.h>
+#include <q3groupbox.h>
+//Added by qt3to4:
+#include <QVBoxLayout>
+#include <Q3Button>
 #include <klocale.h>
 #include <kdebug.h>
 #include <kmessagebox.h>
@@ -112,7 +114,7 @@ void NFSHostDlg::setEditValue(QLineEdit* edit, const QString & value) {
 }
 
 void NFSHostDlg::setCheckBoxValue(QCheckBox* chk, bool value) {
-  if (chk->state() == QButton::NoChange)
+  if (chk->state() == QCheckBox::NoChange)
       return;
       
   if (chk->isChecked()) {
@@ -200,7 +202,7 @@ void NFSHostDlg::saveEditValue(int & value, QLineEdit* edit) {
 }
 
 void NFSHostDlg::saveCheckBoxValue(bool & value, QCheckBox* chk, bool neg) {
-  if (chk->state() == QButton::NoChange)
+  if (chk->state() == QCheckBox::NoChange)
     return;
   
   if (neg)      

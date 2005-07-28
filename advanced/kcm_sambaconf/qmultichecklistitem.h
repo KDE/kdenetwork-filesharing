@@ -29,15 +29,15 @@
 #ifndef _QMULTICHECKLISTITEM_H_
 #define _QMULTICHECKLISTITEM_H_
 
-#include <qlistview.h>
+#include <q3listview.h>
 
 #include <qbitarray.h>
 
-class QMultiCheckListItem : public QObject, public QListViewItem {
+class QMultiCheckListItem : public QObject, public Q3ListViewItem {
 Q_OBJECT
 
   public:
-    QMultiCheckListItem( QListView *parent);
+    QMultiCheckListItem( Q3ListView *parent);
     ~QMultiCheckListItem() {};
     
     virtual bool isOn(int column);

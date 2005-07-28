@@ -101,7 +101,7 @@ bool NFSFile::load()
 {
   QFile f(_url.path());
 
-  if ( !f.open(IO_ReadOnly) ) {
+  if ( !f.open(QIODevice::ReadOnly) ) {
     kdError() << "NFSFile::load: Could not open " << _url.path() << endl;
     return false;
   }
@@ -114,7 +114,7 @@ bool NFSFile::load()
   bool continuedLine = false; // is true if the line before ended with a backslash
   QString completeLine;
   
-  while ( !s.eof() )
+  while ( !s.atEnd() )
   {
     QString currentLine = s.readLine().stripWhiteSpace();
 
@@ -206,7 +206,7 @@ bool NFSFile::load()
 }
 
 void NFSFile::saveTo(QTextStream * stream) {
-  QPtrListIterator<NFSLine> it(_lines);
+  Q3PtrListIterator<NFSLine> it(_lines);
   
   NFSLine *line;
   while ( (line = it.current()) != 0 ) {
@@ -217,7 +217,7 @@ void NFSFile::saveTo(QTextStream * stream) {
 
 bool NFSFile::saveTo(const QString& fileName) {
     QFile file(fileName);
-    if (!file.open(IO_WriteOnly))
+    if (!file.open(QIODevice::WriteOnly))
         return false;
         
     QTextStream stream(&file);        

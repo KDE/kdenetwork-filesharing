@@ -15,13 +15,13 @@ void GroupSelectDlg::init(const QStringList & specifiedGroups)
   for (QStringList::Iterator it = unixGroups.begin(); it != unixGroups.end(); ++it)
   {
       if ( ! specifiedGroups.contains(*it))
-	  new QListViewItem(groupListView, *it, QString::number(getGroupGID(*it)));
+	  new Q3ListViewItem(groupListView, *it, QString::number(getGroupGID(*it)));
   }
 }
 
 void GroupSelectDlg::accept()
 {
-  QListViewItemIterator it( groupListView);
+  Q3ListViewItemIterator it( groupListView);
 
   for ( ; it.current(); ++it ) {
       if ( it.current()->isSelected() )

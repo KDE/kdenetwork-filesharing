@@ -31,7 +31,7 @@
 
 #include <qstringlist.h>
 #include <qstring.h>
-#include <qptrlist.h>
+#include <q3ptrlist.h>
 
 
 
@@ -42,7 +42,7 @@ public:
   int uid;
 };
 
-typedef QPtrList<UnixUser> UnixUserList;
+typedef Q3PtrList<UnixUser> UnixUserList;
 
 UnixUserList getUnixUserList();
 QStringList getUnixUsers();

@@ -20,11 +20,13 @@
 
 #include <qradiobutton.h>
 #include <qpushbutton.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qlabel.h>
 #include <qcheckbox.h>
-#include <qvbox.h>
-#include <qhbox.h>
+#include <q3vbox.h>
+#include <q3hbox.h>
+//Added by qt3to4:
+#include <Q3ValueList>
 
 #include <klocale.h>
 #include <kuser.h>
@@ -40,11 +42,11 @@
 #include "groupconfigdlg.h"
 
   
-static QString groupListToString(const QValueList<KUserGroup> & list);
+static QString groupListToString(const Q3ValueList<KUserGroup> & list);
 static QString prettyString(const KUser &user);
 static QString fromPrettyString(const QString & s);
-static void removeList(QValueList<KUser> & from, const QValueList<KUser> & that);
-static bool userMod(const QString & user, const QValueList<KUserGroup> & groups);
+static void removeList(Q3ValueList<KUser> & from, const Q3ValueList<KUser> & that);
+static bool userMod(const QString & user, const Q3ValueList<KUserGroup> & groups);
 
 
 
@@ -96,7 +98,7 @@ void GroupConfigDlg::initGUI() {
 
 void GroupConfigDlg::updateListBox() {
   m_gui->listBox->clear();
-  QValueList<KUser>::iterator it;
+  Q3ValueList<KUser>::iterator it;
   for ( it = m_users.begin(); it != m_users.end(); ++it ) {
      m_gui->listBox->insertItem(prettyString(*it));
      kdDebug(5009) << "GroupConfigDlg::updateListBox: " << (*it).loginName() << endl;
@@ -121,7 +123,7 @@ bool GroupConfigDlg::restricted() {
 }
 
 void GroupConfigDlg::slotAddUser() {
-  QValueList<KUser> allUsers = KUser::allUsers();
+  Q3ValueList<KUser> allUsers = KUser::allUsers();
   
   removeList(allUsers,m_users);
   
@@ -134,7 +136,7 @@ void GroupConfigDlg::slotAddUser() {
 
   QStringList stringList;
   
-  QValueList<KUser>::iterator it;
+  Q3ValueList<KUser>::iterator it;
   for ( it = allUsers.begin(); it != allUsers.end(); ++it ) {
     QString s = (*it).fullName()+" ("+(*it).loginName()+")";
     stringList.append(s);
@@ -160,8 +162,8 @@ void GroupConfigDlg::slotAddUser() {
   updateListBox();
 }
 
-void removeList(QValueList<KUser> & from, const QValueList<KUser> & that) {
-  QValueList<KUser>::ConstIterator it;
+void removeList(Q3ValueList<KUser> & from, const Q3ValueList<KUser> & that) {
+  Q3ValueList<KUser>::ConstIterator it;
   for ( it = that.begin(); it != that.end(); ++it ) {
     from.remove(*it);
   } 
@@ -169,7 +171,7 @@ void removeList(QValueList<KUser> & from, const QValueList<KUser> & that) {
 }
 
 bool GroupConfigDlg::addUser(const KUser & user, const KUserGroup & group) {
-  QValueList<KUserGroup> groups = user.groups();
+  Q3ValueList<KUserGroup> groups = user.groups();
   groups.append(group);
   if (!userMod(user.loginName(),groups)) {
     KMessageBox::sorry(this,i18n("Could not add user '%1' to group '%2'")
@@ -181,7 +183,7 @@ bool GroupConfigDlg::addUser(const KUser & user, const KUserGroup & group) {
 
 
 bool GroupConfigDlg::removeUser(const KUser & user, const KUserGroup & group) {
-  QValueList<KUserGroup> groups = user.groups();
+  Q3ValueList<KUserGroup> groups = user.groups();
   groups.remove(group);
   if (!userMod(user.loginName(),groups)) {
     KMessageBox::sorry(this,i18n("Could not remove user '%1' from group '%2'")
@@ -203,12 +205,12 @@ void GroupConfigDlg::slotOk() {
     return;
   }
 
-  QValueList<KUser> addedUsers = m_users;
+  Q3ValueList<KUser> addedUsers = m_users;
   removeList(addedUsers,m_origUsers);
-  QValueList<KUser> removedUsers = m_origUsers;
+  Q3ValueList<KUser> removedUsers = m_origUsers;
   removeList(removedUsers,m_users);
   
-  QValueList<KUser>::ConstIterator it;
+  Q3ValueList<KUser>::ConstIterator it;
   for ( it = addedUsers.begin(); it != addedUsers.end(); ++it ) {
     addUser(*it, m_fileShareGroup);
   }
@@ -221,14 +223,14 @@ void GroupConfigDlg::slotOk() {
   KDialogBase::slotOk();
 }
 
-bool userMod(const QString & user, const QValueList<KUserGroup> & groups) {
+bool userMod(const QString & user, const Q3ValueList<KUserGroup> & groups) {
   KProcess proc;
   proc << "usermod" << "-G" << groupListToString(groups) << user;
   return proc.start(KProcess::Block) && proc.normalExit();
 }
 
 void GroupConfigDlg::slotRemoveUser() {
-  QListBoxItem* item = m_gui->listBox->selectedItem();
+  Q3ListBoxItem* item = m_gui->listBox->selectedItem();
   if (!item)
       return;
       
@@ -239,8 +241,8 @@ void GroupConfigDlg::slotRemoveUser() {
   m_gui->removeBtn->setEnabled(false);
 }
 
-QString groupListToString(const QValueList<KUserGroup> & list) {
-  QValueList<KUserGroup>::ConstIterator it;
+QString groupListToString(const Q3ValueList<KUserGroup> & list) {
+  Q3ValueList<KUserGroup>::ConstIterator it;
   QString result;
   
   for ( it = list.begin(); it != list.end(); ++it ) {
@@ -253,11 +255,11 @@ QString groupListToString(const QValueList<KUserGroup> & list) {
 }
 
 void GroupConfigDlg::slotChangeGroup() {
-  QValueList<KUserGroup> allGroups = KUserGroup::allGroups();
+  Q3ValueList<KUserGroup> allGroups = KUserGroup::allGroups();
   
   QStringList stringList;
   
-  QValueList<KUserGroup>::iterator it;
+  Q3ValueList<KUserGroup>::iterator it;
   for ( it = allGroups.begin(); it != allGroups.end(); ++it ) {
     QString s = (*it).name();
     stringList.append(s);
@@ -268,9 +270,9 @@ void GroupConfigDlg::slotChangeGroup() {
   KDialogBase* dlg = new KDialogBase(this,"groupconfigdlg", true,
                 i18n("Allowed Users"), Ok|Cancel, Ok, true);
                 
-  QVBox* vbox = dlg->makeVBoxMainWidget();
+  Q3VBox* vbox = dlg->makeVBoxMainWidget();
     
-  QHBox* hbox = new QHBox(vbox);
+  Q3HBox* hbox = new Q3HBox(vbox);
   QLabel* lbl = new QLabel(i18n("New file share group:"),hbox);
   KComboBox* combo = new KComboBox(hbox);
   combo->insertStringList(stringList);
@@ -348,8 +350,8 @@ void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
   
 }
 
-bool GroupConfigDlg::addUsersToGroup(QValueList<KUser> users,const KUserGroup & group) {
-  QValueList<KUser>::ConstIterator it;
+bool GroupConfigDlg::addUsersToGroup(Q3ValueList<KUser> users,const KUserGroup & group) {
+  Q3ValueList<KUser>::ConstIterator it;
   bool result = true;
   for ( it = users.begin(); it != users.end(); ++it ) {
     if (!addUser(*it, group))
@@ -364,10 +366,10 @@ bool GroupConfigDlg::emptyGroup(const QString & s) {
       return false;        
   }
 
-  QValueList<KUser> allUsers = KUser::allUsers();
+  Q3ValueList<KUser> allUsers = KUser::allUsers();
   bool result = true;
   KUserGroup group(s);
-  QValueList<KUser>::ConstIterator it;
+  Q3ValueList<KUser>::ConstIterator it;
   for ( it = allUsers.begin(); it != allUsers.end(); ++it ) {
     if (!removeUser(*it, group)) 
       result = false;

@@ -34,7 +34,7 @@
 #include "common.h"
 
 SambaShare::SambaShare(SambaConfigFile* sambaFile)
-  : QDict<QString>(10,false)
+  : Q3Dict<QString>(10,false)
 {
   _sambaFile = sambaFile;
   setName("defaults");
@@ -42,7 +42,7 @@ SambaShare::SambaShare(SambaConfigFile* sambaFile)
 }
 
 SambaShare::SambaShare(const QString & name, SambaConfigFile* sambaFile)
-  : QDict<QString>(10,false)
+  : Q3Dict<QString>(10,false)
 {
   _sambaFile = sambaFile;
   setName(name);

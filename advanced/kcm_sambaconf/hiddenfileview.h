@@ -33,6 +33,8 @@
 #include <klistview.h>
 
 #include "qmultichecklistitem.h"
+//Added by qt3to4:
+#include <Q3PtrList>
 
 class KDirLister;
 class QRegExp;
@@ -43,7 +45,7 @@ class HiddenListViewItem : public QMultiCheckListItem
 {
 Q_OBJECT
 public:
-  HiddenListViewItem( QListView *parent, KFileItem *fi, bool hidden, bool veto, bool vetoOplock );
+  HiddenListViewItem( Q3ListView *parent, KFileItem *fi, bool hidden, bool veto, bool vetoOplock );
   ~HiddenListViewItem();
 
   virtual void paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment);
@@ -89,9 +91,9 @@ protected:
   ShareDlgImpl* _dlg;
 
   KDirLister* _dir;
-  QPtrList<QRegExp> _hiddenList;
-  QPtrList<QRegExp> _vetoList;
-  QPtrList<QRegExp> _vetoOplockList;
+  Q3PtrList<QRegExp> _hiddenList;
+  Q3PtrList<QRegExp> _vetoList;
+  Q3PtrList<QRegExp> _vetoOplockList;
 
   KToggleAction* _hiddenActn;
   KToggleAction* _vetoActn;
@@ -101,22 +103,22 @@ protected:
 
   void initListView();
 
-  QPtrList<QRegExp> createRegExpList(const QString & s);
+  Q3PtrList<QRegExp> createRegExpList(const QString & s);
   bool matchHidden(const QString & s);
   bool matchVeto(const QString & s);
   bool matchVetoOplock(const QString & s);
-  bool matchRegExpList(const QString & s, QPtrList<QRegExp> & lst);
+  bool matchRegExpList(const QString & s, Q3PtrList<QRegExp> & lst);
 
   QRegExp* getHiddenMatch(const QString & s);
   QRegExp* getVetoMatch(const QString & s);
-  QRegExp* getRegExpListMatch(const QString & s, QPtrList<QRegExp> & lst);
+  QRegExp* getRegExpListMatch(const QString & s, Q3PtrList<QRegExp> & lst);
 
-  QPtrList<HiddenListViewItem> getMatchingItems(const QRegExp & rx);
+  Q3PtrList<HiddenListViewItem> getMatchingItems(const QRegExp & rx);
 
-  void setState(QPtrList<HiddenListViewItem> & lst,int column, bool b);
-  void deselect(QPtrList<HiddenListViewItem> & lst);
+  void setState(Q3PtrList<HiddenListViewItem> & lst,int column, bool b);
+  void deselect(Q3PtrList<HiddenListViewItem> & lst);
 
-  void updateEdit(QLineEdit* edit, QPtrList<QRegExp> & lst);
+  void updateEdit(QLineEdit* edit, Q3PtrList<QRegExp> & lst);
 
 protected slots:
   // slots for KDirListener :
@@ -128,13 +130,13 @@ protected slots:
   void hiddenChkClicked(bool b);
   void vetoChkClicked(bool b);
   void vetoOplockChkClicked(bool b);
-  void checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit,int column,QPtrList<QRegExp> &reqExpList,bool b);
+  void checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLineEdit* edit,int column,Q3PtrList<QRegExp> &reqExpList,bool b);
   void columnClicked(int column);
   void showContextMenu();
   void updateView();
   void hideDotFilesChkClicked(bool);
   void hideUnreadableChkClicked(bool);
-  void slotMouseButtonPressed( int button, QListViewItem * item, const QPoint & pos, int c );
+  void slotMouseButtonPressed( int button, Q3ListViewItem * item, const QPoint & pos, int c );
 };
 
 #endif

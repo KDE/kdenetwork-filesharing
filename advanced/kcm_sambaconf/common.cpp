@@ -27,14 +27,14 @@
  ******************************************************************************/
 
 #include <qstring.h>
-#include <qcombobox.h>
-#include <qlistbox.h>
+#include <kcombobox.h>
+#include <q3listbox.h>
 
 #include "common.h"
 
-void setComboToString(QComboBox* combo,const QString & s)
+void setComboToString(KComboBox* combo,const QString & s)
 {
-  int i = combo->listBox()->index(combo->listBox()->findItem(s,Qt::ExactMatch));
+  int i = combo->model()->index(combo->findText( s ));//model()->findItem(s,Qt::ExactMatch));
   combo->setCurrentItem(i);
 }
 

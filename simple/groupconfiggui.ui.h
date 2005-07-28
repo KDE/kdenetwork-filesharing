@@ -8,7 +8,7 @@
 *****************************************************************************/
 
 
-void GroupConfigGUI::listBox_selectionChanged( QListBoxItem * i)
+void GroupConfigGUI::listBox_selectionChanged( Q3ListBoxItem * i)
 {
     removeBtn->setEnabled(i);
 }

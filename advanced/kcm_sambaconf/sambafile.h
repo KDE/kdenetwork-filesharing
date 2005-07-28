@@ -21,7 +21,7 @@
 #define SAMBAFILE_H
 
 
-#include <qdict.h>
+#include <q3dict.h>
 #include <qstring.h>
 #include <qobject.h>
 #include <kio/job.h>
@@ -46,7 +46,7 @@ class SambaFileLoadException
     QString message;
 };
 
-class SambaConfigFile : public QDict<SambaShare>
+class SambaConfigFile : public Q3Dict<SambaShare>
 {
 public:
   SambaConfigFile(SambaFile*);

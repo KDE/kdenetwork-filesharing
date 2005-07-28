@@ -104,25 +104,25 @@ void DictManager::add(const QString & key, QComboBox* comboBox, QStringList* val
 
 
 void DictManager::load(SambaShare* share, bool globalValue, bool defaultValue){
-  QDictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
+  Q3DictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
    
   for( ; checkBoxIt.current(); ++checkBoxIt )	{
     checkBoxIt.current()->setChecked(share->getBoolValue(checkBoxIt.currentKey(),globalValue,defaultValue));
   }
 
-  QDictIterator<QLineEdit> lineEditIt( lineEditDict ); 
+  Q3DictIterator<QLineEdit> lineEditIt( lineEditDict ); 
  
   for( ; lineEditIt.current(); ++lineEditIt )	{
     lineEditIt.current()->setText(share->getValue(lineEditIt.currentKey(),globalValue,defaultValue));
   }
 
-  QDictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
+  Q3DictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
  
   for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
     urlRequesterIt.current()->setURL(share->getValue(urlRequesterIt.currentKey(),globalValue,defaultValue));
   }
 
-  QDictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
+  Q3DictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
    
   for( ; spinBoxIt.current(); ++spinBoxIt )	{
     spinBoxIt.current()->setValue(share->getValue(spinBoxIt.currentKey(),globalValue,defaultValue).toInt());
@@ -133,7 +133,7 @@ void DictManager::load(SambaShare* share, bool globalValue, bool defaultValue){
 }
 
 void DictManager::loadComboBoxes(SambaShare* share, bool globalValue, bool defaultValue) {
-  QDictIterator<QComboBox> comboBoxIt( comboBoxDict ); 
+  Q3DictIterator<QComboBox> comboBoxIt( comboBoxDict ); 
    
   for( ; comboBoxIt.current(); ++comboBoxIt )	{
     QStringList *v = comboBoxValuesDict[comboBoxIt.currentKey()];
@@ -170,31 +170,31 @@ void DictManager::loadComboBoxes(SambaShare* share, bool globalValue, bool defau
 
 
 void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
-  QDictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
+  Q3DictIterator<QCheckBox> checkBoxIt( checkBoxDict ); 
  
   for( ; checkBoxIt.current(); ++checkBoxIt )	{
     share->setValue(checkBoxIt.currentKey(),checkBoxIt.current()->isChecked(), globalValue, defaultValue );
   }
 
-  QDictIterator<QLineEdit> lineEditIt( lineEditDict ); 
+  Q3DictIterator<QLineEdit> lineEditIt( lineEditDict ); 
    
   for( ; lineEditIt.current(); ++lineEditIt )	{
     share->setValue(lineEditIt.currentKey(),lineEditIt.current()->text(), globalValue, defaultValue );
   }
 
-  QDictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
+  Q3DictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
  
   for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
     share->setValue(urlRequesterIt.currentKey(),urlRequesterIt.current()->url(), globalValue, defaultValue );
   }
 
-  QDictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
+  Q3DictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 
  
   for( ; spinBoxIt.current(); ++spinBoxIt )	{
     share->setValue(spinBoxIt.currentKey(),spinBoxIt.current()->value(), globalValue, defaultValue );
   }
 
-  QDictIterator<QComboBox> comboBoxIt( comboBoxDict );
+  Q3DictIterator<QComboBox> comboBoxIt( comboBoxDict );
   
   for( ; comboBoxIt.current(); ++comboBoxIt )	{
     QStringList* values = comboBoxValuesDict[comboBoxIt.currentKey()];

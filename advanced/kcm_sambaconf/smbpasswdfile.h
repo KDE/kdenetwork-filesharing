@@ -35,6 +35,8 @@
   */
 
 #include <qstring.h>
+//Added by qt3to4:
+#include <Q3PtrList>
 #include <kurl.h>
 
 class SambaFile;
@@ -60,7 +62,7 @@ public:
 /**
  * A QPtrList of SambaUser
  **/
-class SambaUserList : public QPtrList<SambaUser>
+class SambaUserList : public Q3PtrList<SambaUser>
 {
 public:
   QStringList getUserNames();

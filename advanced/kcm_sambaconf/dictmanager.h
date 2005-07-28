@@ -58,12 +58,12 @@ Q_OBJECT
     void save(SambaShare* share, bool globalValue=true, bool defaultValue=true);
 
   protected :
-    QDict<QLineEdit> lineEditDict;
-    QDict<QCheckBox> checkBoxDict;
-    QDict<KURLRequester> urlRequesterDict;
-    QDict<QSpinBox> spinBoxDict;
-    QDict<QComboBox> comboBoxDict;
-    QDict<QStringList> comboBoxValuesDict;
+    Q3Dict<QLineEdit> lineEditDict;
+    Q3Dict<QCheckBox> checkBoxDict;
+    Q3Dict<KURLRequester> urlRequesterDict;
+    Q3Dict<QSpinBox> spinBoxDict;
+    Q3Dict<QComboBox> comboBoxDict;
+    Q3Dict<QStringList> comboBoxValuesDict;
     
     SambaShare* _share;
     

@@ -22,7 +22,7 @@
 
 
 #include <qstring.h>
-#include <qptrlist.h>
+#include <q3ptrlist.h>
 
 
 class NFSHost
@@ -61,16 +61,16 @@ protected:
 
 
 
-typedef QPtrList<NFSHost> HostList;
-typedef QPtrListIterator<NFSHost> HostIterator;
+typedef Q3PtrList<NFSHost> HostList;
+typedef Q3PtrListIterator<NFSHost> HostIterator;
 
 class NFSLine {
 public:  
   virtual QString toString() const = 0;
 };
 
-typedef QPtrList<NFSLine> NFSLineList;
-typedef QPtrListIterator<NFSLine> NFSLineIterator;
+typedef Q3PtrList<NFSLine> NFSLineList;
+typedef Q3PtrListIterator<NFSLine> NFSLineIterator;
 
 class NFSEmptyLine : public NFSLine {
 public:

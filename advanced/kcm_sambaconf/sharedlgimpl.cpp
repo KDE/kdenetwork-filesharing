@@ -35,20 +35,22 @@
 #include <qlineedit.h>
 #include <qcombobox.h>
 #include <qlabel.h>
-#include <qgroupbox.h>
+#include <q3groupbox.h>
 #include <qlayout.h>
 #include <qtabwidget.h>
 #include <qregexp.h>
 #include <qstringlist.h>
-#include <qgrid.h>
+#include <q3grid.h>
 #include <qcursor.h>
-#include <qtable.h>
-#include <qlistbox.h>
+#include <q3table.h>
+#include <q3listbox.h>
 #include <qtoolbutton.h>
 #include <qpixmap.h>
-#include <qframe.h>
+#include <q3frame.h>
 #include <qwidget.h>
 #include <qtabwidget.h>
+//Added by qt3to4:
+#include <QVBoxLayout>
 
 
 #include <klineedit.h>
@@ -274,7 +276,7 @@ void ShareDlgImpl::initAdvancedTab()
 	_janus->setShowIconsInTreeList(true);
 	
 	QWidget *w;
-	QFrame *f;
+	Q3Frame *f;
 	QString label;
  	QPixmap icon;
 	

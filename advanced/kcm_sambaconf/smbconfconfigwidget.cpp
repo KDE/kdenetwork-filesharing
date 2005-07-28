@@ -30,6 +30,9 @@
 #include <qlayout.h>
 #include <qpushbutton.h>
 #include <qlabel.h>
+//Added by qt3to4:
+#include <QVBoxLayout>
+#include <QHBoxLayout>
  
 #include <kapplication.h> 
 #include <kfiledialog.h>

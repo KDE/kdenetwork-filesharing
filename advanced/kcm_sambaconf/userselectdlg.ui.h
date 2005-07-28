@@ -16,7 +16,7 @@ void UserSelectDlg::init(const QStringList & specifiedUsers, SambaShare* share)
   for (SambaUser * user = sambaList.first(); user; user = sambaList.next() )
   {
     if (! specifiedUsers.contains(user->name))
-        new QListViewItem(userListView, user->name, QString::number(user->uid), QString::number(user->gid));	
+        new Q3ListViewItem(userListView, user->name, QString::number(user->uid), QString::number(user->gid));	
   }
 
 }
@@ -24,7 +24,7 @@ void UserSelectDlg::init(const QStringList & specifiedUsers, SambaShare* share)
 
 void UserSelectDlg::accept()
 {
-  QListViewItemIterator it( userListView);
+  Q3ListViewItemIterator it( userListView);
 
   for ( ; it.current(); ++it ) {
       if ( it.current()->isSelected() )

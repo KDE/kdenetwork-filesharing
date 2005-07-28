@@ -21,7 +21,7 @@
 #define GROUPCONFIGDLG_H
 
 #include <kdialogbase.h>
-#include <qvaluelist.h>
+#include <q3valuelist.h>
 #include <kuser.h>
 
 class GroupConfigGUI;
@@ -54,11 +54,11 @@ private:
   bool emptyGroup(const QString & s);
   bool addUser(const KUser & user, const KUserGroup & group);
   bool removeUser(const KUser & user, const KUserGroup & group);
-  bool addUsersToGroup(QValueList<KUser> users,const KUserGroup & group);
+  bool addUsersToGroup(Q3ValueList<KUser> users,const KUserGroup & group);
   void setFileShareGroup(const KUserGroup & group);
   
-  QValueList<KUser> m_origUsers;
-  QValueList<KUser> m_users;
+  Q3ValueList<KUser> m_origUsers;
+  Q3ValueList<KUser> m_users;
   KUserGroup m_fileShareGroup;
   bool m_restricted;
   bool m_rootPassNeeded;

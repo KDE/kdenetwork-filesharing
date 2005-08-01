@@ -336,7 +336,7 @@ void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
     m_gui->groupUsersRadio->setText(
           i18n("Only users of the '%1' group are allowed to share folders")
           .arg(m_fileShareGroup.name()));
-    m_gui->usersGrpBx->setTitle(i18n("Users of the '%1' Group")
+    m_gui->usersGrpBx->setTitle(i18n("Users of '%1' Group")
           .arg(m_fileShareGroup.name()));
     m_gui->otherGroupBtn->setText(i18n("Change Group..."));          
     m_gui->usersGrpBx->show();

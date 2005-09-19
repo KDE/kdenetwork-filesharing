@@ -30,10 +30,10 @@
 #define COMMON_H
 
 class QString;
-class KComboBox;
+class QComboBox;
 
 
-void setComboToString(KComboBox*,const QString &);
+void setComboToString(QComboBox*,const QString &);
 bool boolFromText(const QString & value,bool testTrue=true);
 QString textFromBool(bool value);
 

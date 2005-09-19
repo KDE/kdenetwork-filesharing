@@ -1190,6 +1190,13 @@
     <include location='local' impldecl='in implementation'>kiconloader.h</include>
     <include location='local' impldecl='in implementation'>kcmprinterdlg.ui.h</include>
   </includes>
+<customwidgets>
+    <customwidget>
+        <class>KIntNumInput</class>
+        <header location="global">knuminput.h</header>
+        <container>0</container>
+    </customwidget>
+</customwidgets>
   <slots>
     <slot>init()</slot>
     <slot>accept()</slot>

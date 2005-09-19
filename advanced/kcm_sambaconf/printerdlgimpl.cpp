@@ -221,7 +221,7 @@ void PrinterDlgImpl::printersChkToggled(bool b)
     p.begin(&mask);
     
     p.setRasterOp(Qt::OrROP);
-    p.drawPixmap(dist+dist/2,0,*pix2.mask());
+    p.drawPixmap(dist+dist/2,0,pix2.mask());
     p.drawPixmap(dist/2,dist,*pix2.mask());
     p.drawPixmap(dist+dist/2,2*dist,*pix2.mask());
 		p.end();

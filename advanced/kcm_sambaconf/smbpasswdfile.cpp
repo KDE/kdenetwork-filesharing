@@ -87,7 +87,7 @@ SambaUserList SmbPasswdFile::getSambaUserList()
   {
     QTextStream t( &f );
     QString s;
-    while ( !t.eof() )
+    while ( !t.atEnd() )
     {
       s = t.readLine().stripWhiteSpace();
 

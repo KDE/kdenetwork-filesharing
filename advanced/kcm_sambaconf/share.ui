@@ -2249,8 +2249,11 @@ Only change something if you know what you are doing.</string>
                                                 <property name="name">
                                                     <cstring>unnamed</cstring>
                                                 </property>
-                                                <widget class="KIntSpinBox" row="1" column="1">
-                                                    <property name="buttonSymbols">
+												<widget class="KIntSpinBox" row="1" column="1">
+                                                    <property name="name">
+                                                        <cstring>oplockContentionLimitSpin</cstring>
+                                                    </property>
+													<property name="buttonSymbols">
                                                         <enum>UpDownArrows</enum>
                                                     </property>
                                                     <property name="maxValue">

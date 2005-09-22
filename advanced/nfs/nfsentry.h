@@ -65,7 +65,8 @@ typedef Q3PtrList<NFSHost> HostList;
 typedef Q3PtrListIterator<NFSHost> HostIterator;
 
 class NFSLine {
-public:  
+public: 
+  virtual ~NFSLine(){}
   virtual QString toString() const = 0;
 };
 

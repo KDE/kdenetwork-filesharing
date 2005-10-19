@@ -49,7 +49,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
                     const char *, const QStringList & )
   : KPropsDlgPlugin(dlg), d(0)
 {
-  KGlobal::locale()->insertCatalogue("kfileshare");                            
+  KGlobal::locale()->insertCatalog("kfileshare");                            
                             
   if (KFileShare::shareMode() == KFileShare::Simple) {     
       kdDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;

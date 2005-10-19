@@ -38,7 +38,7 @@
 #include <Q3PtrList>
 
 
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kaction.h>
 #include <krestrictedline.h>
 #include <klocale.h>
@@ -168,7 +168,7 @@ void HiddenFileView::initListView()
   _vetoList = createRegExpList(_share->getValue("veto files"));
   _vetoOplockList = createRegExpList(_share->getValue("veto oplock files"));
 
-  _popup = new KPopupMenu(_dlg->hiddenListView);
+  _popup = new KMenu(_dlg->hiddenListView);
 
   _hiddenActn->plug(_popup);
   _vetoActn->plug(_popup);

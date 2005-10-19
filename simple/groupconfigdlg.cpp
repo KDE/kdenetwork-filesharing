@@ -270,7 +270,7 @@ void GroupConfigDlg::slotChangeGroup() {
   KDialogBase* dlg = new KDialogBase(this,"groupconfigdlg", true,
                 i18n("Allowed Users"), Ok|Cancel, Ok, true);
                 
-  Q3VBox* vbox = dlg->makeVBoxMainWidget();
+  KVBox* vbox = dlg->makeVBoxMainWidget();
     
   Q3HBox* hbox = new Q3HBox(vbox);
   QLabel* lbl = new QLabel(i18n("New file share group:"),hbox);

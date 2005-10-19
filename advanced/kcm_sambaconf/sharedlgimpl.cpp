@@ -63,7 +63,7 @@
 #include <kfiledetailview.h>
 #include <kdirlister.h>
 #include <kmessagebox.h>
-#include <kpopupmenu.h>
+#include <kmenu.h>
 #include <kaction.h>
 #include <krestrictedline.h>
 #include <kjanuswidget.h>
@@ -276,7 +276,7 @@ void ShareDlgImpl::initAdvancedTab()
 	_janus->setShowIconsInTreeList(true);
 	
 	QWidget *w;
-	Q3Frame *f;
+	QFrame *f;
 	QString label;
  	QPixmap icon;
 	

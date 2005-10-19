@@ -56,7 +56,7 @@ protected:
 };
 
 class KToggleAction;
-class KPopupMenu;
+class KMenu;
 class ShareDlgImpl;
 
 
@@ -99,7 +99,7 @@ protected:
   KToggleAction* _vetoActn;
   KToggleAction* _vetoOplockActn;
 
-  KPopupMenu* _popup;
+  KMenu* _popup;
 
   void initListView();
 

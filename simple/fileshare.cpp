@@ -67,7 +67,7 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
     KCModule(ShareFactory::instance(), parent/*, name*/)
 {
-  KGlobal::locale()->insertCatalogue("kfileshare");                            
+  KGlobal::locale()->insertCatalog("kfileshare");                            
 
   QBoxLayout* layout = new QVBoxLayout(this,0,
 				       KDialog::spacingHint());
@@ -361,7 +361,7 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
   : KDialogBase(parent, "sharedlg", true,
                 i18n("Share Folder"), Ok|Cancel, Ok, true)
 {
-  Q3VBox* vbox = makeVBoxMainWidget();
+  KVBox* vbox = makeVBoxMainWidget();
   
   m_page = new PropertiesPage(vbox,files,true);
 }  

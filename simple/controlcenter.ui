@@ -30,7 +30,7 @@
                 <string>SMB and NFS servers are not installed on this machine, to enable this module the servers must be installed.</string>
             </property>
             <property name="alignment">
-                <set>WordBreak|AlignVCenter</set>
+                <set>Qt::TextWordWrap|Qt::AlignVCenter</set>
             </property>
         </widget>
         <widget class="QButtonGroup">
@@ -113,7 +113,7 @@
                                 <string>Enable simple sharing to allow users to share folders from their HOME folder, without knowing the root password.</string>
                             </property>
                             <property name="alignment">
-                                <set>WordBreak|AlignVCenter</set>
+                                <set>Qt::TextWordWrap|Qt::AlignVCenter</set>
                             </property>
                         </widget>
                     </hbox>
@@ -178,7 +178,7 @@
                                 <string>Enable advanced sharing to allow users to share any folders, as long as they have write access to the needed configuration files, or they know the root password.</string>
                             </property>
                             <property name="alignment">
-                                <set>WordBreak|AlignVCenter</set>
+                                <set>Qt::TextWordWrap|Qt::AlignVCenter</set>
                             </property>
                         </widget>
                     </hbox>

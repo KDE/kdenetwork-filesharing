@@ -23,8 +23,8 @@
 #include <q3groupbox.h>
 #include <qlabel.h>
 #include <qcheckbox.h>
-#include <q3vbox.h>
-#include <q3hbox.h>
+#include <kvbox.h>
+#include <khbox.h>
 //Added by qt3to4:
 #include <Q3ValueList>
 
@@ -272,7 +272,7 @@ void GroupConfigDlg::slotChangeGroup() {
                 
   KVBox* vbox = dlg->makeVBoxMainWidget();
     
-  Q3HBox* hbox = new Q3HBox(vbox);
+  KHBox* hbox = new KHBox(vbox);
   QLabel* lbl = new QLabel(i18n("New file share group:"),hbox);
   KComboBox* combo = new KComboBox(hbox);
   combo->insertStringList(stringList);

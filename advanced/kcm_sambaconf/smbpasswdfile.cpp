@@ -89,7 +89,7 @@ SambaUserList SmbPasswdFile::getSambaUserList()
     QString s;
     while ( !t.atEnd() )
     {
-      s = t.readLine().stripWhiteSpace();
+      s = t.readLine().trimmed();
 
       // Ignore comments
       if (s.left(1)=="#")

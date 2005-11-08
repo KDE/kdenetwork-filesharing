@@ -67,7 +67,7 @@ bool NFSFile::hasEntry(NFSEntry *entry)
 
 NFSEntry* NFSFile::getEntryByPath(const QString & path)
 {
-  QString testPath = path.stripWhiteSpace();
+  QString testPath = path.trimmed();
   if ( testPath[testPath.length()-1] != '/' )
        testPath += '/';
   
@@ -116,7 +116,7 @@ bool NFSFile::load()
   
   while ( !s.atEnd() )
   {
-    QString currentLine = s.readLine().stripWhiteSpace();
+    QString currentLine = s.readLine().trimmed();
 
     if (continuedLine) {
       completeLine += currentLine;
@@ -169,7 +169,7 @@ bool NFSFile::load()
         path = completeLine;
       else {
         path = completeLine.left(i);
-        hosts = completeLine.mid(i+1).stripWhiteSpace();
+        hosts = completeLine.mid(i+1).trimmed();
       }          
     }        
     
@@ -187,7 +187,7 @@ bool NFSFile::load()
     } else {
       QStringList::iterator it;
       for ( it = hostList.begin(); it != hostList.end(); ++it ) {
-         NFSHost* host = new NFSHost((*it).stripWhiteSpace());          
+         NFSHost* host = new NFSHost((*it).trimmed());          
          entry->addHost(host);
          kdDebug(5009) << "KNFSShare: Found host: " << (*it) << " name='"
                   << host->name << "'" << endl;

@@ -840,7 +840,7 @@ void KcmSambaConf::loadSocket(SambaShare* share)
   _dictMngr->add("socket address", _interface->socketAddressEdit);
 
   QString s = share->getValue("socket options");
-  s = s.simplifyWhiteSpace();
+  s = s.simplified();
 
   // The string s has now the form :
   // "OPTION1=1 OPTION2=0 OPTION3=2234 OPTION4"

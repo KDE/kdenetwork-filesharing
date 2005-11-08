@@ -155,7 +155,7 @@ bool NFSHostDlg::saveName(NFSHost* host) {
      }
      host->name="*";
   } else {   
-    QString name = m_gui->nameEdit->text().stripWhiteSpace();
+    QString name = m_gui->nameEdit->text().trimmed();
     if (name.isEmpty()) {
       KMessageBox::sorry(this,
               i18n("Please enter a hostname or an IP address.").arg(name),

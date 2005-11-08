@@ -304,7 +304,7 @@ void NFSEntry::copyFrom(NFSEntry* entry) {
 
 QString NFSEntry::toString() const
 {
-  QString s = _path.stripWhiteSpace();
+  QString s = _path.trimmed();
 
   if (_path.find(' ') > -1) {
     s = '"'+s+'"';

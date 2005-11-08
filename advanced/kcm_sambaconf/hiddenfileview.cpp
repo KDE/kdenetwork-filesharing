@@ -200,21 +200,21 @@ void HiddenFileView::load()
 
 void HiddenFileView::save()
 {
-  QString s = _dlg->hiddenEdit->text().stripWhiteSpace();
+  QString s = _dlg->hiddenEdit->text().trimmed();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
   if ( (!s.isEmpty()) && (s.right(1)!="/"))
       s+="/";
   _share->setValue("hide files", s);
 
-  s = _dlg->vetoEdit->text().stripWhiteSpace();
+  s = _dlg->vetoEdit->text().trimmed();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
   if ( (!s.isEmpty()) && (s.right(1)!="/"))
       s+="/";
   _share->setValue("veto files", s);
 
-  s = _dlg->vetoOplockEdit->text().stripWhiteSpace();
+  s = _dlg->vetoOplockEdit->text().trimmed();
   // its important that the string ends with an '/'
   // otherwise Samba won't recognize the last entry
   if ( (!s.isEmpty()) && (s.right(1)!="/"))

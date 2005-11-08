@@ -412,7 +412,7 @@ void SambaFile::parseParmStdOutput()
 
   while (!s.atEnd())
   {
-    QString line = s.readLine().stripWhiteSpace();
+    QString line = s.readLine().trimmed();
 
     // empty lines
     if (line.isEmpty())
@@ -439,8 +439,8 @@ void SambaFile::parseParmStdOutput()
     int i = line.find('=');
 
     if (i>-1) {
-      QString name = line.left(i).stripWhiteSpace();
-      QString value = line.mid(i+1).stripWhiteSpace();
+      QString name = line.left(i).trimmed();
+      QString value = line.mid(i+1).trimmed();
       _testParmValues->setValue(name,value,false,false);
     }
     
@@ -525,7 +525,7 @@ bool SambaFile::openFile() {
 
   while (!s.atEnd())
   {
-    QString currentLine = s.readLine().stripWhiteSpace();
+    QString currentLine = s.readLine().trimmed();
 
     if (continuedLine)
     {
@@ -570,8 +570,8 @@ bool SambaFile::openFile() {
 
     if (i>-1)
     {
-      QString name = completeLine.left(i).stripWhiteSpace();
-      QString value = completeLine.mid(i+1).stripWhiteSpace();
+      QString name = completeLine.left(i).trimmed();
+      QString value = completeLine.mid(i+1).trimmed();
 
       if (currentShare)
       {

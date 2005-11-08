@@ -128,7 +128,7 @@ QString SambaShare::getGlobalValue(const QString & name, bool defaultValue)
 **/
 QString SambaShare::getSynonym(const QString & name) const
 {
-  QString lname = name.lower().stripWhiteSpace();
+  QString lname = name.lower().trimmed();
 
   if (lname == "browsable") return "browseable";
   if (lname == "allow hosts") return "hosts allow";
@@ -204,7 +204,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   // That's because the author of the option has thought about it.
   if (defaultValue && global.isEmpty() && !hasComments(synonym))
   {
-    if ( newValue.stripWhiteSpace().lower() == getDefaultValue(synonym).stripWhiteSpace().lower() )
+    if ( newValue.trimmed().lower() == getDefaultValue(synonym).trimmed().lower() )
     {
       kdDebug(5009) << getName() << " global: " << global << " remove " << synonym << endl;
       remove(synonym);

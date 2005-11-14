@@ -54,11 +54,11 @@ private:
   bool emptyGroup(const QString & s);
   bool addUser(const KUser & user, const KUserGroup & group);
   bool removeUser(const KUser & user, const KUserGroup & group);
-  bool addUsersToGroup(Q3ValueList<KUser> users,const KUserGroup & group);
+  bool addUsersToGroup(QList<KUser> users,const KUserGroup & group);
   void setFileShareGroup(const KUserGroup & group);
   
-  Q3ValueList<KUser> m_origUsers;
-  Q3ValueList<KUser> m_users;
+  QList<KUser> m_origUsers;
+  QList<KUser> m_users;
   KUserGroup m_fileShareGroup;
   bool m_restricted;
   bool m_rootPassNeeded;

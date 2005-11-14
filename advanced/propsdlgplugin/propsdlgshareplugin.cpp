@@ -17,7 +17,7 @@
 
 */
 #include <qstring.h>
-#include <qvbox.h>
+#include <kvbox.h>
 #include <qlayout.h>
 #include <qlabel.h>
 
@@ -57,7 +57,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
   }   
   
  
-  QVBox* vbox = properties->addVBoxPage(i18n("&Share"));                            
+  KVBox* vbox = properties->addVBoxPage(i18n("&Share"));                            
   properties->setFileSharingPage(vbox);
   
   if (KFileShare::authorization() == KFileShare::UserNotAllowed) {

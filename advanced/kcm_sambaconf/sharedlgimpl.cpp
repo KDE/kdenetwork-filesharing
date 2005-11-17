@@ -271,7 +271,7 @@ void ShareDlgImpl::initAdvancedTab()
   QVBoxLayout *l = new QVBoxLayout(advancedFrame);
 	l->setAutoAdd(true);
 	l->setMargin(0);
-	_janus = new KJanusWidget(advancedFrame,0,KJanusWidget::TreeList);
+	_janus = new KJanusWidget(advancedFrame,KJanusWidget::TreeList);
 	_janus->setRootIsDecorated(false);
 	_janus->setShowIconsInTreeList(true);
 	

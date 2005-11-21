@@ -72,6 +72,8 @@ void SmbConfConfigWidget::btnPressed() {
             "smb.conf|Samba conf. File\n"
             "*|All Files",0,i18n("Get smb.conf Location"));
 
+  if (smbConf.isEmpty())
+		  return;
   if ( ! QFileInfo(smbConf).isReadable() ) {
     KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read.</qt>").arg(smbConf),i18n("Could Not Read File"));
     return;

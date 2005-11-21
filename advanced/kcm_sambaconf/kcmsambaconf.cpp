@@ -65,6 +65,7 @@
 #include <kjanuswidget.h>
 #include <klistview.h>
 #include <ksimpleconfig.h>
+#include <kinstance.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -182,8 +183,8 @@ QPixmap ShareListViewItem::createPropertyPixmap()
   return QPixmap(pix);
 }
 
-KcmSambaConf::KcmSambaConf(QWidget *parent, const char *name)
-  : KCModule(parent,name)
+KcmSambaConf::KcmSambaConf(KInstance *inst,QWidget *parent, const char *name)
+  : KCModule(inst,parent)
 {
   _dictMngr = 0L;
   _sambaFile = 0L;
@@ -286,7 +287,7 @@ void KcmSambaConf::initAdvancedTab()
   QVBoxLayout *l = new QVBoxLayout(_interface->advancedFrame);
   l->setAutoAdd(true);
   l->setMargin(0);
-  _janus = new KJanusWidget(_interface->advancedFrame,0,KJanusWidget::TreeList);
+  _janus = new KJanusWidget(_interface->advancedFrame,KJanusWidget::TreeList);
   _janus->setRootIsDecorated(false);
   _janus->setShowIconsInTreeList(true);
 
@@ -1177,7 +1178,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
-    Q3CString password;
+    QByteArray password;
     int passResult = KPasswordDialog::getNewPassword(password, 
                         i18n("<qt>Please enter a password for the user <b>%1</b></qt>").arg(user.name));
     if (passResult != KPasswordDialog::Accepted) {
@@ -1442,7 +1443,8 @@ extern "C"
   KDE_EXPORT KCModule *create_KcmSambaConf(QWidget *parent, const char *name)
   {
     KGlobal::locale()->insertCatalog("kfileshare");
-    return new KcmSambaConf(parent, name);
+	KInstance * inst = new KInstance("kfileshare");
+    return new KcmSambaConf(inst,parent, name);
   }
 }
 

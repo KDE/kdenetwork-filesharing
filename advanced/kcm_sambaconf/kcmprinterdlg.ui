@@ -1188,11 +1188,17 @@
   </tabstops>
   <includes>
     <include location='local' impldecl='in implementation'>kiconloader.h</include>
-    <include location='local' impldecl='in implementation'>kcmprinterdlg.ui.h</include>
+	<include location='local' impldecl='in implementation'>kcmprinterdlg.ui.h</include>
+	<include location="global" impldecl="in declaration">knuminput.h</include>
   </includes>
 <customwidgets>
     <customwidget>
         <class>KIntNumInput</class>
+        <header location="global">knuminput.h</header>
+        <container>0</container>
+	</customwidget>
+    <customwidget>
+        <class>KIntSpinBox</class>
         <header location="global">knuminput.h</header>
         <container>0</container>
     </customwidget>
@@ -1210,9 +1216,6 @@
     <includehint>kpushbutton.h</includehint>
     <includehint>kcombobox.h</includehint>
     <includehint>klineedit.h</includehint>
-    <includehint>klineedit.h</includehint>
-    <includehint>knuminput.h</includehint>
-    <includehint>knuminput.h</includehint>
     <includehint>knuminput.h</includehint>
   </includehints>
 </UI>

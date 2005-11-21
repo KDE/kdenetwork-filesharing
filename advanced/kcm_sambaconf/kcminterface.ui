@@ -8421,11 +8421,17 @@ This is only available if the SSL libraries have been compiled on your system an
     <include location="global" impldecl="in declaration">share.h</include>
     <include location="global" impldecl="in implementation">kprocess.h</include>
     <include location="local" impldecl="in implementation">kiconloader.h</include>
-    <include location="local" impldecl="in implementation">kcminterface.ui.h</include>
+	<include location="local" impldecl="in implementation">kcminterface.ui.h</include>
+	<include location="global" impldecl="in declaration">knuminput.h</include>
 </includes>
 <customwidgets>
     <customwidget>
         <class>KIntNumInput</class>
+        <header location="global">knuminput.h</header>
+        <container>0</container>
+    </customwidget>
+    <customwidget>
+        <class>KIntSpinBox</class>
         <header location="global">knuminput.h</header>
         <container>0</container>
     </customwidget>

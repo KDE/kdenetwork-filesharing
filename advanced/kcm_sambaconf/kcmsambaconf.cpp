@@ -292,7 +292,7 @@ void KcmSambaConf::initAdvancedTab()
   _janus->setShowIconsInTreeList(true);
 
   QWidget *w;
-  Q3Frame *f;
+  QFrame *f;
   QString label;
   QPixmap icon;
 
@@ -1179,7 +1179,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
     SambaUser user( item->text(0), item->text(1).toInt() );
     
     QByteArray password;
-    int passResult = KPasswordDialog::getNewPassword(password, 
+    int passResult = KPasswordDialog::getNewPassword(this,password, 
                         i18n("<qt>Please enter a password for the user <b>%1</b></qt>").arg(user.name));
     if (passResult != KPasswordDialog::Accepted) {
        list.remove(item);
@@ -1241,8 +1241,8 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
   {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
-    Q3CString password;
-    int passResult = KPasswordDialog::getNewPassword(password,
+    QByteArray password;
+    int passResult = KPasswordDialog::getNewPassword(this,password,
                         i18n("Please enter a password for the user %1").arg(user.name));
     if (passResult != KPasswordDialog::Accepted)
        return;

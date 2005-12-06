@@ -2,7 +2,7 @@
                           filemodedlgimpl.cpp  -  description
                              -------------------
     begin                : Thu Jul 18 2002
-    copyright            : (C) 2002 by Jan Sch‰fer
+    copyright            : (C) 2002 by Jan Sch√§fer
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -30,7 +30,7 @@
 #define FILEMODEDLGIMPL_H
 
 /**
-  *@author Jan Sch‰fer
+  *@author Jan Sch√§fer
   */
 
 #include "filemodedlg.h"

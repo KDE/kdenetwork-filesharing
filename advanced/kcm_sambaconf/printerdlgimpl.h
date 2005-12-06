@@ -2,7 +2,7 @@
                          printerdlgimpl.h  -  description
                              -------------------
     begin                : Tue June 6 2002
-    copyright            : (C) 2002 by Jan Sch‰fer
+    copyright            : (C) 2002 by Jan Sch√§fer
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -31,7 +31,7 @@
 
 
 /**
- * @author Jan Sch‰fer
+ * @author Jan Sch√§fer
  **/
 
 #include "kcmprinterdlg.h"

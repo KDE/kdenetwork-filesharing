@@ -2,7 +2,7 @@
                           usertabimpl.h  -  description
                              -------------------
     begin                : Mon Jul 15 2002
-    copyright            : (C) 2002 by Jan Sch‰fer
+    copyright            : (C) 2002 by Jan Sch√§fer
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 
@@ -34,7 +34,7 @@
 #include "qstringlist.h"
 
 /**
-  *@author Jan Sch‰fer
+  *@author Jan Sch√§fer
   */
 
 class KListViewItem;

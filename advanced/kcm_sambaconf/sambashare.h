@@ -2,7 +2,7 @@
                           sambashare.h  -  description
                              -------------------
     begin                : Mon 12 2002
-    copyright            : (C) 2002 by Jan Sch‰fer
+    copyright            : (C) 2002 by Jan Sch√§fer
     email                : janschaefer@users.sourceforge.net
  ***************************************************************************/
 

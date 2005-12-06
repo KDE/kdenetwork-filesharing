@@ -4,7 +4,7 @@
     begin                : Mon Apr  8 13:35:56 CEST 2002
     copyright            : (C) 2002 by Christian Nitschkowski
     email                : segfault_ii@web.de
-    copyright            : (C) 2002-2003 by Jan Sch‰fer
+    copyright            : (C) 2002-2003 by Jan Sch√§fer
     email                : janschaefer@users.sourceforge.net
 ***************************************************************************/
 

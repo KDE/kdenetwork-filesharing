@@ -146,12 +146,10 @@ void NFSDialog::slotOk() {
 
 void NFSDialog::slotRemoveHost()
 {
-  Q3PtrList<Q3ListViewItem> items = m_gui->listView->selectedItems();
+  QList<Q3ListViewItem *> items = m_gui->listView->selectedItems();
   if (items.count()==0)
       return;
-  
-  Q3ListViewItem *item;
-  for ( item = items.first(); item; item = items.next() ) {
+  foreach ( Q3ListViewItem* item, items ) {
     QString name = item->text(0);
     m_gui->listView->takeItem(item);
     
@@ -172,15 +170,12 @@ void NFSDialog::slotRemoveHost()
 
 void NFSDialog::slotModifyHost()
 {
-  Q3PtrList<Q3ListViewItem> items = m_gui->listView->selectedItems();
+  QList<Q3ListViewItem*> items = m_gui->listView->selectedItems();
   if (items.count()==0)
       return;
   
   HostList hostList;
-  
-  Q3ListViewItem *item;
-  for ( item = items.first(); item; item = items.next() ) {
-  
+  foreach ( Q3ListViewItem* item, items ) {
     NFSHost* host = m_workEntry->getHostByName(item->text(0));
     if (host)
       hostList.append(host);
@@ -199,7 +194,7 @@ void NFSDialog::slotModifyHost()
   delete dlg;
 
   NFSHost* host = hostList.first();
-  for ( item = items.first(); item; item = items.next() ) {
+  foreach ( Q3ListViewItem* item, items ) {
       if (item && host)
           updateItem( item,host);
       host = hostList.next();

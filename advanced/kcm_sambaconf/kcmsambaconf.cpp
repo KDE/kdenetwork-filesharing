@@ -1171,14 +1171,12 @@ void KcmSambaConf::saveUserTab()
 
 void KcmSambaConf::addSambaUserBtnClicked()
 {
-  Q3PtrList<Q3ListViewItem> list = _interface->unixUsersListView->selectedItems();
+  QList<Q3ListViewItem*> list = _interface->unixUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  Q3ListViewItem* item;
-  for ( item = list.first(); item; item = list.first() )
-  {
+  foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
     QByteArray password;
@@ -1211,14 +1209,12 @@ void KcmSambaConf::addSambaUserBtnClicked()
 
 void KcmSambaConf::removeSambaUserBtnClicked()
 {
-  Q3PtrList<Q3ListViewItem> list = _interface->sambaUsersListView->selectedItems();
+  QList<Q3ListViewItem*> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  Q3ListViewItem* item;
-  for ( item = list.first(); item; item = list.first() )
-  {
+  foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );
     if (!passwd.removeUser(user))
     {
@@ -1234,14 +1230,12 @@ void KcmSambaConf::removeSambaUserBtnClicked()
 
 void KcmSambaConf::sambaUserPasswordBtnClicked()
 {
-  Q3PtrList<Q3ListViewItem> list = _interface->sambaUsersListView->selectedItems();
+  QList<Q3ListViewItem*> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
   SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
 
-  Q3ListViewItem* item;
-  for ( item = list.first(); item; item = list.next() )
-  {
+  foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );
     
     QByteArray password;

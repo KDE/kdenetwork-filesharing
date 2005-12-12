@@ -393,10 +393,9 @@ void KFileShareConfig::showShareDialog(const KFileItemList & files) {
 
 void KFileShareConfig::changeShareBtnClicked() {
   KFileItemList files;
-  Q3PtrList<Q3ListViewItem> items = m_ccgui->listView->selectedItems();
+  QList<Q3ListViewItem *> items = m_ccgui->listView->selectedItems();
   
-  Q3ListViewItem* item;
-  for ( item = items.first(); item; item = items.next() ) {
+  foreach ( Q3ListViewItem* item, items ) {
       files.append(new KFileItem(KURL(items.first()->text(0)),"",0));
   }
   
@@ -405,13 +404,12 @@ void KFileShareConfig::changeShareBtnClicked() {
 
 void KFileShareConfig::removeShareBtnClicked() {
   
-  Q3PtrList<Q3ListViewItem> items = m_ccgui->listView->selectedItems();
-  Q3ListViewItem *item;
+  QList<Q3ListViewItem*> items = m_ccgui->listView->selectedItems();
   
   bool nfs = false;
   bool samba = false;
-  
-  for ( item = items.first(); item; item = items.next() ) {
+
+  foreach ( Q3ListViewItem*item, items ) {
       
       if (KNFSShare::instance()->isDirectoryShared(item->text(0)))
           nfs = true;
@@ -424,7 +422,7 @@ void KFileShareConfig::removeShareBtnClicked() {
   if (nfs) {
     kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
     nfsFile.load();
-    for ( item = items.first(); item; item = items.next() ) {
+  	foreach ( Q3ListViewItem*item, items ) {
         nfsFile.removeEntryByPath(item->text(0));
     }
   }
@@ -433,7 +431,7 @@ void KFileShareConfig::removeShareBtnClicked() {
   if (samba) {
     kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;  
     smbFile.load();
-    for ( item = items.first(); item; item = items.next() ) {
+	foreach ( Q3ListViewItem*item, items ) {
         smbFile.removeShareByPath(item->text(0));
     }
   }    

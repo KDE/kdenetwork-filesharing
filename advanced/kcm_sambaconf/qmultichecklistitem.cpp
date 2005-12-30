@@ -31,7 +31,7 @@
 #include <q3vbox.h>  
 #include <q3header.h>
 //Added by qt3to4:
-#include <Q3PointArray>
+#include <QPolygon>
 
 #include <kdebug.h>
 #include <kmessagebox.h>
@@ -134,7 +134,7 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
     x++;
     y++;
     if ( checkStates.testBit(col) ) {
-      Q3PointArray a( 7*2 );
+      QPolygon a( 7*2 );
       int i, xx, yy;
       xx = x+1+marg;
       yy = y+5;

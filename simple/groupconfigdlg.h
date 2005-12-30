@@ -21,7 +21,7 @@
 #define GROUPCONFIGDLG_H
 
 #include <kdialogbase.h>
-#include <q3valuelist.h>
+
 #include <kuser.h>
 
 class GroupConfigGUI;

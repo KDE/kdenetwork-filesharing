@@ -232,8 +232,10 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
 
   int j=0;
 
-  for (KFileItemListIterator it(newone); (tmp = it.current()); ++it)
-  {
+  KFileItemList::const_iterator it = newone.begin();
+  const KFileItemList::const_iterator end = newone.end();
+  for ( ; it != end; ++it ) {
+	tmp = (*it);
     j++;
 
     bool hidden = matchHidden(tmp->text());

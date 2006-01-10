@@ -67,59 +67,58 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
     KCModule(ShareFactory::instance(), parent/*, name*/)
 {
-  KGlobal::locale()->insertCatalog("kfileshare");                            
+  KGlobal::locale()->insertCatalog("kfileshare");
 
   QBoxLayout* layout = new QVBoxLayout(this,0,
 				       KDialog::spacingHint());
 
-/*  
+/*
   QVButtonGroup *box = new QVButtonGroup( i18n("File Sharing"), this );
   box->layout()->setSpacing( KDialog::spacingHint() );
   layout->addWidget(box);
   noSharing=new QRadioButton( i18n("Do &not allow users to share files"), box );
   sharing=new QRadioButton( i18n("&Allow users to share files from their HOME folder"),  box);
 */
-   m_ccgui = new ControlCenterGUI(this);
-   connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
-   connect( m_ccgui->allowedUsersBtn, SIGNAL( clicked()), 
-            this, SLOT(allowedUsersBtnClicked()));
-   
+  m_ccgui = new ControlCenterGUI(this);
+  connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
+  connect( m_ccgui->allowedUsersBtn, SIGNAL( clicked()),
+           this, SLOT(allowedUsersBtnClicked()));
 
-   QString path = QString::fromLatin1("/usr/sbin");
-   QString sambaExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
-   QString nfsExec = KStandardDirs::findExe( QString::fromLatin1("rpc.nfsd"), path );
+  QString path = QString::fromLocal8Bit( getenv( "PATH" ) );
+  path += QString::fromLatin1( ":/usr/sbin" );
+  QString sambaExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
+  QString nfsExec = KStandardDirs::findExe( QString::fromLatin1("rpc.nfsd"), path );
 
-   
   if ( nfsExec.isEmpty() && sambaExec.isEmpty())
   {
       m_ccgui->setEnabled( false );
   }
   else
-  {   
+  {
       if (nfsExec.isEmpty()) {
         m_ccgui->nfsChk->setDisabled(true);
         m_ccgui->nfsChk->setChecked(false);
         QToolTip::add(m_ccgui->nfsChk,i18n("No NFS server installed on this system"));
-      } 
-      
+      }
+
       if (sambaExec.isEmpty()) {
         m_ccgui->sambaChk->setDisabled(true);
         m_ccgui->sambaChk->setChecked(false);
         QToolTip::add(m_ccgui->sambaChk,i18n("No Samba server installed on this system"));
       }
-          
-      m_ccgui->infoLbl->hide();      
+
+      m_ccgui->infoLbl->hide();
       layout->addWidget(m_ccgui);
       updateShareListView();
-      connect( KNFSShare::instance(), SIGNAL( changed()), 
+      connect( KNFSShare::instance(), SIGNAL( changed()),
                this, SLOT(updateShareListView()));
-      connect( KSambaShare::instance(), SIGNAL( changed()), 
+      connect( KSambaShare::instance(), SIGNAL( changed()),
                this, SLOT(updateShareListView()));
 
-               
+
   }
-  
-  if((getuid() == 0) || 
+
+  if((getuid() == 0) ||
      ((KFileShare::shareMode() == KFileShare::Advanced) &&
       (KFileShare::authorization() == KFileShare::Authorized)))
   {
@@ -129,12 +128,12 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
                this, SLOT(changeShareBtnClicked()));
       connect( m_ccgui->removeShareBtn, SIGNAL(clicked()),
                this, SLOT(removeShareBtnClicked()));
-      m_ccgui->listView->setSelectionMode(Q3ListView::Extended);       
-      m_ccgui->shareBtnPnl->setEnabled(true);        
+      m_ccgui->listView->setSelectionMode(Q3ListView::Extended);
+      m_ccgui->shareBtnPnl->setEnabled(true);
   }
-  
-  
-  if (getuid()==0) {               
+
+
+  if (getuid()==0) {
       setButtons(Help|Apply);
   } else {
       setButtons(Help);
@@ -144,44 +143,44 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
   load();
 }
 
-void KFileShareConfig::updateShareListView() 
+void KFileShareConfig::updateShareListView()
 {
       m_ccgui->listView->clear();
       KNFSShare* nfs = KNFSShare::instance();
       KSambaShare* samba = KSambaShare::instance();
-      
+
       QStringList dirs = nfs->sharedDirectories();
       QStringList sambaDirs = samba->sharedDirectories();
-      
+
       for ( QStringList::ConstIterator it = sambaDirs.begin(); it != sambaDirs.end(); ++it ) {
         // Do not insert duplicates
         if (nfs->isDirectoryShared(*it))
             continue;
-            
-        dirs += *it;            
+
+        dirs += *it;
       }
 
       QPixmap folderPix = SmallIcon("folder",0,KIcon::ShareOverlay);
       QPixmap okPix = SmallIcon("button_ok");
       QPixmap cancelPix = SmallIcon("button_cancel");
-      
+
       for ( QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
         KListViewItem* item = new KListViewItem(m_ccgui->listView);
         item->setText(0,*it);
         item->setPixmap(0, folderPix);
-        
+
         if (samba->isDirectoryShared(*it))
           item->setPixmap(1,okPix);
-        else 
+        else
           item->setPixmap(1,cancelPix);
-          
+
         if (nfs->isDirectoryShared(*it))
           item->setPixmap(2,okPix);
-        else          
+        else
           item->setPixmap(2,cancelPix);
 
       }
-      
+
 }
 
 void KFileShareConfig::allowedUsersBtnClicked() {
@@ -190,9 +189,9 @@ void KFileShareConfig::allowedUsersBtnClicked() {
   if (dlg.exec() == QDialog::Accepted) {
       m_fileShareGroup = dlg.fileShareGroup().name();
       m_restricted = dlg.restricted();
-      m_rootPassNeeded = dlg.rootPassNeeded();      
+      m_rootPassNeeded = dlg.rootPassNeeded();
       configChanged();
-  }      
+  }
 
 }
 
@@ -202,24 +201,24 @@ void KFileShareConfig::load()
     KSimpleConfig config(QString::fromLatin1(FILESHARECONF),true);
 
     m_ccgui->shareGrp->setChecked( config.readEntry("FILESHARING", "yes") == "yes" );
-    
+
     m_restricted = config.readEntry("RESTRICT", "yes") == "yes";
-    
+
     if (config.readEntry("SHARINGMODE", "simple") == "simple")
         m_ccgui->simpleRadio->setChecked(true);
-    else        
+    else
         m_ccgui->advancedRadio->setChecked(true);
-          
+
     m_fileShareGroup = config.readEntry("FILESHAREGROUP", "fileshare");
 
-    m_ccgui->sambaChk->setChecked( 
+    m_ccgui->sambaChk->setChecked(
           config.readEntry("SAMBA", "yes") == "yes");
 
-    m_ccgui->nfsChk->setChecked( 
+    m_ccgui->nfsChk->setChecked(
           config.readEntry("NFS", "yes") == "yes");
 
     m_rootPassNeeded = config.readEntry("ROOTPASSNEEDED", "yes") == "yes";
-                    
+
     m_smbConf = KSambaShare::instance()->smbConfPath();
 }
 
@@ -228,20 +227,20 @@ bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
   chgrp << "chgrp" << m_fileShareGroup << file;
   KProcess chmod;
   chmod << "chmod" << "g=rw" << file;
-  
+
   if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
       kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
       return false;
-      
-  }      
-      
+
+  }
+
   if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
       kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
       return false;
   }
-  
+
   return true;
-  
+
 }
 
 bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
@@ -249,20 +248,20 @@ bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
   chgrp << "chgrp" << "root" << file;
   KProcess chmod;
   chmod << "chmod" << "g=r" << file;
-  
+
   if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
       kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
       return false;
-      
-  }      
-      
+
+  }
+
   if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
       kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
       return false;
   }
-  
+
   return true;
-}  
+}
 
 
 bool KFileShareConfig::setGroupAccesses() {
@@ -270,12 +269,12 @@ bool KFileShareConfig::setGroupAccesses() {
       if (!removeGroupAccessesFromFile(KSambaShare::instance()->smbConfPath()))
           return false;
   }
-  
-  if (m_rootPassNeeded || ! m_ccgui->nfsChk->isChecked()) {          
+
+  if (m_rootPassNeeded || ! m_ccgui->nfsChk->isChecked()) {
       if (!removeGroupAccessesFromFile(KNFSShare::instance()->exportsPath()))
           return false;
   }
-  
+
   if (! m_rootPassNeeded && m_ccgui->sambaChk->isChecked()) {
       if (!addGroupAccessesToFile(KSambaShare::instance()->smbConfPath()))
           return false;
@@ -285,7 +284,7 @@ bool KFileShareConfig::setGroupAccesses() {
       if (!addGroupAccessesToFile(KNFSShare::instance()->exportsPath()))
           return false;
   }
-  
+
 
   return true;
 }
@@ -300,41 +299,41 @@ void KFileShareConfig::save()
 
     QFile file(FILESHARECONF);
     if ( ! file.open(QIODevice::WriteOnly)) {
-        KMessageBox::detailedError(this, 
+        KMessageBox::detailedError(this,
             i18n("Could not save settings."),
             i18n("Could not open file '%1' for writing: %2").arg(FILESHARECONF).arg(
              file.errorString() ),
             i18n("Saving Failed"));
         return;
-    }        
-        
-    
+    }
+
+
     QTextStream stream(&file);
-    
+
     stream << "FILESHARING=";
-    stream << (m_ccgui->shareGrp->isChecked() ? "yes" : "no");        
-    
+    stream << (m_ccgui->shareGrp->isChecked() ? "yes" : "no");
+
     stream << "\nRESTRICT=";
-    stream << (m_restricted ? "yes" : "no");        
-        
+    stream << (m_restricted ? "yes" : "no");
+
     stream << "\nSHARINGMODE=";
-    stream << (m_ccgui->simpleRadio->isChecked() ? "simple" : "advanced");        
+    stream << (m_ccgui->simpleRadio->isChecked() ? "simple" : "advanced");
 
     stream << "\nFILESHAREGROUP=";
-    stream << m_fileShareGroup;    
-    
+    stream << m_fileShareGroup;
+
     stream << "\nSAMBA=";
-    stream << (m_ccgui->sambaChk->isChecked() ? "yes" : "no");        
-        
+    stream << (m_ccgui->sambaChk->isChecked() ? "yes" : "no");
+
     stream << "\nNFS=";
-    stream << (m_ccgui->nfsChk->isChecked() ? "yes" : "no");        
-                
+    stream << (m_ccgui->nfsChk->isChecked() ? "yes" : "no");
+
     stream << "\nROOTPASSNEEDED=";
-    stream << (m_rootPassNeeded ? "yes" : "no");        
-    
+    stream << (m_rootPassNeeded ? "yes" : "no");
+
     stream << "\nSMBCONF=";
     stream << m_smbConf;
-    
+
     file.close();
 }
 
@@ -362,9 +361,9 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
                 i18n("Share Folder"), Ok|Cancel, Ok, true)
 {
   KVBox* vbox = makeVBoxMainWidget();
-  
+
   m_page = new PropertiesPage(vbox,files,true);
-}  
+}
 
 bool PropertiesPageDlg::hasChanged() {
   return m_page->hasChanged();
@@ -382,38 +381,38 @@ void PropertiesPageDlg::slotOk() {
 
 
 void KFileShareConfig::showShareDialog(const KFileItemList & files) {
-  PropertiesPageDlg* dlg = new PropertiesPageDlg(this,files);              
+  PropertiesPageDlg* dlg = new PropertiesPageDlg(this,files);
   if (dlg->exec() == QDialog::Accepted) {
     if ( dlg->hasChanged() ) {
          updateShareListView();
     }
-  }  
+  }
   delete dlg;
 }
 
 void KFileShareConfig::changeShareBtnClicked() {
   KFileItemList files;
   QList<Q3ListViewItem *> items = m_ccgui->listView->selectedItems();
-  
+
   foreach ( Q3ListViewItem* item, items ) {
       files.append(new KFileItem(KURL(items.first()->text(0)),"",0));
   }
-  
+
   showShareDialog(files);
 }
 
 void KFileShareConfig::removeShareBtnClicked() {
-  
+
   QList<Q3ListViewItem*> items = m_ccgui->listView->selectedItems();
-  
+
   bool nfs = false;
   bool samba = false;
 
   foreach ( Q3ListViewItem*item, items ) {
-      
+
       if (KNFSShare::instance()->isDirectoryShared(item->text(0)))
           nfs = true;
-  
+
       if (KSambaShare::instance()->isDirectoryShared(item->text(0)))
           samba = true;
   }
@@ -426,18 +425,18 @@ void KFileShareConfig::removeShareBtnClicked() {
         nfsFile.removeEntryByPath(item->text(0));
     }
   }
-  
+
   SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
   if (samba) {
-    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;  
+    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;
     smbFile.load();
 	foreach ( Q3ListViewItem*item, items ) {
         smbFile.removeShareByPath(item->text(0));
     }
-  }    
+  }
 
   PropertiesPage::save(&nfsFile, &smbFile, nfs,samba);
-    
+
   updateShareListView();
 }
 

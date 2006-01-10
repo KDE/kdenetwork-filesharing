@@ -75,17 +75,16 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
   noSharing=new QRadioButton( i18n("Do &not allow users to share files"), box );
   sharing=new QRadioButton( i18n("&Allow users to share files from their HOME folder"),  box);
 */
-   m_ccgui = new ControlCenterGUI(this);
-   connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
-   connect( m_ccgui->allowedUsersBtn, SIGNAL( clicked()), 
-            this, SLOT(allowedUsersBtnClicked()));
-   
+  m_ccgui = new ControlCenterGUI(this);
+  connect( m_ccgui, SIGNAL( changed()), this, SLOT(configChanged()));
+  connect( m_ccgui->allowedUsersBtn, SIGNAL( clicked()), 
+           this, SLOT(allowedUsersBtnClicked()));
 
-   QString path = QString::fromLatin1("/usr/sbin");
-   QString sambaExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
-   QString nfsExec = KStandardDirs::findExe( QString::fromLatin1("rpc.nfsd"), path );
+  QString path = QString::fromLocal8Bit( getenv( "PATH" ) );
+  path += QString::fromLatin1(":/usr/sbin");
+  QString sambaExec = KStandardDirs::findExe( QString::fromLatin1("smbd"), path );
+  QString nfsExec = KStandardDirs::findExe( QString::fromLatin1("rpc.nfsd"), path );
 
-   
   if ( nfsExec.isEmpty() && sambaExec.isEmpty())
   {
       m_ccgui->setEnabled( false );

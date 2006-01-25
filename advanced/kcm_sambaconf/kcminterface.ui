@@ -120,7 +120,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <cstring>configUrlRq</cstring>
                                 </property>
                             </widget>
-                            <widget class="KURLRequester">
+                            <widget class="KUrlRequester">
                                 <property name="name">
                                     <cstring>configUrlRq</cstring>
                                 </property>
@@ -588,9 +588,9 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <set>Qt::AlignVCenter</set>
                                 </property>
                             </widget>
-                            <widget class="KURLLabel">
+                            <widget class="KUrlLabel">
                                 <property name="name">
-                                    <cstring>KURLLabel1</cstring>
+                                    <cstring>KUrlLabel1</cstring>
                                 </property>
                                 <property name="sizePolicy">
                                     <sizepolicy>
@@ -1724,7 +1724,7 @@ Only change something if you know what you are doing.</string>
                                                             </size>
                                                         </property>
                                                     </spacer>
-                                                    <widget class="KURLRequester" row="4" column="1" rowspan="1" colspan="3">
+                                                    <widget class="KUrlRequester" row="4" column="1" rowspan="1" colspan="3">
                                                         <property name="name">
                                                             <cstring>hostsEquivUrlRq</cstring>
                                                         </property>
@@ -1749,7 +1749,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>privateDirUrlRq</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="KURLRequester" row="5" column="1" rowspan="1" colspan="3">
+                                                    <widget class="KUrlRequester" row="5" column="1" rowspan="1" colspan="3">
                                                         <property name="name">
                                                             <cstring>privateDirUrlRq</cstring>
                                                         </property>
@@ -1874,7 +1874,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>smbPasswdFileUrlRq</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="KURLRequester" row="1" column="1" rowspan="1" colspan="3">
+                                                    <widget class="KUrlRequester" row="1" column="1" rowspan="1" colspan="3">
                                                         <property name="name">
                                                             <cstring>smbPasswdFileUrlRq</cstring>
                                                         </property>
@@ -2139,7 +2139,7 @@ Only change something if you know what you are doing.</string>
                                                             <cstring>passwdProgramUrlRq</cstring>
                                                         </property>
                                                     </widget>
-                                                    <widget class="KURLRequester" row="0" column="1">
+                                                    <widget class="KUrlRequester" row="0" column="1">
                                                         <property name="name">
                                                             <cstring>passwdProgramUrlRq</cstring>
                                                         </property>
@@ -2196,7 +2196,7 @@ Only change something if you know what you are doing.</string>
                                                     <cstring>usernameMapUrlRq</cstring>
                                                 </property>
                                             </widget>
-                                            <widget class="KURLRequester" row="1" column="1" rowspan="1" colspan="2">
+                                            <widget class="KUrlRequester" row="1" column="1" rowspan="1" colspan="2">
                                                 <property name="name">
                                                     <cstring>usernameMapUrlRq</cstring>
                                                 </property>
@@ -2696,7 +2696,7 @@ Only change something if you know what you are doing.</string>
                                                         <cstring>logFileUrlRq</cstring>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="0" column="1" rowspan="1" colspan="3">
+                                                <widget class="KUrlRequester" row="0" column="1" rowspan="1" colspan="3">
                                                     <property name="name">
                                                         <cstring>logFileUrlRq</cstring>
                                                     </property>
@@ -3541,12 +3541,12 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>printcapNameUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="0" column="1">
+                                        <widget class="KUrlRequester" row="0" column="1">
                                             <property name="name">
                                                 <cstring>printcapNameUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="1" column="1">
+                                        <widget class="KUrlRequester" row="1" column="1">
                                             <property name="name">
                                                 <cstring>os2DriverMapUrlRq</cstring>
                                             </property>
@@ -3567,7 +3567,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>printerDriverFileUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="2" column="1">
+                                        <widget class="KUrlRequester" row="2" column="1">
                                             <property name="name">
                                                 <cstring>printerDriverFileUrlRq</cstring>
                                             </property>
@@ -4474,7 +4474,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>lockDirectoryUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="0" column="1">
+                                        <widget class="KUrlRequester" row="0" column="1">
                                             <property name="name">
                                                 <cstring>lockDirectoryUrlRq</cstring>
                                             </property>
@@ -4490,7 +4490,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>pidDirectoryUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="1" column="1">
+                                        <widget class="KUrlRequester" row="1" column="1">
                                             <property name="name">
                                                 <cstring>pidDirectoryUrlRq</cstring>
                                             </property>
@@ -4837,7 +4837,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>validCharsEdit</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="2" column="1">
+                                        <widget class="KUrlRequester" row="2" column="1">
                                             <property name="name">
                                                 <cstring>codePageDirUrlRq</cstring>
                                             </property>
@@ -5224,7 +5224,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>logonPathUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="3" column="1">
+                                        <widget class="KUrlRequester" row="3" column="1">
                                             <property name="name">
                                                 <cstring>logonHomeUrlRq</cstring>
                                             </property>
@@ -5256,7 +5256,7 @@ Only change something if you know what you are doing.</string>
                                                 <cstring>logonDriveEdit</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="2" column="1">
+                                        <widget class="KUrlRequester" row="2" column="1">
                                             <property name="name">
                                                 <cstring>logonPathUrlRq</cstring>
                                             </property>
@@ -5604,7 +5604,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <property name="spacing">
                                                             <number>6</number>
                                                         </property>
-                                                        <widget class="KURLRequester">
+                                                        <widget class="KUrlRequester">
                                                             <property name="name">
                                                                 <cstring>sslEntropyFileUrlRq</cstring>
                                                             </property>
@@ -5635,7 +5635,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>sslHostsResignEdit</cstring>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="3" column="1">
+                                                <widget class="KUrlRequester" row="3" column="1">
                                                     <property name="name">
                                                         <cstring>sslCACertDirUrlRq</cstring>
                                                     </property>
@@ -5749,7 +5749,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>sslCACertDirUrlRq</cstring>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="4" column="1">
+                                                <widget class="KUrlRequester" row="4" column="1">
                                                     <property name="name">
                                                         <cstring>sslCACertFileUrlRq</cstring>
                                                     </property>
@@ -5819,7 +5819,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <property name="spacing">
                                                     <number>6</number>
                                                 </property>
-                                                <widget class="KURLRequester" row="1" column="3">
+                                                <widget class="KUrlRequester" row="1" column="3">
                                                     <property name="name">
                                                         <cstring>sslClientCertUrlRq</cstring>
                                                     </property>
@@ -5851,7 +5851,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <string>SSL re&amp;quire servercert</string>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="2" column="3">
+                                                <widget class="KUrlRequester" row="2" column="3">
                                                     <property name="name">
                                                         <cstring>sslClientKeyUrlRq</cstring>
                                                     </property>
@@ -5878,12 +5878,12 @@ This is only available if the SSL libraries have been compiled on your system an
                                                         <cstring>sslClientCertUrlRq</cstring>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="1" column="1">
+                                                <widget class="KUrlRequester" row="1" column="1">
                                                     <property name="name">
                                                         <cstring>sslServerCertUrlRq</cstring>
                                                     </property>
                                                 </widget>
-                                                <widget class="KURLRequester" row="2" column="1">
+                                                <widget class="KUrlRequester" row="2" column="1">
                                                     <property name="name">
                                                         <cstring>sslServerKeyUrlRq</cstring>
                                                     </property>
@@ -7723,7 +7723,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>utmpDirectoryUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="2" column="1">
+                                        <widget class="KUrlRequester" row="2" column="1">
                                             <property name="name">
                                                 <cstring>wtmpDirectoryUrlRq</cstring>
                                             </property>
@@ -7739,7 +7739,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <cstring>wtmpDirectoryUrlRq</cstring>
                                             </property>
                                         </widget>
-                                        <widget class="KURLRequester" row="1" column="1">
+                                        <widget class="KUrlRequester" row="1" column="1">
                                             <property name="name">
                                                 <cstring>utmpDirectoryUrlRq</cstring>
                                             </property>
@@ -7867,10 +7867,10 @@ This is only available if the SSL libraries have been compiled on your system an
         <slot>animateClick()</slot>
     </connection>
     <connection>
-        <sender>KURLLabel1</sender>
+        <sender>KUrlLabel1</sender>
         <signal>leftClickedURL()</signal>
         <receiver>KcmInterface</receiver>
-        <slot>KURLLabel1_leftClickedURL()</slot>
+        <slot>KUrlLabel1_leftClickedURL()</slot>
     </connection>
     <connection>
         <sender>serverRadio</sender>
@@ -8451,7 +8451,7 @@ This is only available if the SSL libraries have been compiled on your system an
     <slot>serverRadio_clicked()</slot>
     <slot>domainRadio_clicked()</slot>
     <slot>adsRadioClicked()</slot>
-    <slot>KURLLabel1_leftClickedURL()</slot>
+    <slot>KUrlLabel1_leftClickedURL()</slot>
     <slot>lmAnnounceCombo_activated( int i )</slot>
     <slot>allowGuestLoginsChk_toggled( bool b )</slot>
     <slot>mapToGuestCombo_activated( int i )</slot>

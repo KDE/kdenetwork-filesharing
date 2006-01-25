@@ -105,7 +105,7 @@ void KcmInterface::adsRadioClicked()
 
 
 
-void KcmInterface::KURLLabel1_leftClickedURL()
+void KcmInterface::KUrlLabel1_leftClickedURL()
 {
     KProcess* p = new KProcess();
     

@@ -77,7 +77,7 @@ void DictManager::add(const QString & key, QCheckBox* checkBox){
     handleUnsupportedWidget(key,checkBox);
 }
 
-void DictManager::add(const QString & key, KURLRequester* urlRq){
+void DictManager::add(const QString & key, KUrlRequester* urlRq){
   if (_share->optionSupported(key)) {
     urlRequesterDict.insert(key,urlRq);
     connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
@@ -116,7 +116,7 @@ void DictManager::load(SambaShare* share, bool globalValue, bool defaultValue){
     lineEditIt.current()->setText(share->getValue(lineEditIt.currentKey(),globalValue,defaultValue));
   }
 
-  Q3DictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
+  Q3DictIterator<KUrlRequester> urlRequesterIt( urlRequesterDict ); 
  
   for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
     urlRequesterIt.current()->setURL(share->getValue(urlRequesterIt.currentKey(),globalValue,defaultValue));
@@ -182,7 +182,7 @@ void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
     share->setValue(lineEditIt.currentKey(),lineEditIt.current()->text(), globalValue, defaultValue );
   }
 
-  Q3DictIterator<KURLRequester> urlRequesterIt( urlRequesterDict ); 
+  Q3DictIterator<KUrlRequester> urlRequesterIt( urlRequesterDict ); 
  
   for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
     share->setValue(urlRequesterIt.currentKey(),urlRequesterIt.current()->url(), globalValue, defaultValue );

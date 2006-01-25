@@ -33,7 +33,7 @@
 
 #include <kurl.h>
 #include <kdebug.h>
-#include <kpassdlg.h>
+#include <kpassworddialog.h>
 #include <klocale.h>
 #include <kprocess.h>
 

@@ -50,7 +50,7 @@ Q_OBJECT
     
     void add(const QString &, QLineEdit*);
     void add(const QString &, QCheckBox*);
-    void add(const QString &, KURLRequester*);
+    void add(const QString &, KUrlRequester*);
     void add(const QString &, QSpinBox*);
     void add(const QString &, QComboBox*, QStringList*);
               
@@ -60,7 +60,7 @@ Q_OBJECT
   protected :
     Q3Dict<QLineEdit> lineEditDict;
     Q3Dict<QCheckBox> checkBoxDict;
-    Q3Dict<KURLRequester> urlRequesterDict;
+    Q3Dict<KUrlRequester> urlRequesterDict;
     Q3Dict<QSpinBox> spinBoxDict;
     Q3Dict<QComboBox> comboBoxDict;
     Q3Dict<QStringList> comboBoxValuesDict;

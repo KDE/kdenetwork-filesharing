@@ -80,10 +80,10 @@ class SmbPasswdFile : public QObject
 Q_OBJECT
 public: 
   SmbPasswdFile();
-	SmbPasswdFile(const KURL &);
+	SmbPasswdFile(const KUrl &);
 	~SmbPasswdFile();
 
-  void setUrl(const KURL &);
+  void setUrl(const KUrl &);
   
   /**
    * Returns a list of all users stored in
@@ -131,9 +131,9 @@ public:
    * If there is no entry in the [global] section
    * it tries to guess the location.
    **/
-  static KURL getUrlFromSambaFile(const SambaFile *file);
+  static KUrl getUrlFromSambaFile(const SambaFile *file);
 protected:
-  KURL _url;
+  KUrl _url;
   QString _smbpasswdOutput;
 
 protected slots:

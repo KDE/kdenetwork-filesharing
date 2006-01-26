@@ -104,7 +104,7 @@ void PropertiesPage::urlRqTextChanged(const QString&) {
   if (!m_enterUrl)
       return;
       
-  KURL url(urlRq->url());
+  KUrl url(urlRq->url());
   if (url.isLocalFile()) {
       QFileInfo info(url.path(1));
       if (info.exists() &&
@@ -271,7 +271,7 @@ bool PropertiesPage::checkURL() {
   
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: enterUrl=true" << endl;
   
-  KURL url(urlRq->url());      
+  KUrl url(urlRq->url());      
   QString path = url.path(1);        
   
   kdDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: m_path='" 

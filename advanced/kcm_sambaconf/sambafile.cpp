@@ -110,7 +110,7 @@ bool SambaFile::isRemoteFile() {
 QString SambaFile::findShareByPath(const QString & path) const
 {
   Q3DictIterator<SambaShare> it(*_sambaConfig);
-  KURL url(path);
+  KUrl url(path);
   url.adjustPath(-1);
 
   for (  ; it.current(); ++it )
@@ -119,7 +119,7 @@ QString SambaFile::findShareByPath(const QString & path) const
 
     QString *s = share->find("path");
     if (s) {
-        KURL curUrl(*s);
+        KUrl curUrl(*s);
         curUrl.adjustPath(-1);
 
         kdDebug(5009) << url.path() << " =? " << curUrl.path() << endl;
@@ -169,7 +169,7 @@ bool SambaFile::slotApply()
   }
 
   QFileInfo fi(path);
-  KURL url(path);
+  KUrl url(path);
 
   if (KURL(path).isLocalFile()) {
     KProcess proc;
@@ -198,7 +198,7 @@ bool SambaFile::slotApply()
   } else {
     kdDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
     _tempFile->setAutoDelete(true);
-    KURL srcURL;
+    KUrl srcURL;
     srcURL.setPath( _tempFile->name() );
 
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
@@ -483,12 +483,12 @@ bool SambaFile::load()
       return false;
       
   kdDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path << endl;
-  KURL url(path);
+  KUrl url(path);
 
   if (!url.isLocalFile()) {
     KTempFile tempFile;
     localPath = tempFile.name();
-    KURL destURL;
+    KUrl destURL;
     destURL.setPath( localPath );
     KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, true, false, true );
 //    emit started( d->m_job );

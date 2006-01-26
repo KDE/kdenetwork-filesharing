@@ -60,7 +60,7 @@ SmbPasswdFile::SmbPasswdFile() {
 }
 
 
-SmbPasswdFile::SmbPasswdFile(const KURL & url)
+SmbPasswdFile::SmbPasswdFile(const KUrl & url)
 {
   setUrl(url);
 }
@@ -69,7 +69,7 @@ SmbPasswdFile::~SmbPasswdFile()
 {
 }
 
-void SmbPasswdFile::setUrl(const KURL & url) {
+void SmbPasswdFile::setUrl(const KUrl & url) {
   _url = url;
 }
 
@@ -186,7 +186,7 @@ void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen
  * If there is no entry in the [global] section
  * it tries to guess the location.
  **/
-KURL SmbPasswdFile::getUrlFromSambaFile(const SambaFile * /*file*/)
+KUrl SmbPasswdFile::getUrlFromSambaFile(const SambaFile * /*file*/)
 {
   kdWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!" << endl;
   return KURL("");

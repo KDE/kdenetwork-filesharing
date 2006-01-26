@@ -34,7 +34,7 @@ class QTextStream;
 
 class NFSFile {
 public:
-  NFSFile(const KURL & , bool readonly = true);
+  NFSFile(const KUrl & , bool readonly = true);
   ~NFSFile();
 
   void addEntry(NFSEntry *);
@@ -53,7 +53,7 @@ public:
 
 
 protected:
-  KURL _url;
+  KUrl _url;
   bool _readonly;
   EntryList _entries;
   NFSLineList _lines;

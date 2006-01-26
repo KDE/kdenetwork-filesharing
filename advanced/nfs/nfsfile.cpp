@@ -35,7 +35,7 @@
 
 #include "nfsfile.h"
 
-NFSFile::NFSFile(const KURL & url, bool readonly)
+NFSFile::NFSFile(const KUrl & url, bool readonly)
 {
   _lines.setAutoDelete(true);
   _entries.setAutoDelete(false);

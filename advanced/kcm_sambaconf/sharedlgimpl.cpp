@@ -86,7 +86,7 @@ ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")
 {
   if (!share) {
-    kdWarning() << "ShareDlgImpl::Constructor : share parameter is null!" << endl;
+    kWarning() << "ShareDlgImpl::Constructor : share parameter is null!" << endl;
     return;    
   }
   
@@ -419,7 +419,7 @@ void ShareDlgImpl::homeChkToggled(bool b)
 void ShareDlgImpl::accessModifierBtnClicked()
 {
   if (!QObject::sender()) {
-    kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : QObject::sender() is null!" << endl;
+    kWarning() << "ShareDlgImpl::accessModifierBtnClicked() : QObject::sender() is null!" << endl;
     return;
   }
   
@@ -453,7 +453,7 @@ void ShareDlgImpl::accessModifierBtnClicked()
      edit = directorySecurityMaskEdit;
 
   if (!edit) {
-    kdWarning() << "ShareDlgImpl::accessModifierBtnClicked() : edit is null! name=" << name << endl;
+    kWarning() << "ShareDlgImpl::accessModifierBtnClicked() : edit is null! name=" << name << endl;
     return;
   }
   
@@ -464,7 +464,7 @@ void ShareDlgImpl::accessModifierBtnClicked()
 
 void ShareDlgImpl::changedSlot() {
   m_changed = true;
-  kdDebug(5009) << "ShareDlgImpl::changedSlot()" << endl;
+  kDebug(5009) << "ShareDlgImpl::changedSlot()" << endl;
   emit changed();
 }
 

@@ -52,7 +52,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
   KGlobal::locale()->insertCatalog("kfileshare");                            
                             
   if (KFileShare::shareMode() == KFileShare::Simple) {     
-      kdDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;
+      kDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;
       return;
   }   
   
@@ -94,7 +94,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
   connect(d->page, SIGNAL(changed()), 
           this, SIGNAL(changed()));
   
-  kdDebug(5009) << "Fileshare properties dialog plugin loaded" << endl;
+  kDebug(5009) << "Fileshare properties dialog plugin loaded" << endl;
   
 }                            
 

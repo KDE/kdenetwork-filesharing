@@ -102,7 +102,7 @@ bool NFSFile::load()
   QFile f(_url.path());
 
   if ( !f.open(QIODevice::ReadOnly) ) {
-    kdError() << "NFSFile::load: Could not open " << _url.path() << endl;
+    kError() << "NFSFile::load: Could not open " << _url.path() << endl;
     return false;
   }
   
@@ -153,7 +153,7 @@ bool NFSFile::load()
     if ( completeLine[0] == '"' ) {
       int i = completeLine.find('"',1);
       if (i == -1) {
-        kdError() << "NFSFile: Parse error: Missing quotation mark: " 
+        kError() << "NFSFile: Parse error: Missing quotation mark: " 
                   << completeLine << endl;   
         continue;
       }
@@ -177,7 +177,7 @@ bool NFSFile::load()
     if ( path[path.length()-1] != '/' )
             path += '/';
     
-    kdDebug(5009) << "KNFSShare: Found path: '" << path << "'" << endl;
+    kDebug(5009) << "KNFSShare: Found path: '" << path << "'" << endl;
     NFSEntry *entry = new NFSEntry(path);
     QStringList hostList = QStringList::split(' ', hosts);
     
@@ -189,12 +189,12 @@ bool NFSFile::load()
       for ( it = hostList.begin(); it != hostList.end(); ++it ) {
          NFSHost* host = new NFSHost((*it).trimmed());          
          entry->addHost(host);
-         kdDebug(5009) << "KNFSShare: Found host: " << (*it) << " name='"
+         kDebug(5009) << "KNFSShare: Found host: " << (*it) << " name='"
                   << host->name << "'" << endl;
       }          
     }
     
-    kdDebug(5009) << "KNFSShare: Found hosts: " << hosts << "'" << endl;
+    kDebug(5009) << "KNFSShare: Found hosts: " << hosts << "'" << endl;
     this->addEntry(entry);
   }
 

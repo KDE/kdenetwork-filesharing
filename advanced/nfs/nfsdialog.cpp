@@ -49,7 +49,7 @@ NFSDialog::NFSDialog(QWidget * parent, NFSEntry* entry)
   if (m_nfsEntry) 
       m_workEntry = m_nfsEntry->copy();
   else
-      kdWarning() << "NFSDialog::NFSDialog: entry is null!" << endl;
+      kWarning() << "NFSDialog::NFSDialog: entry is null!" << endl;
             
   initGUI();
   initSlots();
@@ -157,7 +157,7 @@ void NFSDialog::slotRemoveHost()
     if (host) {
       m_workEntry->removeHost(host);
     } else {
-      kdWarning() << "NFSDialog::slotRemoveHost: no host " 
+      kWarning() << "NFSDialog::slotRemoveHost: no host " 
                   << name << " << found!" << endl;
     }
       
@@ -180,7 +180,7 @@ void NFSDialog::slotModifyHost()
     if (host)
       hostList.append(host);
     else
-      kdWarning() << "NFSDialog::slogModifyHost: host " 
+      kWarning() << "NFSDialog::slogModifyHost: host " 
                   << item->text(0) << " is null!" << endl;     
   }
   

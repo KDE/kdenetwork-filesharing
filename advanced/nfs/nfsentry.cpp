@@ -38,7 +38,7 @@ NFSHost::NFSHost(const QString & hostString)
   else
     name = s;
     
-  kdDebug(5009) << "NFSHost: name='" << name << "'" << endl;    
+  kDebug(5009) << "NFSHost: name='" << name << "'" << endl;    
   
   if (l>=0 && r>=0)
   {
@@ -257,10 +257,10 @@ void NFSHost::setParam(const QString & s)
   if (i>-1)
   {
      QString name = p.left(i).lower();
-     kdDebug(5009) << name << endl;
+     kDebug(5009) << name << endl;
 
      QString value = p.mid(i+1);
-     kdDebug(5009) << value << endl;
+     kDebug(5009) << value << endl;
 
     if (name=="anongid")
        anongid = value.toInt();

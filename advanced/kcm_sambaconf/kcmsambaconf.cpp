@@ -503,7 +503,7 @@ void KcmSambaConf::loadBtnClicked() {
 
 void KcmSambaConf::load(const QString & smbFile) 
 {
-  kdDebug(5009) << "loading " << smbFile << endl;
+  kDebug(5009) << "loading " << smbFile << endl;
   _smbconf = smbFile;
 
   if (_sambaFile)
@@ -1266,7 +1266,7 @@ void KcmSambaConf::save() {
   SambaShare *share = _sambaFile->getShare("global");
   assert(share);
 
-  kdDebug(5009) << "saving ... " << endl;
+  kDebug(5009) << "saving ... " << endl;
 
   // Base settings
 

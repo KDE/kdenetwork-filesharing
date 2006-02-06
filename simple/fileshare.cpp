@@ -229,13 +229,13 @@ bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
   chmod << "chmod" << "g=rw" << file;
 
   if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
-      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
       return false;
 
   }
 
   if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
-      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
       return false;
   }
 
@@ -250,13 +250,13 @@ bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
   chmod << "chmod" << "g=r" << file;
 
   if (!chgrp.start(KProcess::Block) && chgrp.normalExit()) {
-      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
       return false;
 
   }
 
   if(!chmod.start(KProcess::Block) && chmod.normalExit()) {
-      kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
       return false;
   }
 
@@ -419,7 +419,7 @@ void KFileShareConfig::removeShareBtnClicked() {
 
   NFSFile nfsFile(KNFSShare::instance()->exportsPath());
   if (nfs) {
-    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
+    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
     nfsFile.load();
   	foreach ( Q3ListViewItem*item, items ) {
         nfsFile.removeEntryByPath(item->text(0));
@@ -428,7 +428,7 @@ void KFileShareConfig::removeShareBtnClicked() {
 
   SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
   if (samba) {
-    kdDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;
+    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;
     smbFile.load();
 	foreach ( Q3ListViewItem*item, items ) {
         smbFile.removeShareByPath(item->text(0));

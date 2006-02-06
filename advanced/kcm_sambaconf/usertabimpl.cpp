@@ -63,7 +63,7 @@ UserTabImpl::UserTabImpl(QWidget* parent, SambaShare* share)
   : UserTab(parent)
 {
   if (share == 0L) {
-    kdWarning() << "WARNING: UserTabImpl constructor: share parameter is null!" << endl;
+    kWarning() << "WARNING: UserTabImpl constructor: share parameter is null!" << endl;
     return;
   }
 
@@ -319,7 +319,7 @@ void UserTabImpl::addGroupBtnClicked()
   if (dlg->exec()) {
     for (QStringList::Iterator it = selectedGroups.begin(); it != selectedGroups.end(); ++it)
     {
-        kdDebug(5009) << "GroupKind: " << dlg->getGroupKind() << endl;
+        kDebug(5009) << "GroupKind: " << dlg->getGroupKind() << endl;
         QString name = dlg->getGroupKind() + (*it);
         addUserToUserTable(name,dlg->getAccess());
     }

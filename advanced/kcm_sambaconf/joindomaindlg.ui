@@ -225,12 +225,12 @@
 <customwidgets>
     <customwidget>
         <class>KPasswordEdit</class>
-        <header location="global">kpassdlg.h</header>
+        <header location="global">kpassworddialog.h</header>
         <container>0</container>
     </customwidget>
 </customwidgets>
 <includes>
-    <include location="global" impldecl="in declaration">kpassdlg.h</include>
+    <include location="global" impldecl="in declaration">kpassworddialog.h</include>
     <include location="global" impldecl="in implementation">kmessagebox.h</include>
     <include location="global" impldecl="in implementation">klocale.h</include>
     <include location="local" impldecl="in implementation">joindomaindlg.ui.h</include>
@@ -240,7 +240,6 @@
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
 <includehints>
-    <includehint>kpassdlg.h</includehint>
-    <includehint>kpassdlg.h</includehint>
+    <includehint>kpassworddialog.h</includehint>
 </includehints>
 </UI>

@@ -568,7 +568,7 @@ QString PropertiesPage::getNewSambaName() {
     path = urlRq->url();
   }
   
-  QString shareName = KURL(path).fileName();
+  QString shareName = KUrl(path).fileName();
   
   if (!sambaNameEdit->text().isEmpty())
       shareName = sambaNameEdit->text();

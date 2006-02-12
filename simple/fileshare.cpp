@@ -395,7 +395,7 @@ void KFileShareConfig::changeShareBtnClicked() {
   QList<Q3ListViewItem *> items = m_ccgui->listView->selectedItems();
 
   foreach ( Q3ListViewItem* item, items ) {
-      files.append(new KFileItem(KURL(items.first()->text(0)),"",0));
+      files.append(new KFileItem(KUrl(items.first()->text(0)),"",0));
   }
 
   showShareDialog(files);

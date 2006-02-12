@@ -189,7 +189,7 @@ void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen
 KUrl SmbPasswdFile::getUrlFromSambaFile(const SambaFile * /*file*/)
 {
   kWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!" << endl;
-  return KURL("");
+  return KUrl("");
 }
 
 bool SmbPasswdFile::enableUser(const SambaUser & user) {

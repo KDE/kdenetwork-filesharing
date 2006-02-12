@@ -103,7 +103,7 @@ SambaFile::~SambaFile()
 }
 
 bool SambaFile::isRemoteFile() {
-  return ! KURL(path).isLocalFile();
+  return ! KUrl(path).isLocalFile();
 }
 
 /** No descriptions */
@@ -171,7 +171,7 @@ bool SambaFile::slotApply()
   QFileInfo fi(path);
   KUrl url(path);
 
-  if (KURL(path).isLocalFile()) {
+  if (KUrl(path).isLocalFile()) {
     KProcess proc;
     kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
     

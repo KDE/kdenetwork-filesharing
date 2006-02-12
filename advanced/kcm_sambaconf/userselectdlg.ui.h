@@ -10,7 +10,7 @@
 
 void UserSelectDlg::init(const QStringList & specifiedUsers, SambaShare* share)
 {
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
   SambaUserList sambaList = passwd.getSambaUserList();
 
   for (SambaUser * user = sambaList.first(); user; user = sambaList.next() )

@@ -1060,7 +1060,7 @@ void KcmSambaConf::loadUserTab()
 
   QStringList added;
 
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
   SambaUserList sambaList = passwd.getSambaUserList();
   _interface->sambaUsersListView->clear();
   SambaUser *user;
@@ -1124,7 +1124,7 @@ void KcmSambaConf::slotMouseButtonPressed(int,Q3ListViewItem* item,const QPoint 
     return;
 
   SambaShare* share = _sambaFile->getShare("global");
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
   QMultiCheckListItem* i = static_cast<QMultiCheckListItem*>(item);
   SambaUser user( item->text(0), item->text(1).toInt() );
   user.isDisabled = i->isOn(COL_DISABLED);
@@ -1173,7 +1173,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
   QList<Q3ListViewItem*> list = _interface->unixUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
 
   foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );
@@ -1211,7 +1211,7 @@ void KcmSambaConf::removeSambaUserBtnClicked()
   QList<Q3ListViewItem*> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
 
   foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );
@@ -1232,7 +1232,7 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
   QList<Q3ListViewItem*> list = _interface->sambaUsersListView->selectedItems();
 
   SambaShare* share = _sambaFile->getShare("global");
-  SmbPasswdFile passwd( KURL(share->getValue("smb passwd file",true,true)) );
+  SmbPasswdFile passwd( KUrl(share->getValue("smb passwd file",true,true)) );
 
   foreach ( Q3ListViewItem* item, list ) {
     SambaUser user( item->text(0), item->text(1).toInt() );

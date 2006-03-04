@@ -83,12 +83,14 @@ void PrinterDlgImpl::initDialog()
   if (!_share)
      return;
 
-	Q3PtrList<KMPrinter> *printerList = KMManager::self()->printerListComplete();
+	QList<KMPrinter*> *printerList = KMManager::self()->printerListComplete();
 
-  for (Q3PtrListIterator<KMPrinter> it(*printerList); it.current(); ++it)
-  {
-    if (!it.current()->isSpecial()){
-      queueCombo->insertItem(it.current()->printerName());
+	QListIterator<KMPrinter*>       it(*printerList);
+	while (it.hasNext())
+  	{
+		KMPrinter *item = it.next();
+    if (!item->isSpecial()){
+      queueCombo->insertItem(item->printerName());
     }
   }
 

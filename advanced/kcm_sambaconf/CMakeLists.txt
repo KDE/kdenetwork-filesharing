@@ -12,7 +12,7 @@ set(kcm_kcmsambaconf_PART_SRCS printerdlgimpl.cpp kcmsambaconf.cpp )
 
 kde4_automoc(${kcm_kcmsambaconf_PART_SRCS})
 
-kde4_add_ui_files(kcm_kcmsambaconf_PART_SRCS kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui )
+kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui )
 
 kde4_add_plugin(kcm_kcmsambaconf WITH_PREFIX ${kcm_kcmsambaconf_PART_SRCS})
 

@@ -83,9 +83,9 @@ void PrinterDlgImpl::initDialog()
   if (!_share)
      return;
 
-	QList<KMPrinter*> *printerList = KMManager::self()->printerListComplete();
+	QList<KMPrinter*> printerList = KMManager::self()->printerListComplete();
 
-	QListIterator<KMPrinter*>       it(*printerList);
+	QListIterator<KMPrinter*>       it(printerList);
 	while (it.hasNext())
   	{
 		KMPrinter *item = it.next();

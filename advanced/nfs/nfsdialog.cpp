@@ -32,7 +32,7 @@
 #include <kmessagebox.h>
 #include <kfiledialog.h>
 #include <klocale.h>
-#include <klistview.h>
+#include <k3listview.h>
 #include <kaccel.h>
 
 #include "nfsdialog.h"

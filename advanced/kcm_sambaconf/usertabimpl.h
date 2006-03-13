@@ -37,7 +37,7 @@
   *@author Jan Schäfer
   */
 
-class KListViewItem;
+class K3ListViewItem;
 class SambaShare;
 
 /**

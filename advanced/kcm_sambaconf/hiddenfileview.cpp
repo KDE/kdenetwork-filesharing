@@ -175,7 +175,7 @@ void HiddenFileView::initListView()
   _vetoOplockActn->plug(_popup);
 
   connect( _dlg->hiddenListView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
-  connect( _dlg->hiddenListView, SIGNAL(contextMenu(KListView*,Q3ListViewItem*,const QPoint&)),
+  connect( _dlg->hiddenListView, SIGNAL(contextMenu(K3ListView*,Q3ListViewItem*,const QPoint&)),
            this, SLOT(showContextMenu()));
 
   connect( _dlg->hideDotFilesChk, SIGNAL(toggled(bool)), this, SLOT(hideDotFilesChkClicked(bool)));

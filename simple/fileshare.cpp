@@ -35,7 +35,7 @@
 #include <kdialog.h>
 #include <kdialogbase.h>
 #include <kgenericfactory.h>
-#include <klistview.h>
+#include <k3listview.h>
 #include <kiconloader.h>
 #include <knfsshare.h>
 #include <ksambashare.h>
@@ -165,7 +165,7 @@ void KFileShareConfig::updateShareListView()
       QPixmap cancelPix = SmallIcon("button_cancel");
 
       for ( QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
-        KListViewItem* item = new KListViewItem(m_ccgui->listView);
+        K3ListViewItem* item = new K3ListViewItem(m_ccgui->listView);
         item->setText(0,*it);
         item->setPixmap(0, folderPix);
 

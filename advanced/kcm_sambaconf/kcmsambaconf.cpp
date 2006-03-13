@@ -62,7 +62,7 @@
 #include <krestrictedline.h>
 #include <kmessagebox.h>
 #include <kjanuswidget.h>
-#include <klistview.h>
+#include <k3listview.h>
 #include <ksimpleconfig.h>
 #include <kinstance.h>
 
@@ -1090,7 +1090,7 @@ void KcmSambaConf::loadUserTab()
 
     it=added.find(unixUser->name);
     if (it == added.end())
-        new KListViewItem(_interface->unixUsersListView, unixUser->name, QString::number(unixUser->uid));
+        new K3ListViewItem(_interface->unixUsersListView, unixUser->name, QString::number(unixUser->uid));
   }
 
   _interface->unixUsersListView->setSelectionMode(Q3ListView::Extended);
@@ -1221,7 +1221,7 @@ void KcmSambaConf::removeSambaUserBtnClicked()
       continue;
     }
 
-    new KListViewItem(_interface->unixUsersListView, item->text(0), item->text(1));
+    new K3ListViewItem(_interface->unixUsersListView, item->text(0), item->text(1));
     list.remove(item);
     delete item;
   }

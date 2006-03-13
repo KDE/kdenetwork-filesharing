@@ -30,7 +30,7 @@
 #define _HIDDENFILEVIEW_H_
 
 #include <kfileitem.h>
-#include <klistview.h>
+#include <k3listview.h>
 
 #include "qmultichecklistitem.h"
 //Added by qt3to4:

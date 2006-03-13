@@ -39,7 +39,7 @@
 #include <qpushbutton.h>
 #include <qlineedit.h>
 
-#include <klistview.h>
+#include <k3listview.h>
 #include <klocale.h>
 #include <kdebug.h>
 #include <kiconloader.h>

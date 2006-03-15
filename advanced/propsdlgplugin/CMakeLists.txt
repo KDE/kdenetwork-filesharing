@@ -1,11 +1,14 @@
 kde4_header()
 
-include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
+include_directories(${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/ ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/ ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
 
 
 ########### next target ###############
+set(libpropsdlgplugin_common_SRCS 
+	propertiespage.cpp)
+kde4_add_ui3_files(libpropsdlgplugin_common_SRCS propertiespagegui.ui)
 
-set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp )
+set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp ${libpropsdlgplugin_common_SRCS} ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS})
 
 kde4_automoc(${fileshare_propsdlgplugin_PART_SRCS})
 
@@ -13,7 +16,7 @@ kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 
 kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} fileshare_propsdlgplugin )
 
-target_link_libraries(fileshare_propsdlgplugin  ${QT_AND_KDECORE_LIBS} propsdlgplugin_common filesharenfs filesharesamba kio )
+target_link_libraries(fileshare_propsdlgplugin  ${LIB_KIO} )
 
 install_targets(${LIB_INSTALL_DIR}/kde4 fileshare_propsdlgplugin )
 

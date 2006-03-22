@@ -160,7 +160,7 @@ void KFileShareConfig::updateShareListView()
         dirs += *it;
       }
 
-      QPixmap folderPix = SmallIcon("folder",0,KIcon::ShareOverlay);
+      QPixmap folderPix = SmallIcon("folder",0,K3Icon::ShareOverlay);
       QPixmap okPix = SmallIcon("button_ok");
       QPixmap cancelPix = SmallIcon("button_cancel");
 

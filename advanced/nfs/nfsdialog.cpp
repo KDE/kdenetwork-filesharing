@@ -33,7 +33,7 @@
 #include <kfiledialog.h>
 #include <klocale.h>
 #include <k3listview.h>
-#include <kaccel.h>
+
 
 #include "nfsdialog.h"
 #include "nfsentry.h"

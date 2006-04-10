@@ -301,7 +301,7 @@ void KFileShareConfig::save()
     if ( ! file.open(QIODevice::WriteOnly)) {
         KMessageBox::detailedError(this,
             i18n("Could not save settings."),
-            i18n("Could not open file '%1' for writing: %2").arg(FILESHARECONF).arg(
+            i18n("Could not open file '%1' for writing: %2", FILESHARECONF, 
              file.errorString() ),
             i18n("Saving Failed"));
         return;

@@ -75,7 +75,7 @@ void SmbConfConfigWidget::btnPressed() {
   if (smbConf.isEmpty())
 		  return;
   if ( ! QFileInfo(smbConf).isReadable() ) {
-    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read.</qt>").arg(smbConf),i18n("Could Not Read File"));
+    KMessageBox::sorry(this,i18n("<qt>The file <i>%1</i> could not be read.</qt>", smbConf),i18n("Could Not Read File"));
     return;
   }
 

@@ -158,14 +158,14 @@ bool NFSHostDlg::saveName(NFSHost* host) {
     QString name = m_gui->nameEdit->text().trimmed();
     if (name.isEmpty()) {
       KMessageBox::sorry(this,
-              i18n("Please enter a hostname or an IP address.").arg(name),
+              i18n("Please enter a hostname or an IP address."),
               i18n("No Hostname/IP-Address"));
       m_gui->nameEdit->setFocus();
       return false;
     } else {
       NFSHost* host2 = m_nfsEntry->getHostByName(name);
       if (host2 && host2 != host) {
-        KMessageBox::sorry(this,i18n("The host '%1' already exists.").arg(name),
+        KMessageBox::sorry(this,i18n("The host '%1' already exists.", name),
                           i18n("Host Already Exists"));
         m_gui->nameEdit->setFocus();
         return false;

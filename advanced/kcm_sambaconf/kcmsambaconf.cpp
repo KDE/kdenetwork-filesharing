@@ -1112,7 +1112,7 @@ void KcmSambaConf::joinADomainBtnClicked() {
                             dlg->usernameEdit->text(),
                             dlg->passwordEdit->text()))
     {
-      KMessageBox::sorry(0,i18n("Joining the domain %1 failed.").arg(dlg->domainEdit->text()));
+      KMessageBox::sorry(0,i18n("Joining the domain %1 failed.", dlg->domainEdit->text()));
     }
   }
 
@@ -1180,7 +1180,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
     
     QByteArray password;
     int passResult = KPasswordDialog::getNewPassword(this,password, 
-                        i18n("<qt>Please enter a password for the user <b>%1</b></qt>").arg(user.name));
+                        i18n("<qt>Please enter a password for the user <b>%1</b></qt>", user.name));
     if (passResult != KPasswordDialog::Accepted) {
        list.remove(item);
        continue;
@@ -1188,7 +1188,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
     
     if (!passwd.addUser(user,password))
     {
-      KMessageBox::sorry(0,i18n("<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>").arg(user.name));
+      KMessageBox::sorry(0,i18n("<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>", user.name));
       break;
     }
 
@@ -1217,7 +1217,7 @@ void KcmSambaConf::removeSambaUserBtnClicked()
     SambaUser user( item->text(0), item->text(1).toInt() );
     if (!passwd.removeUser(user))
     {
-      KMessageBox::sorry(0,i18n("Removing the user %1 from the Samba user database failed.").arg(user.name));
+      KMessageBox::sorry(0,i18n("Removing the user %1 from the Samba user database failed.", user.name));
       continue;
     }
 
@@ -1239,13 +1239,13 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
     
     QByteArray password;
     int passResult = KPasswordDialog::getNewPassword(this,password,
-                        i18n("Please enter a password for the user %1").arg(user.name));
+                        i18n("Please enter a password for the user %1", user.name));
     if (passResult != KPasswordDialog::Accepted)
        return;
     
     if (!passwd.changePassword(user,password))
     {
-      KMessageBox::sorry(0,i18n("Changing the password of the user %1 failed.").arg(user.name));
+      KMessageBox::sorry(0,i18n("Changing the password of the user %1 failed.", user.name));
     } else {
       static_cast<QMultiCheckListItem*>(item)->setOn(COL_NOPASSWORD,false);
     }

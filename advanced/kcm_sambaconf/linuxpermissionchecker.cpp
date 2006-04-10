@@ -115,7 +115,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
          0L,i18n(
            "<qt>You have specified <b>public read access</b> for this directory, but "
            "the guest account <b>%1</b> does not have the necessary read permissions;<br>" 
-           "do you want to continue anyway?</qt>").arg(guestAccount)
+           "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoReadPermissionsWarning"))
@@ -129,7 +129,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
          0L,i18n(
            "<qt>You have specified <b>public write access</b> for this directory, but "
            "the guest account <b>%1</b> does not have the necessary write permissions;<br>" 
-           "do you want to continue anyway?</qt>").arg(guestAccount)
+           "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoWritePermissionsWarning"))
@@ -166,7 +166,7 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
         0L,i18n(
           "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this directory, but "
           "the user does not have the necessary write permissions;<br>" 
-          "do you want to continue anyway?</qt>").arg(user)
+          "do you want to continue anyway?</qt>", user)
           ,i18n("Warning")
           ,KStdGuiItem::cont()
           ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
@@ -189,7 +189,7 @@ bool LinuxPermissionChecker::checkUserReadPermissions(const QString & user, bool
          0L,i18n(
            "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
            "the user does not have the necessary read permissions;<br>" 
-           "do you want to continue anyway?</qt>").arg(user)
+           "do you want to continue anyway?</qt>", user)
            ,i18n("Warning")
            ,KStdGuiItem::cont()
            ,"KSambaPlugin_userHasNoReadPermissionsWarning"))

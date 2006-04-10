@@ -58,7 +58,7 @@ DictManager::~DictManager() {
 
 void DictManager::handleUnsupportedWidget(const QString & s, QWidget* w) {
   w->setEnabled(false);
-  QToolTip::add(w,i18n("The option <em>%1</em> is not supported by your Samba version").arg(s));
+  QToolTip::add(w,i18n("The option <em>%1</em> is not supported by your Samba version", s));
 }
 
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {

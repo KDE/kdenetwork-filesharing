@@ -408,7 +408,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
 		    // TODO remove <b></b> and use <qt> instead
                     int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
-                    "do you want to uncheck all files matching <b>'%1'</b>?").arg(rx->pattern()).arg(rx->pattern()).arg(rx->pattern()),
+                    "do you want to uncheck all files matching <b>'%1'</b>?", rx->pattern()),
                     i18n("Wildcarded String"),i18n("Uncheck Matches"),i18n("Keep Selected"));
             
                     Q3PtrList<HiddenListViewItem> lst = getMatchingItems( *rx );

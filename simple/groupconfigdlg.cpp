@@ -128,8 +128,8 @@ void GroupConfigDlg::slotAddUser() {
   
   if (allUsers.count()==0) {
      KMessageBox::information(this,
-           i18n("All users are in the %1 group already.")
-           .arg(m_fileShareGroup.name()));
+           i18n("All users are in the %1 group already.",
+            m_fileShareGroup.name()));
      return;           
   }
 
@@ -173,8 +173,8 @@ bool GroupConfigDlg::addUser(const KUser & user, const KUserGroup & group) {
   QList<KUserGroup> groups = user.groups();
   groups.append(group);
   if (!userMod(user.loginName(),groups)) {
-    KMessageBox::sorry(this,i18n("Could not add user '%1' to group '%2'")
-            .arg(user.loginName()).arg(group.name()));
+    KMessageBox::sorry(this,i18n("Could not add user '%1' to group '%2'",
+             user.loginName(), group.name()));
     return false;            
   } 
   return true;
@@ -185,8 +185,8 @@ bool GroupConfigDlg::removeUser(const KUser & user, const KUserGroup & group) {
   QList<KUserGroup> groups = user.groups();
   groups.remove(group);
   if (!userMod(user.loginName(),groups)) {
-    KMessageBox::sorry(this,i18n("Could not remove user '%1' from group '%2'")
-            .arg(user.loginName()).arg(group.name()));
+    KMessageBox::sorry(this,i18n("Could not remove user '%1' from group '%2'",
+             user.loginName(), group.name()));
     return false;            
   } 
   return true;
@@ -333,10 +333,10 @@ void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
     initUsers();
     updateListBox();
     m_gui->groupUsersRadio->setText(
-          i18n("Only users of the '%1' group are allowed to share folders")
-          .arg(m_fileShareGroup.name()));
-    m_gui->usersGrpBx->setTitle(i18n("Users of '%1' Group")
-          .arg(m_fileShareGroup.name()));
+          i18n("Only users of the '%1' group are allowed to share folders",
+           m_fileShareGroup.name()));
+    m_gui->usersGrpBx->setTitle(i18n("Users of '%1' Group",
+           m_fileShareGroup.name()));
     m_gui->otherGroupBtn->setText(i18n("Change Group..."));          
     m_gui->usersGrpBx->show();
   } else {
@@ -361,7 +361,7 @@ bool GroupConfigDlg::addUsersToGroup(QList<KUser> users,const KUserGroup & group
 
 bool GroupConfigDlg::emptyGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this, 
-        i18n("Do you really want to remove all users from group '%1'?").arg(s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
+        i18n("Do you really want to remove all users from group '%1'?", s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
       return false;        
   }
 
@@ -378,7 +378,7 @@ bool GroupConfigDlg::emptyGroup(const QString & s) {
 
 bool GroupConfigDlg::deleteGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this, 
-        i18n("Do you really want to delete group '%1'?").arg(s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
+        i18n("Do you really want to delete group '%1'?", s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
       return false;        
   }
         
@@ -386,7 +386,7 @@ bool GroupConfigDlg::deleteGroup(const QString & s) {
   proc << "groupdel" << s;
   bool result = proc.start(KProcess::Block) && proc.normalExit();
   if (!result) {
-    KMessageBox::sorry(this,i18n("Deleting group '%1' failed.").arg(s));
+    KMessageBox::sorry(this,i18n("Deleting group '%1' failed.", s));
   } 
   
   return result;
@@ -399,7 +399,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   }
 
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-      i18n("This group '%1' does not exist. Should it be created?").arg(s), QString::null, i18n("Create"), i18n("Do Not Create")))
+      i18n("This group '%1' does not exist. Should it be created?", s), QString::null, i18n("Create"), i18n("Do Not Create")))
       return false;
       
   //debug("CreateFileShareGroup: "+s);
@@ -407,7 +407,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   proc << "groupadd" << s;
   bool result = proc.start(KProcess::Block) && proc.normalExit();
   if (!result) {
-    KMessageBox::sorry(this,i18n("Creation of group '%1' failed.").arg(s));
+    KMessageBox::sorry(this,i18n("Creation of group '%1' failed.", s));
   } else {
     setFileShareGroup(KUserGroup(s));
   }

@@ -1,10 +1,6 @@
 kde4_header()
 
 include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}  )
-kde4_add_ui3_files(libfilesharenfs_SRCS
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
-    )
 
 ########### next target ###############
 

@@ -67,9 +67,9 @@ void NFSDialog::initGUI() {
 
   QVBoxLayout *layout = new QVBoxLayout( page );
   layout->addWidget( m_gui );
-  
-  KAccel* accel = new KAccel( m_gui->listView );
-  accel->insert( "Delete", Qt::Key_Delete, this, SLOT(slotRemoveHost()));
+#warning "kde4 port it"
+  //KAccel* accel = new KAccel( m_gui->listView );
+  //accel->insert( "Delete", Qt::Key_Delete, this, SLOT(slotRemoveHost()));
 }
 
 void NFSDialog::initSlots()

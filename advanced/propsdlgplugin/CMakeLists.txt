@@ -10,6 +10,12 @@ kde4_add_ui3_files(libpropsdlgplugin_common_SRCS propertiespagegui.ui)
 
 set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp ${libpropsdlgplugin_common_SRCS} ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS})
 
+kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
+    )
+
+
 kde4_automoc(${fileshare_propsdlgplugin_PART_SRCS})
 
 kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})

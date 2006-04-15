@@ -7,6 +7,8 @@ include_directories( ${KDE4_INCLUDE_DIR} ${QT_INCLUDES} ${CMAKE_CURRENT_SOURCE_D
 
 
 ########### next target ###############
+set(kcm_kcmsambaconf_PART_SRCS printerdlgimpl.cpp kcmsambaconf.cpp ${libfilesharesamba_SRCS})
+
 kde4_add_ui3_files(libfilesharesamba_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/socketoptionsdlg.ui
@@ -15,13 +17,12 @@ kde4_add_ui3_files(libfilesharesamba_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/usertab.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
+	kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui
 )
 
-set(kcm_kcmsambaconf_PART_SRCS printerdlgimpl.cpp kcmsambaconf.cpp ${libfilesharesamba_SRCS})
 
 kde4_automoc(${kcm_kcmsambaconf_PART_SRCS})
 
-kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui )
 
 kde4_add_plugin(kcm_kcmsambaconf WITH_PREFIX ${kcm_kcmsambaconf_PART_SRCS})
 

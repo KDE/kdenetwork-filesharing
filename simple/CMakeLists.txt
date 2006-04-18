@@ -17,7 +17,7 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_fileshare )
 
 target_link_libraries(kcm_fileshare  ${KDE4_KDECORE_LIBS} propsdlgplugin_common filesharenfs filesharesamba kio )
 
-install_targets(${LIB_INSTALL_DIR}/kde4 kcm_fileshare )
+install_targets(${PLUGIN_INSTALL_DIR} kcm_fileshare )
 
 
 ########### install files ###############

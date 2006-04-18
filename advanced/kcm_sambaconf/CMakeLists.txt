@@ -30,7 +30,7 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
 
 target_link_libraries(kcm_kcmsambaconf  ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS}  )
 
-install_targets(${LIB_INSTALL_DIR}/kde4 kcm_kcmsambaconf )
+install_targets(${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
 
 
 ########### install files ###############

@@ -202,8 +202,8 @@ bool SambaFile::slotApply()
     srcURL.setPath( _tempFile->name() );
 
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
-    connect( job, SIGNAL( result( KIO::Job * ) ), 
-             this, SLOT( slotSaveJobFinished ( KIO::Job * ) ) );
+    connect( job, SIGNAL( result( KJob * ) ), 
+             this, SLOT( slotSaveJobFinished ( KJob * ) ) );
     return (job->error()==0);
   }
 
@@ -461,12 +461,12 @@ QString SambaFile::findSambaConf()
     return KSambaShare::instance()->smbConfPath();
 }
 
-void SambaFile::slotSaveJobFinished( KIO::Job * job ) {
+void SambaFile::slotSaveJobFinished( KJob * job ) {
   delete _tempFile;
   _tempFile = 0;
 }
 
-void SambaFile::slotJobFinished( KIO::Job * job )
+void SambaFile::slotJobFinished( KJob * job )
 {
   if (job->error())
     emit canceled( job->errorString() );
@@ -492,7 +492,7 @@ bool SambaFile::load()
     destURL.setPath( localPath );
     KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, true, false, true );
 //    emit started( d->m_job );
-    connect( job, SIGNAL( result( KIO::Job * ) ), this, SLOT( slotJobFinished ( KIO::Job * ) ) );
+    connect( job, SIGNAL( result( KJob * ) ), this, SLOT( slotJobFinished ( KJob * ) ) );
     return true;
   } else {
     localPath = path;

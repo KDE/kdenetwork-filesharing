@@ -166,8 +166,8 @@ public slots:
   bool slotApply();
 protected slots:
   void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
-  void slotJobFinished( KIO::Job *);
-  void slotSaveJobFinished( KIO::Job *);
+  void slotJobFinished( KJob *);
+  void slotSaveJobFinished( KJob *);
 
 signals:
   void canceled(const QString &);

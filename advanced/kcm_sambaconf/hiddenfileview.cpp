@@ -98,10 +98,10 @@ void HiddenListViewItem::paintCell(QPainter *p, const QColorGroup &cg, int colum
   QColorGroup _cg = cg;
 
   if (isOn(COL_VETO))
-     _cg.setColor(QColorGroup::Base,Qt::lightGray);
+     _cg.setColor(QPalette::Base,Qt::lightGray);
 
   if (isOn(COL_HIDDEN))
-     _cg.setColor(QColorGroup::Text,Qt::gray);
+     _cg.setColor(QPalette::Text,Qt::gray);
 
   QMultiCheckListItem::paintCell(p, _cg, column, width, alignment);
 }

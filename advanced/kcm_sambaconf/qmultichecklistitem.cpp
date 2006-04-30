@@ -111,7 +111,7 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
     // code allmost identical to QCheckListItem
     Q_ASSERT( lv ); //###
     // I use the text color of defaultStyles[0], normalcol in parent listview
-//    mcg.setColor( QColorGroup::Text, ((StyleListView*)lv)->normalcol );
+//    mcg.setColor( QPalette::Text, ((StyleListView*)lv)->normalcol );
     int x = 0;
     if ( align == Qt::AlignCenter ) {
       QFontMetrics fm( lv->font() );
@@ -120,13 +120,13 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
     int y = (height() - BoxSize) / 2;
 
     if ( !isEnabled() || disableStates.testBit(col))
-      p->setPen( QPen( lv->palette().color( QPalette::Disabled, QColorGroup::Text ), 2 ) );
+      p->setPen( QPen( lv->palette().color( QPalette::Disabled, QPalette::Text ), 2 ) );
     else
       p->setPen( QPen( mcg.text(), 2 ) );
       
     if ( isSelected() && lv->header()->mapToSection( 0 ) != 0 ) {
       p->fillRect( 0, 0, x + marg + BoxSize + 4, height(),
-             mcg.brush( QColorGroup::Highlight ) );
+             mcg.brush( QPalette::Highlight ) );
       if ( isEnabled() )
         p->setPen( QPen( mcg.highlightedText(), 2 ) ); // FIXME! - use defaultstyles[0].selecol. luckily not used :)
     }

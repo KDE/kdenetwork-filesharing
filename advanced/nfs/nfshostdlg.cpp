@@ -43,7 +43,9 @@ NFSHostDlg::NFSHostDlg(QWidget* parent, HostList* hosts, NFSEntry* entry)
 
   m_gui = new HostProps(page);
 
-  QVBoxLayout *layout = new QVBoxLayout( page, 0, 6 );
+  QVBoxLayout *layout = new QVBoxLayout( page );
+  layout->setSpacing( 6 );
+  layout->setMargin( 0 );
   layout->addWidget( m_gui );
 
   connect( m_gui, SIGNAL(modified()), this, SLOT(setModified()));

@@ -46,7 +46,8 @@ SmbConfConfigWidget::SmbConfConfigWidget(QWidget* parent)
   : QWidget(parent,"configWidget")
 {  
 
-  QVBoxLayout *layout = new QVBoxLayout(this,5);
+  QVBoxLayout *layout = new QVBoxLayout(this);
+  layout->setSpacing(5);
 
   QLabel *lbl = new QLabel(i18n("<p>The SAMBA configuration file <strong>'smb.conf'</strong>" \
                                 " could not be found;</p>" \

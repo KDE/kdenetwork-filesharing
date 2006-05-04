@@ -27,8 +27,8 @@ NFSHost::NFSHost(const QString & hostString)
 
   QString s = hostString;
 
-  int l = s.find('(');
-  int r = s.find(')');
+  int l = s.indexOf('(');
+  int r = s.indexOf(')');
 
   initParams();
 
@@ -37,9 +37,9 @@ NFSHost::NFSHost(const QString & hostString)
     name = s.left(l);
   else
     name = s;
-    
-  kDebug(5009) << "NFSHost: name='" << name << "'" << endl;    
-  
+
+  kDebug(5009) << "NFSHost: name='" << name << "'" << endl;
+
   if (l>=0 && r>=0)
   {
     QString params = s.mid(l+1,r-l-1);
@@ -80,7 +80,7 @@ void NFSHost::initParams()
 void NFSHost::parseParamsString(const QString & s)
 {
 
-  if (s.isEmpty()) 
+  if (s.isEmpty())
       return;
 
   int i;
@@ -90,7 +90,7 @@ void NFSHost::parseParamsString(const QString & s)
 
   do
   {
-    i = rest.find(",",0);
+    i = rest.indexOf(",",0);
 
     if (i==-1)
       p = rest;
@@ -115,11 +115,11 @@ QString NFSHost::paramString() const
   if (!secure) s+="insecure,";
   if (!secureLocks) s+="insecure_locks,";
   if (!subtreeCheck) s+="no_subtree_check,";
-  if (sync) 
+  if (sync)
     s+="sync,";
   else
-    s+="async,";    
-    
+    s+="async,";
+
   if (!wdelay) s+="wdelay,";
   if (allSquash) s+="all_squash,";
   if (!hide) s+="nohide,";
@@ -150,9 +150,9 @@ QString NFSHost::toString() const
 
 NFSHost* NFSHost::copy() const {
   NFSHost* result = new NFSHost();
-  
+
   result->name = name;
-  
+
   result->readonly = readonly;
   result->sync = sync;
   result->secure = secure;
@@ -166,7 +166,7 @@ NFSHost* NFSHost::copy() const {
   result->anonuid = anonuid;
   result->anongid = anongid;
 
-  return result;  
+  return result;
 }
 
 bool NFSHost::isPublic() const {
@@ -251,7 +251,7 @@ void NFSHost::setParam(const QString & s)
      rootSquash = false;
      return; }
 
-  int i = p.find("=",0);
+  int i = p.indexOf('=',0);
 
   // get anongid or anonuid
   if (i>-1)
@@ -306,10 +306,10 @@ QString NFSEntry::toString() const
 {
   QString s = _path.trimmed();
 
-  if (_path.find(' ') > -1) {
+  if (_path.contains(' ')) {
     s = '"'+s+'"';
   }
-  
+
   s += ' ';
 
   HostIterator it = getHosts();
@@ -342,7 +342,7 @@ NFSHost* NFSEntry::getHostByName(const QString & name) const
 {
   HostIterator it = getHosts();
   NFSHost* host;
-  
+
   while ( (host = it.current()) != 0 )
   {
     ++it;
@@ -359,7 +359,7 @@ NFSHost* NFSEntry::getPublicHost() const
   NFSHost* result = getHostByName("*");
   if (result)
       return result;
-      
+
   return getHostByName(QString::null);
 }
 

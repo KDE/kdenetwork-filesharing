@@ -40,17 +40,17 @@ static QString qrichtextify( const QString& text )
   return lines.join(QString::null);
 }
 
-KRichTextLabel::KRichTextLabel( const QString &text , QWidget *parent, const char *name )
- : QLabel ( parent, name ) {
+KRichTextLabel::KRichTextLabel( const QString &text , QWidget *parent )
+ : QLabel ( parent ) {
   m_defaultWidth = QMIN(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
-  setAlignment( Qt::TextWordWrap );
+  setWordWrap( true );
   setText(text);
 }
 
-KRichTextLabel::KRichTextLabel( QWidget *parent, const char *name )
- : QLabel ( parent, name ) {
+KRichTextLabel::KRichTextLabel( QWidget *parent )
+ : QLabel ( parent ) {
   m_defaultWidth = QMIN(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
-  setAlignment( Qt::TextWordWrap );
+  setWordWrap( true );
 }
 
 void KRichTextLabel::setDefaultWidth(int defaultWidth)

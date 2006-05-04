@@ -83,10 +83,10 @@ QStringList SambaConfigFile::getShareList()
 }
 
 SambaFile::SambaFile(const QString & _path, bool _readonly)
-  : readonly(_readonly), 
-    changed(false), 
-    path(_path), 
-    localPath(_path), 
+  : readonly(_readonly),
+    changed(false),
+    path(_path),
+    localPath(_path),
     _sambaConfig(0),
     _testParmValues(0),
     _sambaVersion(-1),
@@ -142,7 +142,7 @@ bool SambaFile::slotApply()
   if (readonly) {
       kDebug(FILESHARE_DEBUG) << "SambaFile::slotApply: readonly=true" << endl;
       return false;
-  }      
+  }
 
   // If we have write access to the smb.conf
   // we simply save the values to it
@@ -162,7 +162,7 @@ bool SambaFile::slotApply()
   _tempFile->setAutoDelete(true);
 
   if (!saveTo(_tempFile->name())) {
-    kDebug(5009) << "SambaFile::slotApply: Could not save to temporary file" << endl; 
+    kDebug(5009) << "SambaFile::slotApply: Could not save to temporary file" << endl;
     delete _tempFile;
     _tempFile = 0;
     return false;
@@ -174,7 +174,7 @@ bool SambaFile::slotApply()
   if (KUrl(path).isLocalFile()) {
     KProcess proc;
     kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
-    
+
     QString suCommand=QString("cp %1 %2; rm %3")
               .arg(_tempFile->name())
               .arg(path)
@@ -187,14 +187,14 @@ bool SambaFile::slotApply()
         delete _tempFile;
         _tempFile = 0;
         return false;
-    }        
+    }
     else {
         changed = false;
         delete _tempFile;
         _tempFile = 0;
         kDebug(5009) << "SambaFile::slotApply: changes successfully saved!" << endl;
         return true;
-    }        
+    }
   } else {
     kDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
     _tempFile->setAutoDelete(true);
@@ -202,7 +202,7 @@ bool SambaFile::slotApply()
     srcURL.setPath( _tempFile->name() );
 
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
-    connect( job, SIGNAL( result( KJob * ) ), 
+    connect( job, SIGNAL( result( KJob * ) ),
              this, SLOT( slotSaveJobFinished ( KJob * ) ) );
     return (job->error()==0);
   }
@@ -342,25 +342,25 @@ SambaShareList* SambaFile::getSharedPrinters() const
 int SambaFile::getSambaVersion() {
   if (_sambaVersion > -1)
     return _sambaVersion;
-    
+
   KProcess testParam;
   testParam << "testparm";
   testParam << "-V";
   _parmOutput = QString("");
   _sambaVersion = 2;
-      
+
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
           this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
 
-          
-          
+
+
   if (testParam.start(KProcess::Block,KProcess::Stdout)) {
-    if (_parmOutput.find("3") > -1)
+    if (_parmOutput.contains('3') )
       _sambaVersion = 3;
-  } 
+  }
 
   kDebug(5009) << "Samba version = " << _sambaVersion << endl;
-    
+
   return _sambaVersion;
 }
 
@@ -373,15 +373,15 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
 
   KProcess testParam;
   testParam << "testparm";
-  testParam << "-s"; 
-  
+  testParam << "-s";
+
   if (getSambaVersion() == 3)
      testParam << "-v";
 
 
   testParam << "/dev/null";
   _parmOutput = QString("");
-  
+
   connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
           this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
 
@@ -436,14 +436,14 @@ void SambaFile::parseParmStdOutput()
 
     // parameter
     // parameter
-    int i = line.find('=');
+    int i = line.indexOf('=');
 
     if (i>-1) {
       QString name = line.left(i).trimmed();
       QString value = line.mid(i+1).trimmed();
       _testParmValues->setValue(name,value,false,false);
     }
-    
+
   }
 
 
@@ -481,7 +481,7 @@ bool SambaFile::load()
 {
   if (path.isNull() || path.isEmpty())
       return false;
-      
+
   kDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path << endl;
   KUrl url(path);
 
@@ -533,13 +533,13 @@ bool SambaFile::openFile() {
       continuedLine = false;
     } else
       completeLine = currentLine;
-            
+
     // is the line continued in the next line ?
     if ( completeLine[completeLine.length()-1] == '\\' )
     {
       continuedLine = true;
       // remove the ending backslash
-      completeLine.truncate( completeLine.length()-1 ); 
+      completeLine.truncate( completeLine.length()-1 );
       continue;
     }
 
@@ -566,7 +566,7 @@ bool SambaFile::openFile() {
     }
 
     // parameter
-    int i = completeLine.find('=');
+    int i = completeLine.indexOf('=');
 
     if (i>-1)
     {
@@ -589,8 +589,8 @@ bool SambaFile::openFile() {
   if (!getShare("global")) {
      _sambaConfig->addShare("global");
   }
-  
-  return true;  
+
+  return true;
 }
 
 bool SambaFile::saveTo(const QString & path)
@@ -625,7 +625,7 @@ bool SambaFile::saveTo(const QString & path)
     // Add the name of the share / section
     s << "[" << share->getName() << "]" << endl;
 
-    // Add all options of the share 
+    // Add all options of the share
     QStringList optionList = share->getOptionList();
 
     for ( QStringList::Iterator optionIt = optionList.begin(); optionIt != optionList.end(); ++optionIt )
@@ -647,7 +647,7 @@ bool SambaFile::saveTo(const QString & path)
 
   f.close();
 
-  return true;     
+  return true;
 }
 
 

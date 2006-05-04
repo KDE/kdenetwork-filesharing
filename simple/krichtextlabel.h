@@ -39,8 +39,8 @@ public:
   /**
    * Default constructor.
    */
-  KRichTextLabel( QWidget *parent, const char *name = 0 );
-  KRichTextLabel( const QString &text, QWidget *parent, const char *name = 0 );
+  KRichTextLabel( QWidget *parent );
+  KRichTextLabel( const QString &text, QWidget *parent );
 
   int defaultWidth() const { return m_defaultWidth; }
   void setDefaultWidth(int defaultWidth);

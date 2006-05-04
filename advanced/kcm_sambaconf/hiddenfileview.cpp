@@ -377,19 +377,19 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
   {
     if (!item->isSelected())
         continue;
-        
+
     if (b == item->isOn(column))
         continue;
-            
+
     if (!b) {
         QRegExp* rx = getRegExpListMatch(item->text(0),reqExpList);
-        
+
         // Perhaps the file was hidden because it started with a dot
         if (!rx && item->text(0)[0]=='.' && _dlg->hideDotFilesChk->isChecked()) {
             int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<qt>Some files you have selected are hidden because they start with a dot; "
                     "do you want to uncheck all files starting with a dot?</qt>"),i18n("Files Starting With Dot"),i18n("Uncheck Hidden"), i18n("Keep Hidden"));
-                
+
             if (result == KMessageBox::No) {
                 Q3PtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));
                 deselect(lst);
@@ -401,8 +401,8 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
             if (rx) {
                 // perhaps it is matched by a wildcard string
                 QString p = rx->pattern();
-                if ( p.find("*") > -1 ||
-                        p.find("?") > -1 )
+                if ( p.contains('*') ||
+                        p.contains('?') )
                 {
                     // TODO after message freeze: why show three times the wildcard string? Once should be enough.
 		    // TODO remove <b></b> and use <qt> instead
@@ -410,9 +410,9 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                     "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
                     "do you want to uncheck all files matching <b>'%1'</b>?", rx->pattern()),
                     i18n("Wildcarded String"),i18n("Uncheck Matches"),i18n("Keep Selected"));
-            
+
                     Q3PtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
-            
+
                     if (result == KMessageBox::No) {
                         deselect(lst);
                     } else {
@@ -425,14 +425,14 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                     reqExpList.remove(rx);
                     updateEdit(edit, reqExpList);
                 }
-            }   
+            }
         }
     }
     else {
         reqExpList.append( new QRegExp(item->text(0)) );
         updateEdit(edit, reqExpList);
     }
-    
+
     item->setOn(column,b);
   }
 

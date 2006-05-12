@@ -1,2 +1,0 @@
-SUBDIRS = advanced simple 
-

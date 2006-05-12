@@ -1,4 +1,3 @@
-kde4_header()
 
 
 
@@ -24,7 +23,6 @@ install_targets(${PLUGIN_INSTALL_DIR} kcm_fileshare )
 
 install_files( ${XDG_APPS_DIR} FILES fileshare.desktop )
 
-kde4_footer()
 
 
 

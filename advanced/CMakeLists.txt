@@ -1,4 +1,3 @@
-kde4_header()
 
 set(libfilesharesamba_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/sambafile.cpp
@@ -34,7 +33,6 @@ add_subdirectory( propsdlgplugin )
 ########### install files ###############
 
 
-kde4_footer()
 
 
 

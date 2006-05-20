@@ -111,7 +111,7 @@ QString SambaFile::findShareByPath(const QString & path) const
 {
   Q3DictIterator<SambaShare> it(*_sambaConfig);
   KUrl url(path);
-  url.adjustPath(-1);
+  url.adjustPath(KUrl::RemoveTrailingSlash);
 
   for (  ; it.current(); ++it )
   {
@@ -120,7 +120,7 @@ QString SambaFile::findShareByPath(const QString & path) const
     QString *s = share->find("path");
     if (s) {
         KUrl curUrl(*s);
-        curUrl.adjustPath(-1);
+        curUrl.adjustPath(KUrl::RemoveTrailingSlash);
 
         kDebug(5009) << url.path() << " =? " << curUrl.path() << endl;
 

@@ -46,6 +46,7 @@
 #include <kdirlister.h>
 #include <kmessagebox.h>
 #include <kurlrequester.h>
+#include <ktoggleaction.h>
 
 #include "hiddenfileview.h"
 #include "sharedlgimpl.h"

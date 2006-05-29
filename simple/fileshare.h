@@ -36,7 +36,7 @@ class KFileShareConfig  : public KCModule
   Q_OBJECT
 
  public:
-  KFileShareConfig(QWidget *parent, const char *name, const QStringList &);
+  KFileShareConfig(QWidget *parent, const QStringList &);
 
   virtual void load();
   virtual void save();

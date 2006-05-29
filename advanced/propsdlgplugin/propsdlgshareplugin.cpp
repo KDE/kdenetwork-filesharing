@@ -46,7 +46,7 @@ class PropsDlgSharePlugin::Private
 };
                             
 PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
-                    const char *, const QStringList & )
+                    const QStringList & )
   : KPropsDlgPlugin(dlg), d(0)
 {
   KGlobal::locale()->insertCatalog("kfileshare");                            

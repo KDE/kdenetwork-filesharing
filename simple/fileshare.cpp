@@ -49,9 +49,9 @@
 #include <kprocess.h>
 #include <krichtextlabel.h>
 
-#include "../advanced/propsdlgplugin/propertiespage.h"
-#include "../advanced/nfs/nfsfile.h"
-#include "../advanced/kcm_sambaconf/sambafile.h"
+#include "propertiespage.h"
+#include "nfsfile.h"
+#include "sambafile.h"
 
 #include "controlcenter.h"
 #include "fileshare.h"
@@ -64,7 +64,7 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 #define FILESHARECONF "/etc/security/fileshare.conf"
 #define FILESHARE_DEBUG 5009
 
-KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStringList &):
+KFileShareConfig::KFileShareConfig(QWidget *parent, const QStringList &):
     KCModule(ShareFactory::instance(), parent/*, name*/)
 {
   KGlobal::locale()->insertCatalog("kfileshare");
@@ -301,7 +301,7 @@ void KFileShareConfig::save()
     if ( ! file.open(QIODevice::WriteOnly)) {
         KMessageBox::detailedError(this,
             i18n("Could not save settings."),
-            i18n("Could not open file '%1' for writing: %2", FILESHARECONF, 
+            i18n("Could not open file '%1' for writing: %2", QString(FILESHARECONF), 
              file.errorString() ),
             i18n("Saving Failed"));
         return;

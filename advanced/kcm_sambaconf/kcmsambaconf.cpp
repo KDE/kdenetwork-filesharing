@@ -558,7 +558,7 @@ void KcmSambaConf::fillFields()
   _dictMngr = new DictManager(share);
 
 
-  _interface->configUrlRq->setURL( _smbconf );
+  _interface->configUrlRq->setUrl( _smbconf );
   _interface->configUrlRq->setMode( KFile::File | KFile::ExistingOnly);
 
 

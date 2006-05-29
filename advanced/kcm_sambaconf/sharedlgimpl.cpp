@@ -405,14 +405,14 @@ void ShareDlgImpl::homeChkToggled(bool b)
 	if (b)
   {
   	shareNameEdit->setText("homes");
-    pathUrlRq->setURL("");
+    pathUrlRq->setUrl(KUrl(""));
     directoryPixLbl->setPixmap(DesktopIcon("folder_home",48));
 
   }
   else
   {
   	shareNameEdit->setText( _share->getName() );
-	  pathUrlRq->setURL( _share->getValue("path") );
+	  pathUrlRq->setUrl( _share->getValue("path") );
     directoryPixLbl->setPixmap(DesktopIcon("folder"));
   }
 }

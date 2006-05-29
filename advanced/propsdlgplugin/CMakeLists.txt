@@ -3,15 +3,20 @@ include_directories(${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/ ${CM
 
 
 ########### next target ###############
-set(libpropsdlgplugin_common_SRCS 
-	propertiespage.cpp)
-kde4_add_ui3_files(libpropsdlgplugin_common_SRCS propertiespagegui.ui)
 
 set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp ${libpropsdlgplugin_common_SRCS} ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS})
 
 kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/socketoptionsdlg.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/userselectdlg.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/groupselectdlg.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/usertab.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
+	propertiespagegui.ui
     )
 
 

@@ -6,13 +6,9 @@
 
 
 ########### next target ###############
-set(libfilesharesamba_SRCS sambafile.cpp sharedlgimpl.cpp sambashare.cpp common.cpp usertabimpl.cpp 
-    filemodedlgimpl.cpp smbpasswdfile.cpp passwd.cpp hiddenfileview.cpp dictmanager.cpp 
-    qmultichecklistitem.cpp smbconfconfigwidget.cpp linuxpermissionchecker.cpp )
-
 set(kcm_kcmsambaconf_PART_SRCS printerdlgimpl.cpp kcmsambaconf.cpp ${libfilesharesamba_SRCS})
 
-kde4_add_ui3_files(libfilesharesamba_SRCS share.ui socketoptionsdlg.ui userselectdlg.ui
+kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS share.ui socketoptionsdlg.ui userselectdlg.ui
     groupselectdlg.ui usertab.ui filemodedlg.ui expertuserdlg.ui
     kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui
 )
@@ -25,7 +21,7 @@ kde4_add_plugin(kcm_kcmsambaconf WITH_PREFIX ${kcm_kcmsambaconf_PART_SRCS})
 
 kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
 
-target_link_libraries(kcm_kcmsambaconf  ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS} filesharesamba )
+target_link_libraries(kcm_kcmsambaconf  ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS}  )
 
 install_targets(${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
 

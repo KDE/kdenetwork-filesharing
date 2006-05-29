@@ -69,7 +69,7 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
   } else {
     shareFrame->setEnabled(true);
     // currently only one dir is allowed
-    m_path = m_items.first()->url().path(1);
+    m_path = m_items.first()->url().path(KUrl::AddTrailingSlash);
   }
   
   if (m_enterUrl) {
@@ -77,7 +77,7 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
     urlRq->setMode(KFile::Directory |
                    KFile::ExistingOnly |
                    KFile::LocalOnly );
-    urlRq->setURL(m_path);            
+    urlRq->setUrl(m_path);            
     connect( urlRq, SIGNAL(textChanged(const QString&)),
              this, SLOT(urlRqTextChanged(const QString&)));       
   } else {
@@ -106,7 +106,7 @@ void PropertiesPage::urlRqTextChanged(const QString&) {
       
   KUrl url(urlRq->url());
   if (url.isLocalFile()) {
-      QFileInfo info(url.path(1));
+      QFileInfo info(url.path(KUrl::AddTrailingSlash));
       if (info.exists() &&
           info.isDir()) 
       {
@@ -272,7 +272,7 @@ bool PropertiesPage::checkURL() {
   kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: enterUrl=true" << endl;
   
   KUrl url(urlRq->url());      
-  QString path = url.path(1);        
+  QString path = url.path(KUrl::AddTrailingSlash);        
   
   kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: m_path='" 
         << m_path << "'" << endl;

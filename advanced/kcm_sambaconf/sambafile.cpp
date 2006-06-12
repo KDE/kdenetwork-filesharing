@@ -183,7 +183,7 @@ bool SambaFile::slotApply()
 
     if (! proc.start(KProcess::Block)) {
         kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!" << endl;
-        //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.").arg(path));
+        //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.",path));
         delete _tempFile;
         _tempFile = 0;
         return false;

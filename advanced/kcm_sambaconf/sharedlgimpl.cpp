@@ -246,7 +246,7 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("fstype",fstypeEdit);
   _dictMngr->add("magic script",magicScriptEdit);
   _dictMngr->add("magic output",magicOutputEdit);
-  _dictMngr->add("dont descend",dontDescendEdit);
+  _dictMngr->add("do not descend",dontDescendEdit);
   _dictMngr->add("set directory",setDirectoryChk);
   _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
 

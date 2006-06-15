@@ -230,7 +230,7 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
      }      
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successfull." << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successful." << endl;
   return true;
 }
 

@@ -108,7 +108,7 @@ void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col,
 
   if (checkBoxColumns.testBit(col)) {
     // Bold/Italic/use default checkboxes
-    // code allmost identical to QCheckListItem
+    // code almost identical to QCheckListItem
     Q_ASSERT( lv ); //###
     // I use the text color of defaultStyles[0], normalcol in parent listview
 //    mcg.setColor( QPalette::Text, ((StyleListView*)lv)->normalcol );

@@ -130,7 +130,7 @@ void ShareListViewItem::updateShare()
 
 QPixmap ShareListViewItem::createPropertyPixmap()
 {
-  // Create a big pixmap wich holds the
+  // Create a big pixmap which holds the
   // icons which are needed
 
   int numberOfPix = 4; // the max number of pixmaps to join

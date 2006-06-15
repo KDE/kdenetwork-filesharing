@@ -145,7 +145,7 @@ QString SambaShare::getSynonym(const QString & name) const
   if (lname == "lock dir") return "lock directory";
   if (lname == "min passwd length") return "min password length";
   if (lname == "only guest") return "guest only";
-  if (lname == "prefered master") return "preferred master";
+  if (lname == "preferred master") return "preferred master";
   if (lname == "print ok") return "printable";
   if (lname == "printcap") return "printcap name";
   if (lname == "printer") return "printer name";

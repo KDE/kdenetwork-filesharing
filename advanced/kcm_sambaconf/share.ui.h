@@ -91,7 +91,7 @@ void KcmShareDlg::trytoAccept()
     if (directory->isChecked()){
 	if (!homes->isChecked()){
 	    if (shareName->text() == "[homes]"){
-		KMessageBox::sorry(this, i18n("Sorry, but you can't create a share named \"[homes]\".\nIf you want to share your home-directorys, please click on \"Share homes\" on the \"Base settings\"-tab."));
+		KMessageBox::sorry(this, i18n("Sorry, but you can't create a share named \"[homes]\".\nIf you want to share your home-directories, please click on \"Share homes\" on the \"Base settings\"-tab."));
 		error = true;
 	    }
 	}

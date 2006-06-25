@@ -18,7 +18,7 @@
 #ifndef NFSHOSTDLG_H
 #define NFSHOSTDLG_H
 
-#include <kdialogbase.h>
+#include <kdialog.h>
 #include "nfsentry.h"
 
 class NFSHost;
@@ -28,7 +28,7 @@ class QCheckBox;
 class QLineEdit;
 
 
-class NFSHostDlg : public KDialogBase
+class NFSHostDlg : public KDialog
 {
 Q_OBJECT
 public: 

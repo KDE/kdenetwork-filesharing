@@ -35,11 +35,15 @@
 
 
 NFSHostDlg::NFSHostDlg(QWidget* parent, HostList* hosts, NFSEntry* entry)
-  : KDialogBase(Plain, i18n("Host Properties"), Ok|Cancel, Ok, parent),
+  : KDialog(parent),
   m_hosts(hosts), m_nfsEntry(entry), m_modified(false)
 {
-
-  QWidget* page = plainPage();
+  setCaption(i18n("Host Properties"));
+  setButtons(Ok|Cancel);
+  setDefaultButton(Ok);
+  
+  QWidget* page = new QWidget(this);
+  setMainWidget(page);
 
   m_gui = new HostProps(page);
 
@@ -143,7 +147,7 @@ void NFSHostDlg::slotOk()
     }
   }    
   
-  KDialogBase::slotOk();
+  KDialog::accept();
 }
 
 bool NFSHostDlg::saveName(NFSHost* host) {

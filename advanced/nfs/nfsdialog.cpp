@@ -42,10 +42,13 @@
 #include "nfsdialoggui.h"
 
 NFSDialog::NFSDialog(QWidget * parent, NFSEntry* entry)
- : KDialogBase(Plain, i18n("NFS Options"), Ok|Cancel, Ok, parent), 
+ : KDialog(parent), 
    m_nfsEntry(entry),
    m_modified(false)
 {
+  setCaption(i18n("NFS Options"));
+  setButtons(Ok|Cancel);
+  setDefaultButton(Ok);
   if (m_nfsEntry) 
       m_workEntry = m_nfsEntry->copy();
   else
@@ -62,7 +65,8 @@ NFSDialog::~NFSDialog()
 }
 
 void NFSDialog::initGUI() {
-  QWidget* page = plainPage();
+  QWidget* page = new QWidget(this);
+  setMainWidget(page);
   m_gui = new NFSDialogGUI(page);
 
   QVBoxLayout *layout = new QVBoxLayout( page );
@@ -141,7 +145,7 @@ void NFSDialog::slotOk() {
   if (m_modified) {
     m_nfsEntry->copyFrom(m_workEntry);
   }    
-  KDialogBase::slotOk();
+  KDialog::accept();
 }
 
 void NFSDialog::slotRemoveHost()

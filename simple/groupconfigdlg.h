@@ -20,13 +20,13 @@
 #ifndef GROUPCONFIGDLG_H
 #define GROUPCONFIGDLG_H
 
-#include <kdialogbase.h>
+#include <kdialog.h>
 
 #include <kuser.h>
 
 class GroupConfigGUI;
 
-class GroupConfigDlg : public KDialogBase
+class GroupConfigDlg : public KDialog
 {
 Q_OBJECT
 public: 

@@ -33,7 +33,6 @@
 #include <kpushbutton.h>
 #include <kdebug.h>
 #include <kdialog.h>
-#include <kdialogbase.h>
 #include <kgenericfactory.h>
 #include <k3listview.h>
 #include <kiconloader.h>
@@ -357,10 +356,16 @@ void KFileShareConfig::addShareBtnClicked() {
 
 
 PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
-  : KDialogBase(parent, "sharedlg", true,
+  : KDialog(parent, "sharedlg", true,
                 i18n("Share Folder"), Ok|Cancel, Ok, true)
 {
-  KVBox* vbox = makeVBoxMainWidget();
+  setCaption(i18n("Share Folder"));
+  setButtons(Ok|Cancel);
+  setDefaultbutton(Ok);
+  setModal(true);
+  enableButtonSeparator(true);
+  KVBox* vbox = new KVBox(this);
+  setMainWidget(vbox);
 
   m_page = new PropertiesPage(vbox,files,true);
 }
@@ -375,7 +380,7 @@ void PropertiesPageDlg::slotOk() {
         return;
   }
 
-  KDialogBase::slotOk();
+  KDialog::accept();
 }
 
 

@@ -52,14 +52,18 @@ static bool userMod(const QString & user, const QList<KUserGroup> & groups);
 GroupConfigDlg::GroupConfigDlg(QWidget * parent,
       const QString & fileShareGroup, bool restricted,
       bool rootPassNeeded, bool simpleSharing)
-  : KDialogBase(parent,"groupconfigdlg", true,
-                i18n("Allowed Users"), Ok|Cancel, Ok, true) ,
+  : KDialog(parent),
   m_fileShareGroup(fileShareGroup),
   m_restricted(restricted) ,
   m_rootPassNeeded(rootPassNeeded),
   m_simpleSharing(simpleSharing)
 
 {
+  setCaption(i18n("Allowed Users"));
+  setButtons(Ok|Cancel);
+  setDefaultButton(Ok);
+  setModal(true);
+  enableButtonSeparator(true);
   initGUI();
 
   setFileShareGroup(m_fileShareGroup);
@@ -219,7 +223,7 @@ void GroupConfigDlg::slotOk() {
   }
 
 
-  KDialogBase::slotOk();
+  KDialog::accept();
 }
 
 bool userMod(const QString & user, const QList<KUserGroup> & groups) {
@@ -266,10 +270,14 @@ void GroupConfigDlg::slotChangeGroup() {
 
   stringList.sort();
 
-  KDialogBase* dlg = new KDialogBase(this,"groupconfigdlg", true,
-                i18n("Allowed Users"), Ok|Cancel, Ok, true);
-
-  KVBox* vbox = dlg->makeVBoxMainWidget();
+  KDialog* dlg = new KDialog(this);
+  dlg->setCaption(i18n("Allowed Users"));
+  dlg->setButtons(Ok|Cancel);
+  dlg->setDefaultButton(Ok);
+  dlg->setModal(true);
+  dlg->enableButtonSeparator(true);
+  KVBox* vbox = new KVBox(this);
+  dlg->setMainWidget(vbox);
 
   KHBox* hbox = new KHBox(vbox);
   QLabel* lbl = new QLabel(i18n("New file share group:"),hbox);

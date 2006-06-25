@@ -20,7 +20,7 @@
 #ifndef NFSDIALOG_H
 #define NFSDIALOG_H
 
-#include <kdialogbase.h>
+#include <kdialog.h>
 
 class NFSEntry;
 class NFSHost;
@@ -28,7 +28,7 @@ class Q3ListViewItem;
 class NFSFile;
 class NFSDialogGUI;
 
-class NFSDialog : public KDialogBase
+class NFSDialog : public KDialog
 {
 Q_OBJECT
 public: 

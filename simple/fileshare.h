@@ -65,7 +65,7 @@ class KFileShareConfig  : public KCModule
   
 };
 
-class PropertiesPageDlg : public KDialogBase
+class PropertiesPageDlg : public KDialog
 {
 Q_OBJECT
 public: 

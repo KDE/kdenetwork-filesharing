@@ -363,7 +363,7 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
   setButtons(Ok|Cancel);
   setDefaultbutton(Ok);
   setModal(true);
-  enableButtonSeparator(true);
+  showButtonSeparator(true);
   KVBox* vbox = new KVBox(this);
   setMainWidget(vbox);
 

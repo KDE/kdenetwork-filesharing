@@ -63,7 +63,7 @@ GroupConfigDlg::GroupConfigDlg(QWidget * parent,
   setButtons(Ok|Cancel);
   setDefaultButton(Ok);
   setModal(true);
-  enableButtonSeparator(true);
+  showButtonSeparator(true);
   initGUI();
 
   setFileShareGroup(m_fileShareGroup);
@@ -275,7 +275,7 @@ void GroupConfigDlg::slotChangeGroup() {
   dlg->setButtons(Ok|Cancel);
   dlg->setDefaultButton(Ok);
   dlg->setModal(true);
-  dlg->enableButtonSeparator(true);
+  dlg->showButtonSeparator(true);
   KVBox* vbox = new KVBox(this);
   dlg->setMainWidget(vbox);
 

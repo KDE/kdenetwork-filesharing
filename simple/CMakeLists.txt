@@ -31,12 +31,12 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_fileshare )
 
 target_link_libraries(kcm_fileshare  ${KDE4_KIO_LIBS} )
 
-install_targets(${PLUGIN_INSTALL_DIR} kcm_fileshare )
+install(TARGETS kcm_fileshare  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES fileshare.desktop )
+install( FILES fileshare.desktop  DESTINATION ${XDG_APPS_DIR})
 
 
 

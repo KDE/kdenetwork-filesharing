@@ -28,7 +28,7 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} fileshare_propsdlgplugin )
 
 target_link_libraries(fileshare_propsdlgplugin  ${KDE4_KIO_LIBS} )
 
-install_targets(${PLUGIN_INSTALL_DIR} fileshare_propsdlgplugin )
+install(TARGETS fileshare_propsdlgplugin  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 
 ########### next target ###############
@@ -36,7 +36,7 @@ install_targets(${PLUGIN_INSTALL_DIR} fileshare_propsdlgplugin )
 
 ########### install files ###############
 
-install_files( ${SERVICES_INSTALL_DIR} FILES fileshare_propsdlgplugin.desktop )
+install( FILES fileshare_propsdlgplugin.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
 
 
 

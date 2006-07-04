@@ -23,12 +23,12 @@ kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
 
 target_link_libraries(kcm_kcmsambaconf  ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS}  )
 
-install_targets(${PLUGIN_INSTALL_DIR} kcm_kcmsambaconf )
+install(TARGETS kcm_kcmsambaconf  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 
 ########### install files ###############
 
-install_files( ${XDG_APPS_DIR} FILES kcmsambaconf.desktop )
+install( FILES kcmsambaconf.desktop  DESTINATION ${XDG_APPS_DIR})
 
 kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
 

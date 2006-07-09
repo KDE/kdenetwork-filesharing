@@ -71,7 +71,7 @@ SmbConfConfigWidget::SmbConfConfigWidget(QWidget* parent)
 void SmbConfConfigWidget::btnPressed() {
   QString smbConf = KFileDialog::getOpenFileName(KUrl("file:///"),
             i18n("smb.conf|Samba conf. File\n"
-            "*|All Files",0,i18n("Get smb.conf Location")));
+            "*|All Files"),0,i18n("Get smb.conf Location"));
 
   if (smbConf.isEmpty())
 		  return;

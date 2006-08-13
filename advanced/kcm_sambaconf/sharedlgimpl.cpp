@@ -107,7 +107,7 @@ void ShareDlgImpl::initDialog()
 
 	pathUrlRq->setMode(2+8+16);
 
-  homeChk->setChecked(_share->getName().lower() == "homes");
+  homeChk->setChecked(_share->getName().toLower() == "homes");
   shareNameEdit->setText( _share->getName() );
 
   _dictMngr->add("path",pathUrlRq);
@@ -285,40 +285,40 @@ void ShareDlgImpl::initAdvancedTab()
 		w = advancedDumpTab->page(i);
 		label = advancedDumpTab->label(i);
 
-		if (label.lower() == "security")
+		if (label.toLower() == "security")
 			 icon = SmallIcon("password");
 		else
-		if (label.lower() == "tuning")
+		if (label.toLower() == "tuning")
 			 icon = SmallIcon("launch");
 		else
-		if (label.lower() == "filenames")
+		if (label.toLower() == "filenames")
 			 icon = SmallIcon("folder");
 		else
-		if (label.lower() == "printing")
+		if (label.toLower() == "printing")
 			 icon = SmallIcon("fileprint");
 		else
-		if (label.lower() == "locking")
+		if (label.toLower() == "locking")
 			 icon = SmallIcon("lock");
 		else
-		if (label.lower() == "logon")
+		if (label.toLower() == "logon")
 			 icon = SmallIcon("kdmconfig");
 		else
-		if (label.lower() == "protocol")
+		if (label.toLower() == "protocol")
 			 icon = SmallIcon("core");
 		else
-		if (label.lower() == "coding")
+		if (label.toLower() == "coding")
 			 icon = SmallIcon("charset");
 		else
-		if (label.lower() == "socket")
+		if (label.toLower() == "socket")
 				icon = SmallIcon("socket");
 		else
-		if (label.lower() == "ssl")
+		if (label.toLower() == "ssl")
 			 icon = SmallIcon("encrypted");
 		else
-		if (label.lower() == "browsing")
+		if (label.toLower() == "browsing")
 			 icon = SmallIcon("konqueror");
 		else
-		if (label.lower() == "misc")
+		if (label.toLower() == "misc")
 			 icon = SmallIcon("misc");
 		else {
 			 icon = QPixmap(16,16);

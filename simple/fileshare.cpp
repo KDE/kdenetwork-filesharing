@@ -97,13 +97,13 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const QStringList &):
       if (nfsExec.isEmpty()) {
         m_ccgui->nfsChk->setDisabled(true);
         m_ccgui->nfsChk->setChecked(false);
-        QToolTip::add(m_ccgui->nfsChk,i18n("No NFS server installed on this system"));
+        m_ccgui->nfsChk->setToolTip(i18n("No NFS server installed on this system"));
       }
 
       if (sambaExec.isEmpty()) {
         m_ccgui->sambaChk->setDisabled(true);
         m_ccgui->sambaChk->setChecked(false);
-        QToolTip::add(m_ccgui->sambaChk,i18n("No Samba server installed on this system"));
+        m_ccgui->sambaChk->setToolTip(i18n("No Samba server installed on this system"));
       }
 
       m_ccgui->infoLbl->hide();
@@ -356,13 +356,13 @@ void KFileShareConfig::addShareBtnClicked() {
 
 
 PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
-  : KDialog(parent, "sharedlg", true,
-                i18n("Share Folder"), Ok|Cancel, Ok, true)
+  : KDialog(parent)
 {
-  setCaption(i18n("Share Folder"));
-  setButtons(Ok|Cancel);
-  setDefaultbutton(Ok);
+  setObjectName("sharedlg");
   setModal(true);
+  setButtons(Ok|Cancel);
+  setDefaultButton(Ok);
+  setCaption(i18n("Share Folder"));
   showButtonSeparator(true);
   KVBox* vbox = new KVBox(this);
   setMainWidget(vbox);

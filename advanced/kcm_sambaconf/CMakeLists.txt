@@ -30,7 +30,7 @@ install(TARGETS kcm_kcmsambaconf  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 install( FILES kcmsambaconf.desktop  DESTINATION ${XDG_APPS_DIR})
 
-kde4_install_icons( ${ICON_INSTALL_DIR}  hicolor )
+kde4_install_icons( ${ICON_INSTALL_DIR}   )
 
 
 

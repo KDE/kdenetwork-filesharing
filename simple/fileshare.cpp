@@ -87,7 +87,8 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const char *name, const QStr
 
   if ( nfsExec.isEmpty() && sambaExec.isEmpty())
   {
-      m_ccgui->setEnabled( false );
+      m_ccgui->shareGrp->setDisabled(true);
+      m_ccgui->sharedFoldersGroupBox->setDisabled(true);
   }
   else
   {   

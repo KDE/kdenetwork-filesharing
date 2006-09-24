@@ -36,7 +36,7 @@
 #include <kmessagebox.h>
 #include <klineedit.h>
 #include <kprocio.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 
 // NFS related
 #include "../nfs/nfsfile.h"
@@ -199,26 +199,26 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
 
   
   if (nfsNeedsKDEsu || sambaNeedsKDEsu) {
-     KTempFile nfsTempFile;
-     nfsTempFile.setAutoDelete(true);
-     KTempFile sambaTempFile;
-     sambaTempFile.setAutoDelete(true);
-     
+     KTemporaryFile nfsTempFile;
+     nfsTempFile.open();
+     KTemporaryFile sambaTempFile;
+     sambaTempFile.open();
+
      KProcIO proc;
 
      QString command;
      
      if (nfsNeedsKDEsu) {
-         nfsFile->saveTo(nfsTempFile.name());
+         nfsFile->saveTo(nfsTempFile.fileName());
          command += QString("cp %1 %2;exportfs -ra;")
-        .arg(KProcess::quote( nfsTempFile.name() ))
+        .arg(KProcess::quote( nfsTempFile.fileName() ))
         .arg(KProcess::quote( nfsFileName ));
      }         
      
      if (sambaNeedsKDEsu) {
-         sambaFile->saveTo(sambaTempFile.name());
+         sambaFile->saveTo(sambaTempFile.fileName());
          command += QString("cp %1 %2;")
-        .arg(KProcess::quote( sambaTempFile.name() ))
+        .arg(KProcess::quote( sambaTempFile.fileName() ))
         .arg(KProcess::quote( sambaFileName ));
      }       
          

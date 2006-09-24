@@ -30,7 +30,7 @@
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <knfsshare.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 #include <kprocio.h>
 
 #include "nfsfile.h"
@@ -233,15 +233,14 @@ bool NFSFile::save()
   } else
   {
 
-    KTempFile tempFile;
-    saveTo(tempFile.name());
-    tempFile.close();
-    tempFile.setAutoDelete( true );
+    KTemporaryFile tempFile;
+    tempFile.open();
+    saveTo(tempFile.fileName());
 
     KProcIO proc;
 
     QString command = QString("cp %1 %2")
-        .arg(KProcess::quote( tempFile.name() ))
+        .arg(KProcess::quote( tempFile.fileName() ))
         .arg(KProcess::quote( _url.path() ));
 
     if (restartNFSServer)

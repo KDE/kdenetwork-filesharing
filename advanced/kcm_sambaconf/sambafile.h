@@ -32,7 +32,7 @@
 class KSimpleConfig;
 class KProcess;
 class KConfig;
-class KTempFile;
+class KTemporaryFile;
 
 class SambaFile;
 
@@ -155,7 +155,7 @@ protected:
 
 private:
   void copyConfigs(KConfig* first, KConfig* second);
-  KTempFile * _tempFile;
+  KTemporaryFile * _tempFile;
 public slots:
 
   /**

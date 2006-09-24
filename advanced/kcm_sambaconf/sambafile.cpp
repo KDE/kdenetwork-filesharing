@@ -30,7 +30,7 @@
 #include <kprocess.h>
 #include <kmessagebox.h>
 #include <klocale.h>
-#include <ktempfile.h>
+#include <ktemporaryfile.h>
 #include <ksambashare.h>
 
 #include <pwd.h>
@@ -158,10 +158,9 @@ bool SambaFile::slotApply()
 
   // Create a temporary smb.conf file
    delete _tempFile;
-  _tempFile = new KTempFile();
-  _tempFile->setAutoDelete(true);
+  _tempFile = new KTemporaryFile();
 
-  if (!saveTo(_tempFile->name())) {
+  if (!_tempFile->open() || !saveTo(_tempFile->fileName())) {
     kDebug(5009) << "SambaFile::slotApply: Could not save to temporary file" << endl;
     delete _tempFile;
     _tempFile = 0;
@@ -176,9 +175,9 @@ bool SambaFile::slotApply()
     kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
 
     QString suCommand=QString("cp %1 %2; rm %3")
-              .arg(_tempFile->name())
+              .arg(_tempFile->fileName())
               .arg(path)
-              .arg(_tempFile->name());
+              .arg(_tempFile->fileName());
     proc << "kdesu" << "-d" << suCommand;
 
     if (! proc.start(KProcess::Block)) {
@@ -197,9 +196,8 @@ bool SambaFile::slotApply()
     }
   } else {
     kDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
-    _tempFile->setAutoDelete(true);
     KUrl srcURL;
-    srcURL.setPath( _tempFile->name() );
+    srcURL.setPath( _tempFile->fileName() );
 
     KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
     connect( job, SIGNAL( result( KJob * ) ),
@@ -486,8 +484,9 @@ bool SambaFile::load()
   KUrl url(path);
 
   if (!url.isLocalFile()) {
-    KTempFile tempFile;
-    localPath = tempFile.name();
+    KTemporaryFile tempFile;
+    tempFile.open();
+    localPath = tempFile.fileName();
     KUrl destURL;
     destURL.setPath( localPath );
     KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, true, false, true );

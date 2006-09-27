@@ -129,7 +129,7 @@ QString SambaFile::findShareByPath(const QString & path) const
     }
   }
 
-  return QString::null;
+  return QString();
 }
 
 bool SambaFile::save() {

@@ -109,7 +109,7 @@ void GroupConfigDlg::updateListBox() {
 }
 
 QString prettyString(const KUser &user) {
-  return user.fullName()+" ("+user.loginName()+")";
+  return user.fullName()+" ("+user.loginName()+')';
 }
 
 QString fromPrettyString(const QString & s) {
@@ -141,7 +141,7 @@ void GroupConfigDlg::slotAddUser() {
 
   QList<KUser>::iterator it;
   for ( it = allUsers.begin(); it != allUsers.end(); ++it ) {
-    QString s = (*it).fullName()+" ("+(*it).loginName()+")";
+    QString s = (*it).fullName()+" ("+(*it).loginName()+')';
     stringList.append(s);
   }
 
@@ -249,7 +249,7 @@ QString groupListToString(const QList<KUserGroup> & list) {
   QString result;
 
   for ( it = list.begin(); it != list.end(); ++it ) {
-    result+=(*it).name()+",";
+    result+=(*it).name()+',';
   }
 
   // remove last ,

@@ -1392,25 +1392,25 @@ QString KcmSambaConf::socketOptions()
   if ( _interface->SO_SNDBUFChk->isChecked() ) {
     s+= "SO_SNDBUF=";
     s+= QString::number( _interface->SO_SNDBUFSpin->value() );
-    s+= " ";
+    s+= ' ';
   }
 
   if ( _interface->SO_RCVBUFChk->isChecked() ) {
     s+= "SO_RCVBUF=";
     s+= QString::number( _interface->SO_RCVBUFSpin->value() );
-    s+= " ";
+    s+= ' ';
   }
 
   if ( _interface->SO_SNDLOWATChk->isChecked() ) {
     s+= "SO_SNDLOWAT=";
     s+= QString::number( _interface->SO_SNDLOWATSpin->value() );
-    s+= " ";
+    s+= ' ';
   }
 
   if ( _interface->SO_RCVLOWATChk->isChecked() ) {
     s+= "SO_RCVLOWAT=";
     s+= QString::number( _interface->SO_RCVLOWATSpin->value() );
-    s+= " ";
+    s+= ' ';
 
   }
 

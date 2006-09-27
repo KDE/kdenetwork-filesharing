@@ -29,7 +29,7 @@
 #include <assert.h>
 
 #include <stdio.h>
- 
+
 #include <qlineedit.h>
 #include <qcheckbox.h>
 
@@ -55,7 +55,7 @@ void FileModeDlgImpl::init()
 
   if (!ok)
      mod = 0;
-  
+
   stickyBitChk->setChecked( mod & 01000 );
   setGIDChk->setChecked( mod & 02000 );
   setUIDChk->setChecked( mod & 04000 );
@@ -63,15 +63,15 @@ void FileModeDlgImpl::init()
   ownerExecChk->setChecked( mod & 0100 );
   ownerWriteChk->setChecked( mod & 0200 );
   ownerReadChk->setChecked( mod & 0400 );
-  
+
   groupExecChk->setChecked( mod & 010 );
   groupWriteChk->setChecked( mod & 020 );
   groupReadChk->setChecked( mod & 040 );
-  
+
   othersExecChk->setChecked( mod & 01 );
   othersWriteChk->setChecked( mod & 02 );
   othersReadChk->setChecked( mod & 04 );
-  
+
 }
 
 void FileModeDlgImpl::accept()
@@ -83,7 +83,7 @@ void FileModeDlgImpl::accept()
         (setGIDChk->isChecked() ? 2 : 0) +
         (setUIDChk->isChecked() ? 4 : 0)
        );
-       
+
   s += QString::number(
         (ownerExecChk->isChecked() ? 1 : 0) +
         (ownerWriteChk->isChecked() ? 2 : 0) +
@@ -105,11 +105,11 @@ void FileModeDlgImpl::accept()
   // it's an octal number so start with a 0
   // but remove all the other trailing 0's
   s = QString::number( s.toInt());
-  s = "0"+s;
+  s = '0'+s;
 
   _edit->setText(s);
 
-  
+
 
   FileModeDlg::accept();
 }

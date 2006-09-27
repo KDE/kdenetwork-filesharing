@@ -191,7 +191,7 @@ KcmSambaConf::KcmSambaConf(KInstance *inst,QWidget *parent, const char *name)
 
 
   QBoxLayout * l = new QHBoxLayout( this );
-  l->setAutoAdd( TRUE );
+  l->setAutoAdd( true );
 
   QString smbFile = SambaFile::findSambaConf();
   if (smbFile.isNull()) {

@@ -42,14 +42,14 @@ static QString qrichtextify( const QString& text )
 
 KRichTextLabel::KRichTextLabel( const QString &text , QWidget *parent )
  : QLabel ( parent ) {
-  m_defaultWidth = QMIN(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
+  m_defaultWidth = qMin(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
   setWordWrap( true );
   setText(text);
 }
 
 KRichTextLabel::KRichTextLabel( QWidget *parent )
  : QLabel ( parent ) {
-  m_defaultWidth = QMIN(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
+  m_defaultWidth = qMin(400, KGlobalSettings::desktopGeometry(this).width()*2/5);
   setWordWrap( true );
 }
 

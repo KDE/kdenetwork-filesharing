@@ -371,7 +371,10 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <enum>Qt::RichText</enum>
                                 </property>
                                 <property name="alignment">
-                                    <set>Qt::TextWordWrap|Qt::AlignTop</set>
+                                    <set>Qt::AlignTop</set>
+                                </property>
+                                <property name="wordWrap" >
+                                    <bool>true</bool>
                                 </property>
                                 <property name="indent">
                                     <number>5</number>

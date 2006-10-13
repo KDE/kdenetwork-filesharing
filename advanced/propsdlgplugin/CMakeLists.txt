@@ -20,7 +20,7 @@ kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     )
 
 
-kde4_automoc(${fileshare_propsdlgplugin_PART_SRCS})
+kde4_automoc(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 
 kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 

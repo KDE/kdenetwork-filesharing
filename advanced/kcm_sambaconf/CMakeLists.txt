@@ -14,7 +14,7 @@ kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS share.ui socketoptionsdlg.ui users
 )
 
 
-kde4_automoc(kcm_kcmsambaconf ${kcm_kcmsambaconf_PART_SRCS})
+kde4_automoc(${kcm_kcmsambaconf_PART_SRCS})
 
 
 kde4_add_plugin(kcm_kcmsambaconf WITH_PREFIX ${kcm_kcmsambaconf_PART_SRCS})

@@ -24,7 +24,6 @@ kde4_automoc(${fileshare_propsdlgplugin_PART_SRCS})
 
 kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 
-kde4_install_libtool_file( ${PLUGIN_INSTALL_DIR} fileshare_propsdlgplugin )
 
 target_link_libraries(fileshare_propsdlgplugin  ${KDE4_KIO_LIBS} )
 

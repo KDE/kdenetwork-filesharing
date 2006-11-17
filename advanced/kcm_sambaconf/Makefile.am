@@ -1,24 +1,24 @@
 KDE_ICON = AUTO
 noinst_LTLIBRARIES = libfilesharesamba.la
-kde_module_LTLIBRARIES = libkcm_kcmsambaconf.la 
+kde_module_LTLIBRARIES = kcm_kcmsambaconf.la 
 
 AM_CPPFLAGS = $(all_includes)
 METASOURCES=AUTO
 
-libkcm_kcmsambaconf_la_SOURCES = \
+kcm_kcmsambaconf_la_SOURCES = \
       kcminterface.ui \
       kcmprinterdlg.ui \
       printerdlgimpl.cpp \
       kcmsambaconf.cpp \
       joindomaindlg.ui 
-libkcm_kcmsambaconf_la_COMPILE_FIRST = usertab.h share.h
+kcm_kcmsambaconf_la_COMPILE_FIRST = usertab.h share.h
       
 
-libkcm_kcmsambaconf_la_LIBADD = \
+kcm_kcmsambaconf_la_LIBADD = \
       -lkdeprint \
       libfilesharesamba.la
       
-libkcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
+kcm_kcmsambaconf_la_LDFLAGS = $(all_libraries) -module $(KDE_PLUGIN)
 
 libfilesharesamba_la_SOURCES = \
     sambafile.cpp \

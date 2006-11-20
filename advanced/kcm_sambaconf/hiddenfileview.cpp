@@ -142,7 +142,7 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
 //  new QLabel(i18n("Example")+" : ",grid);
 //  new QLabel(i18n("*.tmp/*SECRET*/.*/file?.*/"),grid);
 
-  _dir = new KDirLister(true);
+  _dir = new KDirLister(this);
   _dir->setShowingDotFiles(true);
 
   connect( _dir, SIGNAL(newItems(const KFileItemList &)),
@@ -188,7 +188,6 @@ void HiddenFileView::initListView()
 
 HiddenFileView::~HiddenFileView()
 {
-    delete _dir;
 }
 
 void HiddenFileView::load()

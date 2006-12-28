@@ -393,7 +393,7 @@ void KFileShareConfig::changeShareBtnClicked() {
   
   QListViewItem* item;
   for ( item = items.first(); item; item = items.next() ) {
-      files.append(new KFileItem(KURL(item->text(0)),"",0));
+      files.append(new KFileItem(KURL::fromPathOrURL(item->text(0)),"",0));
   }
   
   showShareDialog(files);

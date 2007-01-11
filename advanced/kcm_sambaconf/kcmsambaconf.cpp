@@ -1019,7 +1019,9 @@ void KcmSambaConf::loadCommands(SambaShare*)
 
 void KcmSambaConf::setComboIndexToValue(QComboBox* box, const QString & value, SambaShare* share)
 {
+#ifdef __GNUC__
 #warning "kde4: how to port it ?"
+#endif
 #if 0
 	int i = box->listBox()->index(box->listBox()->findItem(share->getValue(value,false,true),Qt::ExactMatch));
   box->setCurrentItem(i);

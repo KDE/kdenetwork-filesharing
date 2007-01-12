@@ -53,7 +53,7 @@ NFSHostDlg::NFSHostDlg(QWidget* parent, HostList* hosts, NFSEntry* entry)
   layout->addWidget( m_gui );
 
   connect( m_gui, SIGNAL(modified()), this, SLOT(setModified()));
-
+  connect(this,SIGNAL(okClicked()),this,SLOT(slotOk()));
   init();
 
 }

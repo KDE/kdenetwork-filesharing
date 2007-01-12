@@ -57,6 +57,7 @@ NFSDialog::NFSDialog(QWidget * parent, NFSEntry* entry)
   initGUI();
   initSlots();
   initListView();
+  connect(this,SIGNAL(okClicked()),this,SLOT(slotOk()));
 }
 
 NFSDialog::~NFSDialog()

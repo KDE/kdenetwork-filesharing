@@ -67,6 +67,7 @@ GroupConfigDlg::GroupConfigDlg(QWidget * parent,
   initGUI();
 
   setFileShareGroup(m_fileShareGroup);
+  connect(this,SIGNAL(okClicked()),this,SLOT(slotOk()));
 }
 
 GroupConfigDlg::~GroupConfigDlg() {

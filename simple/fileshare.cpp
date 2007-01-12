@@ -369,6 +369,7 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
   setMainWidget(vbox);
 
   m_page = new PropertiesPage(vbox,files,true);
+  connect(this,SIGNAL(okClicked()),this,SLOT(slotOk()));
 }
 
 bool PropertiesPageDlg::hasChanged() {

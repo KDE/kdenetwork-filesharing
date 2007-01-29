@@ -456,7 +456,7 @@ void SambaFile::parseParmStdOutput()
 **/
 QString SambaFile::findSambaConf()
 {
-    return KSambaShare::instance()->smbConfPath();
+    return KSambaShare::componentData().smbConfPath();
 }
 
 void SambaFile::slotSaveJobFinished( KJob * job ) {

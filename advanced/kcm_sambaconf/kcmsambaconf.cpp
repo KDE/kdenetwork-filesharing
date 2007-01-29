@@ -64,7 +64,7 @@
 #include <kjanuswidget.h>
 #include <k3listview.h>
 #include <ksimpleconfig.h>
-#include <kinstance.h>
+#include <kcomponentdata.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -182,7 +182,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
   return QPixmap(pix);
 }
 
-KcmSambaConf::KcmSambaConf(KInstance *inst,QWidget *parent, const char *name)
+KcmSambaConf::KcmSambaConf(const KComponentData &inst,QWidget *parent, const char *name)
   : KCModule(inst,parent)
 {
   _dictMngr = 0L;
@@ -1443,7 +1443,7 @@ extern "C"
   KDE_EXPORT KCModule *create_KcmSambaConf(QWidget *parent, const char *name)
   {
     KGlobal::locale()->insertCatalog("kfileshare");
-	KInstance * inst = new KInstance("kfileshare");
+    KComponentData inst("kfileshare");
     return new KcmSambaConf(inst,parent, name);
   }
 }

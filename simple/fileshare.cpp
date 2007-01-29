@@ -64,7 +64,7 @@ K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 #define FILESHARE_DEBUG 5009
 
 KFileShareConfig::KFileShareConfig(QWidget *parent, const QStringList &):
-    KCModule(ShareFactory::instance(), parent/*, name*/)
+    KCModule(ShareFactory::componentData(), parent/*, name*/)
 {
   KGlobal::locale()->insertCatalog("kfileshare");
 

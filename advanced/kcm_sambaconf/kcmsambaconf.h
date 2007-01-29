@@ -72,7 +72,7 @@ class KcmSambaConf: public KCModule
 {
   Q_OBJECT
   public:
-    KcmSambaConf(KInstance *inst ,QWidget *parent = 0L, const char *name = 0L);
+    KcmSambaConf(const KComponentData &inst ,QWidget *parent = 0L, const char *name = 0L);
     virtual ~KcmSambaConf();
 
     void load(const QString &);

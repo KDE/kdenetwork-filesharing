@@ -47,6 +47,7 @@
 #include <kurl.h>
 #include <kprocess.h>
 #include <krichtextlabel.h>
+#include <KVBox>
 
 #include "propertiespage.h"
 #include "nfsfile.h"

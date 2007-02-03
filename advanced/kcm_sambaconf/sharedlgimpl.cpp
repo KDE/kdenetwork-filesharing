@@ -66,7 +66,7 @@
 #include <kmenu.h>
 #include <kaction.h>
 #include <krestrictedline.h>
-#include <kjanuswidget.h>
+#include <KPageWidget>
 
 #include "smbpasswdfile.h"
 #include "sambafile.h"
@@ -105,7 +105,7 @@ void ShareDlgImpl::initDialog()
   // Base settings
   _fileView = 0L;
 
-	pathUrlRq->setMode(2+8+16);
+  pathUrlRq->setMode(KFile::Directory | KFile::ExistingOnly | KFile::LocalOnly);
 
   homeChk->setChecked(_share->getName().toLower() == "homes");
   shareNameEdit->setText( _share->getName() );
@@ -271,12 +271,13 @@ void ShareDlgImpl::initAdvancedTab()
   QVBoxLayout *l = new QVBoxLayout(advancedFrame);
 	l->setAutoAdd(true);
 	l->setMargin(0);
-	_janus = new KJanusWidget(advancedFrame,KJanusWidget::TreeList);
-	_janus->setRootIsDecorated(false);
-	_janus->setShowIconsInTreeList(true);
+	_janus = new KPageWidget(advancedFrame);
+	_janus->setFaceType(KPageView::Tree);
+// 	_janus->setRootIsDecorated(false);
+// 	_janus->setShowIconsInTreeList(true);
 
 	QWidget *w;
-	QFrame *f;
+	KPageWidgetItem *f;
 	QString label;
  	QPixmap icon;
 
@@ -326,16 +327,19 @@ void ShareDlgImpl::initAdvancedTab()
 		}
 			 //SmallIcon("empty2");
 
-		f = _janus->addPage( label,label,icon );
-		l = new QVBoxLayout(f);
-	  l->setAutoAdd(true);
+		l = new QVBoxLayout();
+		l->setAutoAdd(true);
 		l->setMargin(0);
 
-		advancedDumpTab->removePage(w);
-
-		w->setParent(f );
+		w->setLayout(l);
                 w->move( 1, 1 );
                 w->show();
+
+		f = _janus->addPage(w, label);
+		f->setHeader(label);
+		f->setIcon(KIcon(icon));
+
+		advancedDumpTab->removePage(w);
 	}
 
 	w = _tabs->page(5);

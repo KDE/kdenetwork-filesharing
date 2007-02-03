@@ -22,7 +22,7 @@
 
 #include <kpropertiesdialog.h>
 
-class PropsDlgSharePlugin : public KPropsDlgPlugin
+class PropsDlgSharePlugin : public KPropertiesDialogPlugin
 {
 Q_OBJECT
 public:

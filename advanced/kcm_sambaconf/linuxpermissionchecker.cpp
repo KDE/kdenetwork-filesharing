@@ -117,7 +117,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
            "the guest account <b>%1</b> does not have the necessary read permissions;<br>" 
            "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
-           ,KStdGuiItem::cont()
+           ,KStandardGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoReadPermissionsWarning"))
          return false;
   }
@@ -131,7 +131,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
            "the guest account <b>%1</b> does not have the necessary write permissions;<br>" 
            "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
-           ,KStdGuiItem::cont()
+           ,KStandardGuiItem::cont()
            ,"KSambaPlugin_guestAccountHasNoWritePermissionsWarning"))
          return false;
   }
@@ -168,7 +168,7 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
           "the user does not have the necessary write permissions;<br>" 
           "do you want to continue anyway?</qt>", user)
           ,i18n("Warning")
-          ,KStdGuiItem::cont()
+          ,KStandardGuiItem::cont()
           ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
         return false;
   }
@@ -191,7 +191,7 @@ bool LinuxPermissionChecker::checkUserReadPermissions(const QString & user, bool
            "the user does not have the necessary read permissions;<br>" 
            "do you want to continue anyway?</qt>", user)
            ,i18n("Warning")
-           ,KStdGuiItem::cont()
+           ,KStandardGuiItem::cont()
            ,"KSambaPlugin_userHasNoReadPermissionsWarning"))
          return false;
      

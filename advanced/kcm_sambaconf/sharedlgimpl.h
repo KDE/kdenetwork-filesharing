@@ -46,7 +46,7 @@ class Q3GroupBox;
 class UserTabImpl;
 class HiddenFileView;
 class DictManager;
-class KJanusWidget;
+class KPageWidget;
 
 /**
  * This class implements the share.ui interface
@@ -77,7 +77,7 @@ protected :
 
   HiddenFileView* _fileView;
   UserTabImpl* _userTab;
-  KJanusWidget* _janus;
+  KPageWidget* _janus;
   bool m_changed;
   DictManager* _dictMngr;
 

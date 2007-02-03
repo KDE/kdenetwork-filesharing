@@ -185,7 +185,7 @@ void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
   Q3DictIterator<KUrlRequester> urlRequesterIt( urlRequesterDict ); 
  
   for( ; urlRequesterIt.current(); ++urlRequesterIt )	{
-    share->setValue(urlRequesterIt.currentKey(),urlRequesterIt.current()->url(), globalValue, defaultValue );
+    share->setValue(urlRequesterIt.currentKey(),urlRequesterIt.current()->url().url(), globalValue, defaultValue );
   }
 
   Q3DictIterator<QSpinBox> spinBoxIt( spinBoxDict ); 

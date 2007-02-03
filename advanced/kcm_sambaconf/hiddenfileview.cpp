@@ -115,9 +115,9 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
   _share = share;
   _dlg = shareDlg;
 
-  _hiddenActn = new KToggleAction(i18n("&Hide"));
-  _vetoActn = new KToggleAction(i18n("&Veto"));
-  _vetoOplockActn = new KToggleAction(i18n("&Veto Oplock"));
+  _hiddenActn = new KToggleAction(i18n("&Hide"), this);
+  _vetoActn = new KToggleAction(i18n("&Veto"), this);
+  _vetoOplockActn = new KToggleAction(i18n("&Veto Oplock"), this);
 
   initListView();
 
@@ -171,9 +171,9 @@ void HiddenFileView::initListView()
 
   _popup = new KMenu(_dlg->hiddenListView);
 
-  _hiddenActn->plug(_popup);
-  _vetoActn->plug(_popup);
-  _vetoOplockActn->plug(_popup);
+  _popup->addAction(_hiddenActn);
+  _popup->addAction(_vetoActn);
+  _popup->addAction(_vetoOplockActn);
 
   connect( _dlg->hiddenListView, SIGNAL(selectionChanged()), this, SLOT(selectionChanged()));
   connect( _dlg->hiddenListView, SIGNAL(contextMenu(K3ListView*,Q3ListViewItem*,const QPoint&)),
@@ -388,7 +388,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
         if (!rx && item->text(0)[0]=='.' && _dlg->hideDotFilesChk->isChecked()) {
             int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<qt>Some files you have selected are hidden because they start with a dot; "
-                    "do you want to uncheck all files starting with a dot?</qt>"),i18n("Files Starting With Dot"),i18n("Uncheck Hidden"), i18n("Keep Hidden"));
+                    "do you want to uncheck all files starting with a dot?</qt>"),i18n("Files Starting With Dot"),KGuiItem(i18n("Uncheck Hidden")), KGuiItem(i18n("Keep Hidden")));
 
             if (result == KMessageBox::No) {
                 Q3PtrList<HiddenListViewItem> lst = getMatchingItems(QRegExp(".*",false,true));
@@ -409,7 +409,7 @@ void HiddenFileView::checkBoxClicked(QCheckBox* chkBox,KToggleAction* action,QLi
                     int result = KMessageBox::questionYesNo(_dlg,i18n(
                     "<b></b>Some files you have selected are matched by the wildcarded string <b>'%1'</b>; "
                     "do you want to uncheck all files matching <b>'%1'</b>?", rx->pattern()),
-                    i18n("Wildcarded String"),i18n("Uncheck Matches"),i18n("Keep Selected"));
+                    i18n("Wildcarded String"),KGuiItem(i18n("Uncheck Matches")),KGuiItem(i18n("Keep Selected")));
 
                     Q3PtrList<HiddenListViewItem> lst = getMatchingItems( *rx );
 

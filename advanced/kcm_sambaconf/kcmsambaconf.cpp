@@ -61,10 +61,11 @@
 #include <knuminput.h>
 #include <krestrictedline.h>
 #include <kmessagebox.h>
-#include <kjanuswidget.h>
+#include <KPageWidget>
 #include <k3listview.h>
 #include <ksimpleconfig.h>
 #include <kcomponentdata.h>
+#include <k3passworddialog.h>
 
 #include "sambashare.h"
 #include "sambafile.h"
@@ -286,12 +287,13 @@ void KcmSambaConf::initAdvancedTab()
   QVBoxLayout *l = new QVBoxLayout(_interface->advancedFrame);
   l->setAutoAdd(true);
   l->setMargin(0);
-  _janus = new KJanusWidget(_interface->advancedFrame,KJanusWidget::TreeList);
-  _janus->setRootIsDecorated(false);
-  _janus->setShowIconsInTreeList(true);
+  _janus = new KPageWidget(_interface->advancedFrame);
+  _janus->setFaceType(KPageView::Tree);
+//   _janus->setRootIsDecorated(false);
+//   _janus->setShowIconsInTreeList(true);
 
   QWidget *w;
-  QFrame *f;
+  KPageWidgetItem *f;
   QString label;
   QPixmap icon;
 
@@ -347,17 +349,19 @@ void KcmSambaConf::initAdvancedTab()
     }
       //SmallIcon("empty2");
 
-    f = _janus->addPage( label,label,icon );
-    l = new QVBoxLayout(f);
+    l = new QVBoxLayout();
     l->setAutoAdd(true);
     l->setMargin(0);
 
-    _interface->advancedTab->removePage(w);
-
-    w->setParent(f );
+    w->setLayout(l);
     w->move( 1, 1 );
     w->show();
 
+    f = _janus->addPage(w, label);
+    f->setHeader(label);
+    f->setIcon(KIcon(icon));
+
+    _interface->advancedTab->removePage(w);
   }
 
   w = _interface->mainTab->page(5);
@@ -500,7 +504,7 @@ void KcmSambaConf::editPrinterDefaults()
 
 
 void KcmSambaConf::loadBtnClicked() {
-  load( _interface->configUrlRq->url());
+  load( _interface->configUrlRq->url().url());
 }
 
 void KcmSambaConf::load(const QString & smbFile)
@@ -1183,9 +1187,9 @@ void KcmSambaConf::addSambaUserBtnClicked()
     SambaUser user( item->text(0), item->text(1).toInt() );
 
     QByteArray password;
-    int passResult = KPasswordDialog::getNewPassword(this,password,
+    int passResult = K3PasswordDialog::getNewPassword(this,password,
                         i18n("<qt>Please enter a password for the user <b>%1</b></qt>", user.name));
-    if (passResult != KPasswordDialog::Accepted) {
+    if (passResult != K3PasswordDialog::Accepted) {
        list.remove(item);
        continue;
     }
@@ -1242,9 +1246,9 @@ void KcmSambaConf::sambaUserPasswordBtnClicked()
     SambaUser user( item->text(0), item->text(1).toInt() );
 
     QByteArray password;
-    int passResult = KPasswordDialog::getNewPassword(this,password,
+    int passResult = K3PasswordDialog::getNewPassword(this,password,
                         i18n("Please enter a password for the user %1", user.name));
-    if (passResult != KPasswordDialog::Accepted)
+    if (passResult != K3PasswordDialog::Accepted)
        return;
 
     if (!passwd.changePassword(user,password))
@@ -1274,7 +1278,7 @@ void KcmSambaConf::save() {
 
   // Base settings
 
-  _smbconf = _interface->configUrlRq->url();
+  _smbconf = _interface->configUrlRq->url().path();
   KSimpleConfig config(QString::fromLatin1(FILESHARECONF),false);
   config.writeEntry("SMBCONF",_smbconf);
   config.sync();

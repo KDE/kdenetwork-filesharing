@@ -370,7 +370,7 @@ bool GroupConfigDlg::addUsersToGroup(QList<KUser> users,const KUserGroup & group
 
 bool GroupConfigDlg::emptyGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-        i18n("Do you really want to remove all users from group '%1'?", s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
+        i18n("Do you really want to remove all users from group '%1'?", s), QString(), KStandardGuiItem::del(), KStandardGuiItem::cancel())) {
       return false;
   }
 
@@ -387,7 +387,7 @@ bool GroupConfigDlg::emptyGroup(const QString & s) {
 
 bool GroupConfigDlg::deleteGroup(const QString & s) {
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-        i18n("Do you really want to delete group '%1'?", s), QString::null, KStdGuiItem::del(), KStdGuiItem::cancel())) {
+        i18n("Do you really want to delete group '%1'?", s), QString(), KStandardGuiItem::del(), KStandardGuiItem::cancel())) {
       return false;
   }
 
@@ -408,7 +408,7 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
   }
 
   if (KMessageBox::No == KMessageBox::questionYesNo(this,
-      i18n("This group '%1' does not exist. Should it be created?", s), QString::null, i18n("Create"), i18n("Do Not Create")))
+      i18n("This group '%1' does not exist. Should it be created?", s), QString(), KGuiItem(i18n("Create")), KGuiItem(i18n("Do Not Create"))))
       return false;
 
   //debug("CreateFileShareGroup: "+s);

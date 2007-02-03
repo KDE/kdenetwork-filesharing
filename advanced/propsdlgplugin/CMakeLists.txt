@@ -1,6 +1,4 @@
-
-include_directories(${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/ ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/  )
-
+include_directories(${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/ ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/)
 
 ########### next target ###############
 
@@ -16,27 +14,17 @@ kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/usertab.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
-	propertiespagegui.ui
-    )
-
+    propertiespagegui.ui
+)
 
 kde4_automoc(${fileshare_propsdlgplugin_PART_SRCS})
 
 kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 
+target_link_libraries(fileshare_propsdlgplugin ${KDE4_KIO_LIBS})
 
-target_link_libraries(fileshare_propsdlgplugin  ${KDE4_KIO_LIBS} )
-
-install(TARGETS fileshare_propsdlgplugin  DESTINATION ${PLUGIN_INSTALL_DIR})
-
-
-########### next target ###############
-
+install(TARGETS fileshare_propsdlgplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 
 ########### install files ###############
 
-install( FILES fileshare_propsdlgplugin.desktop  DESTINATION ${SERVICES_INSTALL_DIR})
-
-
-
-
+install(FILES fileshare_propsdlgplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR})

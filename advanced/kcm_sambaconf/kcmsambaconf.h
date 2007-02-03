@@ -61,7 +61,7 @@ protected:
 };
 
 
-class KJanusWidget;
+class KPageWidget;
 class QLineEdit;
 class QCheckBox;
 class QSpinBox;
@@ -154,7 +154,7 @@ class KcmSambaConf: public KCModule
     
   private:
     KcmInterface* _interface;
-    KJanusWidget* _janus;
+    KPageWidget* _janus;
     SmbConfConfigWidget* m_smbConfConfigWidget;
 };
 

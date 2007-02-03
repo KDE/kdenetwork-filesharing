@@ -500,8 +500,8 @@ bool PropertiesPage::updateSambaShare() {
       sambaChk->isChecked()) 
   {
     if (m_enterUrl) {
-      if (m_path != urlRq->url()) {
-        m_path = urlRq->url();
+      if (m_path != urlRq->url().path()) {
+        m_path = urlRq->url().path();
       }
     }
   
@@ -565,7 +565,7 @@ void PropertiesPage::setSambaShareBoolValue(const QString & value,
 QString PropertiesPage::getNewSambaName() {
   QString path = m_path;
   if (path.isNull() && m_enterUrl) {
-    path = urlRq->url();
+    path = urlRq->url().path();
   }
   
   QString shareName = KUrl(path).fileName();

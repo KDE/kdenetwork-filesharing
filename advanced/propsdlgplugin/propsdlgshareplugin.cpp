@@ -47,19 +47,19 @@ class PropsDlgSharePlugin::Private
                             
 PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
                     const QStringList & )
-  : KPropsDlgPlugin(dlg), d(0)
+  : KPropertiesDialogPlugin(dlg), d(0)
 {
   KGlobal::locale()->insertCatalog("kfileshare");                            
                             
   if (KFileShare::shareMode() == KFileShare::Simple) {     
       kDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting." << endl;
       return;
-  }   
-  
- 
-  KVBox* vbox = properties->addVBoxPage(i18n("&Share"));                            
+  }
+
+  KVBox *vbox = new KVBox();
+  properties->addPage(vbox, i18n("&Share"));
   properties->setFileSharingPage(vbox);
-  
+
   if (KFileShare::authorization() == KFileShare::UserNotAllowed) {
   
         QWidget* widget = new QWidget( vbox );

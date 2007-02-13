@@ -32,7 +32,7 @@
 #include <kdebug.h>
 #include <kmessagebox.h>
 #include <kinputdialog.h>
-#include <klistbox.h>
+#include <k3listbox.h>
 #include <kprocess.h>
 #include <kpushbutton.h>
 #include <kcombobox.h>

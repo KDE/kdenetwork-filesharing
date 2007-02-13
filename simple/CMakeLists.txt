@@ -28,7 +28,7 @@ kde4_add_ui3_files(kcm_fileshare_PART_SRCS
 kde4_add_plugin(kcm_fileshare ${kcm_fileshare_PART_SRCS})
 
 
-target_link_libraries(kcm_fileshare  ${KDE4_KIO_LIBS} )
+target_link_libraries(kcm_fileshare  ${KDE4_KIO_LIBS} ${KDE4_KDE3SUPPORT_LIBS})
 
 install(TARGETS kcm_fileshare  DESTINATION ${PLUGIN_INSTALL_DIR})
 

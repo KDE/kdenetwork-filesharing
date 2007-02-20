@@ -29,7 +29,7 @@
 #include "sambashare.h"
 
 
-class KSimpleConfig;
+class KConfig;
 class KProcess;
 class KConfig;
 class KTemporaryFile;
@@ -148,8 +148,8 @@ protected:
   int _sambaVersion;
 
   void parseParmStdOutput();
-  SambaConfigFile* getSambaConfigFile(KSimpleConfig* config);
-  KSimpleConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
+  SambaConfigFile* getSambaConfigFile(KConfig* config);
+  KConfig* getSimpleConfig(SambaConfigFile* sambaConfig, const QString & filename);
 
 
 

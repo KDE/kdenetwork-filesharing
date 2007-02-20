@@ -63,7 +63,7 @@
 #include <kmessagebox.h>
 #include <KPageWidget>
 #include <k3listview.h>
-#include <ksimpleconfig.h>
+#include <kconfig.h>
 #include <kcomponentdata.h>
 #include <k3passworddialog.h>
 
@@ -1279,7 +1279,7 @@ void KcmSambaConf::save() {
   // Base settings
 
   _smbconf = _interface->configUrlRq->url().path();
-  KSimpleConfig config(QString::fromLatin1(FILESHARECONF),false);
+  KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::OnlyLocal);
   config.writeEntry("SMBCONF",_smbconf);
   config.sync();
 

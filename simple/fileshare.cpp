@@ -40,7 +40,7 @@
 #include <ksambashare.h>
 #include <kfileshare.h>
 #include <kstandarddirs.h>
-#include <ksimpleconfig.h>
+#include <kconfig.h>
 #include <kmessagebox.h>
 #include <kapplication.h>
 #include <kuser.h>
@@ -199,7 +199,7 @@ void KFileShareConfig::allowedUsersBtnClicked() {
 
 void KFileShareConfig::load()
 {
-    KSimpleConfig config(QString::fromLatin1(FILESHARECONF),true);
+    KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::OnlyLocal);
 
     m_ccgui->shareGrp->setChecked( config.readEntry("FILESHARING", "yes") == "yes" );
 
@@ -302,7 +302,7 @@ void KFileShareConfig::save()
     if ( ! file.open(QIODevice::WriteOnly)) {
         KMessageBox::detailedError(this,
             i18n("Could not save settings."),
-            i18n("Could not open file '%1' for writing: %2", QString(FILESHARECONF), 
+            i18n("Could not open file '%1' for writing: %2", QString(FILESHARECONF),
              file.errorString() ),
             i18n("Saving Failed"));
         return;

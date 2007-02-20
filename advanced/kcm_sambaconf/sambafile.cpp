@@ -23,7 +23,7 @@
 //Added by qt3to4:
 #include <QTextStream>
 
-#include <ksimpleconfig.h>
+#include <kconfig.h>
 #include <kdebug.h>
 #include <qfileinfo.h>
 #include <kio/job.h>
@@ -654,7 +654,7 @@ bool SambaFile::saveTo(const QString & path)
 }
 
 
-SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
+SambaConfigFile* SambaFile::getSambaConfigFile(KConfig* config)
 {
   QStringList groups = config->groupList();
 
@@ -679,9 +679,9 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KSimpleConfig* config)
 
 }
 
-KSimpleConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QString & path)
+KConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QString & path)
 {
-  KSimpleConfig *config = new KSimpleConfig(path,false);
+  KConfig *config = new KConfig(path, KConfig::OnlyLocal);
 
   Q3DictIterator<SambaShare> it(*sambaConfig);
 

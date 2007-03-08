@@ -120,7 +120,7 @@ void ShareListViewItem::updateShare()
   else
   {
     if ( _share->getName() == "homes" )
-      setPixmap(0,SmallIcon("folder_home"));
+      setPixmap(0,SmallIcon("user-home"));
     else
       setPixmap(0,SmallIcon("folder"));
     setText(1,_share->getValue("path"));
@@ -152,7 +152,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 
   if (_share->getBoolValue("public"))
   {
-    p.drawPixmap(x,0,SmallIcon("network"));
+    p.drawPixmap(x,0,SmallIcon("network-wired"));
     x = x+w+margin;
   }
 
@@ -164,13 +164,13 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 
   if (_share->getBoolValue("printable"))
   {
-    p.drawPixmap(x,0,SmallIcon("fileprint"));
+    p.drawPixmap(x,0,SmallIcon("document-print"));
     x = x+w+margin;
   }
 
   if (_share->getBoolValue("browseable"))
   {
-    p.drawPixmap(x,0,SmallIcon("run"));
+    p.drawPixmap(x,0,SmallIcon("system-run"));
     x = x+w+margin;
   }
 
@@ -265,8 +265,8 @@ void KcmSambaConf::init() {
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
           this, SLOT( removeSambaUserBtnClicked() ));
 
-  _interface->removeSambaUserBtn->setIconSet(SmallIconSet("1rightarrow"));
-  _interface->addSambaUserBtn->setIconSet(SmallIconSet("1leftarrow"));
+  _interface->removeSambaUserBtn->setIconSet(SmallIconSet("arrow-right"));
+  _interface->addSambaUserBtn->setIconSet(SmallIconSet("arrow-left"));
 
 
   connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)),
@@ -315,10 +315,10 @@ void KcmSambaConf::initAdvancedTab()
       icon = SmallIcon("folder");
     else
     if (label == i18n("Locking"))
-      icon = SmallIcon("lock");
+      icon = SmallIcon("system-lock-screen");
     else
     if (label == i18n("Printing"))
-      icon = SmallIcon("fileprint");
+      icon = SmallIcon("document-print");
     else
     if (label == i18n("Logon"))
       icon = SmallIcon("kdmconfig");
@@ -327,7 +327,7 @@ void KcmSambaConf::initAdvancedTab()
       icon = SmallIcon("core");
     else
     if (label == i18n("Charset"))
-      icon = SmallIcon("charset");
+      icon = SmallIcon("character-set");
     else
     if (label == i18n("Socket"))
         icon = SmallIcon("socket");
@@ -367,7 +367,7 @@ void KcmSambaConf::initAdvancedTab()
   w = _interface->mainTab->page(5);
   _interface->mainTab->removePage(w);
   delete w;
-	_interface->advancedWarningPixLbl->setPixmap(DesktopIcon("messagebox_warning"));
+	_interface->advancedWarningPixLbl->setPixmap(DesktopIcon("dialog-warning"));
 
 
 }

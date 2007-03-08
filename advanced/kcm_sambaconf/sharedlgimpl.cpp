@@ -296,10 +296,10 @@ void ShareDlgImpl::initAdvancedTab()
 			 icon = SmallIcon("folder");
 		else
 		if (label.toLower() == "printing")
-			 icon = SmallIcon("fileprint");
+			 icon = SmallIcon("document-print");
 		else
 		if (label.toLower() == "locking")
-			 icon = SmallIcon("lock");
+			 icon = SmallIcon("system-lock-screen");
 		else
 		if (label.toLower() == "logon")
 			 icon = SmallIcon("kdmconfig");
@@ -308,7 +308,7 @@ void ShareDlgImpl::initAdvancedTab()
 			 icon = SmallIcon("core");
 		else
 		if (label.toLower() == "coding")
-			 icon = SmallIcon("charset");
+			 icon = SmallIcon("character-set");
 		else
 		if (label.toLower() == "socket")
 				icon = SmallIcon("socket");
@@ -410,7 +410,7 @@ void ShareDlgImpl::homeChkToggled(bool b)
   {
   	shareNameEdit->setText("homes");
     pathUrlRq->setUrl(KUrl(""));
-    directoryPixLbl->setPixmap(DesktopIcon("folder_home",48));
+    directoryPixLbl->setPixmap(DesktopIcon("user-home",48));
 
   }
   else

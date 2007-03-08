@@ -61,7 +61,7 @@ void KcmShareDlg::checkValues()
 void KcmShareDlg::init()
 {
     directoryPixLbl->setPixmap(DesktopIcon("folder"));
-    PixmapLabel1->setPixmap(SmallIcon("messagebox_warning"));
+    PixmapLabel1->setPixmap(SmallIcon("dialog-warning"));
 /*
     QListBoxItem* item = 0;
     QPtrList<QListBoxItem>* selectedList = new QPtrList<QListBoxItem>;
@@ -197,7 +197,7 @@ void KcmShareDlg::lockingChk_toggled( bool b)
   // Its Dangerous to disable locking !
 /*	
     if (!b)  {
-	enableLockingWarnPix->setPixmap(SmallIcon("messagebox_warning"));    
+	enableLockingWarnPix->setPixmap(SmallIcon("dialog-warning"));    
 	enableLockingWarnPix->show();
     } else {
 	enableLockingWarnPix->hide();
@@ -211,7 +211,7 @@ void KcmShareDlg::fakeOplocksChk_toggled( bool b)
 {
 /*
     if (b)  {
-	fakeOplocksWarnPix->setPixmap(SmallIcon("messagebox_info"));    
+	fakeOplocksWarnPix->setPixmap(SmallIcon("dialog-information"));    
 	fakeOplocksWarnPix->setText(i18n("Better use the real oplocks support than this parameter"));
 	fakeOplocksWarnPix->showMaximized();
 	fakeOplocksWarnPix->show();
@@ -226,7 +226,7 @@ void KcmShareDlg::oplockContentionLimitSpin_valueChanged( int i)
 {
 /*    
     oplockContentionLimitWarnPix->setMaximumWidth(32767);
-    oplockContentionLimitWarnPix->setPixmap(SmallIcon("messagebox_critical"));
+    oplockContentionLimitWarnPix->setPixmap(SmallIcon("dialog-error"));
 */   
     //oplockContentionLimitWarnPix->show();
     

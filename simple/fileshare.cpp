@@ -162,8 +162,8 @@ void KFileShareConfig::updateShareListView()
       }
 
       QPixmap folderPix = SmallIcon("folder",0,K3Icon::ShareOverlay);
-      QPixmap okPix = SmallIcon("button_ok");
-      QPixmap cancelPix = SmallIcon("button_cancel");
+      QPixmap okPix = SmallIcon("dialog-ok");
+      QPixmap cancelPix = SmallIcon("dialog-cancel");
 
       for ( QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
         K3ListViewItem* item = new K3ListViewItem(m_ccgui->listView);

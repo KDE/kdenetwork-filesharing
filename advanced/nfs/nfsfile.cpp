@@ -31,7 +31,7 @@
 #include <klocale.h>
 #include <knfsshare.h>
 #include <ktemporaryfile.h>
-#include <kprocio.h>
+#include <k3procio.h>
 
 #include "nfsfile.h"
 
@@ -237,11 +237,11 @@ bool NFSFile::save()
     tempFile.open();
     saveTo(tempFile.fileName());
 
-    KProcIO proc;
+    K3ProcIO proc;
 
     QString command = QString("cp %1 %2")
-        .arg(KProcess::quote( tempFile.fileName() ))
-        .arg(KProcess::quote( _url.path() ));
+        .arg(K3Process::quote( tempFile.fileName() ))
+        .arg(K3Process::quote( _url.path() ));
 
     if (restartNFSServer)
       command +=";exportfs -ra";
@@ -249,7 +249,7 @@ bool NFSFile::save()
     if (!QFileInfo(_url.path()).isWritable() )
       proc<<"kdesu" << "-d" << "-c"<<command;
 
-    if (!proc.start(KProcess::Block, true)) {
+    if (!proc.start(K3Process::Block, true)) {
       return false;
     }
 

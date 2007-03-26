@@ -33,7 +33,7 @@
 #include <kmessagebox.h>
 #include <kinputdialog.h>
 #include <k3listbox.h>
-#include <kprocess.h>
+#include <k3process.h>
 #include <kpushbutton.h>
 #include <kcombobox.h>
 
@@ -228,9 +228,9 @@ void GroupConfigDlg::slotOk() {
 }
 
 bool userMod(const QString & user, const QList<KUserGroup> & groups) {
-  KProcess proc;
+  K3Process proc;
   proc << "usermod" << "-G" << groupListToString(groups) << user;
-  return proc.start(KProcess::Block) && proc.normalExit();
+  return proc.start(K3Process::Block) && proc.normalExit();
 }
 
 void GroupConfigDlg::slotRemoveUser() {
@@ -391,9 +391,9 @@ bool GroupConfigDlg::deleteGroup(const QString & s) {
       return false;
   }
 
-  KProcess proc;
+  K3Process proc;
   proc << "groupdel" << s;
-  bool result = proc.start(KProcess::Block) && proc.normalExit();
+  bool result = proc.start(K3Process::Block) && proc.normalExit();
   if (!result) {
     KMessageBox::sorry(this,i18n("Deleting group '%1' failed.", s));
   }
@@ -412,9 +412,9 @@ bool GroupConfigDlg::createFileShareGroup(const QString & s) {
       return false;
 
   //debug("CreateFileShareGroup: "+s);
-  KProcess proc;
+  K3Process proc;
   proc << "groupadd" << s;
-  bool result = proc.start(KProcess::Block) && proc.normalExit();
+  bool result = proc.start(K3Process::Block) && proc.normalExit();
   if (!result) {
     KMessageBox::sorry(this,i18n("Creation of group '%1' failed.", s));
   } else {

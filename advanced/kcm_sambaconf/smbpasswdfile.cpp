@@ -35,7 +35,7 @@
 #include <kdebug.h>
 #include <kpassworddialog.h>
 #include <klocale.h>
-#include <kprocess.h>
+#include <k3process.h>
 
 #include "sambafile.h"
 #include "smbpasswdfile.h"
@@ -112,15 +112,15 @@ SambaUserList SmbPasswdFile::getSambaUserList()
 }
 
 bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
-  KProcess p;
+  K3Process p;
   p << "smbpasswd" << args;
 
-  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
-           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
+  connect( &p, SIGNAL(receivedStdout(K3Process*,char*,int)),
+           this, SLOT(smbpasswdStdOutReceived(K3Process*,char*,int)));
 
   _smbpasswdOutput = "";
 
-  bool result = p.start(KProcess::Block,KProcess::Stdout);
+  bool result = p.start(K3Process::Block,K3Process::Stdout);
 
   if (result)
   {
@@ -136,17 +136,17 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
  **/
 bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 {
-  KProcess p;
+  K3Process p;
   p << "smbpasswd" << "-a" << user.name;
 
   p << password;
 
-  connect( &p, SIGNAL(receivedStdout(KProcess*,char*,int)),
-           this, SLOT(smbpasswdStdOutReceived(KProcess*,char*,int)));
+  connect( &p, SIGNAL(receivedStdout(K3Process*,char*,int)),
+           this, SLOT(smbpasswdStdOutReceived(K3Process*,char*,int)));
 
   _smbpasswdOutput = "";
 
-  bool result = p.start(KProcess::Block,KProcess::Stdout);
+  bool result = p.start(K3Process::Block,K3Process::Stdout);
 
   if (result)
   {
@@ -173,7 +173,7 @@ bool SmbPasswdFile::changePassword(const SambaUser & user, const QString & newPa
 }
 
 
-void SmbPasswdFile::smbpasswdStdOutReceived(KProcess *, char *buffer, int buflen)
+void SmbPasswdFile::smbpasswdStdOutReceived(K3Process *, char *buffer, int buflen)
 {
   _smbpasswdOutput+=QString::fromLatin1(buffer,buflen);
 }

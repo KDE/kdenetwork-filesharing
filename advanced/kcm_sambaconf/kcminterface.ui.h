@@ -107,7 +107,7 @@ void KcmInterface::adsRadioClicked()
 
 void KcmInterface::KUrlLabel1_leftClickedURL()
 {
-    KProcess* p = new KProcess();
+    K3Process* p = new K3Process();
     
     *p << "konqueror";
     *p << "man:smb.conf";

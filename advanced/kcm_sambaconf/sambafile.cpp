@@ -27,7 +27,7 @@
 #include <kdebug.h>
 #include <qfileinfo.h>
 #include <kio/job.h>
-#include <kprocess.h>
+#include <k3process.h>
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <ktemporaryfile.h>
@@ -171,7 +171,7 @@ bool SambaFile::slotApply()
   KUrl url(path);
 
   if (KUrl(path).isLocalFile()) {
-    KProcess proc;
+    K3Process proc;
     kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
 
     QString suCommand=QString("cp %1 %2; rm %3")
@@ -180,7 +180,7 @@ bool SambaFile::slotApply()
               .arg(_tempFile->fileName());
     proc << "kdesu" << "-d" << suCommand;
 
-    if (! proc.start(KProcess::Block)) {
+    if (! proc.start(K3Process::Block)) {
         kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!" << endl;
         //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.",path));
         delete _tempFile;
@@ -341,18 +341,18 @@ int SambaFile::getSambaVersion() {
   if (_sambaVersion > -1)
     return _sambaVersion;
 
-  KProcess testParam;
+  K3Process testParam;
   testParam << "testparm";
   testParam << "-V";
   _parmOutput = QString("");
   _sambaVersion = 2;
 
-  connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
-          this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
+  connect( &testParam, SIGNAL(receivedStdout(K3Process*,char*,int)),
+          this, SLOT(testParmStdOutReceived(K3Process*,char*,int)));
 
 
 
-  if (testParam.start(KProcess::Block,KProcess::Stdout)) {
+  if (testParam.start(K3Process::Block,K3Process::Stdout)) {
     if (_parmOutput.contains('3') )
       _sambaVersion = 3;
   }
@@ -369,7 +369,7 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
     return _testParmValues;
 
 
-  KProcess testParam;
+  K3Process testParam;
   testParam << "testparm";
   testParam << "-s";
 
@@ -380,10 +380,10 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
   testParam << "/dev/null";
   _parmOutput = QString("");
 
-  connect( &testParam, SIGNAL(receivedStdout(KProcess*,char*,int)),
-          this, SLOT(testParmStdOutReceived(KProcess*,char*,int)));
+  connect( &testParam, SIGNAL(receivedStdout(K3Process*,char*,int)),
+          this, SLOT(testParmStdOutReceived(K3Process*,char*,int)));
 
-  if (testParam.start(KProcess::Block,KProcess::Stdout))
+  if (testParam.start(K3Process::Block,K3Process::Stdout))
   {
     parseParmStdOutput();
   } else
@@ -392,7 +392,7 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
   return _testParmValues;
 }
 
-void SambaFile::testParmStdOutReceived(KProcess *, char *buffer, int buflen)
+void SambaFile::testParmStdOutReceived(K3Process *, char *buffer, int buflen)
 {
   _parmOutput+=QString::fromLatin1(buffer,buflen);
 }

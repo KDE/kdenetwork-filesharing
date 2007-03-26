@@ -40,7 +40,7 @@
 #include <kurl.h>
 
 class SambaFile;
-class KProcess;
+class K3Process;
 
 /**
  * Simple class to store a Samba User
@@ -137,7 +137,7 @@ protected:
   QString _smbpasswdOutput;
 
 protected slots:
-  void smbpasswdStdOutReceived(KProcess*,char*,int);
+  void smbpasswdStdOutReceived(K3Process*,char*,int);
 };
 
 #endif

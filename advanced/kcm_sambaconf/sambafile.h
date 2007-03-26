@@ -30,7 +30,7 @@
 
 
 class KConfig;
-class KProcess;
+class K3Process;
 class KConfig;
 class KTemporaryFile;
 
@@ -165,7 +165,7 @@ public slots:
    **/
   bool slotApply();
 protected slots:
-  void testParmStdOutReceived(KProcess *proc, char *buffer, int buflen);
+  void testParmStdOutReceived(K3Process *proc, char *buffer, int buflen);
   void slotJobFinished( KJob *);
   void slotSaveJobFinished( KJob *);
 

@@ -249,7 +249,7 @@ void KcmShareDlg::storeDosAttributesChk_toggled( bool b)
 
 void KcmShareDlg::buttonHelp_clicked()
 {
-    KProcess* p = new KProcess();
+    K3Process* p = new K3Process();
     *p << "konqueror";
     *p << "man:smb.conf";
     p->start();

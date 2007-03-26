@@ -26,7 +26,7 @@
 #include <kpushbutton.h>
 #include <kfileshare.h>
 #include <kmessagebox.h>
-#include <kprocess.h>
+#include <k3process.h>
 #include <kstandarddirs.h>
 #include <kdialog.h>
 #include <kglobal.h>
@@ -100,9 +100,9 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
 
 void PropsDlgSharePlugin::slotConfigureFileSharing()
 {
-    KProcess proc;
+    K3Process proc;
     proc << KStandardDirs::findExe("kdesu") << "kcmshell" << "fileshare";
-    proc.start( KProcess::DontCare );
+    proc.start( K3Process::DontCare );
 }
 
 

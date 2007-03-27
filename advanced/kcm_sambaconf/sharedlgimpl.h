@@ -60,7 +60,7 @@ public :
   ShareDlgImpl(QWidget* parent, SambaShare* share);
   ~ShareDlgImpl();
 
-  bool hasChanged() { return m_changed; };
+  bool hasChanged() { return m_changed; }
   
 protected :
 

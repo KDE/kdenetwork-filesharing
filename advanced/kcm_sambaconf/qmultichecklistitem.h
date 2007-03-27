@@ -38,7 +38,7 @@ Q_OBJECT
 
   public:
     QMultiCheckListItem( Q3ListView *parent);
-    ~QMultiCheckListItem() {};
+    ~QMultiCheckListItem() {}
     
     virtual bool isOn(int column);
     virtual bool isDisabled(int column);

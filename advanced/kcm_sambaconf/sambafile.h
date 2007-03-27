@@ -39,9 +39,9 @@ class SambaFile;
 class SambaFileLoadException
 {
   public:
-    SambaFileLoadException(const QString & msg) { message = msg; };
+    SambaFileLoadException(const QString & msg) { message = msg; }
     
-    QString getMessage() { return message; };
+    QString getMessage() { return message; }
   protected:
     QString message;
 };

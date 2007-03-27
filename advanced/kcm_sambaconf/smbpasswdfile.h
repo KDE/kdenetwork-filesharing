@@ -48,7 +48,7 @@ class K3Process;
 class SambaUser
 {
 public:
-  SambaUser(const QString & aName = QString::null, int anUid = -1) {name = aName; uid = anUid;};
+  SambaUser(const QString & aName = QString::null, int anUid = -1) {name = aName; uid = anUid;}
 
   QString name;
   int uid;

@@ -42,7 +42,6 @@
 #include <kaction.h>
 #include <krestrictedline.h>
 #include <klocale.h>
-#include <kfiledetailview.h>
 #include <kdirlister.h>
 #include <kmessagebox.h>
 #include <kurlrequester.h>

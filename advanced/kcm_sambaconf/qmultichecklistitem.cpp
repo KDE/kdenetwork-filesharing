@@ -28,7 +28,6 @@
 
 #include <qpen.h>
 #include <qpainter.h>
-#include <q3vbox.h>
 #include <q3header.h>
 //Added by qt3to4:
 #include <QPolygon>
@@ -42,7 +41,7 @@
 static const int BoxSize = 16;
 
 
-QMultiCheckListItem::QMultiCheckListItem( Q3ListView *parent=0) :
+QMultiCheckListItem::QMultiCheckListItem( Q3ListView *parent) :
   Q3ListViewItem(parent) {
 }
 

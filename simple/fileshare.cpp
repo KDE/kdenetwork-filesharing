@@ -41,7 +41,6 @@
 #include <kstandarddirs.h>
 #include <kconfig.h>
 #include <kmessagebox.h>
-#include <kapplication.h>
 #include <kuser.h>
 #include <kurl.h>
 #include <k3process.h>

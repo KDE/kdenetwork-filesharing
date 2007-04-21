@@ -1,3 +1,5 @@
+add_definitions ( -DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
+
 include_directories(
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/propsdlgplugin/
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/

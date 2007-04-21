@@ -147,7 +147,7 @@ void PrinterDlgImpl::initDialog()
   _dictMngr->add("hosts allow",hostsAllowEdit);
   _dictMngr->add("hosts deny",hostsDenyEdit);
   
-  guestAccountCombo->insertStringList( getUnixUsers() );
+  guestAccountCombo->addItems( getUnixUsers() );
   setComboToString(guestAccountCombo,_share->getValue("guest account"));
 
   // Advanced

@@ -227,7 +227,7 @@ void KcmSambaConf::slotSpecifySmbConf(const QString & smbConf) {
 
   if (getuid() != 0) {
     for (int i=0;i<_interface->mainTab->count();i++) {
-      QWidget* w = _interface->mainTab->page(i);
+      QWidget* w = _interface->mainTab->widget(i);
       w->setEnabled(false);
     }
   }
@@ -265,8 +265,8 @@ void KcmSambaConf::init() {
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
           this, SLOT( removeSambaUserBtnClicked() ));
 
-  _interface->removeSambaUserBtn->setIconSet(SmallIconSet("arrow-right"));
-  _interface->addSambaUserBtn->setIconSet(SmallIconSet("arrow-left"));
+  _interface->removeSambaUserBtn->setIcon(KIcon("arrow-right"));
+  _interface->addSambaUserBtn->setIcon(KIcon("arrow-left"));
 
 
   connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)),
@@ -299,8 +299,8 @@ void KcmSambaConf::initAdvancedTab()
 
   for (int i=0;i<_interface->advancedTab->count();)
   {
-    w = _interface->advancedTab->page(i);
-    label = _interface->advancedTab->label(i);
+    w = _interface->advancedTab->widget(i);
+    label = _interface->advancedTab->tabText(i);
 
     if (label == i18n("Security"))
       icon = SmallIcon("password");
@@ -364,7 +364,7 @@ void KcmSambaConf::initAdvancedTab()
     _interface->advancedTab->removePage(w);
   }
 
-  w = _interface->mainTab->page(5);
+  w = _interface->mainTab->widget(5);
   _interface->mainTab->removePage(w);
   delete w;
 	_interface->advancedWarningPixLbl->setPixmap(DesktopIcon("dialog-warning"));
@@ -608,18 +608,18 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
   _dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
   _dictMngr->add("interfaces", _interface->interfacesEdit);
 
-  _interface->guestAccountCombo->insertStringList( getUnixUsers() );
+  _interface->guestAccountCombo->addItems( getUnixUsers() );
   setComboIndexToValue(_interface->guestAccountCombo,"guest account",share);
 
   QString value = share->getValue("map to guest",false,true);
 
-  _interface->allowGuestLoginsChk->setChecked( value.lower()!="never" );
+  _interface->allowGuestLoginsChk->setChecked( value.toLower()!="never" );
 
   _dictMngr->add("guest ok",_interface->allowGuestLoginsChk);
 
   _dictMngr->add("bind interfaces only",_interface->bindInterfacesOnlyChk);
 
-  QString s = share->getValue("security",false,true).lower();
+  QString s = share->getValue("security",false,true).toLower();
   int i = 0;
 
   if ( s == "share" ) i = 0; else
@@ -1058,10 +1058,10 @@ void KcmSambaConf::loadUserTab()
 {
   // Remote editing of users isn't supported yet
   if ( _sambaFile->isRemoteFile()) {
-    _interface->mainTab->page(3)->setEnabled(false);
+    _interface->mainTab->widget(3)->setEnabled(false);
     return;
   } else
-    _interface->mainTab->page(3)->setEnabled(true);
+    _interface->mainTab->widget(3)->setEnabled(true);
 
 
   SambaShare* share = _sambaFile->getShare("global");

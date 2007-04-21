@@ -31,7 +31,6 @@
 #include <qcheckbox.h>
 #include <qspinbox.h>
 #include <qcombobox.h>
-#include <qtooltip.h>
 #include <qstringlist.h>
 
 #include <kurlrequester.h> 
@@ -58,7 +57,7 @@ DictManager::~DictManager() {
 
 void DictManager::handleUnsupportedWidget(const QString & s, QWidget* w) {
   w->setEnabled(false);
-  QToolTip::add(w,i18n("The option <em>%1</em> is not supported by your Samba version", s));
+  w->setToolTip(i18n("The option <em>%1</em> is not supported by your Samba version", s));
 }
 
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {
@@ -142,14 +141,14 @@ void DictManager::loadComboBoxes(SambaShare* share, bool globalValue, bool defau
     if (value.isNull())
         continue;
         
-    value = value.lower();
+    value = value.toLower();
 
     
     int comboIndex = 0;
                                 
     QStringList::iterator it;
     for ( it = v->begin(); it != v->end(); ++it ) {
-      QString lower = (*it).lower();      
+      QString lower = (*it).toLower();
       if ( lower == "yes" &&
            boolFromText(value))
            break;

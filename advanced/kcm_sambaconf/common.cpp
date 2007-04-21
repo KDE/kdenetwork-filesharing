@@ -40,7 +40,7 @@ void setComboToString(QComboBox* combo,const QString & s)
 
 bool boolFromText(const QString & value, bool testTrue)
 {
-  QString lower = value.lower();
+  QString lower = value.toLower();
   
   if (testTrue) {
     if (lower=="yes" ||

@@ -128,7 +128,7 @@ QString SambaShare::getGlobalValue(const QString & name, bool defaultValue)
 **/
 QString SambaShare::getSynonym(const QString & name) const
 {
-  QString lname = name.lower().trimmed();
+  QString lname = name.toLower().trimmed();
 
   if (lname == "browsable") return "browseable";
   if (lname == "allow hosts") return "hosts allow";
@@ -176,7 +176,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   if (newValue.isNull())
     newValue = "";
   
-  if (getName().lower() == "global")
+  if (getName().toLower() == "global")
     globalValue = false;
 
   if (name=="writable" || name=="write ok" || name=="writeable")
@@ -191,7 +191,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   {
     global = getGlobalValue(synonym, false);
 
-    if ( newValue.lower() == global.lower() )
+    if ( newValue.compare(global, Qt::CaseInsensitive) == 0 )
     {
       remove(synonym);
       _optionList.remove(synonym);
@@ -204,7 +204,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   // That's because the author of the option has thought about it.
   if (defaultValue && global.isEmpty() && !hasComments(synonym))
   {
-    if ( newValue.trimmed().lower() == getDefaultValue(synonym).trimmed().lower() )
+    if ( newValue.trimmed().toLower() == getDefaultValue(synonym).trimmed().toLower() )
     {
       kDebug(5009) << getName() << " global: " << global << " remove " << synonym << endl;
       remove(synonym);
@@ -325,9 +325,9 @@ bool SambaShare::isPrinter()
 **/
 bool SambaShare::isSpecialSection()
 {
-  if ( _name.lower() == "global" ||
-      _name.lower() == "printers" ||
-      _name.lower() == "homes" )
+  if ( _name.toLower() == "global" ||
+      _name.toLower() == "printers" ||
+      _name.toLower() == "homes" )
     return true;
   else
     return false;

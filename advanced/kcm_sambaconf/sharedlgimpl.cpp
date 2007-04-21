@@ -282,8 +282,8 @@ void ShareDlgImpl::initAdvancedTab()
 
 	for (int i=0;i<advancedDumpTab->count();)
 	{
-		w = advancedDumpTab->page(i);
-		label = advancedDumpTab->label(i);
+		w = advancedDumpTab->widget(i);
+		label = advancedDumpTab->tabText(i);
 
 		if (label.toLower() == "security")
 			 icon = SmallIcon("password");

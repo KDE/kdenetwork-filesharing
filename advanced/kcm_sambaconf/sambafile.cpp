@@ -424,7 +424,7 @@ void SambaFile::parseParmStdOutput()
     if ('[' == line[0])
     {
       // get the name of the section
-      section = line.mid(1,line.length()-2).lower();
+      section = line.mid(1,line.length()-2).toLower();
       continue;
     }
 
@@ -669,8 +669,8 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KConfig* config)
 
     for (QMap<QString,QString>::Iterator it2 = entries.begin(); it2 != entries.end(); ++it2 )
     {
-      if (!it2.data().isEmpty())
-          share->setValue(it2.key(),QString(it2.data()),false,false);
+      if (!it2.value().isEmpty())
+          share->setValue(it2.key(),QString(it2.value()),false,false);
     }
 
   }
@@ -689,13 +689,13 @@ KConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QString 
   {
     SambaShare* share = it.current();
 
-    config->setGroup(it.currentKey());
+    KConfigGroup cg(config, it.currentKey());
 
     Q3DictIterator<QString> it2(*share);
 
     for (; it2.current(); ++it2 )
     {
-      config->writeEntry(it2.currentKey(), *it2.current());
+      cg.writeEntry(it2.currentKey(), *it2.current());
     }
 
   }

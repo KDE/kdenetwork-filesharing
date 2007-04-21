@@ -18,7 +18,6 @@
 */
 
 #include <qcheckbox.h>
-#include <qtooltip.h>
 #include <qbuttongroup.h>
 #include <qfileinfo.h>
 #include <qlabel.h>
@@ -137,15 +136,15 @@ void PropertiesPage::load() {
 void PropertiesPage::enableNFS(bool b, const QString & message) {
    nfsChk->setEnabled(b);
    nfsGrp->setEnabled(b);
-   QToolTip::add(nfsChk,message);
-   QToolTip::add(nfsGrp,message);
+   nfsChk->setToolTip(message);
+   nfsGrp->setToolTip(message);
 }
 
 void PropertiesPage::enableSamba(bool b, const QString & message) {
    sambaChk->setEnabled(b);
    sambaGrp->setEnabled(b);
-   QToolTip::add(sambaChk,message);
-   QToolTip::add(sambaGrp,message);
+   sambaChk->setToolTip(message);
+   sambaGrp->setToolTip(message);
 }
 
 

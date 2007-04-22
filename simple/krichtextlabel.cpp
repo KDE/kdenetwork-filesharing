@@ -18,7 +18,7 @@
 
 #include "krichtextlabel.h"
 
-#include <qtooltip.h>
+
 #include <q3stylesheet.h>
 #include <q3simplerichtext.h>
 //Added by qt3to4:

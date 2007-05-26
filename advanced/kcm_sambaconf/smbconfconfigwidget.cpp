@@ -81,8 +81,8 @@ void SmbConfConfigWidget::btnPressed() {
 
   KConfig config("ksambaplugin");
   
-  config.setGroup("KSambaKonqiPlugin");
-  config.writeEntry("smb.conf",smbConf);
+  KConfigGroup group = config.group("KSambaKonqiPlugin");
+  group.writeEntry("smb.conf",smbConf);
   config.sync();
   
   emit smbConfChoosed(smbConf);

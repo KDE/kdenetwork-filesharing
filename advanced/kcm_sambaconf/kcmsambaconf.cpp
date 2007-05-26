@@ -512,9 +512,7 @@ void KcmSambaConf::load(const QString & smbFile)
   kDebug(5009) << "loading " << smbFile << endl;
   _smbconf = smbFile;
 
-  if (_sambaFile)
-    delete _sambaFile;
-
+  delete _sambaFile;
 
   _sambaFile = new SambaFile(_smbconf,false);
 
@@ -556,8 +554,7 @@ void KcmSambaConf::fillFields()
     share = _sambaFile->newShare("global");
 
   Q_ASSERT( share);
-  if (_dictMngr)
-    delete _dictMngr;
+  delete _dictMngr;
 
   _dictMngr = new DictManager(share);
 
@@ -1123,7 +1120,7 @@ void KcmSambaConf::joinADomainBtnClicked() {
       KMessageBox::sorry(0,i18n("Joining the domain %1 failed.", dlg->domainEdit->text()));
     }
   }
-
+  delete dlg;
 }
 
 

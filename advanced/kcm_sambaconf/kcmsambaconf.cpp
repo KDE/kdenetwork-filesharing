@@ -1104,7 +1104,7 @@ void KcmSambaConf::joinADomainBtnClicked() {
       KMessageBox::sorry(0,i18n("Joining the domain %1 failed.").arg(dlg->domainEdit->text()));
     }
   }
-
+  delete dlg;
 }
 
 

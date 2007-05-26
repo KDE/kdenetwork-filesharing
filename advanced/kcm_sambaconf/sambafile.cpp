@@ -525,20 +525,17 @@ bool SambaFile::openFile() {
   bool continuedLine = false; // is true if the line before ended with a backslash
   QString completeLine;
   QStringList comments;
-
   while (!s.atEnd())
   {
     QString currentLine = s.readLine().trimmed();
-
     if (continuedLine)
     {
       completeLine += currentLine;
       continuedLine = false;
     } else
       completeLine = currentLine;
-
     // is the line continued in the next line ?
-    if ( completeLine[completeLine.length()-1] == '\\' )
+    if ( !completeLine.isEmpty() && completeLine[completeLine.length()-1] == '\\' )
     {
       continuedLine = true;
       // remove the ending backslash
@@ -557,7 +554,7 @@ bool SambaFile::openFile() {
 
 
     // sections
-    if ('[' == completeLine[0])
+    if (!completeLine.isEmpty() && '[' == completeLine[0])
     {
       // get the name of the section
       QString section = completeLine.mid(1,completeLine.length()-2);
@@ -571,6 +568,7 @@ bool SambaFile::openFile() {
     // parameter
     int i = completeLine.indexOf('=');
 
+    //completeLine is not empty
     if (i>-1)
     {
       QString name = completeLine.left(i).trimmed();

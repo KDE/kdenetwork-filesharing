@@ -2,7 +2,9 @@
 Encoding=UTF-8
 Exec=kcmshell kcmsambaconf
 Icon=kcmsambaconf
-Type=Application
+Type=Service
+ServiceTypes=KCModule
+
 
 Terminal=false
 X-KDE-FactoryName=KcmSambaConf

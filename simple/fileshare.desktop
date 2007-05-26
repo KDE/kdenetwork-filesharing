@@ -2,9 +2,9 @@
 Encoding=UTF-8
 Exec=kcmshell fileshare
 Icon=share
-Type=Application
+Type=Service
+ServiceTypes=KCModule
 
-X-KDE-ModuleType=Library
 X-KDE-Library=fileshare
 X-KDE-ParentApp=kcontrol
 X-KDE-RootOnly=true

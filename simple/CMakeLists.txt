@@ -35,8 +35,7 @@ install(TARGETS kcm_fileshare  DESTINATION ${PLUGIN_INSTALL_DIR})
 
 ########### install files ###############
 
-install( FILES fileshare.desktop  DESTINATION ${XDG_APPS_DIR})
-
+install( FILES fileshare.desktop DESTINATION  ${SERVICES_INSTALL_DIR} )
 
 
 

@@ -21,6 +21,7 @@
 
 #include <q3stylesheet.h>
 #include <q3simplerichtext.h>
+#include <qtextdocument.h>
 //Added by qt3to4:
 #include <QLabel>
 
@@ -34,7 +35,7 @@ static QString qrichtextify( const QString& text )
   QStringList lines = QStringList::split('\n', text);
   for(QStringList::Iterator it = lines.begin(); it != lines.end(); ++it)
   {
-    *it = Q3StyleSheet::convertFromPlainText( *it, Q3StyleSheetItem::WhiteSpaceNormal );
+    *it = Qt::convertFromPlainText( *it, Qt::WhiteSpaceNormal );
   }
 
   return lines.join(QString::null);

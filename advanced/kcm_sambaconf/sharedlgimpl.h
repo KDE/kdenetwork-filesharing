@@ -40,9 +40,6 @@
 
 class SambaShare;
 class QWidget;
-class KMenu;
-class KToggleAction;
-class Q3GroupBox;
 class UserTabImpl;
 class HiddenFileView;
 class DictManager;

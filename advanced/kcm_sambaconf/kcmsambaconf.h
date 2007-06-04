@@ -62,9 +62,6 @@ protected:
 
 
 class KPageWidget;
-class QLineEdit;
-class QCheckBox;
-class QSpinBox;
 class DictManager;
 class SmbConfConfigWidget;
 

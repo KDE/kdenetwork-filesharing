@@ -25,7 +25,6 @@
 class NFSEntry;
 class NFSHost;
 class Q3ListViewItem;
-class NFSFile;
 class NFSDialogGUI;
 
 class NFSDialog : public KDialog

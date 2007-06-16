@@ -32,7 +32,7 @@
 #include <knfsshare.h>
 #include <ktemporaryfile.h>
 #include <k3procio.h>
-
+#include <kshell.h>
 #include "nfsfile.h"
 
 NFSFile::NFSFile(const KUrl & url, bool readonly)
@@ -240,8 +240,8 @@ bool NFSFile::save()
     K3ProcIO proc;
 
     QString command = QString("cp %1 %2")
-        .arg(K3Process::quote( tempFile.fileName() ))
-        .arg(K3Process::quote( _url.path() ));
+        .arg(KShell::quoteArg( tempFile.fileName() ))
+        .arg(KShell::quoteArg( _url.path() ));
 
     if (restartNFSServer)
       command +=";exportfs -ra";

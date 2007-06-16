@@ -36,7 +36,7 @@
 #include <klineedit.h>
 #include <k3procio.h>
 #include <ktemporaryfile.h>
-
+#include <kshell.h>
 // NFS related
 #include "../nfs/nfsfile.h"
 #include "../nfs/nfsentry.h"
@@ -210,15 +210,15 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
      if (nfsNeedsKDEsu) {
          nfsFile->saveTo(nfsTempFile.fileName());
          command += QString("cp %1 %2;exportfs -ra;")
-        .arg(K3Process::quote( nfsTempFile.fileName() ))
-        .arg(K3Process::quote( nfsFileName ));
+        .arg(KShell::quoteArg( nfsTempFile.fileName() ))
+        .arg(KShell::quoteArg( nfsFileName ));
      }         
      
      if (sambaNeedsKDEsu) {
          sambaFile->saveTo(sambaTempFile.fileName());
          command += QString("cp %1 %2;")
-        .arg(K3Process::quote( sambaTempFile.fileName() ))
-        .arg(K3Process::quote( sambaFileName ));
+        .arg(KShell::quoteArg( sambaTempFile.fileName() ))
+        .arg(KShell::quoteArg( sambaFileName ));
      }       
          
      proc<<"kdesu" << "-d" << "-c"<<command;

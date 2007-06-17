@@ -20,13 +20,13 @@
 #include <kvbox.h>
 #include <qlayout.h>
 #include <qlabel.h>
+#include <QProcess>
 
 #include <kgenericfactory.h>
 #include <kdebug.h>
 #include <kpushbutton.h>
 #include <kfileshare.h>
 #include <kmessagebox.h>
-#include <k3process.h>
 #include <kstandarddirs.h>
 #include <kdialog.h>
 #include <kglobal.h>
@@ -100,9 +100,9 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
 
 void PropsDlgSharePlugin::slotConfigureFileSharing()
 {
-    K3Process proc;
-    proc << KStandardDirs::findExe("kdesu") << "kcmshell" << "fileshare";
-    proc.start( K3Process::DontCare );
+    QStringList lst;
+    lst<<"kcmshell" << "fileshare";
+    QProcess::startDetached(KStandardDirs::findExe("kdesu"),lst);
 }
 
 

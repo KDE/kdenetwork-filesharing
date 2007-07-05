@@ -43,7 +43,7 @@
 #include <kmessagebox.h>
 #include <kuser.h>
 #include <kurl.h>
-#include <k3process.h>
+#include <kprocess.h>
 #include <krichtextlabel.h>
 #include <KVBox>
 
@@ -222,18 +222,18 @@ void KFileShareConfig::load()
 }
 
 bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
-  K3Process chgrp;
+  KProcess chgrp;
   chgrp << "chgrp" << m_fileShareGroup << file;
-  K3Process chmod;
+  KProcess chmod;
   chmod << "chmod" << "g=rw" << file;
 
-  if (!chgrp.start(K3Process::Block) && chgrp.normalExit()) {
+  if (chgrp.execute()) {
       kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
       return false;
 
   }
 
-  if(!chmod.start(K3Process::Block) && chmod.normalExit()) {
+  if(chmod.execute()) {
       kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
       return false;
   }
@@ -243,18 +243,18 @@ bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
 }
 
 bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
-  K3Process chgrp;
+  KProcess chgrp;
   chgrp << "chgrp" << "root" << file;
-  K3Process chmod;
+  KProcess chmod;
   chmod << "chmod" << "g=r" << file;
 
-  if (!chgrp.start(K3Process::Block) && chgrp.normalExit()) {
+  if (chgrp.execute()) {
       kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
       return false;
 
   }
 
-  if(!chmod.start(K3Process::Block) && chmod.normalExit()) {
+  if(chmod.execute()) {
       kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
       return false;
   }

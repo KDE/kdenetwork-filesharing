@@ -28,6 +28,8 @@
 #include <qfileinfo.h>
 #include <kio/job.h>
 #include <k3process.h>
+#include <kprocess.h>
+#include <kshell.h>
 #include <kmessagebox.h>
 #include <klocale.h>
 #include <ktemporaryfile.h>
@@ -171,16 +173,16 @@ bool SambaFile::slotApply()
   KUrl url(path);
 
   if (KUrl(path).isLocalFile()) {
-    K3Process proc;
+    KProcess proc;
     kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
 
     QString suCommand=QString("cp %1 %2; rm %3")
-              .arg(_tempFile->fileName())
-              .arg(path)
-              .arg(_tempFile->fileName());
+              .arg(KShell::quoteArg(_tempFile->fileName()),
+                   KShell::quoteArg(path),
+                   KShell::quoteArg(_tempFile->fileName()));
     proc << "kdesu" << "-d" << suCommand;
 
-    if (! proc.start(K3Process::Block)) {
+    if (proc.execute()) {
         kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!" << endl;
         //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.",path));
         delete _tempFile;

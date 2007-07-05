@@ -34,7 +34,7 @@
 #include <kurlrequester.h>
 #include <kmessagebox.h>
 #include <klineedit.h>
-#include <k3procio.h>
+#include <kprocess.h>
 #include <ktemporaryfile.h>
 #include <kshell.h>
 // NFS related
@@ -203,27 +203,27 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
      KTemporaryFile sambaTempFile;
      sambaTempFile.open();
 
-     K3ProcIO proc;
+     KProcess proc;
 
      QString command;
      
      if (nfsNeedsKDEsu) {
          nfsFile->saveTo(nfsTempFile.fileName());
          command += QString("cp %1 %2;exportfs -ra;")
-        .arg(KShell::quoteArg( nfsTempFile.fileName() ))
-        .arg(KShell::quoteArg( nfsFileName ));
+        .arg(KShell::quoteArg( nfsTempFile.fileName() ),
+             KShell::quoteArg( nfsFileName ));
      }         
      
      if (sambaNeedsKDEsu) {
          sambaFile->saveTo(sambaTempFile.fileName());
          command += QString("cp %1 %2;")
-        .arg(KShell::quoteArg( sambaTempFile.fileName() ))
-        .arg(KShell::quoteArg( sambaFileName ));
+        .arg(KShell::quoteArg( sambaTempFile.fileName() ),
+             KShell::quoteArg( sambaFileName ));
      }       
          
      proc<<"kdesu" << "-d" << "-c"<<command;
 
-     if (!proc.start(K3Process::Block, true)) {
+     if (proc.execute()) {
        kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: kdesu command failed" << endl;
        return false;
      }      

@@ -432,6 +432,7 @@ void PropertiesPage::moreNFSBtn_clicked() {
     m_nfsChanged = true;
     emit changed();    
   }
+  delete dlg;
 }
 
 bool PropertiesPage::loadSamba() {

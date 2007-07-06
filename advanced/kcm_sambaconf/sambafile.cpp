@@ -346,7 +346,7 @@ int SambaFile::getSambaVersion() {
   K3Process testParam;
   testParam << "testparm";
   testParam << "-V";
-  _parmOutput = QString("");
+  _parmOutput.clear();
   _sambaVersion = 2;
 
   connect( &testParam, SIGNAL(receivedStdout(K3Process*,char*,int)),
@@ -380,7 +380,7 @@ SambaShare* SambaFile::getTestParmValues(bool reload)
 
 
   testParam << "/dev/null";
-  _parmOutput = QString("");
+  _parmOutput.clear();
 
   connect( &testParam, SIGNAL(receivedStdout(K3Process*,char*,int)),
           this, SLOT(testParmStdOutReceived(K3Process*,char*,int)));
@@ -404,8 +404,7 @@ void SambaFile::parseParmStdOutput()
 
   QTextIStream s(&_parmOutput);
 
-  if (_testParmValues)
-    delete _testParmValues;
+  delete _testParmValues;
   _testParmValues = new SambaShare(_sambaConfig);
 
   QString section="";

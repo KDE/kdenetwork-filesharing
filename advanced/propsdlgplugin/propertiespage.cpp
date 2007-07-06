@@ -574,7 +574,7 @@ QString PropertiesPage::getNewSambaName() {
       shareName = sambaNameEdit->text();
   
   // Windows could have problems with longer names
-  shareName = shareName.left(12).upper();
+  shareName = shareName.left(12).toUpper();
 
   if ( m_sambaFile->getShare(shareName) )
       shareName = m_sambaFile->getUnusedName(shareName);

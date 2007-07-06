@@ -33,9 +33,9 @@ public:
   GroupConfigDlg(QWidget * parent, const QString & fileShareGroup, bool restricted, 
                  bool rootPassNeeded, bool simpleSharing);
   ~GroupConfigDlg();
-  KUserGroup fileShareGroup() { return m_fileShareGroup; }
-  bool restricted();
-  bool rootPassNeeded();
+  KUserGroup fileShareGroup() const { return m_fileShareGroup; }
+  bool restricted() const;
+  bool rootPassNeeded() const;
 protected:
   GroupConfigGUI* m_gui;
   

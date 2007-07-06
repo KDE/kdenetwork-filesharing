@@ -122,7 +122,7 @@ QString fromPrettyString(const QString & s) {
   return loginName;
 }
 
-bool GroupConfigDlg::restricted() {
+bool GroupConfigDlg::restricted() const {
   return m_restricted;
 }
 
@@ -197,7 +197,7 @@ bool GroupConfigDlg::removeUser(const KUser & user, const KUserGroup & group) {
   return true;
 }
 
-bool GroupConfigDlg::rootPassNeeded() {
+bool GroupConfigDlg::rootPassNeeded() const {
   return m_rootPassNeeded;
 }
 

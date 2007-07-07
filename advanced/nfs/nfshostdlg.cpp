@@ -22,7 +22,6 @@
 #include <q3groupbox.h>
 //Added by qt3to4:
 #include <QVBoxLayout>
-#include <Q3Button>
 #include <klocale.h>
 #include <kdebug.h>
 #include <kmessagebox.h>

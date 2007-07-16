@@ -101,7 +101,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
 void PropsDlgSharePlugin::slotConfigureFileSharing()
 {
     KProcess proc;
-    proc << KStandardDirs::findExe("kdesu") << "kcmshell" << "fileshare";
+    proc << KStandardDirs::findExe("kdesu") << locate("exe", "kcmshell") << "fileshare";
     proc.start( KProcess::DontCare );
 }
 

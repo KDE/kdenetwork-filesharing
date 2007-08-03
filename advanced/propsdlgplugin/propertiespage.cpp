@@ -150,18 +150,18 @@ void PropertiesPage::enableSamba(bool b, const QString & message) {
 
 bool PropertiesPage::save() {
   if (!hasChanged()) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nothing changed." << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nothing changed.";
       return true;
   }
   
   if (!checkURL()) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: url check failed." << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: url check failed.";
       return false;
   }      
   
   updateNFSEntry();
   if (!updateSambaShare()) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: updateSambaShare failed!" << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: updateSambaShare failed!";
       return false;
   }      
  
@@ -178,10 +178,10 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
           nfsFile->saveTo(nfsFileName);
       } else {
           nfsNeedsKDEsu = true;
-          kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs needs kdesu." << endl;
+          kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs needs kdesu.";
       }          
   } else
-    kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs has not changed." << endl;
+    kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: nfs has not changed.";
 
   
   QString sambaFileName = KSambaShare::instance()->smbConfPath();
@@ -191,10 +191,10 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
           sambaFile->saveTo(sambaFileName);
       } else {
           sambaNeedsKDEsu = true;
-          kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba needs kdesu." << endl;
+          kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba needs kdesu.";
       }          
   } else
-    kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba has not changed." << endl;
+    kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: samba has not changed.";
 
   
   if (nfsNeedsKDEsu || sambaNeedsKDEsu) {
@@ -224,12 +224,12 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
      proc<<"kdesu" << "-d" << "-c"<<command;
 
      if (proc.execute()) {
-       kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: kdesu command failed" << endl;
+       kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: kdesu command failed";
        return false;
      }      
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successful." << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: Saving successful.";
   return true;
 }
 
@@ -239,22 +239,22 @@ bool PropertiesPage::saveSamba() {
   }
       
   if (m_sambaChanged) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: saving..." << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: saving...";
       return m_sambaFile->save();
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: samba has not changed." << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveSamba: samba has not changed.";
   return true;      
 }
 
 bool PropertiesPage::saveNFS() {
   updateNFSEntry();
   if (!m_nfsChanged) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: NFS did not change." << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: NFS did not change.";
       return true;
   }      
       
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: saving..." << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::saveNFS: saving...";
   return m_nfsFile->save();    
 }
 
@@ -263,12 +263,12 @@ bool PropertiesPage::saveNFS() {
 
 bool PropertiesPage::checkURL() {
 
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL";
   
   if (!m_enterUrl)
       return true;
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: enterUrl=true" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: enterUrl=true";
   
   KUrl url(urlRq->url());      
   QString path = url.path(KUrl::AddTrailingSlash);        
@@ -280,11 +280,11 @@ bool PropertiesPage::checkURL() {
         << path << "'" << endl;
   
   if (m_path == path) {
-    kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: paths are equal" << endl;
+    kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: paths are equal";
     return true;
   }    
     
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: different path" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: different path";
   
   
   if (!url.isValid()) {
@@ -294,7 +294,7 @@ bool PropertiesPage::checkURL() {
       return false;
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is valid" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is valid";
   
   if (!url.isLocalFile()) {
       KMessageBox::sorry(this,i18n("Only local folders can be shared."));
@@ -303,7 +303,7 @@ bool PropertiesPage::checkURL() {
       return false;
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is local file" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: url is local file";
   
   QFileInfo info(path);
   
@@ -315,7 +315,7 @@ bool PropertiesPage::checkURL() {
       return false;
   }
 
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder exits" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder exits";
   
   
   if (!info.isDir()) 
@@ -326,7 +326,7 @@ bool PropertiesPage::checkURL() {
       return false;
   }
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: path is dir" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: path is dir";
   
   if (KSambaShare::instance()->isDirectoryShared(path) ||
       KNFSShare::instance()->isDirectoryShared(path))
@@ -337,7 +337,7 @@ bool PropertiesPage::checkURL() {
       return false;
   }      
   
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder not shared yet" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::checkURL: folder not shared yet";
   m_path = path;
   
   return true;
@@ -427,7 +427,7 @@ void PropertiesPage::moreNFSBtn_clicked() {
   if (dlg->exec()==QDialog::Accepted &&
       dlg->modified()) 
   {
-    kDebug(FILESHARE_DEBUG) << "NFSDialog::ok" << endl;
+    kDebug(FILESHARE_DEBUG) << "NFSDialog::ok";
     loadNFSEntry();
     m_nfsChanged = true;
     emit changed();    
@@ -494,7 +494,7 @@ void PropertiesPage::sambaChkToggled( bool b ) {
 }
 
 bool PropertiesPage::updateSambaShare() {
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare";
   
   if (shareChk->isChecked() && 
       sambaChk->isChecked()) 
@@ -542,7 +542,7 @@ bool PropertiesPage::updateSambaShare() {
           
   } else {
     if (m_sambaShare) {
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare: removing share" << endl;
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::updateSambaShare: removing share";
       m_sambaFile->removeShare(m_sambaShare);
       m_sambaShare = 0;
       m_sambaChanged = true;
@@ -593,7 +593,7 @@ void PropertiesPage::createNewSambaShare() {
 
 
 void PropertiesPage::moreSambaBtnClicked() {
-  kDebug(FILESHARE_DEBUG) << "PropertiesPage::moreSambaBtnClicked()" << endl;
+  kDebug(FILESHARE_DEBUG) << "PropertiesPage::moreSambaBtnClicked()";
   updateSambaShare();
   ShareDlgImpl* dlg = new ShareDlgImpl(this,m_sambaShare);
   dlg->directoryGrp->hide();

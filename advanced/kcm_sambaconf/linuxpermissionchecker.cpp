@@ -40,14 +40,14 @@ LinuxPermissionChecker::LinuxPermissionChecker(SambaShare* share,QWidget* parent
   m_parent = parent;
 
   if (!share) {
-    kWarning() << "WARNING: LinuxPermissionChecker: share is null !" << endl;
+    kWarning() << "WARNING: LinuxPermissionChecker: share is null !";
     return;        
   }
   
   m_fi = QFileInfo(share->getValue("path"));
   
   if ( ! m_fi.exists()) {
-    kDebug(5009) << "LinuxPermissionChecker: path does not exists !" << endl;
+    kDebug(5009) << "LinuxPermissionChecker: path does not exists !";
   }
 
 }

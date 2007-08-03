@@ -67,7 +67,7 @@ PrinterDlgImpl::PrinterDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmPrinterDlg(parent,"sharedlgimpl")
 {
   if (!share) {
-    kWarning() << "PrinterDlgImpl::Constructor : share parameter is null!" << endl;
+    kWarning() << "PrinterDlgImpl::Constructor : share parameter is null!";
     return;    
   }
 

@@ -124,7 +124,7 @@ QString SambaFile::findShareByPath(const QString & path) const
         KUrl curUrl(*s);
         curUrl.adjustPath(KUrl::RemoveTrailingSlash);
 
-        kDebug(5009) << url.path() << " =? " << curUrl.path() << endl;
+        kDebug(5009) << url.path() << " =? " << curUrl.path();
 
         if (url.path() == curUrl.path())
             return it.currentKey();
@@ -142,7 +142,7 @@ bool SambaFile::save() {
 bool SambaFile::slotApply()
 {
   if (readonly) {
-      kDebug(FILESHARE_DEBUG) << "SambaFile::slotApply: readonly=true" << endl;
+      kDebug(FILESHARE_DEBUG) << "SambaFile::slotApply: readonly=true";
       return false;
   }
 
@@ -163,7 +163,7 @@ bool SambaFile::slotApply()
   _tempFile = new KTemporaryFile();
 
   if (!_tempFile->open() || !saveTo(_tempFile->fileName())) {
-    kDebug(5009) << "SambaFile::slotApply: Could not save to temporary file" << endl;
+    kDebug(5009) << "SambaFile::slotApply: Could not save to temporary file";
     delete _tempFile;
     _tempFile = 0;
     return false;
@@ -174,7 +174,7 @@ bool SambaFile::slotApply()
 
   if (KUrl(path).isLocalFile()) {
     KProcess proc;
-    kDebug(5009) << "SambaFile::slotApply: is local file!" << endl;
+    kDebug(5009) << "SambaFile::slotApply: is local file!";
 
     QString suCommand=QString("cp %1 %2; rm %3")
               .arg(KShell::quoteArg(_tempFile->fileName()),
@@ -183,7 +183,7 @@ bool SambaFile::slotApply()
     proc << "kdesu" << "-d" << suCommand;
 
     if (proc.execute()) {
-        kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!" << endl;
+        kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!";
         //KMessageBox::sorry(0,i18n("Saving the results to %1 failed.",path));
         delete _tempFile;
         _tempFile = 0;
@@ -193,11 +193,11 @@ bool SambaFile::slotApply()
         changed = false;
         delete _tempFile;
         _tempFile = 0;
-        kDebug(5009) << "SambaFile::slotApply: changes successfully saved!" << endl;
+        kDebug(5009) << "SambaFile::slotApply: changes successfully saved!";
         return true;
     }
   } else {
-    kDebug(5009) << "SambaFile::slotApply: is remote file!" << endl;
+    kDebug(5009) << "SambaFile::slotApply: is remote file!";
     KUrl srcURL;
     srcURL.setPath( _tempFile->fileName() );
 
@@ -359,7 +359,7 @@ int SambaFile::getSambaVersion() {
       _sambaVersion = 3;
   }
 
-  kDebug(5009) << "Samba version = " << _sambaVersion << endl;
+  kDebug(5009) << "Samba version = " << _sambaVersion;
 
   return _sambaVersion;
 }
@@ -485,7 +485,7 @@ bool SambaFile::load()
   if (path.isNull() || path.isEmpty())
       return false;
 
-  kDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path << endl;
+  kDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path;
   KUrl url(path);
 
   if (!url.isLocalFile()) {
@@ -616,7 +616,7 @@ bool SambaFile::saveTo(const QString & path)
     {
       s << *cmtIt << endl;
 
-      kDebug(5009) << *cmtIt << endl;
+      kDebug(5009) << *cmtIt;
     }
 
     // If there are no lines before the section add

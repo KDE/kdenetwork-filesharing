@@ -69,7 +69,7 @@ return true;
 bool SambaShare::optionSupported(const QString & name) 
 {
   QString defaultValue = _sambaFile->getDefaultValue(name);
-//  kDebug(5009) << name << " = " << defaultValue << " null : " << defaultValue.isNull() << endl;
+//  kDebug(5009) << name << " = " << defaultValue << " null : " << defaultValue.isNull();
   return ! defaultValue.isNull();
 }
 
@@ -206,7 +206,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
   {
     if ( newValue.trimmed().toLower() == getDefaultValue(synonym).trimmed().toLower() )
     {
-      kDebug(5009) << getName() << " global: " << global << " remove " << synonym << endl;
+      kDebug(5009) << getName() << " global: " << global << " remove " << synonym;
       remove(synonym);
       _optionList.remove(synonym);
       return;

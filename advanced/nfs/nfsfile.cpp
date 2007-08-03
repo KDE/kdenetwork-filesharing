@@ -177,7 +177,7 @@ bool NFSFile::load()
     if ( path[path.length()-1] != '/' )
             path += '/';
 
-    kDebug(5009) << "KNFSShare: Found path: '" << path << "'" << endl;
+    kDebug(5009) << "KNFSShare: Found path: '" << path << "'";
     NFSEntry *entry = new NFSEntry(path);
     QStringList hostList = QStringList::split(' ', hosts);
 
@@ -194,7 +194,7 @@ bool NFSFile::load()
       }
     }
 
-    kDebug(5009) << "KNFSShare: Found hosts: " << hosts << "'" << endl;
+    kDebug(5009) << "KNFSShare: Found hosts: " << hosts << "'";
     this->addEntry(entry);
   }
 

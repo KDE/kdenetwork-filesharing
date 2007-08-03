@@ -52,7 +52,7 @@ NFSDialog::NFSDialog(QWidget * parent, NFSEntry* entry)
   if (m_nfsEntry) 
       m_workEntry = m_nfsEntry->copy();
   else
-      kWarning() << "NFSDialog::NFSDialog: entry is null!" << endl;
+      kWarning() << "NFSDialog::NFSDialog: entry is null!";
             
   initGUI();
   initSlots();

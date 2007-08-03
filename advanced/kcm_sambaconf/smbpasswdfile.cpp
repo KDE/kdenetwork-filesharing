@@ -124,7 +124,7 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
 
   if (result)
   {
-    kDebug(5009) << _smbpasswdOutput << endl;
+    kDebug(5009) << _smbpasswdOutput;
   }
 
   return result;
@@ -150,7 +150,7 @@ bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 
   if (result)
   {
-    kDebug(5009) << _smbpasswdOutput << endl;
+    kDebug(5009) << _smbpasswdOutput;
   }
 
   return result;
@@ -188,7 +188,7 @@ void SmbPasswdFile::smbpasswdStdOutReceived(K3Process *, char *buffer, int bufle
  **/
 KUrl SmbPasswdFile::getUrlFromSambaFile(const SambaFile * /*file*/)
 {
-  kWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!" << endl;
+  kWarning() << "SmbPasswdFile::getUrlFromSambaFile unimplemeneted!";
   return KUrl("");
 }
 

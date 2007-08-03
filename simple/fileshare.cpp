@@ -228,13 +228,13 @@ bool KFileShareConfig::addGroupAccessesToFile(const QString & file) {
   chmod << "chmod" << "g=rw" << file;
 
   if (chgrp.execute()) {
-      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chgrp failed";
       return false;
 
   }
 
   if(chmod.execute()) {
-      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::addGroupAccessesToFile: chmod failed";
       return false;
   }
 
@@ -249,13 +249,13 @@ bool KFileShareConfig::removeGroupAccessesFromFile(const QString & file) {
   chmod << "chmod" << "g=r" << file;
 
   if (chgrp.execute()) {
-      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chgrp failed";
       return false;
 
   }
 
   if(chmod.execute()) {
-      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed" << endl;
+      kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeGroupAccessesFromFile: chmod failed";
       return false;
   }
 
@@ -425,7 +425,7 @@ void KFileShareConfig::removeShareBtnClicked() {
 
   NFSFile nfsFile(KNFSShare::instance()->exportsPath());
   if (nfs) {
-    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true" << endl;
+    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: nfs = true";
     nfsFile.load();
   	foreach ( Q3ListViewItem*item, items ) {
         nfsFile.removeEntryByPath(item->text(0));
@@ -434,7 +434,7 @@ void KFileShareConfig::removeShareBtnClicked() {
 
   SambaFile smbFile(KSambaShare::instance()->smbConfPath(),false);
   if (samba) {
-    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true" << endl;
+    kDebug(FILESHARE_DEBUG) << "KFileShareConfig::removeShareBtnClicked: samba = true";
     smbFile.load();
 	foreach ( Q3ListViewItem*item, items ) {
         smbFile.removeShareByPath(item->text(0));

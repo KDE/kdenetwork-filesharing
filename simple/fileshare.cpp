@@ -56,7 +56,7 @@
 #include "groupconfigdlg.h"
 
 typedef KGenericFactory<KFileShareConfig, QWidget > ShareFactory;
-K_EXPORT_COMPONENT_FACTORY (fileshare, ShareFactory("kcmfileshare") )
+K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
 
 
 #define FILESHARECONF "/etc/security/fileshare.conf"

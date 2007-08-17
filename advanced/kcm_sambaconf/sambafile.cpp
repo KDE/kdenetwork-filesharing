@@ -217,7 +217,7 @@ QString SambaFile::getUnusedName(const QString alreadyUsedName) const
 {
 
   QString init = i18n("Unnamed");
-  if (alreadyUsedName != QString::null)	//krazy:exclude=nullstrassign for old broken gcc
+  if (alreadyUsedName != QString())
     init = alreadyUsedName;
 
   QString s = init;

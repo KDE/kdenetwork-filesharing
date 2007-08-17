@@ -115,7 +115,7 @@ void NFSHostDlg::setEditValue(QLineEdit* edit, const QString & value) {
       edit->setText(value);
   else 
   if (edit->text() != value)
-      edit->setText(QString::null);	//krazy:exclude=nullstrassign for old broken gcc
+      edit->setText(QString());
 }
 
 void NFSHostDlg::setCheckBoxValue(QCheckBox* chk, bool value) {

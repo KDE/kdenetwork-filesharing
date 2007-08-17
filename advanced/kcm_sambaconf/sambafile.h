@@ -100,7 +100,7 @@ public:
    * E.g.: if public is already used, the method could return 
    * public2
    **/
-	QString getUnusedName(const QString alreadyUsedName=QString::null) const;
+	QString getUnusedName(const QString alreadyUsedName=QString::null) const;	//krazy:exclude=nullstrassign for old broken gcc
 
   /**
    * Returns all values of the global section

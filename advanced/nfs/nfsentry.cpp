@@ -360,7 +360,7 @@ NFSHost* NFSEntry::getPublicHost() const
   if (result)
       return result;
 
-  return getHostByName(QString::null);
+  return getHostByName(QString::null);	//krazy:exclude=nullstrassign for old broken gcc
 }
 
 

@@ -279,7 +279,7 @@ void UserTabImpl::addUserBtnClicked()
   } else {
     bool ok;
     QString name = KInputDialog::getText(i18n("Add User"),i18n("Name:"),
-                                         QString::null,&ok );
+                                         QString::null,&ok );	//krazy:exclude=nullstrassign for old broken gcc
                                          
     if (ok)                                         
         addUserToUserTable(name,0);

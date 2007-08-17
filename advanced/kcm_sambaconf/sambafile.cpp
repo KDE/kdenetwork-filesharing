@@ -217,7 +217,7 @@ QString SambaFile::getUnusedName(const QString alreadyUsedName) const
 {
 
   QString init = i18n("Unnamed");
-  if (alreadyUsedName != QString::null)
+  if (alreadyUsedName != QString::null)	//krazy:exclude=nullstrassign for old broken gcc
     init = alreadyUsedName;
 
   QString s = init;
@@ -453,7 +453,7 @@ void SambaFile::parseParmStdOutput()
 * Try to find the samba config file position
 * First tries the config file, then checks
 * several common positions
-* If nothing is found returns QString::null
+* If nothing is found returns QString()
 **/
 QString SambaFile::findSambaConf()
 {

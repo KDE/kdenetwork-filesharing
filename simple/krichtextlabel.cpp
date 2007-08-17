@@ -38,7 +38,7 @@ static QString qrichtextify( const QString& text )
     *it = Qt::convertFromPlainText( *it, Qt::WhiteSpaceNormal );
   }
 
-  return lines.join(QString::null);
+  return lines.join(QString::null);	//krazy:exclude=nullstrassign for old broken gcc
 }
 
 KRichTextLabel::KRichTextLabel( const QString &text , QWidget *parent )

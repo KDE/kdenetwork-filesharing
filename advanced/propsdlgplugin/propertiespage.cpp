@@ -526,7 +526,7 @@ bool PropertiesPage::updateSambaShare() {
       SambaShare* otherShare = m_sambaFile->getShare(sambaNameEdit->text());
       if (otherShare && otherShare != m_sambaShare) {
         // There is another Share with the same name
-        KMessageBox::sorry(this, i18n("<qt>There is already a share with the name <strong>%1</strong>.<br> Please choose another name.</qt>", sambaNameEdit->text()));
+        KMessageBox::sorry(this, i18n("<qt>There is already a share with the name <strong>%1</strong>.<br /> Please choose another name.</qt>", sambaNameEdit->text()));
         sambaNameEdit->selectAll();
         sambaNameEdit->setFocus();
         return false;

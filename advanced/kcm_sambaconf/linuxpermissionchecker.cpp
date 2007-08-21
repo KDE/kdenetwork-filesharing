@@ -114,7 +114,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>public read access</b> for this directory, but "
-           "the guest account <b>%1</b> does not have the necessary read permissions;<br>" 
+           "the guest account <b>%1</b> does not have the necessary read permissions;<br />"
            "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
            ,KStandardGuiItem::cont()
@@ -129,7 +129,7 @@ bool LinuxPermissionChecker::checkPublicPermissions() {
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>public write access</b> for this directory, but "
-           "the guest account <b>%1</b> does not have the necessary write permissions;<br>" 
+           "the guest account <b>%1</b> does not have the necessary write permissions;<br />"
            "do you want to continue anyway?</qt>", guestAccount)
            ,i18n("Warning")
            ,KStandardGuiItem::cont()
@@ -167,7 +167,7 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
     if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
         0L,i18n(
           "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this directory, but "
-          "the user does not have the necessary write permissions;<br>" 
+          "the user does not have the necessary write permissions;<br />"
           "do you want to continue anyway?</qt>", user)
           ,i18n("Warning")
           ,KStandardGuiItem::cont()
@@ -175,7 +175,6 @@ bool LinuxPermissionChecker::checkUserWritePermissions(const QString & user, boo
           ,"KSambaPlugin_userHasNoWritePermissionsWarning"))
         return false;
   }
-  
   return true;
 }
     
@@ -191,16 +190,14 @@ bool LinuxPermissionChecker::checkUserReadPermissions(const QString & user, bool
      if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
          0L,i18n(
            "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this directory, but "
-           "the user does not have the necessary read permissions;<br>" 
+           "the user does not have the necessary read permissions;<br />"
            "do you want to continue anyway?</qt>", user)
            ,i18n("Warning")
            ,KStandardGuiItem::cont()
            ,KStandardGuiItem::cancel()
            ,"KSambaPlugin_userHasNoReadPermissionsWarning"))
          return false;
-     
   }
-     
-  return true;     
-}
 
+  return true;
+}

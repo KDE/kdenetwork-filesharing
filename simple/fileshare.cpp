@@ -199,24 +199,24 @@ void KFileShareConfig::load()
 {
     KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::OnlyLocal);
 
-    m_ccgui->shareGrp->setChecked( config.readEntry("FILESHARING", "yes") == "yes" );
+    m_ccgui->shareGrp->setChecked( config.group("").readEntry("FILESHARING", "yes") == "yes" );
 
-    m_restricted = config.readEntry("RESTRICT", "yes") == "yes";
+    m_restricted = config.group("").readEntry("RESTRICT", "yes") == "yes";
 
-    if (config.readEntry("SHARINGMODE", "simple") == "simple")
+    if (config.group("").readEntry("SHARINGMODE", "simple") == "simple")
         m_ccgui->simpleRadio->setChecked(true);
     else
         m_ccgui->advancedRadio->setChecked(true);
 
-    m_fileShareGroup = config.readEntry("FILESHAREGROUP", "fileshare");
+    m_fileShareGroup = config.group("").readEntry("FILESHAREGROUP", "fileshare");
 
     m_ccgui->sambaChk->setChecked(
-          config.readEntry("SAMBA", "yes") == "yes");
+          config.group("").readEntry("SAMBA", "yes") == "yes");
 
     m_ccgui->nfsChk->setChecked(
-          config.readEntry("NFS", "yes") == "yes");
+          config.group("").readEntry("NFS", "yes") == "yes");
 
-    m_rootPassNeeded = config.readEntry("ROOTPASSNEEDED", "yes") == "yes";
+    m_rootPassNeeded = config.group("").readEntry("ROOTPASSNEEDED", "yes") == "yes";
 
     m_smbConf = KSambaShare::instance()->smbConfPath();
 }

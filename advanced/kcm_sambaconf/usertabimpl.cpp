@@ -48,7 +48,6 @@
 #include "usertabimpl.h"
 #include "sambashare.h"
 #include "smbpasswdfile.h"
-#include "passwd.h"
 #include "groupselectdlg.h"
 #include "userselectdlg.h"
 #include "expertuserdlg.h"

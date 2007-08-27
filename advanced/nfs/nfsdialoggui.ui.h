@@ -6,9 +6,8 @@
 ** a constructor, and a destroy() slot in place of a destructor.
 *****************************************************************************/
 
-
-
-
+#ifndef NFS_NFSDIALOGGUI_UI_H
+#define NFS_NFSDIALOGGUI_UI_H
 
 void NFSDialogGUI::listView_selectionChanged()
 {
@@ -16,3 +15,5 @@ void NFSDialogGUI::listView_selectionChanged()
     modifyHostBtn->setDisabled(empty);
     removeHostBtn->setDisabled(empty);
 }
+
+#endif // NFS_NFSDIALOGGUI_UI_H

@@ -7,6 +7,8 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef PROPSDLGPLUGIN_PROPERTIESPAGEGUI_UI_H
+#define PROPSDLGPLUGIN_PROPERTIESPAGEGUI_UI_H
 
 void PropertiesPageGUI::changedSlot()
 {
@@ -54,3 +56,5 @@ void PropertiesPageGUI::moreSambaBtnClicked()
 {
 
 }
+
+#endif // PROPSDLGPLUGIN_PROPERTIESPAGEGUI_UI_H

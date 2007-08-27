@@ -26,6 +26,9 @@
  *                                                                            *
  ******************************************************************************/
 
+#ifndef KCM_SAMBACONF_KCMINTERFACE_UI_H
+#define KCM_SAMBACONF_KCMINTERFACE_UI_H
+
 void KcmInterface::init()
 {
     addShareBtn->setIconSet(SmallIconSet("document-new"));
@@ -125,3 +128,5 @@ void KcmInterface::mapToGuestCombo_activated( int i)
 {
     allowGuestLoginsChk->setChecked(i>0);
 }
+
+#endif // KCM_SAMBACONF_KCMINTERFACE_UI_H

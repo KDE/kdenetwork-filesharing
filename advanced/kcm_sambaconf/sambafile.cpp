@@ -25,7 +25,6 @@
 
 #include <kconfig.h>
 #include <kdebug.h>
-#include <qfileinfo.h>
 #include <kio/job.h>
 #include <k3process.h>
 #include <kprocess.h>

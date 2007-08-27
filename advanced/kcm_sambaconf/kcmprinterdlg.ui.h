@@ -26,6 +26,9 @@
  *                                                                            *
  ******************************************************************************/
 
+#ifndef KCM_SAMBACONF_KCMPRINTERDLG_UI_H
+#define KCM_SAMBACONF_KCMPRINTERDLG_UI_H
+
 void KcmPrinterDlg::init()
 {
     printerPixLbl->setPixmap(DesktopIcon("printer1"));
@@ -45,3 +48,5 @@ void KcmPrinterDlg::printersChkToggled( bool )
 {
 
 }
+
+#endif // KCM_SAMBACONF_KCMPRINTERDLG_UI_H

@@ -7,6 +7,8 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef KCM_SAMBACONF_USERSELECTDLG_UI_H
+#define KCM_SAMBACONF_USERSELECTDLG_UI_H
 
 void UserSelectDlg::init(const QStringList & specifiedUsers, SambaShare* share)
 {
@@ -48,3 +50,5 @@ int UserSelectDlg::getAccess()
 {
     return access;
 }
+
+#endif // KCM_SAMBACONF_USERSELECTDLG_UI_H

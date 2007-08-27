@@ -26,7 +26,6 @@
  *                                                                            *
  ******************************************************************************/
 
-
 /**
  * @author Jan Schäfer
  **/
@@ -48,10 +47,7 @@
 #include <qpixmap.h>
 #include <q3frame.h>
 #include <qwidget.h>
-#include <qtabwidget.h>
-//Added by qt3to4:
 #include <QVBoxLayout>
-
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -77,9 +73,6 @@
 #include "dictmanager.h"
 
 #include "sharedlgimpl.h"
-
-
-
 
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
 	: KcmShareDlg(parent,"sharedlgimpl")

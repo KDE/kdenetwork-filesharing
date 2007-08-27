@@ -7,6 +7,8 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef KCM_SAMBACONF_USERTAAB_UI_H
+#define KCM_SAMBACONF_USERTAAB_UI_H
 
 void UserTab::addUserBtnClicked()
 {
@@ -37,3 +39,5 @@ void UserTab::changedSlot()
 {
     emit changed();
 }
+
+#endif // KCM_SAMBACONF_USERTAAB_UI_H

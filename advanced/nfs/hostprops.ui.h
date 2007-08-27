@@ -6,8 +6,12 @@
 ** a constructor, and a destroy() slot in place of a destructor.
 *****************************************************************************/
 
+#ifndef NFS_HOSTPROPS_UI_H
+#define NFS_HOSTPROPS_UI_H
 
 void HostProps::setModified()
 {
     emit modified();
 }
+
+#endif // NFS_HOSTPROPS_UI_H

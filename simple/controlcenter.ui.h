@@ -7,6 +7,8 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef SIMPLE_CONTROLCENTER_UI_H
+#define SIMPLE_CONTROLCENTER_UI_H
 
 void ControlCenterGUI::changedSlot()
 {
@@ -20,3 +22,5 @@ void ControlCenterGUI::listView_selectionChanged()
     removeShareBtn->setDisabled(empty );
 
 }
+
+#endif // SIMPLE_CONTROLCENTER_UI_H

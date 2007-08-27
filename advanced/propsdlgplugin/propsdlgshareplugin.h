@@ -17,8 +17,8 @@
 
 */
 
-#ifndef KONQFILESHAREPLUGIN_H
-#define KONQFILESHAREPLUGIN_H
+#ifndef PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
+#define PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
 
 #include <kpropertiesdialog.h>
 
@@ -39,6 +39,4 @@ private:
     
 };
 
-#endif
-
-
+#endif // PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H

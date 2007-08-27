@@ -26,6 +26,9 @@
  *                                                                            *
  ******************************************************************************/
 
+#ifndef KCM_SAMBACONF_SHARE_UI_H
+#define KCM_SAMBACONF_SHARE_UI_H
+
 void KcmShareDlg::checkValues()
 {
 /*
@@ -255,4 +258,4 @@ void KcmShareDlg::buttonHelp_clicked()
     p->start();
 }
 
-
+#endif // KCM_SAMBACONF_SHARE_UI_H

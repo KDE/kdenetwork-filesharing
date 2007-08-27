@@ -7,6 +7,8 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef KCM_SAMBACONF_GROUPSELECTDLG_UI_H
+#define KCM_SAMBACONF_GROUPSELECTDLG_UI_H
 
 void GroupSelectDlg::init(const QStringList & specifiedGroups)
 {
@@ -61,3 +63,5 @@ QString GroupSelectDlg::getGroupKind()
 {
     return groupKind;
 }
+
+#endif // KCM_SAMBACONF_GROUPSELECTDLG_UI_H

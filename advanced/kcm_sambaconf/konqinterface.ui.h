@@ -26,6 +26,9 @@
  *                                                                            *
  ******************************************************************************/
 
+#ifndef KCM_SAMBACONF_KONQINTERFACE_UI_H
+#define KCM_SAMBACONF_KONQINTERFACE_UI_H
+
 void KonqInterface::changedSlot()
 {
   emit changed();
@@ -36,4 +39,4 @@ void KonqInterface::moreOptionsPressed()
 
 }
 
-
+#endif // KCM_SAMBACONF_KONQINTERFACE_UI_H

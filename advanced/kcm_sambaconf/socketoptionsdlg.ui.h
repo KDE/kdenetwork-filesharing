@@ -26,6 +26,9 @@
  *                                                                            *
  ******************************************************************************/
 
+#ifndef KCM_SAMBACONF_SOCKETOPTIONSDLG_UI_H
+#define KCM_SAMBACONF_SOCKETOPTIONSDLG_UI_H
+
 void SocketOptionsDlg::setShare( SambaShare * share )
 {
     assert(share);
@@ -110,3 +113,5 @@ int SocketOptionsDlg::getIntValue( const QString & str, const QString & name )
     
     return 0;
 }
+
+#endif // KCM_SAMBACONF_SOCKETOPTIONSDLG_UI_H

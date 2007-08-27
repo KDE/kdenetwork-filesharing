@@ -7,8 +7,12 @@
 ** place of a destructor.
 *****************************************************************************/
 
+#ifndef SIMPLE_GROUPCONFIGGUI_UI_H
+#define SIMPLE_GROUPCONFIGGUI_UI_H
 
 void GroupConfigGUI::listBox_selectionChanged( Q3ListBoxItem * i)
 {
     removeBtn->setEnabled(i);
 }
+
+#endif // SIMPLE_GROUPCONFIGGUI_UI_H

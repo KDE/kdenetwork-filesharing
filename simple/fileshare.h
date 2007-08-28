@@ -53,7 +53,7 @@ class KFileShareConfig  : public KCModule
    bool setGroupAccesses();
    
  protected slots:
-  void configChanged() { emit changed( true ); };
+  void configChanged() { emit changed( true ); }
   void updateShareListView(); 
   void allowedUsersBtnClicked();
   
@@ -68,7 +68,7 @@ class PropertiesPageDlg : public KDialog
 Q_OBJECT
 public: 
   PropertiesPageDlg(QWidget * parent, KFileItemList files);
-  ~PropertiesPageDlg() {};
+  ~PropertiesPageDlg() {}
   bool hasChanged();
 protected:
   PropertiesPage* m_page;

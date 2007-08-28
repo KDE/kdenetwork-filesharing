@@ -76,13 +76,13 @@ typedef Q3PtrListIterator<NFSLine> NFSLineIterator;
 class NFSEmptyLine : public NFSLine {
 public:
   virtual QString toString() const { return QString::fromLatin1("\n"); }
-  virtual ~NFSEmptyLine() {};
+  virtual ~NFSEmptyLine() {}
 };
 
 class NFSComment : public NFSLine {
 public:
   NFSComment(const QString & s) { comment = s; }
-  virtual ~NFSComment() {};
+  virtual ~NFSComment() {}
   QString comment;
   virtual QString toString() const { return comment; }
 };

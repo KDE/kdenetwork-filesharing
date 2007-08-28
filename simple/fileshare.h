@@ -20,7 +20,7 @@
 #define __fileshare_h__
 
 #include <kfileitem.h>
-
+#include <KPluginFactory>
 #include "kcmodule.h"
 //Added by qt3to4:
 #include <QLabel>
@@ -34,7 +34,7 @@ class KFileShareConfig  : public KCModule
   Q_OBJECT
 
  public:
-  KFileShareConfig(QWidget *parent, const QStringList &);
+  KFileShareConfig(QWidget *parent, const QVariantList &);
 
   virtual void load();
   virtual void save();

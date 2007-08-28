@@ -55,14 +55,15 @@
 #include "fileshare.h"
 #include "groupconfigdlg.h"
 
-typedef KGenericFactory<KFileShareConfig, QWidget > ShareFactory;
-K_EXPORT_COMPONENT_FACTORY (kcm_fileshare, ShareFactory("kcmfileshare") )
+
+K_PLUGIN_FACTORY(ShareFactory, registerPlugin<KFileShareConfig>();)
+K_EXPORT_PLUGIN(ShareFactory("kcmfileshare"))
 
 
 #define FILESHARECONF "/etc/security/fileshare.conf"
 #define FILESHARE_DEBUG 5009
 
-KFileShareConfig::KFileShareConfig(QWidget *parent, const QStringList &):
+KFileShareConfig::KFileShareConfig(QWidget *parent, const QVariantList &):
     KCModule(ShareFactory::componentData(), parent/*, name*/)
 {
   KGlobal::locale()->insertCatalog("kfileshare");

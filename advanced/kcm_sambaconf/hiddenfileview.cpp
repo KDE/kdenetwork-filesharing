@@ -67,7 +67,7 @@
 HiddenListViewItem::HiddenListViewItem( Q3ListView *parent, const KFileItem &fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
   : QMultiCheckListItem( parent )
 {
-  setPixmap( COL_NAME, fi.pixmap(K3Icon::SizeSmall));
+  setPixmap( COL_NAME, fi->pixmap(KIconLoader::SizeSmall));
 
   setText( COL_NAME, fi.text() );
   setText( COL_SIZE, KGlobal::locale()->formatNumber( fi.size(), 0));

@@ -160,7 +160,7 @@ void KFileShareConfig::updateShareListView()
         dirs += *it;
       }
 
-      QPixmap folderPix = SmallIcon("folder", 0, K3Icon::DefaultState, QStringList());
+      QPixmap folderPix = SmallIcon("folder", 0, KIconLoader::DefaultState, QStringList());
       QPixmap okPix = SmallIcon("dialog-ok");
       QPixmap cancelPix = SmallIcon("dialog-cancel");
 

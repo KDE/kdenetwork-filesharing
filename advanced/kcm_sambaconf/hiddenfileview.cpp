@@ -64,17 +64,17 @@
 
 #define HIDDENTABINDEX 5
 
-HiddenListViewItem::HiddenListViewItem( Q3ListView *parent, KFileItem *fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
+HiddenListViewItem::HiddenListViewItem( Q3ListView *parent, const KFileItem &fi, bool hidden=false, bool veto=false, bool vetoOplock=false )
   : QMultiCheckListItem( parent )
 {
-  setPixmap( COL_NAME, fi->pixmap(K3Icon::SizeSmall));
+  setPixmap( COL_NAME, fi.pixmap(K3Icon::SizeSmall));
 
-  setText( COL_NAME, fi->text() );
-  setText( COL_SIZE, KGlobal::locale()->formatNumber( fi->size(), 0));
-  setText( COL_DATE,  fi->timeString() );
-  setText( COL_PERM,  fi->permissionsString() );
-  setText( COL_OWNER, fi->user() );
-  setText( COL_GROUP, fi->group() );
+  setText( COL_NAME, fi.text() );
+  setText( COL_SIZE, KGlobal::locale()->formatNumber( fi.size(), 0));
+  setText( COL_DATE,  fi.timeString() );
+  setText( COL_PERM,  fi.permissionsString() );
+  setText( COL_OWNER, fi.user() );
+  setText( COL_GROUP, fi.group() );
 
   setOn(COL_HIDDEN,hidden);
   setOn(COL_VETO,veto);
@@ -87,7 +87,7 @@ HiddenListViewItem::~HiddenListViewItem()
 {
 }
 
-KFileItem* HiddenListViewItem::getFileItem()
+KFileItem HiddenListViewItem::getFileItem() const
 {
   return _fileItem;
 }
@@ -147,11 +147,11 @@ HiddenFileView::HiddenFileView(ShareDlgImpl* shareDlg, SambaShare* share)
   connect( _dir, SIGNAL(newItems(const KFileItemList &)),
            this, SLOT(insertNewFiles(const KFileItemList &)));
 
-  connect( _dir, SIGNAL(deleteItem(KFileItem*)),
-           this, SLOT(deleteItem(KFileItem*)));
+  connect( _dir, SIGNAL(deleteItem(const KFileItem&)),
+           this, SLOT(deleteItem(const KFileItem&)));
 
-  connect( _dir, SIGNAL(refreshItems(const KFileItemList &)),
-           this, SLOT(refreshItems(const KFileItemList &)));
+  connect( _dir, SIGNAL(refreshItems(const QList<QPair<KFileItem, KFileItem> > &)),
+           this, SLOT(refreshItems(const QList<QPair<KFileItem, KFileItem> > &)));
 
   connect( _hiddenActn, SIGNAL(toggled(bool)), this, SLOT(hiddenChkClicked(bool)));
   connect( _vetoActn, SIGNAL(toggled(bool)), this, SLOT(vetoChkClicked(bool)));
@@ -227,19 +227,17 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
   if ( newone.isEmpty() )
      return;
 
-  KFileItem *tmp;
-
   int j=0;
 
   KFileItemList::const_iterator it = newone.begin();
   const KFileItemList::const_iterator end = newone.end();
   for ( ; it != end; ++it ) {
-	tmp = (*it);
+    const KFileItem tmp = *it;
     j++;
 
-    bool hidden = matchHidden(tmp->text());
-    bool veto = matchVeto(tmp->text());
-    bool vetoOplock = matchVetoOplock(tmp->text());
+    bool hidden = matchHidden(tmp.text());
+    bool veto = matchVeto(tmp.text());
+    bool vetoOplock = matchVetoOplock(tmp.text());
 
     new HiddenListViewItem( _dlg->hiddenListView, tmp, hidden, veto, vetoOplock );
 
@@ -259,7 +257,7 @@ void HiddenFileView::columnClicked(int column) {
   }
 }
 
-void HiddenFileView::deleteItem( KFileItem *fileItem )
+void HiddenFileView::deleteItem( const KFileItem &fileItem )
 {
   HiddenListViewItem* item;
   for (item = dynamic_cast<HiddenListViewItem*>(_dlg->hiddenListView->firstChild());item;
@@ -274,7 +272,7 @@ void HiddenFileView::deleteItem( KFileItem *fileItem )
 
 }
 
-void HiddenFileView::refreshItems( const KFileItemList& /*items*/ )
+void HiddenFileView::refreshItems( const QList<QPair<KFileItem, KFileItem> >& /*items*/ )
 {
   updateView();
 }

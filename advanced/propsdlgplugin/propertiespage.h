@@ -33,7 +33,7 @@ class PropertiesPage : public PropertiesPageGUI
 {
 Q_OBJECT
 public:
-  PropertiesPage(QWidget* parent, KFileItemList items, bool enterUrl=false);
+  PropertiesPage(QWidget* parent, const KFileItemList &items, bool enterUrl=false);
   virtual ~PropertiesPage();
   
   bool save();

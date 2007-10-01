@@ -51,7 +51,7 @@
 
 #define FILESHARE_DEBUG 5009
 
-PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUrl) 
+PropertiesPage::PropertiesPage(QWidget* parent, const KFileItemList &items,bool enterUrl) 
   : PropertiesPageGUI(parent), 
   m_enterUrl(enterUrl), 
   m_items(items), 
@@ -68,7 +68,7 @@ PropertiesPage::PropertiesPage(QWidget* parent, KFileItemList items,bool enterUr
   } else {
     shareFrame->setEnabled(true);
     // currently only one dir is allowed
-    m_path = m_items.first()->url().path(KUrl::AddTrailingSlash);
+    m_path = m_items.first().url().path(KUrl::AddTrailingSlash);
   }
   
   if (m_enterUrl) {

@@ -45,14 +45,14 @@ class HiddenListViewItem : public QMultiCheckListItem
 {
 Q_OBJECT
 public:
-  HiddenListViewItem( Q3ListView *parent, KFileItem *fi, bool hidden, bool veto, bool vetoOplock );
+  HiddenListViewItem( Q3ListView *parent, const KFileItem &fi, bool hidden, bool veto, bool vetoOplock );
   ~HiddenListViewItem();
 
   virtual void paintCell(QPainter *p, const QColorGroup &cg, int column, int width, int alignment);
 
-  KFileItem* getFileItem();
+  KFileItem getFileItem() const;
 protected:
-  KFileItem *_fileItem;
+  KFileItem _fileItem;
 };
 
 class KToggleAction;
@@ -123,8 +123,8 @@ protected:
 protected slots:
   // slots for KDirListener :
   void insertNewFiles(const KFileItemList &newone);
-  void deleteItem( KFileItem *_fileItem );
-  void refreshItems( const KFileItemList& items );
+  void deleteItem( const KFileItem &_fileItem );
+  void refreshItems( const QList<QPair<KFileItem, KFileItem> >& items );
   
   void selectionChanged();
   void hiddenChkClicked(bool b);

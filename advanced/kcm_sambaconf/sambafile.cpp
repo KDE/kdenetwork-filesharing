@@ -200,7 +200,7 @@ bool SambaFile::slotApply()
     KUrl srcURL;
     srcURL.setPath( _tempFile->fileName() );
 
-    KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, true  );
+    KIO::FileCopyJob * job =  KIO::file_copy( srcURL, url, -1, KIO::Overwrite  );
     connect( job, SIGNAL( result( KJob * ) ),
              this, SLOT( slotSaveJobFinished ( KJob * ) ) );
     return (job->error()==0);
@@ -493,7 +493,7 @@ bool SambaFile::load()
     localPath = tempFile.fileName();
     KUrl destURL;
     destURL.setPath( localPath );
-    KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, true, false, true );
+    KIO::FileCopyJob * job =  KIO::file_copy( url, destURL, 0600, KIO::Overwrite );
 //    emit started( d->m_job );
     connect( job, SIGNAL( result( KJob * ) ), this, SLOT( slotJobFinished ( KJob * ) ) );
     return true;

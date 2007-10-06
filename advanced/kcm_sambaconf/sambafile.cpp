@@ -24,6 +24,7 @@
 #include <QTextStream>
 
 #include <kconfig.h>
+#include <kconfiggroup.h>
 #include <kdebug.h>
 #include <kio/job.h>
 #include <k3process.h>

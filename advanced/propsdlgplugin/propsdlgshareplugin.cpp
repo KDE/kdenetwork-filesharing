@@ -101,7 +101,7 @@ PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
 void PropsDlgSharePlugin::slotConfigureFileSharing()
 {
     QStringList lst;
-    lst<<"kcmshell" << "fileshare";
+    lst<<"kcmshell4" << "fileshare";
     QProcess::startDetached(KStandardDirs::findExe("kdesu"),lst);
 }
 

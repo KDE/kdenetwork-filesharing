@@ -52,7 +52,7 @@ SmbConfConfigWidget::SmbConfConfigWidget(QWidget* parent)
                                 " could not be found;</p>" \
                                 "make sure you have SAMBA installed.\n\n"), this);
 
-  QHBoxLayout *hbox = new QHBoxLayout(this);
+  QHBoxLayout *hbox = new QHBoxLayout;
   QPushButton *btn = new QPushButton(i18n("Specify Location"), this);
   connect(btn, SIGNAL(pressed()), this, SLOT( btnPressed()));
 

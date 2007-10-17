@@ -457,11 +457,7 @@ void SambaFile::parseParmStdOutput()
 **/
 QString SambaFile::findSambaConf()
 {
-#ifdef __GNUC__
-#warning FIXME
-#endif
-//     return KSambaShare::componentData().smbConfPath();
-    return QString();
+    return KSambaShare::instance()->smbConfPath();
 }
 
 void SambaFile::slotSaveJobFinished( KJob * job ) {

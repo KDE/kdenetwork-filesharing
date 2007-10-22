@@ -85,12 +85,16 @@ class KcmSambaConf: public KCModule
     void addShare();
     void removeShare();
 
+#if 0
     void editPrinter();
     void addPrinter();
     void removePrinter();
+#endif
 
     void editShareDefaults();
+#if 0
     void editPrinterDefaults();
+#endif
 
 
   protected:

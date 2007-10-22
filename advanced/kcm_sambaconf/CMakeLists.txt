@@ -1,10 +1,10 @@
-set(kcm_kcmsambaconf_PART_SRCS printerdlgimpl.cpp kcmsambaconf.cpp ${libfilesharesamba_SRCS})
+set(kcm_kcmsambaconf_PART_SRCS kcmsambaconf.cpp ${libfilesharesamba_SRCS})
 
 add_definitions(-D_KDEPRINT_COMPILE )
 
 kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS share.ui socketoptionsdlg.ui userselectdlg.ui
     groupselectdlg.ui usertab.ui filemodedlg.ui expertuserdlg.ui
-    kcminterface.ui kcmprinterdlg.ui joindomaindlg.ui
+    kcminterface.ui joindomaindlg.ui
 )
 
 

@@ -70,7 +70,6 @@
 #include "sambashare.h"
 #include "sambafile.h"
 #include "sharedlgimpl.h"
-#include "printerdlgimpl.h"
 #include "dictmanager.h"
 #include "kcmsambaconf.h"
 #include "smbpasswdfile.h"
@@ -246,11 +245,13 @@ void KcmSambaConf::init() {
   connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
   connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
 
+#if 0
   connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
   connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
   connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
 
   connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
+#endif
   connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
 
   connect( _interface->domainRadio, SIGNAL(toggled(bool)),
@@ -424,6 +425,7 @@ void KcmSambaConf::removeShare()
 }
 
 
+#if 0
 void KcmSambaConf::editPrinter()
 {
   ShareListViewItem* item = static_cast<ShareListViewItem*>(_interface->printerListView->selectedItem());
@@ -473,6 +475,7 @@ void KcmSambaConf::removePrinter()
 
   emit changed(true);
 }
+#endif
 
 void KcmSambaConf::editShareDefaults()
 {
@@ -487,6 +490,7 @@ void KcmSambaConf::editShareDefaults()
   emit changed(true);
 }
 
+#if 0
 void KcmSambaConf::editPrinterDefaults()
 {
   SambaShare* share = _sambaFile->getShare("global");
@@ -500,6 +504,7 @@ void KcmSambaConf::editPrinterDefaults()
 
   emit changed(true);
 }
+#endif
 
 
 

@@ -306,7 +306,7 @@ void ShareDlgImpl::initAdvancedTab()
 				icon = SmallIcon("socket");
 		else
 		if (label.toLower() == "ssl")
-			 icon = SmallIcon("encrypted");
+			 icon = SmallIcon("security-high");
 		else
 		if (label.toLower() == "browsing")
 			 icon = SmallIcon("konqueror");

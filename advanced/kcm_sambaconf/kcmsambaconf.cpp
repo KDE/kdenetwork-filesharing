@@ -333,7 +333,7 @@ void KcmSambaConf::initAdvancedTab()
         icon = SmallIcon("socket");
     else
     if (label == i18n("SSL"))
-      icon = SmallIcon("encrypted");
+      icon = SmallIcon("security-high");
     else
     if (label == i18n("Browsing"))
       icon = SmallIcon("konqueror");

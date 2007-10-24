@@ -198,7 +198,7 @@ void KFileShareConfig::allowedUsersBtnClicked() {
 
 void KFileShareConfig::load()
 {
-    KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::OnlyLocal);
+    KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::SimpleConfig);
 
     m_ccgui->shareGrp->setChecked( config.group("").readEntry("FILESHARING", "yes") == "yes" );
 

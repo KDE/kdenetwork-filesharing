@@ -676,7 +676,7 @@ SambaConfigFile* SambaFile::getSambaConfigFile(KConfig* config)
 
 KConfig* SambaFile::getSimpleConfig(SambaConfigFile* sambaConfig, const QString & path)
 {
-  KConfig *config = new KConfig(path, KConfig::OnlyLocal);
+  KConfig *config = new KConfig(path, KConfig::SimpleConfig);
 
   Q3DictIterator<SambaShare> it(*sambaConfig);
 

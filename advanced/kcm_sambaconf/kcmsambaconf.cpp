@@ -1281,7 +1281,7 @@ void KcmSambaConf::save() {
   // Base settings
 
   _smbconf = _interface->configUrlRq->url().path();
-  KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::OnlyLocal);
+  KConfig config(QString::fromLatin1(FILESHARECONF), KConfig::SimpleConfig);
   config.group("").writeEntry("SMBCONF",_smbconf);
   config.sync();
 

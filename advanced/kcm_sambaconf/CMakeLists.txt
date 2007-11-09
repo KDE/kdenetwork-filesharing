@@ -10,7 +10,7 @@ kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS share.ui socketoptionsdlg.ui users
 
 kde4_add_plugin(kcm_kcmsambaconf  ${kcm_kcmsambaconf_PART_SRCS})
 
-target_link_libraries(kcm_kcmsambaconf ${KDE4_KDEUI_LIBS} ${KDE4_KDEPRINT_LIBS} ${KDE4_KDE3SUPPORT_LIBS})
+target_link_libraries(kcm_kcmsambaconf ${KDE4_KDEUI_LIBS} ${KDE4_KDE3SUPPORT_LIBS})
 
 install(TARGETS kcm_kcmsambaconf DESTINATION ${PLUGIN_INSTALL_DIR})
 

@@ -282,7 +282,7 @@ void ShareDlgImpl::initAdvancedTab()
 			 icon = SmallIcon("password");
 		else
 		if (label.toLower() == "tuning")
-			 icon = SmallIcon("launch");
+			 icon = SmallIcon("preferences-system-performance");
 		else
 		if (label.toLower() == "filenames")
 			 icon = SmallIcon("folder");

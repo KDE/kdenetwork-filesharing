@@ -310,7 +310,7 @@ void KcmSambaConf::initAdvancedTab()
       icon = SmallIcon("history");
     else
     if (label == i18n("Tuning"))
-      icon = SmallIcon("launch");
+      icon = SmallIcon("preferences-system-performance");
     else
     if (label == i18n("Filenames"))
       icon = SmallIcon("folder");

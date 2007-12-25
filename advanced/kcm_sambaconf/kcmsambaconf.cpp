@@ -111,9 +111,9 @@ void ShareListViewItem::updateShare()
   if (_share->isPrinter())
   {
     if ( _share->getName() == "printers" )
-      setPixmap(0,SmallIcon("print_class"));
+      setPixmap(0,SmallIcon("printer-multiple"));
     else
-      setPixmap(0,SmallIcon("print_printer"));
+      setPixmap(0,SmallIcon("printer"));
     setText(1,_share->getValue("printer name"));
   }
   else
@@ -157,7 +157,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 
   if (!_share->getBoolValue("read only"))
   {
-    p.drawPixmap(x,0,SmallIcon("edit"));
+    p.drawPixmap(x,0,SmallIcon("document-properties"));
     x = x+w+margin;
   }
 
@@ -174,7 +174,7 @@ QPixmap ShareListViewItem::createPropertyPixmap()
   }
 
   if (!_share->getBoolValue("available"))
-    p.drawPixmap(x,0,SmallIcon("no"));
+    p.drawPixmap(x,0,SmallIcon("dialog-error"));
 
 
   p.end();
@@ -266,8 +266,8 @@ void KcmSambaConf::init() {
   connect( _interface->removeSambaUserBtn, SIGNAL(clicked()),
           this, SLOT( removeSambaUserBtnClicked() ));
 
-  _interface->removeSambaUserBtn->setIcon(KIcon("arrow-right"));
-  _interface->addSambaUserBtn->setIcon(KIcon("arrow-left"));
+  _interface->removeSambaUserBtn->setIcon(KIcon("go-next"));
+  _interface->addSambaUserBtn->setIcon(KIcon("go-previous"));
 
 
   connect( _interface->sambaUsersListView, SIGNAL(mouseButtonPressed(int,Q3ListViewItem*,const QPoint &,int)),

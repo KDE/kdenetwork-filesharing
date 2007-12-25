@@ -304,10 +304,10 @@ void KcmSambaConf::initAdvancedTab()
     label = _interface->advancedTab->tabText(i);
 
     if (label == i18n("Security"))
-      icon = SmallIcon("password");
+      icon = SmallIcon("dialog-password");
     else
     if (label == i18n("Logging"))
-      icon = SmallIcon("history");
+      icon = SmallIcon("view-history");
     else
     if (label == i18n("Tuning"))
       icon = SmallIcon("preferences-system-performance");
@@ -316,16 +316,13 @@ void KcmSambaConf::initAdvancedTab()
       icon = SmallIcon("folder");
     else
     if (label == i18n("Locking"))
-      icon = SmallIcon("system-lock-screen");
+      icon = SmallIcon("object-locked");
     else
     if (label == i18n("Printing"))
-      icon = SmallIcon("document-print");
+      icon = SmallIcon("printer");
     else
     if (label == i18n("Logon"))
-      icon = SmallIcon("kdmconfig");
-    else
-    if (label == i18n("Protocol"))
-      icon = SmallIcon("core");
+      icon = SmallIcon("preferences-system-login");
     else
     if (label == i18n("Charset"))
       icon = SmallIcon("character-set");
@@ -337,13 +334,13 @@ void KcmSambaConf::initAdvancedTab()
       icon = SmallIcon("security-high");
     else
     if (label == i18n("Browsing"))
-      icon = SmallIcon("konqueror");
+      icon = SmallIcon("internet-web-browser");
     else
     if (label == i18n("Misc"))
-      icon = SmallIcon("misc");
+      icon = SmallIcon("preferences-other");
     else
     if (label == i18n("Commands"))
-      icon = SmallIcon("konsole");
+      icon = SmallIcon("utilities-terminal");
     else {
       icon = QPixmap(16,16);
       icon.fill();

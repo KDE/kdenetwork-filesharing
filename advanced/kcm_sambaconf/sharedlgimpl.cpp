@@ -126,7 +126,8 @@ void ShareDlgImpl::initDialog()
 
   // Filename settings
 
-  _dictMngr->add("case sensitive",caseSensitiveChk);
+  _dictMngr->add("case sensitive",caseSensitiveCombo,
+		 new QStringList(QStringList() << "auto" << "yes" << "no"));
   _dictMngr->add("preserve case",preserveCaseChk);
   _dictMngr->add("short preserve case",shortPreserveCaseChk);
   _dictMngr->add("mangled names",mangledNamesChk);
@@ -200,7 +201,8 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("locking",lockingChk);
   _dictMngr->add("level2 oplocks",level2OplocksChk);
   _dictMngr->add("posix locking",posixLockingChk);
-  _dictMngr->add("strict locking",strictLockingChk);
+  _dictMngr->add("strict locking",strictLockingCombo,
+   		  new QStringList(QStringList() << "Auto" << "yes" << "no"));
   _dictMngr->add("share modes",shareModesChk);
   _dictMngr->add("oplocks",oplocksChk);
   
@@ -249,7 +251,7 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
     
   _dictMngr->add("msdfs root",msdfsRootChk);
-  _dictMngr->add("msdfs proxy",msdfsProxyChk);
+  _dictMngr->add("msdfs proxy",msdfsProxyEdit);
   
   _dictMngr->load( _share );
   

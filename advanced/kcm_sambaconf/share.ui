@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>KcmShareDlg</class>
 <comment>
 /******************************************************************************
@@ -1827,21 +1827,190 @@ Only change something if you know what you are doing.</string>
                             <attribute name="title">
                                 <string>Filenames</string>
                             </attribute>
-                            <grid>
+                            <widget class="QLayoutWidget">
                                 <property name="name">
-                                    <cstring>unnamed</cstring>
+                                    <cstring>Layout54</cstring>
                                 </property>
-                                <property name="margin">
-                                    <number>0</number>
+                                <property name="geometry">
+                                    <rect>
+                                        <x>330</x>
+                                        <y>1</y>
+                                        <width>323</width>
+                                        <height>270</height>
+                                    </rect>
                                 </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <widget class="QLayoutWidget" row="0" column="1">
+                                <vbox>
                                     <property name="name">
-                                        <cstring>Layout54</cstring>
+                                        <cstring>unnamed</cstring>
                                     </property>
-                                    <vbox>
+                                    <property name="margin">
+                                        <number>0</number>
+                                    </property>
+                                    <property name="spacing">
+                                        <number>6</number>
+                                    </property>
+                                    <widget class="QGroupBox">
+                                        <property name="name">
+                                            <cstring>GroupBox9</cstring>
+                                        </property>
+                                        <property name="sizePolicy">
+                                            <sizepolicy>
+                                                <hsizetype>7</hsizetype>
+                                                <vsizetype>5</vsizetype>
+                                                <horstretch>0</horstretch>
+                                                <verstretch>0</verstretch>
+                                            </sizepolicy>
+                                        </property>
+                                        <property name="title">
+                                            <string>Other Options</string>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>hideTrailingDotChk</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Hide traili&amp;ng dot</string>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                    <widget class="QGroupBox">
+                                        <property name="name">
+                                            <cstring>GroupBox15</cstring>
+                                        </property>
+                                        <property name="title">
+                                            <string>DOS</string>
+                                        </property>
+                                        <vbox>
+                                            <property name="name">
+                                                <cstring>unnamed</cstring>
+                                            </property>
+                                            <property name="margin">
+                                                <number>11</number>
+                                            </property>
+                                            <property name="spacing">
+                                                <number>6</number>
+                                            </property>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>dosFilemodeChk</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>&amp;DOS file mode</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>dosFiletimesChk</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>DOS f&amp;ile times</string>
+                                                </property>
+                                            </widget>
+                                            <widget class="QCheckBox">
+                                                <property name="name">
+                                                    <cstring>dosFiletimeResolutionChk</cstring>
+                                                </property>
+                                                <property name="text">
+                                                    <string>DOS file time resolution</string>
+                                                </property>
+                                            </widget>
+                                        </vbox>
+                                    </widget>
+                                </vbox>
+                            </widget>
+                            <spacer>
+                                <property name="name">
+                                    <cstring>Spacer61</cstring>
+                                </property>
+                                <property name="orientation">
+                                    <enum>Vertical</enum>
+                                </property>
+                                <property name="sizeType">
+                                    <enum>Expanding</enum>
+                                </property>
+                                <property name="sizeHint">
+                                    <size>
+                                        <width>20</width>
+                                        <height>30</height>
+                                    </size>
+                                </property>
+                                <property name="geometry">
+                                    <rect>
+                                        <x>152</x>
+                                        <y>277</y>
+                                        <width>20</width>
+                                        <height>119</height>
+                                    </rect>
+                                </property>
+                            </spacer>
+                            <widget class="QGroupBox">
+                                <property name="name">
+                                    <cstring>GroupBox5</cstring>
+                                </property>
+                                <property name="geometry">
+                                    <rect>
+                                        <x>1</x>
+                                        <y>1</y>
+                                        <width>323</width>
+                                        <height>270</height>
+                                    </rect>
+                                </property>
+                                <property name="sizePolicy">
+                                    <sizepolicy>
+                                        <hsizetype>5</hsizetype>
+                                        <vsizetype>5</vsizetype>
+                                        <horstretch>0</horstretch>
+                                        <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                </property>
+                                <property name="title">
+                                    <string>Name Mangling</string>
+                                </property>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>TextLabel3_2_2</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>11</x>
+                                            <y>179</y>
+                                            <width>168</width>
+                                            <height>24</height>
+                                        </rect>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>5</hsizetype>
+                                            <vsizetype>5</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                    <property name="text">
+                                        <string>Mangling cha&amp;r:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>manglingCharEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLayoutWidget">
+                                    <property name="name">
+                                        <cstring>Layout14</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>185</x>
+                                            <y>179</y>
+                                            <width>127</width>
+                                            <height>24</height>
+                                        </rect>
+                                    </property>
+                                    <hbox>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
                                         </property>
@@ -1851,83 +2020,310 @@ Only change something if you know what you are doing.</string>
                                         <property name="spacing">
                                             <number>6</number>
                                         </property>
-                                        <widget class="QGroupBox">
+                                        <widget class="QLineEdit">
                                             <property name="name">
-                                                <cstring>GroupBox9</cstring>
+                                                <cstring>manglingCharEdit</cstring>
                                             </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>7</hsizetype>
-                                                    <vsizetype>5</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
+                                            <property name="maximumSize">
+                                                <size>
+                                                    <width>40</width>
+                                                    <height>32767</height>
+                                                </size>
                                             </property>
-                                            <property name="title">
-                                                <string>Other Options</string>
-                                            </property>
-                                            <vbox>
-                                                <property name="name">
-                                                    <cstring>unnamed</cstring>
-                                                </property>
-                                                <widget class="QCheckBox">
-                                                    <property name="name">
-                                                        <cstring>hideTrailingDotChk</cstring>
-                                                    </property>
-                                                    <property name="text">
-                                                        <string>Hide traili&amp;ng dot</string>
-                                                    </property>
-                                                </widget>
-                                            </vbox>
                                         </widget>
-                                        <widget class="QGroupBox">
+                                        <spacer>
                                             <property name="name">
-                                                <cstring>GroupBox15</cstring>
+                                                <cstring>Spacer40_2</cstring>
                                             </property>
-                                            <property name="title">
-                                                <string>DOS</string>
+                                            <property name="orientation">
+                                                <enum>Horizontal</enum>
                                             </property>
-                                            <vbox>
-                                                <property name="name">
-                                                    <cstring>unnamed</cstring>
-                                                </property>
-                                                <property name="margin">
-                                                    <number>11</number>
-                                                </property>
-                                                <property name="spacing">
-                                                    <number>6</number>
-                                                </property>
-                                                <widget class="QCheckBox">
-                                                    <property name="name">
-                                                        <cstring>dosFilemodeChk</cstring>
-                                                    </property>
-                                                    <property name="text">
-                                                        <string>&amp;DOS file mode</string>
-                                                    </property>
-                                                </widget>
-                                                <widget class="QCheckBox">
-                                                    <property name="name">
-                                                        <cstring>dosFiletimesChk</cstring>
-                                                    </property>
-                                                    <property name="text">
-                                                        <string>DOS f&amp;ile times</string>
-                                                    </property>
-                                                </widget>
-                                                <widget class="QCheckBox">
-                                                    <property name="name">
-                                                        <cstring>dosFiletimeResolutionChk</cstring>
-                                                    </property>
-                                                    <property name="text">
-                                                        <string>DOS file time resolution</string>
-                                                    </property>
-                                                </widget>
-                                            </vbox>
-                                        </widget>
-                                    </vbox>
+                                            <property name="sizeType">
+                                                <enum>Expanding</enum>
+                                            </property>
+                                            <property name="sizeHint">
+                                                <size>
+                                                    <width>20</width>
+                                                    <height>0</height>
+                                                </size>
+                                            </property>
+                                        </spacer>
+                                    </hbox>
                                 </widget>
-                                <spacer row="1" column="0">
+                                <widget class="QLabel">
                                     <property name="name">
-                                        <cstring>Spacer61</cstring>
+                                        <cstring>TextLabel1_5</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>11</x>
+                                            <y>209</y>
+                                            <width>168</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Mangled ma&amp;p:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>mangledMapEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit">
+                                    <property name="name">
+                                        <cstring>mangledMapEdit</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>185</x>
+                                            <y>209</y>
+                                            <width>127</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>mangledNamesChk</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>11</x>
+                                            <y>21</y>
+                                            <width>168</width>
+                                            <height>20</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Enable na&amp;me mangling</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>mangleCaseChk</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>11</x>
+                                            <y>47</y>
+                                            <width>168</width>
+                                            <height>20</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Man&amp;gle case</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+G</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>textLabel2</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>11</x>
+                                            <y>237</y>
+                                            <width>168</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Mangling method:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>manglingMethodCombo</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QComboBox">
+                                    <item>
+                                        <property name="text">
+                                            <string>hash</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>hash2</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>manglingMethodCombo</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>185</x>
+                                            <y>237</y>
+                                            <width>127</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>preserveCaseChk</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>10</x>
+                                            <y>70</y>
+                                            <width>168</width>
+                                            <height>20</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Preser&amp;ve case</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+V</string>
+                                    </property>
+                                    <property name="checked">
+                                        <bool>true</bool>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox">
+                                    <property name="name">
+                                        <cstring>shortPreserveCaseChk</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>10</x>
+                                            <y>90</y>
+                                            <width>168</width>
+                                            <height>20</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Short pr&amp;eserve case</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+E</string>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>TextLabel2_3</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>10</x>
+                                            <y>150</y>
+                                            <width>168</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Defau&amp;lt case:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>defaultCaseCombo</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QComboBox">
+                                    <item>
+                                        <property name="text">
+                                            <string>Lower</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>Upper</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>defaultCaseCombo</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>185</x>
+                                            <y>151</y>
+                                            <width>127</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>1</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                </widget>
+                                <widget class="QComboBox">
+                                    <item>
+                                        <property name="text">
+                                            <string>Automatic</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>Yes</string>
+                                        </property>
+                                    </item>
+                                    <item>
+                                        <property name="text">
+                                            <string>No</string>
+                                        </property>
+                                    </item>
+                                    <property name="name">
+                                        <cstring>caseSensitiveCombo</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>185</x>
+                                            <y>121</y>
+                                            <width>127</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="sizePolicy">
+                                        <sizepolicy>
+                                            <hsizetype>1</hsizetype>
+                                            <vsizetype>0</vsizetype>
+                                            <horstretch>0</horstretch>
+                                            <verstretch>0</verstretch>
+                                        </sizepolicy>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel">
+                                    <property name="name">
+                                        <cstring>TextLabel2_3_3</cstring>
+                                    </property>
+                                    <property name="geometry">
+                                        <rect>
+                                            <x>10</x>
+                                            <y>120</y>
+                                            <width>168</width>
+                                            <height>22</height>
+                                        </rect>
+                                    </property>
+                                    <property name="text">
+                                        <string>Case sensi&amp;tive:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>caseSensitiveCombo</cstring>
+                                    </property>
+                                </widget>
+                            </widget>
+                        </widget>
+                        <widget class="QWidget">
+                            <property name="name">
+                                <cstring>tab</cstring>
+                            </property>
+                            <attribute name="title">
+                                <string>Locking</string>
+                            </attribute>
+                            <grid>
+                                <property name="name">
+                                    <cstring>unnamed</cstring>
+                                </property>
+                                <property name="margin">
+                                    <number>0</number>
+                                </property>
+                                <spacer row="2" column="0">
+                                    <property name="name">
+                                        <cstring>Spacer51</cstring>
                                     </property>
                                     <property name="orientation">
                                         <enum>Vertical</enum>
@@ -1938,244 +2334,11 @@ Only change something if you know what you are doing.</string>
                                     <property name="sizeHint">
                                         <size>
                                             <width>20</width>
-                                            <height>30</height>
+                                            <height>20</height>
                                         </size>
                                     </property>
                                 </spacer>
-                                <widget class="QGroupBox" row="0" column="0">
-                                    <property name="name">
-                                        <cstring>GroupBox5</cstring>
-                                    </property>
-                                    <property name="sizePolicy">
-                                        <sizepolicy>
-                                            <hsizetype>5</hsizetype>
-                                            <vsizetype>5</vsizetype>
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="title">
-                                        <string>Name Mangling</string>
-                                    </property>
-                                    <grid>
-                                        <property name="name">
-                                            <cstring>unnamed</cstring>
-                                        </property>
-                                        <property name="margin">
-                                            <number>11</number>
-                                        </property>
-                                        <property name="spacing">
-                                            <number>6</number>
-                                        </property>
-                                        <widget class="QLabel" row="6" column="0">
-                                            <property name="name">
-                                                <cstring>TextLabel3_2_2</cstring>
-                                            </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>5</hsizetype>
-                                                    <vsizetype>5</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                            <property name="text">
-                                                <string>Mangling cha&amp;r:</string>
-                                            </property>
-                                            <property name="buddy" stdset="0">
-                                                <cstring>manglingCharEdit</cstring>
-                                            </property>
-                                        </widget>
-                                        <widget class="QLayoutWidget" row="6" column="1">
-                                            <property name="name">
-                                                <cstring>Layout14</cstring>
-                                            </property>
-                                            <hbox>
-                                                <property name="name">
-                                                    <cstring>unnamed</cstring>
-                                                </property>
-                                                <property name="margin">
-                                                    <number>0</number>
-                                                </property>
-                                                <property name="spacing">
-                                                    <number>6</number>
-                                                </property>
-                                                <widget class="QLineEdit">
-                                                    <property name="name">
-                                                        <cstring>manglingCharEdit</cstring>
-                                                    </property>
-                                                    <property name="maximumSize">
-                                                        <size>
-                                                            <width>40</width>
-                                                            <height>32767</height>
-                                                        </size>
-                                                    </property>
-                                                </widget>
-                                                <spacer>
-                                                    <property name="name">
-                                                        <cstring>Spacer40_2</cstring>
-                                                    </property>
-                                                    <property name="orientation">
-                                                        <enum>Horizontal</enum>
-                                                    </property>
-                                                    <property name="sizeType">
-                                                        <enum>Expanding</enum>
-                                                    </property>
-                                                    <property name="sizeHint">
-                                                        <size>
-                                                            <width>20</width>
-                                                            <height>0</height>
-                                                        </size>
-                                                    </property>
-                                                </spacer>
-                                            </hbox>
-                                        </widget>
-                                        <widget class="QLabel" row="7" column="0">
-                                            <property name="name">
-                                                <cstring>TextLabel1_5</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Mangled ma&amp;p:</string>
-                                            </property>
-                                            <property name="buddy" stdset="0">
-                                                <cstring>mangledMapEdit</cstring>
-                                            </property>
-                                        </widget>
-                                        <widget class="QLineEdit" row="7" column="1">
-                                            <property name="name">
-                                                <cstring>mangledMapEdit</cstring>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox" row="0" column="0">
-                                            <property name="name">
-                                                <cstring>mangledNamesChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Enable na&amp;me mangling</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox" row="1" column="0">
-                                            <property name="name">
-                                                <cstring>mangleCaseChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Man&amp;gle case</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox" row="2" column="0">
-                                            <property name="name">
-                                                <cstring>caseSensitiveChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Case sensi&amp;tive</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox" row="3" column="0">
-                                            <property name="name">
-                                                <cstring>preserveCaseChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Preser&amp;ve case</string>
-                                            </property>
-                                            <property name="checked">
-                                                <bool>true</bool>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox" row="4" column="0">
-                                            <property name="name">
-                                                <cstring>shortPreserveCaseChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Short pr&amp;eserve case</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QLabel" row="5" column="0">
-                                            <property name="name">
-                                                <cstring>TextLabel2_3</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Defau&amp;lt case:</string>
-                                            </property>
-                                            <property name="buddy" stdset="0">
-                                                <cstring>defaultCaseCombo</cstring>
-                                            </property>
-                                        </widget>
-                                        <widget class="QComboBox" row="5" column="1">
-                                            <item>
-                                                <property name="text">
-                                                    <string>Lower</string>
-                                                </property>
-                                            </item>
-                                            <item>
-                                                <property name="text">
-                                                    <string>Upper</string>
-                                                </property>
-                                            </item>
-                                            <property name="name">
-                                                <cstring>defaultCaseCombo</cstring>
-                                            </property>
-                                            <property name="sizePolicy">
-                                                <sizepolicy>
-                                                    <hsizetype>1</hsizetype>
-                                                    <vsizetype>0</vsizetype>
-                                                    <horstretch>0</horstretch>
-                                                    <verstretch>0</verstretch>
-                                                </sizepolicy>
-                                            </property>
-                                        </widget>
-                                        <widget class="QLabel" row="8" column="0">
-                                            <property name="name">
-                                                <cstring>textLabel2</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Mangling method:</string>
-                                            </property>
-                                            <property name="buddy" stdset="0">
-                                                <cstring>manglingMethodCombo</cstring>
-                                            </property>
-                                        </widget>
-                                        <widget class="QComboBox" row="8" column="1">
-                                            <item>
-                                                <property name="text">
-                                                    <string>hash</string>
-                                                </property>
-                                            </item>
-                                            <item>
-                                                <property name="text">
-                                                    <string>hash2</string>
-                                                </property>
-                                            </item>
-                                            <property name="name">
-                                                <cstring>manglingMethodCombo</cstring>
-                                            </property>
-                                        </widget>
-                                    </grid>
-                                </widget>
-                            </grid>
-                        </widget>
-                        <widget class="QWidget">
-                            <property name="name">
-                                <cstring>tab</cstring>
-                            </property>
-                            <attribute name="title">
-                                <string>Locking</string>
-                            </attribute>
-                            <vbox>
-                                <property name="name">
-                                    <cstring>unnamed</cstring>
-                                </property>
-                                <property name="margin">
-                                    <number>0</number>
-                                </property>
-                                <widget class="QCheckBox">
-                                    <property name="name">
-                                        <cstring>lockingChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Enable lock&amp;ing</string>
-                                    </property>
-                                </widget>
-                                <widget class="QGroupBox">
+                                <widget class="QGroupBox" row="1" column="0">
                                     <property name="name">
                                         <cstring>groupBox47</cstring>
                                     </property>
@@ -2188,7 +2351,7 @@ Only change something if you know what you are doing.</string>
                                     <property name="title">
                                         <string>Locki&amp;ng</string>
                                     </property>
-                                    <vbox>
+                                    <grid>
                                         <property name="name">
                                             <cstring>unnamed</cstring>
                                         </property>
@@ -2198,47 +2361,18 @@ Only change something if you know what you are doing.</string>
                                         <property name="spacing">
                                             <number>6</number>
                                         </property>
-                                        <widget class="QCheckBox">
-                                            <property name="name">
-                                                <cstring>blockingLocksChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Blockin&amp;g locks</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox">
-                                            <property name="name">
-                                                <cstring>posixLockingChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Posi&amp;x locking</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox">
-                                            <property name="name">
-                                                <cstring>strictLockingChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>S&amp;trict locking</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox">
-                                            <property name="name">
-                                                <cstring>shareModesChk</cstring>
-                                            </property>
-                                            <property name="text">
-                                                <string>Share mo&amp;des</string>
-                                            </property>
-                                        </widget>
-                                        <widget class="QCheckBox">
+                                        <widget class="QCheckBox" row="4" column="0">
                                             <property name="name">
                                                 <cstring>oplocksChk</cstring>
                                             </property>
                                             <property name="text">
                                                 <string>Issue oppo&amp;rtunistic locks (oplocks) </string>
                                             </property>
+                                            <property name="accel">
+                                                <string>Alt+R</string>
+                                            </property>
                                         </widget>
-                                        <widget class="QGroupBox">
+                                        <widget class="QGroupBox" row="5" column="0">
                                             <property name="name">
                                                 <cstring>groupBox59</cstring>
                                             </property>
@@ -2299,40 +2433,139 @@ Only change something if you know what you are doing.</string>
                                                     <property name="text">
                                                         <string>Le&amp;vel2 oplocks</string>
                                                     </property>
+                                                    <property name="accel">
+                                                        <string>Alt+V</string>
+                                                    </property>
                                                 </widget>
                                             </grid>
                                         </widget>
-                                        <widget class="QCheckBox">
+                                        <widget class="QCheckBox" row="6" column="0">
                                             <property name="name">
                                                 <cstring>fakeOplocksChk</cstring>
                                             </property>
                                             <property name="text">
                                                 <string>Fak&amp;e oplocks</string>
                                             </property>
+                                            <property name="accel">
+                                                <string>Alt+E</string>
+                                            </property>
                                             <property name="checked">
                                                 <bool>true</bool>
                                             </property>
                                         </widget>
-                                    </vbox>
+                                        <widget class="QCheckBox" row="3" column="0">
+                                            <property name="name">
+                                                <cstring>shareModesChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Share mo&amp;des</string>
+                                            </property>
+                                            <property name="accel">
+                                                <string>Alt+D</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QCheckBox" row="2" column="0">
+                                            <property name="name">
+                                                <cstring>posixLockingChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Posi&amp;x locking</string>
+                                            </property>
+                                            <property name="accel">
+                                                <string>Alt+X</string>
+                                            </property>
+                                        </widget>
+                                        <widget class="QLayoutWidget" row="0" column="0">
+                                            <property name="name">
+                                                <cstring>layout9</cstring>
+                                            </property>
+                                            <hbox>
+                                                <property name="name">
+                                                    <cstring>unnamed</cstring>
+                                                </property>
+                                                <widget class="QLabel">
+                                                    <property name="name">
+                                                        <cstring>TextLabel2_3_2</cstring>
+                                                    </property>
+                                                    <property name="text">
+                                                        <string>S&amp;trict locking:</string>
+                                                    </property>
+                                                    <property name="buddy" stdset="0">
+                                                        <cstring>strictLockingCombo</cstring>
+                                                    </property>
+                                                </widget>
+                                                <widget class="QComboBox">
+                                                    <item>
+                                                        <property name="text">
+                                                            <string>Automatic</string>
+                                                        </property>
+                                                    </item>
+                                                    <item>
+                                                        <property name="text">
+                                                            <string>Yes</string>
+                                                        </property>
+                                                    </item>
+                                                    <item>
+                                                        <property name="text">
+                                                            <string>No</string>
+                                                        </property>
+                                                    </item>
+                                                    <property name="name">
+                                                        <cstring>strictLockingCombo</cstring>
+                                                    </property>
+                                                    <property name="sizePolicy">
+                                                        <sizepolicy>
+                                                            <hsizetype>1</hsizetype>
+                                                            <vsizetype>0</vsizetype>
+                                                            <horstretch>0</horstretch>
+                                                            <verstretch>0</verstretch>
+                                                        </sizepolicy>
+                                                    </property>
+                                                </widget>
+                                                <spacer>
+                                                    <property name="name">
+                                                        <cstring>spacer15</cstring>
+                                                    </property>
+                                                    <property name="orientation">
+                                                        <enum>Horizontal</enum>
+                                                    </property>
+                                                    <property name="sizeType">
+                                                        <enum>Expanding</enum>
+                                                    </property>
+                                                    <property name="sizeHint">
+                                                        <size>
+                                                            <width>40</width>
+                                                            <height>20</height>
+                                                        </size>
+                                                    </property>
+                                                </spacer>
+                                            </hbox>
+                                        </widget>
+                                        <widget class="QCheckBox" row="1" column="0">
+                                            <property name="name">
+                                                <cstring>blockingLocksChk</cstring>
+                                            </property>
+                                            <property name="text">
+                                                <string>Blockin&amp;g locks</string>
+                                            </property>
+                                            <property name="accel">
+                                                <string>Alt+G</string>
+                                            </property>
+                                        </widget>
+                                    </grid>
                                 </widget>
-                                <spacer>
+                                <widget class="QCheckBox" row="0" column="0">
                                     <property name="name">
-                                        <cstring>Spacer51</cstring>
+                                        <cstring>lockingChk</cstring>
                                     </property>
-                                    <property name="orientation">
-                                        <enum>Vertical</enum>
+                                    <property name="text">
+                                        <string>Enable lock&amp;ing</string>
                                     </property>
-                                    <property name="sizeType">
-                                        <enum>Expanding</enum>
+                                    <property name="accel">
+                                        <string>Alt+I</string>
                                     </property>
-                                    <property name="sizeHint">
-                                        <size>
-                                            <width>20</width>
-                                            <height>20</height>
-                                        </size>
-                                    </property>
-                                </spacer>
-                            </vbox>
+                                </widget>
+                            </grid>
                         </widget>
                         <widget class="QWidget">
                             <property name="name">
@@ -2532,41 +2765,6 @@ Only change something if you know what you are doing.</string>
                                 <property name="margin">
                                     <number>0</number>
                                 </property>
-                                <property name="spacing">
-                                    <number>6</number>
-                                </property>
-                                <widget class="QCheckBox" row="5" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>setDirectoryChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Setdir command allo&amp;wed</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>fakeDirectoryCreateTimesChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Fa&amp;ke directory create times</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>msdfsRootChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Ms&amp;dfs root</string>
-                                    </property>
-                                </widget>
-                                <widget class="QCheckBox" row="8" column="0" rowspan="1" colspan="2">
-                                    <property name="name">
-                                        <cstring>msdfsProxyChk</cstring>
-                                    </property>
-                                    <property name="text">
-                                        <string>Msdfs pro&amp;xy</string>
-                                    </property>
-                                </widget>
                                 <spacer row="9" column="1">
                                     <property name="name">
                                         <cstring>Spacer15</cstring>
@@ -2616,11 +2814,6 @@ Only change something if you know what you are doing.</string>
                                         <cstring>magicScriptEdit</cstring>
                                     </property>
                                 </widget>
-                                <widget class="QLineEdit" row="0" column="1">
-                                    <property name="name">
-                                        <cstring>volumeEdit</cstring>
-                                    </property>
-                                </widget>
                                 <widget class="QLabel" row="0" column="0">
                                     <property name="name">
                                         <cstring>TextLabel6_2</cstring>
@@ -2648,9 +2841,37 @@ Only change something if you know what you are doing.</string>
                                         <cstring>magicOutputEdit</cstring>
                                     </property>
                                 </widget>
-                                <widget class="QLineEdit" row="4" column="1">
+                                <widget class="QCheckBox" row="7" column="0" rowspan="1" colspan="2">
                                     <property name="name">
-                                        <cstring>dontDescendEdit</cstring>
+                                        <cstring>fakeDirectoryCreateTimesChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Fa&amp;ke directory create times</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+K</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="8" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>msdfsRootChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Ms&amp;dfs root</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+D</string>
+                                    </property>
+                                </widget>
+                                <widget class="QCheckBox" row="6" column="0" rowspan="1" colspan="2">
+                                    <property name="name">
+                                        <cstring>setDirectoryChk</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Setdir command allo&amp;wed</string>
+                                    </property>
+                                    <property name="accel">
+                                        <string>Alt+W</string>
                                     </property>
                                 </widget>
                                 <widget class="QLabel" row="4" column="0">
@@ -2662,6 +2883,32 @@ Only change something if you know what you are doing.</string>
                                     </property>
                                     <property name="buddy" stdset="0">
                                         <cstring>dontDescendEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="4" column="1">
+                                    <property name="name">
+                                        <cstring>dontDescendEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLabel" row="5" column="0">
+                                    <property name="name">
+                                        <cstring>TextLabel6_2_3_2_2</cstring>
+                                    </property>
+                                    <property name="text">
+                                        <string>Msdfs pro&amp;xy:</string>
+                                    </property>
+                                    <property name="buddy" stdset="0">
+                                        <cstring>msdfsProxyEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="5" column="1">
+                                    <property name="name">
+                                        <cstring>msdfsProxyEdit</cstring>
+                                    </property>
+                                </widget>
+                                <widget class="QLineEdit" row="0" column="1">
+                                    <property name="name">
+                                        <cstring>volumeEdit</cstring>
                                     </property>
                                 </widget>
                             </grid>
@@ -2953,7 +3200,6 @@ Only change something if you know what you are doing.</string>
     <tabstop>setDirectoryChk</tabstop>
     <tabstop>fakeDirectoryCreateTimesChk</tabstop>
     <tabstop>msdfsRootChk</tabstop>
-    <tabstop>msdfsProxyChk</tabstop>
     <tabstop>preexecEdit</tabstop>
     <tabstop>rootPreexecEdit</tabstop>
     <tabstop>postexecEdit</tabstop>
@@ -2963,7 +3209,6 @@ Only change something if you know what you are doing.</string>
     <tabstop>lockingChk</tabstop>
     <tabstop>blockingLocksChk</tabstop>
     <tabstop>posixLockingChk</tabstop>
-    <tabstop>strictLockingChk</tabstop>
     <tabstop>shareModesChk</tabstop>
     <tabstop>oplocksChk</tabstop>
     <tabstop>level2OplocksChk</tabstop>
@@ -2971,7 +3216,6 @@ Only change something if you know what you are doing.</string>
     <tabstop>fakeOplocksChk</tabstop>
     <tabstop>mangledNamesChk</tabstop>
     <tabstop>mangleCaseChk</tabstop>
-    <tabstop>caseSensitiveChk</tabstop>
     <tabstop>preserveCaseChk</tabstop>
     <tabstop>shortPreserveCaseChk</tabstop>
     <tabstop>defaultCaseCombo</tabstop>
@@ -3071,4 +3315,25 @@ Only change something if you know what you are doing.</string>
     <slot>buttonHelp_clicked()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>krestrictedline.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+    <includehint>knuminput.h</includehint>
+</includehints>
 </UI>

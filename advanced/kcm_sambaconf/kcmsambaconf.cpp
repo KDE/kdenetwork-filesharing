@@ -615,6 +615,7 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
   if ( s == "ads" ) i = 4;
 
   _interface->securityLevelBtnGrp->setButton(i);
+  _interface->updateSecurityLevelHelpLbl();
 
 }
 

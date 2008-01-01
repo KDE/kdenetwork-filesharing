@@ -1,4 +1,4 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
+<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
 <class>KcmInterface</class>
 <comment>
 /******************************************************************************
@@ -29,7 +29,7 @@
         <rect>
             <x>0</x>
             <y>0</y>
-            <width>634</width>
+            <width>714</width>
             <height>578</height>
         </rect>
     </property>
@@ -40,6 +40,9 @@
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
         </sizepolicy>
+    </property>
+    <property name="caption">
+        <string>KcmInterface</string>
     </property>
     <vbox>
         <property name="name">
@@ -283,7 +286,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <string>Share</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                         <property name="checked">
                                             <bool>true</bool>
@@ -301,7 +304,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <string>User</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -316,7 +319,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <string>Server</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -329,6 +332,9 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                         </property>
                                         <property name="text">
                                             <string>Domai&amp;n</string>
+                                        </property>
+                                        <property name="accel">
+                                            <string>Alt+N</string>
                                         </property>
                                     </widget>
                                     <widget class="QRadioButton">
@@ -343,7 +349,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                             <string>ADS</string>
                                         </property>
                                         <property name="accel">
-                                            <string>Alt+</string>
+                                            <string>Alt+ </string>
                                         </property>
                                     </widget>
                                 </vbox>
@@ -775,7 +781,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
                                     <string>Edit Share...</string>
                                 </property>
                                 <property name="accel">
-                                    <string>Alt+</string>
+                                    <string>Alt+ </string>
                                 </property>
                             </widget>
                             <widget class="QPushButton">
@@ -1449,7 +1455,7 @@ Only change something if you know what you are doing.</string>
                                                             <string>Obey PAM restrictions</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QCheckBox">
@@ -1464,7 +1470,7 @@ Only change something if you know what you are doing.</string>
                                                             <string>PAM password change</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1506,7 +1512,7 @@ Only change something if you know what you are doing.</string>
                                                             <string>Paranoid server security</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                 </vbox>
@@ -1600,7 +1606,7 @@ Only change something if you know what you are doing.</string>
                                                             <string>Bind interfaces only</string>
                                                         </property>
                                                         <property name="accel">
-                                                            <string>Alt+</string>
+                                                            <string>Alt+ </string>
                                                         </property>
                                                     </widget>
                                                     <widget class="QComboBox" row="0" column="1">
@@ -6094,7 +6100,7 @@ This is only available if the SSL libraries have been compiled on your system an
                                                 <string>UNIX extensions</string>
                                             </property>
                                             <property name="accel">
-                                                <string>Alt+</string>
+                                                <string>Alt+ </string>
                                             </property>
                                         </widget>
                                         <widget class="QCheckBox">
@@ -7853,6 +7859,8 @@ This is only available if the SSL libraries have been compiled on your system an
         </widget>
     </vbox>
 </widget>
+<customwidgets>
+</customwidgets>
 <connections>
     <connection>
         <sender>shareListView</sender>
@@ -7957,28 +7965,10 @@ This is only available if the SSL libraries have been compiled on your system an
         <slot>changedSlot()</slot>
     </connection>
     <connection>
-        <sender>shareRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>shareRadio_clicked()</slot>
-    </connection>
-    <connection>
         <sender>userRadio</sender>
         <signal>stateChanged(int)</signal>
         <receiver>KcmInterface</receiver>
         <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>userRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>userRadio_clicked()</slot>
-    </connection>
-    <connection>
-        <sender>serverRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>serverRadio_clicked()</slot>
     </connection>
     <connection>
         <sender>serverRadio</sender>
@@ -7991,12 +7981,6 @@ This is only available if the SSL libraries have been compiled on your system an
         <signal>stateChanged(int)</signal>
         <receiver>KcmInterface</receiver>
         <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>domainRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>domainRadio_clicked()</slot>
     </connection>
     <connection>
         <sender>passwordServerEdit</sender>
@@ -8147,12 +8131,6 @@ This is only available if the SSL libraries have been compiled on your system an
         <signal>toggled(bool)</signal>
         <receiver>winsHookLbl</receiver>
         <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>adsRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>KcmInterface</receiver>
-        <slot>adsRadioClicked()</slot>
     </connection>
 </connections>
 <tabstops>
@@ -8430,15 +8408,106 @@ This is only available if the SSL libraries have been compiled on your system an
     <slot>init()</slot>
     <slot>changedSlot()</slot>
     <slot>securityLevelCombo_activated( int i )</slot>
-    <slot>shareRadio_clicked()</slot>
-    <slot>userRadio_clicked()</slot>
-    <slot>serverRadio_clicked()</slot>
-    <slot>domainRadio_clicked()</slot>
-    <slot>adsRadioClicked()</slot>
     <slot>KURLLabel1_leftClickedURL()</slot>
     <slot>lmAnnounceCombo_activated( int i )</slot>
     <slot>allowGuestLoginsChk_toggled( bool b )</slot>
     <slot>mapToGuestCombo_activated( int i )</slot>
+    <slot>updateSecurityLevelHelpLbl()</slot>
 </slots>
 <layoutdefaults spacing="6" margin="11"/>
+<includehints>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kurllabel.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>klistview.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+    <includehint>kurlrequester.h</includehint>
+    <includehint>klineedit.h</includehint>
+    <includehint>kpushbutton.h</includehint>
+</includehints>
 </UI>

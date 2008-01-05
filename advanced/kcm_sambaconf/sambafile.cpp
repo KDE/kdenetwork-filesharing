@@ -34,7 +34,7 @@
 #include <klocale.h>
 #include <ktemporaryfile.h>
 #include <ksambashare.h>
-
+#include <KStandardDirs>
 #include <pwd.h>
 #include <time.h>
 #include <unistd.h>
@@ -180,7 +180,7 @@ bool SambaFile::slotApply()
               .arg(KShell::quoteArg(_tempFile->fileName()),
                    KShell::quoteArg(path),
                    KShell::quoteArg(_tempFile->fileName()));
-    proc << "kdesu" << "-d" << suCommand;
+    proc << KStandardDirs::findExe("kdesu") << "-d" << suCommand;
 
     if (proc.execute()) {
         kDebug(5009) << "SambaFile::slotApply: saving to " << path << " failed!";

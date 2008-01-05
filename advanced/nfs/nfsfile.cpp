@@ -25,7 +25,7 @@
 #include <qfile.h>
 #include <qtextstream.h>
 #include <qstringlist.h>
-
+#include <KStandardDirs>
 #include <kdebug.h>
 #include <kmessagebox.h>
 #include <klocale.h>
@@ -246,7 +246,7 @@ bool NFSFile::save()
 
     KProcess proc;
     if (!QFileInfo(_url.path()).isWritable() || restartNFSServer)
-      proc<<"kdesu" << "-d" << "-c"<<command;
+      proc<<KStandardDirs::findExe("kdesu") << "-d" << "-c"<<command;
     else
       proc.setShellCommand(command);
 

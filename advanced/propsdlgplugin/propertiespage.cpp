@@ -37,6 +37,7 @@
 #include <kprocess.h>
 #include <ktemporaryfile.h>
 #include <kshell.h>
+#include <KStandardDirs>
 // NFS related
 #include "../nfs/nfsfile.h"
 #include "../nfs/nfsentry.h"
@@ -221,7 +222,7 @@ bool PropertiesPage::save(NFSFile* nfsFile, SambaFile* sambaFile, bool nfs, bool
              KShell::quoteArg( sambaFileName ));
      }       
          
-     proc<<"kdesu" << "-d" << "-c"<<command;
+     proc<<KStandardDirs::findExe("kdesu") << "-d" << "-c"<<command;
 
      if (proc.execute()) {
        kDebug(FILESHARE_DEBUG) << "PropertiesPage::save: kdesu command failed";

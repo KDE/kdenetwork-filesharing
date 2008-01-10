@@ -36,6 +36,7 @@
 #include <kpassworddialog.h>
 #include <klocale.h>
 #include <k3process.h>
+#include <kprocess.h>
 
 #include "sambafile.h"
 #include "smbpasswdfile.h"
@@ -136,24 +137,35 @@ bool SmbPasswdFile::executeSmbpasswd(const QStringList & args) {
  **/
 bool SmbPasswdFile::addUser(const SambaUser & user,const QString & password)
 {
-  K3Process p;
-  p << "smbpasswd" << "-a" << user.name;
+  KProcess p;
+  p << "smbpasswd" << "-s" << "-a" << user.name;
 
-  p << password;
-
-  connect( &p, SIGNAL(receivedStdout(K3Process*,char*,int)),
-           this, SLOT(smbpasswdStdOutReceived(K3Process*,char*,int)));
+  //  connect( &p, SIGNAL(receivedStdout(K3Process*,char*,int)),
+  //       this, SLOT(smbpasswdStdOutReceived(K3Process*,char*,int)));
 
   _smbpasswdOutput = "";
+  QString pw = password;
+  pw.append("\n");
 
-  bool result = p.start(K3Process::Block,K3Process::Stdout);
+  p.start();
+  if (!p.waitForStarted()) {
+    kWarning(5009) << "smbpasswd could not be started!" << endl;
+    return false;
+  } 
+  
+  kDebug(5009) << "smbpasswd started" << endl;
 
-  if (result)
-  {
-    kDebug(5009) << _smbpasswdOutput;
-  }
+  p.write(pw.toLocal8Bit());
+  p.write(pw.toLocal8Bit());
 
-  return result;
+  p.closeWriteChannel();
+
+  if (!p.waitForFinished())
+     return false;
+
+  kDebug(5009) << "smbpasswd finished" << endl;
+
+  return true;
 }
 
 /**

@@ -42,15 +42,21 @@ static const int BoxSize = 16;
 
 
 QMultiCheckListItem::QMultiCheckListItem( Q3ListView *parent) :
-  Q3ListViewItem(parent) {
+  Q3ListViewItem(parent) 
+{
 }
 
-void QMultiCheckListItem::setOn(int column, bool b) {
+void QMultiCheckListItem::resize(int column) {
   if (column >= (int) checkBoxColumns.size()) {
     checkBoxColumns.resize(column*2);
     checkStates.resize(column*2);
+    disableStates.resize(column*2);
   }
 
+}
+
+void QMultiCheckListItem::setOn(int column, bool b) {
+  resize(column);
   checkStates.setBit(column,b);
   checkBoxColumns.setBit(column);
   kDebug(5009) << "setOn : " << column;
@@ -58,19 +64,17 @@ void QMultiCheckListItem::setOn(int column, bool b) {
 }
 
 bool QMultiCheckListItem::isOn(int column) {
+  resize(column);
   return checkStates.testBit(column);
 }
 
 bool QMultiCheckListItem::isDisabled(int column) {
+  resize(column);
   return disableStates.testBit(column);
 }
 
 void QMultiCheckListItem::toggle(int column) {
-  if (column >= (int) checkBoxColumns.size()) {
-    checkBoxColumns.resize(column*2);
-    checkStates.resize(column*2);
-  }
-
+  resize(column);
   checkBoxColumns.setBit(column);
   checkStates.toggleBit(column);
   emit stateChanged(column,checkStates.testBit(column));
@@ -79,9 +83,7 @@ void QMultiCheckListItem::toggle(int column) {
 }
 
 void QMultiCheckListItem::setDisabled(int column, bool b) {
-  if (column >= (int) disableStates.size()) {
-    disableStates.resize(column*2);
-  }
+  resize(column);
 
   disableStates.setBit(column,b);
 //  KMessageBox::information(0L,QString("setDisabled"),QString("disable %1 ").arg(column));
@@ -90,6 +92,7 @@ void QMultiCheckListItem::setDisabled(int column, bool b) {
 
 void QMultiCheckListItem::paintCell(QPainter *p,const QColorGroup & cg, int col, int width, int align)
 {
+  resize(col);
 
   if ( !p )
     return;

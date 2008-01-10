@@ -59,6 +59,7 @@ Q_OBJECT
     QBitArray checkStates;
     QBitArray checkBoxColumns;
     QBitArray disableStates;
+    void resize(int column);
 };
 
 #endif

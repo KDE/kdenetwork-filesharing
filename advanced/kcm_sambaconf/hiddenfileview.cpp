@@ -46,11 +46,13 @@
 #include <kmessagebox.h>
 #include <kurlrequester.h>
 #include <ktoggleaction.h>
+#include <kdebug.h>
 
 #include "hiddenfileview.h"
 #include "sharedlgimpl.h"
 #include "sambashare.h"
 
+#define DEBUG 5009
 
 #define COL_NAME 0
 #define COL_HIDDEN 1
@@ -238,7 +240,7 @@ void HiddenFileView::insertNewFiles(const KFileItemList &newone)
     bool hidden = matchHidden(tmp.text());
     bool veto = matchVeto(tmp.text());
     bool vetoOplock = matchVetoOplock(tmp.text());
-
+    kDebug(DEBUG) << "creating new HiddenListViewItem " << tmp.text() << endl;
     new HiddenListViewItem( _dlg->hiddenListView, tmp, hidden, veto, vetoOplock );
 
   }

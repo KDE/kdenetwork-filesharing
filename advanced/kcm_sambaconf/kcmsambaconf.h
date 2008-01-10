@@ -32,8 +32,8 @@
 #define KCMSAMBACONF_H_
 
 #include <kcmodule.h>
-#include <kcminterface.h>
-#include <share.h>
+#include "kcminterface.h"
+#include "ui_share.h"
 #include <q3ptrlist.h>
 #include <q3listview.h>
 //Added by qt3to4:

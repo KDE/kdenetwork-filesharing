@@ -78,6 +78,7 @@
 #include "joindomaindlg.h"
 #include "smbconfconfigwidget.h"
 
+#define DEBUG 5009
 
 #define COL_DISABLED 2
 #define COL_NOPASSWORD 3
@@ -236,6 +237,9 @@ void KcmSambaConf::slotSpecifySmbConf(const QString & smbConf) {
 
 void KcmSambaConf::init() {
 
+
+  kDebug(DEBUG) << "creating KcmInterface ..." << endl;
+
   _interface = new KcmInterface(this);
 
 
@@ -245,13 +249,13 @@ void KcmSambaConf::init() {
   connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
   connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
 
-#if 0
+
   connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
   connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
   connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
 
   connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
-#endif
+
   connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
 
   connect( _interface->domainRadio, SIGNAL(toggled(bool)),
@@ -285,6 +289,8 @@ void KcmSambaConf::init() {
 
 void KcmSambaConf::initAdvancedTab()
 {
+  kDebug(DEBUG) << "..." << endl;
+
   QVBoxLayout *l = new QVBoxLayout(_interface->advancedFrame);
   l->setAutoAdd(true);
   l->setMargin(0);
@@ -293,80 +299,96 @@ void KcmSambaConf::initAdvancedTab()
 //   _janus->setRootIsDecorated(false);
 //   _janus->setShowIconsInTreeList(true);
 
-  QWidget *w;
-  KPageWidgetItem *f;
   QString label;
   QPixmap icon;
 
-  for (int i=0;i<_interface->advancedTab->count();)
+  QList<QWidget*> widgets;
+  QList<QString> labels;
+
+  for (int i=0;i<_interface->advancedTab->count();i++) {
+    kDebug(DEBUG) <<  _interface->advancedTab->tabText(i) << endl;
+    widgets.append(_interface->advancedTab->widget(i));
+    labels.append(_interface->advancedTab->tabText(i));
+  }
+
+  KIconLoader* il = KIconLoader::global();
+
+  for (int i=0; i<widgets.size(); i++)
   {
-    w = _interface->advancedTab->widget(i);
-    label = _interface->advancedTab->tabText(i);
+    QWidget* w = widgets.at(i);
+    QString label = labels.at(i);
 
     if (label == i18n("Security"))
-      icon = SmallIcon("dialog-password");
+      icon = il->loadIcon("dialog-password",KIconLoader::Small);
     else
     if (label == i18n("Logging"))
-      icon = SmallIcon("view-history");
+      icon = il->loadIcon("view-history",KIconLoader::Small);
     else
     if (label == i18n("Tuning"))
-      icon = SmallIcon("preferences-system-performance");
+      icon = il->loadIcon("preferences-system-performance",KIconLoader::Small);
     else
     if (label == i18n("Filenames"))
-      icon = SmallIcon("folder");
+      icon = il->loadIcon("text-plain",KIconLoader::Small);
     else
     if (label == i18n("Locking"))
-      icon = SmallIcon("object-locked");
+      icon = il->loadIcon("object-locked",KIconLoader::Small);
     else
     if (label == i18n("Printing"))
-      icon = SmallIcon("printer");
+      icon = il->loadIcon("printer",KIconLoader::Small);
     else
     if (label == i18n("Logon"))
-      icon = SmallIcon("preferences-system-login");
+      icon = il->loadIcon("preferences-system-login",KIconLoader::Small);
     else
     if (label == i18n("Charset"))
-      icon = SmallIcon("character-set");
+      icon = il->loadIcon("character-set",KIconLoader::Small);
     else
     if (label == i18n("Socket"))
-        icon = SmallIcon("socket");
+      icon = il->loadIcon("socket",KIconLoader::Small);
     else
     if (label == i18n("SSL"))
-      icon = SmallIcon("security-high");
+      icon = il->loadIcon("security-high",KIconLoader::Small);
     else
     if (label == i18n("Browsing"))
-      icon = SmallIcon("internet-web-browser");
+      icon = il->loadIcon("fileview-icon",KIconLoader::Small);
     else
     if (label == i18n("Misc"))
-      icon = SmallIcon("preferences-other");
+      icon = il->loadIcon("preferences-other",KIconLoader::Small);
     else
     if (label == i18n("Commands"))
-      icon = SmallIcon("utilities-terminal");
+      icon = il->loadIcon("utilities-terminal",KIconLoader::Small);
+    else
+    if (label == i18n("VFS"))
+      icon = il->loadIcon("folder",KIconLoader::Small);
+    else
+    if (label == i18n("Debug"))
+      icon = il->loadIcon("tools-report-bug",KIconLoader::Small);
+    else
+    if (label == i18n("LDAP"))
+      icon = il->loadIcon("network-server-database",KIconLoader::Small);
     else {
       icon = QPixmap(16,16);
       icon.fill();
     }
       //SmallIcon("empty2");
 
-    l = new QVBoxLayout();
-    l->setAutoAdd(true);
+    QWidget* frame = new QWidget();
+    QVBoxLayout* l = new QVBoxLayout(frame);
+    KPageWidgetItem *page = new KPageWidgetItem( frame, label );
     l->setMargin(0);
-
-    w->setLayout(l);
-    w->move( 1, 1 );
+    l->addWidget(w);
+    kDebug(DEBUG) << "adding page ..." << endl;
+    _janus->addPage(page);
     w->show();
+    page->setIcon(KIcon(icon));
 
-    f = _janus->addPage(w, label);
-    f->setHeader(label);
-    f->setIcon(KIcon(icon));
-
-    _interface->advancedTab->removePage(w);
   }
 
-  w = _interface->mainTab->widget(5);
-  _interface->mainTab->removePage(w);
+  QWidget* w = _interface->mainTab->page(5);
+  _interface->mainTab->removeTab(5);
   delete w;
-	_interface->advancedWarningPixLbl->setPixmap(DesktopIcon("dialog-warning"));
+  _interface->advancedWarningPixLbl->setPixmap(DesktopIcon("dialog-warning"));
 
+  kDebug(DEBUG) << "finished" << endl;
 
 }
 
@@ -523,6 +545,8 @@ void KcmSambaConf::load(const QString & smbFile)
 
   _sambaFile->load();
 
+  kDebug(DEBUG) << "finished" << endl;
+
 }
 
 void KcmSambaConf::loadCanceled(const QString & msg) {
@@ -531,8 +555,10 @@ void KcmSambaConf::loadCanceled(const QString & msg) {
 
 void KcmSambaConf::fillFields()
 {
-  // Fill the ListViews
+  kDebug(DEBUG) << "..." << endl;
 
+  kDebug(DEBUG) << "filling share list views ..." << endl;
+  // Fill the ListViews
   SambaShareList* list = _sambaFile->getSharedDirs();
 
   SambaShare *share = 0L;
@@ -599,14 +625,14 @@ void KcmSambaConf::fillFields()
 
 void KcmSambaConf::loadBaseSettings(SambaShare* share)
 {
+  kDebug(DEBUG) << "..." << endl;
 
   _dictMngr->add("workgroup", _interface->workgroupEdit);
   _dictMngr->add("server string", _interface->serverStringEdit);
   _dictMngr->add("netbios name", _interface->netbiosNameEdit);
-  _dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
-  _dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
   _dictMngr->add("interfaces", _interface->interfacesEdit);
 
+  kDebug(DEBUG) << "filling guestAccountCombo ..." << endl;
   _interface->guestAccountCombo->addItems( getUnixUsers() );
   setComboIndexToValue(_interface->guestAccountCombo,"guest account",share);
 
@@ -628,12 +654,14 @@ void KcmSambaConf::loadBaseSettings(SambaShare* share)
   if ( s == "ads" ) i = 4;
 
   _interface->securityLevelBtnGrp->setButton(i);
+  _interface->updateSecurityLevelHelpLbl();
 
 }
 
 
 void KcmSambaConf::loadSecurity(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
 
   _dictMngr->add("map to guest",_interface->mapToGuestCombo,
                  new QStringList(QStringList() << "Never" << "Bad User" << "Bad Password" ));
@@ -700,6 +728,7 @@ void KcmSambaConf::loadSecurity(SambaShare*)
 
 void KcmSambaConf::loadLogging(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("log file",_interface->logFileUrlRq);
 
   _dictMngr->add("max log size", _interface->maxLogSizeSpin);
@@ -719,6 +748,7 @@ void KcmSambaConf::loadLogging(SambaShare* )
 
 void KcmSambaConf::loadTuning(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("change notify timeout", _interface->changeNotifyTimeoutSpin);
   _dictMngr->add("deadtime", _interface->deadtimeSpin);
   _dictMngr->add("keepalive", _interface->keepaliveSpin);
@@ -739,6 +769,7 @@ void KcmSambaConf::loadTuning(SambaShare* )
 
 void KcmSambaConf::loadLocking(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("kernel oplocks",_interface->kernelOplocksChk);
   _dictMngr->add("lock directory",_interface->lockDirectoryUrlRq);
   _dictMngr->add("pid directory",_interface->pidDirectoryUrlRq);
@@ -751,6 +782,7 @@ void KcmSambaConf::loadLocking(SambaShare* )
 
 void KcmSambaConf::loadDomain(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("preferred master",_interface->preferredMasterChk);
   _dictMngr->add("local master",_interface->localMasterChk);
   _dictMngr->add("domain master",_interface->domainMasterChk);
@@ -764,6 +796,7 @@ void KcmSambaConf::loadDomain(SambaShare*)
 
 void KcmSambaConf::loadWins(SambaShare* share)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("wins proxy",_interface->winsProxyChk);
   _dictMngr->add("dns proxy",_interface->dnsProxyChk);
   _dictMngr->add("wins server", _interface->winsServerEdit);
@@ -775,6 +808,7 @@ void KcmSambaConf::loadWins(SambaShare* share)
 
 void KcmSambaConf::loadPrinting(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("load printers",_interface->loadPrintersChk);
   _dictMngr->add("disable spoolss",_interface->disableSpoolssChk);
   _dictMngr->add("show add printer wizard",_interface->showAddPrinterWizardChk);
@@ -792,6 +826,7 @@ void KcmSambaConf::loadPrinting(SambaShare* )
 
 void KcmSambaConf::loadFilenames(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("strip dot",_interface->stripDotChk);
   _dictMngr->add("stat cache",_interface->statCacheChk);
 
@@ -803,6 +838,7 @@ void KcmSambaConf::loadFilenames(SambaShare* )
 
 void KcmSambaConf::loadProtocol(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   // Protocol
 
   _dictMngr->add("write raw",_interface->writeRawChk);
@@ -840,6 +876,7 @@ void KcmSambaConf::loadProtocol(SambaShare*)
 
 void KcmSambaConf::loadSocket(SambaShare* share)
 {
+  kDebug(DEBUG) << "..." << endl;
   // SOCKET options
 
   _dictMngr->add("socket address", _interface->socketAddressEdit);
@@ -871,6 +908,7 @@ void KcmSambaConf::loadSocket(SambaShare* share)
 
 void KcmSambaConf::loadSSL(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   // SSL
 
   _dictMngr->add("ssl version",_interface->sslVersionCombo,
@@ -900,6 +938,7 @@ void KcmSambaConf::loadSSL(SambaShare*)
 
 void KcmSambaConf::loadLogon(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   // Logon
 
   _dictMngr->add("add user script", _interface->addUserScriptEdit);
@@ -922,6 +961,7 @@ void KcmSambaConf::loadLogon(SambaShare* )
 
 void KcmSambaConf::loadCharset(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("coding system", _interface->codingSystemEdit);
   _dictMngr->add("client code page", _interface->clientCodePageEdit);
   _dictMngr->add("code page directory",_interface->codePageDirUrlRq);
@@ -936,6 +976,7 @@ void KcmSambaConf::loadCharset(SambaShare* )
 
 void KcmSambaConf::loadWinbind(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("winbind uid", _interface->winbindUidEdit);
   _dictMngr->add("winbind gid", _interface->winbindGidEdit);
   _dictMngr->add("template homedir", _interface->templateHomedirEdit);
@@ -959,20 +1000,29 @@ void KcmSambaConf::loadWinbind(SambaShare* )
 
 void KcmSambaConf::loadNetbios(SambaShare* )
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("disable netbios",_interface->disableNetbiosChk);
 
   _dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
   _dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
+
+  /*
+  _dictMngr->add("netbios aliases", _interface->netbiosAliasesEdit);
+  _dictMngr->add("netbios scope", _interface->netbiosScopeEdit);
+  */
+
 }
 
 void KcmSambaConf::loadVFS(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("host msdfs",_interface->hostMsdfsChk);
 
 }
 
 void KcmSambaConf::loadLDAP(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("ldap suffix", _interface->ldapSuffixEdit);
   _dictMngr->add("ldap machine suffix", _interface->ldapMachineSuffixEdit);
   _dictMngr->add("ldap user suffix", _interface->ldapUserSuffixEdit);
@@ -997,6 +1047,7 @@ void KcmSambaConf::loadLDAP(SambaShare*)
 
 void KcmSambaConf::loadBrowsing(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("enhanced browsing",_interface->enhancedBrowsingChk);
   _dictMngr->add("browse list",_interface->browseListChk);
   _dictMngr->add("lm interval", _interface->lmIntervalSpin);
@@ -1009,6 +1060,7 @@ void KcmSambaConf::loadBrowsing(SambaShare*)
 
 void KcmSambaConf::loadCommands(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("add share command", _interface->addShareCommandEdit);
   _dictMngr->add("change share command", _interface->changeShareCommandEdit);
   _dictMngr->add("delete share command", _interface->deleteShareCommandEdit);
@@ -1022,18 +1074,16 @@ void KcmSambaConf::loadCommands(SambaShare*)
 
 void KcmSambaConf::setComboIndexToValue(QComboBox* box, const QString & value, SambaShare* share)
 {
-#ifdef __GNUC__
-#warning "kde4: how to port it ?"
-#endif
-#if 0
-	int i = box->listBox()->index(box->listBox()->findItem(share->getValue(value,false,true),Qt::ExactMatch));
+  kDebug(DEBUG) << "..." << endl;
+  QString text = share->getValue(value,false,true);
+  int i = box->findText(text,Qt::MatchExactly);
   box->setCurrentItem(i);
-#endif
 }
 
 
 void KcmSambaConf::loadMisc(SambaShare*)
 {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("preload modules", _interface->preloadModulesEdit);
   _dictMngr->add("default service", _interface->defaultServiceEdit);
   _dictMngr->add("remote announce", _interface->remoteAnnounceEdit);
@@ -1048,6 +1098,7 @@ void KcmSambaConf::loadMisc(SambaShare*)
 }
 
 void KcmSambaConf::loadDebug(SambaShare*) {
+  kDebug(DEBUG) << "..." << endl;
   _dictMngr->add("nt status support", _interface->ntStatusSupportChk);
 }
 
@@ -1055,6 +1106,7 @@ void KcmSambaConf::loadDebug(SambaShare*) {
 
 void KcmSambaConf::loadUserTab()
 {
+  kDebug(DEBUG) << "..." << endl;
   // Remote editing of users isn't supported yet
   if ( _sambaFile->isRemoteFile()) {
     _interface->mainTab->widget(3)->setEnabled(false);

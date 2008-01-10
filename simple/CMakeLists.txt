@@ -11,7 +11,6 @@ set(kcm_fileshare_PART_SRCS fileshare.cpp groupconfigdlg.cpp krichtextlabel.cpp 
 kde4_add_ui3_files(kcm_fileshare_PART_SRCS 
 		controlcenter.ui 
 		groupconfiggui.ui 
-		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/socketoptionsdlg.ui
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/userselectdlg.ui
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/groupselectdlg.ui
@@ -22,6 +21,11 @@ kde4_add_ui3_files(kcm_fileshare_PART_SRCS
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
 		)
+
+kde4_add_ui_files(kcm_fileshare_PART_SRCS
+	${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
+)
+
 
 kde4_add_plugin(kcm_fileshare ${kcm_fileshare_PART_SRCS})
 

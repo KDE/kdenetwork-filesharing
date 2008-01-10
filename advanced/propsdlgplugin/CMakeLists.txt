@@ -7,7 +7,6 @@ set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp ${libpropsdlgplug
 kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/socketoptionsdlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/userselectdlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/groupselectdlg.ui
@@ -15,6 +14,10 @@ kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
     propertiespagegui.ui
+)
+
+kde4_add_ui_files(fileshare_propsdlgplugin_PART_SRCS
+    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
 )
 
 

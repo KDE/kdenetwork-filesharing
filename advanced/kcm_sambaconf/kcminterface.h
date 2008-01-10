@@ -1,11 +1,3 @@
-/****************************************************************************
-** ui.h extension file, included from the uic-generated form implementation.
-**
-** If you wish to add, delete or rename slots use Qt Designer which will
-** update this file, preserving your code. Create an init() slot in place of
-** a constructor, and a destroy() slot in place of a destructor.
-*****************************************************************************/
-
 /******************************************************************************
  *                                                                            *
  *  This file is part of KSambaPlugin.                                        *
@@ -26,8 +18,41 @@
  *                                                                            *
  ******************************************************************************/
 
-#ifndef KCM_SAMBACONF_SHARE_UI_H
-#define KCM_SAMBACONF_SHARE_UI_H
+
+#ifndef KCMINTERFACE_H
+#define KCMINTERFACE_H
+
+#include <kiconloader.h>
+#include <k3process.h>
 
 
-#endif // KCM_SAMBACONF_SHARE_UI_H
+#include "ui_kcminterface.h"
+
+class KcmInterface : public QWidget, public Ui::KcmInterface
+{
+Q_OBJECT
+
+public:
+  KcmInterface(QWidget* parent);
+  void init();
+
+public slots:
+  void changedSlot();
+  void securityLevelCombo_activated( int i );
+  void updateSecurityLevelHelpLbl();
+  void shareRadio_clicked();
+  void userRadio_clicked();
+  void serverRadio_clicked();
+  void domainRadio_clicked();
+  void adsRadioClicked();
+  void KUrlLabel1_leftClickedURL();
+  void lmAnnounceCombo_activated( int i);
+  void allowGuestLoginsChk_toggled( bool b);
+  void mapToGuestCombo_activated( int i);
+
+signals:
+ void changed();
+
+};
+
+#endif // KCMINTERFACE_H

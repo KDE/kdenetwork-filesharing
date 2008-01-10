@@ -35,11 +35,13 @@
 
 #include <kurlrequester.h> 
 #include <klocale.h>
+#include <kdebug.h>
  
 #include "sambashare.h"
 #include "dictmanager.h" 
 #include "common.h"
 
+#define DEBUG 5009
  
 DictManager::DictManager(SambaShare* share):
   lineEditDict(40,false),
@@ -56,11 +58,14 @@ DictManager::~DictManager() {
 }
 
 void DictManager::handleUnsupportedWidget(const QString & s, QWidget* w) {
+  kDebug(DEBUG) << s << endl;
+  Q_ASSERT(w);
   w->setEnabled(false);
   w->setToolTip(i18n("The option <em>%1</em> is not supported by your Samba version", s));
 }
 
 void DictManager::add(const QString & key, QLineEdit* lineEdit) {
+  kDebug(DEBUG) << key << " : QLineEdit" << endl;
   if (_share->optionSupported(key)) {
     lineEditDict.insert(key,lineEdit);
     connect(lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
@@ -69,6 +74,7 @@ void DictManager::add(const QString & key, QLineEdit* lineEdit) {
 }
 
 void DictManager::add(const QString & key, QCheckBox* checkBox){
+  kDebug(DEBUG) << key << " : QCheckBox " << endl;
   if (_share->optionSupported(key)) {
     checkBoxDict.insert(key,checkBox);
     connect(checkBox, SIGNAL(clicked()), this, SLOT(changedSlot()));
@@ -77,6 +83,7 @@ void DictManager::add(const QString & key, QCheckBox* checkBox){
 }
 
 void DictManager::add(const QString & key, KUrlRequester* urlRq){
+  kDebug(DEBUG) << key << " : KUrlRequester " << endl;
   if (_share->optionSupported(key)) {
     urlRequesterDict.insert(key,urlRq);
     connect(urlRq, SIGNAL(textChanged(const QString &)), this, SLOT(changedSlot()));
@@ -85,6 +92,7 @@ void DictManager::add(const QString & key, KUrlRequester* urlRq){
 }
 
 void DictManager::add(const QString & key, QSpinBox* spinBox){
+  kDebug(DEBUG) << key << " : QSpinBox " << endl;
   if (_share->optionSupported(key)) {
     spinBoxDict.insert(key,spinBox);
     connect(spinBox, SIGNAL(valueChanged(int)), this, SLOT(changedSlot()));
@@ -93,6 +101,7 @@ void DictManager::add(const QString & key, QSpinBox* spinBox){
 }
               
 void DictManager::add(const QString & key, QComboBox* comboBox, QStringList* values){
+  kDebug(DEBUG) << key << endl;
   if (_share->optionSupported(key)) {
     comboBoxDict.insert(key,comboBox);
     comboBoxValuesDict.insert(key,values);

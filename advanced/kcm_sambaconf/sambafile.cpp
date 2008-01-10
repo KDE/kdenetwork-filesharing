@@ -60,6 +60,7 @@ QString SambaConfigFile::getDefaultValue(const QString & name)
 
 SambaShare* SambaConfigFile::addShare(const QString & name)
 {
+  kDebug(FILESHARE_DEBUG) << "adding " << name << endl;
   SambaShare* newShare = new SambaShare(name,this);
   addShare(name,newShare);
   return newShare;
@@ -481,7 +482,7 @@ bool SambaFile::load()
   if (path.isNull() || path.isEmpty())
       return false;
 
-  kDebug(FILESHARE_DEBUG) << "SambaFile::load: path=" << path;
+  kDebug(FILESHARE_DEBUG) << "path=" << path;
   KUrl url(path);
 
   if (!url.isLocalFile()) {
@@ -504,7 +505,7 @@ bool SambaFile::load()
 }
 
 bool SambaFile::openFile() {
-
+  kDebug(FILESHARE_DEBUG) << "..." << endl;
   QFile f(localPath);
 
   if (!f.open(QIODevice::ReadOnly)) {
@@ -516,7 +517,10 @@ bool SambaFile::openFile() {
 
   delete _sambaConfig;
 
+  kDebug(FILESHARE_DEBUG) << "creating SambaConfigFile ..." << endl;
   _sambaConfig = new SambaConfigFile(this);
+
+    kDebug(FILESHARE_DEBUG) << "start parsing ..." << endl;
 
   SambaShare *currentShare = 0L;
   bool continuedLine = false; // is true if the line before ended with a backslash
@@ -587,6 +591,8 @@ bool SambaFile::openFile() {
   if (!getShare("global")) {
      _sambaConfig->addShare("global");
   }
+
+  kDebug(FILESHARE_DEBUG) << "finished" << endl;
 
   return true;
 }

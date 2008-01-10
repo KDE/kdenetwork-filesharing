@@ -35,8 +35,10 @@
  **/
 
 #include <q3ptrlist.h>
+#include <QDialog>
+#include <K3Process>
 
-#include "share.h"
+#include <ui_share.h>
 
 class SambaShare;
 class QWidget;
@@ -48,7 +50,7 @@ class KPageWidget;
 /**
  * This class implements the share.ui interface
  **/
-class ShareDlgImpl : public KcmShareDlg
+class ShareDlgImpl : public QDialog, public Ui::KcmShareDlg
 {
 Q_OBJECT
 
@@ -87,8 +89,18 @@ protected slots:
   virtual void accessModifierBtnClicked();
   virtual void changedSlot();
   virtual void pathUrlRq_textChanged( const QString & );
-
+  void buttonHelp_clicked();
+  void oplocksChk_toggled( bool b);
   void tabChangedSlot(QWidget* w);
+  void publicBaseChk_toggled( bool b);
+  void lockingChk_toggled( bool b);
+  void oplockContentionLimitSpin_valueChanged( int i);
+  void fakeOplocksChk_toggled( bool b);
+  void storeDosAttributesChk_toggled( bool b);
+  void checkValues();
+  void userOnlyChk_toggled( bool b);
+  void guestOnlyChk_toggled( bool b);
+
 signals:
   void changed();
 };

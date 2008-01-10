@@ -48,6 +48,8 @@
 #include <q3frame.h>
 #include <qwidget.h>
 #include <QVBoxLayout>
+#include <QList>
+#include <QLabel>
 
 #include <klineedit.h>
 #include <kurlrequester.h>
@@ -74,19 +76,28 @@
 
 #include "sharedlgimpl.h"
 
+#define DEBUG 5009
+
 ShareDlgImpl::ShareDlgImpl(QWidget* parent, SambaShare* share)
-	: KcmShareDlg(parent,"sharedlgimpl")
+  : QDialog(parent)
 {
   if (!share) {
-    kWarning() << "ShareDlgImpl::Constructor : share parameter is null!";
+    kWarning() << "share parameter is null!";
     return;
   }
 
+  kDebug(DEBUG) << "setting up ui ..." << endl;
+  setupUi(this);
+
+  kDebug(DEBUG) << "creating DictManager ..." << endl;
   _dictMngr = new DictManager(share);
   _share = share;
 
   initDialog();
   initAdvancedTab();
+
+  kDebug(DEBUG) << "finished" << endl;
+
 }
 
 void ShareDlgImpl::initDialog()
@@ -94,13 +105,23 @@ void ShareDlgImpl::initDialog()
   if (!_share)
      return;
 
+  kDebug(DEBUG) << "started" << endl;
+
   // Base settings
   _fileView = 0L;
 
+  kDebug(DEBUG) << "setting pathUrlRq mode ..." << endl;
+
   pathUrlRq->setMode(KFile::Directory | KFile::ExistingOnly | KFile::LocalOnly);
+
+  kDebug(DEBUG) << "checking homes ..." << endl;
 
   homeChk->setChecked(_share->getName().toLower() == "homes");
   shareNameEdit->setText( _share->getName() );
+
+  directoryPixLbl->setPixmap(DesktopIcon("folder"));
+  PixmapLabel1->setPixmap(SmallIcon("dialog-warning"));
+
 
   _dictMngr->add("path",pathUrlRq);
 
@@ -113,14 +134,18 @@ void ShareDlgImpl::initDialog()
 
   // User settings
 
+  kDebug(DEBUG) << "creating UserTab ..." << endl;
   _userTab = new UserTabImpl(this,_share);
-  _tabs->insertTab(_userTab,i18n("&Users"),1);
+  _tabs->insertTab(1,_userTab,i18n("&Users"));
+  kDebug(DEBUG) << "loading UserTab ..." << endl;
   _userTab->load();
   connect(_userTab, SIGNAL(changed()), this, SLOT(changedSlot()));
 
   // Filename settings
 
-  _dictMngr->add("case sensitive",caseSensitiveChk);
+  _dictMngr->add("case sensitive",caseSensitiveCombo,
+ 		 new QStringList(QStringList() << "auto" << "yes" << "no"));
+
   _dictMngr->add("preserve case",preserveCaseChk);
   _dictMngr->add("short preserve case",shortPreserveCaseChk);
   _dictMngr->add("mangled names",mangledNamesChk);
@@ -194,7 +219,8 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("locking",lockingChk);
   _dictMngr->add("level2 oplocks",level2OplocksChk);
   _dictMngr->add("posix locking",posixLockingChk);
-  _dictMngr->add("strict locking",strictLockingChk);
+  _dictMngr->add("strict locking",strictLockingCombo,
+		 new QStringList(QStringList() << "auto" << "yes" << "no"));
   _dictMngr->add("share modes",shareModesChk);
   _dictMngr->add("oplocks",oplocksChk);
 
@@ -243,7 +269,9 @@ void ShareDlgImpl::initDialog()
   _dictMngr->add("fake directory create times",fakeDirectoryCreateTimesChk);
 
   _dictMngr->add("msdfs root",msdfsRootChk);
-  _dictMngr->add("msdfs proxy",msdfsProxyChk);
+  _dictMngr->add("msdfs proxy",msdfsProxyEdit);
+
+  kDebug(DEBUG) << "dictMngr: loading share ..." << endl;
 
   _dictMngr->load( _share );
 
@@ -259,83 +287,78 @@ ShareDlgImpl::~ShareDlgImpl()
 
 void ShareDlgImpl::initAdvancedTab()
 {
+  kDebug(DEBUG) << "started" << endl;
 
   QVBoxLayout *l = new QVBoxLayout(advancedFrame);
-	l->setAutoAdd(true);
 	l->setMargin(0);
 	_janus = new KPageWidget(advancedFrame);
-	_janus->setFaceType(KPageView::Tree);
+	_janus->setFaceType(KPageView::List);
+	l->addWidget(_janus);
 // 	_janus->setRootIsDecorated(false);
 // 	_janus->setShowIconsInTreeList(true);
 
-	QWidget *w;
 	KPageWidgetItem *f;
-	QString label;
  	QPixmap icon;
 
-	for (int i=0;i<advancedDumpTab->count();)
-	{
-		w = advancedDumpTab->widget(i);
-		label = advancedDumpTab->tabText(i);
+	QList<QWidget*> widgets;
+	QList<QString> labels;
 
+	for (int i=0;i<advancedDumpTab->count();i++) {
+	  kDebug(DEBUG) <<  advancedDumpTab->tabText(i) << endl;
+	  widgets.append(advancedDumpTab->widget(i));
+	  labels.append(advancedDumpTab->tabText(i));
+        }
+
+	KIconLoader* il = KIconLoader::global();
+
+	for (int i=0; i<widgets.size(); i++)
+	{
+	  QWidget* w = widgets.at(i);
+	  QString label = labels.at(i);
+
+		kDebug(DEBUG) << "handling widget " << label << endl;
 		if (label.toLower() == "security")
-			 icon = SmallIcon("password");
+		  //		  icon = il->loadIcon("kgpg-key1-kgpg",KIconLoader::Small);
+		  icon = il->loadIcon("dialog-password",KIconLoader::Small);
 		else
 		if (label.toLower() == "tuning")
-			 icon = SmallIcon("preferences-system-performance");
+		  icon = il->loadIcon("preferences-system-performance",KIconLoader::Small);
+		else
+		if (label.toLower() == "vfs")
+		  icon = il->loadIcon("folder",KIconLoader::Small);
 		else
 		if (label.toLower() == "filenames")
-			 icon = SmallIcon("folder");
+		  icon = il->loadIcon("text-plain",KIconLoader::Small);//SmallIcon("folder");
 		else
-		if (label.toLower() == "printing")
-			 icon = SmallIcon("document-print");
+		if (label.toLower() == "exec")
+		  icon = il->loadIcon("gear",KIconLoader::Small);
 		else
 		if (label.toLower() == "locking")
-			 icon = SmallIcon("system-lock-screen");
-		else
-		if (label.toLower() == "logon")
-			 icon = SmallIcon("kdmconfig");
-		else
-		if (label.toLower() == "protocol")
-			 icon = SmallIcon("core");
-		else
-		if (label.toLower() == "coding")
-			 icon = SmallIcon("character-set");
-		else
-		if (label.toLower() == "socket")
-				icon = SmallIcon("socket");
-		else
-		if (label.toLower() == "ssl")
-			 icon = SmallIcon("security-high");
-		else
-		if (label.toLower() == "browsing")
-			 icon = SmallIcon("konqueror");
+		  icon = il->loadIcon("object-locked",KIconLoader::Small);//SmallIcon("folder");
 		else
 		if (label.toLower() == "misc")
-			 icon = SmallIcon("misc");
+		  icon = il->loadIcon("preferences-other",KIconLoader::Small);
 		else {
 			 icon = QPixmap(16,16);
 			 icon.fill();
 		}
 			 //SmallIcon("empty2");
 
-		l = new QVBoxLayout();
-		l->setAutoAdd(true);
+		QWidget* frame = new QWidget();
+		QVBoxLayout* l = new QVBoxLayout(frame);
+		KPageWidgetItem *page = new KPageWidgetItem( frame, label );
 		l->setMargin(0);
+		l->addWidget(w);
+		kDebug(DEBUG) << "adding page ..." << endl;
+		_janus->addPage(page);
+		w->show();
+		page->setIcon(KIcon(icon));
 
-		w->setLayout(l);
-                w->move( 1, 1 );
-                w->show();
-
-		f = _janus->addPage(w, label);
-		f->setHeader(label);
-		f->setIcon(KIcon(icon));
-
-		advancedDumpTab->removePage(w);
+		//		advancedDumpTab->removeTab(advancedDumpTab->indexOf(w));
 	}
 
-	w = _tabs->page(5);
-	_tabs->removePage(w);
+	QWidget *w = _tabs->page(5);
+	_tabs->removeTab(5);
 	delete w;
 
 
@@ -344,8 +367,8 @@ void ShareDlgImpl::initAdvancedTab()
 
 void ShareDlgImpl::tabChangedSlot(QWidget* w)
 {
-  // We are only interrested in the Hidden files tab
-  if ( QString(w->name()) == "hiddenFilesTab" )
+  // We are only interested in the Hidden files tab
+  if ( QString(w->objectName()) == "hiddenFilesTab" )
      loadHiddenFilesView();
 
 }
@@ -356,17 +379,20 @@ void ShareDlgImpl::loadHiddenFilesView()
   if (_fileView)
      return;
 
+  kDebug(DEBUG) << "creating HiddenFileView ..." << endl;
+
   _fileView = new HiddenFileView( this, _share );
 
-  if ( ! _share->isSpecialSection())
-     _fileView->load();
+  if ( ! _share->isSpecialSection()) {
+    kDebug(DEBUG) << "loading HiddenFileView ..." << endl;
+    _fileView->load();
+  }
 
 
 }
 
 void ShareDlgImpl::accept()
 {
-	// Base settings
   if (!_share)
      return;
 
@@ -375,22 +401,16 @@ void ShareDlgImpl::accept()
 	else
     _share->setName(shareNameEdit->text());
 
-  // User settings
-
   _userTab->save();
-
-  // Security
 
   _share->setValue("guest account",guestAccountCombo->currentText( ) );
 
-
-  // Hidden files
   if (_fileView)
       _fileView->save();
 
   _dictMngr->save( _share );
 
-	KcmShareDlg::accept();
+  QDialog::accept();
 }
 
 void ShareDlgImpl::homeChkToggled(bool b)
@@ -421,7 +441,7 @@ void ShareDlgImpl::accessModifierBtnClicked()
   }
 
 
-  QString name = QObject::sender()->name();
+  QString name = QObject::sender()->objectName();
 
   QLineEdit *edit = 0L;
 
@@ -465,10 +485,146 @@ void ShareDlgImpl::changedSlot() {
   emit changed();
 }
 
-void ShareDlgImpl::pathUrlRq_textChanged( const QString & s)
+void ShareDlgImpl::pathUrlRq_textChanged( const QString &)
 {
   if (_fileView && ! _share->isSpecialSection())
      _fileView->load();
+}
+
+
+void ShareDlgImpl::checkValues()
+{
+/*
+	bool state = true;
+	// Check if the ok-button should be enabled 
+	if (directory->isChecked()){
+	    if (homes->isChecked()){
+		state = true;
+	    }else{
+		if (shareName->text() == "")
+		    state = false;
+		if (path->url() == "")
+		    state = false;
+	    }
+	}else{
+	    if (printers->isChecked()){
+		state = true;
+	    }else{
+		if (shareName->text() == ""){
+		    state = false;
+		}
+	    }
+	}
+	buttonOk->setEnabled(state);
+*/
+}
+
+
+void ShareDlgImpl::guestOnlyChk_toggled( bool b)
+{
+  if (b)
+  {
+    onlyUserChk->setChecked(false);
+    publicBaseChk->setChecked(true);
+  }
+    
+  onlyUserChk->setDisabled(b);
+  publicBaseChk->setDisabled(b);
+}
+
+
+void ShareDlgImpl::userOnlyChk_toggled( bool b)
+{
+  if (b)
+  {
+    guestOnlyChk->setChecked(false);
+    publicBaseChk->setChecked(false);
+  }
+    
+  guestOnlyChk->setDisabled(b);
+  publicBaseChk->setDisabled(b);
+}
+
+void ShareDlgImpl::publicBaseChk_toggled( bool b)
+{
+    guestOnlyChk->setEnabled(b);
+    if (!b) {
+       guestOnlyChk->setChecked(false);
+   }
+    guestAccountCombo->setEnabled(b);
+    guestAccountLbl->setEnabled(b);
+    
+}
+
+
+void ShareDlgImpl::oplocksChk_toggled( bool b)
+{
+    if (b) 
+	fakeOplocksChk->setChecked(false);
+}
+
+
+void ShareDlgImpl::lockingChk_toggled( bool b)
+{
+  // Its Dangerous to disable locking !
+/*	
+    if (!b)  {
+	enableLockingWarnPix->setPixmap(SmallIcon("dialog-warning"));    
+	enableLockingWarnPix->show();
+    } else {
+	enableLockingWarnPix->hide();
+    }
+*/    
+
+}
+
+
+void ShareDlgImpl::fakeOplocksChk_toggled( bool b)
+{
+/*
+    if (b)  {
+	fakeOplocksWarnPix->setPixmap(SmallIcon("dialog-information"));    
+	fakeOplocksWarnPix->setText(i18n("Better use the real oplocks support than this parameter"));
+	fakeOplocksWarnPix->showMaximized();
+	fakeOplocksWarnPix->show();
+    } else {
+	fakeOplocksWarnPix->hide();
+    }
+*/
+}
+
+
+void ShareDlgImpl::oplockContentionLimitSpin_valueChanged( int i)
+{
+/*    
+    oplockContentionLimitWarnPix->setMaximumWidth(32767);
+    oplockContentionLimitWarnPix->setPixmap(SmallIcon("dialog-error"));
+*/   
+    //oplockContentionLimitWarnPix->show();
+    
+}
+
+
+void ShareDlgImpl::storeDosAttributesChk_toggled( bool b)
+{
+    mapArchiveChk->setDisabled(b);
+    mapSystemChk->setDisabled(b);
+    mapHiddenChk->setDisabled(b);
+  
+    if (b) {
+	mapArchiveChk->setChecked(false);
+	mapSystemChk->setChecked(false);
+	mapHiddenChk->setChecked(false);
+    }  
+}
+
+
+void ShareDlgImpl::buttonHelp_clicked()
+{
+    K3Process* p = new K3Process();
+    *p << "konqueror";
+    *p << "man:smb.conf";
+    p->start();
 }
 
 

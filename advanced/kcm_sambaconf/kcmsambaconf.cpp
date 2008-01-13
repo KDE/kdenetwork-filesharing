@@ -249,13 +249,13 @@ void KcmSambaConf::init() {
   connect ( _interface->addShareBtn, SIGNAL(clicked()), this, SLOT(addShare()));
   connect ( _interface->removeShareBtn, SIGNAL(clicked()), this, SLOT(removeShare()));
 
-
+#if 0
   connect ( _interface->editPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinter()));
   connect ( _interface->addPrinterBtn, SIGNAL(clicked()), this, SLOT(addPrinter()));
   connect ( _interface->removePrinterBtn, SIGNAL(clicked()), this, SLOT(removePrinter()));
 
   connect ( _interface->editDefaultPrinterBtn, SIGNAL(clicked()), this, SLOT(editPrinterDefaults()));
-
+#endif
   connect ( _interface->editDefaultShareBtn, SIGNAL(clicked()), this, SLOT(editShareDefaults()));
 
   connect( _interface->domainRadio, SIGNAL(toggled(bool)),

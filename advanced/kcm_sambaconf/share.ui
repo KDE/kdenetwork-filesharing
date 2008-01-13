@@ -65,7 +65,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="Q3Frame" name="pixmapFrame" >
+          <widget class="QFrame" name="pixmapFrame" >
            <property name="frameShape" >
             <enum>QFrame::NoFrame</enum>
            </property>
@@ -822,7 +822,7 @@
         <number>11</number>
        </property>
        <item>
-        <widget class="Q3Frame" name="advancedFrame" >
+        <widget class="QFrame" name="advancedFrame" >
          <property name="frameShape" >
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -832,7 +832,7 @@
         </widget>
        </item>
        <item>
-        <widget class="Q3Frame" name="Frame26" >
+        <widget class="QFrame" name="Frame26" >
          <property name="frameShape" >
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -2593,12 +2593,6 @@ Only change something if you know what you are doing.</string>
    <class>Q3GroupBox</class>
    <extends>QGroupBox</extends>
    <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Q3Frame</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3Frame</header>
    <container>1</container>
   </customwidget>
   <customwidget>

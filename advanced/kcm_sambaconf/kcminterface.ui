@@ -1118,7 +1118,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
         <number>11</number>
        </property>
        <item>
-        <widget class="Q3Frame" name="advancedFrame" >
+        <widget class="QFrame" name="advancedFrame" >
          <property name="frameShape" >
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -1128,7 +1128,7 @@ and reappear on the right-hand side, as UNIX users which are not Samba users.
         </widget>
        </item>
        <item>
-        <widget class="Q3Frame" name="Frame26" >
+        <widget class="QFrame" name="Frame26" >
          <property name="frameShape" >
           <enum>QFrame::NoFrame</enum>
          </property>
@@ -2437,7 +2437,7 @@ Only change something if you know what you are doing.</string>
             <number>0</number>
            </property>
            <item>
-            <widget class="Q3Frame" name="loggingFrame" >
+            <widget class="QFrame" name="loggingFrame" >
              <property name="sizePolicy" >
               <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
                <horstretch>100</horstretch>
@@ -5231,7 +5231,7 @@ This is only available if the SSL libraries have been compiled on your system an
             </widget>
            </item>
            <item>
-            <widget class="Q3Frame" name="SSLFrame" >
+            <widget class="QFrame" name="SSLFrame" >
              <property name="enabled" >
               <bool>false</bool>
              </property>
@@ -7493,12 +7493,6 @@ This is only available if the SSL libraries have been compiled on your system an
    <class>Q3GroupBox</class>
    <extends>QGroupBox</extends>
    <header>Qt3Support/Q3GroupBox</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>Q3Frame</class>
-   <extends>QFrame</extends>
-   <header>Qt3Support/Q3Frame</header>
    <container>1</container>
   </customwidget>
   <customwidget>

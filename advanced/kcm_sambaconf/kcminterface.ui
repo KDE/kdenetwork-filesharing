@@ -8060,7 +8060,7 @@ This is only available if the SSL libraries have been compiled on your system an
   </connection>
   <connection>
    <sender>shareRadio</sender>
-   <signal>stateChanged(int)</signal>
+   <signal>clicked()</signal>
    <receiver>KcmInterface</receiver>
    <slot>changedSlot()</slot>
    <hints>
@@ -8092,7 +8092,7 @@ This is only available if the SSL libraries have been compiled on your system an
   </connection>
   <connection>
    <sender>userRadio</sender>
-   <signal>stateChanged(int)</signal>
+   <signal>clicked()</signal>
    <receiver>KcmInterface</receiver>
    <slot>changedSlot()</slot>
    <hints>
@@ -8140,7 +8140,7 @@ This is only available if the SSL libraries have been compiled on your system an
   </connection>
   <connection>
    <sender>serverRadio</sender>
-   <signal>stateChanged(int)</signal>
+   <signal>clicked()</signal>
    <receiver>KcmInterface</receiver>
    <slot>changedSlot()</slot>
    <hints>
@@ -8156,7 +8156,7 @@ This is only available if the SSL libraries have been compiled on your system an
   </connection>
   <connection>
    <sender>domainRadio</sender>
-   <signal>stateChanged(int)</signal>
+   <signal>clicked()</signal>
    <receiver>KcmInterface</receiver>
    <slot>changedSlot()</slot>
    <hints>

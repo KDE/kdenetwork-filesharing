@@ -471,8 +471,7 @@ bool PropertiesPage::loadSamba() {
 void PropertiesPage::loadSambaShare() {
   if (! m_sambaShare) {
       sambaChk->setChecked(false);
-      kDebug(FILESHARE_DEBUG) << "PropertiesPage::loadSambaShare: no share with name "
-          << m_sambaShare->getName() << endl;    
+      kDebug(FILESHARE_DEBUG) << "PropertiesPage::loadSambaShare: m_sambaShare is null" << endl;    
       return;
   }
   

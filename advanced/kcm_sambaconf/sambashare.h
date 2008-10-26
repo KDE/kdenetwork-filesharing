@@ -70,7 +70,7 @@ public:
   bool setName(const QString & name, bool testWetherExists=true);
 
   /**
-   * Tests wether or not the given option is supported by Samba.
+   * Tests whether or not the given option is supported by Samba.
    * It does this by testing the output of testparm for this option
    **/
   bool optionSupported(const QString & name);

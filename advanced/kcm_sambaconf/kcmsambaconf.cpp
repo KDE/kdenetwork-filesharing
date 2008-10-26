@@ -700,7 +700,7 @@ void KcmSambaConf::loadSecurity(SambaShare*)
   _dictMngr->add("hosts equiv",_interface->hostsEquivUrlRq);
   _dictMngr->add("private dir",_interface->privateDirUrlRq);
 
-  // Authentification
+  // Authentication
 
   _dictMngr->add("lanman auth",_interface->lanmanAuthChk);
   _dictMngr->add("ntlm auth",_interface->ntlmAuthChk);

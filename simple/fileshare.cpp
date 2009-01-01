@@ -27,7 +27,6 @@
 #include <QVBoxLayout>
 #include <QTextStream>
 #include <QBoxLayout>
-#include <Q3PtrList>
 
 #include <kpushbutton.h>
 #include <kdebug.h>

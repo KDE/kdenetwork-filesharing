@@ -150,9 +150,9 @@ void KFileShareConfig::updateShareListView()
       KSambaShare* samba = KSambaShare::instance();
 
       QStringList dirs = nfs->sharedDirectories();
-      QStringList sambaDirs = samba->sharedDirectories();
+      const QStringList sambaDirs = samba->sharedDirectories();
 
-      for ( QStringList::ConstIterator it = sambaDirs.begin(); it != sambaDirs.end(); ++it ) {
+      for ( QStringList::ConstIterator it = sambaDirs.constBegin(); it != sambaDirs.constEnd(); ++it ) {
         // Do not insert duplicates
         if (nfs->isDirectoryShared(*it))
             continue;
@@ -164,7 +164,7 @@ void KFileShareConfig::updateShareListView()
       QPixmap okPix = SmallIcon("dialog-ok");
       QPixmap cancelPix = SmallIcon("dialog-cancel");
 
-      for ( QStringList::Iterator it = dirs.begin(); it != dirs.end(); ++it ) {
+      for ( QStringList::ConstIterator it = dirs.constBegin(); it != dirs.constEnd(); ++it ) {
         K3ListViewItem* item = new K3ListViewItem(m_ccgui->listView);
         item->setText(0,*it);
         item->setPixmap(0, folderPix);

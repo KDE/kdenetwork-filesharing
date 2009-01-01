@@ -215,11 +215,11 @@ void GroupConfigDlg::slotOk() {
   removeList(removedUsers,m_users);
 
   QList<KUser>::ConstIterator it;
-  for ( it = addedUsers.begin(); it != addedUsers.end(); ++it ) {
+  for ( it = addedUsers.constBegin(); it != addedUsers.constEnd(); ++it ) {
     addUser(*it, m_fileShareGroup);
   }
 
-  for ( it = removedUsers.begin(); it != removedUsers.end(); ++it ) {
+  for ( it = removedUsers.constBegin(); it != removedUsers.constEnd(); ++it ) {
     removeUser(*it, m_fileShareGroup);
   }
 
@@ -361,7 +361,7 @@ void GroupConfigDlg::setFileShareGroup(const KUserGroup & group) {
 bool GroupConfigDlg::addUsersToGroup(QList<KUser> users,const KUserGroup & group) {
   QList<KUser>::ConstIterator it;
   bool result = true;
-  for ( it = users.begin(); it != users.end(); ++it ) {
+  for ( it = users.constBegin(); it != users.constEnd(); ++it ) {
     if (!addUser(*it, group))
       result  = false;
   }
@@ -378,7 +378,7 @@ bool GroupConfigDlg::emptyGroup(const QString & s) {
   bool result = true;
   KUserGroup group(s);
   QList<KUser>::ConstIterator it;
-  for ( it = allUsers.begin(); it != allUsers.end(); ++it ) {
+  for ( it = allUsers.constBegin(); it != allUsers.constEnd(); ++it ) {
     if (!removeUser(*it, group))
       result = false;
   }

@@ -139,7 +139,6 @@ KFileShareConfig::KFileShareConfig(QWidget *parent, const QVariantList &):
       m_ccgui->shareGrp->setDisabled( true );
   }
 
-  load();
 }
 
 void KFileShareConfig::updateShareListView()

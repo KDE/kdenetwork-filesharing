@@ -4,6 +4,8 @@ include_directories(
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/propsdlgplugin/
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/
+                ${CMAKE_BINARY_DIR}/filesharing/simple/
+                ${CMAKE_BINARY_DIR}/advanced/propsdlgplugin/
 		)
 
 set(libfilesharesamba_SRCS

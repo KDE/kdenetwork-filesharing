@@ -32,12 +32,23 @@
 #include "usertab.h"
 #include "common.h"
 #include "qstringlist.h"
+#include "ui_expertuserdlg.h"
 
 /**
   *@author Jan Schäfer
   */
 
 class SambaShare;
+
+
+class ExpertUserDlg : public QDialog, public Ui::ExpertUserDlg
+{
+Q_OBJECT
+public:
+    ExpertUserDlg( QWidget *parent ): QDialog(parent) {
+       setupUi(this);
+    }
+};
 
 /**
  * Implements the usertab.ui interface

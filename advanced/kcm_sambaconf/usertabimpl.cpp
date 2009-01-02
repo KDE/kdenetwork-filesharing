@@ -50,7 +50,6 @@
 #include "smbpasswdfile.h"
 #include "groupselectdlg.h"
 #include "userselectdlg.h"
-#include "expertuserdlg.h"
 
 #include <assert.h>
 
@@ -279,8 +278,8 @@ void UserTabImpl::addUserBtnClicked()
     bool ok;
     QString name = KInputDialog::getText(i18n("Add User"),i18n("Name:"),
                                          QString(), &ok );
-                                         
-    if (ok)                                         
+
+    if (ok)
         addUserToUserTable(name,0);
   }
 }
@@ -328,7 +327,7 @@ void UserTabImpl::addGroupBtnClicked()
 }
 
 void UserTabImpl::expertBtnClicked() {
-    ExpertUserDlg *dlg = new ExpertUserDlg();
+    ExpertUserDlg *dlg = new ExpertUserDlg(this);
     QString validUsersStr;
     QString readListStr;
     QString writeListStr;

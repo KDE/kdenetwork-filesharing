@@ -12,7 +12,7 @@
 
 void JoinDomainDlg::accept() {
     if (passwordEdit->text() != verifyEdit->text()) {
-        KMessageBox::sorry(this, "Sorry", "You entered two different passwords. Please try again.");
+        KMessageBox::sorry(this, i18n("Sorry"), i18n("You entered two different passwords. Please try again."));
        return;
     }
     

@@ -67,6 +67,9 @@ bool NFSFile::hasEntry(NFSEntry *entry)
 
 NFSEntry* NFSFile::getEntryByPath(const QString & path)
 {
+  if( path.isEmpty())
+     return 0L;
+
   QString testPath = path.trimmed();
   if ( testPath[testPath.length()-1] != '/' )
        testPath += '/';

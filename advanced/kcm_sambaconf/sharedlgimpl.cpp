@@ -361,7 +361,7 @@ void ShareDlgImpl::initAdvancedTab()
 	_tabs->removeTab(5);
 	delete w;
 
-
+        storeDosAttributesChk_toggled( false );
 }
 
 
@@ -496,7 +496,7 @@ void ShareDlgImpl::checkValues()
 {
 /*
 	bool state = true;
-	// Check if the ok-button should be enabled 
+	// Check if the ok-button should be enabled
 	if (directory->isChecked()){
 	    if (homes->isChecked()){
 		state = true;
@@ -527,7 +527,7 @@ void ShareDlgImpl::guestOnlyChk_toggled( bool b)
     onlyUserChk->setChecked(false);
     publicBaseChk->setChecked(true);
   }
-    
+
   onlyUserChk->setDisabled(b);
   publicBaseChk->setDisabled(b);
 }
@@ -540,7 +540,7 @@ void ShareDlgImpl::userOnlyChk_toggled( bool b)
     guestOnlyChk->setChecked(false);
     publicBaseChk->setChecked(false);
   }
-    
+
   guestOnlyChk->setDisabled(b);
   publicBaseChk->setDisabled(b);
 }
@@ -553,13 +553,13 @@ void ShareDlgImpl::publicBaseChk_toggled( bool b)
    }
     guestAccountCombo->setEnabled(b);
     guestAccountLbl->setEnabled(b);
-    
+
 }
 
 
 void ShareDlgImpl::oplocksChk_toggled( bool b)
 {
-    if (b) 
+    if (b)
 	fakeOplocksChk->setChecked(false);
 }
 
@@ -567,14 +567,14 @@ void ShareDlgImpl::oplocksChk_toggled( bool b)
 void ShareDlgImpl::lockingChk_toggled( bool b)
 {
   // Its Dangerous to disable locking !
-/*	
+/*
     if (!b)  {
-	enableLockingWarnPix->setPixmap(SmallIcon("dialog-warning"));    
+	enableLockingWarnPix->setPixmap(SmallIcon("dialog-warning"));
 	enableLockingWarnPix->show();
     } else {
 	enableLockingWarnPix->hide();
     }
-*/    
+*/
 
 }
 
@@ -583,7 +583,7 @@ void ShareDlgImpl::fakeOplocksChk_toggled( bool b)
 {
 /*
     if (b)  {
-	fakeOplocksWarnPix->setPixmap(SmallIcon("dialog-information"));    
+	fakeOplocksWarnPix->setPixmap(SmallIcon("dialog-information"));
 	fakeOplocksWarnPix->setText(i18n("Better use the real oplocks support than this parameter"));
 	fakeOplocksWarnPix->showMaximized();
 	fakeOplocksWarnPix->show();
@@ -596,12 +596,12 @@ void ShareDlgImpl::fakeOplocksChk_toggled( bool b)
 
 void ShareDlgImpl::oplockContentionLimitSpin_valueChanged( int i)
 {
-/*    
+/*
     oplockContentionLimitWarnPix->setMaximumWidth(32767);
     oplockContentionLimitWarnPix->setPixmap(SmallIcon("dialog-error"));
-*/   
+*/
     //oplockContentionLimitWarnPix->show();
-    
+
 }
 
 
@@ -610,12 +610,12 @@ void ShareDlgImpl::storeDosAttributesChk_toggled( bool b)
     mapArchiveChk->setDisabled(b);
     mapSystemChk->setDisabled(b);
     mapHiddenChk->setDisabled(b);
-  
+
     if (b) {
 	mapArchiveChk->setChecked(false);
 	mapSystemChk->setChecked(false);
 	mapHiddenChk->setChecked(false);
-    }  
+    }
 }
 
 

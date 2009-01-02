@@ -21,16 +21,26 @@
 #define GROUPCONFIGDLG_H
 
 #include <kdialog.h>
-
+#include "ui_groupconfiggui.h"
 #include <kuser.h>
+class Q3ListBoxItem;
 
-class GroupConfigGUI;
+class GroupConfigGUI : public QWidget, public Ui::GroupConfigGUI
+{
+Q_OBJECT
+public:
+    GroupConfigGUI( QWidget *parent );
+public slots:
+    void listBox_selectionChanged( Q3ListBoxItem * i);
+};
+
+
 
 class GroupConfigDlg : public KDialog
 {
 Q_OBJECT
-public: 
-  GroupConfigDlg(QWidget * parent, const QString & fileShareGroup, bool restricted, 
+public:
+  GroupConfigDlg(QWidget * parent, const QString & fileShareGroup, bool restricted,
                  bool rootPassNeeded, bool simpleSharing);
   ~GroupConfigDlg();
   KUserGroup fileShareGroup() const { return m_fileShareGroup; }
@@ -38,7 +48,7 @@ public:
   bool rootPassNeeded() const;
 protected:
   GroupConfigGUI* m_gui;
-  
+
   void initGUI();
   void initUsers();
 protected slots:
@@ -56,7 +66,7 @@ private:
   bool removeUser(const KUser & user, const KUserGroup & group);
   bool addUsersToGroup(QList<KUser> users,const KUserGroup & group);
   void setFileShareGroup(const KUserGroup & group);
-  
+
   QList<KUser> m_origUsers;
   QList<KUser> m_users;
   KUserGroup m_fileShareGroup;

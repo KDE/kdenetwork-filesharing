@@ -37,7 +37,6 @@
 #include <kpushbutton.h>
 #include <kcombobox.h>
 
-#include "groupconfiggui.h"
 #include "groupconfigdlg.h"
 
 
@@ -48,6 +47,17 @@ static void removeList(QList<KUser> & from, const QList<KUser> & that);
 static bool userMod(const QString & user, const QList<KUserGroup> & groups);
 
 
+GroupConfigGUI::GroupConfigGUI( QWidget *parent )
+    : QWidget( parent )
+{
+    setupUi( this );
+    connect( listBox, SIGNAL( selectionChanged(Q3ListBoxItem*) ), this, SLOT(listBox_selectionChanged(Q3ListBoxItem*) ) );
+}
+
+void GroupConfigGUI::listBox_selectionChanged( Q3ListBoxItem * i)
+{
+    removeBtn->setEnabled(i);
+}
 
 GroupConfigDlg::GroupConfigDlg(QWidget * parent,
       const QString & fileShareGroup, bool restricted,

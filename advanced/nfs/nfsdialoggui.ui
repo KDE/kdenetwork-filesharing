@@ -1,156 +1,146 @@
-<!DOCTYPE UI><UI version="3.2" stdsetdef="1">
-<class>NFSDialogGUI</class>
-<widget class="QWidget">
-    <property name="name">
-        <cstring>NFSDialogGUI</cstring>
+<ui version="4.0" stdsetdef="1" >
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>NFSDialogGUI</class>
+  <widget class="QWidget" name="NFSDialogGUI" >
+    <property name="geometry" >
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>466</width>
+        <height>338</height>
+      </rect>
     </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>466</width>
-            <height>338</height>
-        </rect>
-    </property>
-    <vbox>
-        <property name="name">
-            <cstring>unnamed</cstring>
-        </property>
-        <property name="margin">
-            <number>0</number>
-        </property>
-        <property name="spacing">
-            <number>6</number>
-        </property>
-        <widget class="QGroupBox">
-            <property name="name">
-                <cstring>groupBox</cstring>
-            </property>
-            <property name="enabled">
-                <bool>true</bool>
-            </property>
-            <property name="title">
-                <string>Allowed &amp;Hosts</string>
-            </property>
-            <property name="toolTip" stdset="0">
-                <string>A list of allowed hosts</string>
-            </property>
-            <property name="whatsThis" stdset="0">
-                <string>Here you can see a list of hosts which are allowed to access this directory via NFS.
+    <layout class="QVBoxLayout" >
+      <property name="margin" >
+        <number>0</number>
+      </property>
+      <property name="spacing" >
+        <number>6</number>
+      </property>
+      <item>
+        <widget class="Q3GroupBox" name="groupBox" >
+          <property name="enabled" >
+            <bool>true</bool>
+          </property>
+          <property name="title" >
+            <string>Allowed &amp;Hosts</string>
+          </property>
+          <property name="toolTip" stdset="0" >
+            <string>A list of allowed hosts</string>
+          </property>
+          <property name="whatsThis" stdset="0" >
+            <string>Here you can see a list of hosts which are allowed to access this directory via NFS.
 The first column shows the name or address of the host, the second column shows the access parameters. The name '*' donates public access.</string>
+          </property>
+          <layout class="QGridLayout" >
+            <property name="margin" >
+              <number>11</number>
             </property>
-            <grid>
-                <property name="name">
-                    <cstring>unnamed</cstring>
+            <property name="spacing" >
+              <number>6</number>
+            </property>
+            <item row="0" column="1" >
+              <widget class="QPushButton" name="addHostBtn" >
+                <property name="text" >
+                  <string>&amp;Add Host...</string>
                 </property>
-                <property name="margin">
-                    <number>11</number>
+              </widget>
+            </item>
+            <item row="1" column="1" >
+              <widget class="QPushButton" name="modifyHostBtn" >
+                <property name="enabled" >
+                  <bool>false</bool>
                 </property>
-                <property name="spacing">
-                    <number>6</number>
+                <property name="text" >
+                  <string>Mo&amp;dify Host...</string>
                 </property>
-                <widget class="QPushButton" row="0" column="1">
-                    <property name="name">
-                        <cstring>addHostBtn</cstring>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Add Host...</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="1" column="1">
-                    <property name="name">
-                        <cstring>modifyHostBtn</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>Mo&amp;dify Host...</string>
-                    </property>
-                </widget>
-                <widget class="QPushButton" row="2" column="1">
-                    <property name="name">
-                        <cstring>removeHostBtn</cstring>
-                    </property>
-                    <property name="enabled">
-                        <bool>false</bool>
-                    </property>
-                    <property name="text">
-                        <string>&amp;Remove Host</string>
-                    </property>
-                </widget>
-                <spacer row="3" column="1">
-                    <property name="name">
-                        <cstring>spacer3</cstring>
-                    </property>
-                    <property name="orientation">
-                        <enum>Vertical</enum>
-                    </property>
-                    <property name="sizeType">
-                        <enum>Expanding</enum>
-                    </property>
-                    <property name="sizeHint">
-                        <size>
-                            <width>20</width>
-                            <height>40</height>
-                        </size>
-                    </property>
-                </spacer>
-                <widget class="K3ListView" row="0" column="0" rowspan="4" colspan="1">
-                    <column>
-                        <property name="text">
-                            <string>Name/Address</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <column>
-                        <property name="text">
-                            <string>Parameters</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <property name="name">
-                        <cstring>listView</cstring>
-                    </property>
-                    <property name="selectionMode" stdset="0">
-                        <enum>Extended</enum>
-                    </property>
-                    <property name="fullWidth">
-                        <bool>true</bool>
-                    </property>
-                </widget>
-            </grid>
+              </widget>
+            </item>
+            <item row="2" column="1" >
+              <widget class="QPushButton" name="removeHostBtn" >
+                <property name="enabled" >
+                  <bool>false</bool>
+                </property>
+                <property name="text" >
+                  <string>&amp;Remove Host</string>
+                </property>
+              </widget>
+            </item>
+            <item row="3" column="1" >
+              <spacer name="spacer3" >
+                <property name="sizeHint" >
+                  <size>
+                    <width>20</width>
+                    <height>40</height>
+                  </size>
+                </property>
+                <property name="sizeType" >
+                  <enum>QSizePolicy::Expanding</enum>
+                </property>
+                <property name="orientation" >
+                  <enum>Qt::Vertical</enum>
+                </property>
+              </spacer>
+            </item>
+            <item rowspan="4" row="0" column="0" colspan="1" >
+              <widget class="K3ListView" name="listView" >
+                <property name="selectionMode" stdset="0" >
+                  <enum>Extended</enum>
+                </property>
+                <property name="fullWidth" >
+                  <bool>true</bool>
+                </property>
+                <column>
+                  <property name="text" >
+                    <string>Name/Address</string>
+                  </property>
+                  <property name="clickable" >
+                    <bool>true</bool>
+                  </property>
+                  <property name="resizable" >
+                    <bool>true</bool>
+                  </property>
+                </column>
+                <column>
+                  <property name="text" >
+                    <string>Parameters</string>
+                  </property>
+                  <property name="clickable" >
+                    <bool>true</bool>
+                  </property>
+                  <property name="resizable" >
+                    <bool>true</bool>
+                  </property>
+                </column>
+              </widget>
+            </item>
+          </layout>
         </widget>
-    </vbox>
-</widget>
-<connections>
-    <connection>
-        <sender>listView</sender>
-        <signal>selectionChanged()</signal>
-        <receiver>NFSDialogGUI</receiver>
-        <slot>listView_selectionChanged()</slot>
-    </connection>
-</connections>
-<tabstops>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11" />
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <customwidgets>
+    <customwidget>
+      <class>K3ListView</class>
+      <extends>Q3ListView</extends>
+      <header location="global" >k3listview.h</header>
+    </customwidget>
+  </customwidgets>
+  <tabstops>
     <tabstop>addHostBtn</tabstop>
     <tabstop>modifyHostBtn</tabstop>
     <tabstop>removeHostBtn</tabstop>
-</tabstops>
-<includes>
-    <include location="local" impldecl="in implementation">nfsdialoggui.ui.h</include>
-</includes>
-<slots>
-    <slot>listView_selectionChanged()</slot>
-</slots>
-<layoutdefaults spacing="6" margin="11"/>
-</UI>
+  </tabstops>
+  <connections>
+    <connection>
+      <sender>listView</sender>
+      <signal>selectionChanged()</signal>
+      <receiver>NFSDialogGUI</receiver>
+      <slot>listView_selectionChanged()</slot>
+    </connection>
+  </connections>
+</ui>

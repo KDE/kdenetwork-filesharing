@@ -21,16 +21,27 @@
 #define NFSDIALOG_H
 
 #include <kdialog.h>
+#include "ui_nfsdialoggui.h"
 
 class NFSEntry;
 class NFSHost;
 class Q3ListViewItem;
-class NFSDialogGUI;
+
+class NFSDialogGUI : public QWidget, public Ui::NFSDialogGUI
+{
+    Q_OBJECT
+public:
+    NFSDialogGUI( QWidget *parent );
+
+public slots:
+    void listView_selectionChanged();
+};
+
 
 class NFSDialog : public KDialog
 {
 Q_OBJECT
-public: 
+public:
   NFSDialog(QWidget * parent, NFSEntry* entry);
   ~NFSDialog();
   bool modified();
@@ -38,7 +49,7 @@ protected:
   NFSEntry * m_nfsEntry;
   NFSEntry * m_workEntry;
   NFSDialogGUI* m_gui;
-  
+
   bool m_modified;
   Q3ListViewItem* createItemFromHost(NFSHost* host);
   void updateItem(Q3ListViewItem* item, NFSHost* host);

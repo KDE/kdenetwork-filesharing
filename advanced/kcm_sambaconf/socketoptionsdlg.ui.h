@@ -37,7 +37,7 @@ void SocketOptionsDlg::setShare( SambaShare * share )
     
     QString s = _share->getValue("socket options");
     
-    s = s.simplifyWhiteSpace();
+    s = s.simplified();
     
     // The string s has now the form e.g. :
     // "OPTION1=1 OPTION2=0 OPTION3=2234 OPTION4"

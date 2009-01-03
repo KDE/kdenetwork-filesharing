@@ -175,7 +175,7 @@ bool NFSHost::isPublic() const {
 
 void NFSHost::setParam(const QString & s)
 {
-  QString p = s.lower();
+  QString p = s.toLower();
 
   if (p=="ro") {
      readonly = true;
@@ -256,7 +256,7 @@ void NFSHost::setParam(const QString & s)
   // get anongid or anonuid
   if (i>-1)
   {
-     QString name = p.left(i).lower();
+     QString name = p.left(i).toLower();
      kDebug(5009) << name;
 
      QString value = p.mid(i+1);

@@ -1,493 +1,434 @@
-<!DOCTYPE UI><UI version="3.3" stdsetdef="1">
-<class>ControlCenterGUI</class>
-<widget class="QWidget">
-    <property name="name">
-        <cstring>ControlCenterGUI</cstring>
+<ui version="4.0" stdsetdef="1" >
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>ControlCenterGUI</class>
+  <widget class="QWidget" name="ControlCenterGUI" >
+    <property name="geometry" >
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>525</width>
+        <height>535</height>
+      </rect>
     </property>
-    <property name="geometry">
-        <rect>
-            <x>0</x>
-            <y>0</y>
-            <width>525</width>
-            <height>535</height>
-        </rect>
-    </property>
-    <vbox>
-        <property name="name">
-            <cstring>unnamed</cstring>
-        </property>
-        <property name="margin">
-            <number>0</number>
-        </property>
-        <widget class="KRichTextLabel">
-            <property name="name">
-                <cstring>infoLbl</cstring>
-            </property>
-            <property name="margin">
-                <number>11</number>
-            </property>
-            <property name="text">
-                <string>SMB and NFS servers are not installed on this machine, to enable this module the servers must be installed.</string>
-            </property>
-            <property name="alignment">
-                <set>Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap" >
-              <bool>true</bool>
-            </property>
+    <layout class="QVBoxLayout" >
+      <property name="margin" >
+        <number>0</number>
+      </property>
+      <item>
+        <widget class="KRichTextLabel" name="infoLbl" >
+          <property name="margin" >
+            <number>11</number>
+          </property>
+          <property name="text" >
+            <string>SMB and NFS servers are not installed on this machine, to enable this module the servers must be installed.</string>
+          </property>
+          <property name="alignment" >
+            <set>Qt::AlignVCenter</set>
+          </property>
+          <property name="wordWrap" >
+            <bool>true</bool>
+          </property>
         </widget>
-        <widget class="QButtonGroup">
-            <property name="name">
-                <cstring>shareGrp</cstring>
-            </property>
-            <property name="title">
-                <string>Enable Local Networ&amp;k File Sharing</string>
-            </property>
-            <property name="checkable">
-                <bool>true</bool>
-            </property>
-            <property name="checked">
-                <bool>true</bool>
-            </property>
-            <vbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
+      </item>
+      <item>
+        <widget class="Q3ButtonGroup" name="shareGrp" >
+          <property name="title" >
+            <string>Enable Local Networ&amp;k File Sharing</string>
+          </property>
+          <property name="checkable" >
+            <bool>true</bool>
+          </property>
+          <property name="checked" >
+            <bool>true</bool>
+          </property>
+          <layout class="QVBoxLayout" >
+            <item>
+              <widget class="QRadioButton" name="simpleRadio" >
+                <property name="text" >
+                  <string>Si&amp;mple sharing</string>
                 </property>
-                <widget class="QRadioButton">
-                    <property name="name">
-                        <cstring>simpleRadio</cstring>
+                <property name="checked" >
+                  <bool>true</bool>
+                </property>
+                <property name="buttonGroupId" >
+                  <number>1</number>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <layout class="QHBoxLayout" >
+                <item>
+                  <widget class="Q3Frame" name="frame4_2" >
+                    <property name="sizePolicy" >
+                      <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>5</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
                     </property>
-                    <property name="text">
-                        <string>Si&amp;mple sharing</string>
+                    <property name="minimumSize" >
+                      <size>
+                        <width>11</width>
+                        <height>0</height>
+                      </size>
                     </property>
-                    <property name="checked">
-                        <bool>true</bool>
+                    <property name="frameShape" >
+                      <enum>NoFrame</enum>
                     </property>
-                    <property name="buttonGroupId">
-                        <number>1</number>
+                    <property name="frameShadow" >
+                      <enum>Raised</enum>
                     </property>
-                </widget>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout4</cstring>
+                    <property name="margin" >
+                      <number>0</number>
                     </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QFrame">
-                            <property name="name">
-                                <cstring>frame4_2</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>0</hsizetype>
-                                    <vsizetype>5</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="minimumSize">
-                                <size>
-                                    <width>11</width>
-                                    <height>0</height>
-                                </size>
-                            </property>
-                            <property name="frameShape">
-                                <enum>NoFrame</enum>
-                            </property>
-                            <property name="frameShadow">
-                                <enum>Raised</enum>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                        </widget>
-                        <widget class="KRichTextLabel">
-                            <property name="name">
-                                <cstring>textLabel1</cstring>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <italic>1</italic>
-                                </font>
-                            </property>
-                            <property name="text">
-                                <string>Enable simple sharing to allow users to share folders from their HOME folder, without knowing the root password.</string>
-                            </property>
-                            <property name="alignment">
-                                <set>Qt::AlignVCenter</set>
-                            </property>
-                            <property name="wordWrap" >
-                                <bool>true</bool>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QRadioButton">
-                    <property name="name">
-                        <cstring>advancedRadio</cstring>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="KRichTextLabel" name="textLabel1" >
+                    <property name="font" >
+                      <font>
+                        <italic>true</italic>
+                      </font>
                     </property>
-                    <property name="text">
-                        <string>Advanced sharin&amp;g</string>
+                    <property name="text" >
+                      <string>Enable simple sharing to allow users to share folders from their HOME folder, without knowing the root password.</string>
                     </property>
-                    <property name="buttonGroupId">
-                        <number>1</number>
+                    <property name="alignment" >
+                      <set>Qt::AlignVCenter</set>
                     </property>
-                </widget>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout4_2</cstring>
+                    <property name="wordWrap" >
+                      <bool>true</bool>
                     </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QFrame">
-                            <property name="name">
-                                <cstring>frame4_2_2</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>0</hsizetype>
-                                    <vsizetype>5</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="minimumSize">
-                                <size>
-                                    <width>11</width>
-                                    <height>0</height>
-                                </size>
-                            </property>
-                            <property name="frameShape">
-                                <enum>NoFrame</enum>
-                            </property>
-                            <property name="frameShadow">
-                                <enum>Raised</enum>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                        </widget>
-                        <widget class="KRichTextLabel">
-                            <property name="name">
-                                <cstring>textLabel1_2</cstring>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <italic>1</italic>
-                                </font>
-                            </property>
-                            <property name="text">
-                                <string>Enable advanced sharing to allow users to share any folders, as long as they have write access to the needed configuration files, or they know the root password.</string>
-                            </property>
-                            <property name="alignment">
-                                <set>Qt::AlignVCenter</set>
-                            </property>
-                            <property name="wordWrap" >
-                                <bool>true</bool>
-                            </property>
-                        </widget>
-                    </hbox>
-                </widget>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout3</cstring>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+            <item>
+              <widget class="QRadioButton" name="advancedRadio" >
+                <property name="text" >
+                  <string>Advanced sharin&amp;g</string>
+                </property>
+                <property name="buttonGroupId" >
+                  <number>1</number>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <layout class="QHBoxLayout" >
+                <item>
+                  <widget class="Q3Frame" name="frame4_2_2" >
+                    <property name="sizePolicy" >
+                      <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>5</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
                     </property>
-                    <grid>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="QFrame" row="0" column="0" rowspan="2" colspan="1">
-                            <property name="name">
-                                <cstring>frame4</cstring>
-                            </property>
-                            <property name="sizePolicy">
-                                <sizepolicy>
-                                    <hsizetype>0</hsizetype>
-                                    <vsizetype>5</vsizetype>
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="minimumSize">
-                                <size>
-                                    <width>11</width>
-                                    <height>0</height>
-                                </size>
-                            </property>
-                            <property name="frameShape">
-                                <enum>NoFrame</enum>
-                            </property>
-                            <property name="frameShadow">
-                                <enum>Raised</enum>
-                            </property>
-                            <property name="margin">
-                                <number>0</number>
-                            </property>
-                        </widget>
-                        <widget class="QCheckBox" row="1" column="1">
-                            <property name="name">
-                                <cstring>nfsChk</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string>Use &amp;NFS (Linux/UNIX)</string>
-                            </property>
-                            <property name="checked">
-                                <bool>true</bool>
-                            </property>
-                        </widget>
-                        <widget class="QCheckBox" row="0" column="1">
-                            <property name="name">
-                                <cstring>sambaChk</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string>Use Sam&amp;ba (Microsoft(R) Windows(R))</string>
-                            </property>
-                            <property name="checked">
-                                <bool>true</bool>
-                            </property>
-                        </widget>
-                    </grid>
-                </widget>
-                <widget class="QLayoutWidget">
-                    <property name="name">
-                        <cstring>layout10</cstring>
+                    <property name="minimumSize" >
+                      <size>
+                        <width>11</width>
+                        <height>0</height>
+                      </size>
                     </property>
-                    <hbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>allowedUsersBtn</cstring>
-                            </property>
-                            <property name="text">
-                                <string>Allo&amp;wed Users</string>
-                            </property>
-                        </widget>
-                        <spacer>
-                            <property name="name">
-                                <cstring>spacer9</cstring>
-                            </property>
-                            <property name="orientation">
-                                <enum>Horizontal</enum>
-                            </property>
-                            <property name="sizeType">
-                                <enum>Expanding</enum>
-                            </property>
-                            <property name="sizeHint">
-                                <size>
-                                    <width>40</width>
-                                    <height>20</height>
-                                </size>
-                            </property>
-                        </spacer>
-                    </hbox>
-                </widget>
-            </vbox>
+                    <property name="frameShape" >
+                      <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow" >
+                      <enum>Raised</enum>
+                    </property>
+                    <property name="margin" >
+                      <number>0</number>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="KRichTextLabel" name="textLabel1_2" >
+                    <property name="font" >
+                      <font>
+                        <italic>true</italic>
+                      </font>
+                    </property>
+                    <property name="text" >
+                      <string>Enable advanced sharing to allow users to share any folders, as long as they have write access to the needed configuration files, or they know the root password.</string>
+                    </property>
+                    <property name="alignment" >
+                      <set>Qt::AlignVCenter</set>
+                    </property>
+                    <property name="wordWrap" >
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+            <item>
+              <layout class="QGridLayout" >
+                <item rowspan="2" row="0" column="0" colspan="1" >
+                  <widget class="Q3Frame" name="frame4" >
+                    <property name="sizePolicy" >
+                      <sizepolicy>
+                        <hsizetype>0</hsizetype>
+                        <vsizetype>5</vsizetype>
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                      </sizepolicy>
+                    </property>
+                    <property name="minimumSize" >
+                      <size>
+                        <width>11</width>
+                        <height>0</height>
+                      </size>
+                    </property>
+                    <property name="frameShape" >
+                      <enum>NoFrame</enum>
+                    </property>
+                    <property name="frameShadow" >
+                      <enum>Raised</enum>
+                    </property>
+                    <property name="margin" >
+                      <number>0</number>
+                    </property>
+                  </widget>
+                </item>
+                <item row="1" column="1" >
+                  <widget class="QCheckBox" name="nfsChk" >
+                    <property name="enabled" >
+                      <bool>false</bool>
+                    </property>
+                    <property name="text" >
+                      <string>Use &amp;NFS (Linux/UNIX)</string>
+                    </property>
+                    <property name="checked" >
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+                <item row="0" column="1" >
+                  <widget class="QCheckBox" name="sambaChk" >
+                    <property name="enabled" >
+                      <bool>false</bool>
+                    </property>
+                    <property name="text" >
+                      <string>Use Sam&amp;ba (Microsoft(R) Windows(R))</string>
+                    </property>
+                    <property name="checked" >
+                      <bool>true</bool>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </item>
+            <item>
+              <layout class="QHBoxLayout" >
+                <item>
+                  <widget class="KPushButton" name="allowedUsersBtn" >
+                    <property name="text" >
+                      <string>Allo&amp;wed Users</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <spacer name="spacer9" >
+                    <property name="sizeHint" >
+                      <size>
+                        <width>40</width>
+                        <height>20</height>
+                      </size>
+                    </property>
+                    <property name="sizeType" >
+                      <enum>QSizePolicy::Expanding</enum>
+                    </property>
+                    <property name="orientation" >
+                      <enum>Qt::Horizontal</enum>
+                    </property>
+                  </spacer>
+                </item>
+              </layout>
+            </item>
+          </layout>
         </widget>
-        <widget class="QGroupBox">
-            <property name="name">
-                <cstring>sharedFoldersGroupBox</cstring>
-            </property>
-            <property name="title">
-                <string>Shared Folders</string>
-            </property>
-            <hbox>
-                <property name="name">
-                    <cstring>unnamed</cstring>
+      </item>
+      <item>
+        <widget class="Q3GroupBox" name="sharedFoldersGroupBox" >
+          <property name="title" >
+            <string>Shared Folders</string>
+          </property>
+          <layout class="QHBoxLayout" >
+            <item>
+              <widget class="K3ListView" name="listView" >
+                <property name="selectionMode" stdset="0" >
+                  <enum>NoSelection</enum>
                 </property>
-                <widget class="K3ListView">
-                    <column>
-                        <property name="text">
-                            <string>Path</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <column>
-                        <property name="text">
-                            <string>Samba</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <column>
-                        <property name="text">
-                            <string>NFS</string>
-                        </property>
-                        <property name="clickable">
-                            <bool>true</bool>
-                        </property>
-                        <property name="resizable">
-                            <bool>true</bool>
-                        </property>
-                    </column>
-                    <property name="name">
-                        <cstring>listView</cstring>
-                    </property>
-                    <property name="selectionMode" stdset="0">
-                        <enum>NoSelection</enum>
-                    </property>
-                </widget>
-                <widget class="QFrame">
-                    <property name="name">
-                        <cstring>shareBtnPnl</cstring>
-                    </property>
-                    <property name="enabled">
+                <column>
+                  <property name="text" >
+                    <string>Path</string>
+                  </property>
+                  <property name="clickable" >
+                    <bool>true</bool>
+                  </property>
+                  <property name="resizable" >
+                    <bool>true</bool>
+                  </property>
+                </column>
+                <column>
+                  <property name="text" >
+                    <string>Samba</string>
+                  </property>
+                  <property name="clickable" >
+                    <bool>true</bool>
+                  </property>
+                  <property name="resizable" >
+                    <bool>true</bool>
+                  </property>
+                </column>
+                <column>
+                  <property name="text" >
+                    <string>NFS</string>
+                  </property>
+                  <property name="clickable" >
+                    <bool>true</bool>
+                  </property>
+                  <property name="resizable" >
+                    <bool>true</bool>
+                  </property>
+                </column>
+              </widget>
+            </item>
+            <item>
+              <widget class="Q3Frame" name="shareBtnPnl" >
+                <property name="enabled" >
+                  <bool>false</bool>
+                </property>
+                <property name="frameShape" >
+                  <enum>NoFrame</enum>
+                </property>
+                <property name="frameShadow" >
+                  <enum>Plain</enum>
+                </property>
+                <layout class="QVBoxLayout" >
+                  <property name="margin" >
+                    <number>0</number>
+                  </property>
+                  <item>
+                    <widget class="KPushButton" name="addShareBtn" >
+                      <property name="text" >
+                        <string>A&amp;dd...</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="KPushButton" name="changeShareBtn" >
+                      <property name="enabled" >
                         <bool>false</bool>
-                    </property>
-                    <property name="frameShape">
-                        <enum>NoFrame</enum>
-                    </property>
-                    <property name="frameShadow">
-                        <enum>Plain</enum>
-                    </property>
-                    <vbox>
-                        <property name="name">
-                            <cstring>unnamed</cstring>
-                        </property>
-                        <property name="margin">
-                            <number>0</number>
-                        </property>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>addShareBtn</cstring>
-                            </property>
-                            <property name="text">
-                                <string>A&amp;dd...</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>changeShareBtn</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string>Chang&amp;e...</string>
-                            </property>
-                        </widget>
-                        <widget class="KPushButton">
-                            <property name="name">
-                                <cstring>removeShareBtn</cstring>
-                            </property>
-                            <property name="enabled">
-                                <bool>false</bool>
-                            </property>
-                            <property name="text">
-                                <string>Rem&amp;ove</string>
-                            </property>
-                        </widget>
-                        <spacer>
-                            <property name="name">
-                                <cstring>spacer2</cstring>
-                            </property>
-                            <property name="orientation">
-                                <enum>Vertical</enum>
-                            </property>
-                            <property name="sizeType">
-                                <enum>Expanding</enum>
-                            </property>
-                            <property name="sizeHint">
-                                <size>
-                                    <width>20</width>
-                                    <height>20</height>
-                                </size>
-                            </property>
-                        </spacer>
-                    </vbox>
-                </widget>
-            </hbox>
+                      </property>
+                      <property name="text" >
+                        <string>Chang&amp;e...</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <widget class="KPushButton" name="removeShareBtn" >
+                      <property name="enabled" >
+                        <bool>false</bool>
+                      </property>
+                      <property name="text" >
+                        <string>Rem&amp;ove</string>
+                      </property>
+                    </widget>
+                  </item>
+                  <item>
+                    <spacer name="spacer2" >
+                      <property name="sizeHint" >
+                        <size>
+                          <width>20</width>
+                          <height>20</height>
+                        </size>
+                      </property>
+                      <property name="sizeType" >
+                        <enum>QSizePolicy::Expanding</enum>
+                      </property>
+                      <property name="orientation" >
+                        <enum>Qt::Vertical</enum>
+                      </property>
+                    </spacer>
+                  </item>
+                </layout>
+              </widget>
+            </item>
+          </layout>
         </widget>
-    </vbox>
-</widget>
-<connections>
-    <connection>
-        <sender>advancedRadio</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>nfsChk</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>advancedRadio</sender>
-        <signal>toggled(bool)</signal>
-        <receiver>sambaChk</receiver>
-        <slot>setEnabled(bool)</slot>
-    </connection>
-    <connection>
-        <sender>shareGrp</sender>
-        <signal>clicked(int)</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>simpleRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>advancedRadio</sender>
-        <signal>clicked()</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>sambaChk</sender>
-        <signal>clicked()</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>nfsChk</sender>
-        <signal>clicked()</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>changedSlot()</slot>
-    </connection>
-    <connection>
-        <sender>listView</sender>
-        <signal>selectionChanged()</signal>
-        <receiver>ControlCenterGUI</receiver>
-        <slot>listView_selectionChanged()</slot>
-    </connection>
-</connections>
-<tabstops>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11" />
+  <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+  <customwidgets>
+    <customwidget>
+      <class>K3ListView</class>
+      <extends>Q3ListView</extends>
+      <header location="global" >k3listview.h</header>
+    </customwidget>
+  </customwidgets>
+  <tabstops>
     <tabstop>sambaChk</tabstop>
     <tabstop>nfsChk</tabstop>
     <tabstop>listView</tabstop>
-</tabstops>
-<includes>
-    <include location="local" impldecl="in implementation">controlcenter.ui.h</include>
-    <include location="local" impldecl="in implementation">krichtextlabel.h</include>
-</includes>
-<signals>
-    <signal>changed()</signal>
-</signals>
-<slots>
-    <slot access="private">changedSlot()</slot>
-    <slot>listView_selectionChanged()</slot>
-</slots>
-<layoutdefaults spacing="6" margin="11"/>
-<includehints>
-    <includehint>krichtextlabel.h</includehint>
-</includehints>
-</UI>
+  </tabstops>
+  <includes>
+    <include location="local" >krichtextlabel.h</include>
+  </includes>
+  <connections>
+    <connection>
+      <sender>advancedRadio</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>nfsChk</receiver>
+      <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+      <sender>advancedRadio</sender>
+      <signal>toggled(bool)</signal>
+      <receiver>sambaChk</receiver>
+      <slot>setEnabled(bool)</slot>
+    </connection>
+    <connection>
+      <sender>shareGrp</sender>
+      <signal>clicked(int)</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+      <sender>simpleRadio</sender>
+      <signal>clicked()</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+      <sender>advancedRadio</sender>
+      <signal>clicked()</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+      <sender>sambaChk</sender>
+      <signal>clicked()</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+      <sender>nfsChk</sender>
+      <signal>clicked()</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>changedSlot()</slot>
+    </connection>
+    <connection>
+      <sender>listView</sender>
+      <signal>selectionChanged()</signal>
+      <receiver>ControlCenterGUI</receiver>
+      <slot>listView_selectionChanged()</slot>
+    </connection>
+  </connections>
+</ui>

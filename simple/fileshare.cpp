@@ -50,7 +50,6 @@
 #include "nfsfile.h"
 #include "sambafile.h"
 
-#include "controlcenter.h"
 #include "fileshare.h"
 #include "groupconfigdlg.h"
 
@@ -61,6 +60,32 @@ K_EXPORT_PLUGIN(ShareFactory("kcmfileshare"))
 
 #define FILESHARECONF "/etc/security/fileshare.conf"
 #define FILESHARE_DEBUG 5009
+
+
+ControlCenterGUI::ControlCenterGUI( QWidget *parent )
+    :QWidget( parent )
+{
+    setupUi( this );
+    connect( listView, SIGNAL( selectionChanged() ), this, SLOT(listView_selectionChanged() ) );
+    connect( shareGrp, SIGNAL(clicked(int) ),this,SLOT(  changedSlot() ) );
+    connect( simpleRadio, SIGNAL(clicked() ),this,SLOT(  changedSlot() ) );
+    connect( advancedRadio, SIGNAL(clicked() ),this,SLOT(  changedSlot() ) );
+    connect( sambaChk, SIGNAL(clicked() ),this,SLOT(  changedSlot() ) );
+    connect( nfsChk, SIGNAL(clicked() ),this,SLOT(  changedSlot() ) );
+}
+
+void ControlCenterGUI::changedSlot()
+{
+    emit changed();
+}
+
+void ControlCenterGUI::listView_selectionChanged()
+{
+    bool empty = listView->selectedItems ().isEmpty();
+    changeShareBtn->setDisabled(empty );
+    removeShareBtn->setDisabled(empty );
+}
+
 
 KFileShareConfig::KFileShareConfig(QWidget *parent, const QVariantList &):
     KCModule(ShareFactory::componentData(), parent/*, name*/)

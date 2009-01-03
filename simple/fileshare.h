@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2002 Laurent Montel <montel@kde.org>
+  Copyright (c) 2002,2009 Laurent Montel <montel@kde.org>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -25,9 +25,24 @@
 //Added by qt3to4:
 #include <QLabel>
 #include <QBoxLayout>
+#include "ui_controlcenter.h"
 class QLabel;
 class QBoxLayout;
-class ControlCenterGUI;
+
+class ControlCenterGUI : public QWidget, public Ui::ControlCenterGUI
+{
+    Q_OBJECT
+public:
+  ControlCenterGUI( QWidget *parent );
+private slots:
+    void changedSlot();
+public slots:
+    void listView_selectionChanged();
+signals:
+    void changed();
+};
+
+
 
 class KFileShareConfig  : public KCModule
 {
@@ -41,7 +56,7 @@ class KFileShareConfig  : public KCModule
   virtual void defaults();
   virtual QString quickHelp() const;
 
- protected:  
+ protected:
    ControlCenterGUI* m_ccgui;
    QString m_fileShareGroup;
    bool m_restricted;
@@ -51,28 +66,28 @@ class KFileShareConfig  : public KCModule
    bool addGroupAccessesToFile(const QString & file);
    bool removeGroupAccessesFromFile(const QString & file);
    bool setGroupAccesses();
-   
+
  protected slots:
   void configChanged() { emit changed( true ); }
-  void updateShareListView(); 
+  void updateShareListView();
   void allowedUsersBtnClicked();
-  
+
   virtual void addShareBtnClicked();
   virtual void changeShareBtnClicked();
   virtual void removeShareBtnClicked();
-  
+
 };
 
 class PropertiesPageDlg : public KDialog
 {
 Q_OBJECT
-public: 
+public:
   PropertiesPageDlg(QWidget * parent, KFileItemList files);
   ~PropertiesPageDlg() {}
   bool hasChanged();
 protected:
   PropertiesPage* m_page;
-  
+
 protected slots:
   virtual void slotOk();
 

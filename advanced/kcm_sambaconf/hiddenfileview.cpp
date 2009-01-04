@@ -252,9 +252,9 @@ void HiddenFileView::columnClicked(int column) {
 
 
   switch (column) {
-    case COL_HIDDEN : hiddenChkClicked( !_dlg->hiddenChk->isOn() );break;
-    case COL_VETO : vetoChkClicked( !_dlg->vetoChk->isOn() );break;
-    case COL_VETO_OPLOCK : vetoOplockChkClicked( !_dlg->vetoOplockChk->isOn() );break;
+    case COL_HIDDEN : hiddenChkClicked( !_dlg->hiddenChk->isChecked() );break;
+    case COL_VETO : vetoChkClicked( !_dlg->vetoChk->isChecked() );break;
+    case COL_VETO_OPLOCK : vetoOplockChkClicked( !_dlg->vetoOplockChk->isChecked() );break;
     default : break;
   }
 }

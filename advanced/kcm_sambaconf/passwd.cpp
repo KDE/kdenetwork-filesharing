@@ -101,7 +101,7 @@ int getUserUID(const QString & name)
 
   struct passwd* p;
 
-  p = getpwnam(name.local8Bit());
+  p = getpwnam(name.toLocal8Bit());
 
   if (p)
      return p->pw_uid;
@@ -115,7 +115,7 @@ int getUserGID(const QString & name)
 
   struct passwd* p;
 
-  p = getpwnam(name.local8Bit());
+  p = getpwnam(name.toLocal8Bit());
 
   if (p)
     return p->pw_gid;
@@ -129,7 +129,7 @@ int getGroupGID(const QString & name)
 
   struct group* g;
 
-  g = getgrnam(name.local8Bit());
+  g = getgrnam(name.toLocal8Bit());
 
   if (g)
     return g->gr_gid;

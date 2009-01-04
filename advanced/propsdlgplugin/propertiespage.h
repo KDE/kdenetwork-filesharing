@@ -37,11 +37,11 @@ public:
     bool hasChanged() const ;
 public slots:
     void changedSlot();
-    void moreNFSBtn_clicked();
-    void sambaChkToggled( bool );
+    virtual void moreNFSBtn_clicked();
+    virtual void sambaChkToggled( bool );
     void publicSambaChkToggled( bool b );
     void publicNFSChkToggled( bool b );
-    void moreSambaBtnClicked();
+    virtual void moreSambaBtnClicked();
 signals:
     void changed();
 private:

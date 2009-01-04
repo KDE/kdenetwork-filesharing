@@ -11,13 +11,13 @@ kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/groupselectdlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/usertab.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
-    propertiespagegui.ui
 )
 
 kde4_add_ui_files(fileshare_propsdlgplugin_PART_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
+    propertiespagegui.ui
 )
 
 

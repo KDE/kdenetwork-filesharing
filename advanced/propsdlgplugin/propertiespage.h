@@ -21,7 +21,7 @@
 #define PROPERTIESPAGE_H
 
 #include <kfileitem.h>
-#include "propertiespagegui.h"
+#include "ui_propertiespagegui.h"
 
 class NFSFile;
 class NFSEntry;
@@ -29,59 +29,80 @@ class SambaFile;
 class SambaShare;
 class QCheckBox;
 
+class PropertiesPageGUI : public QWidget, public Ui::PropertiesPageGUI
+{
+Q_OBJECT
+public:
+    PropertiesPageGUI( QWidget *parent );
+    bool hasChanged() const ;
+public slots:
+    void changedSlot();
+    void moreNFSBtn_clicked();
+    void sambaChkToggled( bool );
+    void publicSambaChkToggled( bool b );
+    void publicNFSChkToggled( bool b );
+    void moreSambaBtnClicked();
+signals:
+    void changed();
+private:
+    bool m_hasChanged;
+};
+
+
+
 class PropertiesPage : public PropertiesPageGUI
 {
 Q_OBJECT
 public:
   PropertiesPage(QWidget* parent, const KFileItemList &items, bool enterUrl=false);
   virtual ~PropertiesPage();
-  
+
   bool save();
 
-  static bool save(NFSFile* nfsFile, SambaFile* sambFile, bool nfs, bool samba); 
+  static bool save(NFSFile* nfsFile, SambaFile* sambFile, bool nfs, bool samba);
 public slots:
   void load();
-    
+
 protected:
-  
+
   bool m_enterUrl;
   QString m_path;
-  KFileItemList m_items;  
+  KFileItemList m_items;
   NFSFile *m_nfsFile;
   NFSEntry *m_nfsEntry;
-  
+
   SambaFile *m_sambaFile;
   SambaShare *m_sambaShare;
   bool m_sambaChanged;
   bool m_nfsChanged;
   bool m_loaded;
-  
+
 protected slots:
   // inherited from PropertiesPageGUI
   virtual void moreNFSBtn_clicked();
   virtual void moreSambaBtnClicked();
   virtual void sambaChkToggled( bool b );
   virtual void urlRqTextChanged(const QString&);
-  
+
 private:
-  bool loadNFS();  
-  void loadNFSEntry();  
+  bool loadNFS();
+  void loadNFSEntry();
   void updateNFSEntry();
   bool saveNFS();
-  
+
   bool loadSamba();
   void loadSambaShare();
   bool updateSambaShare();
   bool saveSamba();
-  
+
   bool checkURL();
   void setSambaShareBoolValue(const QString & value, QCheckBox* chk);
   void createNewSambaShare();
   QString getNewSambaName();
-  
+
   void enableNFS(bool b,const QString & message);
   void enableSamba(bool b,const QString & message);
-  
+
 };
 
 #endif

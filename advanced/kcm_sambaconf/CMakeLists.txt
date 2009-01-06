@@ -1,4 +1,4 @@
-set(kcm_kcmsambaconf_PART_SRCS usertabimpl.cpp kcmsambaconf.cpp kcminterface.cpp ${libfilesharesamba_SRCS})
+set(kcm_kcmsambaconf_PART_SRCS kcmsambaconf.cpp kcminterface.cpp ${libfilesharesamba_SRCS})
 
 add_definitions(-D_KDEPRINT_COMPILE )
 

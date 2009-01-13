@@ -115,7 +115,7 @@ void NFSHostDlg::setEditValue(QLineEdit* edit, const QString & value) {
       edit->setText(value);
   else 
   if (edit->text() != value)
-      edit->setText(QString());
+      edit->clear();
 }
 
 void NFSHostDlg::setCheckBoxValue(QCheckBox* chk, bool value) {

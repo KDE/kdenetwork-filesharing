@@ -566,7 +566,7 @@ void ShareDlgImpl::oplocksChk_toggled( bool b)
 
 void ShareDlgImpl::lockingChk_toggled( bool b)
 {
-  // Its Dangerous to disable locking !
+  // It is Dangerous to disable locking !
 /*
     if (!b)  {
 	enableLockingWarnPix->setPixmap(SmallIcon("dialog-warning"));

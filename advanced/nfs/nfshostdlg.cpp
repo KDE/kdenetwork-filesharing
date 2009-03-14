@@ -119,12 +119,12 @@ void NFSHostDlg::setEditValue(QLineEdit* edit, const QString & value) {
 }
 
 void NFSHostDlg::setCheckBoxValue(QCheckBox* chk, bool value) {
-  if (chk->state() == QCheckBox::NoChange)
+  if (chk->checkState() == Qt::PartiallyChecked)
       return;
       
   if (chk->isChecked()) {
     if (! value)
-      chk->setNoChange();       
+      chk->setCheckState(Qt::PartiallyChecked);       
   } else {
     if (value)
       chk->setChecked(true);
@@ -207,7 +207,7 @@ void NFSHostDlg::saveEditValue(int & value, QLineEdit* edit) {
 }
 
 void NFSHostDlg::saveCheckBoxValue(bool & value, QCheckBox* chk, bool neg) {
-  if (chk->state() == QCheckBox::NoChange)
+  if (chk->checkState() == Qt::PartiallyChecked)
     return;
   
   if (neg)      

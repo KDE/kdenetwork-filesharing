@@ -328,7 +328,7 @@ void HiddenFileView::selectionChanged()
   if (veto && noVeto)
   {
     _dlg->vetoChk->setTristate(true);
-    _dlg->vetoChk->setNoChange();
+    _dlg->vetoChk->setCheckState(Qt::PartiallyChecked);
     _dlg->vetoChk->update();
   }
   else
@@ -340,7 +340,7 @@ void HiddenFileView::selectionChanged()
   if (vetoOplock && noVetoOplock)
   {
     _dlg->vetoOplockChk->setTristate(true);
-    _dlg->vetoOplockChk->setNoChange();
+    _dlg->vetoOplockChk->setCheckState(Qt::PartiallyChecked);
     _dlg->vetoOplockChk->update();
   }
   else
@@ -353,7 +353,7 @@ void HiddenFileView::selectionChanged()
   if (hide && noHide)
   {
     _dlg->hiddenChk->setTristate(true);
-    _dlg->hiddenChk->setNoChange();
+    _dlg->hiddenChk->setCheckState(Qt::PartiallyChecked);
     _dlg->hiddenChk->update();
   }
   else

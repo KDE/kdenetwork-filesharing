@@ -25,7 +25,7 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA  *
  *                                                                            *
  ******************************************************************************/
- 
+
  
 #include <qlineedit.h>
 #include <qcheckbox.h>
@@ -208,8 +208,12 @@ void DictManager::save(SambaShare* share, bool globalValue, bool defaultValue){
     QStringList* values = comboBoxValuesDict[comboBoxIt.currentKey()];
     
     int i = comboBoxIt.current()->currentItem();
-    share->setValue(comboBoxIt.currentKey(),(*values)[i], globalValue, defaultValue );
-  }
+    if (i >= 0) {
+      share->setValue(comboBoxIt.currentKey(),(*values)[i], globalValue, defaultValue );
+    } else {
+      kDebug(DEBUG) << comboBoxIt.currentKey() << " not set! " << endl;
+    }
+  }  
     
 }
 

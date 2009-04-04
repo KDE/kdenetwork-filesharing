@@ -167,7 +167,6 @@ QString SambaShare::getSynonym(const QString & name) const
   if (lname == "idmap gid") return "winbind gid";
   if (lname == "vfs object") return "vfs objects";
 
-
   return lname;
 }
 

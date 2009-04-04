@@ -708,7 +708,7 @@ void KcmSambaConf::loadSecurity(SambaShare*)
   _dictMngr->add("server schannel",_interface->serverSchannelCombo,
                  new QStringList(QStringList() << "Yes" << "No" << "Auto" ));
   _dictMngr->add("server signing",_interface->serverSigningCombo,
-                 new QStringList(QStringList() << "Auto" << "Mandatory" << "Disabled" ));
+                 new QStringList(QStringList() << "Auto" << "Mandatory" << "No" ));
 
   _dictMngr->add("client lanman auth",_interface->clientLanmanAuthChk);
   _dictMngr->add("client plaintext auth",_interface->clientPlaintextAuthChk);
@@ -717,7 +717,7 @@ void KcmSambaConf::loadSecurity(SambaShare*)
   _dictMngr->add("client schannel",_interface->clientSchannelCombo,
                  new QStringList(QStringList() << "Yes" << "No" << "Auto" ));
   _dictMngr->add("client signing",_interface->clientSigningCombo,
-                 new QStringList(QStringList() << "Auto" << "Mandatory" << "Disabled" ));
+                 new QStringList(QStringList() << "Auto" << "Mandatory" << "No" ));
 
 
 
@@ -863,13 +863,13 @@ void KcmSambaConf::loadProtocol(SambaShare*)
                  new QStringList(QStringList() << "NT" << "NT workstation" << "win95" << "WfW"));
 
   _dictMngr->add("protocol", _interface->protocolCombo,
-                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus" ));
+                 new QStringList(QStringList() << "NT1" << "lanman2" << "lanman1" << "core" << "coreplus" ));
 
   _dictMngr->add("max protocol", _interface->maxProtocolCombo,
-                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus"));
+                 new QStringList(QStringList() << "NT1" << "lanman2" << "lanman1" << "core" << "coreplus"));
 
   _dictMngr->add("min protocol", _interface->minProtocolCombo,
-                 new QStringList(QStringList() << "NT" << "lanman2" << "lanman1" << "core" << "coreplus"));
+                 new QStringList(QStringList() << "NT1" << "lanman2" << "lanman1" << "core" << "coreplus"));
 
 }
 
@@ -985,7 +985,7 @@ void KcmSambaConf::loadWinbind(SambaShare* )
 
   _dictMngr->add("winbind cache time", _interface->winbindCacheTimeSpin);
   _dictMngr->add("acl compatibility",_interface->aclCompatibilityCombo,
-                 new QStringList(QStringList() << "winnt" << "win2k" << ""));
+                 new QStringList(QStringList() << "auto" << "winnt" << "win2k" << ""));
 
   _dictMngr->add("winbind enum users",_interface->winbindEnumUsersChk);
   _dictMngr->add("winbind enum groups",_interface->winbindEnumGroupsChk);

@@ -54,7 +54,8 @@ bool boolFromText(const QString & value, bool testTrue)
     if (lower=="no" ||
         lower=="0" ||
         lower=="false" ||
-        lower=="off")
+        lower=="off" ||
+        lower=="disabled")
       return false;
     else
       return true;

@@ -115,9 +115,13 @@ QString SambaShare::getGlobalValue(const QString & name, bool defaultValue)
 
   SambaShare* globals = _sambaFile->find("global");
 
-  QString s = globals->getValue(name,false,defaultValue);
+  QString ret;
+  if (globals != 0)
+    ret = globals->getValue(name,false,defaultValue);
+  else if (defaultValue)
+    ret = getDefaultValue(name);
 
-  return s;
+  return ret;
 }
 
 

@@ -71,7 +71,7 @@ NFSEntry* NFSFile::getEntryByPath(const QString & path)
      return 0L;
 
   QString testPath = path.trimmed();
-  if ( testPath[testPath.length()-1] != '/' )
+  if ( !testPath.endsWith('/') )
        testPath += '/';
 
   for (NFSEntry* entry = _entries.first(); entry; entry = _entries.next())
@@ -129,7 +129,7 @@ bool NFSFile::load()
       completeLine = currentLine;
 
     // is the line continued in the next line ?
-    if ( completeLine[completeLine.length()-1] == '\\' )
+    if ( completeLine.endsWith('\\') )
     {
       continuedLine = true;
       // remove the ending backslash
@@ -144,7 +144,7 @@ bool NFSFile::load()
     }
 
     // comments
-    if ('#' == completeLine[0]) {
+    if (completeLine.startsWith('#') ) {
       _lines.append(new NFSComment(completeLine));
       continue;
     }
@@ -153,7 +153,7 @@ bool NFSFile::load()
     QString hosts;
 
     // Handle quotation marks
-    if ( completeLine[0] == '"' ) {
+    if ( completeLine.startsWith('"') ) {
       int i = completeLine.indexOf('"',1);
       if (i == -1) {
         kError() << "NFSFile: Parse error: Missing quotation mark: "
@@ -177,7 +177,7 @@ bool NFSFile::load()
     }
 
     // normalize path
-    if ( path[path.length()-1] != '/' )
+    if ( !path.endsWith('/') )
             path += '/';
 
     kDebug(5009) << "KNFSShare: Found path: '" << path << "'";

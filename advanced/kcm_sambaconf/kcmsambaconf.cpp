@@ -135,15 +135,15 @@ QPixmap ShareListViewItem::createPropertyPixmap()
 
   int numberOfPix = 4; // the max number of pixmaps to join
 
-  int w = 22; // Standard size of one pixmap
+  int w = 16; // Standard size of one pixmap
   int margin = 4; // Margin between pixmaps
-  int h = 22;
+  int h = 16;
 
   int totalWidth = (w+margin)*numberOfPix;
 
   QPixmap pix(totalWidth,h);
 
-  pix.fill();  // Fill with white
+  pix.fill(Qt::transparent);
 
   QPainter p(&pix);
 
@@ -366,7 +366,7 @@ void KcmSambaConf::initAdvancedTab()
       icon = il->loadIcon("network-server-database",KIconLoader::Small);
     else {
       icon = QPixmap(16,16);
-      icon.fill();
+      icon.fill(Qt::transparent);
     }
       //SmallIcon("empty2");
 

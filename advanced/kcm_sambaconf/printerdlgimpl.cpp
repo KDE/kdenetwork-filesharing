@@ -205,7 +205,7 @@ void PrinterDlgImpl::printersChkToggled(bool b)
     int h = 64 + 2*dist;
 
     QPixmap pix(w,h);
-    pix.fill(); // fill with white
+    pix.fill(Qt::transparent);
 
 		QPixmap pix2 = DesktopIcon("printer1");
 

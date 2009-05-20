@@ -56,20 +56,6 @@ PropertiesPageGUI::PropertiesPageGUI( QWidget *parent )
     : QWidget( parent )
 {
     setupUi( this );
-    connect( shareChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( sambaChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( publicSambaChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( writableSambaChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( nfsChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( publicNFSChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( writableNFSChk, SIGNAL( clicked() ), this, SLOT(changedSlot() ) );
-    connect( moreNFSBtn, SIGNAL( clicked() ), this, SLOT(moreNFSBtn_clicked() ) );
-    connect(sambaChk, SIGNAL( toggled(bool) ), this, SLOT(sambaChkToggled(bool) ) );
-    connect(sambaNameEdit,SIGNAL( textChanged(const QString&) ),this, SLOT(changedSlot() ) );
-    connect(publicSambaChk,SIGNAL(toggled(bool) ),this,SLOT( publicSambaChkToggled(bool) ) );
-    connect(publicNFSChk ,SIGNAL(toggled(bool) ),this,SLOT(publicNFSChkToggled(bool) ) );
-    connect( moreSambaBtn, SIGNAL(clicked() ),this,SLOT(  moreSambaBtnClicked() ) );
-
 }
 
 void PropertiesPageGUI::changedSlot()

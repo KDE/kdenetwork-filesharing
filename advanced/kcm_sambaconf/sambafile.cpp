@@ -76,7 +76,7 @@ void SambaConfigFile::addShare(const QString & name, SambaShare* share)
 void SambaConfigFile::removeShare(const QString & name)
 {
   remove(name);
-  _shareList.remove(name);
+  _shareList.removeAll(name);
 }
 
 

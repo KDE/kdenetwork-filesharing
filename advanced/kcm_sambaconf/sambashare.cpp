@@ -66,7 +66,7 @@ bool SambaShare::setName(const QString & name, bool testWetherExists)
 return true;
 }
 
-bool SambaShare::optionSupported(const QString & name) 
+bool SambaShare::optionSupported(const QString & name)
 {
   QString defaultValue = _sambaFile->getDefaultValue(name);
 //  kDebug(5009) << name << " = " << defaultValue << " null : " << defaultValue.isNull();
@@ -87,7 +87,7 @@ QString SambaShare::getValue(const QString & name, bool globalValue, bool defaul
 
   if (str) {
     ret = *str;
-  }     
+  }
   else
   if (globalValue)
     ret = getGlobalValue(synonym,defaultValue);
@@ -178,7 +178,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
 
   if (newValue.isNull())
     newValue = "";
-  
+
   if (getName().toLower() == "global")
     globalValue = false;
 
@@ -197,7 +197,7 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
     if ( newValue.compare(global, Qt::CaseInsensitive) == 0 )
     {
       remove(synonym);
-      _optionList.remove(synonym);
+      _optionList.removeAll(synonym);
       return;
     }
   }
@@ -211,17 +211,17 @@ void SambaShare::setValue(const QString & name, const QString & value, bool glob
     {
       kDebug(5009) << getName() << " global: " << global << " remove " << synonym;
       remove(synonym);
-      _optionList.remove(synonym);
+      _optionList.removeAll(synonym);
       return;
-    } 
-    
+    }
+
   }
 
   if (!find(synonym))
   {
     _optionList.append(synonym);
   }
-    
+
   replace(synonym,new QString(newValue));
 }
 

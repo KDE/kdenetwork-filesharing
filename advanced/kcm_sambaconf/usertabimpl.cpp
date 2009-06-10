@@ -161,7 +161,7 @@ void UserTabImpl::removeDuplicates( QStringList & validUsers, QStringList & read
  */
 void UserTabImpl::removeAll(QStringList & entryList, QStringList & fromList) {
   for (QStringList::Iterator it = entryList.begin(); it != entryList.end(); ++it) {
-    fromList.remove((*it));
+    fromList.removeAll(*it);
   }
 }
 
@@ -295,9 +295,9 @@ void UserTabImpl::removeSelectedBtnClicked()
     if (userTable->isRowSelected(i))
     {
       if (nameIsGroup(userTable->item(i,0)->text())) {
-        _specifiedGroups.remove( removeGroupTag(removeQuotationMarks(userTable->item(i,0)->text())));
+        _specifiedGroups.removeAll( removeGroupTag(removeQuotationMarks(userTable->item(i,0)->text())));
       } else
-        _specifiedUsers.remove(userTable->item(i,0)->text());
+        _specifiedUsers.removeAll(userTable->item(i,0)->text());
 
       rows.resize(j+1);
       rows[j] = i;

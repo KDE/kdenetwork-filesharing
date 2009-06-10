@@ -1240,7 +1240,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
     int passResult = K3PasswordDialog::getNewPassword(this,password,
                         i18n("<qt>Please enter a password for the user <b>%1</b></qt>", user.name));
     if (passResult != K3PasswordDialog::Accepted) {
-       list.remove(item);
+       list.removeAll(item);
        continue;
     }
 
@@ -1259,7 +1259,7 @@ void KcmSambaConf::addSambaUserBtnClicked()
       sambaItem->setDisabled(COL_NOPASSWORD, true);
 
 
-    list.remove(item);
+    list.removeAll(item);
     delete item;
   }
 }
@@ -1280,7 +1280,7 @@ void KcmSambaConf::removeSambaUserBtnClicked()
     }
 
     new K3ListViewItem(_interface->unixUsersListView, item->text(0), item->text(1));
-    list.remove(item);
+    list.removeAll(item);
     delete item;
   }
 }

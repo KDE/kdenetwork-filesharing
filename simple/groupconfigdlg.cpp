@@ -179,7 +179,7 @@ void GroupConfigDlg::slotAddUser() {
 void removeList(QList<KUser> & from, const QList<KUser> & that) {
   QList<KUser>::ConstIterator it;
   for ( it = that.begin(); it != that.end(); ++it ) {
-    from.remove(*it);
+    from.removeAll(*it);
   }
 
 }
@@ -198,7 +198,7 @@ bool GroupConfigDlg::addUser(const KUser & user, const KUserGroup & group) {
 
 bool GroupConfigDlg::removeUser(const KUser & user, const KUserGroup & group) {
   QList<KUserGroup> groups = user.groups();
-  groups.remove(group);
+  groups.removeAll(group);
   if (!userMod(user.loginName(),groups)) {
     KMessageBox::sorry(this,i18n("Could not remove user '%1' from group '%2'",
              user.loginName(), group.name()));
@@ -250,7 +250,7 @@ void GroupConfigDlg::slotRemoveUser() {
 
   QString loginName = fromPrettyString(item->text());
   KUser user(loginName);
-  m_users.remove(KUser(loginName));
+  m_users.removeAll(KUser(loginName));
   updateListBox();
   m_gui->removeBtn->setEnabled(false);
 }

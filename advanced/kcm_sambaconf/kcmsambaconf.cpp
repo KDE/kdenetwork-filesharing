@@ -740,7 +740,6 @@ void KcmSambaConf::loadLogging(SambaShare* )
   _dictMngr->add("debug hires timestamp",_interface->microsecondsChk);
   _dictMngr->add("syslog only",_interface->syslogOnlyChk);
   _dictMngr->add("debug timestamp",_interface->timestampChk);
-  _dictMngr->add("use mmap",_interface->useMmapChk);
 
 
 }
@@ -985,7 +984,7 @@ void KcmSambaConf::loadWinbind(SambaShare* )
 
   _dictMngr->add("winbind cache time", _interface->winbindCacheTimeSpin);
   _dictMngr->add("acl compatibility",_interface->aclCompatibilityCombo,
-                 new QStringList(QStringList() << "auto" << "winnt" << "win2k" << ""));
+                 new QStringList(QStringList() << "winnt" << "win2k" << "auto"));
 
   _dictMngr->add("winbind enum users",_interface->winbindEnumUsersChk);
   _dictMngr->add("winbind enum groups",_interface->winbindEnumGroupsChk);

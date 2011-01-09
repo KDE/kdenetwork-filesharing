@@ -31,78 +31,79 @@ class QCheckBox;
 
 class PropertiesPageGUI : public QWidget, public Ui::PropertiesPageGUI
 {
-Q_OBJECT
+    Q_OBJECT
+
 public:
-    PropertiesPageGUI( QWidget *parent );
+    PropertiesPageGUI(QWidget *parent);
     bool hasChanged() const ;
+
 public slots:
     void changedSlot();
     virtual void moreNFSBtn_clicked();
-    virtual void sambaChkToggled( bool );
-    void publicSambaChkToggled( bool b );
-    void publicNFSChkToggled( bool b );
+    virtual void sambaChkToggled(bool);
+    void publicSambaChkToggled(bool b);
+    void publicNFSChkToggled(bool b);
     virtual void moreSambaBtnClicked();
+
 signals:
     void changed();
+
 private:
     bool m_hasChanged;
 };
 
-
-
 class PropertiesPage : public PropertiesPageGUI
 {
-Q_OBJECT
+    Q_OBJECT
+
 public:
-  PropertiesPage(QWidget* parent, const KFileItemList &items, bool enterUrl=false);
-  virtual ~PropertiesPage();
+    PropertiesPage(QWidget* parent, const KFileItemList &items, bool enterUrl = false);
+    virtual ~PropertiesPage();
 
-  bool save();
+    bool save();
+    static bool save(NFSFile* nfsFile, SambaFile* sambFile, bool nfs, bool samba);
 
-  static bool save(NFSFile* nfsFile, SambaFile* sambFile, bool nfs, bool samba);
 public slots:
-  void load();
+    void load();
 
 protected:
+    bool m_enterUrl;
+    QString m_path;
+    KFileItemList m_items;
+    NFSFile *m_nfsFile;
+    NFSEntry *m_nfsEntry;
 
-  bool m_enterUrl;
-  QString m_path;
-  KFileItemList m_items;
-  NFSFile *m_nfsFile;
-  NFSEntry *m_nfsEntry;
-
-  SambaFile *m_sambaFile;
-  SambaShare *m_sambaShare;
-  bool m_sambaChanged;
-  bool m_nfsChanged;
-  bool m_loaded;
+    SambaFile *m_sambaFile;
+    SambaShare *m_sambaShare;
+    bool m_sambaChanged;
+    bool m_nfsChanged;
+    bool m_loaded;
 
 protected slots:
-  // inherited from PropertiesPageGUI
-  virtual void moreNFSBtn_clicked();
-  virtual void moreSambaBtnClicked();
-  virtual void sambaChkToggled( bool b );
-  virtual void urlRqTextChanged(const QString&);
+    // inherited from PropertiesPageGUI
+    virtual void moreNFSBtn_clicked();
+    virtual void moreSambaBtnClicked();
+    virtual void sambaChkToggled(bool b);
+    virtual void urlRqTextChanged(const QString&);
 
 private:
-  bool loadNFS();
-  void loadNFSEntry();
-  void updateNFSEntry();
-  bool saveNFS();
+    bool loadNFS();
+    void loadNFSEntry();
+    void updateNFSEntry();
+    bool saveNFS();
 
-  bool loadSamba();
-  void loadSambaShare();
-  bool updateSambaShare();
-  bool saveSamba();
+    bool loadSamba();
+    void loadSambaShare();
+    bool updateSambaShare();
+    bool saveSamba();
 
-  bool checkURL();
-  void setSambaShareBoolValue(const QString & value, QCheckBox* chk);
-  void createNewSambaShare();
-  QString getNewSambaName();
+    bool checkURL();
+    void setSambaShareBoolValue(const QString &value, QCheckBox *chk);
+    void createNewSambaShare();
+    QString getNewSambaName();
 
-  void enableNFS(bool b,const QString & message);
-  void enableSamba(bool b,const QString & message);
-
+    void enableNFS(bool b, const QString &message);
+    void enableSamba(bool b, const QString &message);
 };
 
 #endif

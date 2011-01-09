@@ -24,19 +24,19 @@
 
 class PropsDlgSharePlugin : public KPropertiesDialogPlugin
 {
-Q_OBJECT
+    Q_OBJECT
+
 public:
-  PropsDlgSharePlugin( KPropertiesDialog *dlg, const QStringList & );
-  virtual ~PropsDlgSharePlugin();
-  virtual void applyChanges();
+    PropsDlgSharePlugin(KPropertiesDialog *dlg, const QStringList &);
+    virtual ~PropsDlgSharePlugin();
+    virtual void applyChanges();
 
 protected slots:
     void slotConfigureFileSharing();
-  
+
 private:
-  class Private;
-  Private *d;
-    
+    class Private;
+    Private *d;
 };
 
 #endif // PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H

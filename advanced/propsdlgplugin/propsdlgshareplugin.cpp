@@ -36,91 +36,76 @@
 
 typedef KGenericFactory<PropsDlgSharePlugin, KPropertiesDialog> PropsDlgSharePluginFactory;
 
-K_EXPORT_COMPONENT_FACTORY( fileshare_propsdlgplugin,
-                            PropsDlgSharePluginFactory("fileshare_propsdlgplugin") )
+K_EXPORT_COMPONENT_FACTORY(fileshare_propsdlgplugin,
+                           PropsDlgSharePluginFactory("fileshare_propsdlgplugin"))
 
-class PropsDlgSharePlugin::Private                            
+class PropsDlgSharePlugin::Private
 {
-  public:
-    PropertiesPage* page; 
+public:
+    PropertiesPage* page;
 };
-                            
-PropsDlgSharePlugin::PropsDlgSharePlugin( KPropertiesDialog *dlg,
-                    const QStringList & )
-  : KPropertiesDialogPlugin(dlg), d(0)
+
+PropsDlgSharePlugin::PropsDlgSharePlugin(KPropertiesDialog *dlg, const QStringList &)
+    : KPropertiesDialogPlugin(dlg), d(0)
 {
-  KGlobal::locale()->insertCatalog("kfileshare");                            
-                            
-  if (KFileShare::shareMode() == KFileShare::Simple) {     
-      kDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting.";
-      return;
-  }
+    KGlobal::locale()->insertCatalog("kfileshare");
 
-  KVBox *vbox = new KVBox();
-  properties->addPage(vbox, i18n("&Share"));
-  properties->setFileSharingPage(vbox);
-
-  if (KFileShare::authorization() == KFileShare::UserNotAllowed) {
-  
-        QWidget* widget = new QWidget( vbox );
-        QVBoxLayout * vLayout = new QVBoxLayout( widget );
-        vLayout->setSpacing( KDialog::spacingHint() );
-        vLayout->setMargin( 0 );
-        
-        
-        if (KFileShare::sharingEnabled()) {
-          vLayout->addWidget(
-              new QLabel( i18n("You need to be authorized to share directories."), 
-                          widget ));
-        } else {
-          vLayout->addWidget(
-              new QLabel( i18n("File sharing is disabled."), widget));
-        }                    
-                    
-        KPushButton* btn = new KPushButton( i18n("Configure File Sharing..."), widget );
-        connect( btn, SIGNAL( clicked() ), SLOT( slotConfigureFileSharing() ) );
-        btn->setDefault(false);
-        QHBoxLayout* hBox = new QHBoxLayout( (QWidget *)0L );
-        hBox->addWidget( btn, 0, Qt::AlignLeft );
-        vLayout->addLayout(hBox);
-        vLayout->addStretch( 10 ); // align items on top
+    if (KFileShare::shareMode() == KFileShare::Simple) {
+        kDebug(5009) << "PropsDlgSharePlugin: Sharing mode is simple. Aborting.";
         return;
-  }                    
-       
+    }
 
-  d = new Private();
-  
-  d->page = new PropertiesPage(vbox, properties->items(),false);
-  connect(d->page, SIGNAL(changed()), 
-          this, SIGNAL(changed()));
-  
-  kDebug(5009) << "Fileshare properties dialog plugin loaded";
-  
-}                            
+    KVBox *vbox = new KVBox();
+    properties->addPage(vbox, i18n("&Share"));
+    properties->setFileSharingPage(vbox);
+
+    if (KFileShare::authorization() == KFileShare::UserNotAllowed) {
+        QWidget* widget = new QWidget(vbox);
+        QVBoxLayout * vLayout = new QVBoxLayout(widget);
+        vLayout->setSpacing(KDialog::spacingHint());
+        vLayout->setMargin(0);
+
+        if (KFileShare::sharingEnabled()) {
+            vLayout->addWidget(new QLabel(i18n("You need to be authorized to share directories."),
+                                          widget));
+        } else {
+            vLayout->addWidget(new QLabel(i18n("File sharing is disabled."), widget));
+        }
+
+        KPushButton* btn = new KPushButton(i18n("Configure File Sharing..."), widget);
+        connect(btn, SIGNAL(clicked()), SLOT(slotConfigureFileSharing()));
+        btn->setDefault(false);
+        QHBoxLayout* hBox = new QHBoxLayout((QWidget *)0L);
+        hBox->addWidget(btn, 0, Qt::AlignLeft);
+        vLayout->addLayout(hBox);
+        vLayout->addStretch(10); // align items on top
+        return;
+    }
+
+    d = new Private();
+    d->page = new PropertiesPage(vbox, properties->items(), false);
+    connect(d->page, SIGNAL(changed()), this, SIGNAL(changed()));
+
+    kDebug(5009) << "Fileshare properties dialog plugin loaded";
+}
 
 void PropsDlgSharePlugin::slotConfigureFileSharing()
 {
     QStringList lst;
-    lst<<"kcmshell4" << "fileshare";
-    QProcess::startDetached(KStandardDirs::findExe("kdesu"),lst);
+    lst << "kcmshell4" << "fileshare";
+    QProcess::startDetached(KStandardDirs::findExe("kdesu"), lst);
 }
-
 
 PropsDlgSharePlugin::~PropsDlgSharePlugin()
 {
-  delete d;
+    delete d;
 }
 
-void PropsDlgSharePlugin::applyChanges() 
+void PropsDlgSharePlugin::applyChanges()
 {
-  if (!d->page->save()) {
-//    KMessageBox::sorry(d->page,
-//                i18n("Saving the changes failed"));
-
-    properties->abortApplying();
-  }
+    if (!d->page->save()) {
+        properties->abortApplying();
+    }
 }
-
 
 #include "propsdlgshareplugin.moc"
-

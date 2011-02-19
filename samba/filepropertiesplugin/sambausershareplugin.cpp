@@ -34,7 +34,7 @@
 #include <KDE/KPluginFactory>
 #include <KDE/KPluginLoader>
 
-#include "propsdlgshareplugin.h"
+#include "sambausershareplugin.h"
 #include "model.h"
 #include "delegate.h"
 
@@ -233,4 +233,4 @@ QString SambaUserSharePlugin::getNewShareName()
     return shareName;
 }
 
-#include "moc_propsdlgshareplugin.cpp"
+#include "moc_sambausershareplugin.cpp"

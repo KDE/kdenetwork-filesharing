@@ -18,15 +18,15 @@
 
 */
 
-#ifndef PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
-#define PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
+#ifndef SAMBAUSERSHAREPLUGIN_H
+#define SAMBAUSERSHAREPLUGIN_H
 
 #include <QVariant>
 #include <QComboBox>
 
 #include <kpropertiesdialog.h>
 
-#include "ui_propertiespagegui.h"
+#include "ui_sambausershareplugin.h"
 
 class UserPermissionModel;
 
@@ -57,4 +57,4 @@ private:
     QString getNewShareName();
 };
 
-#endif // PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
+#endif // SAMBAUSERSHAREPLUGIN_H

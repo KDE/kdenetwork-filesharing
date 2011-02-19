@@ -1,10 +1,10 @@
-
+add_definitions ( -DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
 
 
 ########### next target ###############
 
-set(kcm_fileshare_PART_SRCS fileshare.cpp groupconfigdlg.cpp krichtextlabel.cpp ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS} ${fileshare_propsdlgplugin_SRCS} ${libpropsdlgplugin_common_SRCS})
+set(kcm_fileshare_PART_SRCS fileshare.cpp groupconfigdlg.cpp krichtextlabel.cpp ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS})
 
 
 

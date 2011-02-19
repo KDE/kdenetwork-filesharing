@@ -1,5 +1,6 @@
 /*
   Copyright (c) 2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
+  Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -20,23 +21,40 @@
 #ifndef PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
 #define PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H
 
+#include <QVariant>
+#include <QComboBox>
+
 #include <kpropertiesdialog.h>
 
-class PropsDlgSharePlugin : public KPropertiesDialogPlugin
+#include "ui_propertiespagegui.h"
+
+class UserPermissionModel;
+
+class SambaUserSharePlugin : public KPropertiesDialogPlugin
 {
     Q_OBJECT
 
 public:
-    PropsDlgSharePlugin(KPropertiesDialog *dlg, const QStringList &);
-    virtual ~PropsDlgSharePlugin();
+    SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
+    virtual ~SambaUserSharePlugin();
     virtual void applyChanges();
 
-protected slots:
-    void slotConfigureFileSharing();
+private Q_SLOTS:
+    void load();
+    void toggleShareStatus(bool checked);
+    void installSamba();
+    void checkShareName(const QString &name);
 
 private:
-    class Private;
-    Private *d;
+    QString url;
+    KSambaShareData shareData;
+    UserPermissionModel *model;
+    Ui::PropertiesPageGUI propertiesUi;
+
+    void setupModel();
+    void setupViews();
+    QStringList getUsersList();
+    QString getNewShareName();
 };
 
 #endif // PROPSDLGPLUGIN_PROPSDLGSHAREPLUGIN_H

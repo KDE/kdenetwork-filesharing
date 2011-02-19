@@ -1,29 +1,13 @@
-include_directories(${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/ ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/)
-
 ########### next target ###############
 
-set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp ${libpropsdlgplugin_common_SRCS} ${libfilesharesamba_SRCS} ${libfilesharenfs_SRCS})
+set(fileshare_propsdlgplugin_PART_SRCS propsdlgshareplugin.cpp delegate.cpp model.cpp)
 
-kde4_add_ui3_files(fileshare_propsdlgplugin_PART_SRCS
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/hostprops.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/socketoptionsdlg.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/userselectdlg.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/groupselectdlg.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/usertab.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/filemodedlg.ui
-)
-
-kde4_add_ui_files(fileshare_propsdlgplugin_PART_SRCS
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/share.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/expertuserdlg.ui
-    ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsdialoggui.ui
-    propertiespagegui.ui
-)
+kde4_add_ui_files(fileshare_propsdlgplugin_PART_SRCS propertiespagegui.ui)
 
 
 kde4_add_plugin(fileshare_propsdlgplugin ${fileshare_propsdlgplugin_PART_SRCS})
 
-target_link_libraries(fileshare_propsdlgplugin ${KDE4_KIO_LIBS} ${KDE4_KDE3SUPPORT_LIBS})
+target_link_libraries(fileshare_propsdlgplugin ${KDE4_KIO_LIBS})
 
 install(TARGETS fileshare_propsdlgplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 

@@ -1,11 +1,9 @@
-add_definitions ( -DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
-
 include_directories(
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/propsdlgplugin/
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/
 		${CMAKE_SOURCE_DIR}/filesharing/advanced/kcm_sambaconf/
-                ${CMAKE_BINARY_DIR}/filesharing/simple/
-                ${CMAKE_BINARY_DIR}/advanced/propsdlgplugin/
+		${CMAKE_BINARY_DIR}/filesharing/simple/
+		${CMAKE_BINARY_DIR}/advanced/propsdlgplugin/
 		)
 
 set(libfilesharesamba_SRCS
@@ -31,15 +29,5 @@ set(libfilesharenfs_SRCS
     ${CMAKE_SOURCE_DIR}/filesharing/advanced/nfs/nfsentry.cpp
     )
 
-set(fileshare_propsdlgplugin_SRCS
-	${CMAKE_SOURCE_DIR}/filesharing/advanced/propsdlgplugin/propsdlgshareplugin.cpp
-	)
-
-set(libpropsdlgplugin_common_SRCS 
-		    ${CMAKE_SOURCE_DIR}/filesharing/advanced/propsdlgplugin/propertiespage.cpp)
-
-
-add_subdirectory( advanced ) 
-add_subdirectory( simple ) 
-
-
+add_subdirectory(advanced)
+add_subdirectory(simple)

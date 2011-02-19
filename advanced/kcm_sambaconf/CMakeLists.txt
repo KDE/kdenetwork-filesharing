@@ -1,6 +1,6 @@
 set(kcm_kcmsambaconf_PART_SRCS kcmsambaconf.cpp kcminterface.cpp ${libfilesharesamba_SRCS})
 
-add_definitions(-D_KDEPRINT_COMPILE )
+add_definitions(-D_KDEPRINT_COMPILE -DQT3_SUPPORT -DQT3_SUPPORT_WARNINGS)
 
 kde4_add_ui3_files(kcm_kcmsambaconf_PART_SRCS socketoptionsdlg.ui userselectdlg.ui
     groupselectdlg.ui usertab.ui filemodedlg.ui

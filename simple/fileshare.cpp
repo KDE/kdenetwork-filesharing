@@ -46,7 +46,6 @@
 #include <krichtextlabel.h>
 #include <KVBox>
 
-#include "propertiespage.h"
 #include "nfsfile.h"
 #include "sambafile.h"
 
@@ -390,34 +389,9 @@ PropertiesPageDlg::PropertiesPageDlg(QWidget*parent, KFileItemList files)
   showButtonSeparator(true);
   KVBox* vbox = new KVBox(this);
   setMainWidget(vbox);
-
-  m_page = new PropertiesPage(vbox,files,true);
-  connect(this,SIGNAL(okClicked()),this,SLOT(slotOk()));
 }
-
-bool PropertiesPageDlg::hasChanged() {
-  return m_page->hasChanged();
-}
-
-void PropertiesPageDlg::slotOk() {
-  if (hasChanged()) {
-    if (!m_page->save())
-        return;
-  }
-
-  KDialog::accept();
-}
-
-
 
 void KFileShareConfig::showShareDialog(const KFileItemList & files) {
-  PropertiesPageDlg* dlg = new PropertiesPageDlg(this,files);
-  if (dlg->exec() == QDialog::Accepted) {
-    if ( dlg->hasChanged() ) {
-         updateShareListView();
-    }
-  }
-  delete dlg;
 }
 
 void KFileShareConfig::changeShareBtnClicked() {
@@ -464,8 +438,6 @@ void KFileShareConfig::removeShareBtnClicked() {
         smbFile.removeShareByPath(item->text(0));
     }
   }
-
-  PropertiesPage::save(&nfsFile, &smbFile, nfs,samba);
 
   updateShareListView();
 }

@@ -73,10 +73,12 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 
         vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), widget));
 
+#ifdef SAMBA_INSTALL
         KPushButton *btn = new KPushButton(i18n("Install Samba..."), widget);
         btn->setDefault(false);
         vLayout->addWidget(btn);
         connect(btn, SIGNAL(clicked()), SLOT(installSamba()));
+#endif
 
         // align items on top
         vLayout->addStretch();
@@ -117,10 +119,10 @@ void SambaUserSharePlugin::installSamba()
 {
     unsigned int xid = 0;
     QStringList packages;
-    packages << "samba";
+    packages << SAMBA_PACKAGE_NAME;
     QString interaction("show-confirm-install,show-progress");
 
-    QDBusInterface device("org.kde.KPackageKitSmartIcon", "/org/freedesktop/PackageKit",
+    QDBusInterface device("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit",
                           "org.freedesktop.PackageKit.Modify");
     if (!device.isValid()) {
         KMessageBox::sorry(qobject_cast<KPropertiesDialog *>(this),

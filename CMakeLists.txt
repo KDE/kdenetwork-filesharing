@@ -1,1 +1,45 @@
+project(filesharing)
+
+if(NOT INSIDE_KDENETWORK)
+    message("Not building inside KDENetwork, loading KDE CMake Macros.")
+
+    find_package(KDE4 REQUIRED)
+
+    include(KDE4Defaults)
+    include(MacroLibrary)
+
+    include(CheckIncludeFile)
+    include(CheckIncludeFiles)
+    include(CheckSymbolExists)
+    include(CheckFunctionExists)
+    include(CheckLibraryExists)
+    include(CheckPrototypeExists)
+    include(CheckTypeSize)
+
+    set(CMAKE_REQUIRED_DEFINITIONS ${_KDE4_PLATFORM_DEFINITIONS})
+    if(WIN32)
+       set(CMAKE_REQUIRED_LIBRARIES ${KDEWIN32_LIBRARIES})
+       set(CMAKE_REQUIRED_INCLUDES  ${KDEWIN32_INCLUDES})
+    endif(WIN32)
+    add_definitions(${QT_DEFINITIONS} ${QT_QTDBUS_DEFINITIONS} ${KDE4_DEFINITIONS})
+    add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+    include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
+endif(NOT INSIDE_KDENETWORK)
+
+option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
+if(NOT SAMBA_PACKAGE_NAME)
+    set(SAMBA_PACKAGE_NAME \\\"samba\\\")
+endif(NOT SAMBA_PACKAGE_NAME)
+if(SAMBA_INSTALL)
+    message(STATUS "Samba install feature will be enabled.")
+    add_definitions(-DSAMBA_INSTALL)
+    add_definitions(-DSAMBA_PACKAGE_NAME=${SAMBA_PACKAGE_NAME})
+else(SAMBA_INSTALL)
+    message(STATUS "Samba install feature will NOT be enabled.")
+endif(SAMBA_INSTALL)
+
 add_subdirectory(samba)
+
+if(NOT INSIDE_KDENETWORK)
+    macro_display_feature_log()
+endif(NOT INSIDE_KDENETWORK)

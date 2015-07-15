@@ -2,12 +2,12 @@
 
 set(sambausershareplugin_PART_SRCS sambausershareplugin.cpp delegate.cpp model.cpp)
 
-kde4_add_ui_files(sambausershareplugin_PART_SRCS sambausershareplugin.ui)
+qt5_wrap_ui(sambausershareplugin_PART_SRCS sambausershareplugin.ui)
 
 
-kde4_add_plugin(sambausershareplugin ${sambausershareplugin_PART_SRCS})
+add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 
-target_link_libraries(sambausershareplugin ${KDE4_KIO_LIBS})
+target_link_libraries(sambausershareplugin KF5::KIOWidgets)
 
 install(TARGETS sambausershareplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 

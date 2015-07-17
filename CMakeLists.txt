@@ -4,19 +4,39 @@ project(filesharing)
 if(NOT INSIDE_KDENETWORK)
     message("Not building inside KDENetwork, loading KDE CMake Macros.")
 
-    find_package(ECM 0.0.11 REQUIRED NO_MODULE)
-	set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+	set(QT_MIN_VERSION "5.4.0")
+	set(KF5_MIN_VERSION "5.7.0")
+	set(ECM_MIN_VERSION "1.6.0")
 
+	find_package(ECM ${ECM_MIN_VERSION} CONFIG REQUIRED)
+	set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+	include(ECMSetupVersion)
+	include(ECMGenerateHeaders)
+	include(GenerateExportHeader)
+	include(FeatureSummary)
 	include(KDEInstallDirs)
 	include(KDECMakeSettings)
-	include(KDECompilerSettings)
-	include(FeatureSummary)
+	include(KDEFrameworkCompilerSettings)
 
-	find_package(Qt5 REQUIRED COMPONENTS Widgets)
-	find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid)
+	find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+	    Core
+	    Widgets
+	    Gui
+	    DBus
+	    Test
+	)
 
+	find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+	    CoreAddons
+	    KIO
+	    DBusAddons
+	)
+
+	#	find_package(Qt5 REQUIRED COMPONENTS Widgets Core Gui)
+	#	find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid)
+	#	get_target_property(QtCore_location Qt5::Core LOCATION)
     #find_package(KDE4 REQUIRED)
-
     #include(KDE4Defaults)
     #include(MacroLibrary)
 

@@ -4,7 +4,7 @@ project(filesharing)
 if(NOT INSIDE_KDENETWORK)
     message("Not building inside KDENetwork, loading KDE CMake Macros.")
 
-	set(QT_MIN_VERSION "5.4.0")
+	set(QT_MIN_VERSION "5.0.0")
 	set(KF5_MIN_VERSION "5.7.0")
 	set(ECM_MIN_VERSION "1.6.0")
 
@@ -33,13 +33,6 @@ if(NOT INSIDE_KDENETWORK)
 	    DBusAddons
 	)
 
-	#	find_package(Qt5 REQUIRED COMPONENTS Widgets Core Gui)
-	#	find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid)
-	#	get_target_property(QtCore_location Qt5::Core LOCATION)
-    #find_package(KDE4 REQUIRED)
-    #include(KDE4Defaults)
-    #include(MacroLibrary)
-
     include(CheckIncludeFile)
     include(CheckIncludeFiles)
     include(CheckSymbolExists)
@@ -47,6 +40,7 @@ if(NOT INSIDE_KDENETWORK)
     include(CheckLibraryExists)
     #include(CheckPrototypeExists)
     include(CheckTypeSize)
+
 
     set(CMAKE_REQUIRED_DEFINITIONS ${_KDE5_PLATFORM_DEFINITIONS})
     if(WIN32)
@@ -57,10 +51,10 @@ if(NOT INSIDE_KDENETWORK)
     add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
     include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE5_INCLUDES})
 endif(NOT INSIDE_KDENETWORK)
-
+	
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 if(NOT SAMBA_PACKAGE_NAME)
-    set(SAMBA_PACKAGE_NAME \\\"samba\\\")
+    set(SAMBA_PACKAGE_NAME \"samba\")
 endif(NOT SAMBA_PACKAGE_NAME)
 if(SAMBA_INSTALL)
     message(STATUS "Samba install feature will be enabled.")
@@ -71,7 +65,3 @@ else(SAMBA_INSTALL)
 endif(SAMBA_INSTALL)
 
 add_subdirectory(samba)
-
-#if(NOT INSIDE_KDENETWORK)
-#	    macro_display_feature_log()
-#endif(NOT INSIDE_KDENETWORK)

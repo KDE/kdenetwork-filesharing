@@ -24,10 +24,10 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 
-#include <kvbox.h>
+#include <QFrame>
 #include <kuser.h>
 #include <kdebug.h>
-#include <kpushbutton.h>
+#include <QPushButton>
 #include <ksambashare.h>
 #include <ksambasharedata.h>
 #include <kmessagebox.h>
@@ -58,7 +58,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 
     KGlobal::locale()->insertCatalog("kfileshare");
 
-    KVBox *vbox = new KVBox();
+    QFrame *vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
 
@@ -74,7 +74,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), widget));
 
 #ifdef SAMBA_INSTALL
-        KPushButton *btn = new KPushButton(i18n("Install Samba..."), widget);
+        QPushButton *btn = new QPushButton(i18n("Install Samba..."), widget);
         btn->setDefault(false);
         vLayout->addWidget(btn);
         connect(btn, SIGNAL(clicked()), SLOT(installSamba()));

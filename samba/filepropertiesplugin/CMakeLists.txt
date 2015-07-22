@@ -8,6 +8,7 @@ qt5_wrap_ui(sambausershareplugin_PART_SRCS sambausershareplugin.ui)
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 
 target_link_libraries(sambausershareplugin KF5::KIOWidgets)
+target_link_libraries(sambausershareplugin KF5::CoreAddons)
 
 target_include_directories(sambausershareplugin PUBLIC ${Qt5DBus_INCLUDE_DIRS})
 

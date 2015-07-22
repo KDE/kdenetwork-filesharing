@@ -19,7 +19,7 @@
  */
 
 #include <QComboBox>
-#include <klocale.h>
+#include <KLocalizedString>
 
 #include "delegate.h"
 

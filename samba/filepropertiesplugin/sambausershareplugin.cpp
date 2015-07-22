@@ -26,13 +26,13 @@
 
 #include <QFrame>
 #include <kuser.h>
-#include <kdebug.h>
+#include <QDebug>
 #include <QPushButton>
 #include <ksambashare.h>
 #include <ksambasharedata.h>
 #include <kmessagebox.h>
-#include <KDE/KPluginFactory>
-#include <KDE/KPluginLoader>
+#include <KPluginFactory>
+#include <KPluginLoader>
 
 #include "sambausershareplugin.h"
 #include "model.h"
@@ -56,7 +56,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         return;
     }
 
-    KGlobal::locale()->insertCatalog("kfileshare");
+    //KGlobal::locale()->insertCatalog("kfileshare");
 
     QFrame *vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));

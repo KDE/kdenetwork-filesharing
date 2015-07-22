@@ -24,6 +24,7 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 
+#include <KUrl>
 #include <QFrame>
 #include <kuser.h>
 #include <QDebug>

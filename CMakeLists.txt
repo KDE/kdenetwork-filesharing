@@ -28,9 +28,24 @@ if(NOT INSIDE_KDENETWORK)
 	)
 
 	find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+	    DocTools
+	    Init
+	    KCMUtils
+	    NewStuff
 	    CoreAddons
-	    KIO
+	    I18n
 	    DBusAddons
+	    Bookmarks
+	    Config
+	    KIO
+	    Parts
+	    Solid
+	    IconThemes
+	    Completion
+	    TextEditor
+	    WindowSystem
+	    Notifications
+	    KDELibs4Support
 	)
 
     include(CheckIncludeFile)

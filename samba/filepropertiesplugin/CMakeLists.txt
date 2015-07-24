@@ -11,6 +11,7 @@ target_link_libraries(sambausershareplugin KF5::KIOWidgets)
 target_link_libraries(sambausershareplugin KF5::CoreAddons)
 target_link_libraries(sambausershareplugin KF5::KDELibs4Support)
 target_link_libraries(sambausershareplugin KF5::I18n)
+target_link_libraries(sambausershareplugin KF5::WidgetsAddons)
 
 target_include_directories(sambausershareplugin PUBLIC ${Qt5DBus_INCLUDE_DIRS})
 

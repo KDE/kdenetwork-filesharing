@@ -35,6 +35,7 @@
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KConfigGroup>
+#include <QDialogButtonBox>
 
 #include "sambausershareplugin.h"
 #include "model.h"
@@ -213,13 +214,13 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
     }
 
     if (disableButton) {
-        properties->okButton->setEnabled(false);
+        properties->button(QDialogButtonBox::Ok)->setEnabled(false);
         propertiesUi.sambaNameEdit->setFocus();
         return;
     }
 
-    if (!properties->isButtonEnabled(KPropertiesDialog::Ok)) {
-        properties->okButton->setEnabled(true);
+    if (!properties->button(QDialogButtonBox::Ok)->isEnabled()) {
+        properties->button(QDialogButtonBox::Ok)->setEnabled(true);
     }
 }
 

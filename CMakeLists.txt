@@ -47,6 +47,7 @@ if(NOT INSIDE_KDENETWORK)
 	    Notifications
 	    KDELibs4Support
 	)
+	find_package(KF5WidgetsAddons)
 
     include(CheckIncludeFile)
     include(CheckIncludeFiles)

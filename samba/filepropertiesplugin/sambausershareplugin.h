@@ -25,6 +25,7 @@
 #include <QComboBox>
 
 #include <kpropertiesdialog.h>
+#include <klocalizedstring.h>
 
 #include "ui_sambausershareplugin.h"
 

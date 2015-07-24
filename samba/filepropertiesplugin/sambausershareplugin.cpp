@@ -34,6 +34,7 @@
 #include <kmessagebox.h>
 #include <KPluginFactory>
 #include <KPluginLoader>
+#include <KConfigGroup>
 
 #include "sambausershareplugin.h"
 #include "model.h"
@@ -47,7 +48,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     , url()
     , shareData()
 {
-    url = properties->kurl().path(KUrl::RemoveTrailingSlash);
+    url = properties->kurl().path();
     if (url.isEmpty()) {
         return;
     }
@@ -69,7 +70,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         QWidget *widget = new QWidget(vbox);
         QVBoxLayout *vLayout = new QVBoxLayout(widget);
         vLayout->setAlignment(Qt::AlignJustify);
-        vLayout->setSpacing(KDialog::spacingHint());
+        //TODO PORT QT5 vLayout->setSpacing(QDialog::spacingHint());
         vLayout->setMargin(0);
 
         vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), widget));
@@ -212,13 +213,13 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
     }
 
     if (disableButton) {
-        properties->enableButtonOk(false);
+        properties->okButton->setEnabled(false);
         propertiesUi.sambaNameEdit->setFocus();
         return;
     }
 
     if (!properties->isButtonEnabled(KPropertiesDialog::Ok)) {
-        properties->enableButtonOk(true);
+        properties->okButton->setEnabled(true);
     }
 }
 

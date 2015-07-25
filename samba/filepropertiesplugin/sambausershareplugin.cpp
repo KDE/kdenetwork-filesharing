@@ -238,4 +238,4 @@ QString SambaUserSharePlugin::getNewShareName()
     return shareName;
 }
 
-#include "moc_sambausershareplugin.cpp"
+#include "sambausershareplugin.moc"

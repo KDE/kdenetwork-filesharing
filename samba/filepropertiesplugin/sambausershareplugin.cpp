@@ -120,10 +120,10 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 
 void SambaUserSharePlugin::installSamba()
 {
-    unsigned int xid = 0;
-    QStringList packages;
-    packages << SAMBA_PACKAGE_NAME;
-    QString interaction("show-confirm-install,show-progress");
+    //unsigned int xid = 0;
+    QString package;
+    package = SAMBA_PACKAGE_NAME;
+    /*QString interaction("show-confirm-install,show-progress");
 
     QDBusInterface device("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit",
                           "org.freedesktop.PackageKit.Modify");
@@ -132,7 +132,14 @@ void SambaUserSharePlugin::installSamba()
                 i18n("<qt><strong>Samba could not be installed.</strong><br />Please, check if kpackagekit is properly installed</qt>"));
         return;
     }
-    QDBusReply<int> reply = device.call("InstallPackageNames", xid, packages, interaction);
+    QDBusReply<int> reply = device.call("InstallPackageNames", xid, package, interaction);
+    */
+    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package, PackageKit::Transaction::FilterNone);
+    connect(transaction, SIGNAL(package(PackageKit::Transaction::Info,QString,QString)), SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+}
+
+void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info, const QString &packageId, const QString &){
+    PackageKit::Daemon::installPackage(packageId);
 }
 
 void SambaUserSharePlugin::setupModel()

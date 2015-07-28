@@ -23,6 +23,8 @@
 
 #include <QVariant>
 #include <QComboBox>
+#include <PackageKit/Daemon>
+#include <PackageKit/Transaction>
 
 #include <kpropertiesdialog.h>
 #include <klocalizedstring.h>
@@ -45,6 +47,7 @@ private Q_SLOTS:
     void toggleShareStatus(bool checked);
     void installSamba();
     void checkShareName(const QString &name);
+    void packageInstall(PackageKit::Transaction::Info, const QString &packageId, const QString &);
 
 private:
     QString url;

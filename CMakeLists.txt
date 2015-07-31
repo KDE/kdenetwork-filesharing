@@ -87,3 +87,5 @@ else(SAMBA_INSTALL)
 endif(SAMBA_INSTALL)
 
 add_subdirectory(samba)
+
+feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

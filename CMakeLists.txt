@@ -61,7 +61,6 @@ include(CheckLibraryExists)
 #include(CheckPrototypeExists)
 include(CheckTypeSize)
 
-
 set(CMAKE_REQUIRED_DEFINITIONS ${_KDE5_PLATFORM_DEFINITIONS})
 if(WIN32)
 set(CMAKE_REQUIRED_LIBRARIES ${KDEWIN32_LIBRARIES})

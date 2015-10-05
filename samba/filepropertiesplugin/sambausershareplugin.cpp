@@ -18,23 +18,23 @@
 
 */
 
-#include <QFileInfo>
-#include <QStringList>
-#include <QStandardItemModel>
 #include <QDBusInterface>
 #include <QDBusReply>
-
-#include <QFrame>
-#include <kuser.h>
 #include <QDebug>
+#include <QDialogButtonBox>
+#include <QFileInfo>
+#include <QFrame>
 #include <QPushButton>
-#include <ksambashare.h>
-#include <ksambasharedata.h>
-#include <kmessagebox.h>
+#include <QStringList>
+#include <QStandardItemModel>
+
+#include <KConfigGroup>
+#include <KMessageBox>
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <KConfigGroup>
-#include <QDialogButtonBox>
+#include <KSambaShare>
+#include <KSambaShareData>
+#include <KUser>
 
 #include "sambausershareplugin.h"
 #include "model.h"

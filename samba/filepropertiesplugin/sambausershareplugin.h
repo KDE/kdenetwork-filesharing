@@ -47,7 +47,9 @@ private Q_SLOTS:
     void toggleShareStatus(bool checked);
     void installSamba();
     void checkShareName(const QString &name);
-    void packageInstall(PackageKit::Transaction::Info, const QString &packageId, const QString &);
+    void packageInstall(PackageKit::Transaction::Info info,
+                        const QString &packageId,
+                        const QString &summary);
 
 private:
     QString url;

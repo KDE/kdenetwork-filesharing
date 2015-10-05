@@ -134,11 +134,19 @@ void SambaUserSharePlugin::installSamba()
     }
     QDBusReply<int> reply = device.call("InstallPackageNames", xid, package, interaction);
     */
-    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package, PackageKit::Transaction::FilterNone);
-    connect(transaction, SIGNAL(package(PackageKit::Transaction::Info,QString,QString)), SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+    auto transaction = PackageKit::Daemon::resolve(package,
+                                                   PackageKit::Transaction::FilterNone);
+    connect(transaction,
+            SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
+            SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
 }
 
-void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info, const QString &packageId, const QString &){
+void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
+                                          const QString &packageId,
+                                          const QString &summary)
+{
+    Q_UNUSED(info);
+    Q_UNUSED(summary);
     PackageKit::Daemon::installPackage(packageId);
 }
 

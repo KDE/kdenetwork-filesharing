@@ -65,6 +65,9 @@ else(SAMBA_INSTALL)
     message(STATUS "Samba install feature will NOT be enabled.")
 endif(SAMBA_INSTALL)
 
+# KI18N Translation Domain for this library
+add_definitions(-DTRANSLATION_DOMAIN=\"kfileshare\")
+
 add_subdirectory(samba)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

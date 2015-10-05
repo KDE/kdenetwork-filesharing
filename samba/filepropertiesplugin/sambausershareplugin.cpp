@@ -55,9 +55,6 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         return;
     }
 
-#warning FIXME l10n loading
-    //KGlobal::locale()->insertCatalog("kfileshare");
-
     QFrame *vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);

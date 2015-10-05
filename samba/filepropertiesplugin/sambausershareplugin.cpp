@@ -1,6 +1,7 @@
 /*
   Copyright (c) 2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
   Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
+  Copyright (c) 2015 Harald Sitter <sitter@kde.org>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -22,6 +23,7 @@
 #include <QFileInfo>
 #include <QFrame>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QStringList>
 
 #include <KMessageBox>
@@ -60,9 +62,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
 
-    if (!QFile::exists(QStringLiteral("/usr/sbin/smbd"))
-        && !QFile::exists(QStringLiteral("/usr/local/sbin/smbd"))) {
-
+    if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
         QWidget *widget = new QWidget(vbox);
         QVBoxLayout *vLayout = new QVBoxLayout(widget);
         vLayout->setAlignment(Qt::AlignJustify);

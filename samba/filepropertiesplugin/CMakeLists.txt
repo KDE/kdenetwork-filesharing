@@ -9,7 +9,6 @@ add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 target_link_libraries(sambausershareplugin
     KF5::CoreAddons
     KF5::I18n
-    KF5::KDELibs4Support
     KF5::KIOWidgets
     KF5::WidgetsAddons
     PK::packagekitqt5

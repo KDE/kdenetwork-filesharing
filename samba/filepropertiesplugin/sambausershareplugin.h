@@ -23,8 +23,10 @@
 
 #include <QVariant>
 #include <QComboBox>
+#ifdef SAMBA_INSTALL
 #include <PackageKit/Daemon>
 #include <PackageKit/Transaction>
+#endif // SAMBA_INSTALL
 
 #include <kpropertiesdialog.h>
 #include <klocalizedstring.h>
@@ -45,11 +47,13 @@ public:
 private Q_SLOTS:
     void load();
     void toggleShareStatus(bool checked);
-    void installSamba();
     void checkShareName(const QString &name);
+#ifdef SAMBA_INSTALL
+    void installSamba();
     void packageInstall(PackageKit::Transaction::Info info,
                         const QString &packageId,
                         const QString &summary);
+#endif // SAMBA_INSTALL
 
 private:
     QString m_url;

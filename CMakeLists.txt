@@ -26,11 +26,11 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
 )
 
-find_package(PackageKitQt5 0.9.5 REQUIRED)
+find_package(PackageKitQt5 0.9.5)
 set_package_properties(PackageKitQt5
     PROPERTIES DESCRIPTION "Software Manager integration"
     TYPE OPTIONAL
-    PURPOSE "Provides package management integration to the application launcher."
+    PURPOSE "Needed to automatically install the samba package."
 )
 
 include(CheckIncludeFile)
@@ -52,12 +52,14 @@ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE5_INCLUDES})
 
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME "samba" CACHE STRING "Name of distribution package to install to get a functional samba stack.")
-add_feature_info("Samba Installation" SAMBA_INSTALL "Automatic installation of '${SAMBA_PACKAGE_NAME}' using PackageKit.")
 
-if(SAMBA_INSTALL)
+if(SAMBA_INSTALL AND PackageKitQt5_FOUND)
     add_definitions(-DSAMBA_INSTALL)
     add_definitions(-DSAMBA_PACKAGE_NAME=${SAMBA_PACKAGE_NAME})
-endif(SAMBA_INSTALL)
+else()
+    set(SAMBA_INSTALL false)
+endif()
+add_feature_info("Samba Installation" SAMBA_INSTALL "Automatic installation of '${SAMBA_PACKAGE_NAME}' using PackageKit.")
 
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kfileshare\")

@@ -11,8 +11,11 @@ target_link_libraries(sambausershareplugin
     KF5::I18n
     KF5::KIOWidgets
     KF5::WidgetsAddons
-    PK::packagekitqt5
 )
+
+if(SAMBA_INSTALL)
+    target_link_libraries(sambausershareplugin PK::packagekitqt5)
+endif()
 
 target_include_directories(sambausershareplugin PUBLIC ${Qt5DBus_INCLUDE_DIRS})
 

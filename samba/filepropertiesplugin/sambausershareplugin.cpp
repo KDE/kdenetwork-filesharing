@@ -110,6 +110,7 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 {
 }
 
+#ifdef SAMBA_INSTALL
 void SambaUserSharePlugin::installSamba()
 {
     //unsigned int xid = 0;
@@ -140,6 +141,7 @@ void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
     Q_UNUSED(summary);
     PackageKit::Daemon::installPackage(packageId);
 }
+#endif // SAMBA_INSTALL
 
 void SambaUserSharePlugin::setupModel()
 {

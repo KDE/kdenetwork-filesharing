@@ -49,7 +49,7 @@ if(NOT INSIDE_KDENETWORK)
     )
     find_package(KF5WidgetsAddons)
 
-    find_package(PackageKitQt5 0.9.5)
+    find_package(PackageKitQt5 0.9.5 REQUIRED)
     set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
                         TYPE OPTIONAL
                         PURPOSE "Provides package management integration to the application launcher."

@@ -4,56 +4,56 @@ project(filesharing)
 if(NOT INSIDE_KDENETWORK)
     message("Not building inside KDENetwork, loading KDE CMake Macros.")
 
-        set(QT_MIN_VERSION "5.0.0")
-        set(KF5_MIN_VERSION "5.7.0")
-        set(ECM_MIN_VERSION "1.6.0")
+    set(QT_MIN_VERSION "5.0.0")
+    set(KF5_MIN_VERSION "5.7.0")
+    set(ECM_MIN_VERSION "1.6.0")
 
-        find_package(ECM ${ECM_MIN_VERSION} CONFIG REQUIRED)
-        set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+    find_package(ECM ${ECM_MIN_VERSION} CONFIG REQUIRED)
+    set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-        include(ECMSetupVersion)
-        include(ECMGenerateHeaders)
-        include(GenerateExportHeader)
-        include(FeatureSummary)
-        include(KDEInstallDirs)
-        include(KDECMakeSettings)
-        include(KDEFrameworkCompilerSettings)
+    include(ECMSetupVersion)
+    include(ECMGenerateHeaders)
+    include(GenerateExportHeader)
+    include(FeatureSummary)
+    include(KDEInstallDirs)
+    include(KDECMakeSettings)
+    include(KDEFrameworkCompilerSettings)
 
-        find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
-            Core
-            Widgets
-            Gui
-            DBus
-            Test
-        )
+    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+        Core
+        Widgets
+        Gui
+        DBus
+        Test
+    )
 
-        find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-            DocTools
-            Init
-            KCMUtils
-            NewStuff
-            CoreAddons
-            I18n
-            DBusAddons
-            Bookmarks
-            Config
-            KIO
-            Parts
-            Solid
-            IconThemes
-            Completion
-            TextEditor
-            WindowSystem
-            Notifications
-            KDELibs4Support
-        )
-        find_package(KF5WidgetsAddons)
+    find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+        DocTools
+        Init
+        KCMUtils
+        NewStuff
+        CoreAddons
+        I18n
+        DBusAddons
+        Bookmarks
+        Config
+        KIO
+        Parts
+        Solid
+        IconThemes
+        Completion
+        TextEditor
+        WindowSystem
+        Notifications
+        KDELibs4Support
+    )
+    find_package(KF5WidgetsAddons)
 
-        find_package(PackageKitQt5 0.9.5)
-        set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
-                            TYPE OPTIONAL
-                            PURPOSE "Provides package management integration to the application launcher."
-                            )
+    find_package(PackageKitQt5 0.9.5)
+    set_package_properties(PackageKitQt5 PROPERTIES DESCRIPTION "Software Manager integration"
+                        TYPE OPTIONAL
+                        PURPOSE "Provides package management integration to the application launcher."
+                        )
 
     include(CheckIncludeFile)
     include(CheckIncludeFiles)

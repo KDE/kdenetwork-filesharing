@@ -38,7 +38,6 @@ include(CheckIncludeFiles)
 include(CheckSymbolExists)
 include(CheckFunctionExists)
 include(CheckLibraryExists)
-#include(CheckPrototypeExists)
 include(CheckTypeSize)
 
 if(WIN32)

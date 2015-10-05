@@ -52,7 +52,7 @@ private Q_SLOTS:
                         const QString &summary);
 
 private:
-    QString url;
+    QString m_url;
     KSambaShareData shareData;
     UserPermissionModel *model;
     Ui::PropertiesPageGUI propertiesUi;

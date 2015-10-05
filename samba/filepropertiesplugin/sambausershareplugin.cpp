@@ -46,15 +46,14 @@ K_EXPORT_PLUGIN(SambaUserSharePluginFactory("fileshare_propsdlgplugin"))
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
-    , url()
+    , m_url(properties->url().toLocalFile())
     , shareData()
 {
-    url = properties->kurl().path();
-    if (url.isEmpty()) {
+    if (m_url.isEmpty()) {
         return;
     }
 
-    QFileInfo pathInfo(url);
+    QFileInfo pathInfo(m_url);
     if (!pathInfo.permission(QFile::ReadUser | QFile::WriteUser)) {
         return;
     }
@@ -92,7 +91,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     QWidget *widget = new QWidget(vbox);
     propertiesUi.setupUi(widget);
 
-    QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(url);
+    QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
 
     if (!shareList.isEmpty()) {
         shareData = shareList.at(0); // FIXME: using just the first in the list for a while
@@ -165,7 +164,7 @@ void SambaUserSharePlugin::setupViews()
 void SambaUserSharePlugin::load()
 {
     bool guestAllowed = false;
-    bool sambaShared = KSambaShare::instance()->isDirectoryShared(url);
+    bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_url);
 
     propertiesUi.sambaChk->setChecked(sambaShared);
     toggleShareStatus(sambaShared);
@@ -188,7 +187,7 @@ void SambaUserSharePlugin::applyChanges()
 
         shareData.setName(propertiesUi.sambaNameEdit->text());
 
-        shareData.setPath(url);
+        shareData.setPath(m_url);
 
         KSambaShareData::GuestPermission guestOk(shareData.guestPermission());
 
@@ -198,7 +197,7 @@ void SambaUserSharePlugin::applyChanges()
         shareData.setGuestPermission(guestOk);
 
         result = shareData.save();
-    } else if (KSambaShare::instance()->isDirectoryShared(url)) {
+    } else if (KSambaShare::instance()->isDirectoryShared(m_url)) {
         result = shareData.remove();
     }
 }
@@ -241,7 +240,7 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
 
 QString SambaUserSharePlugin::getNewShareName()
 {
-    QString shareName = KUrl(url).fileName();
+    QString shareName = KUrl(m_url).fileName();
 
     if (!propertiesUi.sambaNameEdit->text().isEmpty()) {
         shareName = propertiesUi.sambaNameEdit->text();

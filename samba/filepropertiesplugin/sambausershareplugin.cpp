@@ -24,7 +24,6 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 
-#include <KUrl>
 #include <QFrame>
 #include <kuser.h>
 #include <QDebug>
@@ -243,7 +242,7 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
 
 QString SambaUserSharePlugin::getNewShareName()
 {
-    QString shareName = KUrl(m_url).fileName();
+    QString shareName = QUrl(m_url).fileName();
 
     if (!propertiesUi.sambaNameEdit->text().isEmpty()) {
         shareName = propertiesUi.sambaNameEdit->text();

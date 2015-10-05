@@ -25,7 +25,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KIO
     WidgetsAddons
 )
-find_package(KF5WidgetsAddons)
 
 find_package(PackageKitQt5 0.9.5 REQUIRED)
 set_package_properties(PackageKitQt5

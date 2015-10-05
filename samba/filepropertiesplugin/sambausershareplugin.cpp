@@ -66,8 +66,8 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
 
-    if (!QFile::exists("/usr/sbin/smbd")
-        && !QFile::exists("/usr/local/sbin/smbd")) {
+    if (!QFile::exists(QStringLiteral("/usr/sbin/smbd"))
+        && !QFile::exists(QStringLiteral("/usr/local/sbin/smbd"))) {
 
         QWidget *widget = new QWidget(vbox);
         QVBoxLayout *vLayout = new QVBoxLayout(widget);
@@ -122,8 +122,7 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 void SambaUserSharePlugin::installSamba()
 {
     //unsigned int xid = 0;
-    QString package;
-    package = SAMBA_PACKAGE_NAME;
+    QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
     /*QString interaction("show-confirm-install,show-progress");
 
     QDBusInterface device("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit",

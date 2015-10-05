@@ -2,8 +2,7 @@
 
 set(sambausershareplugin_PART_SRCS sambausershareplugin.cpp delegate.cpp model.cpp)
 
-qt5_wrap_ui(sambausershareplugin_PART_SRCS sambausershareplugin.ui)
-
+ki18n_wrap_ui(sambausershareplugin_PART_SRCS sambausershareplugin.ui)
 
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 

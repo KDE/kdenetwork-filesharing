@@ -17,11 +17,7 @@ include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
-    Core
     Widgets
-    Gui
-    DBus
-    Test
 )
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS

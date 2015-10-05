@@ -82,7 +82,7 @@ QStringList UserPermissionModel::getUsersList() const
             continue;
         }
         KUser user(username);
-        if (user.uid() >= defminuid) {
+        if (user.userId().nativeId() >= defminuid) {
             userList << username;
         }
     }

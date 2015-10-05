@@ -53,12 +53,11 @@ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE5_INCLUDES})
 
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME "samba" CACHE STRING "Name of distribution package to install to get a functional samba stack.")
+add_feature_info("Samba Installation" SAMBA_INSTALL "Automatic installation of '${SAMBA_PACKAGE_NAME}' using PackageKit.")
+
 if(SAMBA_INSTALL)
-    message(STATUS "Samba install feature will be enabled.")
     add_definitions(-DSAMBA_INSTALL)
     add_definitions(-DSAMBA_PACKAGE_NAME=${SAMBA_PACKAGE_NAME})
-else(SAMBA_INSTALL)
-    message(STATUS "Samba install feature will NOT be enabled.")
 endif(SAMBA_INSTALL)
 
 # KI18N Translation Domain for this library

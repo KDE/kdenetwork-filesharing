@@ -49,6 +49,8 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     , m_url(properties->url().toLocalFile())
     , shareData()
 {
+    Q_UNUSED(args);
+
     if (m_url.isEmpty()) {
         return;
     }

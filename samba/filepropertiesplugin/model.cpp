@@ -92,11 +92,13 @@ QStringList UserPermissionModel::getUsersList() const
 
 int UserPermissionModel::rowCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
     return userList.count();
 }
 
 int UserPermissionModel::columnCount(const QModelIndex &parent) const
 {
+    Q_UNUSED(parent);
     return 2;
 }
 

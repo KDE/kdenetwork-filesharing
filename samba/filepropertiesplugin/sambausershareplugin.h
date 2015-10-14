@@ -55,11 +55,7 @@ private Q_SLOTS:
     void packageInstall(PackageKit::Transaction::Info info,
                         const QString &packageId,
                         const QString &summary);
-    void packageInstall2(PackageKit::Transaction::Info info,
-                        const QString &packageId,
-                        const QString &summary);
     void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
-    void packageChanged();
 #endif // SAMBA_INSTALL
 
 private:

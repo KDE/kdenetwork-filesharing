@@ -25,6 +25,7 @@
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QStringList>
+#include <QDebug>
 
 #include <KMessageBox>
 #include <KPluginFactory>
@@ -58,31 +59,31 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     QFrame *vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
+    QVBoxLayout *vLayoutMaster = new QVBoxLayout(vbox);
 
-    if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
-        QWidget *widget = new QWidget(vbox);
-        QVBoxLayout *vLayout = new QVBoxLayout(widget);
-        vLayout->setAlignment(Qt::AlignJustify);
-        //TODO PORT QT5 vLayout->setSpacing(QDialog::spacingHint());
-        vLayout->setMargin(0);
+    m_installSambaWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_installSambaWidgets);
+    QVBoxLayout *vLayout = new QVBoxLayout(m_installSambaWidgets);
+    vLayout->setAlignment(Qt::AlignJustify);
+    vLayout->setMargin(0);
 
-        vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), widget));
+    vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), m_installSambaWidgets));
 
 #ifdef SAMBA_INSTALL
-        QPushButton *btn = new QPushButton(i18n("Install Samba..."), widget);
-        btn->setDefault(false);
-        vLayout->addWidget(btn);
-        connect(btn, SIGNAL(clicked()), SLOT(installSamba()));
+    m_installSambaButton = new QPushButton(i18n("Install Samba..."), m_installSambaWidgets);
+    m_installSambaButton->setDefault(false);
+    vLayout->addWidget(m_installSambaButton);
+    connect(m_installSambaButton, SIGNAL(clicked()), SLOT(installSamba()));
+    m_installProgress = new QProgressBar();
+    vLayout->addWidget(m_installProgress);
+    m_installProgress->hide();
 #endif
 
-        // align items on top
-        vLayout->addStretch();
-
-        return;
-    }
-
-    QWidget *widget = new QWidget(vbox);
-    propertiesUi.setupUi(widget);
+    // align items on top
+    vLayout->addStretch();
+    m_shareWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_shareWidgets);
+    propertiesUi.setupUi(m_shareWidgets);
 
     QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
 
@@ -104,6 +105,15 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
     }
+#ifdef SAMBA_INSTALL
+    if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
+        m_installSambaWidgets->show();
+        m_shareWidgets->hide();
+    } else {
+        m_installSambaWidgets->hide();
+        m_shareWidgets->show();
+    }
+#endif
 }
 
 SambaUserSharePlugin::~SambaUserSharePlugin()
@@ -113,24 +123,16 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 #ifdef SAMBA_INSTALL
 void SambaUserSharePlugin::installSamba()
 {
-    //unsigned int xid = 0;
     QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
-    /*QString interaction("show-confirm-install,show-progress");
-
-    QDBusInterface device("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit",
-                          "org.freedesktop.PackageKit.Modify");
-    if (!device.isValid()) {
-        KMessageBox::sorry(qobject_cast<KPropertiesDialog *>(this),
-                i18n("<qt><strong>Samba could not be installed.</strong><br />Please, check if kpackagekit is properly installed</qt>"));
-        return;
-    }
-    QDBusReply<int> reply = device.call("InstallPackageNames", xid, package, interaction);
-    */
-    auto transaction = PackageKit::Daemon::resolve(package,
+    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package,
                                                    PackageKit::Transaction::FilterNone);
     connect(transaction,
             SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
             SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+    m_installProgress->setMaximum(0);
+    m_installProgress->setMinimum(0);
+    m_installProgress->show();
+    m_installSambaButton->hide();
 }
 
 void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
@@ -139,7 +141,16 @@ void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
 {
     Q_UNUSED(info);
     Q_UNUSED(summary);
-    PackageKit::Daemon::installPackage(packageId);
+    PackageKit::Transaction *installTransaction = PackageKit::Daemon::installPackage(packageId);
+    connect(installTransaction,
+            SIGNAL(finished(PackageKit::Transaction::Exit, uint)),
+            SLOT(packageFinished(PackageKit::Transaction::Exit, uint)));
+}
+
+void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
+{
+    m_installSambaWidgets->hide();
+    m_shareWidgets->show();
 }
 #endif // SAMBA_INSTALL
 

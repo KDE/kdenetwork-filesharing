@@ -23,8 +23,15 @@
 
 #include <QVariant>
 #include <QComboBox>
+#include <QProgressBar>
+#include <QPushButton>
+#ifdef SAMBA_INSTALL
+#include <PackageKit/Daemon>
+#include <PackageKit/Transaction>
+#endif // SAMBA_INSTALL
 
 #include <kpropertiesdialog.h>
+#include <klocalizedstring.h>
 
 #include "ui_sambausershareplugin.h"
 
@@ -42,19 +49,34 @@ public:
 private Q_SLOTS:
     void load();
     void toggleShareStatus(bool checked);
-    void installSamba();
     void checkShareName(const QString &name);
+#ifdef SAMBA_INSTALL
+    void installSamba();
+    void packageInstall(PackageKit::Transaction::Info info,
+                        const QString &packageId,
+                        const QString &summary);
+    void packageInstall2(PackageKit::Transaction::Info info,
+                        const QString &packageId,
+                        const QString &summary);
+    void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
+    void packageChanged();
+#endif // SAMBA_INSTALL
 
 private:
-    QString url;
+    QString m_url;
     KSambaShareData shareData;
     UserPermissionModel *model;
     Ui::PropertiesPageGUI propertiesUi;
+    QWidget *m_installSambaWidgets;
+    QWidget *m_shareWidgets;
+    QProgressBar *m_installProgress;
+    QPushButton *m_installSambaButton;
 
     void setupModel();
     void setupViews();
     QStringList getUsersList();
     QString getNewShareName();
+
 };
 
 #endif // SAMBAUSERSHAREPLUGIN_H

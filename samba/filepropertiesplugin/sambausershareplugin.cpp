@@ -1,6 +1,7 @@
 /*
   Copyright (c) 2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
   Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
+  Copyright (c) 2015 Harald Sitter <sitter@kde.org>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -18,21 +19,19 @@
 
 */
 
+#include <QDialogButtonBox>
 #include <QFileInfo>
+#include <QFrame>
+#include <QPushButton>
+#include <QStandardPaths>
 #include <QStringList>
-#include <QStandardItemModel>
-#include <QDBusInterface>
-#include <QDBusReply>
+#include <QDebug>
 
-#include <kvbox.h>
-#include <kuser.h>
-#include <kdebug.h>
-#include <kpushbutton.h>
-#include <ksambashare.h>
-#include <ksambasharedata.h>
-#include <kmessagebox.h>
-#include <KDE/KPluginFactory>
-#include <KDE/KPluginLoader>
+#include <KMessageBox>
+#include <KPluginFactory>
+#include <KPluginLoader>
+#include <KSambaShare>
+#include <KSambaShareData>
 
 #include "sambausershareplugin.h"
 #include "model.h"
@@ -43,53 +42,50 @@ K_EXPORT_PLUGIN(SambaUserSharePluginFactory("fileshare_propsdlgplugin"))
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
-    , url()
+    , m_url(properties->url().toLocalFile())
     , shareData()
 {
-    url = properties->kurl().path(KUrl::RemoveTrailingSlash);
-    if (url.isEmpty()) {
+    Q_UNUSED(args);
+
+    if (m_url.isEmpty()) {
         return;
     }
 
-    QFileInfo pathInfo(url);
+    QFileInfo pathInfo(m_url);
     if (!pathInfo.permission(QFile::ReadUser | QFile::WriteUser)) {
         return;
     }
 
-    KGlobal::locale()->insertCatalog("kfileshare");
-
-    KVBox *vbox = new KVBox();
+    QFrame *vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
+    QVBoxLayout *vLayoutMaster = new QVBoxLayout(vbox);
 
-    if (!QFile::exists("/usr/sbin/smbd")
-        && !QFile::exists("/usr/local/sbin/smbd")) {
+    m_installSambaWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_installSambaWidgets);
+    QVBoxLayout *vLayout = new QVBoxLayout(m_installSambaWidgets);
+    vLayout->setAlignment(Qt::AlignJustify);
+    vLayout->setMargin(0);
 
-        QWidget *widget = new QWidget(vbox);
-        QVBoxLayout *vLayout = new QVBoxLayout(widget);
-        vLayout->setAlignment(Qt::AlignJustify);
-        vLayout->setSpacing(KDialog::spacingHint());
-        vLayout->setMargin(0);
-
-        vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), widget));
+    vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), m_installSambaWidgets));
 
 #ifdef SAMBA_INSTALL
-        KPushButton *btn = new KPushButton(i18n("Install Samba..."), widget);
-        btn->setDefault(false);
-        vLayout->addWidget(btn);
-        connect(btn, SIGNAL(clicked()), SLOT(installSamba()));
+    m_installSambaButton = new QPushButton(i18n("Install Samba..."), m_installSambaWidgets);
+    m_installSambaButton->setDefault(false);
+    vLayout->addWidget(m_installSambaButton);
+    connect(m_installSambaButton, SIGNAL(clicked()), SLOT(installSamba()));
+    m_installProgress = new QProgressBar();
+    vLayout->addWidget(m_installProgress);
+    m_installProgress->hide();
 #endif
 
-        // align items on top
-        vLayout->addStretch();
+    // align items on top
+    vLayout->addStretch();
+    m_shareWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_shareWidgets);
+    propertiesUi.setupUi(m_shareWidgets);
 
-        return;
-    }
-
-    QWidget *widget = new QWidget(vbox);
-    propertiesUi.setupUi(widget);
-
-    QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(url);
+    QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
 
     if (!shareList.isEmpty()) {
         shareData = shareList.at(0); // FIXME: using just the first in the list for a while
@@ -109,28 +105,54 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
     }
+#ifdef SAMBA_INSTALL
+    if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
+        m_installSambaWidgets->show();
+        m_shareWidgets->hide();
+    } else {
+        m_installSambaWidgets->hide();
+        m_shareWidgets->show();
+    }
+#endif
 }
 
 SambaUserSharePlugin::~SambaUserSharePlugin()
 {
 }
 
+#ifdef SAMBA_INSTALL
 void SambaUserSharePlugin::installSamba()
 {
-    unsigned int xid = 0;
-    QStringList packages;
-    packages << SAMBA_PACKAGE_NAME;
-    QString interaction("show-confirm-install,show-progress");
-
-    QDBusInterface device("org.freedesktop.PackageKit", "/org/freedesktop/PackageKit",
-                          "org.freedesktop.PackageKit.Modify");
-    if (!device.isValid()) {
-        KMessageBox::sorry(qobject_cast<KPropertiesDialog *>(this),
-                i18n("<qt><strong>Samba could not be installed.</strong><br />Please, check if kpackagekit is properly installed</qt>"));
-        return;
-    }
-    QDBusReply<int> reply = device.call("InstallPackageNames", xid, packages, interaction);
+    QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
+    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package,
+                                                   PackageKit::Transaction::FilterNone);
+    connect(transaction,
+            SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
+            SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+    m_installProgress->setMaximum(0);
+    m_installProgress->setMinimum(0);
+    m_installProgress->show();
+    m_installSambaButton->hide();
 }
+
+void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
+                                          const QString &packageId,
+                                          const QString &summary)
+{
+    Q_UNUSED(info);
+    Q_UNUSED(summary);
+    PackageKit::Transaction *installTransaction = PackageKit::Daemon::installPackage(packageId);
+    connect(installTransaction,
+            SIGNAL(finished(PackageKit::Transaction::Exit, uint)),
+            SLOT(packageFinished(PackageKit::Transaction::Exit, uint)));
+}
+
+void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
+{
+    m_installSambaWidgets->hide();
+    m_shareWidgets->show();
+}
+#endif // SAMBA_INSTALL
 
 void SambaUserSharePlugin::setupModel()
 {
@@ -147,7 +169,7 @@ void SambaUserSharePlugin::setupViews()
 void SambaUserSharePlugin::load()
 {
     bool guestAllowed = false;
-    bool sambaShared = KSambaShare::instance()->isDirectoryShared(url);
+    bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_url);
 
     propertiesUi.sambaChk->setChecked(sambaShared);
     toggleShareStatus(sambaShared);
@@ -170,7 +192,7 @@ void SambaUserSharePlugin::applyChanges()
 
         shareData.setName(propertiesUi.sambaNameEdit->text());
 
-        shareData.setPath(url);
+        shareData.setPath(m_url);
 
         KSambaShareData::GuestPermission guestOk(shareData.guestPermission());
 
@@ -180,7 +202,7 @@ void SambaUserSharePlugin::applyChanges()
         shareData.setGuestPermission(guestOk);
 
         result = shareData.save();
-    } else if (KSambaShare::instance()->isDirectoryShared(url)) {
+    } else if (KSambaShare::instance()->isDirectoryShared(m_url)) {
         result = shareData.remove();
     }
 }
@@ -211,19 +233,19 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
     }
 
     if (disableButton) {
-        properties->enableButtonOk(false);
+        properties->button(QDialogButtonBox::Ok)->setEnabled(false);
         propertiesUi.sambaNameEdit->setFocus();
         return;
     }
 
-    if (!properties->isButtonEnabled(KPropertiesDialog::Ok)) {
-        properties->enableButtonOk(true);
+    if (!properties->button(QDialogButtonBox::Ok)->isEnabled()) {
+        properties->button(QDialogButtonBox::Ok)->setEnabled(true);
     }
 }
 
 QString SambaUserSharePlugin::getNewShareName()
 {
-    QString shareName = KUrl(url).fileName();
+    QString shareName = QUrl(m_url).fileName();
 
     if (!propertiesUi.sambaNameEdit->text().isEmpty()) {
         shareName = propertiesUi.sambaNameEdit->text();
@@ -235,4 +257,4 @@ QString SambaUserSharePlugin::getNewShareName()
     return shareName;
 }
 
-#include "moc_sambausershareplugin.cpp"
+#include "sambausershareplugin.moc"

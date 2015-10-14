@@ -105,7 +105,6 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
     }
-#ifdef SAMBA_INSTALL
     if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
         m_installSambaWidgets->show();
         m_shareWidgets->hide();
@@ -113,7 +112,6 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         m_installSambaWidgets->hide();
         m_shareWidgets->show();
     }
-#endif
 }
 
 SambaUserSharePlugin::~SambaUserSharePlugin()

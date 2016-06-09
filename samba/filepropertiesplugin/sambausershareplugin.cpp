@@ -40,6 +40,19 @@
 K_PLUGIN_FACTORY(SambaUserSharePluginFactory, registerPlugin<SambaUserSharePlugin>();)
 K_EXPORT_PLUGIN(SambaUserSharePluginFactory("fileshare_propsdlgplugin"))
 
+// copied from kio/src/core/ksambashare.cpp, KSambaSharePrivate::isSambaInstalled()
+static bool isSambaInstalled()
+{
+    if (QFile::exists(QStringLiteral("/usr/sbin/smbd"))
+            || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"))) {
+        return true;
+    }
+
+    //qDebug() << "Samba is not installed!";
+
+    return false;
+}
+
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
     , m_url(properties->url().toLocalFile())
@@ -105,7 +118,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
     }
-    if (QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty()) {
+    if (!isSambaInstalled()) {
         m_installSambaWidgets->show();
         m_shareWidgets->hide();
     } else {

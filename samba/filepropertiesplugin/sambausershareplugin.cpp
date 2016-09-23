@@ -171,8 +171,10 @@ void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status,
 {
     if (status == PackageKit::Transaction::ExitSuccess) {
         m_installSambaWidgets->hide();
+        m_failedSambaWidgets->hide();
         m_shareWidgets->show();
     } else {
+        m_shareWidgets->hide();
         m_installSambaWidgets->hide();
         m_failedSambaWidgets->show();
     }

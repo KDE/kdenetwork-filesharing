@@ -169,6 +169,7 @@ void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
 
 void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
 {
+    Q_UNUSED(runtime);
     if (status == PackageKit::Transaction::ExitSuccess) {
         m_installSambaWidgets->hide();
         m_failedSambaWidgets->hide();

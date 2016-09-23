@@ -63,6 +63,7 @@ private:
     KSambaShareData shareData;
     UserPermissionModel *model;
     Ui::PropertiesPageGUI propertiesUi;
+    QWidget *m_failedSambaWidgets;
     QWidget *m_installSambaWidgets;
     QWidget *m_shareWidgets;
     QProgressBar *m_installProgress;

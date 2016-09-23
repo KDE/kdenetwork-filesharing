@@ -74,6 +74,15 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     properties->setFileSharingPage(vbox);
     QVBoxLayout *vLayoutMaster = new QVBoxLayout(vbox);
 
+    m_failedSambaWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_failedSambaWidgets);
+    QVBoxLayout *vFailedLayout = new QVBoxLayout(m_failedSambaWidgets);
+    vFailedLayout->setAlignment(Qt::AlignJustify);
+    vFailedLayout->setMargin(0);
+    vFailedLayout->addWidget(new QLabel(i18n("The Samba package failed to install."), m_failedSambaWidgets));
+    vFailedLayout->addStretch();
+    m_failedSambaWidgets->hide();
+
     m_installSambaWidgets = new QWidget(vbox);
     vLayoutMaster->addWidget(m_installSambaWidgets);
     QVBoxLayout *vLayout = new QVBoxLayout(m_installSambaWidgets);
@@ -160,8 +169,13 @@ void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
 
 void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
 {
-    m_installSambaWidgets->hide();
-    m_shareWidgets->show();
+    if (status == PackageKit::Transaction::ExitSuccess) {
+        m_installSambaWidgets->hide();
+        m_shareWidgets->show();
+    } else {
+        m_installSambaWidgets->hide();
+        m_failedSambaWidgets->show();
+    }
 }
 #endif // SAMBA_INSTALL
 

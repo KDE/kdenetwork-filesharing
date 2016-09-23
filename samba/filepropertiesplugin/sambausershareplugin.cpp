@@ -145,7 +145,7 @@ void SambaUserSharePlugin::installSamba()
 {
     QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
     PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package,
-                                                   PackageKit::Transaction::FilterNone);
+                                                   PackageKit::Transaction::FilterArch);
     connect(transaction,
             SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
             SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));

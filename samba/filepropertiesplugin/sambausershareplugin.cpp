@@ -55,7 +55,7 @@ static bool isSambaInstalled()
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
-    , m_url(properties->url().toLocalFile())
+    , m_url(properties->item().mostLocalUrl().toLocalFile())
     , shareData()
 {
     Q_UNUSED(args);

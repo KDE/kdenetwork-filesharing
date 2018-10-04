@@ -27,7 +27,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
 )
 
-find_package(PackageKitQt5 0.9.5)
+find_package(PackageKitQt5)
 set_package_properties(PackageKitQt5
     PROPERTIES DESCRIPTION "Software Manager integration"
     TYPE OPTIONAL

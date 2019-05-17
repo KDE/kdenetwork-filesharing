@@ -32,6 +32,9 @@
      </property>
      <item row="0" column="0">
       <widget class="QLabel" name="textLabel1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <property name="text">
         <string>Name:</string>
        </property>
@@ -50,7 +53,7 @@
      <item>
       <widget class="QCheckBox" name="sambaAllowGuestChk">
        <property name="enabled">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
        <property name="text">
         <string>Allow Guests</string>

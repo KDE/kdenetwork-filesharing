@@ -238,10 +238,13 @@ void SambaUserSharePlugin::applyChanges()
 void SambaUserSharePlugin::toggleShareStatus(bool checked)
 {
     propertiesUi.sambaNameEdit->setEnabled(checked);
-    propertiesUi.sambaAllowGuestChk->setCheckable(checked);
+    propertiesUi.sambaNameEdit->setEnabled(checked);
+    propertiesUi.sambaAllowGuestChk->setEnabled(checked);
     propertiesUi.tableView->setEnabled(checked);
     if (checked && propertiesUi.sambaNameEdit->text().isEmpty()) {
         propertiesUi.sambaNameEdit->setText(getNewShareName());
+    } else {
+        propertiesUi.sambaNameEdit->setText(QString());
     }
 }
 

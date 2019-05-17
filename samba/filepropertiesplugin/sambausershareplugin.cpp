@@ -241,7 +241,7 @@ void SambaUserSharePlugin::applyChanges()
 
 void SambaUserSharePlugin::toggleShareStatus(bool checked)
 {
-    propertiesUi.sambaNameEdit->setEnabled(checked);
+    propertiesUi.textLabel1->setEnabled(checked);
     propertiesUi.sambaNameEdit->setEnabled(checked);
     propertiesUi.sambaAllowGuestChk->setEnabled(checked);
     propertiesUi.tableView->setEnabled(checked);

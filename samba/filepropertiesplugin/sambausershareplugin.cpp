@@ -89,7 +89,9 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayout->setAlignment(Qt::AlignJustify);
     vLayout->setMargin(0);
 
-    vLayout->addWidget(new QLabel(i18n("Samba must be installed before folders can be shared."), m_installSambaWidgets));
+    m_sambaStatusMessage = new QLabel(i18n("Samba must be installed before folders can be shared."));
+    m_sambaStatusMessage->setAlignment(Qt::AlignCenter);
+    vLayout->addWidget(m_sambaStatusMessage);
 
 #ifdef SAMBA_INSTALL
     m_installSambaButton = new QPushButton(i18n("Install Samba"), m_installSambaWidgets);
@@ -149,6 +151,8 @@ void SambaUserSharePlugin::installSamba()
     connect(transaction,
             SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
             SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+
+    m_sambaStatusMessage->setText(i18n("Installing Samba..."));
     m_installProgress->setMaximum(0);
     m_installProgress->setMinimum(0);
     m_installProgress->show();

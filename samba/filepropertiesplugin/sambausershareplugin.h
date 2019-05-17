@@ -23,6 +23,7 @@
 
 #include <QVariant>
 #include <QComboBox>
+#include <QLabel>
 #include <QProgressBar>
 #include <QPushButton>
 #ifdef SAMBA_INSTALL
@@ -66,6 +67,7 @@ private:
     QWidget *m_failedSambaWidgets;
     QWidget *m_installSambaWidgets;
     QWidget *m_shareWidgets;
+    QLabel  *m_sambaStatusMessage;
     QProgressBar *m_installProgress;
     QPushButton *m_installSambaButton;
 

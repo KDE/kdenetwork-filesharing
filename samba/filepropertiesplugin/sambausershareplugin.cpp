@@ -89,10 +89,10 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayout->setAlignment(Qt::AlignJustify);
     vLayout->setMargin(0);
 
-    vLayout->addWidget(new QLabel(i18n("Samba is not installed on your system."), m_installSambaWidgets));
+    vLayout->addWidget(new QLabel(i18n("Samba must be installed before folders can be shared."), m_installSambaWidgets));
 
 #ifdef SAMBA_INSTALL
-    m_installSambaButton = new QPushButton(i18n("Install Samba..."), m_installSambaWidgets);
+    m_installSambaButton = new QPushButton(i18n("Install Samba"), m_installSambaWidgets);
     m_installSambaButton->setDefault(false);
     vLayout->addWidget(m_installSambaButton);
     connect(m_installSambaButton, SIGNAL(clicked()), SLOT(installSamba()));

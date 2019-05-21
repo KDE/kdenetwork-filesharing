@@ -254,6 +254,11 @@ void SambaUserSharePlugin::toggleShareStatus(bool checked)
 
 void SambaUserSharePlugin::checkShareName(const QString &name)
 {
+    // Don't ever disable the OK button when the user is trying to remove a share
+    if (!propertiesUi.sambaChk->isChecked()) {
+        return;
+    }
+
     bool disableButton = false;
 
     if (name.isEmpty()) {

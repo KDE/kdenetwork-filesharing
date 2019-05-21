@@ -146,29 +146,29 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 void SambaUserSharePlugin::installSamba()
 {
     QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
-    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(package,
-                                                   PackageKit::Transaction::FilterArch);
-    connect(transaction,
-            SIGNAL(package(PackageKit::Transaction::Info,QString,QString)),
-            SLOT(packageInstall(PackageKit::Transaction::Info,QString,QString)));
+    QStringList distroSambaPackages = package.split(QLatin1Char(','));
+
+    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(distroSambaPackages, PackageKit::Transaction::FilterArch);
+
+    QSharedPointer<QStringList> pkgids(new QStringList);
+
+    connect(transaction, &PackageKit::Transaction::package,
+            this, [pkgids] (PackageKit::Transaction::Info /*info*/, const QString& packageId, const QString& /*summary*/) { pkgids->append(packageId); });
+
+    connect(transaction, &PackageKit::Transaction::finished,
+            this, [this, pkgids] (PackageKit::Transaction::Exit exit) {
+                if (exit != PackageKit::Transaction::ExitSuccess) { return; }
+                auto installTransaction = PackageKit::Daemon::installPackages(*pkgids);
+                connect(installTransaction, &PackageKit::Transaction::finished,
+                        this, &SambaUserSharePlugin::packageFinished);
+            }
+    );
 
     m_sambaStatusMessage->setText(i18n("Installing Samba..."));
     m_installProgress->setMaximum(0);
     m_installProgress->setMinimum(0);
     m_installProgress->show();
     m_installSambaButton->hide();
-}
-
-void SambaUserSharePlugin::packageInstall(PackageKit::Transaction::Info info,
-                                          const QString &packageId,
-                                          const QString &summary)
-{
-    Q_UNUSED(info);
-    Q_UNUSED(summary);
-    PackageKit::Transaction *installTransaction = PackageKit::Daemon::installPackage(packageId);
-    connect(installTransaction,
-            SIGNAL(finished(PackageKit::Transaction::Exit, uint)),
-            SLOT(packageFinished(PackageKit::Transaction::Exit, uint)));
 }
 
 void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)

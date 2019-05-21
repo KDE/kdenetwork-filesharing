@@ -53,9 +53,6 @@ private Q_SLOTS:
     void checkShareName(const QString &name);
 #ifdef SAMBA_INSTALL
     void installSamba();
-    void packageInstall(PackageKit::Transaction::Info info,
-                        const QString &packageId,
-                        const QString &summary);
     void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
 #endif // SAMBA_INSTALL
 

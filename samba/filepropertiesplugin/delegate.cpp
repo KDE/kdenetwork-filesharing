@@ -43,8 +43,6 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
     comboBox->addItem(i18n("Read Only"), QLatin1String("R"));
     comboBox->addItem(i18n("Deny"), QLatin1String("D"));
 
-    connect(comboBox, SIGNAL(activated(int)), this, SLOT(emitCommitData()));
-
     return comboBox;
 }
 
@@ -73,9 +71,4 @@ void UserPermissionDelegate::setModelData(QWidget *editor, QAbstractItemModel *m
     }
 
     model->setData(index, comboBox->itemData(comboBox->currentIndex()));
-}
-
-void UserPermissionDelegate::emitCommitData()
-{
-    emit commitData(qobject_cast<QWidget *>(sender()));
 }

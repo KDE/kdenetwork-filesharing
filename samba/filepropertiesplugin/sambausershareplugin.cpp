@@ -98,7 +98,8 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     m_installSambaButton = new QPushButton(i18n("Install Samba"), m_installSambaWidgets);
     m_installSambaButton->setDefault(false);
     vLayout->addWidget(m_installSambaButton);
-    connect(m_installSambaButton, SIGNAL(clicked()), SLOT(installSamba()));
+    connect(m_installSambaButton, &QPushButton::clicked,
+            this, &SambaUserSharePlugin::installSamba);
     m_installProgress = new QProgressBar();
     vLayout->addWidget(m_installProgress);
     m_installProgress->hide();
@@ -120,16 +121,17 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     setupViews();
     load();
 
-    connect(propertiesUi.sambaChk, SIGNAL(toggled(bool)), this, SLOT(toggleShareStatus(bool)));
-    connect(propertiesUi.sambaChk, SIGNAL(toggled(bool)), this, SIGNAL(changed()));
-    connect(propertiesUi.sambaNameEdit, SIGNAL(textChanged(QString)), this, SIGNAL(changed()));
-    connect(propertiesUi.sambaNameEdit, SIGNAL(textChanged(QString)), this, SLOT(checkShareName(QString)));
+    connect(propertiesUi.sambaChk, &QCheckBox::toggled,
+            this, &SambaUserSharePlugin::toggleShareStatus);
+    connect(propertiesUi.sambaNameEdit, &QLineEdit::textChanged,
+            this, &SambaUserSharePlugin::checkShareName);
     connect(propertiesUi.sambaAllowGuestChk, &QCheckBox::toggled,
             this, [=] (bool checked) {
                 propertiesUi.tableView->setEnabled(checked && propertiesUi.sambaChk->isChecked());
                 setDirty();
             });
-    connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), this, SIGNAL(changed()));
+    connect(model, &UserPermissionModel::dataChanged,
+            this, [=] { setDirty(); });
 
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
@@ -258,6 +260,7 @@ void SambaUserSharePlugin::toggleShareStatus(bool checked)
     } else {
         propertiesUi.sambaNameEdit->setText(QString());
     }
+    setDirty();
 }
 
 void SambaUserSharePlugin::checkShareName(const QString &name)
@@ -288,6 +291,7 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
 
     if (!properties->button(QDialogButtonBox::Ok)->isEnabled()) {
         properties->button(QDialogButtonBox::Ok)->setEnabled(true);
+        setDirty();
     }
 }
 

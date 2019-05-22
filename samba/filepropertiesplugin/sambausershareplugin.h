@@ -48,15 +48,6 @@ public:
     virtual ~SambaUserSharePlugin();
     virtual void applyChanges();
 
-private Q_SLOTS:
-    void load();
-    void toggleShareStatus(bool checked);
-    void checkShareName(const QString &name);
-#ifdef SAMBA_INSTALL
-    void installSamba();
-    void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
-#endif // SAMBA_INSTALL
-
 private:
     QString m_url;
     KSambaShareData shareData;
@@ -73,6 +64,14 @@ private:
     void setupViews();
     QStringList getUsersList();
     QString getNewShareName();
+    void load();
+    void toggleShareStatus(bool checked);
+    void checkShareName(const QString &name);
+#ifdef SAMBA_INSTALL
+    void installSamba();
+    void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
+#endif // SAMBA_INSTALL
+
 
 };
 

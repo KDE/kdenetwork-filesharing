@@ -2,6 +2,7 @@
   Copyright (c) 2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
   Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
   Copyright (c) 2015 Harald Sitter <sitter@kde.org>
+  Copyright (c) 2019 Nate Graham <nate@kde.org>
 
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

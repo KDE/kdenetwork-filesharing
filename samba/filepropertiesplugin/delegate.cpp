@@ -1,5 +1,6 @@
 /*
- * Copyright 2011  Rodrigo Belem <rclbelem@gmail.com>
+ * Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
+ * Copyright (c) 2019 Nate Graham <nate@kde.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -37,6 +38,7 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
     }
 
     QComboBox *comboBox = new QComboBox(parent);
+    comboBox->setMinimumContentsLength(200);
     comboBox->addItem(i18n("---"));
     comboBox->addItem(i18n("Full Control"), QLatin1String("F"));
     comboBox->addItem(i18n("Read Only"), QLatin1String("R"));

@@ -197,6 +197,7 @@ void SambaUserSharePlugin::setupViews()
     propertiesUi.tableView->setModel(model);
     propertiesUi.tableView->setSelectionMode(QAbstractItemView::NoSelection);
     propertiesUi.tableView->setItemDelegate(new UserPermissionDelegate(this));
+    propertiesUi.tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
 }
 
 void SambaUserSharePlugin::load()

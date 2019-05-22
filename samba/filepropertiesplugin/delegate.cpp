@@ -38,7 +38,6 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
     }
 
     QComboBox *comboBox = new QComboBox(parent);
-    comboBox->setMinimumContentsLength(200);
     comboBox->addItem(i18n("---"));
     comboBox->addItem(i18n("Full Control"), QLatin1String("F"));
     comboBox->addItem(i18n("Read Only"), QLatin1String("R"));

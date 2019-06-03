@@ -33,6 +33,7 @@
 #include <KPluginLoader>
 #include <KSambaShare>
 #include <KSambaShareData>
+#include <ktoolinvocation.h>
 
 #include "sambausershareplugin.h"
 #include "model.h"
@@ -132,6 +133,10 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
             });
     connect(model, &UserPermissionModel::dataChanged,
             this, [=] { setDirty(); });
+    connect(propertiesUi.sambaStatusMonitorButton, &QPushButton::clicked,
+            this, [] {
+                KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("smbstatus"));
+            });
 
     for (int i = 0; i < model->rowCount(); ++i) {
         propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));

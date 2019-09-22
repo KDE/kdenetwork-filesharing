@@ -80,7 +80,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayoutMaster->addWidget(m_failedSambaWidgets);
     QVBoxLayout *vFailedLayout = new QVBoxLayout(m_failedSambaWidgets);
     vFailedLayout->setAlignment(Qt::AlignJustify);
-    vFailedLayout->setMargin(0);
+    vFailedLayout->setContentsMargins(0, 0, 0, 0);
     vFailedLayout->addWidget(new QLabel(i18n("The Samba package failed to install."), m_failedSambaWidgets));
     vFailedLayout->addStretch();
     m_failedSambaWidgets->hide();
@@ -89,7 +89,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayoutMaster->addWidget(m_installSambaWidgets);
     QVBoxLayout *vLayout = new QVBoxLayout(m_installSambaWidgets);
     vLayout->setAlignment(Qt::AlignJustify);
-    vLayout->setMargin(0);
+    vLayout->setContentsMargins(0, 0, 0, 0);
 
     m_sambaStatusMessage = new QLabel(i18n("Samba must be installed before folders can be shared."));
     m_sambaStatusMessage->setAlignment(Qt::AlignCenter);

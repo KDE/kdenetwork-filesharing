@@ -40,7 +40,6 @@
 #include "delegate.h"
 
 K_PLUGIN_FACTORY(SambaUserSharePluginFactory, registerPlugin<SambaUserSharePlugin>();)
-K_EXPORT_PLUGIN(SambaUserSharePluginFactory("fileshare_propsdlgplugin"))
 
 // copied from kio/src/core/ksambashare.cpp, KSambaSharePrivate::isSambaInstalled()
 static bool isSambaInstalled()

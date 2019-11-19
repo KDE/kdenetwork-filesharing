@@ -299,7 +299,7 @@ void SambaUserSharePlugin::checkShareName(const QString &name)
     }
 }
 
-QString SambaUserSharePlugin::getNewShareName()
+QString SambaUserSharePlugin::getNewShareName() const
 {
     QString shareName = QUrl(m_url).fileName();
 

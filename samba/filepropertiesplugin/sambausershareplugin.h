@@ -46,7 +46,7 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
 public:
     SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
     virtual ~SambaUserSharePlugin();
-    virtual void applyChanges();
+    void applyChanges() override;
 
 private:
     QString m_url;
@@ -62,8 +62,7 @@ private:
 
     void setupModel();
     void setupViews();
-    QStringList getUsersList();
-    QString getNewShareName();
+    QString getNewShareName() const;
     void load();
     void toggleShareStatus(bool checked);
     void checkShareName(const QString &name);

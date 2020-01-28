@@ -85,7 +85,8 @@ QStringList UserPermissionModel::getUsersList() const
             continue;
         }
         KUser user(username);
-        if (user.userId().nativeId() >= defminuid) {
+        const uid_t nativeId = user.userId().nativeId();
+        if (nativeId >= defminuid && nativeId <= defmaxuid) {
             userList << username;
         }
     }

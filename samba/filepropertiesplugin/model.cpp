@@ -20,6 +20,9 @@
 
 #include <kuser.h>
 
+#include <QFile>
+#include <QRegularExpression>
+
 #include <sys/stat.h>
 
 #include "model.h"
@@ -51,31 +54,29 @@ void UserPermissionModel::setupData()
 
 QStringList UserPermissionModel::getUsersList() const
 {
-    unsigned int defminuid;
-    unsigned int defmaxuid;
+    uid_t defminuid = 1000;
+    uid_t defmaxuid = 65000;
 
-#ifdef __linux__
-    struct stat st;
-    if (!stat("/etc/debian_version", &st)) { /* debian */
-        defminuid = 1000;
-        defmaxuid = 29999;
-    } else if (!stat("/usr/portage", &st)) { /* gentoo */
-        defminuid = 1000;
-        defmaxuid = 65000;
-    } else if (!stat("/etc/mandrake-release", &st)) { /* mandrake - check before redhat! */
-        defminuid = 500;
-        defmaxuid = 65000;
-    } else if (!stat("/etc/redhat-release", &st)) { /* redhat */
-        defminuid = 100;
-        defmaxuid = 65000;
-    } else /* if (!stat("/etc/SuSE-release", &st)) */ { /* suse */
-        defminuid = 500;
-        defmaxuid = 65000;
+    QFile loginDefs(QStringLiteral("/etc/login.defs"));
+    if (loginDefs.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        while (!loginDefs.atEnd()) {
+            const QString line = QString::fromLatin1(loginDefs.readLine());
+            {
+                const QRegularExpression expression(QStringLiteral("^\\s*UID_MIN\\s+(?<UID_MIN>\\d+)"));
+                const auto match = expression.match(line);
+                if (match.hasMatch()) {
+                    defminuid = match.captured(u"UID_MIN").toUInt();
+                }
+            }
+            {
+                const QRegularExpression expression(QStringLiteral("^\\s*UID_MAX\\s+(?<UID_MAX>\\d+)"));
+                const auto match = expression.match(line);
+                if (match.hasMatch()) {
+                    defmaxuid = match.captured(u"UID_MAX").toUInt();
+                }
+            }
+        }
     }
-#else
-    defminuid = 1000;
-    defmaxuid = 65000;
-#endif
 
     QStringList userList;
     userList.append(QStringLiteral("Everyone"));

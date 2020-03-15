@@ -20,9 +20,12 @@
 
 */
 
+#include <QDBusInterface>
+#include <QDBusPendingReply>
 #include <QDialogButtonBox>
 #include <QFileInfo>
 #include <QFrame>
+#include <QIcon>
 #include <QPushButton>
 #include <QStandardPaths>
 #include <QStringList>
@@ -95,6 +98,20 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayout->addWidget(m_sambaStatusMessage);
 
 #ifdef SAMBA_INSTALL
+    m_justInstalledSambaWidgets = new QWidget(vbox);
+    vLayoutMaster->addWidget(m_justInstalledSambaWidgets);
+    QVBoxLayout *vJustInstalledLayout = new QVBoxLayout(m_justInstalledSambaWidgets);
+    vJustInstalledLayout->setAlignment(Qt::AlignJustify);
+    vJustInstalledLayout->addWidget(new QLabel(i18n("Restart the computer to complete the installation."), m_justInstalledSambaWidgets));
+    m_restartButton = new QPushButton(i18n("Restart"), m_justInstalledSambaWidgets);
+    m_restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));
+    connect(m_restartButton, &QPushButton::clicked,
+            this, &SambaUserSharePlugin::reboot);
+    vJustInstalledLayout->addWidget(m_restartButton);
+    vJustInstalledLayout->addStretch();
+    m_restartButton->setDefault(false);
+    m_justInstalledSambaWidgets->hide();
+
     m_installSambaButton = new QPushButton(i18n("Install Samba"), m_installSambaWidgets);
     m_installSambaButton->setDefault(false);
     vLayout->addWidget(m_installSambaButton);
@@ -188,12 +205,19 @@ void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status,
     if (status == PackageKit::Transaction::ExitSuccess) {
         m_installSambaWidgets->hide();
         m_failedSambaWidgets->hide();
-        m_shareWidgets->show();
+        m_shareWidgets->hide();
+        m_justInstalledSambaWidgets->show();
     } else {
         m_shareWidgets->hide();
         m_installSambaWidgets->hide();
         m_failedSambaWidgets->show();
     }
+}
+
+void SambaUserSharePlugin::reboot()
+{
+    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
+    interface.asyncCall(QStringLiteral("logout"), 0, 1, 2); // Options: do not ask again | reboot | force
 }
 #endif // SAMBA_INSTALL
 

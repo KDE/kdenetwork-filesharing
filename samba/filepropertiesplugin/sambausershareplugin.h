@@ -59,6 +59,10 @@ private:
     QLabel  *m_sambaStatusMessage;
     QProgressBar *m_installProgress;
     QPushButton *m_installSambaButton;
+#ifdef SAMBA_INSTALL
+    QWidget *m_justInstalledSambaWidgets;
+    QPushButton *m_restartButton;
+#endif // SAMBA_INSTALL
 
     void setupModel();
     void setupViews();
@@ -69,6 +73,7 @@ private:
 #ifdef SAMBA_INSTALL
     void installSamba();
     void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
+    void reboot();
 #endif // SAMBA_INSTALL
 
 

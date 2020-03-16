@@ -1,1 +1,2 @@
+add_subdirectory(aclproperties)
 add_subdirectory(filepropertiesplugin)

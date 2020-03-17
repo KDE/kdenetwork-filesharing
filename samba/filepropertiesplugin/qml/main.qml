@@ -18,7 +18,7 @@ QQC2.StackView {
     property var pendingStack: []
 
     initialItem: QQC2.BusyIndicator {
-        running: true
+        running: !Samba.Plugin.ready
 
         onRunningChanged: {
             if (running) {
@@ -26,6 +26,9 @@ QQC2.StackView {
             }
 
             pendingStack.push("ACLPage.qml")
+            if (!Samba.UserManager.currentUser().inSamba) {
+                pendingStack.push("UserPage.qml")
+            }
             if (!Samba.Plugin.isSambaInstalled()) {
                 // NB: Samba.Installer may be not set when built without installer support
                 if (Samba.Installer === undefined) {
@@ -39,7 +42,4 @@ QQC2.StackView {
             stack.push(pendingStack.pop())
         }
     }
-
-    // Currently plugin doesn't lazy load anything. This is going to change eventually.
-    Component.onCompleted: initialItem.running = false
 }

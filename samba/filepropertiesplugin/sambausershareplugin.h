@@ -14,11 +14,13 @@
 
 class UserPermissionModel;
 class ShareContext;
+class UserManager;
 
 class SambaUserSharePlugin : public KPropertiesDialogPlugin
 {
     Q_OBJECT
     Q_PROPERTY(bool dirty READ isDirty WRITE setDirty NOTIFY changed) // So qml can mark dirty
+    Q_PROPERTY(bool ready READ isReady NOTIFY readyChanged) // intentionally not writable from qml
 public:
     SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
     ~SambaUserSharePlugin() override = default;
@@ -27,13 +29,21 @@ public:
     Q_INVOKABLE static bool isSambaInstalled();
     Q_INVOKABLE static void showSambaStatus();
 
+    bool isReady() const;
+
+Q_SIGNALS:
+    void readyChanged();
+
 private:
+    void setReady(bool ready);
+    void reportAdd(KSambaShareData::UserShareError error);
+    void reportRemove(KSambaShareData::UserShareError error);
+
     const QString m_url;
     ShareContext *m_context= nullptr;
     UserPermissionModel *m_model = nullptr;
-
-    void reportAdd(KSambaShareData::UserShareError error);
-    void reportRemove(KSambaShareData::UserShareError error);
+    UserManager *m_userManager = nullptr;
+    bool m_ready = false;
 };
 
 #endif // SAMBAUSERSHAREPLUGIN_H

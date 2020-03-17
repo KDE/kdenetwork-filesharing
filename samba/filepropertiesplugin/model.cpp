@@ -13,10 +13,11 @@
 #include <sys/stat.h>
 
 #include "model.h"
+#include "usermanager.h"
 
-UserPermissionModel::UserPermissionModel(const KSambaShareData &shareData, QObject *parent)
+UserPermissionModel::UserPermissionModel(const KSambaShareData &shareData, UserManager *userManager, QObject *parent)
     : QAbstractTableModel(parent)
-    , m_userList(getUsersList())
+    , m_userManager(userManager)
     , m_shareData(shareData)
     , m_usersAcl()
 {
@@ -42,53 +43,13 @@ void UserPermissionModel::setupData()
     }
 }
 
-QStringList UserPermissionModel::getUsersList()
-{
-    uid_t defminuid = 1000;
-    uid_t defmaxuid = 65000;
 
-    QFile loginDefs(QStringLiteral("/etc/login.defs"));
-    if (loginDefs.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        while (!loginDefs.atEnd()) {
-            const QString line = QString::fromLatin1(loginDefs.readLine());
-            {
-                const QRegularExpression expression(QStringLiteral("^\\s*UID_MIN\\s+(?<UID_MIN>\\d+)"));
-                const auto match = expression.match(line);
-                if (match.hasMatch()) {
-                    defminuid = match.captured(u"UID_MIN").toUInt();
-                }
-            }
-            {
-                const QRegularExpression expression(QStringLiteral("^\\s*UID_MAX\\s+(?<UID_MAX>\\d+)"));
-                const auto match = expression.match(line);
-                if (match.hasMatch()) {
-                    defmaxuid = match.captured(u"UID_MAX").toUInt();
-                }
-            }
-        }
-    }
 
-    QStringList userList;
-    userList.append(QStringLiteral("Everyone"));
-    const QStringList userNames = KUser::allUserNames();
-    for (const QString &username : userNames) {
-        if (username == QLatin1String("nobody")) {
-            continue;
-        }
-        KUser user(username);
-        const uid_t nativeId = user.userId().nativeId();
-        if (nativeId >= defminuid && nativeId <= defmaxuid) {
-            userList << username;
-        }
-    }
-
-    return userList;
-}
 
 int UserPermissionModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return m_userList.count();
+    return m_userManager->users().count();
 }
 
 int UserPermissionModel::columnCount(const QModelIndex &parent) const
@@ -100,13 +61,13 @@ int UserPermissionModel::columnCount(const QModelIndex &parent) const
 QVariant UserPermissionModel::data(const QModelIndex &index, int role) const
 {
     if ((role == Qt::DisplayRole) && (index.column() == ColumnUsername)) {
-        return QVariant(m_userList.at(index.row()));
+        return QVariant(m_userManager->users().at(index.row())->name());
     }
 
     if ((role == Qt::DisplayRole || role == Qt::EditRole) && (index.column() == ColumnAccess)) {
         QMap<QString, QVariant>::ConstIterator itr;
         for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
-            if (itr.key().endsWith(m_userList.at(index.row()))) {
+            if (itr.key().endsWith(m_userManager->users().at(index.row())->name())) {
                 return itr.value();
             }
         }
@@ -137,14 +98,14 @@ bool UserPermissionModel::setData(const QModelIndex &index, const QVariant &valu
     QString key;
     QMap<QString, QVariant>::ConstIterator itr;
     for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
-        if (itr.key().endsWith(m_userList.at(index.row()))) {
+        if (itr.key().endsWith(m_userManager->users().at(index.row())->name())) {
             key = itr.key();
             break;
         }
     }
 
     if (key.isEmpty()) {
-        key = m_userList.at(index.row());
+        key = m_userManager->users().at(index.row())->name();
     }
 
     if (value.isNull()) {

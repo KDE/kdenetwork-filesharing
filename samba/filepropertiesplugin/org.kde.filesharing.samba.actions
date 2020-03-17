@@ -1,0 +1,20 @@
+[Domain]
+Icon=preferences-system-network-share-windows
+URL=https://www.kde.org
+Name=KIO Samba Sharing
+
+[org.kde.filesharing.samba.isuserknown]
+# Always allow, there is nothing being written from this nor can one read anything special.
+Policy=yes
+PolicyInactive=yes
+Name=Is Samba User Known
+Description=Checking if Samba user exists
+
+[org.kde.filesharing.samba.createuser]
+# TODO: this could be split into a sepearate action createcurrentuser which only
+#   requires auth_self BUT it first needs kauth to grow the ability to resolve the dbus UID of the unprivileged
+#   remote (the client)
+Policy=auth_admin
+PolicyInactive=auth_admin
+Name=Creating New Samba User
+Description=Creating new Samba user

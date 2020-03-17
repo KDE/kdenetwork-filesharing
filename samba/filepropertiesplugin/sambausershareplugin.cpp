@@ -17,6 +17,8 @@
 #include <QMetaMethod>
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <QTimer>
+#include <QPushButton>
 
 #include <KMessageBox>
 #include <KPluginFactory>
@@ -27,6 +29,7 @@
 #include <KIO/ApplicationLauncherJob>
 
 #include "model.h"
+#include "usermanager.h"
 
 #ifdef SAMBA_INSTALL
 #include "sambainstaller.h"
@@ -144,6 +147,7 @@ private:
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
     , m_url(properties->item().mostLocalUrl().toLocalFile())
+    , m_userManager(new UserManager(this))
 {
     Q_UNUSED(args)
 
@@ -159,7 +163,10 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     // TODO: this could be made to load delayed via invokemethod. we technically don't need to fully load
     //   the backing data in the ctor, only the qml view with busyindicator
     m_context = new ShareContext(properties->item().mostLocalUrl(), this);
-    m_model = new UserPermissionModel(m_context->m_shareData, this);
+    // FIXME maybe the manager ought to be owned by the model
+    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "UserManager", m_userManager);
+    qmlRegisterUncreatableType<User>("org.kde.filesharing.samba", 1, 0, "User", QStringLiteral("Only created by UserManager"));
+    m_model = new UserPermissionModel(m_context->m_shareData, m_userManager, this);
 
 #ifdef SAMBA_INSTALL
     auto installer = new SambaInstaller;
@@ -188,7 +195,19 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     const QUrl url(QStringLiteral("qrc:/org.kde.filesharing.samba/qml/main.qml"));
     widget->setSource(url);
 
-    properties->addPage(page, i18nc("@title:tab", "Share"));
+    auto item = properties->addPage(page, i18nc("@title:tab", "Share"));
+    if (qEnvironmentVariableIsSet("TEST_FOCUS_SHARE")) {
+        QTimer::singleShot(100, [item, this] {
+            properties->setCurrentPage(item);
+        });
+    }
+
+    QTimer::singleShot(0, [this] {
+        connect(m_userManager, &UserManager::loaded, this, [this] {
+            setReady(true);
+        });
+        m_userManager->load();
+    });
 }
 
 bool SambaUserSharePlugin::isSambaInstalled()
@@ -307,5 +326,15 @@ void SambaUserSharePlugin::reportRemove(KSambaShareData::UserShareError error)
                        i18nc("@info/title", "Failed to Remove Network Share"));
 }
 
+bool SambaUserSharePlugin::isReady() const
+{
+    return m_ready;
+}
+
+void SambaUserSharePlugin::setReady(bool ready)
+{
+    m_ready = ready;
+    Q_EMIT readyChanged();
+}
 
 #include "sambausershareplugin.moc"

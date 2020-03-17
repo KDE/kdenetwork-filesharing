@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 */
 
 #ifndef model_h
@@ -11,6 +12,7 @@
 #include <ksambasharedata.h>
 
 class KSambaShareData;
+class UserManager;
 
 class UserPermissionModel : public QAbstractTableModel
 {
@@ -22,7 +24,7 @@ public:
     };
     Q_ENUM(Column)
 
-    explicit UserPermissionModel(const KSambaShareData &shareData, QObject *parent = nullptr);
+    explicit UserPermissionModel(const KSambaShareData &shareData, UserManager *userManager, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -35,12 +37,11 @@ public:
     QString getAcl() const;
 
 private:
-    const QStringList m_userList;
+    UserManager const *m_userManager = nullptr;
     const KSambaShareData m_shareData;
     QVariantMap m_usersAcl;
 
     Q_INVOKABLE void setupData();
-    static QStringList getUsersList();
 };
 
 #endif

@@ -1,6 +1,10 @@
 ########### next target ###############
 
-set(sambausershareplugin_PART_SRCS sambausershareplugin.cpp model.cpp)
+set(sambausershareplugin_PART_SRCS
+    sambausershareplugin.cpp
+    model.cpp
+    usermanager.cpp
+)
 
 if(SAMBA_INSTALL)
     list(APPEND sambausershareplugin_PART_SRCS sambainstaller.cpp)
@@ -17,6 +21,7 @@ target_link_libraries(sambausershareplugin
     KF5::KIOWidgets
     Qt5::Qml
     Qt5::QuickWidgets
+    KF5::Auth
     KF5::Declarative
 )
 
@@ -26,3 +31,12 @@ endif()
 
 install(TARGETS sambausershareplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES sambausershareplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+
+# kauth
+
+kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)
+add_executable(authhelper authhelper.cpp)
+target_link_libraries(authhelper KF5::AuthCore KF5::ConfigCore KF5::I18n)
+
+kauth_install_helper_files(authhelper org.kde.filesharing.samba root)
+install(TARGETS authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

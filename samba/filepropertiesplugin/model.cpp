@@ -39,7 +39,11 @@ UserPermissionModel::UserPermissionModel(KSambaShareData &shareData, QObject *pa
 void UserPermissionModel::setupData()
 {
     QStringList acl = shareData.acl().split(QStringLiteral(","),
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                                             QString::SkipEmptyParts);
+#else
+                                            Qt::SkipEmptyParts);
+#endif
 
     QList<QString>::const_iterator itr;
     for (itr = acl.constBegin(); itr != acl.constEnd(); ++itr) {

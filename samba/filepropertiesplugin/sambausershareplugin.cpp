@@ -62,7 +62,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         return;
     }
 
-    QFileInfo pathInfo(m_url);
+    const QFileInfo pathInfo(m_url);
     if (!pathInfo.permission(QFile::ReadUser | QFile::WriteUser)) {
         return;
     }
@@ -122,7 +122,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     vLayoutMaster->addWidget(m_shareWidgets);
     propertiesUi.setupUi(m_shareWidgets);
 
-    QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
+    const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
 
     if (!shareList.isEmpty()) {
         shareData = shareList.at(0); // FIXME: using just the first in the list for a while
@@ -167,7 +167,7 @@ SambaUserSharePlugin::~SambaUserSharePlugin()
 #ifdef SAMBA_INSTALL
 void SambaUserSharePlugin::installSamba()
 {
-    QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
+    const QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
     QStringList distroSambaPackages = package.split(QLatin1Char(','));
 
     PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(distroSambaPackages, PackageKit::Transaction::FilterArch);
@@ -175,7 +175,8 @@ void SambaUserSharePlugin::installSamba()
     QSharedPointer<QStringList> pkgids(new QStringList);
 
     connect(transaction, &PackageKit::Transaction::package,
-            this, [pkgids] (PackageKit::Transaction::Info /*info*/, const QString& packageId, const QString& /*summary*/) { pkgids->append(packageId); });
+            this, [pkgids](PackageKit::Transaction::Info /*info*/, const QString &packageId,
+                           const QString & /*summary*/) { pkgids->append(packageId); });
 
     connect(transaction, &PackageKit::Transaction::finished,
             this, [this, pkgids] (PackageKit::Transaction::Exit exit) {
@@ -232,7 +233,7 @@ void SambaUserSharePlugin::setupViews()
 void SambaUserSharePlugin::load()
 {
     bool guestAllowed = false;
-    bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_url);
+    const bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_url);
 
     propertiesUi.sambaChk->setChecked(sambaShared);
     toggleShareStatus(sambaShared);

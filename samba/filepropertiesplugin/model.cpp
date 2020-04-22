@@ -29,16 +29,16 @@
 
 UserPermissionModel::UserPermissionModel(KSambaShareData &shareData, QObject *parent)
     : QAbstractTableModel(parent)
-    , userList(getUsersList())
-    , shareData(shareData)
-    , usersAcl()
+    , m_userList(getUsersList())
+    , m_shareData(shareData)
+    , m_usersAcl()
 {
     setupData();
 }
 
 void UserPermissionModel::setupData()
 {
-    QStringList acl = shareData.acl().split(QStringLiteral(","),
+    const QStringList acl = m_shareData.acl().split(QLatin1Char(','),
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                                             QString::SkipEmptyParts);
 #else
@@ -47,11 +47,11 @@ void UserPermissionModel::setupData()
 
     QList<QString>::const_iterator itr;
     for (itr = acl.constBegin(); itr != acl.constEnd(); ++itr) {
-        QStringList userInfo = (*itr).trimmed().split(QLatin1Char(':'));
-        usersAcl.insert(userInfo.at(0), QVariant(userInfo.at(1)));
+        const QStringList userInfo = (*itr).trimmed().split(QLatin1Char(':'));
+        m_usersAcl.insert(userInfo.at(0), userInfo.at(1));
     }
-    if (usersAcl.isEmpty()) {
-        usersAcl.insert(QStringLiteral("Everyone"), QStringLiteral("R"));
+    if (m_usersAcl.isEmpty()) {
+        m_usersAcl.insert(QStringLiteral("Everyone"), QStringLiteral("R"));
     }
 }
 
@@ -83,8 +83,9 @@ QStringList UserPermissionModel::getUsersList() const
 
     QStringList userList;
     userList.append(QStringLiteral("Everyone"));
-    foreach (const QString &username, KUser::allUserNames()) {
-        if (username == QStringLiteral("nobody")) {
+    const QStringList userNames = KUser::allUserNames();
+    for (const QString &username : userNames) {
+        if (username == QLatin1String("nobody")) {
             continue;
         }
         KUser user(username);
@@ -100,7 +101,7 @@ QStringList UserPermissionModel::getUsersList() const
 int UserPermissionModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return userList.count();
+    return m_userList.count();
 }
 
 int UserPermissionModel::columnCount(const QModelIndex &parent) const
@@ -112,13 +113,13 @@ int UserPermissionModel::columnCount(const QModelIndex &parent) const
 QVariant UserPermissionModel::data(const QModelIndex &index, int role) const
 {
     if ((role == Qt::DisplayRole) && (index.column() == 0)) {
-        return QVariant(userList.at(index.row()));
+        return QVariant(m_userList.at(index.row()));
     }
 
     if ((role == Qt::DisplayRole || role == Qt::EditRole) && (index.column() == 1)) {
         QMap<QString, QVariant>::ConstIterator itr;
-        for (itr = usersAcl.constBegin(); itr != usersAcl.constEnd(); ++itr) {
-            if (itr.key().endsWith(userList.at(index.row()))) {
+        for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
+            if (itr.key().endsWith(m_userList.at(index.row()))) {
                 return itr.value();
             }
         }
@@ -148,24 +149,24 @@ bool UserPermissionModel::setData(const QModelIndex &index, const QVariant &valu
 
     QString key;
     QMap<QString, QVariant>::ConstIterator itr;
-    for (itr = usersAcl.constBegin(); itr != usersAcl.constEnd(); ++itr) {
-        if (itr.key().endsWith(userList.at(index.row()))) {
+    for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
+        if (itr.key().endsWith(m_userList.at(index.row()))) {
             key = itr.key();
             break;
         }
     }
 
     if (key.isEmpty()) {
-        key = userList.at(index.row());
+        key = m_userList.at(index.row());
     }
 
     if (value.isNull()) {
-        usersAcl.take(key);
+        m_usersAcl.take(key);
     } else {
-        usersAcl.insert(key, value);
+        m_usersAcl.insert(key, value);
     }
 
-    emit dataChanged(index, index);
+    Q_EMIT dataChanged(index, index);
     return true;
 }
 
@@ -174,11 +175,11 @@ QString UserPermissionModel::getAcl() const
     QString result;
 
     QMap<QString, QVariant>::ConstIterator itr;
-    for (itr = usersAcl.constBegin(); itr != usersAcl.constEnd(); ++itr) {
+    for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
         if (!itr.value().toString().isEmpty()) {
             result.append(itr.key() + QStringLiteral(":") + itr.value().toString().toLower());
-            if (itr != (usersAcl.constEnd() - 1)) {
-                result.append(QStringLiteral(","));
+            if (itr != (m_usersAcl.constEnd() - 1)) {
+                result.append(QLatin1Char(','));
             }
         }
     }

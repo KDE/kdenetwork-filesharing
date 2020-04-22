@@ -62,6 +62,11 @@ add_feature_info("Samba Installation" SAMBA_INSTALL "Automatic installation of '
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kfileshare\")
 
+add_definitions(
+        -DQT_NO_FOREACH
+        -DQT_NO_EMIT
+)
+
 add_subdirectory(samba)
 
 install(FILES org.kde.kdenetwork-filesharing.metainfo.xml

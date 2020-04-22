@@ -45,9 +45,9 @@ public:
     QString getAcl() const;
 
 private:
-    QStringList userList;
-    KSambaShareData shareData;
-    QVariantMap usersAcl;
+    QStringList m_userList;
+    KSambaShareData m_shareData;
+    QVariantMap m_usersAcl;
 
     void setupData();
     QStringList getUsersList() const;

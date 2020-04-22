@@ -34,7 +34,7 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
         const QModelIndex &index) const
 {
     if (index.column() != 1) {
-        return 0;
+        return nullptr;
     }
 
     QComboBox *comboBox = new QComboBox(parent);

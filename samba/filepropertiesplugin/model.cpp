@@ -47,12 +47,11 @@ void UserPermissionModel::setupData()
 
     QList<QString>::const_iterator itr;
     for (itr = acl.constBegin(); itr != acl.constEnd(); ++itr) {
-        QStringList userInfo = (*itr).trimmed().split(QStringLiteral(":"));
+        QStringList userInfo = (*itr).trimmed().split(QLatin1Char(':'));
         usersAcl.insert(userInfo.at(0), QVariant(userInfo.at(1)));
     }
     if (usersAcl.isEmpty()) {
-        usersAcl.insert(QStringLiteral("Everyone"),
-                        QVariant(QStringLiteral("R")));
+        usersAcl.insert(QStringLiteral("Everyone"), QStringLiteral("R"));
     }
 }
 
@@ -100,13 +99,13 @@ QStringList UserPermissionModel::getUsersList() const
 
 int UserPermissionModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return userList.count();
 }
 
 int UserPermissionModel::columnCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     return 2;
 }
 

@@ -47,14 +47,8 @@ K_PLUGIN_FACTORY(SambaUserSharePluginFactory, registerPlugin<SambaUserSharePlugi
 // copied from kio/src/core/ksambashare.cpp, KSambaSharePrivate::isSambaInstalled()
 static bool isSambaInstalled()
 {
-    if (QFile::exists(QStringLiteral("/usr/sbin/smbd"))
-            || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"))) {
-        return true;
-    }
-
-    //qDebug() << "Samba is not installed!";
-
-    return false;
+    return QFile::exists(QStringLiteral("/usr/sbin/smbd"))
+           || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"));
 }
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
@@ -62,7 +56,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     , m_url(properties->item().mostLocalUrl().toLocalFile())
     , shareData()
 {
-    Q_UNUSED(args);
+    Q_UNUSED(args)
 
     if (m_url.isEmpty()) {
         return;
@@ -151,7 +145,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
             this, [=] { setDirty(); });
     connect(propertiesUi.sambaStatusMonitorButton, &QPushButton::clicked,
             this, [] {
-                KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), QStringList() << QStringLiteral("smbstatus"));
+                KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), {QStringLiteral("smbstatus")});
             });
 
     for (int i = 0; i < model->rowCount(); ++i) {
@@ -201,7 +195,7 @@ void SambaUserSharePlugin::installSamba()
 
 void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
 {
-    Q_UNUSED(runtime);
+    Q_UNUSED(runtime)
     if (status == PackageKit::Transaction::ExitSuccess) {
         m_installSambaWidgets->hide();
         m_failedSambaWidgets->hide();
@@ -216,7 +210,8 @@ void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status,
 
 void SambaUserSharePlugin::reboot()
 {
-    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
+    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"),
+                             QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
     interface.asyncCall(QStringLiteral("logout"), 0, 1, 2); // Options: do not ask again | reboot | force
 }
 #endif // SAMBA_INSTALL
@@ -253,8 +248,6 @@ void SambaUserSharePlugin::load()
 
 void SambaUserSharePlugin::applyChanges()
 {
-    KSambaShareData::UserShareError result;
-
     if (propertiesUi.sambaChk->isChecked()) {
         if (shareData.setAcl(model->getAcl()) != KSambaShareData::UserShareAclOk) {
             return;
@@ -266,14 +259,14 @@ void SambaUserSharePlugin::applyChanges()
 
         KSambaShareData::GuestPermission guestOk(shareData.guestPermission());
 
-        guestOk = (propertiesUi.sambaAllowGuestChk->isChecked() == false)
+        guestOk = !propertiesUi.sambaAllowGuestChk->isChecked()
                   ? KSambaShareData::GuestsNotAllowed : KSambaShareData::GuestsAllowed;
 
         shareData.setGuestPermission(guestOk);
 
-        result = shareData.save();
+        shareData.save();
     } else if (KSambaShare::instance()->isDirectoryShared(m_url)) {
-        result = shareData.remove();
+        shareData.remove();
     }
 }
 

@@ -137,10 +137,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     connect(propertiesUi.sambaNameEdit, &QLineEdit::textChanged,
             this, &SambaUserSharePlugin::checkShareName);
     connect(propertiesUi.sambaAllowGuestChk, &QCheckBox::toggled,
-            this, [=] (bool checked) {
-                propertiesUi.tableView->setEnabled(checked && propertiesUi.sambaChk->isChecked());
-                setDirty();
-            });
+            this, [=] (bool checked) { setDirty(); });
     connect(model, &UserPermissionModel::dataChanged,
             this, [=] { setDirty(); });
     connect(propertiesUi.sambaStatusMonitorButton, &QPushButton::clicked,
@@ -241,8 +238,7 @@ void SambaUserSharePlugin::load()
         guestAllowed = (bool) shareData.guestPermission();
     }
     propertiesUi.sambaAllowGuestChk->setChecked(guestAllowed);
-    propertiesUi.tableView->setEnabled(propertiesUi.sambaChk->isChecked() &&
-                                       propertiesUi.sambaAllowGuestChk->isChecked());
+    propertiesUi.tableView->setEnabled(propertiesUi.sambaChk->isChecked());
 
     propertiesUi.sambaNameEdit->setText(shareData.name());
 }
@@ -276,7 +272,7 @@ void SambaUserSharePlugin::toggleShareStatus(bool checked)
     propertiesUi.textLabel1->setEnabled(checked);
     propertiesUi.sambaNameEdit->setEnabled(checked);
     propertiesUi.sambaAllowGuestChk->setEnabled(checked);
-    propertiesUi.tableView->setEnabled(checked && propertiesUi.sambaAllowGuestChk->isChecked());
+    propertiesUi.tableView->setEnabled(checked);
     if (checked && propertiesUi.sambaNameEdit->text().isEmpty()) {
         propertiesUi.sambaNameEdit->setText(getNewShareName());
     } else {

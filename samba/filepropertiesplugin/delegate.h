@@ -24,7 +24,6 @@
 
 #include <QItemDelegate>
 
-
 class UserPermissionDelegate : public QItemDelegate
 {
     Q_OBJECT

@@ -47,23 +47,23 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
 
 public:
     SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
-    virtual ~SambaUserSharePlugin();
+    ~SambaUserSharePlugin() override = default;
     void applyChanges() override;
 
 private:
     QString m_url;
     KSambaShareData shareData;
-    UserPermissionModel *model;
+    UserPermissionModel *model = nullptr;
     Ui::PropertiesPageGUI propertiesUi;
-    QWidget *m_failedSambaWidgets;
-    QWidget *m_installSambaWidgets;
-    QWidget *m_shareWidgets;
-    QLabel  *m_sambaStatusMessage;
-    QProgressBar *m_installProgress;
-    QPushButton *m_installSambaButton;
+    QWidget *m_failedSambaWidgets = nullptr;
+    QWidget *m_installSambaWidgets = nullptr;
+    QWidget *m_shareWidgets = nullptr;
+    QLabel *m_sambaStatusMessage = nullptr;
+    QProgressBar *m_installProgress = nullptr;
+    QPushButton *m_installSambaButton = nullptr;
 #ifdef SAMBA_INSTALL
-    QWidget *m_justInstalledSambaWidgets;
-    QPushButton *m_restartButton;
+    QWidget *m_justInstalledSambaWidgets = nullptr;
+    QPushButton *m_restartButton = nullptr;
 #endif // SAMBA_INSTALL
 
     void setupModel();
@@ -77,10 +77,8 @@ private:
 #ifdef SAMBA_INSTALL
     void installSamba();
     void packageFinished(PackageKit::Transaction::Exit status, uint runtime);
-    void reboot();
+    static void reboot();
 #endif // SAMBA_INSTALL
-
-
 };
 
 #endif // SAMBAUSERSHAREPLUGIN_H

@@ -56,7 +56,7 @@ void UserPermissionModel::setupData()
     }
 }
 
-QStringList UserPermissionModel::getUsersList() const
+QStringList UserPermissionModel::getUsersList()
 {
     uid_t defminuid = 1000;
     uid_t defmaxuid = 65000;

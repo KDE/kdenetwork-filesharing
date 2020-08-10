@@ -38,7 +38,7 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
         return nullptr;
     }
 
-    QComboBox *comboBox = new QComboBox(parent);
+    auto comboBox = new QComboBox(parent);
     comboBox->addItem(i18n("---"));
     comboBox->addItem(i18n("Full Control"), QLatin1String("F"));
     comboBox->addItem(i18n("Read Only"), QLatin1String("R"));
@@ -50,7 +50,7 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
 void UserPermissionDelegate::setEditorData(QWidget *editor,
         const QModelIndex &index) const
 {
-    QComboBox *comboBox = qobject_cast<QComboBox *>(editor);
+    auto comboBox = qobject_cast<QComboBox *>(editor);
     if (!comboBox || (index.column() != UserPermissionModel::ColumnAccess)) {
         return;
     }
@@ -66,7 +66,7 @@ void UserPermissionDelegate::setEditorData(QWidget *editor,
 void UserPermissionDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
         const QModelIndex &index) const
 {
-    QComboBox *comboBox = qobject_cast<QComboBox *>(editor);
+    auto comboBox = qobject_cast<QComboBox *>(editor);
     if (!comboBox || (index.column() != UserPermissionModel::ColumnAccess)) {
         return;
     }

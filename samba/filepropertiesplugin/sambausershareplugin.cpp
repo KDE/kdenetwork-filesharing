@@ -67,14 +67,14 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         return;
     }
 
-    QFrame *vbox = new QFrame();
+    auto vbox = new QFrame();
     properties->addPage(vbox, i18n("&Share"));
     properties->setFileSharingPage(vbox);
-    QVBoxLayout *vLayoutMaster = new QVBoxLayout(vbox);
+    auto vLayoutMaster = new QVBoxLayout(vbox);
 
     m_failedSambaWidgets = new QWidget(vbox);
     vLayoutMaster->addWidget(m_failedSambaWidgets);
-    QVBoxLayout *vFailedLayout = new QVBoxLayout(m_failedSambaWidgets);
+    auto vFailedLayout = new QVBoxLayout(m_failedSambaWidgets);
     vFailedLayout->setAlignment(Qt::AlignJustify);
     vFailedLayout->setContentsMargins(0, 0, 0, 0);
     vFailedLayout->addWidget(new QLabel(i18n("The Samba package failed to install."), m_failedSambaWidgets));
@@ -83,7 +83,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 
     m_installSambaWidgets = new QWidget(vbox);
     vLayoutMaster->addWidget(m_installSambaWidgets);
-    QVBoxLayout *vLayout = new QVBoxLayout(m_installSambaWidgets);
+    auto vLayout = new QVBoxLayout(m_installSambaWidgets);
     vLayout->setAlignment(Qt::AlignJustify);
     vLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -94,7 +94,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 #ifdef SAMBA_INSTALL
     m_justInstalledSambaWidgets = new QWidget(vbox);
     vLayoutMaster->addWidget(m_justInstalledSambaWidgets);
-    QVBoxLayout *vJustInstalledLayout = new QVBoxLayout(m_justInstalledSambaWidgets);
+    auto vJustInstalledLayout = new QVBoxLayout(m_justInstalledSambaWidgets);
     vJustInstalledLayout->setAlignment(Qt::AlignJustify);
     vJustInstalledLayout->addWidget(new QLabel(i18n("Restart the computer to complete the installation."), m_justInstalledSambaWidgets));
     m_restartButton = new QPushButton(i18n("Restart"), m_justInstalledSambaWidgets);
@@ -137,7 +137,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     connect(propertiesUi.sambaNameEdit, &QLineEdit::textChanged,
             this, &SambaUserSharePlugin::checkShareName);
     connect(propertiesUi.sambaAllowGuestChk, &QCheckBox::toggled,
-            this, [=] (bool checked) { setDirty(); });
+            this, [=] { setDirty(); });
     connect(model, &UserPermissionModel::dataChanged,
             this, [=] { setDirty(); });
     connect(propertiesUi.sambaStatusMonitorButton, &QPushButton::clicked,
@@ -155,10 +155,6 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         m_installSambaWidgets->hide();
         m_shareWidgets->show();
     }
-}
-
-SambaUserSharePlugin::~SambaUserSharePlugin()
-{
 }
 
 #ifdef SAMBA_INSTALL

@@ -55,7 +55,7 @@ private:
     QVariantMap m_usersAcl;
 
     void setupData();
-    QStringList getUsersList() const;
+    static QStringList getUsersList();
 };
 
 #endif

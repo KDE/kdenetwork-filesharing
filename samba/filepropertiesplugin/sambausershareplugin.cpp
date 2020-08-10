@@ -146,7 +146,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
             });
 
     for (int i = 0; i < model->rowCount(); ++i) {
-        propertiesUi.tableView->openPersistentEditor(model->index(i, 1, QModelIndex()));
+        propertiesUi.tableView->openPersistentEditor(model->index(i, UserPermissionModel::ColumnAccess, QModelIndex()));
     }
     if (!isSambaInstalled()) {
         m_installSambaWidgets->show();
@@ -224,7 +224,8 @@ void SambaUserSharePlugin::setupViews()
     propertiesUi.tableView->setModel(model);
     propertiesUi.tableView->setSelectionMode(QAbstractItemView::NoSelection);
     propertiesUi.tableView->setItemDelegate(new UserPermissionDelegate(this));
-    propertiesUi.tableView->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+    propertiesUi.tableView->horizontalHeader()->setSectionResizeMode(UserPermissionModel::ColumnAccess,
+                                                                     QHeaderView::Stretch);
 }
 
 void SambaUserSharePlugin::load()

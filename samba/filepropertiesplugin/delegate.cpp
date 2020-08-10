@@ -23,6 +23,7 @@
 #include <KLocalizedString>
 
 #include "delegate.h"
+#include "model.h"
 
 UserPermissionDelegate::UserPermissionDelegate(QObject *parent)
     : QItemDelegate(parent)
@@ -33,7 +34,7 @@ QWidget *UserPermissionDelegate::createEditor(QWidget *parent,
         const QStyleOptionViewItem & /* option */,
         const QModelIndex &index) const
 {
-    if (index.column() != 1) {
+    if (index.column() != UserPermissionModel::ColumnAccess) {
         return nullptr;
     }
 
@@ -50,7 +51,7 @@ void UserPermissionDelegate::setEditorData(QWidget *editor,
         const QModelIndex &index) const
 {
     QComboBox *comboBox = qobject_cast<QComboBox *>(editor);
-    if (!comboBox || (index.column() != 1)) {
+    if (!comboBox || (index.column() != UserPermissionModel::ColumnAccess)) {
         return;
     }
 
@@ -66,7 +67,7 @@ void UserPermissionDelegate::setModelData(QWidget *editor, QAbstractItemModel *m
         const QModelIndex &index) const
 {
     QComboBox *comboBox = qobject_cast<QComboBox *>(editor);
-    if (!comboBox || (index.column() != 1)) {
+    if (!comboBox || (index.column() != UserPermissionModel::ColumnAccess)) {
         return;
     }
 

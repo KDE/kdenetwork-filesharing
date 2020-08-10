@@ -22,6 +22,7 @@
 
 #include <QFile>
 #include <QRegularExpression>
+#include <QMetaEnum>
 
 #include <sys/stat.h>
 
@@ -107,16 +108,16 @@ int UserPermissionModel::rowCount(const QModelIndex &parent) const
 int UserPermissionModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
-    return 2;
+    return QMetaEnum::fromType<Column>().keyCount();
 }
 
 QVariant UserPermissionModel::data(const QModelIndex &index, int role) const
 {
-    if ((role == Qt::DisplayRole) && (index.column() == 0)) {
+    if ((role == Qt::DisplayRole) && (index.column() == ColumnUsername)) {
         return QVariant(m_userList.at(index.row()));
     }
 
-    if ((role == Qt::DisplayRole || role == Qt::EditRole) && (index.column() == 1)) {
+    if ((role == Qt::DisplayRole || role == Qt::EditRole) && (index.column() == ColumnAccess)) {
         QMap<QString, QVariant>::ConstIterator itr;
         for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
             if (itr.key().endsWith(m_userList.at(index.row()))) {
@@ -130,11 +131,11 @@ QVariant UserPermissionModel::data(const QModelIndex &index, int role) const
 
 Qt::ItemFlags UserPermissionModel::flags(const QModelIndex &index) const
 {
-    if (index.column() == 0) {
+    if (index.column() == ColumnUsername) {
         return Qt::ItemIsSelectable;
     }
 
-    if (index.column() == 1) {
+    if (index.column() == ColumnAccess) {
         return (Qt::ItemIsEnabled | Qt::ItemIsEditable);
     }
 
@@ -143,7 +144,7 @@ Qt::ItemFlags UserPermissionModel::flags(const QModelIndex &index) const
 
 bool UserPermissionModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
-    if ((role != Qt::EditRole) || (index.column() != 1)) {
+    if ((role != Qt::EditRole) || (index.column() != ColumnAccess)) {
         return false;
     }
 

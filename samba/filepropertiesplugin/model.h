@@ -30,8 +30,13 @@ class KSambaShareData;
 class UserPermissionModel : public QAbstractTableModel
 {
     Q_OBJECT
-
 public:
+    enum Column {
+        ColumnUsername,
+        ColumnAccess
+    };
+    Q_ENUM(Column)
+
     explicit UserPermissionModel(KSambaShareData &shareData, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

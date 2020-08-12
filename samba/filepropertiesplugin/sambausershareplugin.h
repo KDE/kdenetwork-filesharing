@@ -37,6 +37,8 @@
 
 #include "ui_sambausershareplugin.h"
 
+#include <KSambaShareData>
+
 class UserPermissionModel;
 
 class SambaUserSharePlugin : public KPropertiesDialogPlugin
@@ -70,6 +72,8 @@ private:
     void load();
     void toggleShareStatus(bool checked);
     void checkShareName(const QString &name);
+    void reportAdd(KSambaShareData::UserShareError error);
+    void reportRemove(KSambaShareData::UserShareError error);
 #ifdef SAMBA_INSTALL
     void installSamba();
     void packageFinished(PackageKit::Transaction::Exit status, uint runtime);

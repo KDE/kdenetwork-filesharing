@@ -1,7 +1,7 @@
 /*
   Copyright (c) 2004 Jan Schaefer <j_schaef@informatik.uni-kl.de>
   Copyright (c) 2011 Rodrigo Belem <rclbelem@gmail.com>
-  Copyright (c) 2015 Harald Sitter <sitter@kde.org>
+  Copyright (c) 2015-2020 Harald Sitter <sitter@kde.org>
   Copyright (c) 2019 Nate Graham <nate@kde.org>
 
   This program is free software; you can redistribute it and/or modify
@@ -262,10 +262,97 @@ void SambaUserSharePlugin::applyChanges()
 
         shareData.setGuestPermission(guestOk);
 
-        shareData.save();
+        reportAdd(shareData.save());
     } else if (KSambaShare::instance()->isDirectoryShared(m_url)) {
-        shareData.remove();
+        reportRemove(shareData.remove());
     }
+}
+
+static QString errorToString(KSambaShareData::UserShareError error)
+{
+    // KSambaShare is a right mess. Every function with an error returns the same enum but can only return a subset of
+    // possible values. Even so, because it returns the enum we had best mapped all values to semi-suitable string
+    // representations even when those are utter garbage when they require specific (e.g. an invalid ACL) that
+    // we do not have here.
+    switch (error) {
+    case KSambaShareData::UserShareNameOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserSharePathOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserShareAclOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserShareCommentOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserShareGuestsOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserShareOk:
+        // Technically anything but UserShareOk cannot happen, but best handle everything regardless.
+        return QString();
+    case KSambaShareData::UserShareExceedMaxShares:
+        return i18nc("@info detailed error messsage",
+                     "You have exhausted the maximum amount of shared directories you may have active at the same time.");
+    case KSambaShareData::UserShareNameInvalid:
+        return i18nc("@info detailed error messsage", "The share name is invalid.");
+    case KSambaShareData::UserShareNameInUse:
+        return i18nc("@info detailed error messsage", "The share name is already in use for a different directory.");
+    case KSambaShareData::UserSharePathInvalid:
+        return i18nc("@info detailed error messsage", "The path is invalid.");
+    case KSambaShareData::UserSharePathNotExists:
+        return i18nc("@info detailed error messsage", "The path does not exist.");
+    case KSambaShareData::UserSharePathNotDirectory:
+        return i18nc("@info detailed error messsage", "The path is not a directory.");
+    case KSambaShareData::UserSharePathNotAbsolute:
+        return i18nc("@info detailed error messsage", "The path is relative.");
+    case KSambaShareData::UserSharePathNotAllowed:
+        return i18nc("@info detailed error messsage", "This path may not be shared.");
+    case KSambaShareData::UserShareAclInvalid:
+        return i18nc("@info detailed error messsage", "The access rule is invalid.");
+    case KSambaShareData::UserShareAclUserNotValid:
+        return i18nc("@info detailed error messsage", "An access rule's user is not valid.");
+    case KSambaShareData::UserShareGuestsInvalid:
+        return i18nc("@info detailed error messsage", "The 'Guest' access rule is invalid.");
+    case KSambaShareData::UserShareGuestsNotAllowed:
+        return i18nc("@info detailed error messsage", "Enabling guest access is not allowed.");
+    case KSambaShareData::UserShareSystemError:
+        return KSambaShare::instance()->lastSystemErrorString().simplified();
+    }
+    Q_UNREACHABLE();
+    return QString();
+}
+
+void SambaUserSharePlugin::reportAdd(KSambaShareData::UserShareError error)
+{
+    if (error == KSambaShareData::UserShareOk) {
+        return;
+    }
+
+    QString errorMessage = errorToString(error);
+    if (error == KSambaShareData::UserShareSystemError) {
+        // System errors are (untranslated) CLI output. Give them localized context.
+        errorMessage = xi18nc("@info error in the underlying binaries. %1 is CLI output",
+                              "<para>An error occurred while trying to share the directory."
+                              " The share has not been created.</para>"
+                              "<para>Samba internals report:</para><message>%1</message>",
+                              errorMessage);
+    }
+    KMessageBox::error(qobject_cast<QWidget *>(parent()),
+                       errorMessage,
+                       i18nc("@info/title", "Failed to Create Network Share"));
+}
+
+void SambaUserSharePlugin::reportRemove(KSambaShareData::UserShareError error)
+{
+    if (error == KSambaShareData::UserShareOk) {
+        return;
+    }
+
+    QString errorMessage = errorToString(error);
+    if (error == KSambaShareData::UserShareSystemError) {
+        // System errors are (untranslated) CLI output. Give them localized context.
+        errorMessage = xi18nc("@info error in the underlying binaries. %1 is CLI output",
+                              "<para>An error occurred while trying to un-share the directory."
+                              " The share has not been removed.</para>"
+                              "<para>Samba internals report:</para><message>%1</message>",
+                              errorMessage);
+    }
+    KMessageBox::error(qobject_cast<QWidget *>(parent()),
+                       errorMessage,
+                       i18nc("@info/title", "Failed to Remove Network Share"));
 }
 
 void SambaUserSharePlugin::toggleShareStatus(bool checked)

@@ -13,13 +13,13 @@
 
 #include "model.h"
 
-UserPermissionModel::UserPermissionModel(KSambaShareData &shareData, QObject *parent)
+UserPermissionModel::UserPermissionModel(const KSambaShareData &shareData, QObject *parent)
     : QAbstractTableModel(parent)
     , m_userList(getUsersList())
     , m_shareData(shareData)
     , m_usersAcl()
 {
-    setupData();
+    QMetaObject::invokeMethod(this, &UserPermissionModel::setupData);
 }
 
 void UserPermissionModel::setupData()

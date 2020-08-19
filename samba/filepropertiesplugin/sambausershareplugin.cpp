@@ -6,41 +6,143 @@
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
 */
 
-#include <QDBusInterface>
-#include <QDBusPendingReply>
-#include <QDialogButtonBox>
+#include "sambausershareplugin.h"
+
 #include <QFileInfo>
-#include <QFrame>
-#include <QIcon>
-#include <QPushButton>
-#include <QStandardPaths>
-#include <QStringList>
 #include <QDebug>
+#include <QQmlApplicationEngine>
+#include <QQuickWidget>
+#include <QQuickItem>
+#include <KDeclarative/KDeclarative>
+#include <QMetaMethod>
+#include <QVBoxLayout>
+#include <KLocalizedString>
 
 #include <KMessageBox>
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KSambaShare>
 #include <KSambaShareData>
-#include <ktoolinvocation.h>
+#include <KService>
+#include <KIO/ApplicationLauncherJob>
 
-#include "sambausershareplugin.h"
 #include "model.h"
-#include "delegate.h"
+
+#ifdef SAMBA_INSTALL
+#include "sambainstaller.h"
+#endif
 
 K_PLUGIN_FACTORY(SambaUserSharePluginFactory, registerPlugin<SambaUserSharePlugin>();)
 
-// copied from kio/src/core/ksambashare.cpp, KSambaSharePrivate::isSambaInstalled()
-static bool isSambaInstalled()
+class ShareContext : public QObject
 {
-    return QFile::exists(QStringLiteral("/usr/sbin/smbd"))
-           || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"));
-}
+    Q_OBJECT
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
+    Q_PROPERTY(bool guestEnabled READ guestEnabled WRITE setGuestEnabled NOTIFY guestEnabledChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(int maximumNameLength READ maximumNameLength CONSTANT)
+public:
+    explicit ShareContext(const QUrl &url, QObject *parent = nullptr)
+        : QObject(parent)
+        , m_url(url)
+        , m_shareData(resolveShare(url))
+        , m_enabled(KSambaShare::instance()->isDirectoryShared(m_url.toString()))
+    {
+    }
+
+    bool enabled() const
+    {
+        return m_enabled;
+    }
+
+    void setEnabled(bool enabled)
+    {
+        m_enabled = enabled;
+        Q_EMIT enabledChanged();
+    }
+
+    bool guestEnabled() const
+    {
+        // WTF is that enum even...
+        switch (m_shareData.guestPermission()) {
+        case KSambaShareData::GuestsNotAllowed:
+            return false;
+        case KSambaShareData::GuestsAllowed:
+            return true;
+        }
+        Q_UNREACHABLE();
+        return false;
+    }
+
+    void setGuestEnabled(bool enabled)
+    {
+        m_shareData.setGuestPermission(enabled ? KSambaShareData::GuestsAllowed : KSambaShareData::GuestsNotAllowed);
+        Q_EMIT guestEnabledChanged();
+    }
+
+    QString name() const
+    {
+        return m_shareData.name();
+    }
+
+    void setName(const QString &name)
+    {
+        m_shareData.setName(name);
+        Q_EMIT nameChanged();
+    }
+
+    static constexpr int maximumNameLength()
+    {
+        // Windows 10 allows creating shares with a maximum of 60 characters when measured on 2020-08-13.
+        // We consider this kind of a soft limit as there appears to be no actual limit specified anywhere.
+        return 60;
+    }
+
+
+    Q_INVOKABLE static bool isNameFree(const QString &name)
+    {
+        return KSambaShare::instance()->isShareNameAvailable(name);
+    }
+
+public Q_SLOTS:
+    QString newShareName()
+    {
+        // TODO pretty sure this is buggy for urls with trailing slash where filename would be ""
+        return m_url.fileName().left(maximumNameLength());
+    }
+
+Q_SIGNALS:
+    void enabledChanged();
+    void guestEnabledChanged();
+    void nameChanged();
+
+private:
+    KSambaShareData resolveShare(const QUrl &url)
+    {
+        Q_ASSERT(url.isValid());
+        Q_ASSERT(!url.isEmpty());
+        const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url.toLocalFile());
+        if (!shareList.isEmpty()) {
+            return shareList.first(); // FIXME: using just the first in the list for a while
+        }
+        KSambaShareData newShare;
+        newShare.setName(newShareName());
+        newShare.setGuestPermission(KSambaShareData::GuestsNotAllowed);
+        return newShare;
+    }
+
+    QUrl m_url;
+
+public:
+    // TODO shouldn't be public may need refactoring though because the ACL model needs an immutable copy
+    KSambaShareData m_shareData;
+private:
+    bool m_enabled = false; // this gets cached so we can manipulate its state from qml
+};
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
     : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
     , m_url(properties->item().mostLocalUrl().toLocalFile())
-    , shareData()
 {
     Q_UNUSED(args)
 
@@ -53,201 +155,67 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
         return;
     }
 
-    auto vbox = new QFrame();
-    properties->addPage(vbox, i18n("&Share"));
-    properties->setFileSharingPage(vbox);
-    auto vLayoutMaster = new QVBoxLayout(vbox);
-
-    m_failedSambaWidgets = new QWidget(vbox);
-    vLayoutMaster->addWidget(m_failedSambaWidgets);
-    auto vFailedLayout = new QVBoxLayout(m_failedSambaWidgets);
-    vFailedLayout->setAlignment(Qt::AlignJustify);
-    vFailedLayout->setContentsMargins(0, 0, 0, 0);
-    vFailedLayout->addWidget(new QLabel(i18n("The Samba package failed to install."), m_failedSambaWidgets));
-    vFailedLayout->addStretch();
-    m_failedSambaWidgets->hide();
-
-    m_installSambaWidgets = new QWidget(vbox);
-    vLayoutMaster->addWidget(m_installSambaWidgets);
-    auto vLayout = new QVBoxLayout(m_installSambaWidgets);
-    vLayout->setAlignment(Qt::AlignJustify);
-    vLayout->setContentsMargins(0, 0, 0, 0);
-
-    m_sambaStatusMessage = new QLabel(i18n("Samba must be installed before folders can be shared."));
-    m_sambaStatusMessage->setAlignment(Qt::AlignCenter);
-    vLayout->addWidget(m_sambaStatusMessage);
+    // TODO: this could be made to load delayed via invokemethod. we technically don't need to fully load
+    //   the backing data in the ctor, only the qml view with busyindicator
+    m_context = new ShareContext(properties->item().mostLocalUrl(), this);
+    m_model = new UserPermissionModel(m_context->m_shareData, this);
 
 #ifdef SAMBA_INSTALL
-    m_justInstalledSambaWidgets = new QWidget(vbox);
-    vLayoutMaster->addWidget(m_justInstalledSambaWidgets);
-    auto vJustInstalledLayout = new QVBoxLayout(m_justInstalledSambaWidgets);
-    vJustInstalledLayout->setAlignment(Qt::AlignJustify);
-    vJustInstalledLayout->addWidget(new QLabel(i18n("Restart the computer to complete the installation."), m_justInstalledSambaWidgets));
-    m_restartButton = new QPushButton(i18n("Restart"), m_justInstalledSambaWidgets);
-    m_restartButton->setIcon(QIcon::fromTheme(QStringLiteral("system-reboot")));
-    connect(m_restartButton, &QPushButton::clicked,
-            this, &SambaUserSharePlugin::reboot);
-    vJustInstalledLayout->addWidget(m_restartButton);
-    vJustInstalledLayout->addStretch();
-    m_restartButton->setDefault(false);
-    m_justInstalledSambaWidgets->hide();
-
-    m_installSambaButton = new QPushButton(i18n("Install Samba"), m_installSambaWidgets);
-    m_installSambaButton->setDefault(false);
-    vLayout->addWidget(m_installSambaButton);
-    connect(m_installSambaButton, &QPushButton::clicked,
-            this, &SambaUserSharePlugin::installSamba);
-    m_installProgress = new QProgressBar();
-    vLayout->addWidget(m_installProgress);
-    m_installProgress->hide();
+    auto installer = new SambaInstaller;
+    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "Installer", installer);
 #endif
+    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "UserPermissionModel", m_model);
+    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "Plugin", this);
+    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "ShareContext", m_context);
 
-    // align items on top
-    vLayout->addStretch();
-    m_shareWidgets = new QWidget(vbox);
-    vLayoutMaster->addWidget(m_shareWidgets);
-    propertiesUi.setupUi(m_shareWidgets);
+    auto page = new QWidget(qobject_cast<KPropertiesDialog *>(parent));
+    page->setAttribute(Qt::WA_TranslucentBackground);
+    auto widget = new QQuickWidget(page);
+    // Load kdeclarative and set translation domain before setting the source so strings gets translated.
+    KDeclarative::KDeclarative kdeclarative;
+    kdeclarative.setDeclarativeEngine(widget->engine());
+    kdeclarative.setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
+    kdeclarative.setupEngine(widget->engine());
+    kdeclarative.setupContext();
+    widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    widget->setFocusPolicy(Qt::StrongFocus);
+    widget->setAttribute(Qt::WA_AlwaysStackOnTop, true);
+    widget->quickWindow()->setColor(Qt::transparent);
+    auto layout = new QVBoxLayout(page);
+    layout->addWidget(widget);
 
-    const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url);
+    const QUrl url(QStringLiteral("qrc:/org.kde.filesharing.samba/qml/main.qml"));
+    widget->setSource(url);
 
-    if (!shareList.isEmpty()) {
-        shareData = shareList.at(0); // FIXME: using just the first in the list for a while
+    properties->addPage(page, i18nc("@title:tab", "Share"));
+}
+
+bool SambaUserSharePlugin::isSambaInstalled()
+{
+    return QFile::exists(QStringLiteral("/usr/sbin/smbd"))
+        || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"));
+}
+
+void SambaUserSharePlugin::showSambaStatus()
+{
+    KService::Ptr kcm = KService::serviceByStorageId(QStringLiteral("smbstatus"));
+    if (!kcm) {
+        // TODO: meh - we have no availability handling. I may have a handy class in plasma-disks
+        return;
     }
-
-    setupModel();
-    setupViews();
-    load();
-
-    connect(propertiesUi.sambaChk, &QCheckBox::toggled,
-            this, &SambaUserSharePlugin::toggleShareStatus);
-    connect(propertiesUi.sambaNameEdit, &QLineEdit::textChanged,
-            this, &SambaUserSharePlugin::checkShareName);
-    connect(propertiesUi.sambaAllowGuestChk, &QCheckBox::toggled,
-            this, [=] { setDirty(); });
-    connect(model, &UserPermissionModel::dataChanged,
-            this, [=] { setDirty(); });
-    connect(propertiesUi.sambaStatusMonitorButton, &QPushButton::clicked,
-            this, [] {
-                KToolInvocation::kdeinitExec(QStringLiteral("kcmshell5"), {QStringLiteral("smbstatus")});
-            });
-
-    for (int i = 0; i < model->rowCount(); ++i) {
-        propertiesUi.tableView->openPersistentEditor(model->index(i, UserPermissionModel::ColumnAccess, QModelIndex()));
-    }
-    if (!isSambaInstalled()) {
-        m_installSambaWidgets->show();
-        m_shareWidgets->hide();
-    } else {
-        m_installSambaWidgets->hide();
-        m_shareWidgets->show();
-    }
-}
-
-#ifdef SAMBA_INSTALL
-void SambaUserSharePlugin::installSamba()
-{
-    const QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
-    QStringList distroSambaPackages = package.split(QLatin1Char(','));
-
-    PackageKit::Transaction *transaction = PackageKit::Daemon::resolve(distroSambaPackages, PackageKit::Transaction::FilterArch);
-
-    QSharedPointer<QStringList> pkgids(new QStringList);
-
-    connect(transaction, &PackageKit::Transaction::package,
-            this, [pkgids](PackageKit::Transaction::Info /*info*/, const QString &packageId,
-                           const QString & /*summary*/) { pkgids->append(packageId); });
-
-    connect(transaction, &PackageKit::Transaction::finished,
-            this, [this, pkgids] (PackageKit::Transaction::Exit exit) {
-                if (exit != PackageKit::Transaction::ExitSuccess) { return; }
-                auto installTransaction = PackageKit::Daemon::installPackages(*pkgids);
-                connect(installTransaction, &PackageKit::Transaction::finished,
-                        this, &SambaUserSharePlugin::packageFinished);
-            }
-    );
-
-    m_sambaStatusMessage->setText(i18n("Installing Samba..."));
-    m_installProgress->setMaximum(0);
-    m_installProgress->setMinimum(0);
-    m_installProgress->show();
-    m_installSambaButton->hide();
-}
-
-void SambaUserSharePlugin::packageFinished(PackageKit::Transaction::Exit status, uint runtime)
-{
-    Q_UNUSED(runtime)
-    if (status == PackageKit::Transaction::ExitSuccess) {
-        m_installSambaWidgets->hide();
-        m_failedSambaWidgets->hide();
-        m_shareWidgets->hide();
-        m_justInstalledSambaWidgets->show();
-    } else {
-        m_shareWidgets->hide();
-        m_installSambaWidgets->hide();
-        m_failedSambaWidgets->show();
-    }
-}
-
-void SambaUserSharePlugin::reboot()
-{
-    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"),
-                             QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
-    interface.asyncCall(QStringLiteral("logout"), 0, 1, 2); // Options: do not ask again | reboot | force
-}
-#endif // SAMBA_INSTALL
-
-void SambaUserSharePlugin::setupModel()
-{
-    model = new UserPermissionModel(shareData, this);
-}
-
-void SambaUserSharePlugin::setupViews()
-{
-    propertiesUi.tableView->setModel(model);
-    propertiesUi.tableView->setSelectionMode(QAbstractItemView::NoSelection);
-    propertiesUi.tableView->setItemDelegate(new UserPermissionDelegate(this));
-    propertiesUi.tableView->horizontalHeader()->setSectionResizeMode(UserPermissionModel::ColumnAccess,
-                                                                     QHeaderView::Stretch);
-}
-
-void SambaUserSharePlugin::load()
-{
-    bool guestAllowed = false;
-    const bool sambaShared = KSambaShare::instance()->isDirectoryShared(m_url);
-
-    propertiesUi.sambaChk->setChecked(sambaShared);
-    toggleShareStatus(sambaShared);
-    if (sambaShared) {
-        guestAllowed = (bool) shareData.guestPermission();
-    }
-    propertiesUi.sambaAllowGuestChk->setChecked(guestAllowed);
-    propertiesUi.tableView->setEnabled(propertiesUi.sambaChk->isChecked());
-
-    propertiesUi.sambaNameEdit->setText(shareData.name());
+    KIO::ApplicationLauncherJob(kcm).start();
 }
 
 void SambaUserSharePlugin::applyChanges()
 {
-    if (propertiesUi.sambaChk->isChecked()) {
-        if (shareData.setAcl(model->getAcl()) != KSambaShareData::UserShareAclOk) {
-            return;
-        }
-
-        shareData.setName(propertiesUi.sambaNameEdit->text());
-
-        shareData.setPath(m_url);
-
-        KSambaShareData::GuestPermission guestOk(shareData.guestPermission());
-
-        guestOk = !propertiesUi.sambaAllowGuestChk->isChecked()
-                  ? KSambaShareData::GuestsNotAllowed : KSambaShareData::GuestsAllowed;
-
-        shareData.setGuestPermission(guestOk);
-
-        reportAdd(shareData.save());
-    } else if (KSambaShare::instance()->isDirectoryShared(m_url)) {
-        reportRemove(shareData.remove());
+    qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl();
+    if (!m_context->enabled()) {
+        reportRemove(m_context->m_shareData.remove());
+        return;
     }
+
+    m_context->m_shareData.setAcl(m_model->getAcl());
+    reportAdd(m_context->m_shareData.save());
 }
 
 static QString errorToString(KSambaShareData::UserShareError error)
@@ -337,64 +305,5 @@ void SambaUserSharePlugin::reportRemove(KSambaShareData::UserShareError error)
                        i18nc("@info/title", "Failed to Remove Network Share"));
 }
 
-void SambaUserSharePlugin::toggleShareStatus(bool checked)
-{
-    propertiesUi.textLabel1->setEnabled(checked);
-    propertiesUi.sambaNameEdit->setEnabled(checked);
-    propertiesUi.sambaAllowGuestChk->setEnabled(checked);
-    propertiesUi.tableView->setEnabled(checked);
-    if (checked && propertiesUi.sambaNameEdit->text().isEmpty()) {
-        propertiesUi.sambaNameEdit->setText(getNewShareName());
-    } else {
-        propertiesUi.sambaNameEdit->setText(QString());
-    }
-    setDirty();
-}
-
-void SambaUserSharePlugin::checkShareName(const QString &name)
-{
-    // Don't ever disable the OK button when the user is trying to remove a share
-    if (!propertiesUi.sambaChk->isChecked()) {
-        return;
-    }
-
-    bool disableButton = false;
-
-    if (name.isEmpty()) {
-        disableButton = true;
-    } else if (!KSambaShare::instance()->isShareNameAvailable(name)) {
-        // There is another Share with the same name
-        KMessageBox::sorry(qobject_cast<KPropertiesDialog *>(this),
-                i18n("<qt>There is already a share with the name <strong>%1</strong>.<br /> Please choose another name.</qt>",
-                    propertiesUi.sambaNameEdit->text()));
-        propertiesUi.sambaNameEdit->selectAll();
-        disableButton = true;
-    }
-
-    if (disableButton) {
-        properties->button(QDialogButtonBox::Ok)->setEnabled(false);
-        propertiesUi.sambaNameEdit->setFocus();
-        return;
-    }
-
-    if (!properties->button(QDialogButtonBox::Ok)->isEnabled()) {
-        properties->button(QDialogButtonBox::Ok)->setEnabled(true);
-        setDirty();
-    }
-}
-
-QString SambaUserSharePlugin::getNewShareName() const
-{
-    QString shareName = QUrl(m_url).fileName();
-
-    if (!propertiesUi.sambaNameEdit->text().isEmpty()) {
-        shareName = propertiesUi.sambaNameEdit->text();
-    }
-
-    // Windows could have problems with longer names
-    shareName = shareName.left(12);
-
-    return shareName;
-}
 
 #include "sambausershareplugin.moc"

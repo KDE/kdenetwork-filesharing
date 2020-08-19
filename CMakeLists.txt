@@ -15,6 +15,8 @@ include(KDEFrameworkCompilerSettings)
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
     Widgets
+    Qml
+    QuickWidgets
 )
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -23,6 +25,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     KIO
     WidgetsAddons
+    Declarative
 )
 
 find_package(PackageKitQt5)
@@ -67,5 +70,9 @@ add_subdirectory(samba)
 
 install(FILES org.kde.kdenetwork-filesharing.metainfo.xml
         DESTINATION ${KDE_INSTALL_METAINFODIR})
+
+if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+    ki18n_install(po)
+endif()
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

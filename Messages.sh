@@ -1,3 +1,2 @@
 #! /bin/sh
-$EXTRACTRC `find . -name '*.ui'` >> rc.cpp || exit 11
-$XGETTEXT rc.cpp `find . -name '*.cpp' -o -name '*.h'` -o $podir/kfileshare.pot 
+$XGETTEXT  `find . -name '*.cpp' -o -name '*.h' -o -name '*.qml' -o -name '*.js'` -o $podir/kfileshare.pot

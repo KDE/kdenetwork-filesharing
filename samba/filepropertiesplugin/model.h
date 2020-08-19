@@ -22,7 +22,7 @@ public:
     };
     Q_ENUM(Column)
 
-    explicit UserPermissionModel(KSambaShareData &shareData, QObject *parent = nullptr);
+    explicit UserPermissionModel(const KSambaShareData &shareData, QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -35,11 +35,11 @@ public:
     QString getAcl() const;
 
 private:
-    QStringList m_userList;
-    KSambaShareData m_shareData;
+    const QStringList m_userList;
+    const KSambaShareData m_shareData;
     QVariantMap m_usersAcl;
 
-    void setupData();
+    Q_INVOKABLE void setupData();
     static QStringList getUsersList();
 };
 

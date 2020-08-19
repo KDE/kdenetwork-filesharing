@@ -1,0 +1,45 @@
+/*
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+*/
+
+import QtQuick 2.12
+import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Layouts 1.14
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.filesharing.samba 1.0 as Samba
+
+QQC2.StackView {
+    id: stack
+
+    // The stack of pending pages. Once all backing data is ready we fill the pending stack with all
+    // pages that ought to get shown eventually. This enables all pages to simply pop the next page and push
+    // it into the stack once they are done with their thing.
+    property var pendingStack: []
+
+    initialItem: QQC2.BusyIndicator {
+        running: true
+
+        onRunningChanged: {
+            if (running) {
+                return
+            }
+
+            pendingStack.push("ACLPage.qml")
+            if (!Samba.Plugin.isSambaInstalled()) {
+                // NB: Samba.Installer may be not set when built without installer support
+                if (Samba.Installer === undefined) {
+                    pendingStack.push("MissingSambaPage.qml")
+                } else {
+                    pendingStack.push("InstallPage.qml")
+                }
+            }
+
+            stack.clear()
+            stack.push(pendingStack.pop())
+        }
+    }
+
+    // Currently plugin doesn't lazy load anything. This is going to change eventually.
+    Component.onCompleted: initialItem.running = false
+}

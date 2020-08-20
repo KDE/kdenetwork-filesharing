@@ -44,9 +44,9 @@ class ShareContext : public QObject
 public:
     explicit ShareContext(const QUrl &url, QObject *parent = nullptr)
         : QObject(parent)
-        , m_url(url)
         , m_shareData(resolveShare(url))
-        , m_enabled(KSambaShare::instance()->isDirectoryShared(m_url.toString()))
+        , m_enabled(KSambaShare::instance()->isDirectoryShared(m_shareData.path()))
+        // url isn't a member. always use .path()!
     {
     }
 
@@ -105,10 +105,12 @@ public:
     }
 
 public Q_SLOTS:
-    QString newShareName()
+    QString newShareName(const QUrl &url)
     {
+        Q_ASSERT(url.isValid());
+        Q_ASSERT(!url.isEmpty());
         // TODO pretty sure this is buggy for urls with trailing slash where filename would be ""
-        return m_url.fileName().left(maximumNameLength());
+        return url.fileName().left(maximumNameLength());
     }
 
 Q_SIGNALS:
@@ -119,19 +121,18 @@ Q_SIGNALS:
 private:
     KSambaShareData resolveShare(const QUrl &url)
     {
-        Q_ASSERT(url.isValid());
-        Q_ASSERT(!url.isEmpty());
-        const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(m_url.toLocalFile());
+        const QString path = url.toLocalFile();
+        Q_ASSERT(!path.isEmpty());
+        const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(path);
         if (!shareList.isEmpty()) {
             return shareList.first(); // FIXME: using just the first in the list for a while
         }
         KSambaShareData newShare;
-        newShare.setName(newShareName());
+        newShare.setName(newShareName(url));
         newShare.setGuestPermission(KSambaShareData::GuestsNotAllowed);
+        newShare.setPath(path);
         return newShare;
     }
-
-    QUrl m_url;
 
 public:
     // TODO shouldn't be public may need refactoring though because the ACL model needs an immutable copy
@@ -208,7 +209,7 @@ void SambaUserSharePlugin::showSambaStatus()
 
 void SambaUserSharePlugin::applyChanges()
 {
-    qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl();
+    qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl() << m_context->m_shareData.path();
     if (!m_context->enabled()) {
         reportRemove(m_context->m_shareData.remove());
         return;

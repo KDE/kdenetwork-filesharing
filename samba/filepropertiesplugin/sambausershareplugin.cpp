@@ -215,6 +215,7 @@ void SambaUserSharePlugin::applyChanges()
         return;
     }
 
+    // TODO: should run this through reportAdd() as well, ACLs may be invalid and then we shouldn't try to save
     m_context->m_shareData.setAcl(m_model->getAcl());
     reportAdd(m_context->m_shareData.save());
 }

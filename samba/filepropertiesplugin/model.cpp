@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 */
 
 #include <kuser.h>
@@ -158,17 +159,45 @@ bool UserPermissionModel::setData(const QModelIndex &index, const QVariant &valu
 
 QString UserPermissionModel::getAcl() const
 {
-    QString result;
+    // ACE order matters. Based on testing samba behaves the following way when checking if a user may do something:
+    //   - rights granted stack up until the first applicable denial (r+f = f)
+    //   - denials end the lookup BUT all permissions until then are applied!
+    // We always put Everyone at the beginning and do not support groups so effectively we behave the same way
+    // as on Windows. Everyone is to mean **everyone** and the user rules add on top but the Everyone ACE is the
+    // baseline permission for everyone. By extension because of the samba resolution behavior Everyone:D will disable
+    // the share pretty much.
+    // This has another more important element though: Everyone:R must not be before denials because samba applies
+    // any matched reads when it encounters a denial. e.g. Everyone:R,foo:D means foo can still read because D merely
+    // ends the lookup, it doesn't take already granted permissions away. With that in mind we need to reshuffle
+    // the ACEs so *all* D come first followed by all R and last all F.
+    // https://docs.microsoft.com/en-us/windows/win32/secauthz/how-dacls-control-access-to-an-object
+    // https://docs.microsoft.com/en-us/windows/win32/secauthz/order-of-aces-in-a-dacl
 
-    QMap<QString, QVariant>::ConstIterator itr;
-    for (itr = m_usersAcl.constBegin(); itr != m_usersAcl.constEnd(); ++itr) {
-        if (!itr.value().toString().isEmpty()) {
-            result.append(itr.key() + QStringLiteral(":") + itr.value().toString().toLower());
-            if (itr != (m_usersAcl.constEnd() - 1)) {
-                result.append(QLatin1Char(','));
-            }
+    // NOTE: D < R < F ordering would also be fine should we ever grow group support I think
+
+    QStringList denials;
+    QStringList readables;
+    QStringList fulls;
+    for (auto it = m_usersAcl.constBegin(); it != m_usersAcl.constEnd(); ++it) {
+        const QString &userName = it.key();
+        const QString access = it->value<QString>();
+        if (access.isEmpty()) {
+            continue; // --- undefined (no access)
+        }
+        // NB: we do not append access because samba is being inconsistent with itself. `net usershare info`
+        // uses capital letters, but `net usershare add` will (for example) not accept capital D, so if you were to
+        // take the output of info and feed it to add it'd error out -.- ... force everything lower case here
+        // so it definitely works with add
+        if (access == QLatin1String("D")) {
+            denials << userName + QStringLiteral(":d");
+        } else if (access == QLatin1String("R")) {
+            readables << userName + QStringLiteral(":r");
+        } else if (access == QLatin1String("F")) {
+            fulls << userName + QStringLiteral(":f");
+        } else {
+            Q_UNREACHABLE(); // unmapped value WTH
         }
     }
 
-    return result;
+    return (denials + readables + fulls).join(QLatin1Char(','));
 }

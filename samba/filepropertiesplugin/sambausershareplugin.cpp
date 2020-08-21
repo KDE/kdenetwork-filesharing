@@ -18,6 +18,7 @@
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QTimer>
+#include <QQmlContext>
 #include <QPushButton>
 
 #include <KMessageBox>
@@ -162,23 +163,26 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 
     // TODO: this could be made to load delayed via invokemethod. we technically don't need to fully load
     //   the backing data in the ctor, only the qml view with busyindicator
+    // TODO: relatedly if we make ShareContext and the Model more async vis a vis construction we can init them from
+    //   QML and stop holding them as members in the plugin
     m_context = new ShareContext(properties->item().mostLocalUrl(), this);
     // FIXME maybe the manager ought to be owned by the model
-    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "UserManager", m_userManager);
-    qmlRegisterUncreatableType<User>("org.kde.filesharing.samba", 1, 0, "User", QStringLiteral("Only created by UserManager"));
+    qmlRegisterAnonymousType<UserManager>("org.kde.filesharing.samba", 1);
+    qmlRegisterAnonymousType<User>("org.kde.filesharing.samba", 1);
     m_model = new UserPermissionModel(m_context->m_shareData, m_userManager, this);
 
 #ifdef SAMBA_INSTALL
-    auto installer = new SambaInstaller;
-    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "Installer", installer);
+    qmlRegisterType<SambaInstaller>("org.kde.filesharing.samba", 1, 0, "Installer");
 #endif
-    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "UserPermissionModel", m_model);
-    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "Plugin", this);
-    qmlRegisterSingletonInstance("org.kde.filesharing.samba", 1, 0, "ShareContext", m_context);
+    // Need access to the column enum, so register this as uncreatable.
+    qmlRegisterUncreatableType<UserPermissionModel>("org.kde.filesharing.samba", 1, 0, "UserPermissionModel",
+                                                    QStringLiteral("Access through sambaPlugin.userPermissionModel"));
+    qmlRegisterAnonymousType<ShareContext>("org.kde.filesharing.samba", 1);
+    qmlRegisterAnonymousType<SambaUserSharePlugin>("org.kde.filesharing.samba", 1);
 
-    auto page = new QWidget(qobject_cast<KPropertiesDialog *>(parent));
-    page->setAttribute(Qt::WA_TranslucentBackground);
-    auto widget = new QQuickWidget(page);
+    m_page.reset(new QWidget(qobject_cast<KPropertiesDialog *>(parent)));
+    m_page->setAttribute(Qt::WA_TranslucentBackground);
+    auto widget = new QQuickWidget(m_page.get());
     // Load kdeclarative and set translation domain before setting the source so strings gets translated.
     KDeclarative::KDeclarative kdeclarative;
     kdeclarative.setDeclarativeEngine(widget->engine());
@@ -189,13 +193,15 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     widget->setFocusPolicy(Qt::StrongFocus);
     widget->setAttribute(Qt::WA_AlwaysStackOnTop, true);
     widget->quickWindow()->setColor(Qt::transparent);
-    auto layout = new QVBoxLayout(page);
+    auto layout = new QVBoxLayout(m_page.get());
     layout->addWidget(widget);
+
+    widget->rootContext()->setContextProperty(QStringLiteral("sambaPlugin"), this);
 
     const QUrl url(QStringLiteral("qrc:/org.kde.filesharing.samba/qml/main.qml"));
     widget->setSource(url);
 
-    auto item = properties->addPage(page, i18nc("@title:tab", "Share"));
+    auto item = properties->addPage(m_page.get(), i18nc("@title:tab", "Share"));
     if (qEnvironmentVariableIsSet("TEST_FOCUS_SHARE")) {
         QTimer::singleShot(100, [item, this] {
             properties->setCurrentPage(item);

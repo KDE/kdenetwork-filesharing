@@ -38,13 +38,13 @@ Kirigami.ScrollablePage {
         onAccepted: {
             enabled = false
             busy = true
-            Samba.UserManager.currentUser().addToSamba(password)
+            sambaPlugin.userManager.currentUser().addToSamba(password)
         }
     }
 
     Connections {
         // ChangePassword being a sheet it's being crap to use and can't even connect to nothing.
-        target: Samba.UserManager.currentUser()
+        target: sambaPlugin.userManager.currentUser()
         onInSambaChanged: changePassword.userCreated(target.inSamba)
         onAddToSambaError: changePassword.errorMessage = error
     }

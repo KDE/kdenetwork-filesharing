@@ -10,12 +10,23 @@ import org.kde.kirigami 2.12 as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 Kirigami.PlaceholderMessage {
+    Samba.Installer {
+        id: installer
+
+        onInstalledChanged: {
+            if (!installer.installed) {
+                return
+            }
+            stack.push("RebootPage.qml", { "installer": this })
+        }
+    }
+
     text: i18nc("@label", "Samba must be installed before folders can be shared.")
     helpfulAction: Kirigami.Action {
         iconName: "install"
         text: i18nc("@button", "Install Samba")
-        onTriggered: Samba.Installer.install()
-        enabled: !Samba.Installer.installing && !Samba.Installer.installed
+        onTriggered: installer.install()
+        enabled: !installer.installing && !installer.installed
     }
 
     QQC2.Label {
@@ -23,23 +34,13 @@ Kirigami.PlaceholderMessage {
         Layout.fillWidth: true
         text: i18nc("@label", "The Samba package failed to install.")
         wrapMode: Text.Wrap
-        visible: Samba.Installer.failed
+        visible: installer.failed
     }
     QQC2.ProgressBar {
         Layout.alignment: Qt.AlignHCenter
         Layout.fillWidth: true
         Layout.margins: Kirigami.Units.largeSpacing * 2
         indeterminate: true
-        visible: Samba.Installer.installing
-    }
-
-    Connections {
-        target: Samba.Installer
-        onInstalledChanged: {
-            if (!Samba.Installer.installed) {
-                return
-            }
-            stack.push("RebootPage.qml")
-        }
+        visible: installer.installing
     }
 }

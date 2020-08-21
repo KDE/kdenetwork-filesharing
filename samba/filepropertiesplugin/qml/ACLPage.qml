@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.14
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
-// NOTE: Samba.ShareContext is a singleton its properties cannot be bound and need manual syncing back.
+// NOTE: sambaPlugin.shareContext is a singleton its properties cannot be bound and need manual syncing back.
 
 Item {
     // NOTE: we cannot use a Kirigami.Page for this because it adds excessive padding that we can't disable
@@ -54,10 +54,10 @@ when the Share access rules would allow it.`)
         QQC2.CheckBox {
             id: shareEnabled
             text: i18nc("@option:check", "Share this folder with other computers on the local network")
-            checked: Samba.ShareContext.enabled
+            checked: sambaPlugin.shareContext.enabled
             onToggled: {
-                Samba.ShareContext.enabled = checked
-                Samba.Plugin.dirty = true
+                sambaPlugin.shareContext.enabled = checked
+                sambaPlugin.dirty = true
             }
         }
 
@@ -76,23 +76,23 @@ when the Share access rules would allow it.`)
                 QQC2.TextField {
                     id: nameField
                     Layout.fillWidth: true
-                    text: Samba.ShareContext.name
+                    text: sambaPlugin.shareContext.name
                     onTextEdited: {
-                        if (text.length > Samba.ShareContext.maximumNameLength) {
+                        if (text.length > sambaPlugin.shareContext.maximumNameLength) {
                             tooLongMessage.visible = true;
                             // This is a soft limit, do not return.
                         } else {
                             tooLongMessage.visible = false
                         }
 
-                        if (!Samba.ShareContext.isNameFree(text)) {
+                        if (!sambaPlugin.shareContext.isNameFree(text)) {
                             alreadyUsedError.visible = true;
                             return
                         }
                         alreadyUsedError.visible = false;
 
-                        Samba.ShareContext.name = text
-                        Samba.Plugin.dirty = true
+                        sambaPlugin.shareContext.name = text
+                        sambaPlugin.dirty = true
                     }
                 }
             }
@@ -117,10 +117,10 @@ when the Share access rules would allow it.`)
 
             QQC2.CheckBox {
                 text: i18nc("@option:check", "Allow guests")
-                checked: Samba.ShareContext.guestEnabled
+                checked: sambaPlugin.shareContext.guestEnabled
                 onToggled: {
-                    Samba.ShareContext.guestEnabled = checked
-                    Samba.Plugin.dirty = true
+                    sambaPlugin.shareContext.guestEnabled = checked
+                    sambaPlugin.dirty = true
                 }
             }
 
@@ -146,7 +146,7 @@ when the Share access rules would allow it.`)
                     anchors.margins: Kirigami.Units.smallSpacing
                     clip: true
                     interactive: false
-                    model: Samba.UserPermissionModel
+                    model: sambaPlugin.userPermissionModel
 
                     columnWidthProvider: function (column) {
                         // Give 2/3 of the width to the access column for better looks.
@@ -206,7 +206,7 @@ when the Share access rules would allow it.`)
                                 if (currentValue === 'D') {
                                     denialSheet.maybeOpen()
                                 }
-                                Samba.Plugin.dirty = true
+                                sambaPlugin.dirty = true
                             }
                             Component.onCompleted: currentIndex = indexOfValue(edit)
                         }
@@ -220,7 +220,7 @@ when the Share access rules would allow it.`)
         QQC2.Button {
             Layout.fillWidth: true
             text: i18nc("@button", "Show Samba status monitor")
-            onClicked: Samba.Plugin.showSambaStatus()
+            onClicked: sambaPlugin.showSambaStatus()
         }
     }
 }

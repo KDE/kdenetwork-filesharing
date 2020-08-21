@@ -18,7 +18,7 @@ QQC2.StackView {
     property var pendingStack: []
 
     initialItem: QQC2.BusyIndicator {
-        running: !Samba.Plugin.ready
+        running: !sambaPlugin.ready
 
         onRunningChanged: {
             if (running) {
@@ -26,11 +26,11 @@ QQC2.StackView {
             }
 
             pendingStack.push("ACLPage.qml")
-            if (!Samba.UserManager.currentUser().inSamba) {
+            if (!sambaPlugin.userManager.currentUser().inSamba) {
                 pendingStack.push("UserPage.qml")
             }
-            if (!Samba.Plugin.isSambaInstalled()) {
-                // NB: Samba.Installer may be not set when built without installer support
+            if (!sambaPlugin.isSambaInstalled()) {
+                // NB: the plugin may be built without installer support!
                 if (Samba.Installer === undefined) {
                     pendingStack.push("MissingSambaPage.qml")
                 } else {

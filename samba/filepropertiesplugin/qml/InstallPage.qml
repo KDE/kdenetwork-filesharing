@@ -17,7 +17,8 @@ Kirigami.PlaceholderMessage {
             if (!installer.installed) {
                 return
             }
-            stack.push("RebootPage.qml", { "installer": this })
+            pendingStack.unshift("RebootPage.qml")
+            stackReplace("GroupPage.qml")
         }
     }
 

@@ -19,7 +19,7 @@ ColumnLayout {
         wrapMode: Text.Wrap
     }
     Item {
-        Layout.alignment = Qt.AlignHCenter
+        Layout.alignment: Qt.AlignHCenter
         Layout.fillHeight: true // space everything up
     }
 }

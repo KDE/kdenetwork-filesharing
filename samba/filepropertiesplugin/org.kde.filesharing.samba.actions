@@ -2,13 +2,31 @@
 Icon=preferences-system-network-share-windows
 URL=https://www.kde.org
 Name=KIO Samba Sharing
+Name[ca]=KIO de compartició del Samba
+Name[nl]=KIO Samba Sharing
+Name[pt]=Partilha de Samba do KIO
+Name[sv]=I/O-slav Samba-delning
+Name[uk]=KIO спільних ресурсів Samba
+Name[x-test]=xxKIO Samba Sharingxx
 
 [org.kde.filesharing.samba.isuserknown]
 # Always allow, there is nothing being written from this nor can one read anything special.
 Policy=yes
 PolicyInactive=yes
 Name=Is Samba User Known
+Name[ca]=Si es coneix l'usuari Samba
+Name[nl]=Is Samba-gebruiker bekend
+Name[pt]=Se o Utilizador do Samba é Conhecido
+Name[sv]=Är Samba-användare känd
+Name[uk]=Чи є користувач Samba
+Name[x-test]=xxIs Samba User Knownxx
 Description=Checking if Samba user exists
+Description[ca]=Comprovació d'existència de l'usuari Samba
+Description[nl]=Controleren of Samba-gebruiker bestaat
+Description[pt]=A verificar se o utilizador do Samba existe
+Description[sv]=Kontrollerar om Samba-användare finns
+Description[uk]=Перевірка, чи існує запис користувача Samba
+Description[x-test]=xxChecking if Samba user existsxx
 
 [org.kde.filesharing.samba.createuser]
 # TODO: this could be split into a sepearate action createcurrentuser which only
@@ -17,4 +35,16 @@ Description=Checking if Samba user exists
 Policy=auth_admin
 PolicyInactive=auth_admin
 Name=Creating New Samba User
+Name[ca]=Es crea l'usuari Samba nou
+Name[nl]=Nieuwe Samba-gebruiker aanmaken
+Name[pt]=A Criar um Novo Utilizador do Samba
+Name[sv]=Skapar ny Samba-användare
+Name[uk]=Створення нового користувача Samba
+Name[x-test]=xxCreating New Samba Userxx
 Description=Creating new Samba user
+Description[ca]=Es crea l'usuari Samba nou
+Description[nl]=Nieuwe Samba-gebruiker wordt aangemaakt
+Description[pt]=A criar um novo utilizador do Samba
+Description[sv]=Skapar ny Samba-användare
+Description[uk]=Створення нового користувача Samba
+Description[x-test]=xxCreating new Samba userxx

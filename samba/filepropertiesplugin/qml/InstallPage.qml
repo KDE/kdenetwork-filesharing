@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.14
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
-Kirigami.PlaceholderMessage {
+Item {
     Samba.Installer {
         id: installer
 
@@ -26,26 +26,31 @@ Kirigami.PlaceholderMessage {
         }
     }
 
-    text: i18nc("@label", "Samba must be installed before folders can be shared.")
-    helpfulAction: Kirigami.Action {
-        iconName: "install"
-        text: i18nc("@button", "Install Samba")
-        onTriggered: installer.install()
-        enabled: !installer.installing && !installer.installed
-    }
+    Kirigami.PlaceholderMessage {
+        anchors.centerIn: parent
+        width: parent.width
 
-    QQC2.Label {
-        Layout.alignment: Qt.AlignHCenter
-        Layout.fillWidth: true
-        text: i18nc("@label", "The Samba package failed to install.")
-        wrapMode: Text.Wrap
-        visible: installer.failed
-    }
-    QQC2.ProgressBar {
-        Layout.alignment: Qt.AlignHCenter
-        Layout.fillWidth: true
-        Layout.margins: Kirigami.Units.largeSpacing * 2
-        indeterminate: true
-        visible: installer.installing
+        text: i18nc("@label", "Samba must be installed before folders can be shared.")
+        helpfulAction: Kirigami.Action {
+            iconName: "install"
+            text: i18nc("@button", "Install Samba")
+            onTriggered: installer.install()
+            enabled: !installer.installing && !installer.installed
+        }
+
+        QQC2.Label {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            text: i18nc("@label", "The Samba package failed to install.")
+            wrapMode: Text.Wrap
+            visible: installer.failed
+        }
+        QQC2.ProgressBar {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            Layout.margins: Kirigami.Units.largeSpacing * 2
+            indeterminate: true
+            visible: installer.installing
+        }
     }
 }

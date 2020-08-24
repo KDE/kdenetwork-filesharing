@@ -9,11 +9,16 @@ import QtQuick.Layouts 1.14
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
-Kirigami.PlaceholderMessage {
-    text: i18nc("@label", "Restart the computer to complete the changes.")
-    helpfulAction: Kirigami.Action {
-        iconName: "system-restart"
-        text: i18nc("@button restart the system", "Restart")
-        onTriggered: sambaPlugin.reboot()
+Item {
+    Kirigami.PlaceholderMessage {
+        anchors.centerIn: parent
+        width: parent.width
+
+        text: i18nc("@label", "Restart the computer to complete the changes.")
+        helpfulAction: Kirigami.Action {
+            iconName: "system-restart"
+            text: i18nc("@button restart the system", "Restart")
+            onTriggered: sambaPlugin.reboot()
+        }
     }
 }

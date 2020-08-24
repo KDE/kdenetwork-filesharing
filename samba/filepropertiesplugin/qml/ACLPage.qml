@@ -116,12 +116,23 @@ when the Share access rules would allow it.`)
             }
 
             QQC2.CheckBox {
+                id: allowGuestBox
                 text: i18nc("@option:check", "Allow guests")
+                enabled: sambaPlugin.shareContext.canEnableGuest
                 checked: sambaPlugin.shareContext.guestEnabled
                 onToggled: {
                     sambaPlugin.shareContext.guestEnabled = checked
                     sambaPlugin.dirty = true
                 }
+            }
+
+            QQC2.Label {
+                Layout.fillWidth: true
+                enabled: false // looks more visually connected if both are disabled
+                visible: !allowGuestBox.enabled
+                text: i18nc("@label", "Guest access is disabled by the system's Samba configuration.")
+                wrapMode: Text.Wrap
+                font: theme.smallestFont
             }
 
             // TODO: this could benefit form some splitting. This is half the file.

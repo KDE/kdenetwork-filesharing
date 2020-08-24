@@ -42,6 +42,7 @@ class ShareContext : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
+    Q_PROPERTY(bool canEnableGuest READ canEnableGuest CONSTANT)
     Q_PROPERTY(bool guestEnabled READ guestEnabled WRITE setGuestEnabled NOTIFY guestEnabledChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(int maximumNameLength READ maximumNameLength CONSTANT)
@@ -63,6 +64,11 @@ public:
     {
         m_enabled = enabled;
         Q_EMIT enabledChanged();
+    }
+
+    bool canEnableGuest()
+    {
+        return KSambaShare::instance()->areGuestsAllowed();
     }
 
     bool guestEnabled() const

@@ -77,7 +77,7 @@ Before you can access shares with your current user account you need to set a Sa
             textFormat: Text.RichText // for xi18n markup
             text: xi18nc("@info", `
 Additional user management and password management can be done using Samba's <command>smbpasswd</command>
-command line utility`)
+command line utility.`)
             wrapMode: Text.Wrap
         }
     }

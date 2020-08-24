@@ -125,7 +125,8 @@ Q_SIGNALS:
 private:
     KSambaShareData resolveShare(const QUrl &url)
     {
-        const QString path = url.toLocalFile();
+        QFileInfo info(url.toLocalFile());
+        const QString path = info.canonicalFilePath();
         Q_ASSERT(!path.isEmpty());
         const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(path);
         if (!shareList.isEmpty()) {

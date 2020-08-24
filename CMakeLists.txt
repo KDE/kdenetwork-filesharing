@@ -5,7 +5,7 @@ set(QT_MIN_VERSION "5.0.0")
 set(KF5_MIN_VERSION "5.74.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(FeatureSummary)
 include(KDEInstallDirs)
@@ -33,6 +33,20 @@ set_package_properties(PackageKitQt5
     PROPERTIES DESCRIPTION "Software Manager integration"
     TYPE OPTIONAL
     PURPOSE "Needed to automatically install the samba package."
+)
+
+find_package(net)
+set_package_properties(net PROPERTIES
+    TYPE RUNTIME
+    DESCRIPTION "Samba CLI tool"
+    PURPOSE "Runtime dependency to do anything"
+)
+
+find_package(testparm)
+set_package_properties(testparm PROPERTIES
+    TYPE RUNTIME
+    DESCRIPTION "Samba CLI tool"
+    PURPOSE "Runtime dependency to do anything"
 )
 
 include(CheckIncludeFile)

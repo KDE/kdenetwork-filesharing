@@ -23,7 +23,6 @@ public Q_SLOTS:
     bool hasFailed() const;
 
     static bool isInstalled();
-    static void reboot();
 
 Q_SIGNALS:
     void installingChanged();

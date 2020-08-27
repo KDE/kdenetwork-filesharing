@@ -17,7 +17,12 @@ Kirigami.PlaceholderMessage {
             if (!installer.installed) {
                 return
             }
-            stack.push("RebootPage.qml", { "installer": this })
+            // Installation is a bit special because it eventually ends in a reboot. So we push that page onto the
+            // pending pages and move to the group page. The group page in turn will either explicitly
+            // go to the reboot page (if group changes were made) or pop a pending page if groups are already cool.
+            // In either event it'll end up on the reboot page because of our pending meddling here.
+            pendingStack.push("RebootPage.qml")
+            stackReplace("GroupPage.qml")
         }
     }
 

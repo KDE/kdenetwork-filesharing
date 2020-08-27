@@ -34,6 +34,7 @@ public:
     void applyChanges() override;
 
     Q_INVOKABLE static bool isSambaInstalled();
+    Q_INVOKABLE static void reboot();
     Q_INVOKABLE static void showSambaStatus();
 
     bool isReady() const;

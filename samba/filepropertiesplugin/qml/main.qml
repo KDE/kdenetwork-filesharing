@@ -12,13 +12,21 @@ import org.kde.filesharing.samba 1.0 as Samba
 QQC2.StackView {
     id: stack
 
+    Samba.GroupManager {
+        id: groupManager
+    }
+
+    function stackReplace(target) {
+        stack.replace(stack.currentItem, target)
+    }
+
     // The stack of pending pages. Once all backing data is ready we fill the pending stack with all
     // pages that ought to get shown eventually. This enables all pages to simply pop the next page and push
     // it into the stack once they are done with their thing.
     property var pendingStack: []
 
     initialItem: QQC2.BusyIndicator {
-        running: !sambaPlugin.ready
+        running: !sambaPlugin.ready || !groupManager.ready
 
         onRunningChanged: {
             if (running) {
@@ -28,6 +36,9 @@ QQC2.StackView {
             pendingStack.push("ACLPage.qml")
             if (!sambaPlugin.userManager.currentUser().inSamba) {
                 pendingStack.push("UserPage.qml")
+            }
+            if (!groupManager.member) {
+                pendingStack.push("GroupPage.qml")
             }
             if (!sambaPlugin.isSambaInstalled()) {
                 // NB: the plugin may be built without installer support!

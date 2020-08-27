@@ -4,6 +4,7 @@ set(sambausershareplugin_PART_SRCS
     sambausershareplugin.cpp
     model.cpp
     usermanager.cpp
+    groupmanager.cpp
 )
 
 if(SAMBA_INSTALL)

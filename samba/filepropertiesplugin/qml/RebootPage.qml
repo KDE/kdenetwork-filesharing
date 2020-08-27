@@ -10,12 +10,10 @@ import org.kde.kirigami 2.12 as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 Kirigami.PlaceholderMessage {
-    property Samba.Installer installer
-
-    text: i18nc("@label", "Restart the computer to complete the installation.")
+    text: i18nc("@label", "Restart the computer to complete the changes.")
     helpfulAction: Kirigami.Action {
         iconName: "system-restart"
         text: i18nc("@button restart the system", "Restart")
-        onTriggered: installer.reboot()
+        onTriggered: sambaPlugin.reboot()
     }
 }

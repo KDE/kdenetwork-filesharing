@@ -8,7 +8,6 @@
 
 #include "sambainstaller.h"
 
-#include <QDBusInterface>
 #include <QDebug>
 #include <QFile>
 
@@ -40,13 +39,6 @@ void SambaInstaller::install()
         connect(installTransaction, &PackageKit::Transaction::finished,
                 this, &SambaInstaller::packageFinished);
     });
-}
-
-void SambaInstaller::reboot()
-{
-    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"),
-                                QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
-    interface.asyncCall(QStringLiteral("logout"), 0, 1, 2); // Options: do not ask again | reboot | force
 }
 
 bool SambaInstaller::isInstalling() const

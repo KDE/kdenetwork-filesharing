@@ -16,6 +16,7 @@ class AuthHelper: public QObject
 public Q_SLOTS:
     ActionReply isuserknown(const QVariantMap &args);
     ActionReply createuser(const QVariantMap &args);
+    ActionReply addtogroup(const QVariantMap &args);
 };
 
 #endif // AUTHHELPER_H

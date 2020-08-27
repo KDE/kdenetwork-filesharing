@@ -69,4 +69,51 @@ ActionReply AuthHelper::createuser(const QVariantMap &args)
     return reply;
 }
 
+ActionReply AuthHelper::addtogroup(const QVariantMap &args)
+{
+    const auto user = args.value(QStringLiteral("user")).toString();
+    const auto group = args.value(QStringLiteral("group")).toString();
+    if (user.isEmpty() || group.isEmpty()) {
+        return ActionReply::HelperErrorReply();
+    }
+    // Harden against some input abuse.
+    // TODO: add ability to resolve remote UID via KAuth and verify the request (or even reduce the arguments down to
+    //    only the group and resolve the UID)
+    if (!group.contains(QLatin1String("samba")) || group.contains(QLatin1String("admin")) ||
+        group.contains(QLatin1String("root"))) {
+        return ActionReply::HelperErrorReply();
+    }
+
+    QProcess p;
+#if defined(Q_OS_FREEBSD)
+    p.setProgram(QStringLiteral("pw"));
+    p.setArguments({
+        QStringLiteral("group"),
+        QStringLiteral("mod"),
+        QStringLiteral("{%1}").arg(group),
+        QStringLiteral("-m"),
+        QStringLiteral("{%1}").arg(user) });
+#elif defined(Q_OS_LINUX)
+    p.setProgram(QStringLiteral("/usr/sbin/usermod"));
+    p.setArguments({
+        QStringLiteral("--append"),
+        QStringLiteral("--groups"),
+        group,
+        user });
+#else
+#   error "Platform lacks group management support. Please add support."
+#endif
+
+    p.start();
+    p.waitForFinished(1000);
+
+    if (p.exitCode() != 0 || p.exitStatus() != QProcess::NormalExit) {
+        auto reply = ActionReply::HelperErrorReply();
+        reply.setErrorDescription(QString::fromUtf8(p.readAll()));
+        return reply;
+    }
+
+    return ActionReply::SuccessReply();
+}
+
 KAUTH_HELPER_MAIN("org.kde.filesharing.samba", AuthHelper)

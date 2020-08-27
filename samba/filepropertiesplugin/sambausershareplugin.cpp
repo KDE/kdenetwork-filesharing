@@ -20,6 +20,8 @@
 #include <QTimer>
 #include <QQmlContext>
 #include <QPushButton>
+#include <QDBusInterface>
+#include <QDBusConnection>
 
 #include <KMessageBox>
 #include <KPluginFactory>
@@ -31,6 +33,7 @@
 
 #include "model.h"
 #include "usermanager.h"
+#include "groupmanager.h"
 
 #ifdef SAMBA_INSTALL
 #include "sambainstaller.h"
@@ -181,6 +184,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 #ifdef SAMBA_INSTALL
     qmlRegisterType<SambaInstaller>("org.kde.filesharing.samba", 1, 0, "Installer");
 #endif
+    qmlRegisterType<GroupManager>("org.kde.filesharing.samba", 1, 0, "GroupManager");
     // Need access to the column enum, so register this as uncreatable.
     qmlRegisterUncreatableType<UserPermissionModel>("org.kde.filesharing.samba", 1, 0, "UserPermissionModel",
                                                     QStringLiteral("Access through sambaPlugin.userPermissionModel"));
@@ -348,6 +352,13 @@ void SambaUserSharePlugin::setReady(bool ready)
 {
     m_ready = ready;
     Q_EMIT readyChanged();
+}
+
+void SambaUserSharePlugin::reboot()
+{
+    QDBusInterface interface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"),
+                                QStringLiteral("org.kde.KSMServerInterface"), QDBusConnection::sessionBus());
+    interface.asyncCall(QStringLiteral("logout"), 0, 1, 2); // Options: do not ask again | reboot | force
 }
 
 #include "sambausershareplugin.moc"

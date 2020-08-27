@@ -31,7 +31,7 @@ Kirigami.ScrollablePage {
             changePassword.busy = false
             if (userCreated) {
                 close()
-                stack.push(pendingStack.pop())
+                stackReplace(pendingStack.pop())
             }
         }
 

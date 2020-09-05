@@ -67,7 +67,7 @@ Before you can access shares with your current user account you need to set a Sa
         }
 
         QQC2.Button {
-            text: i18nc("@action:button opens dialog to create new user", "Create My Samba User")
+            text: i18nc("@action:button opens dialog to create new user", "Create Samba password")
             onClicked: changePassword.openAndClear()
         }
 

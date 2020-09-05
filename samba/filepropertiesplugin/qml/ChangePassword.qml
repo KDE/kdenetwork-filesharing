@@ -20,8 +20,8 @@ Kirigami.OverlaySheet {
     signal accepted()
 
     header: Kirigami.Heading {
-        // FIXME make qml user name aware so we can be more contextually accurate and label it 'create user foo'
-        text: i18nc("@title", "Create User")
+        // FIXME make qml user name aware so we can be more contextually accurate and label it 'set password for foo'
+        text: i18nc("@title", "Set password")
     }
 
     function openAndClear() {
@@ -113,9 +113,9 @@ Kirigami.OverlaySheet {
 
             QQC2.Button {
                 id: passButton
-                text: i18nc("@action:button creates a new samba user", "Create User")
+                text: i18nc("@action:button creates a new samba user with the user-specified password", "Set Password")
                 enabled: isAcceptable()
-                Layout.alignment: Qt.AlignLeft
+                Layout.alignment: Qt.AlignRight
                 onClicked: maybeAccept()
             }
         }

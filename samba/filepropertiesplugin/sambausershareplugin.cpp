@@ -30,6 +30,7 @@
 #include <KSambaShareData>
 #include <KService>
 #include <KIO/ApplicationLauncherJob>
+#include <KCoreAddons>
 
 #include "model.h"
 #include "usermanager.h"
@@ -212,11 +213,14 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     const QUrl url(QStringLiteral("qrc:/org.kde.filesharing.samba/qml/main.qml"));
     widget->setSource(url);
 
-    auto item = properties->addPage(m_page.get(), i18nc("@title:tab", "Share"));
-    if (qEnvironmentVariableIsSet("TEST_FOCUS_SHARE")) {
-        QTimer::singleShot(100, [item, this] {
-            properties->setCurrentPage(item);
-        });
+    // Bump dependency after our 20.12 release to get rid of the if.
+    if (KCoreAddons::version() >= QT_VERSION_CHECK(5, 75, 0)) {
+        properties->setFileSharingPage(m_page.get());
+        if (qEnvironmentVariableIsSet("TEST_FOCUS_SHARE")) {
+            QTimer::singleShot(100, properties, &KPropertiesDialog::showFileSharingPage);
+        }
+    } else { // << 7.75 was broken, hack around it
+        properties->addPage(m_page.get(), i18nc("@title:tab", "Share"));
     }
 
     QTimer::singleShot(0, [this] {

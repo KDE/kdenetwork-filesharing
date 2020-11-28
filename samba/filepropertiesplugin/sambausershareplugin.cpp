@@ -25,7 +25,6 @@
 
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KSambaShare>
 #include <KSambaShareData>
 #include <KService>

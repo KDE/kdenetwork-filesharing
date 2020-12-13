@@ -39,7 +39,7 @@
 #include "sambainstaller.h"
 #endif
 
-K_PLUGIN_FACTORY(SambaUserSharePluginFactory, registerPlugin<SambaUserSharePlugin>();)
+K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
 class ShareContext : public QObject
 {

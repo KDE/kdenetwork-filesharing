@@ -15,6 +15,8 @@ qt5_add_resources(sambausershareplugin_PART_SRCS qml/qml.qrc)
 
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 
+kcoreaddons_desktop_to_json(sambausershareplugin sambausershareplugin.desktop)
+
 target_link_libraries(sambausershareplugin
     KF5::CoreAddons
     KF5::I18n
@@ -30,8 +32,7 @@ if(SAMBA_INSTALL)
     target_link_libraries(sambausershareplugin PK::packagekitqt5)
 endif()
 
-install(TARGETS sambausershareplugin DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES sambausershareplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS sambausershareplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/propertiesdialog)
 
 # kauth
 

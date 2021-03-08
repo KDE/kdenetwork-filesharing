@@ -1,16 +1,24 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2020-2021 Harald Sitter <sitter@kde.org>
 */
 
 #include "authhelper.h"
 
 #include <QProcess>
+#include <QRegularExpression>
+
+static bool isValidUserName(const QString &name)
+{
+    // https://systemd.io/USER_NAMES/
+    static QRegularExpression expr(QStringLiteral("^[a-z_][a-z0-9_-]*$"));
+    return expr.match(name).hasMatch();
+}
 
 ActionReply AuthHelper::isuserknown(const QVariantMap &args)
 {
     const auto username = args.value(QStringLiteral("username")).toString();
-    if (username.isEmpty()) {
+    if (!isValidUserName(username)) {
         return ActionReply::HelperErrorReply();
     }
 
@@ -35,7 +43,7 @@ ActionReply AuthHelper::createuser(const QVariantMap &args)
 {
     const auto username = args.value(QStringLiteral("username")).toString();
     const auto password = args.value(QStringLiteral("password")).toString();
-    if (username.isEmpty() || password.isEmpty()) {
+    if (!isValidUserName(username) || password.isEmpty()) {
         return ActionReply::HelperErrorReply();
     }
 
@@ -73,7 +81,7 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
 {
     const auto user = args.value(QStringLiteral("user")).toString();
     const auto group = args.value(QStringLiteral("group")).toString();
-    if (user.isEmpty() || group.isEmpty()) {
+    if (!isValidUserName(user) || !isValidUserName(group)) {
         return ActionReply::HelperErrorReply();
     }
     // Harden against some input abuse.

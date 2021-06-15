@@ -32,7 +32,7 @@ if(SAMBA_INSTALL)
     target_link_libraries(sambausershareplugin PK::packagekitqt5)
 endif()
 
-install(TARGETS sambausershareplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/propertiesdialog)
+install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/propertiesdialog)
 
 # kauth
 

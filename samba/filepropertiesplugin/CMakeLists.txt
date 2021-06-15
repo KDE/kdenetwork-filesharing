@@ -5,13 +5,14 @@ set(sambausershareplugin_PART_SRCS
     model.cpp
     usermanager.cpp
     groupmanager.cpp
+
+    qml/qml.qrc
 )
 
 if(SAMBA_INSTALL)
     list(APPEND sambausershareplugin_PART_SRCS sambainstaller.cpp)
 endif()
 
-qt5_add_resources(sambausershareplugin_PART_SRCS qml/qml.qrc)
 
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 

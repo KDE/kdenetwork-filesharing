@@ -10,7 +10,7 @@ set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 include(FeatureSummary)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-include(KDEFrameworkCompilerSettings)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
 find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
@@ -76,8 +76,14 @@ add_feature_info("Samba Installation" SAMBA_INSTALL "Automatic installation of '
 add_definitions(-DTRANSLATION_DOMAIN=\"kfileshare\")
 
 add_definitions(
-        -DQT_NO_FOREACH
-        -DQT_NO_EMIT
+    -DQT_NO_CAST_TO_ASCII
+    -DQT_NO_CAST_FROM_ASCII
+    -DQT_NO_URL_CAST_FROM_STRING
+    -DQT_NO_CAST_FROM_BYTEARRAY
+    -DQT_USE_QSTRINGBUILDER
+    -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT
+    -DQT_NO_FOREACH
+    -DQT_NO_KEYWORDS
 )
 
 add_subdirectory(samba)

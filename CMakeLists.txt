@@ -85,8 +85,6 @@ add_subdirectory(samba)
 install(FILES org.kde.kdenetwork-filesharing.metainfo.xml
         DESTINATION ${KDE_INSTALL_METAINFODIR})
 
-if(IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
-    ki18n_install(po)
-endif()
+ki18n_install(po)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

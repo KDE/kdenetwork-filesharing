@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 project(filesharing)
 
-set(QT_MIN_VERSION "5.0.0")
-set(KF5_MIN_VERSION "5.74.0")
+set(QT_MIN_VERSION "5.14.0")
+set(KF5_MIN_VERSION "5.81.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})

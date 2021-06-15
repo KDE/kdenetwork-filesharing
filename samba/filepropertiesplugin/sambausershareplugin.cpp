@@ -13,7 +13,6 @@
 #include <QQmlApplicationEngine>
 #include <QQuickWidget>
 #include <QQuickItem>
-#include <KDeclarative/KDeclarative>
 #include <QMetaMethod>
 #include <QVBoxLayout>
 #include <KLocalizedString>
@@ -23,6 +22,8 @@
 #include <QDBusInterface>
 #include <QDBusConnection>
 
+#include <KDeclarative/KDeclarative>
+#include <KLocalizedContext>
 #include <KMessageBox>
 #include <KPluginFactory>
 #include <KSambaShare>
@@ -194,11 +195,11 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     m_page->setAttribute(Qt::WA_TranslucentBackground);
     auto widget = new QQuickWidget(m_page.get());
     // Load kdeclarative and set translation domain before setting the source so strings gets translated.
-    KDeclarative::KDeclarative kdeclarative;
-    kdeclarative.setDeclarativeEngine(widget->engine());
-    kdeclarative.setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
-    kdeclarative.setupEngine(widget->engine());
-    kdeclarative.setupContext();
+    KDeclarative::KDeclarative::setupEngine(widget->engine());
+    auto i18nContext = new KLocalizedContext(widget->engine());
+    i18nContext->setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
+    widget->engine()->rootContext()->setContextObject(i18nContext);
+
     widget->setResizeMode(QQuickWidget::SizeRootObjectToView);
     widget->setFocusPolicy(Qt::StrongFocus);
     widget->setAttribute(Qt::WA_AlwaysStackOnTop, true);

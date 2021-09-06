@@ -122,8 +122,7 @@ Kirigami.OverlaySheet {
 
         QQC2.BusyIndicator {
             id: busyIndicator
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            Layout.alignment: Qt.AlignCenter
             visible: running
             running: passwordRoot.busy
         }

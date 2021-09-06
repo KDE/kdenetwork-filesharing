@@ -25,32 +25,35 @@ QQC2.StackView {
     // it into the stack once they are done with their thing.
     property var pendingStack: []
 
-    initialItem: QQC2.BusyIndicator {
-        running: !sambaPlugin.ready || !groupManager.ready
+    initialItem: Item {
+        QQC2.BusyIndicator {
+            anchors.centerIn: parent
+            running: !sambaPlugin.ready || !groupManager.ready
 
-        onRunningChanged: {
-            if (running) {
-                return
-            }
-
-            pendingStack.push("ACLPage.qml")
-            if (!sambaPlugin.userManager.currentUser().inSamba) {
-                pendingStack.push("UserPage.qml")
-            }
-            if (!groupManager.member) {
-                pendingStack.push("GroupPage.qml")
-            }
-            if (!sambaPlugin.isSambaInstalled()) {
-                // NB: the plugin may be built without installer support!
-                if (Samba.Installer === undefined) {
-                    pendingStack.push("MissingSambaPage.qml")
-                } else {
-                    pendingStack.push("InstallPage.qml")
+            onRunningChanged: {
+                if (running) {
+                    return
                 }
-            }
 
-            stack.clear()
-            stack.push(pendingStack.pop())
+                pendingStack.push("ACLPage.qml")
+                if (!sambaPlugin.userManager.currentUser().inSamba) {
+                    pendingStack.push("UserPage.qml")
+                }
+                if (!groupManager.member) {
+                    pendingStack.push("GroupPage.qml")
+                }
+                if (!sambaPlugin.isSambaInstalled()) {
+                    // NB: the plugin may be built without installer support!
+                    if (Samba.Installer === undefined) {
+                        pendingStack.push("MissingSambaPage.qml")
+                    } else {
+                        pendingStack.push("InstallPage.qml")
+                    }
+                }
+
+                stack.clear()
+                stack.push(pendingStack.pop())
+            }
         }
     }
 }

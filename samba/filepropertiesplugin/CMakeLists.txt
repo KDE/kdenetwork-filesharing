@@ -16,8 +16,6 @@ endif()
 
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 
-kcoreaddons_desktop_to_json(sambausershareplugin sambausershareplugin.desktop)
-
 target_link_libraries(sambausershareplugin
     KF5::CoreAddons
     KF5::I18n

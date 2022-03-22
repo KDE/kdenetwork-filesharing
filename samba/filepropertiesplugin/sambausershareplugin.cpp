@@ -29,7 +29,7 @@
 #include <KSambaShare>
 #include <KSambaShareData>
 #include <KService>
-#include <KIO/ApplicationLauncherJob>
+#include <KIO/CommandLauncherJob>
 
 #include "model.h"
 #include "usermanager.h"
@@ -233,12 +233,9 @@ bool SambaUserSharePlugin::isSambaInstalled()
 
 void SambaUserSharePlugin::showSambaStatus()
 {
-    KService::Ptr kcm = KService::serviceByStorageId(QStringLiteral("smbstatus"));
-    if (!kcm) {
-        // TODO: meh - we have no availability handling. I may have a handy class in plasma-disks
-        return;
-    }
-    KIO::ApplicationLauncherJob(kcm).start();
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("kinfocenter"), {QStringLiteral("kcm_samba")});
+    job->setDesktopName(QStringLiteral("kinfocenter"));
+    job->start();
 }
 
 void SambaUserSharePlugin::applyChanges()

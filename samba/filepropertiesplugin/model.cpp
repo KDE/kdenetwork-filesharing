@@ -2,6 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
 */
 
 #include <kuser.h>
@@ -161,4 +162,12 @@ QString UserPermissionModel::getAcl() const
     }
 
     return (denials + readables + fulls).join(QLatin1Char(','));
+}
+
+UserPermissionModel::SambaACEHashMap UserPermissionModel::getUsersACEs() const {
+    SambaACEHashMap result;
+    for (auto it = m_usersAcl.constBegin(); it != m_usersAcl.constEnd(); ++it) {
+        result.insert(it.key(), it->value<QString>());
+    }
+    return result;
 }

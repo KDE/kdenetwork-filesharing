@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
 */
 
 #ifndef SAMBAUSERSHAREPLUGIN_H
@@ -17,6 +18,7 @@
 class UserPermissionModel;
 class ShareContext;
 class UserManager;
+class PermissionsHelper;
 
 class SambaUserSharePlugin : public KPropertiesDialogPlugin
 {
@@ -28,6 +30,8 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_PROPERTY(UserManager *userManager MEMBER m_userManager CONSTANT)
     Q_PROPERTY(UserPermissionModel *userPermissionModel MEMBER m_model CONSTANT)
     Q_PROPERTY(ShareContext *shareContext MEMBER m_context CONSTANT)
+    Q_PROPERTY(PermissionsHelper *permissionsHelper MEMBER m_permissionsHelper CONSTANT)
+
 public:
     SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
     ~SambaUserSharePlugin() override = default;
@@ -51,6 +55,7 @@ private:
     ShareContext *m_context= nullptr;
     UserPermissionModel *m_model = nullptr;
     UserManager *m_userManager = nullptr;
+    PermissionsHelper *m_permissionsHelper = nullptr;
     bool m_ready = false;
     // Hold the qquickwidget so it gets destroyed with us. Otherwise we'd have bogus reference errors
     // as the Plugin instance is exposed as contextProperty to qml but the widget is parented to the PropertiesDialog

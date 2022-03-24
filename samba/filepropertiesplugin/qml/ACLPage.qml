@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
 */
 
 import QtQuick 2.12
@@ -50,6 +51,32 @@ when the Share access rules would allow it.`)
 
     ColumnLayout {
         anchors.fill: parent
+
+        Kirigami.InlineMessage {
+            id: changePermissionsWarning
+            Layout.fillWidth: true
+            showCloseButton: true
+            visible: sambaPlugin.permissionsHelper.permissionsChangeRequired
+            type: Kirigami.MessageType.Warning
+            text: i18nc("@label", "This folder needs extra permissions for sharing to work")
+
+            actions: [
+                Kirigami.Action {
+                    text: i18nc("@action:button opens the change permissions page", "Fix Permissions")
+                    onTriggered: stack.push("ChangePermissionsPage.qml")
+                }
+            ]
+        }
+
+        Kirigami.InlineMessage {
+            id: posixACLWarning
+            Layout.fillWidth: true
+            showCloseButton: true
+            visible: sambaPlugin.permissionsHelper.hasPosixACL
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@label", "The share might not work properly because share folder or its paths has Advanced Permissions: %1",
+                            sambaPlugin.permissionsHelper.pathsWithPosixACL.join(", "))
+        }
 
         QQC2.CheckBox {
             id: shareEnabled
@@ -218,6 +245,7 @@ when the Share access rules would allow it.`)
                                     denialSheet.maybeOpen()
                                 }
                                 sambaPlugin.dirty = true
+                                sambaPlugin.permissionsHelper.reload()
                             }
                             Component.onCompleted: currentIndex = indexOfValue(edit)
                         }

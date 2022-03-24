@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
     SPDX-FileCopyrightText: 2015-2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
 */
 
 #include "sambausershareplugin.h"
@@ -34,6 +35,7 @@
 #include "model.h"
 #include "usermanager.h"
 #include "groupmanager.h"
+#include "permissionshelper.h"
 
 #ifdef SAMBA_INSTALL
 #include "sambainstaller.h"
@@ -49,6 +51,7 @@ class ShareContext : public QObject
     Q_PROPERTY(bool guestEnabled READ guestEnabled WRITE setGuestEnabled NOTIFY guestEnabledChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(int maximumNameLength READ maximumNameLength CONSTANT)
+    Q_PROPERTY(QString path READ path CONSTANT)
 public:
     explicit ShareContext(const QUrl &url, QObject *parent = nullptr)
         : QObject(parent)
@@ -96,6 +99,10 @@ public:
     QString name() const
     {
         return m_shareData.name();
+    }
+
+    QString path() const {
+        return m_shareData.path();
     }
 
     void setName(const QString &name)
@@ -180,6 +187,8 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     qmlRegisterAnonymousType<UserManager>("org.kde.filesharing.samba", 1);
     qmlRegisterAnonymousType<User>("org.kde.filesharing.samba", 1);
     m_model = new UserPermissionModel(m_context->m_shareData, m_userManager, this);
+    qmlRegisterAnonymousType<PermissionsHelper>("org.kde.filesharing.samba", 1);
+    m_permissionsHelper = new PermissionsHelper(m_context->m_shareData.path(), m_userManager, m_model);
 
 #ifdef SAMBA_INSTALL
     qmlRegisterType<SambaInstaller>("org.kde.filesharing.samba", 1, 0, "Installer");
@@ -219,6 +228,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
 
     QTimer::singleShot(0, [this] {
         connect(m_userManager, &UserManager::loaded, this, [this] {
+            m_permissionsHelper->reload();
             setReady(true);
         });
         m_userManager->load();

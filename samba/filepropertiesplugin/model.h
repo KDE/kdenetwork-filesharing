@@ -2,6 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2011 Rodrigo Belem <rclbelem@gmail.com>
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
 */
 
 #ifndef model_h
@@ -18,6 +19,8 @@ class UserPermissionModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
+    using SambaACEHashMap = QHash<QString, QString>;
+
     enum Column {
         ColumnUsername,
         ColumnAccess
@@ -35,6 +38,8 @@ public:
     bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole) override;
 
     QString getAcl() const;
+
+    SambaACEHashMap getUsersACEs() const;
 
 private:
     UserManager const *m_userManager = nullptr;

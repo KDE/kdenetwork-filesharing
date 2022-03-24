@@ -5,6 +5,7 @@ set(sambausershareplugin_PART_SRCS
     model.cpp
     usermanager.cpp
     groupmanager.cpp
+    permissionshelper.cpp
 
     qml/qml.qrc
 )

@@ -38,17 +38,17 @@ static KFileItem getCompleteFileItem(const QString &path)
 
 static QString permissionsToString(QFile::Permissions perm)
 {
-    const char permStr[] = {(perm & QFileDevice::ReadOwner) ? 'r' : '-',
-                            (perm & QFileDevice::WriteOwner) ? 'w' : '-',
-                            (perm & QFileDevice::ExeOwner) ? 'x' : '-',
-                            (perm & QFileDevice::ReadGroup) ? 'r' : '-',
-                            (perm & QFileDevice::WriteGroup) ? 'w' : '-',
-                            (perm & QFileDevice::ExeGroup) ? 'x' : '-',
-                            (perm & QFileDevice::ReadOther) ? 'r' : '-',
-                            (perm & QFileDevice::WriteOther) ? 'w' : '-',
-                            (perm & QFileDevice::ExeOther) ? 'x' : '-'};
+    const char permString[] = {(perm & QFileDevice::ReadOwner) ? 'r' : '-',
+                               (perm & QFileDevice::WriteOwner) ? 'w' : '-',
+                               (perm & QFileDevice::ExeOwner) ? 'x' : '-',
+                               (perm & QFileDevice::ReadGroup) ? 'r' : '-',
+                               (perm & QFileDevice::WriteGroup) ? 'w' : '-',
+                               (perm & QFileDevice::ExeGroup) ? 'x' : '-',
+                               (perm & QFileDevice::ReadOther) ? 'r' : '-',
+                               (perm & QFileDevice::WriteOther) ? 'w' : '-',
+                               (perm & QFileDevice::ExeOther) ? 'x' : '-'};
 
-    const int permsAsNum = ((perm & QFileDevice::ReadOwner) ? S_IRUSR : 0)
+    const int permsAsNumber = ((perm & QFileDevice::ReadOwner) ? S_IRUSR : 0)
             + ((perm & QFileDevice::WriteOwner) ? S_IWUSR : 0)
             + ((perm & QFileDevice::ExeOwner) ? S_IXUSR : 0)
             + ((perm & QFileDevice::ReadGroup) ? S_IRGRP : 0)
@@ -58,7 +58,7 @@ static QString permissionsToString(QFile::Permissions perm)
             + ((perm & QFileDevice::WriteOther) ? S_IWOTH : 0)
             + ((perm & QFileDevice::ExeOther) ? S_IXOTH : 0);
 
-    return QString::fromLatin1(permStr, sizeof(permStr)) + QStringLiteral(" (0%1)").arg(QString::number(permsAsNum, 8));
+    return QString::fromLatin1(permString, sizeof(permString)) + QStringLiteral(" (0%1)").arg(QString::number(permsAsNumber, 8));
 }
 
 PermissionsHelperModel::PermissionsHelperModel(PermissionsHelper *helper)

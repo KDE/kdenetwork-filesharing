@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 */
 #pragma once
 
@@ -25,7 +26,7 @@ public:
     explicit PermissionsHelperModel(PermissionsHelper *helper);
 
     int rowCount(const QModelIndex &parent = {}) const override;
-    int columnCount(const QModelIndex &parent = {}) const override;
+    Q_INVOKABLE int columnCount(const QModelIndex &parent = {}) const override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 

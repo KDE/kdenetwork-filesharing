@@ -2,6 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2021 Danil Shein <dshein@altlinux.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 */
 
 #include "permissionshelper.h"
@@ -12,6 +13,7 @@
 #include <QDebug>
 #include <QFileInfo>
 #include <QMetaEnum>
+#include <KLocalizedString>
 
 #include "model.h"
 #include "usermanager.h"
@@ -69,7 +71,7 @@ PermissionsHelperModel::PermissionsHelperModel(PermissionsHelper *helper)
 
 int PermissionsHelperModel::rowCount(const QModelIndex &) const
 {
-    return parent->affectedPaths().count();
+    return parent->affectedPaths().count() + 1 /* header */;
 }
 
 int PermissionsHelperModel::columnCount(const QModelIndex &) const
@@ -79,14 +81,32 @@ int PermissionsHelperModel::columnCount(const QModelIndex &) const
 
 QVariant PermissionsHelperModel::data(const QModelIndex &index, int role) const
 {
-    if (role == Qt::DisplayRole) {
+    if (!index.isValid()) {
+        return {};
+    }
+
+    if (index.row() == 0 /* header */) {
         switch (index.column()) {
         case ColumnPath:
-            return parent->affectedPaths().at(index.row()).path;
+            return i18nc("@title", "File Path");
         case ColumnOldPermissions:
-            return QVariant::fromValue(permissionsToString(parent->affectedPaths().at(index.row()).oldPerm));
+            return i18nc("@title", "Current Permissions");
         case ColumnNewPermissions:
-            return QVariant::fromValue(permissionsToString(parent->affectedPaths().at(index.row()).newPerm));
+            return i18nc("@title", "Required Permissions");
+        };
+    }
+
+    if (role == Qt::DisplayRole) {
+        const int row = index.row() - 1 /* header */;
+        const auto &affectedPath = parent->affectedPaths().at(row);
+
+        switch (index.column()) {
+        case ColumnPath:
+            return affectedPath.path;
+        case ColumnOldPermissions:
+            return QVariant::fromValue(permissionsToString(affectedPath.oldPerm));
+        case ColumnNewPermissions:
+            return QVariant::fromValue(permissionsToString(affectedPath.newPerm));
         };
     }
 

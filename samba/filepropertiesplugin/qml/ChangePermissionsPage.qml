@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 */
 
 import QtQuick 2.12
@@ -36,66 +37,26 @@ Item {
 `, sambaPlugin.shareContext.path)
             }
 
-            Row {
-                id: row
-                Layout.fillWidth: true
-
-                Repeater {
-                    id: repeater
-                    model: [
-                        i18nc("@title", "File Path"),
-                        i18nc("@title", "Current Permissions"),
-                        i18nc("@title", "Required Permissions")
-                    ]
-
-                    QQC2.Label {
-                        width: row.width / repeater.count
-                        text: modelData
-                    }
-                }
-            }
-
             QQC2.ScrollView {
                 Layout.fillWidth: true
+                Layout.fillHeight: true
 
                 contentItem: TableView {
                     id: view
 
-                    property bool itemComplete: false
-
-                    anchors.fill: parent
                     clip: true
                     interactive: false
                     model: sambaPlugin.permissionsHelper.model
 
-                    columnWidthProvider: function (column) {
-                        return view.model ? view.width / view.model.columnCount() : 0
-                    }
+                    property int maxColumn: model.columnCount() - 1
 
-                    Timer {
-                        id: forceLayoutTimer
-                        interval: 0
-                        running: false
-                        repeat: false
-                        onTriggered: {
-                            if (view.itemComplete) {
-                                view.forceLayout()
-                            }
-                        }
-                    }
-                    onWidthChanged: forceLayoutTimer.start()
-
-                    delegate: RowLayout {
+                    delegate: QQC2.Label {
+                        font.bold: row == 0 /* header */ ? true : false
                         Layout.fillWidth: true
-
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            text: display
-                            elide: Text.ElideMiddle
-                        }
+                        text: display
+                        font.family: "monospace"
+                        rightPadding: column >= view.maxColumn ? 0 : Kirigami.Units.largeSpacing
                     }
-
-                    Component.onCompleted: itemComplete = true
                 }
             }
         }

@@ -102,6 +102,7 @@ Item {
 
         Kirigami.ActionToolBar {
             alignment: Qt.AlignRight
+            flat: false
 
             actions: [
                 Kirigami.Action {

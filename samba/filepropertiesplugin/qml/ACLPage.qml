@@ -219,6 +219,7 @@ when the Share access rules would allow it.`)
                         // This is only a layout to conveniently forward the child size regardless of which child is in
                         // use.
                         Layout.fillWidth: true
+                        TableView.onReused: combo.loadCurrentIndex()
 
                         QQC2.Label {
                             Layout.fillWidth: true
@@ -247,7 +248,12 @@ when the Share access rules would allow it.`)
                                 sambaPlugin.dirty = true
                                 sambaPlugin.permissionsHelper.reload()
                             }
-                            Component.onCompleted: currentIndex = indexOfValue(edit)
+
+                            function loadCurrentIndex() {
+                                currentIndex = indexOfValue(edit)
+                            }
+
+                            Component.onCompleted: loadCurrentIndex()
                         }
                     }
 

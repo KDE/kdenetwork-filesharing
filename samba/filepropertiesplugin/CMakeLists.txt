@@ -24,7 +24,7 @@ target_link_libraries(sambausershareplugin
     KF5::KIOWidgets
     Qt::Qml
     Qt::QuickWidgets
-    KF5::Auth
+    KF5::AuthCore
     KF5::Declarative
 )
 

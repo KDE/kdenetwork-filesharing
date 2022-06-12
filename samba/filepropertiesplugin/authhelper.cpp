@@ -4,7 +4,7 @@
 */
 
 #include "authhelper.h"
-
+#include <kauth/helpersupport.h>
 #include <QProcess>
 #include <QRegularExpression>
 

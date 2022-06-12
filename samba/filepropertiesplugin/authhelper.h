@@ -6,7 +6,7 @@
 #ifndef AUTHHELPER_H
 #define AUTHHELPER_H
 
-#include <KAuth>
+#include <KAuth/ActionReply>
 
 using namespace KAuth;
 

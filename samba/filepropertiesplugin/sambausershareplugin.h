@@ -12,13 +12,133 @@
 
 #include <kpropertiesdialog.h>
 #include <KSambaShareData>
+#include <KSambaShare>
+#include <QFileInfo>
 
 #include <memory>
+#include "usermanager.h"
+#include "model.h"
+#include "permissionshelper.h"
 
-class UserPermissionModel;
-class ShareContext;
-class UserManager;
-class PermissionsHelper;
+class ShareContext : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
+    Q_PROPERTY(bool canEnableGuest READ canEnableGuest CONSTANT)
+    Q_PROPERTY(bool guestEnabled READ guestEnabled WRITE setGuestEnabled NOTIFY guestEnabledChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
+    Q_PROPERTY(int maximumNameLength READ maximumNameLength CONSTANT)
+    Q_PROPERTY(QString path READ path CONSTANT)
+public:
+    explicit ShareContext(const QUrl &url, QObject *parent = nullptr)
+        : QObject(parent)
+        , m_shareData(resolveShare(url))
+        , m_enabled(KSambaShare::instance()->isDirectoryShared(m_shareData.path()))
+        // url isn't a member. always use .path()!
+    {
+    }
+
+    bool enabled() const
+    {
+        return m_enabled;
+    }
+
+    void setEnabled(bool enabled)
+    {
+        m_enabled = enabled;
+        Q_EMIT enabledChanged();
+    }
+
+    bool canEnableGuest()
+    {
+        return KSambaShare::instance()->areGuestsAllowed();
+    }
+
+    bool guestEnabled() const
+    {
+        // WTF is that enum even...
+        switch (m_shareData.guestPermission()) {
+        case KSambaShareData::GuestsNotAllowed:
+            return false;
+        case KSambaShareData::GuestsAllowed:
+            return true;
+        }
+        Q_UNREACHABLE();
+        return false;
+    }
+
+    void setGuestEnabled(bool enabled)
+    {
+        m_shareData.setGuestPermission(enabled ? KSambaShareData::GuestsAllowed : KSambaShareData::GuestsNotAllowed);
+        Q_EMIT guestEnabledChanged();
+    }
+
+    QString name() const
+    {
+        return m_shareData.name();
+    }
+
+    QString path() const {
+        return m_shareData.path();
+    }
+
+    void setName(const QString &name)
+    {
+        m_shareData.setName(name);
+        Q_EMIT nameChanged();
+    }
+
+    static constexpr int maximumNameLength()
+    {
+        // Windows 10 allows creating shares with a maximum of 60 characters when measured on 2020-08-13.
+        // We consider this kind of a soft limit as there appears to be no actual limit specified anywhere.
+        return 60;
+    }
+
+
+    Q_INVOKABLE static bool isNameFree(const QString &name)
+    {
+        return KSambaShare::instance()->isShareNameAvailable(name);
+    }
+
+public Q_SLOTS:
+    QString newShareName(const QUrl &url)
+    {
+        Q_ASSERT(url.isValid());
+        Q_ASSERT(!url.isEmpty());
+        // TODO pretty sure this is buggy for urls with trailing slash where filename would be ""
+        return url.fileName().left(maximumNameLength());
+    }
+
+Q_SIGNALS:
+    void enabledChanged();
+    void guestEnabledChanged();
+    void nameChanged();
+
+private:
+    KSambaShareData resolveShare(const QUrl &url)
+    {
+        QFileInfo info(url.toLocalFile());
+        const QString path = info.canonicalFilePath();
+        Q_ASSERT(!path.isEmpty());
+        const QList<KSambaShareData> shareList = KSambaShare::instance()->getSharesByPath(path);
+        if (!shareList.isEmpty()) {
+            return shareList.first(); // FIXME: using just the first in the list for a while
+        }
+        KSambaShareData newShare;
+        newShare.setName(newShareName(url));
+        newShare.setGuestPermission(KSambaShareData::GuestsNotAllowed);
+        newShare.setPath(path);
+        return newShare;
+    }
+
+public:
+    // TODO shouldn't be public may need refactoring though because the ACL model needs an immutable copy
+    KSambaShareData m_shareData;
+private:
+    bool m_enabled = false; // this gets cached so we can manipulate its state from qml
+};
+
 
 class SambaUserSharePlugin : public KPropertiesDialogPlugin
 {

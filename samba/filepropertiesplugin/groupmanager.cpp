@@ -10,8 +10,8 @@
 #include <QDebug>
 
 #include <KUser>
-#include <KAuth/KAuthAction>
-#include <KAuth/KAuthExecuteJob>
+#include <KAuth/Action>
+#include <KAuth/ExecuteJob>
 #include <KLocalizedString>
 
 GroupManager::GroupManager(QObject *parent)

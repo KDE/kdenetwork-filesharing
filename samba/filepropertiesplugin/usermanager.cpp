@@ -10,8 +10,8 @@
 #include <QRegularExpression>
 #include <QProcess>
 
-#include <KAuthAction>
-#include <KAuthExecuteJob>
+#include <KAuth/Action>
+#include <KAuth/ExecuteJob>
 #include <KLocalizedString>
 
 const auto everyoneUserName = QStringLiteral("Everyone");

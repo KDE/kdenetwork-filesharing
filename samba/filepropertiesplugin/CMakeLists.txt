@@ -22,17 +22,17 @@ target_link_libraries(sambausershareplugin
     KF5::I18n
     KF5::KIOCore
     KF5::KIOWidgets
-    Qt5::Qml
-    Qt5::QuickWidgets
+    Qt::Qml
+    Qt::QuickWidgets
     KF5::Auth
     KF5::Declarative
 )
 
 if(SAMBA_INSTALL)
-    target_link_libraries(sambausershareplugin PK::packagekitqt5)
+    target_link_libraries(sambausershareplugin PK::packagekitqt${QT_MAJOR_VERSION})
 endif()
 
-install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/propertiesdialog)
+install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/propertiesdialog)
 
 # kauth
 

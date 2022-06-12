@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(filesharing)
 
-set(QT_MIN_VERSION "5.14.0")
-set(KF5_MIN_VERSION "5.81.0")
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_MIN_VERSION "5.90.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
@@ -12,7 +12,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
     Widgets
     Qml
@@ -29,8 +29,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Declarative
 )
 
-find_package(PackageKitQt5)
-set_package_properties(PackageKitQt5
+find_package(PackageKitQt${QT_MAJOR_VERSION})
+set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
     PROPERTIES DESCRIPTION "Software Manager integration"
     TYPE OPTIONAL
     PURPOSE "Needed to automatically install the samba package."

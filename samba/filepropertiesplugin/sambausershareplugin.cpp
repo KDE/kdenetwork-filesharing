@@ -9,7 +9,6 @@
 
 #include "sambausershareplugin.h"
 
-#include <QFileInfo>
 #include <QDebug>
 #include <QQmlApplicationEngine>
 #include <QQuickWidget>
@@ -27,12 +26,9 @@
 #include <KLocalizedContext>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <KSambaShare>
-#include <KSambaShareData>
 #include <KService>
 #include <KIO/CommandLauncherJob>
 
-#include "model.h"
 
 #include "groupmanager.h"
 

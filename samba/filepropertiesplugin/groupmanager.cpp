@@ -25,7 +25,7 @@ GroupManager::GroupManager(QObject *parent)
                             QStringLiteral("--verbose"),
                             QStringLiteral("--parameter-name"),
                             QStringLiteral("usershare path")});
-        connect(proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, proc](int exitCode) {
+        connect(proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, proc] {
             proc->deleteLater();
             const QString path = QString::fromUtf8(proc->readAllStandardOutput().simplified());
 
@@ -33,7 +33,7 @@ GroupManager::GroupManager(QObject *parent)
             Q_EMIT isReadyChanged();
 
             QFileInfo info(path);
-            if (exitCode != 0 || path.isEmpty() || !info.exists()) {
+            if (path.isEmpty() || !info.exists()) {
                 return; // usershares may be disabled or path is invalid :|
             }
 

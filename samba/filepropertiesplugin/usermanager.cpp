@@ -145,11 +145,11 @@ void UserManager::load()
         QStringLiteral("--parameter-name"),
         QStringLiteral("passdb backend")
     });
-    connect(proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, proc](int exitCode) {
+    connect(proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, proc] {
         proc->deleteLater();
         const QByteArray output = proc->readAllStandardOutput().simplified();
 
-        if (exitCode == 0 && output == QByteArrayLiteral("tdbsam")) {
+        if (output == QByteArrayLiteral("tdbsam")) {
             m_canManageSamba = true;
         }
 

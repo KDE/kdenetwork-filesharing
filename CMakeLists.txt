@@ -65,7 +65,7 @@ endif(WIN32)
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME \"samba\" CACHE STRING "Single package or comma-separated list of packages needed for a functional Samba stack on this distribution.")
 
-if(SAMBA_INSTALL AND PackageKitQt5_FOUND)
+if(SAMBA_INSTALL AND PackageKitQt${QT_MAJOR_VERSION}_FOUND)
     add_definitions(-DSAMBA_INSTALL)
     add_definitions(-DSAMBA_PACKAGE_NAME=${SAMBA_PACKAGE_NAME})
 else()

@@ -45,7 +45,7 @@ GroupManager::GroupManager(QObject *parent)
             m_targetGroup = info.group();
             Q_EMIT targetGroupChanged();
 
-            if (m_targetGroup != QLatin1String("root") && m_targetGroup.contains(QLatin1String("samba"))) {
+            if (m_targetGroup != QLatin1String("root")) {
                 m_canMakeMember = true;
                 Q_EMIT canMakeMemberChanged();
             }

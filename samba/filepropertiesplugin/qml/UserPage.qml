@@ -75,6 +75,8 @@ Before you can access shares with your current user account you need to set a Sa
         }
 
         QQC2.Button {
+            Layout.alignment: Qt.AlignHCenter
+            icon.name: "lock"
             text: i18nc("@action:button opens dialog to create new user", "Create Samba password")
             onClicked: changePassword.openAndClear()
         }

@@ -113,6 +113,7 @@ Kirigami.OverlaySheet {
 
             QQC2.Button {
                 id: passButton
+                icon.name: "dialog-ok"
                 text: i18nc("@action:button creates a new samba user with the user-specified password", "Set Password")
                 enabled: isAcceptable()
                 Layout.alignment: Qt.AlignRight

@@ -54,7 +54,7 @@ Item {
         Kirigami.PlaceholderMessage {
             text: manager.targetGroup ?
                     xi18nc("@label",
-                           "To manage Samba user shares you need to be member of the <resource>%1</resource> group.",
+                           "To manage Samba user shares you need to be a member of the <resource>%1</resource> group.",
                            manager.targetGroup) :
                     i18nc("@label", "You appear to not have sufficient permissions to manage Samba user shares.")
             helpfulAction: Kirigami.Action {

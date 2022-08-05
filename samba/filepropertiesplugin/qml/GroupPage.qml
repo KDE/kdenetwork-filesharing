@@ -16,20 +16,15 @@ Item {
     Samba.GroupManager {
         id: manager
         onReadyChanged: {
-            if (ready && member) { // already member nothing to do for us
+            if (ready && manager.errorText.length === 0) { // no error; nothing for us to do
                 stackReplace(pendingStack.pop())
             }
         }
-        onMadeMember: {
+        onNeedsReboot: () => {
             stackReplace("RebootPage.qml")
         }
-        onMakeMemberError: {
-            var text = error
-            if (text == "") { // unknown error :(
-                text = i18nc("@label failed to change user groups so they can manage shares",
-                             "Group changes failed.")
-            }
-            errorMessage.text = text
+        onHelpfulActionError: (error) => {
+            actionErrorMessage.text = error
         }
     }
 
@@ -44,7 +39,7 @@ Item {
         visible: manager.ready
 
         Kirigami.InlineMessage {
-            id: errorMessage
+            id: actionErrorMessage
             Layout.alignment: Qt.AlignTop
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
@@ -52,16 +47,14 @@ Item {
         }
 
         Kirigami.PlaceholderMessage {
-            text: manager.targetGroup ?
-                    xi18nc("@label",
-                           "To manage Samba user shares you need to be a member of the <resource>%1</resource> group.",
-                           manager.targetGroup) :
-                    i18nc("@label", "You appear to not have sufficient permissions to manage Samba user shares.")
+            icon.name: "emblem-error"
+            text: manager.errorText
+            explanation: manager.errorExplanation
             helpfulAction: Kirigami.Action {
-                enabled: manager.canMakeMember
-                iconName: "resource-group-new"
-                text: i18nc("@button makes user a member of the samba share group", "Make me a Group Member")
-                onTriggered: manager.makeMember()
+                enabled: manager.hasHelpfulAction
+                iconName: manager.helpfulActionIcon
+                text: manager.helpfulActionText
+                onTriggered: manager.performHelpfulAction()
             }
         }
     }

@@ -29,7 +29,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     KIO
     WidgetsAddons
-    Declarative
 )
 
 find_package(PackageKitQt${QT_MAJOR_VERSION})

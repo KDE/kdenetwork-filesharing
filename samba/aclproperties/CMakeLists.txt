@@ -7,7 +7,6 @@ target_link_libraries(SambaAcl
     KF5::I18n
     KF5::KIOWidgets
     KF5::KIOCore
-    KF5::Declarative
     Qt::Qml
     Qt::QuickWidgets
 )

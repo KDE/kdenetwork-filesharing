@@ -22,7 +22,6 @@
 #include <QDBusInterface>
 #include <QDBusConnection>
 
-#include <KDeclarative/KDeclarative>
 #include <KLocalizedContext>
 #include <KMessageBox>
 #include <KPluginFactory>
@@ -80,8 +79,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     m_page.reset(new QWidget(qobject_cast<KPropertiesDialog *>(parent)));
     m_page->setAttribute(Qt::WA_TranslucentBackground);
     auto widget = new QQuickWidget(m_page.get());
-    // Load kdeclarative and set translation domain before setting the source so strings gets translated.
-    KDeclarative::KDeclarative::setupEngine(widget->engine());
+    // Set translation domain before setting the source so strings gets translated.
     auto i18nContext = new KLocalizedContext(widget->engine());
     i18nContext->setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
     widget->engine()->rootContext()->setContextObject(i18nContext);

@@ -10,7 +10,6 @@
 #include <QQuickWidget>
 #include <QVBoxLayout>
 
-#include <KDeclarative/KDeclarative>
 #include <KIO/SpecialJob>
 #include <KLocalizedContext>
 #include <KLocalizedString>
@@ -152,7 +151,6 @@ SambaACL::SambaACL(QObject *parent, const QList<QVariant> &args)
     m_page->setAttribute(Qt::WA_TranslucentBackground);
     auto widget = new QQuickWidget(engine, m_page.get());
 
-    KDeclarative::KDeclarative::setupEngine(widget->engine());
     auto i18nContext = new KLocalizedContext(widget->engine());
     i18nContext->setTranslationDomain(QStringLiteral(TRANSLATION_DOMAIN));
     widget->engine()->rootContext()->setContextObject(i18nContext);

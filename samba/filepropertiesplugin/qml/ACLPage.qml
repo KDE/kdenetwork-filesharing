@@ -159,7 +159,7 @@ when the Share access rules would allow it.`)
                 visible: !allowGuestBox.enabled
                 text: i18nc("@label", "Guest access is disabled by the system's Samba configuration.")
                 wrapMode: Text.Wrap
-                font: theme.smallestFont
+                font: Kirigami.Theme.smallFont
             }
 
             // TODO: this could benefit form some splitting. This is half the file.

@@ -59,22 +59,18 @@ public:
     void setNoPropagate(bool noPropagate);
     Q_SIGNAL void noPropagateChanged();
 
-#define MASK_PROPERTY(name, value)                                                                                                                             \
-    Q_PROPERTY(bool name READ name WRITE set_##name NOTIFY name##Changed);                                                                                     \
-                                                                                                                                                               \
-public:                                                                                                                                                        \
-    Q_SIGNAL void name##Changed();                                                                                                                             \
-    [[nodiscard]] bool name()                                                                                                                                  \
-    {                                                                                                                                                          \
-        return (m_ace->mask & (value));                                                                                                                         \
-    }                                                                                                                                                          \
-    void set_##name(bool check)                                                                                                                                \
-    {                                                                                                                                                          \
-        fprintf_binary(stderr, m_ace->mask);                                                                                                                    \
-        m_ace->mask = check ? (m_ace->mask | (value)) : (m_ace->mask ^ (value));                                                                                  \
-        fprintf_binary(stderr, m_ace->mask);                                                                                                                    \
-        Q_EMIT name##Changed();                                                                                                                                \
-    }
+#define MASK_PROPERTY(name, value)                                             \
+  Q_PROPERTY(bool name READ name WRITE set_##name NOTIFY name##Changed)        \
+                                                                               \
+public:                                                                        \
+  Q_SIGNAL void name##Changed();                                               \
+  [[nodiscard]] bool name() { return (m_ace->mask & (value)); }                \
+  void set_##name(bool check) {                                                \
+    fprintf_binary(stderr, m_ace->mask);                                       \
+    m_ace->mask = check ? (m_ace->mask | (value)) : (m_ace->mask ^ (value));   \
+    fprintf_binary(stderr, m_ace->mask);                                       \
+    Q_EMIT name##Changed();                                                    \
+  }
 
     MASK_PROPERTY(takeOwnership, WRITE_OWNER)
     MASK_PROPERTY(changePermissions, WRITE_DAC)

@@ -106,11 +106,11 @@ public:
         return ret;
     }
 
-    Q_PROPERTY(QString owner MEMBER m_owner NOTIFY ownerChanged);
+    Q_PROPERTY(QString owner MEMBER m_owner NOTIFY ownerChanged)
     Q_SIGNAL void ownerChanged();
     QString m_owner;
 
-    Q_PROPERTY(QString group MEMBER m_group NOTIFY groupChanged);
+    Q_PROPERTY(QString group MEMBER m_group NOTIFY groupChanged)
     Q_SIGNAL void groupChanged();
     QString m_group;
 };

@@ -8,7 +8,6 @@
 #ifndef model_h
 #define model_h
 
-#include <QStringList>
 #include <QAbstractTableModel>
 #include <ksambasharedata.h>
 

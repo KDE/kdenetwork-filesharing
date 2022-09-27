@@ -5,9 +5,8 @@
 
 #include "groupmanager.h"
 
-#include <QProcess>
 #include <QFileInfo>
-#include <QDebug>
+#include <QProcess>
 
 #include <KUser>
 #include <KAuth/Action>

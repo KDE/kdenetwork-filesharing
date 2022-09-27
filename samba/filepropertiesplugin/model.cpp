@@ -7,8 +7,6 @@
 
 #include <kuser.h>
 
-#include <QFile>
-#include <QRegularExpression>
 #include <QMetaEnum>
 
 #include <sys/stat.h>

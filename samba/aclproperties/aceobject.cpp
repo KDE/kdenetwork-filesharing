@@ -3,7 +3,6 @@
 
 #include "aceobject.h"
 
-#include <QDebug>
 #include <QMetaEnum>
 
 #include <KLocalizedString>

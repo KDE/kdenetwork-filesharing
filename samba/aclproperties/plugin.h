@@ -5,7 +5,6 @@
 
 #include <KPropertiesDialog>
 
-#include <QFileInfo>
 class SambaACL : public KPropertiesDialogPlugin
 {
     Q_OBJECT

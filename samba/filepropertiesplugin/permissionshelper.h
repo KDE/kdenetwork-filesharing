@@ -8,7 +8,6 @@
 #include <QAbstractTableModel>
 #include <QFile>
 #include <QObject>
-#include <QQmlListProperty>
 #include <QVariant>
 
 class QFileInfo;

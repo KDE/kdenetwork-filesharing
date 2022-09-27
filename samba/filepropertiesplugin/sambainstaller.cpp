@@ -8,9 +8,6 @@
 
 #include "sambainstaller.h"
 
-#include <QDebug>
-#include <QFile>
-
 #include "sambausershareplugin.h"
 
 void SambaInstaller::install()

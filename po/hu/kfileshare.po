@@ -1,0 +1,3715 @@
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
+# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2021-12-28 17:28+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Tiltás"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Engedélyezés"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&Csak olvasható"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Engedélyek"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Fs-&típus:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "OS/2-stílusú kibővített attribútumtámogatás"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Írható"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "OS/2-stílusú kibővített attribútumtámogatás"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Törlési szkriptek"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Engedélyek"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Engedélyek"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Tulajdonos"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Tulajdonos"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Csoport"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Engedélyek"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"A Samba felhasználói megosztások kezeléséhez a <resource>%1</resource> "
+"csoport tagjának kell lennie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@button makes user a member of the samba share group"
+#| msgid "Make me a Group Member"
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Legyek csoporttag"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"„%1” felhasználó hozzáadása a(z) „%2” csoporthoz, hogy beállíthasson Samba "
+"megosztásokat"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"A Samba felhasználói megosztások kezeléséhez a <resource>%1</resource> "
+"csoport tagjának kell lennie."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Elérési út"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Engedélyek"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Engedélyek"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Hozzáférés megtagadása"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"A hozzáférés megtagadása megakadályozza a megosztás használatát, még akkor "
+"is ha más hozzáférési szabály engedélyezné. Egy elutasító\n"
+"szabály mindig elsőbbséget élvez. <resource>Mindenki</resource> "
+"hozzáférésének a megtagadása ténylegesen letiltja a hozzáférést "
+"mindenkinek.\n"
+"Általában nem szükséges megtagadni senkitől a hozzáférést, mert a normál "
+"mappa- és fájljogosultságok továbbra is érvényesek a megosztott\n"
+"mappákra. Egy felhasználó, akinek nincs helyi hozzáférése a mappához, "
+"távolról sem érheti el azt,\n"
+"még ha a Megosztás hozzáférési szabály engedné is azt."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Engedélyek"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Mappa megosztása más számítógépekkel a helyi hálózaton"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Név:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"A név nem használható. A megosztási nevek nem lehetnek felhasználónevek, és "
+"két megosztás neve nem lehet ugyanaz a teljes rendszeren belül."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"A név túl hosszú lehet. Ez együttműködési problémákat okozhat, vagy a Samba "
+"elutasíthatja."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Vendégek engedélyezése"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "A vendég hozzáférés ki van kapcsolva a rendszer Samba beállításaiban."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Teljes irányítás"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Csak olvasható"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Nincs hozzáférés"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Samba állapotmonitor megjelenítése"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Jelszó beállítása"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Jelszó"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Jelszó megerősítése"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "A jelszavaknak egyezniük kell"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Jelszó beállítása"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Engedélyek"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Mégsem"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "A Samba telepítése szükséges a mappák megosztása előtt."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Samba telepítése"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "A Samba csomag telepítése sikertelen."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Indítsa újra a számítógépet a változtatások véglegesítéséhez."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Újraindítás"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"A Samba a rendszerétől eltérő felhasználói adatbázist használ.\n"
+"Ezért minden felhasználónak, aki hitelesítést szeretne végezni, külön Samba\n"
+"jelszót kell létrehoznia.\n"
+"</para>\n"
+"<para>\n"
+"Mielőtt hozzáférne a megosztásokhoz az aktuális felhasználóval, be kell "
+"állítania egy Samba jelszót.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Samba jelszó létrehozása"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"További felhasználó- és jelszókezelés a Samba <command>smbpasswd</command> "
+"parancssori segédprogramjával végezhető."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr "Túllépte az egyszerre aktív megosztott mappák maximális számát."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "A megosztási név érvénytelen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "A megosztási név már használatban van egy másik mappához."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Az útvonal érvénytelen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Az útvonal nem létezik."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Az útvonal nem mappa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Az útvonal relatív."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Ez az útvonal nem osztható meg."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "A hozzáférési szabály érvénytelen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Egy hozzáférési szabály felhasználója érvénytelen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "A „Vendég” hozzáférési szabály érvénytelen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "A vendég hozzáférés bekapcsolása nem engedélyezett."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Hiba történt a mappa megosztására tett kísérlet során. A megosztás nem "
+"lett létrehozva.</para><para>A Samba belső jelentése:</para><message>%1</"
+"message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "A hálózati megosztás létrehozása sikertelen"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Hiba történt a mappa megosztásának visszavonásakor. A megosztás nem "
+"került eltávolításra.</para><para>A Samba belső jelentése:</para><message>"
+"%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "A hálózati megosztás eltávolítása sikertelen"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "A Samba felhasználó („%1”) létezésének ellenőrzése"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Új Samba felhasználó („%1”) létrehozása"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Sikertelen csoportmódosítás."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Nincs elegendő jogosultsága a Samba felhasználói megosztások kezeléséhez."
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Megosztás"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Létrehozás"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Létrehozás"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "Meg&osztás"
+
+#, fuzzy
+#~| msgid "Install Samba..."
+#~ msgid "Installing Samba..."
+#~ msgstr "Samba telepítése…"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Már létezik <strong>%1</strong> nevű Samba-megosztás.<br /> Válasszon "
+#~ "más nevet.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "A Samba nincs telepítve."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Megosztás S&ambával (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>A Samba nem telepíthető.</strong><br />Ellenőrizze, hogy a "
+#~ "kpackagekit megfelelően van-e telepítve.</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Felhasználók kiválasztása"
+
+#~ msgid "Select &Users"
+#~ msgstr "Felhasználók ki&választása"
+
+#~ msgid "Name"
+#~ msgstr "Név"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Ho&zzáférés"
+
+#~ msgid "&Default"
+#~ msgstr "&Alapértelmezés"
+
+#~ msgid "&Read access"
+#~ msgstr "&Olvasás"
+
+#~ msgid "&Write access"
+#~ msgstr "Í&rás"
+
+#~ msgid "&Admin access"
+#~ msgstr "Rendszergazdai &hozzáférés"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Csatlakozás egy tartományhoz"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Ellenőrzés:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Jelszó:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Felhasználónév:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "&Tartományvezérlő:"
+
+#~ msgid "&Domain:"
+#~ msgstr "Tart&omány:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Csoportok kiválasztása"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Csoportok k&iválasztása"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "A csoport tí&pusa"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX-os csoport"
+
+#~ msgid "NI&S group"
+#~ msgstr "N&IS-csoport"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNIX-os vagy NIS-cs&oport"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Itt lehet módosítani a Samba-felhasználókat (az smbpasswd fájl "
+#~ "tartalmát).\n"
+#~ "<p>\n"
+#~ "Minden Samba-felhasználóhoz tartoznia kell egy UNIX-os "
+#~ "felhasználónévnek.\n"
+#~ "A jobb oldalon azok a UNIX-os felhasználónevek láthatók, melyek "
+#~ "szerepelnek a passwd fájlban, de nincsenek Samba-felhasználónak "
+#~ "beállítva.\n"
+#~ "A Samba-felhasználók a bal oldalon láthatók.\n"
+#~ "<p>\n"
+#~ "Új Samba-felhasználó felvételéhez nyomja meg a <em>&lt; Hozzáadás</em> "
+#~ "gombot.\n"
+#~ "Ekkor a kijelölt UNIX-felhasználók Samba-felhasználóvá válnak és\n"
+#~ "kikerülnek a UNIX-felhasználók listájából (de természetesen UNIX-"
+#~ "felhasználók maradnak).\n"
+#~ "<p>\n"
+#~ "Samba-felhasználó eltávolításához nyomja meg az <em>&gt; Eltávolítás</em> "
+#~ "gombot.\n"
+#~ "A kijelölt Samba-felhasználók törlődnek az smbpasswd fájlból,\n"
+#~ "és megjelennek a jobb oldali listában, mint olyan UNIX-os felhasználók, "
+#~ "akik nincsenek beállítva Samba-felhasználónak.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Alapbeállítások"
+
+#~ msgid "Samba config file:"
+#~ msgstr "A Samba konfigurációs fájlja:"
+
+#~ msgid "&Load"
+#~ msgstr "Bet&öltés"
+
+#~ msgid "Server Identification"
+#~ msgstr "A kiszolgáló azonosítása"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "M&unkacsoport:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Adja meg a munkacsoport vagy tartomány nevét."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Kiszolgáló-sztr&ing:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-név:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "B&iztonsági szint"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Felhasználó"
+
+#~ msgid "Server"
+#~ msgstr "Kiszolgáló"
+
+#~ msgid "Domai&n"
+#~ msgstr "T&artomány"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "A <i>megosztás</i> biztonsági szintet otthoni és kis irodai hálózatban "
+#~ "célszerű használni.<br> Lehetővé teszi a megosztások listájának "
+#~ "lekérdezését felhasználóazonosítás nélkül."
+
+#~ msgid "Further Options"
+#~ msgstr "További beállítások"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Jelszókiszolgáló cím/név:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&m:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Vendé&gazonosító:"
+
+#~ msgid "Help"
+#~ msgstr "Súgó"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Az opciók részletes leírása megtalálható itt:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "Meg&osztások"
+
+#~ msgid "Comment"
+#~ msgstr "Megjegyzés"
+
+#~ msgid "Properties"
+#~ msgstr "Tulajdonságok"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Az alapértelmezések &szerkesztése..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Új megosztás &hozzáadása..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Megosztás mó&dosítása..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Megosztás &eltávolítása"
+
+#~ msgid "Prin&ters"
+#~ msgstr "N&yomtatók"
+
+#~ msgid "Printer"
+#~ msgstr "Nyomtató"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Az alapértelmezések szer&kesztése"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Új nyomtató fel&vétele"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Nyomtató mód&osítása"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Nyomtató &eltávolítása"
+
+#~ msgid "&Users"
+#~ msgstr "Felh&asználók"
+
+#~ msgid "Disabled"
+#~ msgstr "Letiltva"
+
+#~ msgid "Add"
+#~ msgstr "Hozzáadás"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Eltá&volítás"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X-os felhasználók"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "A jelszó meg&változtatása..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Csatlakozás egy tartományhoz"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Spe&ciális"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Itt lehet megváltoztatni a Samba-kiszolgáló speciális opcióit.\n"
+#~ "Csak azokat az opciókat módosítsa, amelyek szerepével tisztában van!"
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Speciális dump"
+
+#~ msgid "Security"
+#~ msgstr "Biztonság"
+
+#~ msgid "&General"
+#~ msgstr "&Általános"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "A PAM-es korlátozások figyelembe vétele"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM-es jelszóváltoztatás"
+
+#~ msgid "Other Switches"
+#~ msgstr "Egyéb kapcsolók"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "A megbízható tartományok enge&délyezése"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "A lehető legmagasabb biztonság"
+
+#~ msgid "General"
+#~ msgstr "Általános"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Felhasználóazonosítási módszerek:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&Gyökérkönyvtár:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&Felületek:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Leképezés a vendégre:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Csak a felületek bekötése"
+
+#~ msgid "Never"
+#~ msgstr "Soha"
+
+#~ msgid "Bad User"
+#~ msgstr "Hibás felhasználó"
+
+#~ msgid "Bad Password"
+#~ msgstr "Hibás jelszó"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Gépné&v-ekvivalencia:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmikus rid-alap:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privát könyvtár:"
+
+#~ msgid "Pass&word"
+#~ msgstr "&Jelszó"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba-jelszavak"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "A jelszavak t&itkosítása"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Smb passwd-fájl:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb-bac&kend:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Passwd-chat:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Passwd-chat nyomkövetése"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "s"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "A Passwd-chat várakozási ideje:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Üres &jelszavak"
+
+#~ msgid "Password level:"
+#~ msgstr "Jelszószint:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Min. jelszóhossz:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "A gép jelszavának várakozási ideje:"
+
+#~ msgid "Migration"
+#~ msgstr "Migráció"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Frissítés &titkosítva"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX-os jelszavak"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Passwd-program:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNIX-os jelszósz&inkronizáció"
+
+#~ msgid "Userna&me"
+#~ msgstr "Felh&asználónév"
+
+#~ msgid "User&name map:"
+#~ msgstr "&Felhasználónév-térkép:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Fel&használónév-szint:"
+
+#~ msgid "Hide local users"
+#~ msgstr "A helyi felhasználók elrejtése"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Az anonymous &korlátozása"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Rhosts használata"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "&Felhasználóazonosítás"
+
+#~ msgid "Client"
+#~ msgstr "Kliens"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "&Kliens-aláírás:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Egyszerű szöve&ges felhasználóazonosítás"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Lanman-os felhasználóazonosítás"
+
+#~ msgid "Auto"
+#~ msgstr "Automatikus"
+
+#~ msgid "Mandatory"
+#~ msgstr "Kötelező"
+
+#~ msgid "Yes"
+#~ msgstr "Igen"
+
+#~ msgid "No"
+#~ msgstr "Nem"
+
+#~ msgid "Client channel:"
+#~ msgstr "Klienscsatorna:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "A kliens spnego-t használ"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "NTLMv&2-es felhasználóazonosítás"
+
+#~ msgid "Server signing:"
+#~ msgstr "Aláírás a kiszolgálón:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman-os felhasználóazonosítás"
+
+#~ msgid "Server channel:"
+#~ msgstr "Kiszolgálócsatorna:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Az spne&go használata"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM-es felhasználóazonosítás"
+
+#~ msgid "Logging"
+#~ msgstr "Naplózás"
+
+#~ msgid "L&og file:"
+#~ msgstr "Na&plófájl:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Max. n&aplózási méret:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Napló&zási szint:"
+
+#~ msgid "S&witches"
+#~ msgstr "Kap&csolók"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Csak a s&yslog"
+
+#~ msgid "Status"
+#~ msgstr "Állapot"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "&Időbélyegző"
+
+#~ msgid "microseconds"
+#~ msgstr "ms"
+
+#~ msgid "Debug pid"
+#~ msgstr "Ny&omkövetési PID"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Nyomkö&vetési UID"
+
+#~ msgid "Tuning"
+#~ msgstr "Finomhangolás"
+
+#~ msgid "Modules"
+#~ msgstr "Modulok"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Előre betöltött mod&ulok:"
+
+#~ msgid "Switches"
+#~ msgstr "Kapcsolók"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Getwd-&gyorstár"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Az mma&p használata"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Rendszermagváltozási é&rtesítés"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Gépnév-le&kérdezések"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Nyers &olvasás"
+
+#~ msgid "Write raw"
+#~ msgstr "Nyers írás"
+
+#~ msgid "Times"
+#~ msgstr "Idők"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "A módosításértesítés vár&akozási ideje:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "É&letbentartás:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "perc"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Holtidő:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Az Lp&q-gyorstár várakozási ideje:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "A név-gyorstár &várakozási ideje:"
+
+#~ msgid "Sizes"
+#~ msgstr "Méretek"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Max. lemezméret:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Ol&vasási méret:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "A stat-gyorstár mérete:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Ma&x. xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Számok"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Az smbd folyamatok max. száma:"
+
+#~ msgid "Max open files:"
+#~ msgstr "A megnyitott fájlok max. száma:"
+
+#~ msgid "Printing"
+#~ msgstr "Nyomtatás"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Nyomtatási &feladatok összesen:"
+
+#~ msgid "Drivers"
+#~ msgstr "Meghajtók"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS2-m&eghajtótérkép:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap-né&v:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "A nyomtató meg&hajtófájlja: "
+
+#~ msgid "Commands"
+#~ msgstr "Parancsok"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Portlistázási parancs:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Nyomtatólétrehozási parancs:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Nyomtatótöltési parancs:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Nyomt&atók betöltése"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "A nyomtatósorok le&tiltása"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Nyomtatóhozzáadási &varázsló megjelenítése"
+
+#~ msgid "Domain"
+#~ msgstr "Tartomány"
+
+#~ msgid "L&ocal master"
+#~ msgstr "&Helyi mester"
+
+#~ msgid "Domai&n master"
+#~ msgstr "&Tartománybeli mester"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Tartományi &bejelentkezések"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Elsődleges m&ester"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS-sz&int:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Tartományi adminisztrációs csoport:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Tartományi vendégcsoport:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "A WINS &deaktiválása"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "A WINS-k&iszolgálói funkció bekapcsolása"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Más WINS-kiszolgáló h&asználata"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "A WINS-kiszolgáló beá&llításai"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS-prox&y"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS-&horog:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Ma&x. WINS TTL:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "M&in. WINS TTL:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "A WINS-kiszolgáló IP-címe vagy DNS-neve"
+
+#~ msgid "General Options"
+#~ msgstr "Általános beállítások"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS-partnerek:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS-pro&xy"
+
+#~ msgid "Filenames"
+#~ msgstr "Fájlnevek"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Ál&talános"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "A &pont leválasztása"
+
+#~ msgid "&Mangling"
+#~ msgstr "Elkó&dolás (mangling)"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Elkódolt ve&rem:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Az elő&tag elkódolása (mangling):"
+
+#~ msgid "Specia&l"
+#~ msgstr "Spe&ciális"
+
+#~ msgid "Stat cache"
+#~ msgstr "Stat-gyorstár"
+
+#~ msgid "Locking"
+#~ msgstr "Zárolás"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "&Rendszermag-oplock használata"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Köny&vtárak"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Zár&olási könyvtár:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "PI&D-könyvtár:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Zárolási spin"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "A zár&olási spin-ek száma:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Zárolási spin i&dő:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Speciális (magas szintű)"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Zá&rolásmegszakítási idő:"
+
+#~ msgid "milliseconds"
+#~ msgstr "ms"
+
+#~ msgid "Charset"
+#~ msgstr "Karakterkészlet"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS-os karakterkészlet:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X-os karakterkészlet:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Meg&jelenítési karakterkészlet:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Karakterkészlet:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Érvény&es karakterek:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Kód&lap-könyvtár:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kó&dolási rendszer:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Kliens kódlap:"
+
+#~ msgid "Logon"
+#~ msgstr "Bejelentkezés"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Hozzáadási szkriptek"
+
+#~ msgid "Add user script:"
+#~ msgstr "Felhasználó:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Csoporttag:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "&Csoport:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Gép:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Csoport:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Felhasználó:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Csoporttag:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Elsődleges csoport"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Az első&dleges csoport beállítása:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Lezárás"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "&Lezárási szkript:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "A lezárást megszakító szkript:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Bejelent&kezési elérési út:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Bejelentkezési s&aját könyvtár:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Be&jelentkezési meghajtó:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "B&ejelentkezési szkript:"
+
+#~ msgid "Socket"
+#~ msgstr "Aljazat"
+
+#~ msgid "Socket address:"
+#~ msgstr "Aljazat címe:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Aljazat-opciók"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Ki-be kapcsolja a teljes SSL-módot"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "A teljes SSL-mód ki-be kapcsolása. Ha Nem-re van állítva, az SSL-es Samba "
+#~ "úgy fog működni, mint az SSL nélküli. Ha Igen-re, akkor az 'ssl hosts' és "
+#~ "'ssl hosts resign' változók értékétől függ, meg lesz-e követelve az SSL-"
+#~ "kapcsolat.\n"
+#~ "\n"
+#~ "Ez csak akkor érhető el, ha az SSL-programkönyvtárak le vannak fordítva a "
+#~ "gépen és a --with-ssl konfigurálási opció meg lett adva a fordításnál."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Az SSL enge&délyezése"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL-es gé&pek:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL-es en&trópiabájtok:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL-kódolások:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL-es gépek újra&aláírása:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL-k&ompatibilitás"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL-es entrópiafájl:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL egd-aljazat:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL-verzió:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "Az SSL klienstanúsítványt igényel"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL klienskulcs:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL kisz&olgálótanúsítvány kérése"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SSL k&iszolgálótanúsítvány:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL klienstanúsítvány:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL kiszolgálók&ulcs:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokoll"
+
+#~ msgid "Ti&me server"
+#~ msgstr "&Idő-kiszolgáló"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "N&agy írás-olvasás"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX-os kiterjesztések"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Bmpx olvasása"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokollverziók"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Be&jelentés mint:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT munkaállomás"
+
+#~ msgid "win95"
+#~ msgstr "Win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Bejelentési verzió:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "P&rotokoll:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Max. protokoll:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Min. protokoll:"
+
+#~ msgid "Limits"
+#~ msgstr "Korlátok"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&x. mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Max. &TTL:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Figyelési SMB-portok"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB-portok:"
+
+#~ msgid "Browsing"
+#~ msgstr "Böngészés"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM-i&dőköz:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "LM-es b&ejelentés:"
+
+#~ msgid "Sec"
+#~ msgstr "s"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Táv&oli böngészési szinkronizálás:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Bön&gészési lista"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Kibővített bön&gészés"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Elő&re betöltés:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "sablon - saját &könyvtár:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Sablon - p&arancsértelmező:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind-os elválasztó:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Sablon - elsődleges csoport:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "W&inbind-os gyorstár-idő:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "ACL-kom&patibilitás:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Win&bind - felsorolt felhasználók"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind - felsorolt csoportok"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind - az alapértelmezett tartomány használata"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind - a helyi azonosítók engedélyezése"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind - csak megbízható tartományok"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind - egymásba ágyazott csoportok"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetB&IOS-hatókör:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS-aliasok:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "A NetBIOS le&tiltása"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Név&felbontási sorrend:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "H&ost msdfs"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP-os &utótag:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP gép-előtag:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP felhasználó-előtag:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP &csoport-előtag:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap-előtag:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP szűrő:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP-&adminisztrációs DN:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap-&kezelő:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP-os replikációs várakozás:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP SSL:"
+
+#~ msgid "Off"
+#~ msgstr "Ki"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Be"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP sz&inkronizálás:"
+
+#~ msgid "Only"
+#~ msgstr "Csak"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP &törlési DN:"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Megosztás f&elvétele parancs:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Megosztás mó&dosítása parancs:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Megosztás törlése &parancs:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Üzenet&küldő parancs:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Dfree p&arancs:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "K&vóta beállítása parancs:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Kvóta lekérdezése paran&cs:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Pánikmű&velet:"
+
+#~ msgid "Misc"
+#~ msgstr "Egyéb"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Egyéb"
+
+#~ msgid "Hide &local users"
+#~ msgstr "A helyi felhasználók el&rejtése"
+
+#~ msgid "Default service:"
+#~ msgstr "Alapértelmezett szolgáltatás:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "&Időeltolódás:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "perc"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Távoli be&jelentés:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Forráskörnyezet:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS saját könyvtár"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Sajátkönyvtár-térkép:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&Utmp-könyvtár:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp-könyvtár:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Nyomkövetés"
+
+#~ msgid "&NT status support"
+#~ msgstr "NT á&llapottámogatás"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT SM&B-támogatás"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT p&ipe-támogatás"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Megosztás felvétele, módosítása"
+
+#~ msgid "Pixmap"
+#~ msgstr "Kép"
+
+#~ msgid "D&irectory"
+#~ msgstr "Köny&vtár"
+
+#~ msgid "&Path:"
+#~ msgstr "&Elérési út:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Az összes saját könyvtár meg&osztása"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Az&onosító"
+
+#~ msgid "Na&me:"
+#~ msgstr "N&év:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Megjegy&zés:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Fő t&ulajdonságok"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Csak &olvasható"
+
+#~ msgid "Pub&lic"
+#~ msgstr "P&ublikus"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&Böngészhető"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Rendelkezésre áll"
+
+#~ msgid "&Security"
+#~ msgstr "&Biztonság"
+
+#~ msgid "Gu&ests"
+#~ msgstr "&Vendégek"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Ez egy olyan felhasználóazonosító, mely a vendégek számára engedélyezett "
+#~ "szolgáltatások elérésekor érvényes. A felhasználóhoz rendelt "
+#~ "jogosultságok lesznek érvényesek, amikor valaki vendégként csatlakozik. "
+#~ "Általában ez a felhasználónév szerepel a passwd fájlban, de nem lehet "
+#~ "vele bejelentkezni. Sok esetben az \\\"ftp\\\" név elfogadható választás. "
+#~ "Ha meg van adva egy felhasználónév valamelyik szolgáltatásban, az "
+#~ "felülbírálja az itt megadott nevet."
+
+#~ msgid "&Guest account:"
+#~ msgstr "Vendé&gazonosító:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Ha ez be van jelölve, akkor jelszó megadása nélkül lehet elérni a "
+#~ "szolgáltatást. A vendégazonosító jogosultságai lesznek érvényesek."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Csak vendégkapcsolatok enge&délyezése"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&Gépek"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Az engedélyezett gépnevek ellentéte - az itt felsorolt gépek nem "
+#~ "férhetnek hozzá a szolgáltatásokhoz, kivéve akkor, ha valamelyik "
+#~ "szolgáltatás hasonló listája felülbírálja ezt a beállítást. Ütközés "
+#~ "esetén mindig az engedélyezési listának nagyobb a prioritása."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Ez a paraméter egy vesszővel, szóközzel vagy tabulkátorral elválasztott "
+#~ "gépnévlista. A felsorolt gépek férhetnek hozzá a szolgáltatáshoz."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "&Engedélyezett gépek:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Tiltott gépek:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Szimbolikus &linkek"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "A szimbolikus linkek követésének enge&délyezése"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Az olyan szimbolikus linkek követésének engedélyezése, melyek a "
+#~ "&könyvtárfán kívülre mutatnak"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>A jelszó ellenőrzése a következő felhasználónevekkel, ha a kliens nem "
+#~ "ad meg felhasználónevet:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "Csak a listában &felsorolt felhasználónevekkel lehet csatlakozni"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Rejtett &fájlok"
+
+#~ msgid "Hidden"
+#~ msgstr "Rejtett"
+
+#~ msgid "Veto"
+#~ msgstr "Vétózás"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Oplock-vétózás"
+
+#~ msgid "Size"
+#~ msgstr "Méret"
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Ki&jelölt fájlok"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Elrejtés"
+
+#~ msgid "&Veto"
+#~ msgstr "&Vétózás"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "O&plock-vétózás"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Ké&zi beállítás"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Vétó&fájlok:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Oplock-vé&tózási fájlok:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Rejtett fájl&ok:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "A nem írható fájlok elre&jtése"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "A speciális fájlok elrej&tése"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "A ponttal kezdődő nevű fájlo&k elrejtése"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "A nem olvasható fájlok el&rejtése"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Speciális"
+
+#~ msgid "Force Modes"
+#~ msgstr "Módok előírása"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "A könyvtárb&iztonsági mód előírása:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "A biztonsági mód &előírása:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "A köny&vtármód előírása:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "A létrehozási mód e&lőírása:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maszkok"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Könyvtárbiztonsági maszk:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Biztonsági m&aszk:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Kön&yvtármaszk:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Maszk létreho&zása:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "Az ACL-ek &profilozása"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Az ACL-ek ö&röklése"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT-s ACL-ek engedélyezése"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Az ismeretlen A&CL-felhasználók leképezése erre:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Az ACL-es öröklés &leképezése"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "A jogosultságok öröklése a szülőkönyvtárból"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "A csak olvashatónak jelzett fájlok törölhetők legyenek"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS-os attribútumleképezés"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr ""
+#~ "A DOS-os 'archív' bit leképezése a UNIX-os 'a tulajdonos végrehajtási "
+#~ "joga' attribútumra"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr ""
+#~ "A DOS-os 'rejtett' bit leképezése a UNIX-os 'a többiek végrehajtási joga' "
+#~ "attribútumra"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr ""
+#~ "A DOS-os 'rendszer' bit leképezése a UNIX-os 'a csoport végrehajtási "
+#~ "joga' attribútumra"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "A DOS-os attribútumok eltárolása a kiterjesztett attribútumra"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Szigorú sz&inkronizálás"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Szinkronizálás m&indig"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Szigorú le&foglalás"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Küldési fájl &használata"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "A kapcsolatok ma&x. száma egy időben:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Az í&rási gyorstár mérete:"
+
+#~ msgid "bytes"
+#~ msgstr "bájt"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "&Blokkméret:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Kliensoldali gy&orstárkezelési mód:"
+
+#~ msgid "manual"
+#~ msgstr "kézi"
+
+#~ msgid "documents"
+#~ msgstr "dokumentumok"
+
+#~ msgid "programs"
+#~ msgstr "programok"
+
+#~ msgid "disable"
+#~ msgstr "letiltás"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Névfeldolgozás"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "A név&feldolgozás engedélyezése"
+
+#~ msgid "Man&gle case"
+#~ msgstr "A betűméret feld&olgozása"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "A mé&ret megőrzése"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Rö&vid, a méret megőrzése"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Na&gybetűérzékeny"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Al&apértelmezett írásmód:"
+
+#~ msgid "Lower"
+#~ msgstr "Kisbetű"
+
+#~ msgid "Upper"
+#~ msgstr "Nagybetű"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Feldolgozási &karakter:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Feldolgozási &térkép:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Névfeldolgozási mód:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Egyéb opciók"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "A záró &pont elrejtése"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS-os fájlmód"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS-o&s fájldátumok"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS-os fájldátum-felbontás"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "A zárolás enge&délyezése"
+
+#~ msgid "Locki&ng"
+#~ msgstr "&Zárolás"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Szigorú &zárolás"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "B&lokkoló zárolás"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Po&six-es zárolás"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Me&gosztási módok"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Opport&unisztikus zárolás (oplock-ok)"
+
+#~ msgid "O&plocks"
+#~ msgstr "&Oplock-ok"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "2-es szintű &oplock-ok"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Oplock-telítődési &korlát:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Nem i&gazi oplock-ok"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Vfs-&objektumok:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "&Vfs-opciók:"
+
+#~ msgid "Exec"
+#~ msgstr "Végrehajtás"
+
+#~ msgid "P&reexec:"
+#~ msgstr "P&reexec:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "&Gyökér-preexec:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Poste&xec:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Gyökér-&postexec:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "preexec be&zárása"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "gyökér-&preexec bezárása"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Kötet:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "S&peciális szkript:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Spe&ciális kimenet:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Nem kell belelé&pni:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs-pro&xy"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "A setdir parancs &engedélyezése"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Nem &igazi könyvtárlétrehozási dátumok"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs-gyökér"
+
+#~ msgid "&Help"
+#~ msgstr "&Súgó"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Felhasználók"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Minden meg nem ad&ott felhasználó"
+
+#~ msgid "Reject"
+#~ msgstr "Elutasítás"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "A meg&adott felhasználók"
+
+#~ msgid "Access Rights"
+#~ msgstr "Hozzáférési jogok"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Felhasználó &hozzáadása..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Sz&akértő"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Csoport &hozzáadása..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "A kijelöltek eltá&volítása"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr ""
+#~ "Az összes felhasználó ráké&pezése a következő felhasználó- vagy "
+#~ "csoportnévre"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Felhasználónév &kikényszerítése:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "&Csoport előírása:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Jogosultsági módosítók"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Hozzáférési jogosultságok"
+
+#~ msgid "Others"
+#~ msgstr "Egyéb"
+
+#~ msgid "Read"
+#~ msgstr "Olvasás"
+
+#~ msgid "Write"
+#~ msgstr "Írás"
+
+#~ msgid "Sticky"
+#~ msgstr "Sticky"
+
+#~ msgid "Set GID"
+#~ msgstr "Set GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Set UID"
+
+#~ msgid "Special"
+#~ msgstr "Speciális"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Felhasználói beállítások"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Ér&vényes felhasználók:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "Rends&zergazdai felhasználók:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Érvény&telen felhasználók:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Írási lista:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Olvasási lista:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Engedélyezett &gépek"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Az engedélyezett gépek listája"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Itt láthatók azok a gépek, amelyek elérhetik ezt a könyvtárat NFS-en "
+#~ "keresztül.\n"
+#~ "Az első oszlopban látható a gép neve vagy címe, a másodikban a "
+#~ "hozzáférési jogosultságok. A '*' azt jelenti, hogy mindenki hozzáfér a "
+#~ "megosztáshoz."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Hozzáadás..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Mó&dosítás..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Eltávolítás"
+
+#~ msgid "Name/Address"
+#~ msgstr "Név/cím"
+
+#~ msgid "Parameters"
+#~ msgstr "Paraméterek"
+
+#~ msgid "Host Properties"
+#~ msgstr "A gép tulajdonságai"
+
+#~ msgid "&Name/address:"
+#~ msgstr "Név/&cím:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Név / cím mező</b>\n"
+#~ "<p>\n"
+#~ "Itt lehet megadni a gép nevét vagy címét.<br>\n"
+#~ "A gép több módon is megadható:\n"
+#~ "<p>\n"
+#~ "<i>egyetlen gép</i>\n"
+#~ "<p>\n"
+#~ " Ez a leggyakoribb formátum. Megadható a gép rövid neve a teljes "
+#~ "tartományi név (FQDN) vagy az IP-cím.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>hálózati csoport</i>\n"
+#~ "<p>\n"
+#~ " NIS-es hálózati csoportok is megadhatók @csoport formátumban. A tagok "
+#~ "ellenőrzésekor a rendszer csak a gépnév-részt ellenőrzi. Az üres gépnév-"
+#~ "részek és a vonások (-) figyelmen kívül lesznek hagyva.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>helyettesítési karakterek</i>\n"
+#~ "<p>\n"
+#~ " A gépnevek tartalmazhatják a * és ? helyettesítési karaktereket. Így az "
+#~ "exportálási fájl egyszerűsíthető, például a *.cs.foo.hu minden gépnévhez "
+#~ "illeszkedik a cs.foo.hu tartományban. A helyttesítési karakterek nem "
+#~ "feleltethetők meg az elválasztó pontoknak, tehát például az előző "
+#~ "példánál az a.b.cs.foo.hu név nem illeszkedik.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-alhálózatok</i>\n"
+#~ "<p>\n"
+#~ " Egy IP-alhálózat összes gépének exportálhatók könyvtárak egy "
+#~ "utasítással. Az alhálózat cím/hálózati maszk párossal írható le, ahol a "
+#~ "hálózati maszk pontokkal tagolt érték és folyamatos maszkhossz is lehet "
+#~ "(például '/255.255.252.0' vagy `/22' esetén 10 bites gépcsoportot "
+#~ "tartalmazó alhálózat az eredmény).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "Publikus &hozzáférés"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Publikus hozzáférés</b>\n"
+#~ "<p>\n"
+#~ "Ha bejelöli ezt az opciót, a géplista egyetlen csillagból fog állni, "
+#~ "tehát bárhonnan hozzá lehet férni a megosztáshoz.\n"
+#~ "Ennek ugyanaz a hatása, mintha a cím helyére egyetlen csillag kerülne.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Beállítások"
+
+#~ msgid "&Writable"
+#~ msgstr "&Írható"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Írható</b>\n"
+#~ "<p>\n"
+#~ "Írási és olvasási jogosultságot biztosít az NFS-kötethez.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Alapértelmezés szerint a fájlrendszer módosítása nem engedélyezett.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Nem bi&ztonságos"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nem biztonságos</b>\n"
+#~ "<p>\n"
+#~ "Ha ez az opció be van jelölve, a kéréseknek nem kell az IPPORT_RESERVED "
+#~ "(1024) portnál kisebb portról indulniuk.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Általában nem kell bejelölni.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Szinkronizálás"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Szinkronizálás</b>\n"
+#~ "<p>\n"
+#~ "Ennek hatására az írási művelet csak akkor fejeződik be, ha a kiírt "
+#~ "adatok ténylegesen a lemezre kerültek. Így a kérések végrehajtása tovább "
+#~ "tart, viszont a kiszolgáló lefagyása esetén sem következhet be "
+#~ "adatvesztés.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Az alapértelmezés esetén a kiszolgáló a tényleges lemezre írást "
+#~ "késleltetve végezheti el.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Írási késleltetés nélk&ül"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Írási késleltetés nélkül</b>\n"
+#~ "<p>\n"
+#~ "Ennek az opciónak csak akkor van hatása, ha a Szinkronizálás is be van "
+#~ "jelölve. Az NFS-kiszolgáló általában nem hajtja végre azonnal a lemezre "
+#~ "írási kéréseket, ha feltehető, hogy azt rövidesen egy újabb írási kérés "
+#~ "fogja követni. A több írási művelet egyszerre történő végrehajtása "
+#~ "jelentősen növelni tudja a teljesítményt. Ha az NFS-kiszolgálóhoz "
+#~ "érkezett kérések kicsik és egymástól függetlenek, akkor ez a kezelési mód "
+#~ "csökkentheti a teljesítményt, ezért az opció tetszés szerint ki-be "
+#~ "kapcsolható. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "El&rejtés nélkül"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Elrejtés nélkül</b>\n"
+#~ "<p>\n"
+#~ "Ez az opció az IRIX NFS-ben található hasonló nevű opcióból származik. "
+#~ "Általában, ha egy kiszolgáló két fájlrendszert exportál, melyek egyike a "
+#~ "másikon belül van csatlakoztatva (mountolva), akkor a kliensnek mindkét "
+#~ "fájlrendszert külön csatlakoztatnia kell, ha el szeretné érni őket. Ha "
+#~ "csak a szülőt csatlakoztatja, akkor üres könyvtárat fog látni, ahol a "
+#~ "másik fájlrendszer van csatlakoztatva. Az a fájlrendszer tehát \"rejtett"
+#~ "\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ha bekapcsolja az Elrejtés nélkül opciót egy fájlrendszernél, akkor "
+#~ "azonban nem lesz rejtve, és a megfelelő jogosultsággal bíró kliens úgy "
+#~ "tud átlépni a szülőből az al-fájlrendszerbe, hogy szinte észre sem veszi "
+#~ "a váltást.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Azonban néhány NFS-kliens nem tudja jól lekezelni az ilyen helyzetet, és "
+#~ "például előfordulhat, hogy az egynek látszó fájlrendszerben két különböző "
+#~ "fájlnak azonos csomópontszáma (inode-szám) van.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Az opciónak csak akkor van hatása, ha az exportálás egy gépről történik. "
+#~ "Nem működik megbízhatóan hálózati csoportos, alhálózatos vagy "
+#~ "helyettsítési karakteres exportálás esetén.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ez az opció bizonyos esetekben nagyon hasznos tud lenni, de "
+#~ "elővigyázatosan kell használni, és először mindig ellenőrizni kell, "
+#~ "megfelelően tudja-e kezelni ezt az esetet a kliens.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Részfa-ellenőrzés n&élkül"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Részfa-ellenőrzés nélkül</b>\n"
+#~ "<p>\n"
+#~ "Ez az opció letiltja a részfa ellenőrzését, aminek néhány nem túl "
+#~ "jelentős biztonsági következménye van, de bizonyos esetekben javíthatja a "
+#~ "megbízhatóságot.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ha egy fájlrendszer valamelyik alkönyvtára exportálva van, de a teljes "
+#~ "fájlrendszer nem, akkor NFS-kérés érkezésekor a kiszolgálónak nem csak "
+#~ "azt kell ellenőriznie, hogy a fájl a megfelelő fájlrendszerben van-e (ez "
+#~ "könnyű), de azt is, hogy az exportált fastruktúrában van-e (ez nehezebb). "
+#~ "Ezt az ellenőrzést hívják részfa-ellenőrzésnek.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Az ellenőrzés elvégzéséhez a kiszolgálónak el kell tárolnia a fájl "
+#~ "elérési útjának adatait abban a \"fájlazonosítóban\", amelyet a kliens "
+#~ "megkap. Ez problémákat okozhat, ha a fájlt átnevezik, miközben egy kliens "
+#~ "megnyitva tartja (bár a legtöbb egyszerű esetben így is működik).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Akkor is részfa-ellenőrzést használ a rendszer, ha azt ellenőrzi, hogy a "
+#~ "fájl olyan könyvtárban van-e, melyhez csak a root felhasználó férhet (ha "
+#~ "a fájlrendszer exportálása a no_root_squash opcióval történt (see "
+#~ "below)), még ha a fájl maga bővebb hozzáférést engedélyez is.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "A saját könyvtár fájlrendszerét, mely általában a gyökérben van "
+#~ "exportálva és amelyben sok átnevezés történik, érdemes a részfa-"
+#~ "ellenőrzés kikapcsolásával exportálni. Az olyan fájlrendszert, melynek "
+#~ "nagy része csak olvasható és amelyben nem sok fájlátnevezés történik (pl. "
+#~ "a /usr és a /var) és amelynek alkönyvtárai is exportálhatók, általában "
+#~ "érdemes a részfa-ellenőrzés bekapcsolásával exportálni.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Nem biztonságos &zárolás"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nem biztonságos zárolás</b>\n"
+#~ "<p>\n"
+#~ "Ez az opció azt jelzi az NFS-kiszolgálónak, hogy a zárolásoknhoz ne "
+#~ "kérjen felhasználóazonosítást (azaz ne küldjön NLM protokollt használó "
+#~ "kéréseket). Normál esetben az NFS-kiszolgáló zárolási kérésnél "
+#~ "azonosítást kér az olyan felhasználótól, akinek olvasási jogosultsága van "
+#~ "a fájlhoz. Ha ez az opció be van jelölve, nem kér azonosítást.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "A régebbi NFS-kliensek nem küldték el a bejelentkezési adatokat zárolási "
+#~ "kérésnél, és sok mostani NFS-kliens ezt a régi kezelési módot használja. "
+#~ "Jelölje be ezt az opciót, ha azt találja, hogy csak olyan fájlokat tud "
+#~ "zárolni, melyeket mindenki olvasni tud.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Felhasználó-leképezés"
+
+#~ msgid "All s&quash"
+#~ msgstr "Minden az an&onymous-ra"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Minden az anonymous-ra</b>\n"
+#~ "<p>\n"
+#~ "Az összes UID és GID az anonymous felhasználóra mutasson. Az NFS-sel "
+#~ "exportált publikus FTP- és news spool-könyvtáraknál van például "
+#~ "jelentősége. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Root-leké&pezés nélkül"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Root-leképezés nélkül</b>\n"
+#~ "<p>\n"
+#~ "A root-leképezés kikapcsolása. Ez az opció elsősorban lemezegység nélküli "
+#~ "számítógépeknél jöhet jól.\n"
+#~ "</p>\n"
+#~ "<i>root-leképezés</i>\n"
+#~ "<p>\n"
+#~ "A 0 felhasználó- vagy csoportazonosító leképezése az anonymous "
+#~ "azonosítóra. Ez a leképezés nem érint más, hasonlóan veszélyes "
+#~ "felhasználóneveket, például a bin-t sem.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonymous a&zonosító:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonymous felhasználó- és csoportazonosító</b> <p> Itt lehet explicit "
+#~ "módon megadni az anonymous felhasználó- és csoportazonosítót. Ez "
+#~ "elsősorban PC/NFS-klienseknél lehet hasznos, ha azt szeretné, hogy minden "
+#~ "kérés egy felhasználó nevében történjen. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonymous &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Könyvtár:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Megosztás &NFS-sel (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS-opciók"
+
+#~ msgid "Pu&blic"
+#~ msgstr "P&ublikus"
+
+#~ msgid "W&ritable"
+#~ msgstr "Ír&ható"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "További NFS-b&eállítások"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba-opciók"
+
+#~ msgid "P&ublic"
+#~ msgstr "Pub&likus"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "To&vábbi Samba-beállítások"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Minden felhasználó tudjon megosztást létrehozni"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr ""
+#~ "Csak a következő csoporthoz tartozó felhasználók tudjanak megosztást "
+#~ "létrehozni: '%1'"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Felhasználók - '%1' csoport"
+
+#~ msgid "Remove User"
+#~ msgstr "Eltávolítás"
+
+#~ msgid "Add User"
+#~ msgstr "Felvétel"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "A csoport tagjai rendszergazdai jelszó nélkül is tudjanak megosztást "
+#~ "létrehozni"
+
+#~ msgid "Change Group..."
+#~ msgstr "A csoport megváltoztatása..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Az SMB és NFS szolgáltatás nincs telepítve, a modul használatához ezeket "
+#~ "előbb telepíteni kell."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Fájlmegosztás enge&délyezése a helyi hálózaton"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Egyszerű meg&osztás"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Egyszerű megosztás engedélyezése: a felhasználók a saját könyvtáruk "
+#~ "alatti könyvtárokat megoszthatják a rendszergazdai jelszó ismerete nélkül."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Teljes megosz&tás"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Teljes megosztás engedélyezése: a felhasználók bármely könyvtárat "
+#~ "megoszthatják, ha van írási jogosultságuk a szükséges konfigurációs "
+#~ "fájlokhoz vagy ismerik a rendszergazdai jelszót."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "NF&S (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Engedélyezett &felhasználók"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Megosztások"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Hozzáadás..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Mó&dosítás..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>A Samba konfigurációs fájlja (<strong>'smb.conf'</strong>) nem "
+#~ "található.</p>Ellenőrizze, hogy megfelelően telepítve van-e a Samba.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "A hely megadása"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba konfigurációs fájl\n"
+#~ "*|Minden fájl"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Az smb.conf helyének lekérdezése"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>A(z) <i>%1</i> fájlt nem sikerült beolvasni.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Nem sikerült beolvasni a fájlt"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Hiba történt egy fájl megnyitásakor"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Nem sikerült csatlakozni a(z) %1 tartományhoz"
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Adjon egy jelszót a(z) <b>%1</b> felhasználónak</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Nem sikerült hozzáadni a(z) <b>%1</b> felhasználót a Samba "
+#~ "felhasználói adatbázisához.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Nem sikerült törölni a(z) %1 felhasználót a Samba felhasználói közül."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Adja meg a(z) %1 felhasználó jelszavát"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Nem sikerült megváltoztatni a(z) %1 felhasználó jelszavát."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Samba-beállítások</h1> itt lehet beállítani a Samba-kiszolgálót."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Használja a <i>megosztás</i> biztonsági szintet otthoni vagy kis irodai "
+#~ "hálózat esetén.<br /> Ebben az esetben mindenki le tudja kérni az Ön "
+#~ "megosztott könyvtárainak és nyomtatóinak listáját anélkül, hogy "
+#~ "bejelentkezne."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Használja a <i>felhasználó</i> biztonsági szintet, ha a hálózat nagy és "
+#~ "azt szeretné, hogy a megosztott könyvtárak és nyomtatók listáját csak "
+#~ "bejelentkezés után lehessen lekérdezni.<br /><br />Ha a Samba-kiszolgálót "
+#~ "<b>elsődleges tartományvezérlőként</b> (PDC) szeretné futtatni, jelölje "
+#~ "be ezt az opciót is."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "A <i>kiszolgáló</i> biztonsági szintet akkor érdemes használni, ha egy "
+#~ "nagy hálózaton Samba-kiszolgálóval szeretné elvégezni a "
+#~ "felhasználóazonosítást egy másik SMB-kiszolgálón, például egy NT-s gépen "
+#~ "keresztül."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "A <i>tartomány</i> biztonsági szintet akkor érdemes használni, ha egy "
+#~ "nagy hálózaton Samba-kiszolgálóval szeretné elvégezni a "
+#~ "felhasználóazonosítást egy Windows NT tartományvezérlőn keresztül."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Az <i>ADS</i> biztonsági szintet akkor érdemes használni, ha egy nagy "
+#~ "hálózaton a Samba-kiszolgáló egy ADS-realm tartományi tagja."
+
+#~ msgid "Sorry"
+#~ msgstr "Hiba"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "A beírt két jelszó eltérő, kérem írja be újból."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "A(z) <em>%1</em> opciót nem támogatja a telepített Samba-verzió."
+
+#~ msgid "Unnamed"
+#~ msgstr "Névtelen"
+
+#~ msgid "&Hide"
+#~ msgstr "&Elrejtés"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "Oplock megvé&tózása"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>A kijelölt fájlok közül néhány rejtett (a nevük ponttal kezdődik). "
+#~ "Meg szeretné szüntetni az ilyen fájlok kijelöltségét?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "A ponttal kezdődő nevű fájlok"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Igen, megszüntetés"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Maradjanak rejtve"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Néhány kijelölt fájl illeszkedik ehhez a sztringhez: <b>'%1'</b>. "
+#~ "Meg szeretné szüntetni az összes illeszkedő (<b>'%1'</b>) fájl "
+#~ "kijelöltségét?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Helyettesítési karaktereket tartalmazó sztring"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Igen, megszüntetés"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Nem, maradjanak kijelölve"
+
+#~ msgid "Default"
+#~ msgstr "Alapértelmezés"
+
+#~ msgid "Admin"
+#~ msgstr "Rendszergazda"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>Publikus olvasási hozzáférést</b> adott ehhez a könyvtárhoz, de a "
+#~ "vendégazonosító, <b>%1</b>, nem rendelkezik a szükséges olvasási "
+#~ "jogosultsággal.<br />Folytatni szeretné a műveletet?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Figyelmeztetés"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>Publikus írási hozzáférést</b> adott ehhez a könyvtárhoz, de a "
+#~ "vendégazonosító, <b>%1</b>, nem rendelkezik a szükséges írási "
+#~ "jogosultsággal.<br />Folytatni szeretné a műveletet?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>Írási hozzáférést</b> adott a(z) <b>%1</b> felhasználónak ehhez a "
+#~ "könyvtárhoz, de a felhasználó nem rendelkezik a szükséges írási "
+#~ "jogosultsággal.<br />Folytatni szeretné a műveletet?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>Olvasási hozzáférést</b> adott a(z) <b>%1</b> felhasználónak ehhez "
+#~ "a könyvtárhoz, de a felhasználó nem rendelkezik a szükséges olvasási "
+#~ "jogosultsággal.<br />Folytatni szeretné a műveletet?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Már létezik egy publikus bejegyzés."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Már létezik ez a gépnév"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Adjon meg egy gépnevet vagy IP-címet."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Nincs gépnév vagy IP-cím"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Már létezik a(z) '%1' gépnév."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "A Samba konfigurációs fájljának beolvasása folyik..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Az NFS konfigurációs fájljának beolvasása folyik..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Adjon meg egy érvényes elérési utat."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Csak könyvtárat lehet megosztani."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "A könyvtár már meg van osztva."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "A rendszergazda nem engedélyezte az NFS-sel való megosztást."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Hiba: nem sikerült beolvasni az NFS konfigurációs fájlját."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "A rendszergazda nem engedélyezte a Sambával való megosztást."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Hiba: nem sikerült beolvasni a Samba konfigurációs fájlját."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Meg kell adni a Samba-megosztás nevét."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Nincs jogosultsága könyvtárak megosztásához."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "A fájlmegosztás beállítása..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Nincs NFS-kiszolgáló telepítve a rendszerben"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Nem sikerült elmenteni a beállításokat."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Nem sikerült megnyitni írásra a(z) '%1' fájlt: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "A mentés nem sikerült"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Fájlmegosztás</h1><p>Ebben a modulban lehet hálózati fájlmegosztást "
+#~ "engedélyezni az NFS vagy SMB hálózati fájlrendszerekkel, a Konquerorban. "
+#~ "Az SMB használata esetén Windows(R)-alapú számítógépekről is elérhetők a "
+#~ "megosztott fájlok.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Könyvtár megosztása"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Engedélyezett felhasználók"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Már minden felhasználó benne van a(z) %1 csoportban."
+
+#~ msgid "Select User"
+#~ msgstr "Felhasználó kiválasztása"
+
+#~ msgid "Select a user:"
+#~ msgstr "Válasszon egy felhasználót:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Nem sikerült hozzáadni a(z) '%1' felhasználót a(z) '%2' csoporthoz"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr ""
+#~ "Nem sikerült eltávolítani a(z) '%1' felhasználót a(z) '%2' csoportból."
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Ki kell választani egy érvényes csoportot."
+
+#~ msgid "New file share group:"
+#~ msgstr "Új fájlmegosztási csoport:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr ""
+#~ "Felhasználók hozzáadása az új csoporthoz a régi fájlmegosztási csoportból"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Felhasználók eltávolítása a régi fájlmegosztási csoportból"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "A régi fájlmegosztási csoport törlése"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Csak a megadott csoporthoz tartozó felhasználók oszthassanak meg "
+#~ "könyvtárakat"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Csoport kiválasztása..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "Biztosan el szeretné távolítani az összes felhasználót a(z) '%1' "
+#~ "csoportból?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Biztosan törölni szeretné a(z) '%1' csoportot?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Nem sikerült törölni a(z) '%1' csoportot."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Válasszon egy érvényes csoportot."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Nem létezik '%1' nevű csoport. Létre szeretné most hozni?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Nem kell létrehozni"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Nem sikerült létrehozni a(z) '%1' csoportot."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Nyomtatóbeállítások"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Ny&omtató"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&Elérési út:"
+
+#~ msgid "&Queue:"
+#~ msgstr "Nyomt&atási sor:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Az összes nyomtató meg&osztása"
+
+#~ msgid "I&dentifier"
+#~ msgstr "A&zonosító"
+
+#~ msgid "&Name:"
+#~ msgstr "Né&v:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Megj&egyzés:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Alaptulajdonságok"
+
+#~ msgid "&Printing"
+#~ msgstr "Ny&omtatás"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "A nyomtató meg&hajtóprogramja:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "A meg&hajtóprogram helye:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "Nyom&tatás:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "A jelentett nyomtatási &feladatok max. száma:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "A nyomtatási fela&datok max. száma:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "A &kliens meghajtójának használata"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "Ala&pértelmezett mód"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Engedélyezett gépek:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "Nyomtatóadm&inisztrátor:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Paran&csok"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Nyomtatá&si parancs:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "lpq paran&cs:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "lprm p&arancs:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "&lppause:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Egyéb"
+
+#~ msgid "p&reexec:"
+#~ msgstr "p&reexec:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "root pr&eexec:"
+
+#~ msgid "root postexec:"
+#~ msgstr "root postexec:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "poste&xec:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "&Finomhangolás"
+
+#~ msgid "M&in print space:"
+#~ msgstr "Min. ny&omtatási terület:"
+
+#~ msgid "&Logging"
+#~ msgstr "N&aplózás"
+
+#~ msgid "S&tatus"
+#~ msgstr "Á&llapot"
+
+#~ msgid "Not share&d"
+#~ msgstr "Nincs me&gosztva"
+
+#~ msgid "&Shared"
+#~ msgstr "M&egosztva"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Alapop&ciók"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Ez a szöveg jelenik meg a megosztás mellett, amikor a kliens lekérdezi a "
+#~ "kiszolgálót, a hálózati környezeten vagy a net view parancson keresztül, "
+#~ "hogy kilistázzza a rendelkezésre álló megosztásokat."
+
+#~ msgid "Name of the share"
+#~ msgstr "A megosztás neve"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Me&gjegyzés:"
+
+#~ msgid "Security Options"
+#~ msgstr "Biztonsági beállítások"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "Nem engedél&yezett gépek:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&Engedélyezett gépek:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Ven&dégazonosító:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Ha ez be van jelölve, a szolgáltatás felhasználói nem hozhatnak létre és "
+#~ "nem módosíthatnak fájlokat a szolgáltatás könyvtárában."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "A vendégek en&gedélyezve"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Ez egy felhasználónév, vendégek engedélyezése esetén ennek jogosultságai "
+#~ "lesznek érvényesek"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Ez határozza meg, hogy a megosztás megjelenik-e a megosztások listájában "
+#~ "(a net view parancsnál és a böngészési listában)."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Itt lehet \\\"kikapcsolni\\\" a szolgáltatást. Ha nincs bejelölve, akkor "
+#~ "nem lehet csatlakozni a szolgáltatáshoz. A nem teljesült csatlakozási "
+#~ "kérések naplózva lesznek."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "To&vábbi beállítások"

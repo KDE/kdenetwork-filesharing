@@ -1,0 +1,2729 @@
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2006-08-22 01:05+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: KDE <kde-i18n-doc@kde.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Benarkan"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Baca-Saja"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Keizinan"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "tiada kebenaran"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Kepastian Pemadaman"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Keizinan"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Keizinan"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Pemilik"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Pemilik"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Kumpulan"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Keizinan"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Laluan"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Keizinan"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Keizinan"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Benarkan capaian dari semua hos"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Keizinan"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nama:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Tiada akaun tetamu"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Baca-Saja"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Benarkan capaian dari semua hos"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Katalaluan"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Katalaluan"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Tiada katalaluan"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Katalaluan"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Keizinan"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Lanjutan"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Hanya direktori di Home anda yang boleh dikongsi"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Pengguna dan Kumpulan"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Proses perakaunan dimatikan."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Pengguna %s tidak wujud.\n"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Nama Perkongsian diperlukan"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Kongsi"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Cipta"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Cipta"
+
+#, fuzzy
+#~ msgid "&Share"
+#~ msgstr "Kongsi:"
+
+#, fuzzy
+#~ msgid "Select Users"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "Select &Users"
+#~ msgstr "Pengg_una Samba..."
+
+#~ msgid "Name"
+#~ msgstr "Nama"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "&Default"
+#~ msgstr "&Default"
+
+#, fuzzy
+#~ msgid "&Read access"
+#~ msgstr "tiada kebenaran"
+
+#, fuzzy
+#~ msgid "&Admin access"
+#~ msgstr "tiada kebenaran"
+
+#, fuzzy
+#~ msgid "Join Domain"
+#~ msgstr "Gabung Domain"
+
+#, fuzzy
+#~ msgid "&Verify:"
+#~ msgstr "Tentusah"
+
+#, fuzzy
+#~ msgid "&Password:"
+#~ msgstr "Katalaluan:"
+
+#, fuzzy
+#~ msgid "&Username:"
+#~ msgstr "_Namapengguna:"
+
+#, fuzzy
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Pe_ngawal Domain Winbind"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domain:"
+
+#, fuzzy
+#~ msgid "Select Groups"
+#~ msgstr "Kumpulan Volum"
+
+#, fuzzy
+#~ msgid "Selec&t Groups"
+#~ msgstr "Kumpulan Volum"
+
+#, fuzzy
+#~ msgid "&Kind of Group"
+#~ msgstr "Kumpulan Hilang"
+
+#, fuzzy
+#~ msgid "&UNIX group"
+#~ msgstr "Kumpulan Hilang"
+
+#, fuzzy
+#~ msgid "NI&S group"
+#~ msgstr "Kumpulan Hilang"
+
+#, fuzzy
+#~ msgid "&Base Settings"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "Samba config file:"
+#~ msgstr "Fail tetapan PXE:      %s"
+
+#, fuzzy
+#~ msgid "&Load"
+#~ msgstr "Muatan"
+
+#, fuzzy
+#~ msgid "Server Identification"
+#~ msgstr "Pengenalan klien:"
+
+#, fuzzy
+#~ msgid "Server strin&g:"
+#~ msgstr "_Pelayan NIS:"
+
+#, fuzzy
+#~ msgid "NetBIOS name:"
+#~ msgstr "Nama Pengguna"
+
+#, fuzzy
+#~ msgid "Securit&y Level"
+#~ msgstr "_Aras RAID:"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Pengguna"
+
+#~ msgid "Server"
+#~ msgstr "Pelayan"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#, fuzzy
+#~ msgid "Further Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Password server address/name:"
+#~ msgstr "Masukkan Nama Pelayan DNS"
+
+#, fuzzy
+#~ msgid "Real&m:"
+#~ msgstr "Nama sebenar"
+
+#, fuzzy
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Tiada akaun tetamu"
+
+#, fuzzy
+#~ msgid "man:smb.conf"
+#~ msgstr "Mengulangmuat fail smb.conf: "
+
+#, fuzzy
+#~ msgid "&Shares"
+#~ msgstr "Urus perkongsian NFS"
+
+#~ msgid "Comment"
+#~ msgstr "Komen"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "Ciri-ciri Hos Maya"
+
+#, fuzzy
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Tidak dapat Edit"
+
+#, fuzzy
+#~ msgid "Add &New Share..."
+#~ msgstr "Tambah Perkongsian NFS"
+
+#, fuzzy
+#~ msgid "Edit Share..."
+#~ msgstr "Edit Perkongsian NFS"
+
+#, fuzzy
+#~ msgid "Re&move Share"
+#~ msgstr "Masukkan Nama Perkongsian"
+
+#~ msgid "Printer"
+#~ msgstr "Pencetak"
+
+#, fuzzy
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Tidak dapat Edit"
+
+#, fuzzy
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Edit Pencetak Lokal"
+
+#, fuzzy
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Tidak dapat Edit"
+
+#, fuzzy
+#~ msgid "Re&move Printer"
+#~ msgstr "Edit Pencetak Lokal"
+
+#, fuzzy
+#~ msgid "&Users"
+#~ msgstr "Pengguna"
+
+#, fuzzy
+#~ msgid "Disabled"
+#~ msgstr "Dimatikan"
+
+#, fuzzy
+#~ msgid "Rem&ove"
+#~ msgstr "Karl Ove Hufthammer"
+
+#, fuzzy
+#~ msgid "UNI&X Users"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Tetapkan Katalaluan Root"
+
+#, fuzzy
+#~ msgid "&Join Domain"
+#~ msgstr "Gabung Domain"
+
+#, fuzzy
+#~ msgid "Advanced Dump"
+#~ msgstr "Longgokan Ditulis"
+
+#, fuzzy
+#~ msgid "Security"
+#~ msgstr "Keselamatan"
+
+#, fuzzy
+#~ msgid "&General"
+#~ msgstr "Umum"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#, fuzzy
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "PAM: Sessi dibuka (sekatan digunakan)."
+
+#, fuzzy
+#~ msgid "PAM password change"
+#~ msgstr "Pertukaran katalaluan dibatalkan.\n"
+
+#, fuzzy
+#~ msgid "Other Switches"
+#~ msgstr "Port lain"
+
+#, fuzzy
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Kekunci Dipercayai DNS"
+
+#, fuzzy
+#~ msgid "Paranoid server security"
+#~ msgstr "Security Enhanced Linux"
+
+#~ msgid "General"
+#~ msgstr "Umum"
+
+#, fuzzy
+#~ msgid "Auth methods:"
+#~ msgstr "Kaedah Masukan"
+
+#, fuzzy
+#~ msgid "Root director&y:"
+#~ msgstr "_Katalaluan root: "
+
+#, fuzzy
+#~ msgid "Map to guest:"
+#~ msgstr "Tiada akaun tetamu"
+
+#, fuzzy
+#~ msgid "Bind interfaces only"
+#~ msgstr "Pencetak Teks Sahaja"
+
+#~ msgid "Never"
+#~ msgstr "Tidak sekali"
+
+#, fuzzy
+#~ msgid "Bad User"
+#~ msgstr "Nama Pengguna Teruk"
+
+#, fuzzy
+#~ msgid "Bad Password"
+#~ msgstr "Tiada katalaluan"
+
+#, fuzzy
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Hos Maya"
+
+#, fuzzy
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "DN _Asas LDAP:"
+
+#, fuzzy
+#~ msgid "Private dir:"
+#~ msgstr "Dir Temp: "
+
+#, fuzzy
+#~ msgid "Pass&word"
+#~ msgstr "Kata_laluan:"
+
+#, fuzzy
+#~ msgid "Samba Passwords"
+#~ msgstr "_Enkrip Katalaluan:"
+
+#, fuzzy
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "_Enkrip Katalaluan:"
+
+#, fuzzy
+#~ msgid "Smb passwd file:"
+#~ msgstr "Mengulangmuat fail smb.conf: "
+
+#, fuzzy
+#~ msgid "Passwd chat:"
+#~ msgstr "NZ-CHAT"
+
+#, fuzzy
+#~ msgid "Passwd chat debug"
+#~ msgstr "Borak Jaringan Setempat"
+
+#, fuzzy
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr " saat"
+
+#, fuzzy
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Hadmasa (dlm saat):"
+
+#, fuzzy
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Hidupkan katalaluan _MD5"
+
+#, fuzzy
+#~ msgid "Password level:"
+#~ msgstr "_Aras RAID:"
+
+#, fuzzy
+#~ msgid "Min password length:"
+#~ msgstr "Jarak kod IR:"
+
+#, fuzzy
+#~ msgid "Machine password timeout:"
+#~ msgstr "Hadmasa (dlm saat):"
+
+#, fuzzy
+#~ msgid "Migration"
+#~ msgstr "<b>Polisi Penghijrahan</b>"
+
+#, fuzzy
+#~ msgid "Update encr&ypted"
+#~ msgstr "Sumber Cakera Kemaskini"
+
+#, fuzzy
+#~ msgid "UNIX Passwords"
+#~ msgstr "_Enkrip Katalaluan:"
+
+#, fuzzy
+#~ msgid "Passwd program:"
+#~ msgstr "Keluar program"
+
+#, fuzzy
+#~ msgid "UNI&X password sync"
+#~ msgstr "Sync Meng_ufuk:"
+
+#, fuzzy
+#~ msgid "Userna&me"
+#~ msgstr "GNO_ME"
+
+#, fuzzy
+#~ msgid "User&name map:"
+#~ msgstr "Nama Pengguna Teruk"
+
+#, fuzzy
+#~ msgid "Username &level:"
+#~ msgstr "_Aras RAID:"
+
+#, fuzzy
+#~ msgid "Hide local users"
+#~ msgstr "_Sorok pengguna dan kumpulan sistem"
+
+#, fuzzy
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Hadkan pilihan arahan baris"
+
+#, fuzzy
+#~ msgid "Use rhosts"
+#~ msgstr "atau digunakan:"
+
+#, fuzzy
+#~ msgid "Authenticati&on"
+#~ msgstr "Pada Ahli:"
+
+#~ msgid "Client"
+#~ msgstr "Klien"
+
+#, fuzzy
+#~ msgid "C&lient signing:"
+#~ msgstr "Menandatangan Zon..."
+
+#, fuzzy
+#~ msgid "Client lanman authentication"
+#~ msgstr "Hidupkan _Autentikasi SMB"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#, fuzzy
+#~ msgid "Client channel:"
+#~ msgstr "Nama Saluran"
+
+#, fuzzy
+#~ msgid "Client use spnego"
+#~ msgstr "Sila guna mod teks"
+
+#, fuzzy
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Hidupkan _Autentikasi SMB"
+
+#, fuzzy
+#~ msgid "Server signing:"
+#~ msgstr "Menandatangan Zon..."
+
+#, fuzzy
+#~ msgid "Lanman authentication"
+#~ msgstr "Konfigurasi Autentifikasi"
+
+#, fuzzy
+#~ msgid "Server channel:"
+#~ msgstr "Nama Saluran"
+
+#, fuzzy
+#~ msgid "Use sp&nego"
+#~ msgstr "Sila guna mod teks"
+
+#, fuzzy
+#~ msgid "NTLM authentication"
+#~ msgstr "Konfigurasi Autentifikasi"
+
+#, fuzzy
+#~ msgid "Logging"
+#~ msgstr "Menglog"
+
+#, fuzzy
+#~ msgid "L&og file:"
+#~ msgstr "Menyalin Fail"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#, fuzzy
+#~ msgid "Ma&x log size:"
+#~ msgstr "Had saiz log:"
+
+#, fuzzy
+#~ msgid "Log &level:"
+#~ msgstr "Aras Log"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#, fuzzy
+#~ msgid "Debug pid"
+#~ msgstr "Fail _PID:"
+
+#, fuzzy
+#~ msgid "Debu&g uid"
+#~ msgstr "Uid berbeza"
+
+#, fuzzy
+#~ msgid "Tuning"
+#~ msgstr "Penalaan"
+
+#, fuzzy
+#~ msgid "Modules"
+#~ msgstr "Modul:"
+
+#, fuzzy
+#~ msgid "Pre&load modules:"
+#~ msgstr "Muat modul kernel"
+
+#, fuzzy
+#~ msgid "&Getwd cache"
+#~ msgstr "Maklumat Cache"
+
+#, fuzzy
+#~ msgid "Use &mmap"
+#~ msgstr "atau digunakan:"
+
+#, fuzzy
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Tukar Pemuat But"
+
+#, fuzzy
+#~ msgid "H&ostname lookups"
+#~ msgstr "Guna carian _TLS"
+
+#, fuzzy
+#~ msgid "Read ra&w"
+#~ msgstr "Baca-Saja"
+
+#, fuzzy
+#~ msgid "Write raw"
+#~ msgstr "Raw Primary"
+
+#, fuzzy
+#~ msgid "Times"
+#~ msgstr "menetapkan masa untuk %s"
+
+#, fuzzy
+#~ msgid "Change notify timeout:"
+#~ msgstr "Hadmasa (dlm saat):"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#, fuzzy
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Baki masa: %s minit"
+
+#, fuzzy
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Name Switch Cache"
+
+#, fuzzy
+#~ msgid "Max disk size:"
+#~ msgstr "(Saiz maks %s MB)"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#, fuzzy
+#~ msgid "Read si&ze:"
+#~ msgstr "gagal untuk membaca %s: %s\n"
+
+#, fuzzy
+#~ msgid "Stat cache size:"
+#~ msgstr "Jumlah saiz pemasangan: %s"
+
+#, fuzzy
+#~ msgid "Max smbd processes:"
+#~ msgstr "Jumlah Maksimum Sambungan:"
+
+#, fuzzy
+#~ msgid "Max open files:"
+#~ msgstr "Tiada lagi fail terbuka"
+
+#~ msgid "Printing"
+#~ msgstr "Mencetak"
+
+#, fuzzy
+#~ msgid "Total print &jobs:"
+#~ msgstr "Laksana tugas terjadual"
+
+#, fuzzy
+#~ msgid "Drivers"
+#~ msgstr "Pemandu yang ada:"
+
+#, fuzzy
+#~ msgid "OS&2 driver map:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Printcap na&me:"
+#~ msgstr " Jangan ingatkan saya lagi"
+
+#~ msgid "Commands"
+#~ msgstr "Arahan"
+
+#, fuzzy
+#~ msgid "Enumports command:"
+#~ msgstr "  Pilihan    Arahan\n"
+
+#, fuzzy
+#~ msgid "Addprinter command:"
+#~ msgstr "  Pilihan    Arahan\n"
+
+#, fuzzy
+#~ msgid "Deleteprinter command:"
+#~ msgstr "  Pilihan    Arahan\n"
+
+#, fuzzy
+#~ msgid "L&oad printers"
+#~ msgstr "Tetapkan pencetak"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "Tahap Log:"
+
+#~ msgid "Domain"
+#~ msgstr "Domain"
+
+#, fuzzy
+#~ msgid "L&ocal master"
+#~ msgstr "Pelayan Induk Kerberos:"
+
+#, fuzzy
+#~ msgid "Domai&n master"
+#~ msgstr "Pelayan Induk Kerberos:"
+
+#, fuzzy
+#~ msgid "Domain lo&gons"
+#~ msgstr "domain NIS default"
+
+#, fuzzy
+#~ msgid "Preferred &master"
+#~ msgstr "Aplikasi Digemari"
+
+#, fuzzy
+#~ msgid "OS &level:"
+#~ msgstr "_Aras RAID:"
+
+#, fuzzy
+#~ msgid "Domain admin group:"
+#~ msgstr "Kumpulan_kerja SMB:"
+
+#, fuzzy
+#~ msgid "Domain guest group:"
+#~ msgstr "Kumpulan_kerja SMB:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#, fuzzy
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Tidak dapat menyahaktif peranti rangkaian %s!\n"
+
+#, fuzzy
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Guna _siaran untuk mencari pelayan NIS"
+
+#, fuzzy
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS Utama"
+
+#, fuzzy
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Jumlah Maksimum Sambungan:"
+
+#, fuzzy
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "Integer: Min %s | Maks %s"
+
+#, fuzzy
+#~ msgid "General Options"
+#~ msgstr "Pilihan Umum"
+
+#, fuzzy
+#~ msgid "WINS pro&xy"
+#~ msgstr "%1 x² + %2 y² + %3 xy + %4 x + %5 y + %6 = 0"
+
+#, fuzzy
+#~ msgid "Ge&neral"
+#~ msgstr "Ja_na"
+
+#, fuzzy
+#~ msgid "Strip d&ot"
+#~ msgstr "-ot tak boleh menerima -l\n"
+
+#, fuzzy
+#~ msgid "Stat cache"
+#~ msgstr "Maklumat Cache"
+
+#, fuzzy
+#~ msgid "Locking"
+#~ msgstr "Penguncian"
+
+#, fuzzy
+#~ msgid "Direct&ories"
+#~ msgstr "Chat Langsung..."
+
+#, fuzzy
+#~ msgid "Loc&k directory:"
+#~ msgstr "Direktori Default"
+
+#, fuzzy
+#~ msgid "Pid director&y:"
+#~ msgstr "Fail _PID:"
+
+#, fuzzy
+#~ msgid "Lock Spin"
+#~ msgstr "Fail Kunci:"
+
+#, fuzzy
+#~ msgid "&Lock spin count:"
+#~ msgstr "kira histogram log\n"
+
+#, fuzzy
+#~ msgid "Very Advanced"
+#~ msgstr "Tetap_an Lanjutan"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#, fuzzy
+#~ msgid "D&OS charset:"
+#~ msgstr "Nama OS"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#, fuzzy
+#~ msgid "Character set:"
+#~ msgstr "Set Aksara:"
+
+#, fuzzy
+#~ msgid "Va&lid chars:"
+#~ msgstr "%sPerkataan: %lu  Baris: %ld  Aksara: %lu"
+
+#, fuzzy
+#~ msgid "Code page directory:"
+#~ msgstr "Senarai Direktori Carian Halaman"
+
+#, fuzzy
+#~ msgid "Codin&g system:"
+#~ msgstr "Ulangbut Sistem"
+
+#, fuzzy
+#~ msgid "Client code page:"
+#~ msgstr "Up2date - Halaman Logmasuk"
+
+#, fuzzy
+#~ msgid "Logon"
+#~ msgstr "Logmasuk"
+
+#, fuzzy
+#~ msgid "Add Scripts"
+#~ msgstr "Tambah Partisyen"
+
+#, fuzzy
+#~ msgid "Add user script:"
+#~ msgstr "Tambah pengguna kepada sistem"
+
+#, fuzzy
+#~ msgid "Add user to group script:"
+#~ msgstr "Pilih Kumpulan Volum untuk menambah %s ke dalamnya:"
+
+#, fuzzy
+#~ msgid "Add machine script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Delete group script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Delete user script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Primary Group Script"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Gagal untuk menetapkan katalaluan bagi kumpulan %s: %s\n"
+
+#, fuzzy
+#~ msgid "Shutdown"
+#~ msgstr "padamkan %s"
+
+#, fuzzy
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Logo&n path:"
+#~ msgstr "Laluan SFS"
+
+#, fuzzy
+#~ msgid "Logon ho&me:"
+#~ msgstr "Maklumat Logmasuk Diperlukan"
+
+#, fuzzy
+#~ msgid "&Logon drive:"
+#~ msgstr "Aba_ikan pemacu"
+
+#, fuzzy
+#~ msgid "Lo&gon script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#~ msgid "Socket"
+#~ msgstr "Soket"
+
+#, fuzzy
+#~ msgid "Socket address:"
+#~ msgstr "Alamat _IP"
+
+#, fuzzy
+#~ msgid "Socket Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "Konfigurasikan TCP/IP"
+
+#, fuzzy
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_BROADCAST"
+#~ msgstr "Alamat broadcast:"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#, fuzzy
+#~ msgid "E&nable SSL"
+#~ msgstr "Pilihan SSL"
+
+#, fuzzy
+#~ msgid "SSL h&osts:"
+#~ msgstr "Pilihan SSL"
+
+#, fuzzy
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "bilangan byte tidak sah"
+
+#, fuzzy
+#~ msgid "SSL ciphers:"
+#~ msgstr "Pilihan SSL"
+
+#, fuzzy
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Fail _Log SSL:"
+
+#, fuzzy
+#~ msgid "SSL CA certDir:"
+#~ msgstr "Lokasi sijil CA SSL."
+
+#, fuzzy
+#~ msgid "SSL entropy file:"
+#~ msgstr "Fail _Log SSL:"
+
+#, fuzzy
+#~ msgid "SSL egd socket:"
+#~ msgstr "Ralat mencipta soket"
+
+#, fuzzy
+#~ msgid "SSL version:"
+#~ msgstr "versi alternatif %s\n"
+
+#, fuzzy
+#~ msgid "SSL CA certFile:"
+#~ msgstr "Lokasi sijil CA SSL."
+
+#, fuzzy
+#~ msgid "SSL require clientcert"
+#~ msgstr "Fail _Log SSL:"
+
+#, fuzzy
+#~ msgid "SSL client key:"
+#~ msgstr "Fail Sijil _Kekunci:"
+
+#, fuzzy
+#~ msgid "SS&L server cert:"
+#~ msgstr "Terima sijil yg tidak sah"
+
+#, fuzzy
+#~ msgid "SSL client cert:"
+#~ msgstr "Terima sijil yg tidak sah"
+
+#, fuzzy
+#~ msgid "SSL server &key:"
+#~ msgstr "Kunci awam pelayan adalah %d bit"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokol"
+
+#, fuzzy
+#~ msgid "Ti&me server"
+#~ msgstr "Pelayan Mel (SMTP)"
+
+#, fuzzy
+#~ msgid "UNIX extensions"
+#~ msgstr "Nama Pengguna _Unix:"
+
+#, fuzzy
+#~ msgid "Read bmpx"
+#~ msgstr "Baca-Saja"
+
+#, fuzzy
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokol boot"
+
+#, fuzzy
+#~ msgid "A&nnounce as:"
+#~ msgstr "Format sebagai %s"
+
+#, fuzzy
+#~ msgid "NT Workstation"
+#~ msgstr "StesyenKerja Default"
+
+#, fuzzy
+#~ msgid "Announce version:"
+#~ msgstr "versi alternatif %s\n"
+
+#, fuzzy
+#~ msgid "CORE"
+#~ msgstr "Teras"
+
+#, fuzzy
+#~ msgid "Max protocol:"
+#~ msgstr "Protokol boot"
+
+#, fuzzy
+#~ msgid "Min protocol:"
+#~ msgstr "Protokol boot"
+
+#, fuzzy
+#~ msgid "Max tt&l:"
+#~ msgstr "Jumlah Maksimum Sambungan:"
+
+#, fuzzy
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Hidupkan _Autentikasi SMB"
+
+#, fuzzy
+#~ msgid "SMB ports:"
+#~ msgstr "Port lain"
+
+#, fuzzy
+#~ msgid "Browsing"
+#~ msgstr "Pelayaran Samba"
+
+#, fuzzy
+#~ msgid "L&M announce:"
+#~ msgstr "Pengumuman:"
+
+#, fuzzy
+#~ msgid "Sec"
+#~ msgstr " saat"
+
+#, fuzzy
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Lungsur direktori tersendiri..."
+
+#, fuzzy
+#~ msgid "Bro&wse list"
+#~ msgstr "penggunaan:   %s --list [nama]\n"
+
+#, fuzzy
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Dipertingkatkan oleh:"
+
+#, fuzzy
+#~ msgid "Pre&load:"
+#~ msgstr "Muat pra-tetap"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#, fuzzy
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "Guna Pengesahan Winbind"
+
+#, fuzzy
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Guna Pengesahan Winbind"
+
+#, fuzzy
+#~ msgid "Template h&omedir:"
+#~ msgstr "Shell Template:"
+
+#, fuzzy
+#~ msgid "Temp&late shell:"
+#~ msgstr "Menukar shell untuk %s.\n"
+
+#, fuzzy
+#~ msgid "Winbind separator:"
+#~ msgstr "Pengesahan Winbind"
+
+#, fuzzy
+#~ msgid "Template primary group:"
+#~ msgstr "Kumpulan_kerja SMB:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#, fuzzy
+#~ msgid "Winbind enum groups"
+#~ msgstr "Kumpulan Volum LVM"
+
+#, fuzzy
+#~ msgid "Winbind use default domain"
+#~ msgstr "Pe_ngawal Domain Winbind"
+
+#, fuzzy
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "hidupkan winbind untuk pengesahan secara default"
+
+#, fuzzy
+#~ msgid "Winbind nested groups"
+#~ msgstr "Kumpulan Volum LVM"
+
+#, fuzzy
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "Santa Cruz (SC)"
+
+#, fuzzy
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Edit Nama dan Alias"
+
+#, fuzzy
+#~ msgid "Disab&le netbios"
+#~ msgstr "Tahap Log:"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#, fuzzy
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "Hidupkan _LDAP"
+
+#, fuzzy
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "Suffik penyempurnaan gelaran"
+
+#, fuzzy
+#~ msgid "LDAP user suffix:"
+#~ msgstr "Pengguna LDAP SASL"
+
+#, fuzzy
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "Suffik penyempurnaan gelaran"
+
+#, fuzzy
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "Suffik penyempurnaan gelaran"
+
+#, fuzzy
+#~ msgid "LDAP filter:"
+#~ msgstr "Tapisan Sendiri"
+
+#, fuzzy
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "default LDAP asas DN"
+
+#, fuzzy
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "DN _Asas LDAP:"
+
+#, fuzzy
+#~ msgid "&LDAP ssl:"
+#~ msgstr "Pilihan SSL"
+
+#, fuzzy
+#~ msgid "Start_tls"
+#~ msgstr "Guna TLS"
+
+#, fuzzy
+#~ msgid "On"
+#~ msgstr "Baca-Saja"
+
+#, fuzzy
+#~ msgid "LDAP s&ync:"
+#~ msgstr "Hidupkan _LDAP"
+
+#, fuzzy
+#~ msgid "Only"
+#~ msgstr "Baca-Saja"
+
+#, fuzzy
+#~ msgid "LDAP delete d&n"
+#~ msgstr "Kepastian Pemadaman"
+
+#, fuzzy
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Tambah Perkongsian NFS"
+
+#, fuzzy
+#~ msgid "Change share command:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Messa&ge command:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Pe_ngawal Domain Winbind"
+
+#, fuzzy
+#~ msgid "Set &quota command:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Get quota command:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Pa&nic action:"
+#~ msgstr "<b>Menerapkan tindakan penapis:</b> "
+
+#, fuzzy
+#~ msgid "Misc"
+#~ msgstr "Lain-lain"
+
+#, fuzzy
+#~ msgid "Hide &local users"
+#~ msgstr "_Sorok pengguna dan kumpulan sistem"
+
+#, fuzzy
+#~ msgid "Default service:"
+#~ msgstr "                    [--initscript <service>]\n"
+
+#, fuzzy
+#~ msgid "Time &offset:"
+#~ msgstr "Waktu Alaska"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#, fuzzy
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Pentadbiran jauh"
+
+#, fuzzy
+#~ msgid "Source environment:"
+#~ msgstr "Pembolehubah Persekitaran"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#, fuzzy
+#~ msgid "NIS homedir"
+#~ msgstr "_Domain NIS:"
+
+#, fuzzy
+#~ msgid "Homedir map:"
+#~ msgstr "Ulangmuat peta %s\n"
+
+#, fuzzy
+#~ msgid "Utmp director&y:"
+#~ msgstr "Bacula Director Console"
+
+#, fuzzy
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Direktori Default"
+
+#, fuzzy
+#~ msgid "Ut&mp"
+#~ msgstr "Bulan terbit & Bulan terbenam (UT)"
+
+#~ msgid "Debug"
+#~ msgstr "Nyahpepijat"
+
+#, fuzzy
+#~ msgid "&NT status support"
+#~ msgstr "Sokongan Bahasa Tambahan"
+
+#, fuzzy
+#~ msgid "NT S&MB support"
+#~ msgstr "Sokongan Bahasa Tambahan"
+
+#, fuzzy
+#~ msgid "Add/Edit Share"
+#~ msgstr "Edit Perkongsian NFS"
+
+#, fuzzy
+#~ msgid "Pixmap"
+#~ msgstr "Imej PixMap X"
+
+#, fuzzy
+#~ msgid "&Path:"
+#~ msgstr "Path:"
+
+#, fuzzy
+#~ msgid "Share all home &directories"
+#~ msgstr "Menyokong direktori rumah NFS"
+
+#, fuzzy
+#~ msgid "Na&me:"
+#~ msgstr "GNO_ME"
+
+#, fuzzy
+#~ msgid "Comme&nt:"
+#~ msgstr "-nt tak boleh menerima -l\n"
+
+#, fuzzy
+#~ msgid "Main P&roperties"
+#~ msgstr "Do_main:"
+
+#, fuzzy
+#~ msgid "Read onl&y"
+#~ msgstr "Baca-Saja"
+
+#, fuzzy
+#~ msgid "&Security"
+#~ msgstr "Keselamatan"
+
+#, fuzzy
+#~ msgid "&Guest account:"
+#~ msgstr "_Akaun Tetamu:"
+
+#, fuzzy
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Hos Maya"
+
+#, fuzzy
+#~ msgid "Hosts &deny:"
+#~ msgstr "Nafi daripada hos:"
+
+#, fuzzy
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Buka pautan selepas mukasurat kini"
+
+#, fuzzy
+#~ msgid "Hidden &Files"
+#~ msgstr "Fail Log"
+
+#~ msgid "Hidden"
+#~ msgstr "Tersembunyi"
+
+#~ msgid "Size"
+#~ msgstr "Saiz"
+
+#~ msgid "Date"
+#~ msgstr "Tarikh"
+
+#, fuzzy
+#~ msgid "Se&lected Files"
+#~ msgstr "Tiada Fail Dinyatakan."
+
+#, fuzzy
+#~ msgid "Hi&de"
+#~ msgstr "Tetap sebagai de_fault"
+
+#, fuzzy
+#~ msgid "&Manual Configuration"
+#~ msgstr "<b>Konfigurasi proksi _manual</b>"
+
+#, fuzzy
+#~ msgid "Ve&to files:"
+#~ msgstr "Muatturun fail ke:"
+
+#, fuzzy
+#~ msgid "Hidde&n files:"
+#~ msgstr "Fail Log"
+
+#, fuzzy
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Tiada Fail Dinyatakan."
+
+#, fuzzy
+#~ msgid "&Advanced"
+#~ msgstr "Lanjutan"
+
+#, fuzzy
+#~ msgid "Force Modes"
+#~ msgstr "Rentetan mod"
+
+#, fuzzy
+#~ msgid "Force director&y mode:"
+#~ msgstr "Sila guna mod teks"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~ msgid "Directory security mask:"
+#~ msgstr "Subnet _mask jauh:"
+
+#, fuzzy
+#~ msgid "Security &mask:"
+#~ msgstr "Net_mask"
+
+#, fuzzy
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Subnet _mask jauh:"
+
+#, fuzzy
+#~ msgid "Create mas&k:"
+#~ msgstr "Cipta _akaun"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#, fuzzy
+#~ msgid "&Profile acls"
+#~ msgstr "Profil aktif: %s"
+
+#, fuzzy
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Warisi polisi dari Kumpulan Volum"
+
+#, fuzzy
+#~ msgid "&NT ACL support"
+#~ msgstr "Sokongan Bahasa Tambahan"
+
+#, fuzzy
+#~ msgid "Map acl &inherit"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Benarkan daemon untuk menggunakan fail kerberos"
+
+#, fuzzy
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "Simpan pemetaan ARP"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#, fuzzy
+#~ msgid "Strict s&ync"
+#~ msgstr "Taat RFC1179"
+
+#, fuzzy
+#~ msgid "Sync al&ways"
+#~ msgstr "Sync Meng_ufuk:"
+
+#, fuzzy
+#~ msgid "St&rict allocate"
+#~ msgstr "Amerika/St_Johns"
+
+#, fuzzy
+#~ msgid "Use sen&dfile"
+#~ msgstr "Sila guna mod teks"
+
+#, fuzzy
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "Jumlah maksimum satu-muka AP dijumpai."
+
+#~ msgid "bytes"
+#~ msgstr "byte"
+
+#, fuzzy
+#~ msgid "Bloc&k size:"
+#~ msgstr "_Saiz (MB):"
+
+#, fuzzy
+#~ msgid "manual"
+#~ msgstr "manual"
+
+#, fuzzy
+#~ msgid "documents"
+#~ msgstr "Dokumen halaman"
+
+#, fuzzy
+#~ msgid "programs"
+#~ msgstr "Program"
+
+#, fuzzy
+#~ msgid "disable"
+#~ msgstr "Matikan"
+
+#, fuzzy
+#~ msgid "Name Mangling"
+#~ msgstr "Nama Pengguna"
+
+#, fuzzy
+#~ msgid "Man&gle case"
+#~ msgstr "Pencarian Case Sensitif%s%s"
+
+#, fuzzy
+#~ msgid "Preser&ve case"
+#~ msgstr "Pencarian Case Sensitif%s%s"
+
+#, fuzzy
+#~ msgid "Case sensi&tive"
+#~ msgstr "Pencarian Case Sensitif%s%s"
+
+#, fuzzy
+#~ msgid "Defau&lt case:"
+#~ msgstr "Pencarian Case Sensitif%s%s"
+
+#, fuzzy
+#~ msgid "Mangling method:"
+#~ msgstr "Kaedah Penyelamatan"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#, fuzzy
+#~ msgid "Other Options"
+#~ msgstr "Opsyen RAID"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#, fuzzy
+#~ msgid "&DOS file mode"
+#~ msgstr "mod fail teras?"
+
+#, fuzzy
+#~ msgid "DOS f&ile times"
+#~ msgstr ""
+#~ "\n"
+#~ "Masa pelaksanaan (saat)\n"
+
+#, fuzzy
+#~ msgid "DOS file time resolution"
+#~ msgstr "Menulis fail dalam format DOS"
+
+#, fuzzy
+#~ msgid "Enable lock&ing"
+#~ msgstr "Kunci Akaun Pengguna"
+
+#, fuzzy
+#~ msgid "Locki&ng"
+#~ msgstr "Cheops-NG"
+
+#, fuzzy
+#~ msgid "S&trict locking"
+#~ msgstr "Memulakan penguncian NFS: "
+
+#, fuzzy
+#~ msgid "Posi&x locking"
+#~ msgstr "Memulakan penguncian NFS: "
+
+#, fuzzy
+#~ msgid "Share mo&des"
+#~ msgstr "Roy-Magne Mo"
+
+#, fuzzy
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Tahap Log:"
+
+#, fuzzy
+#~ msgid "Exec"
+#~ msgstr "Panggilan exec() gagal."
+
+#, fuzzy
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Tetapkan Katalaluan Root"
+
+#, fuzzy
+#~ msgid "Pos&texec:"
+#~ msgstr "Pos Kursor"
+
+#, fuzzy
+#~ msgid "Root &postexec:"
+#~ msgstr "_Katalaluan root: "
+
+#, fuzzy
+#~ msgid "&Volume:"
+#~ msgstr "Volum: (%)"
+
+#, fuzzy
+#~ msgid "Ma&gic script:"
+#~ msgstr "Skrip Pra-Pemasangan"
+
+#, fuzzy
+#~ msgid "Mag&ic output:"
+#~ msgstr "Hasilkan keluaran berjela"
+
+#, fuzzy
+#~ msgid "Do &not descend:"
+#~ msgstr "_Jangan Format"
+
+#, fuzzy
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "%1 x² + %2 y² + %3 xy + %4 x + %5 y + %6 = 0"
+
+#, fuzzy
+#~ msgid "Ms&dfs root"
+#~ msgstr "Tetapkan Katalaluan Root"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "Sembunyi _Bantuan"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Pengguna"
+
+#, fuzzy
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Pengguna dan Kumpulan"
+
+#, fuzzy
+#~ msgid "Spec&ified Users"
+#~ msgstr "Pengguna dan Kumpulan"
+
+#, fuzzy
+#~ msgid "Access Rights"
+#~ msgstr "Hak tidak mencukupi."
+
+#, fuzzy
+#~ msgid "A&dd User..."
+#~ msgstr "Edit Pengguna"
+
+#, fuzzy
+#~ msgid "Add &Group..."
+#~ msgstr "Tambah _Kumpulan"
+
+#, fuzzy
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Padam giliran dipilih"
+
+#, fuzzy
+#~ msgid "Forc&e user:"
+#~ msgstr "Edit Pengguna"
+
+#, fuzzy
+#~ msgid "Fo&rce group:"
+#~ msgstr "Kumpulan_kerja SMB:"
+
+#, fuzzy
+#~ msgid "Access Modifiers"
+#~ msgstr "tiada kebenaran"
+
+#, fuzzy
+#~ msgid "Access Permissions"
+#~ msgstr "Kebenaran Asas:"
+
+#~ msgid "Read"
+#~ msgstr "Baca"
+
+#~ msgid "Write"
+#~ msgstr "Tulis"
+
+#, fuzzy
+#~ msgid "Sticky"
+#~ msgstr "Nota Lekat"
+
+#, fuzzy
+#~ msgid "Set GID"
+#~ msgstr "Gid berbeza"
+
+#, fuzzy
+#~ msgid "Set UID"
+#~ msgstr "Uid berbeza"
+
+#, fuzzy
+#~ msgid "Special"
+#~ msgstr "Fail Istimewa Peranti"
+
+#, fuzzy
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "TCP_NODELAY"
+#~ msgstr "Konfigurasikan TCP/IP"
+
+#, fuzzy
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "Tugasan setakat ini:"
+
+#, fuzzy
+#~ msgid "User Settings"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "&Valid users:"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "&Admin users:"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "&Invalid users:"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "&Write list:"
+#~ msgstr "Senarai Dibenarkan"
+
+#, fuzzy
+#~ msgid "&Read list:"
+#~ msgstr "Senarai Dibenarkan"
+
+#, fuzzy
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Hos dibenarkan"
+
+#, fuzzy
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Tambah hos dibenarkan - %s"
+
+#, fuzzy
+#~ msgid "&Add Host..."
+#~ msgstr "Tambah hos"
+
+#, fuzzy
+#~ msgid "Mo&dify Host..."
+#~ msgstr "%s %s pemasangan pada hos %s"
+
+#, fuzzy
+#~ msgid "&Remove Host"
+#~ msgstr "Buang hos:"
+
+#, fuzzy
+#~ msgid "Name/Address"
+#~ msgstr "Alamat _IP"
+
+#, fuzzy
+#~ msgid "Parameters"
+#~ msgstr "Parameter"
+
+#, fuzzy
+#~ msgid "Host Properties"
+#~ msgstr "Ciri-ciri Hos Maya"
+
+#, fuzzy
+#~ msgid "&Name/address:"
+#~ msgstr "Alamat _IP"
+
+#, fuzzy
+#~ msgid "&Public access"
+#~ msgstr "tiada kebenaran"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "&Writable"
+#~ msgstr "_Boleh Tulis"
+
+#, fuzzy
+#~ msgid "&Sync"
+#~ msgstr "Sync Me_negak:"
+
+#, fuzzy
+#~ msgid "No w&delay"
+#~ msgstr "Lewat: (ms)"
+
+#, fuzzy
+#~ msgid "No &hide"
+#~ msgstr "Sembunyi _Bantuan"
+
+#, fuzzy
+#~ msgid "No su&btree check"
+#~ msgstr "Tiada lagi peranti untuk diperiksa"
+
+#, fuzzy
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Benarkan kuncian fai_l kurang selamat"
+
+#, fuzzy
+#~ msgid "User Mapping"
+#~ msgstr "Pemetaan Linear"
+
+#, fuzzy
+#~ msgid "All s&quash"
+#~ msgstr "Semua Pakej"
+
+#, fuzzy
+#~ msgid "No &root squash"
+#~ msgstr "Tiada Partisyen Punca"
+
+#, fuzzy
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Uid berbeza"
+
+#, fuzzy
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Gid berbeza"
+
+#, fuzzy
+#~ msgid "Folder:"
+#~ msgstr "Tambah _direktori"
+
+#, fuzzy
+#~ msgid "NFS Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Samba Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Opsyen Saiz Tambahan"
+
+#, fuzzy
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Benarkan Samba untuk berkongsi direktori rumah pengguna"
+
+#, fuzzy
+#~ msgid "Users of '%1' Group"
+#~ msgstr "_Pengguna Kumpulan"
+
+#, fuzzy
+#~ msgid "Remove User"
+#~ msgstr "Edit Pengguna"
+
+#~ msgid "Add User"
+#~ msgstr "Tambah Pengguna"
+
+#, fuzzy
+#~ msgid "Change Group..."
+#~ msgstr "gagal menukar kumpulan %s ke %s\n"
+
+#, fuzzy
+#~ msgid "Si&mple sharing"
+#~ msgstr "Perkongsian sambungan Internet"
+
+#, fuzzy
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Tetap_an Lanjutan"
+
+#, fuzzy
+#~ msgid "Allo&wed Users"
+#~ msgstr "Pengguna dan Kumpulan"
+
+#, fuzzy
+#~ msgid "Shared Folders"
+#~ msgstr "Keadaan Perkongsian"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#, fuzzy
+#~ msgid "Specify Location"
+#~ msgstr "Lokasi Baru"
+
+#, fuzzy
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Mengulangmuat fail smb.conf: "
+
+#, fuzzy
+#~ msgid "Could Not Read File"
+#~ msgstr "Tidak dapat membaca fail %s."
+
+#, fuzzy
+#~ msgid "Error while opening file"
+#~ msgstr "Ralat membuka fail kickstart %s: %s"
+
+#, fuzzy
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Menggabung Domain Winbind"
+
+#, fuzzy
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "Isi ulang katalaluan utk %s@%s:"
+
+#, fuzzy
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Sila masukkan katalaluan bagi pengguna ini."
+
+#, fuzzy
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Gagal untuk menetapkan katalaluan bagi pengguna %s: %s\n"
+
+#, fuzzy
+#~ msgid "Unnamed"
+#~ msgstr "Buku Tanpa Nama"
+
+#, fuzzy
+#~ msgid "&Hide"
+#~ msgstr "Sembunyi _Bantuan"
+
+#, fuzzy
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Pindah fail dengan FTP"
+
+#, fuzzy
+#~ msgid "Keep Hidden"
+#~ msgstr "Kekal Kebenaran"
+
+#, fuzzy
+#~ msgid "Wildcarded String"
+#~ msgstr "Rentetan petikan"
+
+#, fuzzy
+#~ msgid "Keep Selected"
+#~ msgstr "<b>Peranti Dipilih</b>"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "&Default"
+
+#~ msgid "Admin"
+#~ msgstr "Pentadbir"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "Mencetak"
+
+#, fuzzy
+#~ msgid "Host Already Exists"
+#~ msgstr "Profil \"%s\" telah wujud!"
+
+#, fuzzy
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Namahos atau Alamat IP/Subnet:"
+
+#, fuzzy
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Profil \"%s\" telah wujud!"
+
+#, fuzzy
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Membaca fail konfigurasi sistem %s..."
+
+#, fuzzy
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Membaca fail konfigurasi sistem %s..."
+
+#, fuzzy
+#~ msgid "Please enter a valid path."
+#~ msgstr "Sila masukkan alamat yang betul"
+
+#, fuzzy
+#~ msgid "Only folders can be shared."
+#~ msgstr "hanya boleh dilaksanakan sebagai root"
+
+#, fuzzy
+#~ msgid "The folder is already shared."
+#~ msgstr "autorun sedang berjalan!\n"
+
+#, fuzzy
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Anda harus punya hak untuk membuat direktori bersama"
+
+#, fuzzy
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Konfigurasi Perkongsian Bersama Fail"
+
+#, fuzzy
+#~ msgid "Could not save settings."
+#~ msgstr "Simpan Tetapan bila keluar"
+
+#, fuzzy
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Fail tidak dapat dibuka untuk ditulis: %s"
+
+#, fuzzy
+#~ msgid "Saving Failed"
+#~ msgstr "Pelekapan gagal"
+
+#, fuzzy
+#~ msgid "Share Folder"
+#~ msgstr "Tambah _direktori"
+
+#, fuzzy
+#~ msgid "Allowed Users"
+#~ msgstr "Pengg_una Samba..."
+
+#, fuzzy
+#~ msgid "Select User"
+#~ msgstr "Edit Pengguna"
+
+#, fuzzy
+#~ msgid "Select a user:"
+#~ msgstr "Edit Pengguna"
+
+#, fuzzy
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Anda tidak boleh membuang pengguna '%s' dari kumpulan utamanya."
+
+#, fuzzy
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Pilih alatan yang anda hendak guna"
+
+#, fuzzy
+#~ msgid "New file share group:"
+#~ msgstr ""
+#~ "Cipta Kumpulan Volum \n"
+#~ "baru"
+
+#, fuzzy
+#~ msgid "Choose Group..."
+#~ msgstr "Pilih kumpulan"
+
+#, fuzzy
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Adakah anda pasti untuk memadam kumpulan %s\n"
+
+#, fuzzy
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Gagal mencipta kumpulan: %s\n"
+
+#, fuzzy
+#~ msgid "Please choose a valid group."
+#~ msgstr "Sila masukkan nama kumpulan."
+
+#, fuzzy
+#~ msgid "Do Not Create"
+#~ msgstr "_Jangan Format"
+
+#, fuzzy
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Gagal mencipta kumpulan: %s\n"
+
+#, fuzzy
+#~ msgid "Printer Settings"
+#~ msgstr "Tetapan Lain-lain"
+
+#, fuzzy
+#~ msgid "&Queue:"
+#~ msgstr "Giliran"
+
+#, fuzzy
+#~ msgid "&Name:"
+#~ msgstr " Nama   : "
+
+#, fuzzy
+#~ msgid "Main Properties"
+#~ msgstr "Ciri perkongsian - %s"
+
+#, fuzzy
+#~ msgid "&Printing"
+#~ msgstr "Mencetak"
+
+#, fuzzy
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Edit Pencetak Lokal"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#, fuzzy
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Laksana tugas terjadual"
+
+#, fuzzy
+#~ msgid "Use c&lient driver"
+#~ msgstr "Guna cekera jurupacu?"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "Tetap sebagai de_fault"
+
+#, fuzzy
+#~ msgid "Hosts a&llow:"
+#~ msgstr "Hos Maya"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "Pen_tadbir Pelayan:"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "Pe_ngawal Domain Winbind"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "Mengulangmuat peta $command"
+
+#, fuzzy
+#~ msgid "lp&resume:"
+#~ msgstr "Benarkan sambungan FTP:"
+
+#, fuzzy
+#~ msgid "root pr&eexec:"
+#~ msgstr "Tetapkan Katalaluan Root"
+
+#, fuzzy
+#~ msgid "root postexec:"
+#~ msgstr "_Katalaluan root: "
+
+#, fuzzy
+#~ msgid "M&in print space:"
+#~ msgstr "Ruang tidak mencukupi"
+
+#, fuzzy
+#~ msgid "&Logging"
+#~ msgstr "Menglog"
+
+#, fuzzy
+#~ msgid "Not share&d"
+#~ msgstr "Nama Perkongsian"
+
+#, fuzzy
+#~ msgid "&Shared"
+#~ msgstr "Dikongsi"
+
+#, fuzzy
+#~ msgid "Bas&e Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Name of the share"
+#~ msgstr "Nama Perkongsian"
+
+#, fuzzy
+#~ msgid "Security Options"
+#~ msgstr "Opsyen RAID"
+
+#, fuzzy
+#~ msgid "Hosts den&y:"
+#~ msgstr "Hos Maya"
+
+#, fuzzy
+#~ msgid "&Hosts allow:"
+#~ msgstr "Benarkan hos dari:"
+
+#, fuzzy
+#~ msgid "Guest &account:"
+#~ msgstr "_Akaun Tetamu:"
+
+#, fuzzy
+#~ msgid "G&uests allowed"
+#~ msgstr "Hos dibenarkan"
+
+#, fuzzy
+#~ msgid "More Opt&ions"
+#~ msgstr "Lebih Cekera Jurupacu?"
+
+#~ msgid "KB"
+#~ msgstr "KB"

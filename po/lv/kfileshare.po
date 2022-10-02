@@ -1,0 +1,3426 @@
+# translation of kfileshare.po to Lavtian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2008.
+# Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2009-05-27 20:51+0300\n"
+"Last-Translator: Viesturs Zariņš <viesturs.zarins@mii.lu.lv>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Atļaut"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Tikai &lasīt"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Atļaujas"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "OS/2 stila paplašināto atribūtu atbalsts"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Rakstāms"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "OS/2 stila paplašināto atribūtu atbalsts"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Izmest skriptus"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Atļaujas"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Atļaujas"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Īpašnieks"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Īpašnieks"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grupa"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Atļaujas"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Ceļš"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Atļaujas"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Atļaujas"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "&Bez pieejas"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Atļaujas"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Ko&pīgot šo mapi lokālajā tīklā"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nosaukums:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Atļaut &viesu pieteikšanos"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Tikai lasāms"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "&Bez pieejas"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Parole"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Parole"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Bez paroles"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Parole"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Atļaujas"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Atcelt"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Kopīgot var tikai lokālās mapes."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Sa&mba lietotāji"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Mapju kopīgošana ir izslēgta."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Mape neeksistē."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Šis ir kopīgojuma nosaukums"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Kopīgojums"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Izveidot"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Izveidot"
+
+#~ msgid "&Share"
+#~ msgstr "&Kopīgot"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Kopīgojums ar nosaukumu <strong>%1</strong> jau eksistē. <br /> "
+#~ "Izvēlieties citu nosaukumu.</qt>"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Šajā datorā nav instalēts Samba serveris"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Kopīgot ar S&amba (Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "Izvēlēties lietotājus"
+
+#~ msgid "Select &Users"
+#~ msgstr "Izvēlēties &lietotājus"
+
+#~ msgid "Name"
+#~ msgstr "Nosaukums"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "&Piekļuve"
+
+#~ msgid "&Default"
+#~ msgstr "&Noklusējuma"
+
+#~ msgid "&Read access"
+#~ msgstr "&Lasīšanas pieeja"
+
+#~ msgid "&Write access"
+#~ msgstr "&Rakstīšanas pieeja"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Administratora pieeja"
+
+#~ msgid "&OK"
+#~ msgstr "&Labi"
+
+#~ msgid "Join Domain"
+#~ msgstr "Pievienoties domēnam"
+
+#~ msgid "&Verify:"
+#~ msgstr "Pā&rbaudīt:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Parole:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Lietotājvārds:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domēna &kontrolieris:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domēns:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Izvēlēties grupas"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Izvēlē&ties grupas"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Grupas &veids"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX grupa"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S grupa"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNIX un NIS g&rupa"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Šeit jūs varat rediģēt Samba lietotājus, kas glabājas smbpasswd failā.\n"
+#~ "<p>\n"
+#~ "Katram Samba lietotājam ir piesaistīts viens UNIX lietotājs.\n"
+#~ "Labajā pusē atrodas visi UNIX lietotāji, kas glabājas passwd failā un nav "
+#~ "konfigurēti kā Samba lietotāji.\n"
+#~ "Kreisajā pusē atrodas Samba lietotāji.\n"
+#~ "<p>\n"
+#~ "Lai pievienotu jaunu Samba lietotāju, vienkārši nospiediet pogu <em>&lt; "
+#~ "Pievienot</em>.\n"
+#~ "Tas iezīmētie UNIX lietotāji kļūs par Samba lietotājiem un tiks izņemti "
+#~ "no UNIX lietotāju saraksta (bet tie joprojām paliks arī UNIX lietotāji).\n"
+#~ "<p>\n"
+#~ "Lai aizvāktu Samba lietotājus, nospiediet pogu <em>&gt; Izņemt</em>.\n"
+#~ "Tad iezīmētie Samba lietotāji tiks izņemti no smbpasswd faila\n"
+#~ "un parādīsies labajā pusē kā UNIX lietotāji, kas nav Samba lietotāji.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Pamata iestatījumi"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba konfigurācijas fails:"
+
+#~ msgid "&Load"
+#~ msgstr "&Ielādēt"
+
+#~ msgid "Server Identification"
+#~ msgstr "Servera identifikācija"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Darba &grupa:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Ievadiet jūsu darba grupas/domēna nosaukumu."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Servera &virkne:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS nosaukums:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Drošības &līmenis"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Lietotājs"
+
+#~ msgid "Server"
+#~ msgstr "Serveris"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domē&ns"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Lietojiet <i>kopīgojuma</i> drošība līmeni, ja jums ir mājas tīkls vai "
+#~ "neliels biroja tīkls.<br> Tas ļauj visiem nolasīt kopīgojumu nosaukumus, "
+#~ "neprasot lietotājvārdu un paroli."
+
+#~ msgid "Further Options"
+#~ msgstr "Citi iestatījumi"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Paroļu servera adrese/nosaukums:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&ms:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Viesu k&onts:"
+
+#~ msgid "Help"
+#~ msgstr "Palīdzība"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Detalizētu palīdzību par visām iespējām var atrast:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Kopīgojumi"
+
+#~ msgid "Comment"
+#~ msgstr "Komentārs"
+
+#~ msgid "Properties"
+#~ msgstr "Īpašības"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Rediģēt &noklusējuma..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Pievienot &jaunu kopīgojumu..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Rediģēt kopīgojumu..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Aizvākt kopīgojumu"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Prin&teri"
+
+#~ msgid "Printer"
+#~ msgstr "Printeris"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Rediģēt &noklusējuma"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Pievienot j&aunu printeri"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Rediģēt pri&nteri"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Ai&zvākt printeri"
+
+#~ msgid "&Users"
+#~ msgstr "&Lietotāji"
+
+#~ msgid "Disabled"
+#~ msgstr "Atslēgts"
+
+#~ msgid "Add"
+#~ msgstr "Pievienot"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Izņemt"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X lietotāji"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Mainīt par&oli..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Pievienot domēnam"
+
+#~ msgid "Advan&ced"
+#~ msgstr "&Paplašināti"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Šeit jūs varat mainīt SAMBA servera paplašinātos iestatījumus.\n"
+#~ "Mainiet kautko tikai, ja zināt ko darāt."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Paplašinātā izmete"
+
+#~ msgid "Security"
+#~ msgstr "Drošība"
+
+#~ msgid "&General"
+#~ msgstr "&Pamata"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Ievērot PAM ierobežojumus"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM paroles maiņa"
+
+#~ msgid "Other Switches"
+#~ msgstr "Citi slēdži"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "A&tļaut uzticamos domēnus"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoiķa servera drošība"
+
+#~ msgid "General"
+#~ msgstr "Pamata"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Autorizācijas metodes:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Saknes &mape:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&Saskarnes:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Kartēt uz viesi:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Lietot tikai šīs saskarnes"
+
+#~ msgid "Never"
+#~ msgstr "Nekad"
+
+#~ msgid "Bad User"
+#~ msgstr "Nederīgs lietotājs"
+
+#~ msgid "Bad Password"
+#~ msgstr "Nederīga parole"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmiskā rid bāze:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privātā mape:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Pa&role"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba paroles"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Ši&frēt paroles"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Smb paroļu fails:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb &aizmugure"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Passwd tērzēšana:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Passwd tērzēšanas atkļūdošana"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Passwd tērzēšanas noildze:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Nu&ll paroles"
+
+#~ msgid "Password level:"
+#~ msgstr "Paroles līmenis:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Minimālais paroles garums:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Datora paroles noildze:"
+
+#~ msgid "Migration"
+#~ msgstr "Migrācija"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Atjaunināt ši&frētās"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX paroles"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Passwd programma:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNI&X paroles sinhronizācija"
+
+#~ msgid "Userna&me"
+#~ msgstr "Lietotāj&vārds"
+
+#~ msgid "User&name map:"
+#~ msgstr "Lietotā&jvārdu karte:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Leitotājvārdu &līmenis:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Slēpt lokālos lietotājus"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Aizliegt a&nonīmos"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Lietot rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Autentifi&cēšana"
+
+#~ msgid "Client"
+#~ msgstr "Klients"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "K&lienta parakstīšana:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Klienta atklāta te&ksta autentificēšana"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Klienta lanman autentificēšana"
+
+#~ msgid "Auto"
+#~ msgstr "Automātiski"
+
+#~ msgid "Mandatory"
+#~ msgstr "Obligāti"
+
+#~ msgid "Yes"
+#~ msgstr "Jā"
+
+#~ msgid "No"
+#~ msgstr "Nē"
+
+#~ msgid "Client channel:"
+#~ msgstr "Klienta kanāls:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Klients lieto spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Klienta  NTLMv&2 autentificēšana"
+
+#~ msgid "Server signing:"
+#~ msgstr "Servera parakstīšana:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman autentificēšana"
+
+#~ msgid "Server channel:"
+#~ msgstr "Servera kanāls:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Lietot sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM autentificēšana"
+
+#~ msgid "Logging"
+#~ msgstr "Žurnalēšana"
+
+#~ msgid "L&og file:"
+#~ msgstr "Ž&urnāla fails:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Ma&ksimālais žurnāla izmērs:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Žurnalēšanas &līmenis:"
+
+#~ msgid "S&witches"
+#~ msgstr "S&lēdži"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&Tikai syslog"
+
+#~ msgid "Status"
+#~ msgstr "Statuss"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Laika &zīmogs"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosekundes"
+
+#~ msgid "Debug pid"
+#~ msgstr "Pid atkļūdošana"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "&Uid atkļūdošana"
+
+#~ msgid "Tuning"
+#~ msgstr "Noskaņošana"
+
+#~ msgid "Modules"
+#~ msgstr "Moduļi"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Iepriekš ie&lādēt moduļus:"
+
+#~ msgid "Switches"
+#~ msgstr "Slēdži"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd kešs"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Lietot &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Kerneļa izmaiņu  &paziņotājs"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Dat&ora nosaukumu atrise"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Lasīt ra&w"
+
+#~ msgid "Write raw"
+#~ msgstr "Rakstīt raw"
+
+#~ msgid "Times"
+#~ msgstr "Reizes"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Izmaiņu paziņošanas noildze:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Turēt dzīvu:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Nāves laiks:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q keša laiks:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "&Nosaukumu keša noildze:"
+
+#~ msgid "Sizes"
+#~ msgstr "Izmēri"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Maks. diska izmērs:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Lasīšanas iz&mērs:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Stat keša izmērs:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Ma&ks. xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Skaitļi"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Maks. smbd procesi:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Maks. atvērti faili:"
+
+#~ msgid "Printing"
+#~ msgstr "Druka"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Drukas &darbi kopā:"
+
+#~ msgid "Drivers"
+#~ msgstr "Draiveri"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 draiveru karte:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap nosauku&ms:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Pri&ntera draiveru fails: "
+
+#~ msgid "Commands"
+#~ msgstr "Komandas"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Enumports komanda:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Addprinter komanda:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Deleteprinter komanda:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Ielādēt &printerus"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Rādīt printera pievienošanas ve&dni"
+
+#~ msgid "Domain"
+#~ msgstr "Domēns"
+
+#~ msgid "L&ocal master"
+#~ msgstr "L&okālais masters"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domē&na masters"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domēna pie&teikšanās"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Vēlamais &masters"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS &līmenis:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domēna administrācijas grupa:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domēna viesa grupa:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Atslēgt &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Darboties kā WI&NS serverim"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Lietot c&itu WINS serveri"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "WINS servera i&estatījumi"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS starpniekserve&ris"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS āķ&is:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Maks. WINS tt&l:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Min. WINS ttl:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS servera IP vai DNS nosaukums"
+
+#~ msgid "General Options"
+#~ msgstr "Pamata opcijas"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS partneri:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS starpniekser&veris"
+
+#~ msgid "Filenames"
+#~ msgstr "Failu nosaukumi"
+
+#~ msgid "Ge&neral"
+#~ msgstr "&Pamata"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Izņemt p&unktu"
+
+#~ msgid "Specia&l"
+#~ msgstr "Speciā&ls"
+
+#~ msgid "Stat cache"
+#~ msgstr "Stat kešs"
+
+#~ msgid "Locking"
+#~ msgstr "Slēgšana"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Lietot ko&dola oplocks"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Ma&pes"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Slē&gumu mape:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "Pi&d mape:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Ļoti speciāli"
+
+#~ msgid "milliseconds"
+#~ msgstr "milisekundes"
+
+#~ msgid "Charset"
+#~ msgstr "Rakstzīmju kopa"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS rakstzīmes:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X rakstzīmes:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Attēloša&nas rakstzīmes:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nikods"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Rakstzīmju kopa:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "&Derīgas rakstzīmes:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Kodu lapu mape:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kodēša&nas sistēma:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Klienta koda lapa:"
+
+#~ msgid "Logon"
+#~ msgstr "Pieteikšanās"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Pielikt skriptus"
+
+#~ msgid "Add user script:"
+#~ msgstr "Pielikt lietotāja skriptu:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Pielikt lietotāja uz grupu skriptu:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Pielikt gr&upas skriptu:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Pielikt datora skriptu:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Izmest grupas skriptu:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Izmest lietotāja skriptu:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Izmest lietotāja no grupas skriptu:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Primārais grupas skripts"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Iestatīt primā&ro grupas skriptu:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Atslēgšanās"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Atslēgša&nās skripts:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Avārijas atslēgšanās skripts:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Pieslēgša&nās ceļš:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Pieslēgšanās &mājas:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "&Pieslēgšanās disks:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Pieslē&gšanās skripts:"
+
+#~ msgid "Socket"
+#~ msgstr "Ligzda"
+
+#~ msgid "Socket address:"
+#~ msgstr "Ligzdas adrese:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Ligzdas iestatījumi"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Ieslēdz un izslēdz visu SSL režīmu"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Šis ieslēdz un izslēdz visu SSL režīmu. Ja iestatīts uz nē, Samba ar SSL "
+#~ "strādā tieši tāpat kā Samba bez SSL. Ja iestatīts uz jā, tas vai tiks "
+#~ "pieprasīts ssl atkarīgs no vērtībām iekš ssl datori un datori bez ssl.\n"
+#~ "\n"
+#~ "Šis ir pieejams tikai ja jūsu sistēmā ir pieejamas SSL bibliotējas un "
+#~ "Samba ir kompilēta ar --with-ssl opciju."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Ies&lēgt SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL &datori:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL entropi&jas baiti:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL šifri:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2vai3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL sa&vietojamība"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL entropijas fails:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL egd ligzda:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL versija:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL klienta atslēga:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL klienta sertifikāts;"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL servera ats&lēga:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokols"
+
+#~ msgid "Ti&me server"
+#~ msgstr "La&ika serveris"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX paplašinājumi"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokola versijas"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "I&zziņot kā:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT darbstacija"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Izziņot versiju:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokols:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Maks. protokols:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Min. protokols:"
+
+#~ msgid "Limits"
+#~ msgstr "Limiti"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&ks. mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Maks. tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Klausās SMB portus"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB porti:"
+
+#~ msgid "Browsing"
+#~ msgstr "Pārlūkošana"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM i&ntervāls:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M paziņošana:"
+
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Attālinātas pārlūkošanas s&inhr:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Pār&lūkošanas saraksts"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Uzlabota pārlūkoša&na"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Iepriekš ielā&dēt:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Sagataves &mājas mape:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Sagataves č&aula:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind atdalītājs:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Sagataves primārā grupa:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind keša lai&ks:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Acl saderī&ba:"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind izmanto knoklusēto domēnu"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind ieslēgt lokālos kontus"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind tikai uzticami domēni"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind ligzdotas grupas"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Ats&lēgt netbios"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Nosauku&mu atrises kārtība:"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP sufik&ss:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP datora sifikss:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP lietotāja sufikss:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP &grupas sufikss:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap sufikss:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP filtrs:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap aizmu&gure:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Izslēgts"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Ieslēgts"
+
+#~ msgid "Only"
+#~ msgstr "Tikai"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Kopīgojuma pievienošanas k&omanda:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Kopīgojuma mainīšanas komanda:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Kopīgojuma &izmešanas komanda:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Ziņoju&ma komanda:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "&Kvotas iestatīšanas komanta:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Kvotas nolasīšanas komanda:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Pa&nikas darbība:"
+
+#~ msgid "Misc"
+#~ msgstr "Dažādi"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Dažādi"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Slēpt &lokālos lietotājus:"
+
+#~ msgid "Default service:"
+#~ msgstr "Noklusētais serviss:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Laika n&obīde:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Attāli&nātā paziņošana:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Avota vide:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS mājasmape"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Mājas mapju karte:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Utmp map&e:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp mape:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Atkļūdošana"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT statusa atbalsts"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB atbalsts"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT trubu atba&lsts"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Pievienot/Rediģēt kopīgojumu"
+
+#~ msgid "Pixmap"
+#~ msgstr "Pikseļkarte"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Mape"
+
+#~ msgid "&Path:"
+#~ msgstr "&Ceļš:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Kopīgot &visas mājas mapes"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Identifika&tors"
+
+#~ msgid "Na&me:"
+#~ msgstr "Nosauku&ms:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Kome&ntārs:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Galvenās ī&pašības"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Tikai &lasāms"
+
+#~ msgid "Pub&lic"
+#~ msgstr "P&ublisks"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Pār&lūkojams"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Pieejams"
+
+#~ msgid "&Security"
+#~ msgstr "&Drošība"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Vi&esi"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Šis ir lietotāja vārds, kurš tiks izmantots servisu izmantošanai kā "
+#~ "viesim. Šī lietotāja atļaujas būs pieejamas tiem, kas pieslēgsies pie "
+#~ "viesa servisa. Parasti šis lietotājs būs atrodams password failā, bet tam "
+#~ "nebūs login iespējas. Bieži vien lietotāja konts  \\\"ftp\\\" ir laba "
+#~ "izvēle šim parametram. Ja pakalpojumam ir norādīts cits lietotāja vārds, "
+#~ "tas nomainīs šo."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Viesa konts:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Ja šis ir ieslēgts, netiek pieprasīta parola lai pieslēgtos šim "
+#~ "kopīgojumam. Tiks izmantotas viesa konta atļaujas."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Atļaut pieslēgties tikai kā vie&sim"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Da&tori"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Pretējs atļautajiem datoriem - datoriem šajā sarakstā NEBŪS atļauts "
+#~ "piekļūt servisiem, ja vien servisam nav savs saraksts, kas aizstāj šo. Ja "
+#~ "saraksti konfliktē, atļaušanas saraksts ir galvenais."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Šis parametrs ir ar komatu, atstarpi vai tabu atdalīts datoru saraksts, "
+#~ "kuriem ir tiesības piekļūt servisam."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "&Atļautie datori:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Aizliegtie datori:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Si&mboliskās saites"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Atļaut sekot simbolis&kajām saitēm"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Atļaut sekot simboliskajām saitēm, kas &rāda uz vietām ārpus kopīgotās "
+#~ "mapes"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Pārbaudīt paroli pie šādiem lietotājiem, ja klients nav norādījis "
+#~ "lietotāju:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Atļaut tikai pieslēgumus, kur lietotājs ir šajā lietotājvā&rdu sarakstā"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Slēptie &faili"
+
+#~ msgid "Hidden"
+#~ msgstr "Slēpti"
+
+#~ msgid "Size"
+#~ msgstr "Izmērs"
+
+#~ msgid "Date"
+#~ msgstr "Datums"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Izvē&lētie faili"
+
+#~ msgid "Hi&de"
+#~ msgstr "Slē&pt"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Manuāla konfigurācija"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Slē&pti faili:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Slēpt ne&rakstāmus failus"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Slēpt s&peciālos failus"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Slēt failus, kas sā&kas ar punktu"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Slēpt ne&lasāmus failus"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Paplašināti"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maskas"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Mapes drošības maska:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Drošības &maska:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Ma&pes maska:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Izveidot mas&ku:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Mantot ac&l-us"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT ACL atbalsts"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Mantot atļaujas no vecāka mapes"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Atļaut tikai lasāmu failu dzēšanu"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS atribūtu kartēšana"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Kartēt DOS arhī&va karodziņu uz UNIX īpašnieks var izpildīt"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Kartēt DOS slēpts uz UNI&X jebkurš var izpildīt"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Kartēt DOS sistēmas karodziņu uz UNIX &grupa var izpildīt"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Saglabāt DOS atribūtus paplašinātajā atribūtā"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "&Strikta sinhronizācija"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "&Vienmēr sinhronizēt"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maksimālais vienlaicīgu savienojumu skaits:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Rakstīšanas keša izmē&rs:"
+
+#~ msgid "bytes"
+#~ msgstr "baiti"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Blo&ka izmērs:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Klienta puses kešoša&nas politika:"
+
+#~ msgid "manual"
+#~ msgstr "manuāls"
+
+#~ msgid "documents"
+#~ msgstr "dokumenti"
+
+#~ msgid "programs"
+#~ msgstr "programmas"
+
+#~ msgid "disable"
+#~ msgstr "atslēgt"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Nosaukumu pielāgošana"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Ieslēgt nosauku&mu pielāgošanu"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Pielā&got reģistru"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Sagla&bāt reģistru"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Īss, saglabājot r&eģistru"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Reģis&trjutīgs"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Nok&lusētais reģistrs:"
+
+#~ msgid "Lower"
+#~ msgstr "Mazie"
+
+#~ msgid "Upper"
+#~ msgstr "Lielie"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Pielāgojamais sim&bols:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Pielāgošanas &karte:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Pielāgošanas metode:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Citi iestatījumi"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Slēpt pu&nktu beigās"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS failu režīms"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS f&ilu nosaukumi"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS filu laika atrite"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Ieslēgt slē&gšanu"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Slēgša&na"
+
+#~ msgid "S&trict locking"
+#~ msgstr "S&trikta slēgšana"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "B&loķējoši slēgumi"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x slēgšana"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Kopīgošanas &režīmi"
+
+#~ msgid "Exec"
+#~ msgstr "Izpildīt"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Sējums: "
+
+#~ msgid "&Help"
+#~ msgstr "&Palīdzība"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Lietotāji"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Visi &nenorādītie lietotāji"
+
+#~ msgid "Reject"
+#~ msgstr "Noraidīt"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Norādīt&ie lietotāji"
+
+#~ msgid "Access Rights"
+#~ msgstr "Pieejas atļaujas"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Pievienot lietotāju..."
+
+#~ msgid "E&xpert"
+#~ msgstr "E&ksperts"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Pievienot &grupu..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&Izņemt iezīmetos"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Visus lietotājus uzspiest &uz šo lietotāju/grupu"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Uzspi&est lietotāju:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Uzspiest g&rupu:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Pieejas modifikatori"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Pieejas atļaujas"
+
+#~ msgid "Others"
+#~ msgstr "Citi"
+
+#~ msgid "Read"
+#~ msgstr "Lasīt"
+
+#~ msgid "Write"
+#~ msgstr "Rakstīt"
+
+#~ msgid "Sticky"
+#~ msgstr "Lipīgs"
+
+#~ msgid "Set GID"
+#~ msgstr "Piešķirt GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Piešķirt UID"
+
+#~ msgid "Special"
+#~ msgstr "Speciāls"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Lietotāju iestatījumi"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Derīgi lietotāji:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administratori:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&Nederīgi lietotāji:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Rakstīšanas saraksts:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Lasīšanas saraksts:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Atļautie &datori"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Atļauto datoru saraksts"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Šeit jūs varat redzēt datoru sarakstu, kam ir atļauja piekļūt mapei caur "
+#~ "NFS.\n"
+#~ "Pirmā kolonna rāda datora nosaukumu vai adresi, otrā rāda piekļuves "
+#~ "parametrus. Vērtība '*' apzīmē publisku piekļuvi."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Pievienot datoru..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&Rediģēt datoru..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Izņemt datoru"
+
+#~ msgid "Name/Address"
+#~ msgstr "Nosaukums/adrese"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametri"
+
+#~ msgid "Host Properties"
+#~ msgstr "Datora īpašības"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Nosaukums/adrese:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nosaukuma / Adreses lauks</b>\n"
+#~ "<p>\n"
+#~ "Šeit jūs varat ievadīt datora nosaukumu vai adresi.<br>\n"
+#~ "Datoru var norādīt varākos veidos:\n"
+#~ "<p>\n"
+#~ "<i>viens dators</i>\n"
+#~ "<p>\n"
+#~ " Šis ir visbiežāk izmantotais formāts. Jums varat norādīt vai nu "
+#~ "saīsinātu nosaukumu, ko saprot nosaukumu atrites programma, vai pilnu "
+#~ "domēna nosaukumu, vai IP adresi.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups var norādīt ar @group. Piederības pārbaudei tiks izmantota "
+#~ "tikai grupas datora daļa. Tukšās datora faļas vai tās, kas satur vienu "
+#~ "svīrtu (-) tiks ignorētas.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>aizstājējzīmes</i>\n"
+#~ "<p>\n"
+#~ " Datoru nosaukumi var saturēt aizstājējzīmes - * un ?. To var izmantot, "
+#~ "lai padarītu exports failu kompaktāku; piemēram, *.cs.foo.edu atbilst "
+#~ "visiem datoriem domērā cs.foo.edu. Ņemiet vērā, ka aizstājējzīmes netiek "
+#~ "savietotas ar punktiem domēna nosaukumā, un piemēra šablons nesatur tādus "
+#~ "domēnus kā a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP tīkli</i>\n"
+#~ "<p>\n"
+#~ " Jūs varat eksportēt mapes uz visiem datoriem konkrētā IP (apakš)tīklā. "
+#~ "To var izdarīt, norādot IP adreses un tīkla maskas pāri formā adrese/"
+#~ "maska. Tīkla masku var norādīt gan ar punktiem atdalītā decimālā formātā, "
+#~ "gan arī kā maskas garumu (piemēram, gan`/255.255.252.0', gan `/22' tīkla "
+#~ "maska apzīmē vienu un to pašu apakštīklu ar 10 pēdējiem adreses bitiem).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Publiska piekļuve"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Publiska piekļuve</b>\n"
+#~ "<p>\n"
+#~ "Ja ieslēdzat šo, datora adrese būs viena zvaigznīte, kas nozīmē publisku "
+#~ "piekļuvi.\n"
+#~ "Šis ir tas pats, kas ievadīt vienu zvaigznīti adreses laukā.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Iestatījumi"
+
+#~ msgid "&Writable"
+#~ msgstr "&Rakstāma"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Rakstāma</b>\n"
+#~ "<p>\n"
+#~ "Atļauj gan lasīšanu gan rakstīšanu šajā NFS sējumā.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Noklusētais ir neatļaut neko, kas izmaina failu sistēmu\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Nedroša"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nedroša</b>\n"
+#~ "<p>\n"
+#~ "Ja ieslēgta šī iespēja, netiek prasīts ka pieprasījumi nāk no IP porta "
+#~ "numura, kas mazāks par IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ja nezināt, atstājiet izslēgtu.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sinhronizēta"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Sinhronizēta</b>\n"
+#~ "<p>\n"
+#~ "Šī iespēja pieprasa lai visas rakstīšanas operācijas tiek saglabātas uz "
+#~ "diska pirms rakstīšanas pieprasījuma beigām. Tas nepieciešams pilnīgai "
+#~ "datu drošībai servera avārijas gadījumā, bet samazina ātrdarbību.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Noklusētais ir atļaut serverim rakstīt datus uz diska, kad tam ir laiks "
+#~ "to darīt.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Bez rakstīšanas &noildzes"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Bez rakstīšanas noildzes</b>\n"
+#~ "<p>\n"
+#~ "Šī iespēja strādā tikai ja ir ieslēgta sinhronizācija. NFS serveris "
+#~ "normāli raksta uz diska pēc nelielas pauzes, ja tam ir aizdomas, ka ir "
+#~ "vēl vai drīzumā varētu būt vēl rakstīšanas pieprasījumi. Tas ļauj "
+#~ "vairākus secīgus rakstīšanas pieprasījumus uz diska rasktīt vienā "
+#~ "paņēmienā, tādējādi uzlabojot ātrdarbību. Ja NFS serveris apstrādā "
+#~ "galvenokārt nelielus nesaistītus pieprasījumus, šī uzvedība varētu arī "
+#~ "samazināt ātrdarbību, tāpēc ir iespējams to atslēgt. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Bez &slēpšanas"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Bez slēpšanas</b>\n"
+#~ "<p>\n"
+#~ "Šī iespēja ir bāzēta uz tāda paša nosaukuma iespēju IRIX NFS sistēmā. "
+#~ "Parasti, ja serveris eksportē divas failu sistēmas, no kurām viena ir "
+#~ "montēta uz otras, tad klientam nāksies piemontēt abas failu sistēmas lai "
+#~ "piekļūtu tām. Ja tas piemontē tikai vecāku, tas redzēs tukšu mapi vieta "
+#~ "kur piemontēta otrā failu sistēma. Šī failu sistēma ir \"noslēpta\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ieslēdzot šo iespēju, piemontētās failu sistēmas netiek noslēptas klients "
+#~ "varēs strādāt ar abām failu sistēmām kā ar vienu mapju koku.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Bet daži NFS klienti nespēj labi sadarboties ar šādu situāciju, piemēram, "
+#~ "ir iespējams ka diviem failiem itkā vienā failu sistēmā ir vienādi inode "
+#~ "numuri.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Neslēpšanas iespēja šobrīd strādā tikai ar viena datora eksportiem. Tā "
+#~ "nestrādā ar netgroup, subnet, vai zvaigznītes eksportiem.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Šī iespēja var lieti noderēt dažās situācijās, bet to vajadzētu lietot "
+#~ "piesardzīgi, pārliecinoties ka klients spēj ar to korekti strādāt.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Bez &apakškoka pārbaudes"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Bez apakškoka pārbaudes</b>\n"
+#~ "<p>\n"
+#~ "Šī iespēja atslēdz apakškoka pārbaudi, tas izraisa nelielu drošības "
+#~ "samazinājumu, bet var dažos gadījumos var uzlabot noturību.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ja ir eksportēta failu sistēmas apakšmape, bet ne visa failu sistēma, tad "
+#~ "serverim katram NFS pieprasījumam ir jāpārbauda ne tikai vai šis fails "
+#~ "atrodas eksportētajā failu sistēmā (kas ir viegli), bet arī, ka tas "
+#~ "atrodas eksportētajā apakškokā (kas ir sarežģītāk). Šo pārbaudi sauc par "
+#~ "apakškoka pārbaudi.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Šīs pārbaudes veikšanai, serveris klientam nodotajos \"failu rokturos\" "
+#~ "iekļauj papildus informāciju par faila atrašanās vietu. Tas var izraisīt "
+#~ "problēmas piekļūstot failiem, kas tikuši pārdēvēti, kamēr klients tos tur "
+#~ "atvērtus (bet vairumā vienkāršo gadījumu viss joprojām strādās).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Apakškoka pārbaude tiek izmantota arī lai nodrošinātu, ka failiem mapēs "
+#~ "ar piekļuvi tikai root lietotājam var piekļūt tikai ja ir iestatīts "
+#~ "no_root_squash (skat. zemāk), pat ja pašam failam ir atļauta plašāka "
+#~ "piekļuve.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Vispārējs ieteikums mājas mapes failu sistēmām, kas parasti ir "
+#~ "eksportētas saknē un kurās bieži notiek failu pārdēvēšana - tās labāk "
+#~ "eksportēt ar atslēgtu apakškoka pārbaudi. Failu sistēmās, kas galvenokārt "
+#~ "tiek lietotas lasīšanas režīmā un kurās nenotiek daudz failu pārdēvēšanu "
+#~ "(piem. /usr vai /var) un kurās tiek eksportētas apakšmapes, labāk "
+#~ "eksportēt ar ieslēgtu apakškoka pārbaudi.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Nedroša s&lēgšana"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nedroša slēgšana</b>\n"
+#~ "<p>\n"
+#~ "Šī opcija norāda NFS serverim, lai tas nepieprasa slēgšanas pieprasījumu "
+#~ "autentificēšanu (t.i. pieprasījumiem, kas izmantojo NLM protokolu). "
+#~ "Parasti NFS serveris pieprasa lai slēgšanas pieprasījums satur lietotāja "
+#~ "akreditācijas datus, kam ir lasīšanas atļaujas slēdzamajam failam. Ar šo "
+#~ "opciju netiks veikta šīs atļaujas pārbaude.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Agrākas NFS klientu realizācijas slēgšanas pieprasījumos nesūtīja "
+#~ "lietotāja akreditācijas datus un pastāv daudzi mūsdienu NFS klienti, kas "
+#~ "ir balstīti uz šī vecajām realizācijām. Izmantojiet šo opciju, ja redzat "
+#~ "ka iespējams slēgt tikai visiem lasāmus failus.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Lietotāju atbilstība"
+
+#~ msgid "All s&quash"
+#~ msgstr "Apspiest &visus"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Apspiest visus</b>\n"
+#~ "<p>\n"
+#~ "Piekārto visiem uid un gid anonīmo lietotāju. Ētri NFS-eksportētām "
+#~ "publiskām FTP mapēm, ziņu mapēm, utt. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Neapspiest &root"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Neapspiest root</b>\n"
+#~ "<p>\n"
+#~ "Atslēdz root apspiešanu. Šī iespēja galvenokārt noder klientiem bez cietā "
+#~ "diska.\n"
+#~ "</p>\n"
+#~ "<i>root apspiešana</i>\n"
+#~ "<p>\n"
+#~ "Kartē pieprasījumus no uid/gid 0 uz anonīmā lietotāja uid/gid. Ņemiet "
+#~ "vērā ka tas neattiecas uz citiem uidiem, kas arī varētu būt sensitīvi, "
+#~ "piemēram, bin lietotājs.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonīmais &UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Naonīmais UID/GID</b> <p> Šie iestatījumi izstāda anonīmā konta uid un "
+#~ "gid. Šī opcija galvenokārt noder PC/NFS klientiem, kuriem varētu noderēt, "
+#~ "ka visi pieprasījumi nāk no viena lietotāja. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonīmais &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Mape:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Kopīgot ar &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS opcijas"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Pu&bliska"
+
+#~ msgid "W&ritable"
+#~ msgstr "&Rakstāma"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Vai&rāk NFS opciju"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba opcijas"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&ublisks"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Vai&rāk Samba opciju"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Atļaut visiem lietotājiem kopīgot mapes"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Tikai '%1' grupas lietotāji drīkst kopīgot mapes"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "'%1' grupas lietotāji"
+
+#~ msgid "Remove User"
+#~ msgstr "Noņemt lietotāju"
+
+#~ msgid "Add User"
+#~ msgstr "Pievienot lietotāju"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Grupas biedri var kopīgot mapes bez root paroles"
+
+#~ msgid "Change Group..."
+#~ msgstr "Mainīt grupu..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB un NFS serveri nav instalēti. Lai aktivizētu šo moduli, vispirms "
+#~ "instalējiet SMB un NFS serverus."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Ieslēgt failu &kopīgošanu lokālajā tīklā"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "&Vienkāršā kopīgošana"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Ieslēdz vienākršu kopīgošanu, kas ļauj lietotājiem, nezinot root paroli, "
+#~ "kopīgot mapes zem to HOME mapes."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "&Paplašinātā kopīgošana"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Ieslēdziet paplašināto kopīgošanu, lai ļautu lietotājiem kopīgot jebkuru "
+#~ "mapi, ja vien tiem ir rakstīšanas atļaujas nepieciešamajiem "
+#~ "konfigurācijas failiem, vai tie zina root paroli."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Izmantot &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Izmantot &Samba (Microsoft Windows)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "A&tļautie lietotāji"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Kopīgotās mapes"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Pievienot..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Mainīt..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Neizdevās atrast SAMBA konfigurācijas failu<strong>'smb.conf'</strong>;"
+#~ "</p>pārliecinieties ka SAMBA ir instalēta.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Norādīt atrašanās vietu"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba conf. fails\n"
+#~ "*|Visi faili"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Norādiet smb.conf atrašanās vietu"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Neizdevās nolasīt failu <i>%1</i>.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Neizdevās nolasīt failu"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Kļūda atverot failu"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Neizdevās pievienoties domēnam %1."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Lūdzu ievadiet paroli lietotājam <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr "<qt>Neizdevās pievienot  lietotāju <b>%1</b> Samba datubāzei.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Neizdevās izmest lietotāju %1 no Samba lietotāju datubāzes."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Lūdzu ievadiet lietotāja %1 paroli"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Neizdevās nomainīt lietotāja %1 paroli."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Samba konfigurācija</h1> šeit jūs varat konfigurēt jūsu SAMBA serveri."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Lietojiet, <i>kopīgojuma</i> drošības līmeni, ja jums ir personīgais "
+#~ "tīkls vai neliels biroja tīkls.<br /> Tas ļauj visiem redzēt visu "
+#~ "kopīgoto mapju un printeru sarakstu bez lietotāja/paroles pieprasīšanas."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Lietojiet <i>lietotāja</i> drošības līmeni, ja jums ir paliels tīkls un "
+#~ "jūs nevēlaties ka visi var nolasīt kopīgoto mapju un printeru sarakstu "
+#~ "bez pieteikšanās.<br /><br /> Lietojiet šo variantu arī ja vēlaties "
+#~ "darbināt Samba serveri kā <b>Primāro domēna kontrolieri</b> (PDC)."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Lietojiet <i>servera</i> drošības līmeni, ja jums ir liels tīkls un Samba "
+#~ "serveris lietotāju/paroļu pārbaudīšanai izmanto citu SMB serveri, "
+#~ "piemēram, NT datoru."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Lietojiet <i>domēna</i> drošības līmenu, ja jums ir liels tīks un Samba "
+#~ "serverim lietotāju/paroļu pārbaudīšanai jāizmanto Windows NT primārais "
+#~ "vai rezerves domēna kontrolieris."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Lietojiet <i>ADS</i> drošības līmeni, ja jums ir liels tīkls un Samba "
+#~ "serveris darbojas kā domēna sastāvdaļa ADS realmā."
+
+#~ msgid "Sorry"
+#~ msgstr "Atvainojiet"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Jūs ievadījāt divas atšķirīgas paroles. Lūdzu mēģiniet vēlreiz."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Jūsu Samba versija neatbalsta opciju <em>%1</em>"
+
+#~ msgid "Unnamed"
+#~ msgstr "Nenosaukts"
+
+#~ msgid "&Hide"
+#~ msgstr "&Slēpt"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Dažī no iezīmētajiem failiem ir paslēpti, jo tie sākas ar punktu; vai "
+#~ "vēlaties noņemt iezīmējumu no failiem, kas sākas ar punktu?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Faili, kas sākās ar punktu"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Noņemt slēptos"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Paturēt paslēptus"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Noņemt iezīmējumu atbilstošajiem"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Paturēt iezīmētos"
+
+#~ msgid "Default"
+#~ msgstr "Noklusētais"
+
+#~ msgid "Admin"
+#~ msgstr "Administrators"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs esat norādījis <b>publisku lasīšanas piekļuvi</b> šajai mapei, "
+#~ "bet viesa kontam <b>%1</b> nav nepieciešamo lasīšanas atļauju;<br />vai "
+#~ "tomēr vēlaties turpināt?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Brīdinājums"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs esat norādījis <b>publisku rakstīšanas piekļuvi</b> šajai mapei, "
+#~ "bet viesa kontam <b>%1</b> nav nepieciešamo rakstīšanas atļauju;<br />vai "
+#~ "tomēr vēlaties turpināt?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs esat norādījis <b>rakstīšanas piekļuvi</b> šajā mapē lietotājam "
+#~ "<b>%1</b>, bet šim lietotājam nav nepieciešamo rakstīšanas atļauju;<br /"
+#~ ">vai tomēr vēlaties turpināt?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs esat norādījis <b>lasīšanas piekļuvi</b> šajā mapē lietotājam <b>"
+#~ "%1</b>, bet šim lietotājam nav nepieciešamo lasīšanas atļauju;<br />vai "
+#~ "tomēr vēlaties turpināt?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Jau pastāv publisks ieraksts."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Dators jau pastāv"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Lūdzu ievadiet datora nosaukumu vai IP adresi."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Nav datora nosaukums/IP-adrese"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Dators '%1' jau pastāv."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Lasa Samba konfigurācijas failu..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Lasa NFS konfigurācijas failu..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Ievadiet derīgu ceļu."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Kopīgot var tikai mapes."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Mape jau ir kopīgota."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Administrators nav atļāvis kopīgošanu izmantojot NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Kļūda: neizdevās nolasīt NFS konfigurācijas failu."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Administrators nav atļāvis kopīgošanu izmantojot Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Kļūda: neizdevās nolasīt Samba konfigurācijas failu."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Jums ir jāievada Samba kopīgojuma nosaukums."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Jums jābūt autorizētam, lai kopīgotu mapes."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Konfigurēt mapju kopīgošanu..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Šajā datorā nav instalēts NFS"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Neizdevās saglabāt iestatījumus."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Neizdevās atvērt rakstīšanai failu '%1': %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Neizdevās saglabāt"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Mapju kopīgošana</h1><p> Šis modulis ļauj ieslēgt failu kopīgošanu, "
+#~ "izmantojot \"Tīkla Failu Sistēmu\" (NFS) vai SMB ar Konqueror. Otrais "
+#~ "ļauj jums kopīgot mapes ar  Windows(R) datoriem jūsu tīklā.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Kopīgot mapi"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Atļautie lietotāji"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Visi lietotāji jau ir grupā %1."
+
+#~ msgid "Select User"
+#~ msgstr "Izvēlēties lietotāju"
+
+#~ msgid "Select a user:"
+#~ msgstr "Izvēlieties lietotāju:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Neizdevās pievienot lietotāju '%1' grupai '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Neizdevās izņemt lietotāju '%1' no grupas '%2"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Jums jāizvēlas derīga grupa."
+
+#~ msgid "New file share group:"
+#~ msgstr "Jauna mapju kopīgošanas grupa:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Pievienot jaunajā grupā lietotājus no vecās grupas"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Izņemt lietotājus no vecās mapju kopīgošanas grupas"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Izdzēst veco mapju kopīgošanas grupu"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Tikai lietotāji, kas ir konkrētā krupā, drīkst kopīgot mapes"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Izvēlieties grupu..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Vai tiešām vēlaties dzēst visus lietotājus grupā '%1'?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Vai tiešām vēlaties dzēst grupu '%1'?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Neizdevās izdzēst grupu '%1'."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Lūdzu izvēlieties derīgu grupu."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Grupa '%1' nepastāv. Izveidot to?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Neizveidot"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Neizdevās izveidot grupu '%1'."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Printera iestatījumi"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Pr&interis"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&Ceļš:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Rinda:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Kopīgot &visus printerus"
+
+#~ msgid "I&dentifier"
+#~ msgstr "&Identifikators"
+
+#~ msgid "&Name:"
+#~ msgstr "&Nosaukums:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "&Komentārs:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Galvenās īpašības"
+
+#~ msgid "&Printing"
+#~ msgstr "&Druka"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Printera drai&veri:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Print&era draiveru atrašanās vieta:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "&Druka:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Maksimālais rādāmo drukas &uzdevumu skaits:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Ma&ksimālais drukas uzdevumu skaits:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "Izmantot k&lienta draiveri"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "No&klusētais devrežīms"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "A&tļautie datori:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "P&rintera administrators:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Ko&mandas"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Drukāšanas &komanda:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "lpq koma&nda:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "lprm koman&da:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "&lppause:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Dažādi"
+
+#~ msgid "p&reexec:"
+#~ msgstr "p&reexec:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "root pr&eexec:"
+
+#~ msgid "root postexec:"
+#~ msgstr "root postexec:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "poste&xec:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "Pielā&gošana"
+
+#~ msgid "M&in print space:"
+#~ msgstr "M&inimālais drukāšanas atstatums:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Reģistrēšana"
+
+#~ msgid "S&tatus"
+#~ msgstr "S&tatuss"
+
+#~ msgid "Not share&d"
+#~ msgstr "Nav kopīg&ots"
+
+#~ msgid "&Shared"
+#~ msgstr "&Kopīgots"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "&Pamata iestatījumi"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Šo teksta lauku parāda blakus kopīgojumam, kad klients aptaujā serveri, "
+#~ "vai nu tīkla apkaimē, vai caur tīkla skatu, kas parāda pieejamo "
+#~ "kopīgojumu sarakstu."
+
+#~ msgid "Name of the share"
+#~ msgstr "Kopīgojuma nosaukums"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Komen&tārs:"
+
+#~ msgid "Security Options"
+#~ msgstr "Drošības iestatījumi"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "Ai&zliegtie datori:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&Atļautie datori:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Viesu &konts:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Ja šis ir ieslēgts, kopīgojuma lietotāji nevar izveidot vai mainīt failus "
+#~ "šajā mapē."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "Atļauti &viesi"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Šis ir lietotājvārds, kas tiks izmantots, kad viesi piekļūst šim "
+#~ "kopīgojumam"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Šis nosaka vai kopīgojums ir redzams pieejamo kopīgojumu sarakstā un "
+#~ "pārlūkošanas sarakstā."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Šī rūts ļauj jums \\\"izslēgt\\\" servisu. Ja nav iezīmēta, tad VISI "
+#~ "mēģinājumi pieslēgties būs neveiksmīgi. Šīs neveiksmes tiks žurnalētas."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Vairāk &iestatījumu"

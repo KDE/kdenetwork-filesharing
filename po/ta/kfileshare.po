@@ -1,0 +1,2543 @@
+# Kishore G <kishore96@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-16 21:29+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.90\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "மறு"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "அனுமதி"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "தெரியாதது"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "இந்த அடைவு மட்டும்"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&படிக்க மட்டும்"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "காகித வகை:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "எழுதக்கூடிய"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "குறுநிரல்களை நீக்கு"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "சொந்தக்காரர்"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "சொந்தக்காரர்"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "குழு"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "அனுமதிகள்"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "பாதை"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "&அணுகல் இல்லை"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "உள்ளார்ந்த வலைப்பின்னலில் இந்த அடைவை பங்கிடு"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "பெயர்:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "விருந்தாளி நுழைவுகளை அனுமதி"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "படிக்க மட்டும்"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "&அணுகல் இல்லை"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "கடவுச்சொல்"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "கடவுச்சொல்"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "கடவுச்சொல் இல்லை"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "கடவுச்சொல்"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "அனுமதிகள்"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&மேம்பட்ட"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "உள்ளமைப்பு அடைவுகளை மட்டுமே பிரிக்கமுடியும்."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "சாம்பா பயனர்கள்"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "கோப்பை பங்கிட முடியவில்லை."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "அடைவு இல்லை."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "பங்கிட்டின் பெயர்"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "பங்கீடு"
+
+#, fuzzy
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "மூடியை உருவாக்கு:"
+
+#, fuzzy
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "மூடியை உருவாக்கு:"
+
+#~ msgid "&Share"
+#~ msgstr "&பங்கு"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>There is already a share with the name <strong>%1</strong>.<br> "
+#~| "Please choose another name.</qt>"
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>ஏற்கெனவே %1 என்ற பெயரில் ஒரு பங்கீடு<strong>இருக்கிறது</strong>.<br> வேறு "
+#~ "பெயரை தேர்ந்தெடுக்கவும்.</qt>"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "இந்த கணினியில் சாம்பா சேவகன் நிறுவப்படவில்லை"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "சாம்பாவுடன் பங்கிடு (மைக்ரோசாஃப்ட்(ஆர்)விண்டோஸ்(ஆர்))"
+
+#~ msgid "Select Users"
+#~ msgstr "பயனர்களை தேர்ந்தெடு"
+
+#~ msgid "Select &Users"
+#~ msgstr "பயனர்களை தேர்ந்தெடு"
+
+#~ msgid "Name"
+#~ msgstr "பெயர்"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "அணுகு"
+
+#~ msgid "&Default"
+#~ msgstr "&முன்னிருப்பு"
+
+#~ msgid "&Read access"
+#~ msgstr "&படிக்கும் அணுகல்"
+
+#~ msgid "&Write access"
+#~ msgstr "&எழுத்து அணுகல்"
+
+#~ msgid "&Admin access"
+#~ msgstr "&நிர்வாக அணுகல்"
+
+#~ msgid "Join Domain"
+#~ msgstr "டொமைனை சேரு"
+
+#~ msgid "&Verify:"
+#~ msgstr "&சரிப்பார்:"
+
+#~ msgid "&Password:"
+#~ msgstr "&கடவுச்சொல்:"
+
+#~ msgid "&Username:"
+#~ msgstr "&பயனர் பெயர்:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "டொமைன் கட்டுப்பாட்டாளர்:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&டொமைன்:"
+
+#~ msgid "Select Groups"
+#~ msgstr "குழுக்களை தேர்ந்தெடு"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "குழுக்களை தேர்ந்தெடு"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&குழுவின் வகை"
+
+#, fuzzy
+#~ msgid "&UNIX group"
+#~ msgstr "NIS குழு"
+
+#~ msgid "NI&S group"
+#~ msgstr "NIS குழு"
+
+#, fuzzy
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "யுனிக்ஸ் மற்றும் NIS குழு"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&அடிப்படை அமைப்புகள்"
+
+#~ msgid "Samba config file:"
+#~ msgstr "சாம்பா வடிவமைப்பு கோப்பு:"
+
+#~ msgid "&Load"
+#~ msgstr "&ஏற்று"
+
+#~ msgid "Server Identification"
+#~ msgstr "சேவகன் அடையாளம்"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "பணிக்குழு:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "உங்கள் பணிக்குழு/டொமைன்னின் பெயரை உள்ளிடு."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "சேவகன் சரம்:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS பெயர்:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "பாதுகாப்பு நிலை"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "பயனர்"
+
+#~ msgid "Server"
+#~ msgstr "சேவகன்"
+
+#~ msgid "Domai&n"
+#~ msgstr "டொமைன்"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid "Further Options"
+#~ msgstr "மேலும் விருப்பத்தேர்வுகள்"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "கடவுச்சொல் சேவகன் முகவரி/பெயர்:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&m:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "விருந்தாளி கணக்கு:"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "ஒவ்வொரு விருப்பத்தேர்வு பற்றிய விரிவான உதவிக்கு பார்க்கவும்:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&பங்கீடுகள்"
+
+#~ msgid "Comment"
+#~ msgstr "குறிப்பு"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "தொகுதி பண்புகள்"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "முன்னிருப்புகளை திருத்து.."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "புதிய பங்கை சேர்..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "பங்கை திருத்து..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "பங்கை நீக்கு"
+
+#~ msgid "Prin&ters"
+#~ msgstr "அச்சியந்திரங்கள்"
+
+#~ msgid "Printer"
+#~ msgstr "அச்சியந்திரம்"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "முன்னிருப்புகளை திருத்து"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "புதிய அச்சியந்திரத்தை சேர்"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "அச்சியந்திரத்தை திருத்து"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "அச்சியந்திரத்தை நீக்கு"
+
+#~ msgid "&Users"
+#~ msgstr "&பயனர்கள்"
+
+#~ msgid "Disabled"
+#~ msgstr "செயல் இல்லாத"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "சேர்..."
+
+#~ msgid "Rem&ove"
+#~ msgstr "நீக்கு"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "யுனிக்ஸ் பயனர்கள்"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "கடவுச்சொல்லை மாற்று..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&டொமைனை சேர்"
+
+#~ msgid "Advan&ced"
+#~ msgstr "மேம்பட்ட"
+
+#~ msgid "Advanced Dump"
+#~ msgstr "மேம்பட்ட அடைப்பு"
+
+#~ msgid "Security"
+#~ msgstr "பாதுகாப்பு"
+
+#~ msgid "&General"
+#~ msgstr "&பொதுவான"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "PAM வரையறைகளுக்கு கீழ்படி"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM கடவுச்சொல் மாற்று"
+
+#~ msgid "Other Switches"
+#~ msgstr "மற்ற மின்குழிழ்கள்"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "நம்பத்தகுந்த டொமைன்களை அனுமதி"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoid சேவகன் பாதுகாப்பு"
+
+#~ msgid "General"
+#~ msgstr "பொதுவான"
+
+#~ msgid "Auth methods:"
+#~ msgstr "ஆத் முறைகள்:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "மூல அடைவு:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "இடைமுகங்கள்:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "விருந்தாளிக்கு வரைப்படம்:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "இடைமுகங்களை மட்டும் மடி"
+
+#~ msgid "Never"
+#~ msgstr "எப்போதும்"
+
+#~ msgid "Bad User"
+#~ msgstr "தவறான பயனர்"
+
+#~ msgid "Bad Password"
+#~ msgstr "தவறான கடவுச்சொல்"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "சமமான விருந்தாளிகள்:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "ஆல்கரிதமான விடுவி அடிப்படை:"
+
+#~ msgid "Private dir:"
+#~ msgstr "தனிப்பட்ட அடைவு:"
+
+#~ msgid "Pass&word"
+#~ msgstr "கடவுச்சொல்"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "சாம்பா கடவுச்சொற்கள்"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "கடவுச்சொற்களை சங்கேதமாக்கு"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Smb கடவுச்சொல் கோப்பு:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb பின்னணி:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "கடவுச்சொல் அரட்டை:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "கடவுச்சொல் அரட்டை பிழைநீக்கி"
+
+#, fuzzy
+#~| msgid "Sec"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "நொடி"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "கடவுச்சொல் அரட்டை நேர முடிவு:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "கடவுச்சொற்கள் இல்லை"
+
+#~ msgid "Password level:"
+#~ msgstr "கடவுச்சொல் எல்லை:"
+
+#~ msgid "Min password length:"
+#~ msgstr "குறைந்தபட்ச கடவுச்சொல் நீளம்:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "இயந்திர கடவுச்சொல் நேர முடிவு:"
+
+#~ msgid "Migration"
+#~ msgstr "இடம்பெயர்தல்"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "சங்கேதமாக்கியதை புதுப்பி"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "யுனிக்ஸ் கடவுச்சொற்கள்"
+
+#~ msgid "Passwd program:"
+#~ msgstr "கடவுச்சொல் நிரல்:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "யுனிக்ஸ் கடவுச்சொல் ஒருங்கிணைப்பு"
+
+#~ msgid "Userna&me"
+#~ msgstr "பயனர் பெயர்"
+
+#~ msgid "User&name map:"
+#~ msgstr "பயனர் வரைப்படம்:"
+
+#~ msgid "Username &level:"
+#~ msgstr "பயனர் எல்லை:"
+
+#~ msgid "Hide local users"
+#~ msgstr "உள்ளார்ந்த பயனர்களை மறை"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "பெயரில்லாததை தடை செய்"
+
+#~ msgid "Use rhosts"
+#~ msgstr "rhostsஐ பயன்படுத்து"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "அணுகல்"
+
+#~ msgid "Client"
+#~ msgstr "உறுப்பினர்"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "உறுப்பினர் உள்நுழைதல்:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "உறுப்பினர் வெற்று உரை அணுகல்"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "உறுப்பினர் லான்மான் உரிமை"
+
+#~ msgid "Auto"
+#~ msgstr "தானாகவே"
+
+#~ msgid "Mandatory"
+#~ msgstr "அத்தியாவசியமான"
+
+#, fuzzy
+#~ msgid "Client channel:"
+#~ msgstr "உறுப்பினர் schannel:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "உறுப்பினர் பயன் spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "உறுப்பினர் NTLMv&2 உரிமை"
+
+#~ msgid "Server signing:"
+#~ msgstr "சேவகன் உள்நுழைதல்:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "லான்மான் உரிமை:"
+
+#, fuzzy
+#~ msgid "Server channel:"
+#~ msgstr "சேவகன் வழிமுறை:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "sp&nego ஐ பயன்படுத்து"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM உரிமை"
+
+#~ msgid "Logging"
+#~ msgstr "நுழைதல்"
+
+#~ msgid "L&og file:"
+#~ msgstr "பதிவு கோப்பு:"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "அதிகப்பட்ச பதிப்பு அளவு:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "அமைப்பு பதிவு:"
+
+#~ msgid "Log &level:"
+#~ msgstr "பதிவு எல்லை:"
+
+#~ msgid "S&witches"
+#~ msgstr "மின்குமிழ்கள்"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "அமைப்பு பதிவு மட்டும்"
+
+#~ msgid "Status"
+#~ msgstr "நிலை"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "நேரமுத்திரை"
+
+#~ msgid "microseconds"
+#~ msgstr "மைக்ரோ நொடிகள்"
+
+#~ msgid "Debug pid"
+#~ msgstr "பிட்டை பிழைநீக்கி"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "யுஐடியை பிழை நீக்கு"
+
+#~ msgid "Tuning"
+#~ msgstr "ஒன்றுசேர்த்தல்"
+
+#~ msgid "Modules"
+#~ msgstr "பகுதிகள்"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "பகுதிகளை முன் ஏற்று:"
+
+#~ msgid "Switches"
+#~ msgstr "மின்குமிழ்கள்"
+
+#~ msgid "Use &mmap"
+#~ msgstr "&mmap பயன்படுத்து"
+
+#~ msgid "Times"
+#~ msgstr "நேரங்கள்"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "கவனித்த நேரமுடிவை மாற்று:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&அப்படியே வைத்திரு"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "குறைந்த"
+
+#~ msgid "Deadtime:"
+#~ msgstr "முடிக்கவேண்டிய நேரம்:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q தற்காலிக நேரம்:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "&பெயர் தற்காலிக நேரமுடிவு:"
+
+#~ msgid "Sizes"
+#~ msgstr "அளவுகள்"
+
+#~ msgid "Max disk size:"
+#~ msgstr "அதிகப்பட்ச வட்டு அளவு:"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "அளவை படி:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "தற்காலிக நினைவின் அளவை குறிப்பிடு:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "அதிகப்பட்ச xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "எண்கள்"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "அதிகப்பட்ச smbd செயல்கள்:"
+
+#~ msgid "Max open files:"
+#~ msgstr "அதிகமாக திறக்கப்பட்ட கோப்புகள்"
+
+#~ msgid "Printing"
+#~ msgstr "அச்சிடுகிறது"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "மொத்த அச்சு பணிகள்:"
+
+#~ msgid "Drivers"
+#~ msgstr "இயக்கிகள்"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 இயக்கி வரைப்படம்:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "அச்சியந்திர இயக்கி கோப்பு:"
+
+#~ msgid "Commands"
+#~ msgstr "கட்டளைகள்"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "அச்சியந்திர கட்டளையைச் சேர்:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "அச்சியந்திர கட்டளையைச் நீக்கு:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "அச்சியந்திரங்களை ஏற்று"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "spoolss செயல் நீக்கு"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "சேர்க்கும் அச்சியந்திர பகுதிய காட்டு"
+
+#~ msgid "Domain"
+#~ msgstr "டொமைன்"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS &எல்லை:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "வின்ஸை செயல் நீக்கு"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "வின்ஸ் சேவகன் போன்று செயல்படு"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "வேறொரு வின்ஸ் சேவகனை பயன்படுத்து"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "வின்ஸ் சேவகன் அமைப்புகள்"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS prox&y"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "அதிகப்பட்ட வின்ஸ் டிடிஎல்:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&குறைந்த வின்ஸ் டிடிஎல்:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "வின்ஸ் சேவகன் அடையாள எண் அல்லது டி என் எஸ் பெயர்"
+
+#~ msgid "General Options"
+#~ msgstr "பொதுவான விருப்பத் தேர்வுகள்"
+
+#~ msgid "WINS partners:"
+#~ msgstr "வின்ஸ் பங்காளிகள்:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "வின்ஸ் பதிலி"
+
+#~ msgid "Filenames"
+#~ msgstr "கோப்பு பெயர்கள்"
+
+#~ msgid "Ge&neral"
+#~ msgstr "பொதுவான"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "பட்டை புள்ளி"
+
+#~ msgid "Specia&l"
+#~ msgstr "விசேஷ"
+
+#~ msgid "Locking"
+#~ msgstr "பூட்டுகிறது"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "கெர்னல் ஆப்லாக்ஸை பயன்படுத்து"
+
+#~ msgid "Direct&ories"
+#~ msgstr "அடைவுகள்"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "அடைவை பூட்டு:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "பிட் அடைவு;"
+
+#~ msgid "Lock Spin"
+#~ msgstr "சுழலுவதை பூட்டு"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&சுழல் எண்ணிக்கையை பூட்டு:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "சுழலும் நேரத்தை கவனி"
+
+#~ msgid "Very Advanced"
+#~ msgstr "மிகவும் மேம்பட்ட"
+
+#~ msgid "milliseconds"
+#~ msgstr "மில்லி நொடிகள்"
+
+#~ msgid "Charset"
+#~ msgstr "எழுத்து அமைப்பு"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "சாம்பா &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS எழுத்து அமைப்பு:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "யுனிக்ஸ் எழுத்து அமைப்பு:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "எழுத்து அமைப்பை காட்டு:"
+
+#~ msgid "U&nicode"
+#~ msgstr "யுனிகோடு"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "சாம்பா &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "எழுத்து அமைப்பு:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "மதிப்புள்ள எழுத்துகள்:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "குறியீட்டு பக்க அடைவு:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "குறியிடும் அமைப்பு:"
+
+#~ msgid "Client code page:"
+#~ msgstr "உறுப்பினர் குறியீடு பக்கம்:"
+
+#~ msgid "Logon"
+#~ msgstr "உள்நுழை"
+
+#~ msgid "Add Scripts"
+#~ msgstr "குறுநிரல்களை சேர்"
+
+#~ msgid "Add user script:"
+#~ msgstr "பயனர் குறுநிரலைச்சேர்:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "குழு குறுநிரலுக்கு பயனரைச் சேர்:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "குழு குறுநிரலைச் சேர்:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "மெஷின் குறுநிரலைச் சேர்:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "குரு குறுநிரலை நீக்கு:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "பயனர் குறுநிரலை நீக்கு:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "குழு குறுநிரலில் இருந்து பயனரை நீக்கு:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "முதல் குழு குறுநிரல்"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "முதல் குழு குறுநிரலை அமை:"
+
+#~ msgid "Shutdown"
+#~ msgstr "நிறுத்து"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "நிறத்த குறுநிரல்:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "நிறுத்த குறுநிரலை கைவிடு:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "உள்நுழை பாதை:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "முதல் நுழைவு பக்கம்:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "&நுழைவு இயக்கி:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "நுழைவு குறுநிரல்:"
+
+#~ msgid "Socket"
+#~ msgstr "துளை"
+
+#~ msgid "Socket address:"
+#~ msgstr "துளை முகவரி:"
+
+#~ msgid "Socket Options"
+#~ msgstr "துளை விருப்பத் தேர்வுகள்"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "எஸ் எஸ் எல்-ஐ செயல்படுத்து"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "எஸ்எஸ்எல் புரவலர்கள்:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "எஸ்எஸ்எல் பொருந்தக்கூடிய"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "எஸ்எஸ்எல் சிஏ சான்றிதழ் அடைவு:"
+
+#~ msgid "SSL version:"
+#~ msgstr "எஸ் எஸ் எல் பதிப்பு:"
+
+#~ msgid "SSL client key:"
+#~ msgstr "எஸ்எஸ்எல் உறுப்பினர் விசை:"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "எஸ்எஸ்எல் சேவகன் சான்றிதழ்:"
+
+#~ msgid "Protocol"
+#~ msgstr "நெறிமுறை"
+
+#~ msgid "Ti&me server"
+#~ msgstr "நேர சேவகன்"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "யுனிக்ஸ் விரிவாக்கங்கள்"
+
+#~ msgid "Read bmpx"
+#~ msgstr "bmpxஐ படி"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "நெறிமுறை பதிப்புகள்"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "ஆக அறிவி:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "என்.டி. பணியிடம்"
+
+#~ msgid "win95"
+#~ msgstr "விண்டோஸ்95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "அறிவிப்பு பதிப்பு:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "நெறிமுறை:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "அதிகப்பட்ச நெறிமுறை:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "குறைந்தபட்ச நெறிமுறை:"
+
+#~ msgid "Limits"
+#~ msgstr "எல்லைகள்"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "அதிகப்பட்ச டிடிஎல்:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "எஸ்.எம்.பி. முனையங்களை கவனிக்கிறது"
+
+#~ msgid "SMB ports:"
+#~ msgstr "எஸ்.எம்.பி. முனையங்கள்:"
+
+#~ msgid "Browsing"
+#~ msgstr "உலாவுதல்"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "எல்.எம். இடைவெளி:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "எல்.எம். அறிவிப்பு:"
+
+#~ msgid "Sec"
+#~ msgstr "நொடி"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "உலாவல் பட்டியல்"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "மேம்பட்ட உலாவல்"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "வார்ப்புரு முதல் அடைவு:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "வார்ப்புரு ஷெல்:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "விண்டோஸ் என்.டி. 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "விண்டோஸ் 2000"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#, fuzzy
+#~ msgid "On"
+#~ msgstr "மட்டும்"
+
+#~ msgid "Only"
+#~ msgstr "மட்டும்"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "பங்கு கட்டளையைச் சேர்:"
+
+#~ msgid "Change share command:"
+#~ msgstr "பங்கு கட்டளையை மாற்று:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "பங்கு கட்டளையை நீக்கு:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "செய்தி கட்டளை:"
+
+#~ msgid "Misc"
+#~ msgstr "மற்ற"
+
+#~ msgid "Hide &local users"
+#~ msgstr "உள்ளார்ந்த பயனர்களை மறை"
+
+#~ msgid "Default service:"
+#~ msgstr "முன்னிருப்பு சேவை:"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "குறைந்த"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "தொலைதூர அறிவிப்பு:"
+
+#~ msgid "Source environment:"
+#~ msgstr "மூல சூழல்:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS ஆரம்ப அடைவு"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "பிழை நீக்கு"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "சேர்/திருத்து பங்கு"
+
+#~ msgid "D&irectory"
+#~ msgstr "அடைவு"
+
+#~ msgid "&Path:"
+#~ msgstr "&பாதை:"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "அடையாளம்காட்டி"
+
+#~ msgid "Na&me:"
+#~ msgstr "பெயர்:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "குறிப்பு:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "முக்கிய பண்புகள்"
+
+#~ msgid "Read onl&y"
+#~ msgstr "படிக்க மட்டும்"
+
+#~ msgid "Pub&lic"
+#~ msgstr "பொது"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "உலாவக்கூடிய"
+
+#~ msgid "A&vailable"
+#~ msgstr "கிடைக்கக்கூடிய"
+
+#~ msgid "&Security"
+#~ msgstr "&பாதுகாப்பு"
+
+#~ msgid "Gu&ests"
+#~ msgstr "விருந்தாளிகள்"
+
+#~ msgid "&Guest account:"
+#~ msgstr "&விருந்தாளி கணக்கு:"
+
+#~ msgid "Hos&ts"
+#~ msgstr "புரவலர்கள்"
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "புரவலர்களை அனுமதி:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "புரவலர்களை மறு:"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "இந்த பயனர்கள் பட்டியலில் குறிப்பிடப்பட்டுள்ள பயனர் பெயர்களுக்கு மட்டும் இணைப்புகளை அனுமதி"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "மறைந்துள்ள கோப்புகள்"
+
+#~ msgid "Hidden"
+#~ msgstr "மறைந்த"
+
+#~ msgid "Size"
+#~ msgstr "அளவு"
+
+#~ msgid "Date"
+#~ msgstr "தேதி"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "தேர்ந்தெடுக்கப்பட்ட கோப்புகள்"
+
+#~ msgid "Hi&de"
+#~ msgstr "மறை"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&கைம்முறை வடிவமைப்பு"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "மறைந்துள்ள கோப்புகள்:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "எழுதமுடியாத கோப்புகளை மறை"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "விசேஷ கோப்புகளை மறை"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "புள்ளியுடன் தொடங்கும் கோப்புகளை மறை"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "படிக்கமுடியாத கோப்புகளை மறை"
+
+#~ msgid "&Advanced"
+#~ msgstr "&மேம்பட்ட"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "முகமூடிகள்"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "அடைவு பாதுகாப்பு மூடி:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "பாதுகாப்பு மூடி:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "அடைவு மூடி:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "மூடியை உருவாக்கு:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "படிக்க மட்டும் உள்ள கோப்புகளின் நீக்கலை அனுமதி"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "கோப்பை அனுப்பு என்பதை பயன்படுத்து"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "அதிகபட்சமாக காட்டப்பட்ட பணிகள்"
+
+#~ msgid "bytes"
+#~ msgstr "பைட்டுகள்"
+
+#~ msgid "manual"
+#~ msgstr "கைம்முறை"
+
+#~ msgid "documents"
+#~ msgstr "ஆவணங்கள்"
+
+#~ msgid "programs"
+#~ msgstr "நிரல்கள்"
+
+#~ msgid "disable"
+#~ msgstr "செயல் நீக்கு"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "எழுத்துச் சார்ந்த"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "முன்னிருப்பு சார்ந்த:"
+
+#~ msgid "Lower"
+#~ msgstr "குறைந்த"
+
+#~ msgid "Upper"
+#~ msgstr "மேல்புறம்"
+
+#~ msgid "Other Options"
+#~ msgstr "மற்ற விருப்பத் தேர்வுகள்"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&டாஸ் கோப்பு வகை"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "டாஸ் கோப்பு நேரங்கள்"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "டாஸ் கோப்பு நேர தெளிவுத்திறன்"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "பூட்டுவதை செயலாக்கு"
+
+#~ msgid "Locki&ng"
+#~ msgstr "பூட்டுதல்"
+
+#~ msgid "Share mo&des"
+#~ msgstr "பங்கு முறைகள்"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "வி.எஃப்.எஸ் விருப்பத்தேர்வுகள்:"
+
+#~ msgid "Exec"
+#~ msgstr "Exec"
+
+#~ msgid "&Volume:"
+#~ msgstr "&தொகுதி:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "மாஜிக் குறுநிரல்:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "மாஜிக் வெளியீடு:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "தலைகீழாக்க முடியவில்லை:"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs மூலம்"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "&மறை"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "பயனர்கள்"
+
+#~ msgid "Reject"
+#~ msgstr "மறு"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "குறிப்பிட்ட பயனர்கள்"
+
+#~ msgid "Access Rights"
+#~ msgstr "உரிமைகளை அணுகு"
+
+#~ msgid "A&dd User..."
+#~ msgstr "பயனரைச் சேர்..."
+
+#~ msgid "E&xpert"
+#~ msgstr "சிறந்த"
+
+#~ msgid "Add &Group..."
+#~ msgstr "குழுவைச் சேர்..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "தேர்ந்தெடுக்கப்பட்டதை நீக்கு"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "மாற்றிகளை அணுகு"
+
+#~ msgid "Access Permissions"
+#~ msgstr "அனுமதிகளை அணுகு"
+
+#~ msgid "Others"
+#~ msgstr "மற்றவைகள்"
+
+#~ msgid "Read"
+#~ msgstr "படி"
+
+#~ msgid "Write"
+#~ msgstr "எழுது"
+
+#~ msgid "Sticky"
+#~ msgstr "ஒட்டக்கூடிய"
+
+#~ msgid "Set GID"
+#~ msgstr "UIDஐ அமை"
+
+#~ msgid "Set UID"
+#~ msgstr "UIDஐ அமை"
+
+#~ msgid "Special"
+#~ msgstr "விசேஷ"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "பயனர் அமைப்புகள்"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&மதிப்புள்ள பயனர்கள்:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&நிர்வாக பயனர்கள்:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&செல்லாத பயனர்கள்:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&பட்டியல் எழுது:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&பட்டியலை படி:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "அனுமதிக்கப்பட்ட &அமைப்புகள்"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "அனுமதிக்கப்பட்ட அமைப்புகளின் பட்டியல்"
+
+#~ msgid "&Add Host..."
+#~ msgstr "&அமைப்பை சேர்..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "தொகுதியை மாற்று..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&தொகுதியை நீக்கு"
+
+#~ msgid "Name/Address"
+#~ msgstr "பெயர்/முகவரி"
+
+#~ msgid "Parameters"
+#~ msgstr "அளபுருக்கள்"
+
+#~ msgid "Host Properties"
+#~ msgstr "தொகுதி பண்புகள்"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&பெயர்/முகவரி:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>பெயர் / முகவரி புலம்</b>\n"
+#~ "<p>\n"
+#~ "இங்கே நீங்கள் தொகுதியின் பெயர் அல்லது முகவரியை உள்ளிடலாம்.<br>\n"
+#~ "தொகுதியை பல வழிகளில் குறிப்பிடலாம்:\n"
+#~ "<p>\n"
+#~ "<i>ஒரு தொகுதி</i>\n"
+#~ "<p>\n"
+#~ "இது பொதுவான வடிவம். ஒரு தொகுதியை பிரிப்பானால் கண்டுபிடிக்கக்கூடிய சுருக்கப்பட்ட "
+#~ "பெயரால் குறிப்பிடலாம், முழுதாக தரமான பெயர், அல்லது ஒரு IP முகவரி.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&பொது அணுகல்"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "NFS விருப்பத்தேர்வுகள்"
+
+#~ msgid "&Writable"
+#~ msgstr "&எழுதக்கூடிய"
+
+#~ msgid "&Insecure"
+#~ msgstr "&பாதுகாப்பில்லாத"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sync"
+
+#~ msgid "No w&delay"
+#~ msgstr "இப்போது தாமதி"
+
+#~ msgid "No &hide"
+#~ msgstr "மறை &இல்லை"
+
+#~ msgid "No su&btree check"
+#~ msgstr "துணை மர சரிப்பார்த்தல் இல்லை"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "பாதுகாப்பில்லாத பூட்டுக்கள்"
+
+#~ msgid "User Mapping"
+#~ msgstr "பயனர் மாப்பிங்"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "பெயர் தெரியாத &UID:"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonym. &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "அடைவு"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "என் எஃப் எஸ்சுடன் பங்கிடு (லினக்ஸ்/யுனிக்ஸ்)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS விருப்பத்தேர்வுகள்"
+
+#~ msgid "Pu&blic"
+#~ msgstr "பொதுவான"
+
+#~ msgid "W&ritable"
+#~ msgstr "எழுதக்கூடிய"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "கூடுதல் NFS விருப்பத்தேர்வுகள்"
+
+#~ msgid "Samba Options"
+#~ msgstr "சாம்பா விருப்பத்தேர்வுகள்"
+
+#~ msgid "P&ublic"
+#~ msgstr "பொது"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "அதிகப்படியான சாம்பா விருப்பத்தேர்வுகள்"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "எல்லா பயனர்களையும் அடைவுகளை பங்கிட அனுமதி"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "குழு %1ன் பயனர்கள் மட்டுமே அடைவுகளை பங்கிட அனுமதிக்கப்பட்டுள்ளனர்."
+
+#, fuzzy
+#~ msgid "Users of '%1' Group"
+#~ msgstr "'%1' குழுவின் பயனர்கள்"
+
+#~ msgid "Remove User"
+#~ msgstr "பயனரை நீக்கு"
+
+#~ msgid "Add User"
+#~ msgstr "பயனர சேர்"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "மூல கடவுச்சொல் இல்லாமல் குழு உறுப்பினர்கள் அடைவுகளை பங்கிட முடியும்."
+
+#~ msgid "Change Group..."
+#~ msgstr "குழுவை மாற்று..."
+
+#, fuzzy
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "உள்ளார்ந்த வலைப்பின்னல் கோப்பு பங்கிடலை செயல்படுத்து"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "சுலபமான பங்கிடல்"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "மேம்பட்ட பங்கிடல்"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "&NFS பயன்படுத்து (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "சாம்பா பயன்படுத்து (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "அனுமதிக்கப்பட்ட பயனர்கள்"
+
+#~ msgid "Shared Folders"
+#~ msgstr "பிரிக்கப்பட்ட அடைவுகள்"
+
+#~ msgid "Samba"
+#~ msgstr "சம்பா"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "சேர்..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "மாற்று..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>சாம்பா வடிவமைப்பு கோப்பு<strong>'smb.conf'</strong>இல்லை;</p>சாம்பா "
+#~ "நிறுவப்பட்டதை உறுதி செய்யவும்.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "இடத்தைக் குறிப்பிடு"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "சாம்பா வடிவமைப்பு இடத்தை பெறு"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>கோப்பு %1ஐ<i>படிக்க</i>முடியவில்லை.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "கோப்பை படிக்க முடியவில்லை"
+
+#~ msgid "Error while opening file"
+#~ msgstr "கோப்பை திறக்கும்போது பிழை"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "களம் %1ஐ சேர்க்கமுடியவில்லை."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>பயனர் %1க்காக ஒரு கடவுச்சொல்லை<b>உள்ளிடவும்</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr "<qt>சாம்பா பயனர் தரவுத்தளத்தில் பயனர் %1ஐ<b>சேர்க்க</b>முடியவில்லை.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "சாம்பா பயனர் தரவுத்தளத்தில் இருந்து பயனர் %1ஐ நீக்க முடியவில்லை."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "பயர் %1க்கான கடவுச்சொல்லை உள்ளிடவும்"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "பயனர் %1ன் கடவுச்சொல்லை மாற்ற முடியவில்லை."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>சாம்பா வடிவமைப்பு</h1>இங்கே நீங்கள் சாம்பா சேவகனை வடிவமைக்கலாம்."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "இந்த விருப்பத்தேர்வு<em>%1</em>சாம்பா பதிப்பால் ஆதரிக்கப்படவில்லை"
+
+#~ msgid "Unnamed"
+#~ msgstr "பெயரிடப்படாத"
+
+#~ msgid "&Hide"
+#~ msgstr "&மறை"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto Oplock"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "டாட்-டில் கோப்புகள் துவங்குகின்றன"
+
+#, fuzzy
+#~ msgid "Uncheck Hidden"
+#~ msgstr "மறைந்த"
+
+#, fuzzy
+#~ msgid "Keep Hidden"
+#~ msgstr "மறைந்த"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "வொயில்ட்கார்ட் செய்யப்பட்ட தொடர்"
+
+#, fuzzy
+#~ msgid "Keep Selected"
+#~ msgstr "தேர்ந்தெடுக்கப்பட்டதை நீக்கு"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "&முன்னிருப்பு"
+
+#~ msgid "Admin"
+#~ msgstr "நிர்வாக"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "அச்சிடுகிறது"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "அங்கே ஏற்கெனவே ஒரு பொது உள்ளீடு உள்ளது."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "புரவலன் ஏற்கெனவே உள்ளது"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "ஒரு புரவலன் பெயர் அல்லது ஒரு அடையாள எண் முகவரியை உள்ளிடவும்."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "புரவலன் பெயர்/அடையாள எண் இல்லை"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "புரவலன் '%1' ஏற்கெனவே உள்ளது."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "சாம்பா வடிவமைப்பு கோப்பை படித்துக் கொண்டிருக்கிறது..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "என் எஃப் எஸ் வடிவமைப்பு கோப்பை படித்துக் கொண்டிருக்கிறது..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "ஒரு சரியான பாதையை உள்ளிடவும்."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "அடைவுகளை மட்டுமே பிரிக்கமுடியும்."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "அடைவு ஏற்கெனவே பிரிக்கப்பட்டுள்ளது."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "நிர்வாகி என் எஃப் எஸ்சில் பங்கிடுவதை அனுமதிக்காது."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "பிழை: என் எஃப் வடிவமைப்பு கோப்பை படிக்க முடியவில்லை."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "நிர்வாகி சம்பாவில் பங்கிடுவதை அனுமதிக்காது."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "பிழை: சாம்பா வடிவமைப்பு கோப்பை படிக்க முடியவில்லை."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "சாம்பா பங்குக்கான ஒரு பெயரை உள்ளிடவேண்டும்."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "நீங்கள் அடைவுகளை பிரிக்க அனுமதிக்கப்பட்டிருக்கவேண்டும்."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "கோப்பு பிரித்தலை வடிவமை..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "இந்த கணினியில் என் எஃப் எஸ் சேவகன் நிறுவப்படவில்லை"
+
+#~ msgid "Could not save settings."
+#~ msgstr "அமைப்புகளை சேமிக்க இயலவில்லை"
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "கோப்பு '%1'ஐ எழுதுவதற்கு திறக்க முடியவில்லை: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "சேமிக்க இயலவில்லை!"
+
+#~ msgid "Share Folder"
+#~ msgstr "அடைவை பங்கிடு"
+
+#~ msgid "Allowed Users"
+#~ msgstr "அனுமதியுள்ள பயனர்கள்"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "%1ல் ஏற்கெனவே எல்லா பயனர்களும் இருக்கிறார்கள்."
+
+#~ msgid "Select User"
+#~ msgstr "பயனரை தேர்ந்தெடு"
+
+#~ msgid "Select a user:"
+#~ msgstr "ஒரு பயனரை தேர்ந்தெடு"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "பயனர் '%1'ஐ குழு '%2'ல் சேர்க்கமுடியவில்லை"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "குழு '%2'ல் இருந்து பயனர் %1ஐ நீக்க முடியவில்லை"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "நீங்கள் ஒரு மதிப்புமிக்க குழுவை தேர்ந்தெடுத்துள்ளீர்கள்."
+
+#~ msgid "New file share group:"
+#~ msgstr "புதிய கோப்பு பங்கிடு குழு:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "பழைய கோப்பு பங்கிடு குழுவில் இருந்து புதியதிற்கு பயனர்களை சேர்"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "பழைய கோப்பு பங்கிடு குழுவில் இருந்து பயனர்களை நீக்கு"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "பழைய கோப்பு பங்கு குழுவை நீக்கு"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "குறிப்பிட்ட குழுவின் பயனர்கள் மட்டுமே அடைவுகளை பங்கிட அனுமதிக்கப்பட்டுள்ளனர்."
+
+#~ msgid "Choose Group..."
+#~ msgstr "குழுவைத் தேர்ந்தெடு..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "குழு '%1'ல் இருந்து எல்லா பயனர்களையும் நீக்கவேண்டுமா?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "குழு '%1'ஐ நீக்கவேண்டுமா?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "குழு '%1'ஐ அழிக்க முடியவில்லை."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "ஒரு மதிப்புமிக்க குழுவை தேர்ந்தெடுக்கவும்."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "குழு '%1' இல்லை. உருவாக்கவேண்டுமா?"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "குழு '%1' ஐ உருவாக்க முடியவில்லை."
+
+#, fuzzy
+#~ msgid "Printer Settings"
+#~ msgstr "பயனர் அமைப்புகள்"
+
+#, fuzzy
+#~ msgid "Pr&inter"
+#~ msgstr "அச்சியந்திரம்"
+
+#, fuzzy
+#~ msgid "Pa&th:"
+#~ msgstr "&பாதை:"
+
+#, fuzzy
+#~ msgid "Sha&re all printers"
+#~ msgstr "அச்சியந்திரங்களை ஏற்று"
+
+#, fuzzy
+#~ msgid "I&dentifier"
+#~ msgstr "அடையாளம்காட்டி"
+
+#~ msgid "&Name:"
+#~ msgstr "&பெயர்:"
+
+#, fuzzy
+#~ msgid "Comm&ent:"
+#~ msgstr "குறிப்பு:"
+
+#, fuzzy
+#~ msgid "Main Properties"
+#~ msgstr "முக்கிய பண்புகள்"
+
+#, fuzzy
+#~ msgid "&Printing"
+#~ msgstr "அச்சிடுகிறது"
+
+#, fuzzy
+#~ msgid "Printer dri&ver:"
+#~ msgstr "அச்சியந்திர இயக்கி கோப்பு:"
+
+#, fuzzy
+#~ msgid "Print&er driver location:"
+#~ msgstr "அச்சியந்திர இயக்கி கோப்பு:"
+
+#, fuzzy
+#~ msgid "Printin&g:"
+#~ msgstr "அச்சிடுகிறது"
+
+#, fuzzy
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "மொத்த அச்சு பணிகள்:"
+
+#, fuzzy
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "மொத்த அச்சு பணிகள்:"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "முன்னிருப்பு சேவை:"
+
+#, fuzzy
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&தொகுதிகள் அனுமதி:"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "தனிப்பட்ட அடைவு:"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "கட்டளைகள்"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "அச்சியந்திர கட்டளையைச் சேர்:"
+
+#, fuzzy
+#~ msgid "lpq comma&nd:"
+#~ msgstr "அச்சியந்திர கட்டளையைச் நீக்கு:"
+
+#, fuzzy
+#~ msgid "lprm comman&d:"
+#~ msgstr "அச்சியந்திர கட்டளையைச் நீக்கு:"
+
+#, fuzzy
+#~ msgid "&queuepause:"
+#~ msgstr "&அப்படியே வைத்திரு"
+
+#, fuzzy
+#~ msgid "Tunin&g"
+#~ msgstr "ஒன்றுசேர்த்தல்"
+
+#, fuzzy
+#~ msgid "M&in print space:"
+#~ msgstr "குறைந்தபட்ச நெறிமுறை:"
+
+#, fuzzy
+#~ msgid "&Logging"
+#~ msgstr "நுழைதல்"
+
+#, fuzzy
+#~ msgid "S&tatus"
+#~ msgstr "நிலை"
+
+#~ msgid "Not share&d"
+#~ msgstr "பங்கிடப்படவில்லை"
+
+#~ msgid "&Shared"
+#~ msgstr "&பங்கிடப்பட்டது"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "அடிப்படை விருப்பத் தேர்வுகள்"
+
+#~ msgid "Name of the share"
+#~ msgstr "பங்கீட்டின் பெயர்"
+
+#~ msgid "Commen&t:"
+#~ msgstr "குறிப்பு:"
+
+#~ msgid "Security Options"
+#~ msgstr "பாதுகாப்பு விருப்பத் தேர்வுகள்"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "தொகுதிகள் மறுப்பு:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&தொகுதிகள் அனுமதி:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "விருந்தாளி கணக்கு:"
+
+#~ msgid "More Opt&ions"
+#~ msgstr "மேலும் விருப்பத் தேர்வுகள்"
+
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgid "Users of the '%1' Group"
+#~ msgstr "குழு '%1'ன் பயனர்கள்"
+
+#~ msgid "Umtp"
+#~ msgstr "Umtp"
+
+#~ msgid "&Unix group"
+#~ msgstr "&யுனிக்ஸ் குழு"

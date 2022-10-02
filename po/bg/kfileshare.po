@@ -1,0 +1,710 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
+# Yasen Pramatarov <yasen@lindeas.com>, 2011.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-17 23:03+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Забраняване"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Разрешаване"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Неизвестено"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Само тази папка"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Тази папка, подпапки и файлове"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Тази папка и подпапки"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Тази папка и файлове"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Само подпапки и файлове"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Само подпапки"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Само файлове"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Неизвестено"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Разрешения за отдалечен достъп"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Този запис за разрешение е наследен от родителски контейнер и може да бъде "
+"модифициран само на него (например директория на по -високо ниво)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Вид:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Отнася се до:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Проследяване на папка / изпълнение на файлове"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Представяне на папка / четене на данни"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Атрибути за четене"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Разширени атрибути за четене"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Създаване на файлове / запис на данни"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Създаване на папки / добавяне на данни"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Атрибути за запис"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Разширени атрибути за запис"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Изтриване на подпапки и файлове"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Изтриване"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Разрешения за четене"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Промяна на разрешения"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Взимане на собствеността"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Прилагане на тези разрешения само за обекти и/или контейнери в рамките на "
+"тозиконтейнер"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Записи за контрол на достъпа"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Принадлежност"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Собственик:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Група:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Не са намерени разрешения"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr "Вероятно няма SMB/Windows/Разширени разрешения, зададени на този файл."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Тази папка не може да се сподели, защото  <filename>%1</filename> не "
+"съществува."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Тази грешка се дължи на това, че вашата дистрибуция не е настроила правилно "
+"споделянето на Samba. Можете да я поправите сами, като създадете тази папка "
+"ръчно. След това затворете и отновоотворете този прозорец."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Тази папка не може да бъде споделена, защото  <filename>%1</filename> е с "
+"неправилно зададена група на притежател <resource>%2</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Тази грешка се дължи на това, че вашата дистрибуция не е настроила правилно "
+"споделянето на Samba. Можете да я поправите сами, като промените собственика "
+"на групата на тази папка на <resource>usershares</resource> и да станете "
+"член на тази група. След това рестартирайте системата."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Тази папка не може да бъде споделена, защото вашият потребителски акаунт не "
+"е член на група <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"Можете да поправите това, като направите потребителя член на тази група. "
+"След това рестартирайте системата."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Включване в групата"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Тази папка не може да бъде споделена, защото вашият потребителски акаунт "
+"няма разрешение да записва в <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"Можете да поправите това, като се уверите, че групата <resource>%1</"
+"resource> има право на запис за <filename>%2</filename>. След това затворете "
+"и отворете отново този прозорец."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Добавяне на потребител \"%1\" към група \"%2\", за да може да настройват "
+"потребителски споделяния със Samba"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Неуспех при включване на потребител  <resource>%1<resource>  в група "
+"<resource>%2<resource>"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Файлов път"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Настоящи разрешения"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Необходими разрешения"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Отказване на достъп"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Отказване на достъп предотвратява използването на това споделяне, дори "
+"когато друго правило за достъп го предоставя. Правило за отказ винаги\n"
+"има предимство. По-специално отказ на достъп за <resource> Всички</resource> "
+"в действителност забранява достъпа за всички.\n"
+"Обикновено не е необходимо да се отказва достъпа за всички, защото "
+"стандартните разрешения за директории и файлове все още се прилагат за "
+"споделените\n"
+"директории. Потребител, който няма достъп локално до директорията, също така "
+"няма да има отдалечен достъп до нея, дори\n"
+"когато правилата за достъп до споделянето го позволяват."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+"Тази папка се нуждае от допълнителни разрешения, за да работи споделянето."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Оправяне на разрешения"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Споделянето може да не работи правилно, защото папката за споделяне или "
+"нейните пътища имат разширени разрешения: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Споделяне на папката с други компютри в локалната мрежа"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Име:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Това име не може да се използва. Споделянията не трябва да имат имена на "
+"потребители и в цялата система не трябва да има споделяния с еднакви имена."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Това име е твърде дълго. Това може да доведе до проблеми в оперативната "
+"съвместимост или да бъде отхвърлено от Samba."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Разрешаване на гости"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Достъпът за гости е деактивиран от системните настройки на Samba"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Пълен контрол"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Само за четене"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Няма достъп"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Монитор на Samba статус"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Задаване на парола"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Парола"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Потвърждаване на парола"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Паролите трябва да съвпадат"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Задаване на парола"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Папката <filename>%1</filename> се нуждае от допълнителни разрешения, "
+"за да работи споделянето.</para>\n"
+"<para>Искате ли да добавите тези разрешения сега? </para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Промяна на разрешения"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Не можаха да се променят разрешенията за: %1. Всички промени в разрешенията "
+"са върнати към първоначалното състояние."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Отказ"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba трябва да е инсталирана, за да може папките да бъдат споделяни."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Инсталиране на Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Неуспешно инсталиране на пакета на Samba."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Рестартирайте компютъра, за да завършите промените."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Рестартиране"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba използва отделна потребителска база данни от системата.\n"
+"Това изисква от вас да зададете отделна парола на Samba за всеки потребител, "
+"за който искате\n"
+"да може да се удостоверява.\n"
+"</para>\n"
+"<para>\n"
+"Преди да имате достъп до споделяния с текущия си потребителски акаунт, "
+"трябва да зададете парола за Samba.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Задаване на парола за Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Допълнително управление на потребители и управление на паролите могат да се "
+"правят с помощната програма<command> smbpasswd </command>\n"
+" от командния ред."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Вие сте изчерпали максималното количество споделени директории, които може "
+"да имате активни едновременно."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Споделеното име е неактивно."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Споделеното име вече се използва за друга директория"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Пътят е невалиден."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Посоченият път не съществува."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Пътят не е директория."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Посоченият път е относителен."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Посоченият път не може да бъде споделен."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Правилото за достъп е невалидно."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Посоченият потребител в правило за достъп не е валиден."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Правилото за достъп за \"Гост\" е невалидно."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Активирането на достъп за гости не е разрешено."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Възникна грешка при опит за споделяне на директория. Споделянето не е "
+"създадено.</para><para>Вътрешен доклад на Samba:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Неуспешно създаване на мрежово споделяне"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Възникна грешка при опит за премахване на споделяне на директория. "
+"Споделянето не е премахнато.</para><para>Вътрешен доклад на Samba:</"
+"para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Неуспешно премахване на мрежово споделяне"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Проверка за съществуване на Samba потребител \"%1\""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Създаване на нов Samba потребител \"%1\""

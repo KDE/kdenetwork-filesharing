@@ -1,0 +1,3464 @@
+# #-#-#-#-#  .r1575 (kfileshare)  #-#-#-#-#
+# translation of kfileshare.po to Persian
+# #-#-#-#-#  .mine (kfileshare)  #-#-#-#-#
+# #-#-#-#-#  .r1578 (kfileshare)  #-#-#-#-#
+# Mostafa Reshadi <Mostafa@Reshadi.com>, 2006.
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# Mohammad Reza Mirdamadi <mohi@ubuntu.ir>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2012-01-13 17:40+0330\n"
+"Last-Translator: Mohammad Reza Mirdamadi <mohi@ubuntu.ir>\n"
+"Language-Team: Farsi (Persian) <>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  .r1594 (kfileshare)  #-#-#-#-#\n"
+"#-#-#-#-#  .r1575 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .mine (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .r1578 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .mine (kfileshare)  #-#-#-#-#\n"
+"#-#-#-#-#  .r1575 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .mine (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .r1578 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .r1606 (kfileshare)  #-#-#-#-#\n"
+"#-#-#-#-#  .r1575 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .mine (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"#-#-#-#-#  .r1578 (kfileshare)  #-#-#-#-#\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "انکار"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "اجازه دادن"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "فقط &خواندنی‌"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "مجوزها"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "پشتیبانی خصیصه‌های گسترش‌یافته سبک OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "قابل نوشتن"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "پشتیبانی خصیصه‌های گسترش‌یافته سبک OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "حذف دست‌نوشته‌ها"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "مجوزها"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "مجوزها"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "مالک"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "مالک"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "گروه"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "مجوزها"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "مسیر"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "مجوزها"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "مجوزها"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "اصلاً دستیابی وجود &ندارد‌"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "مجوزها"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "&اشتراک این پوشه در شبکه محلی‌"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "نام:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "اجازه دادن به مهمان‌‌ها"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "کنترل کامل"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "فقط خواندنی"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "اصلاً دستیابی وجود &ندارد‌"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "اسم رمز"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "اسم رمز"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "بدون اسم رمز"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "اسم رمز"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "مجوزها"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&لغو‌"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "فقط پوشه‌های محلی می‌توانند مشترک شوند."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba..."
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "نصب سامبا"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "کاربران &Samba‌"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "اشتراک پرونده غیرفعال است."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "پوشه وجود ندارد."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "این نام مشترک است"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "مشترک"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "ایجاد"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "ایجاد"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&اشتراک‌"
+
+#, fuzzy
+#~| msgid "Install Samba..."
+#~ msgid "Installing Samba..."
+#~ msgstr "نصب سامبا"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>از قبل مشترکی با ‌نام <strong>%1</strong> وجود دارد.<br /> لطفاً، نام "
+#~ "دیگری را انتخاب کنید.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "کارساز سامبا روی این سیستم نصب نشده است"
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "اشتراک با سامبا (ویندوز مایکروسافت)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>سامبا نمیتواند نصب شود.</strong><br />لطفا اطمینان حاصل کنید "
+#~ "که kpackagekit درست نصب شده</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "برگزیدن کاربران"
+
+#~ msgid "Select &Users"
+#~ msgstr "برگزیدن &کاربران‌"
+
+#~ msgid "Name"
+#~ msgstr "نام"
+
+#~ msgid "UID"
+#~ msgstr "شناسه کاربر"
+
+#~ msgid "GID"
+#~ msgstr "شناسه گروه"
+
+#~ msgid "Acc&ess"
+#~ msgstr "&دستیابی‌"
+
+#~ msgid "&Default"
+#~ msgstr "&پیش‌فرض‌"
+
+#~ msgid "&Read access"
+#~ msgstr "دستیابی &خواندن‌"
+
+#~ msgid "&Write access"
+#~ msgstr "دستیابی &نوشتن‌"
+
+#~ msgid "&Admin access"
+#~ msgstr "دستیابی &سرپرست‌"
+
+#~ msgid "Join Domain"
+#~ msgstr "پیوستن دامنه"
+
+#~ msgid "&Verify:"
+#~ msgstr "&وارسی:‌"
+
+#~ msgid "&Password:"
+#~ msgstr "&اسم رمز:‌"
+
+#~ msgid "&Username:"
+#~ msgstr "&نام‌ کاربر:‌"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "&کنترل‌کننده دامنه:‌"
+
+#~ msgid "&Domain:"
+#~ msgstr "&دامنه:‌"
+
+#~ msgid "Select Groups"
+#~ msgstr "برگزیدن گروهها"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "&برگزیدن گروهها‌"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&نوعی گروه‌"
+
+#~ msgid "&UNIX group"
+#~ msgstr "گروه &یونیکس‌"
+
+#~ msgid "NI&S group"
+#~ msgstr "گروه NI&S‌"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "&گروه یونیکس و NIS‌"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "در اینجا می‌توانید کاربران Samba، ذخیره‌شده در پرونده smbpasswd را ویرایش "
+#~ "کنید.\n"
+#~ "<p>\n"
+#~ "هر کاربر Samba باید دارای یک کاربر یونیکس متناظر باشد.\n"
+#~ "در سمت راست، می‌توانید تمام کاربران یونیکس، ذخیره‌شده در پرونده passwd، و "
+#~ "پیکربندی‌نشده به عنوان کاربر Samba را مشاهده کنید.\n"
+#~ " در سمت چپ، می‌توانید کاربران Samba را مشاهده کنید.\n"
+#~ "<p>\n"
+#~ "برای افزودن کاربران Samba جدید، به سادگی دکمه <em><add</em> را فشار "
+#~ "دهید.\n"
+#~ "سپس کاربران انتخاب‌شده یونیکس، کاربران Samba می‌شوند، و از\n"
+#~ "فهرست کاربران یونیکس حذف خواهند شد )ولی آنها کاربران یونیکس باقی "
+#~ "می‌مانند(.\n"
+#~ "<p>\n"
+#~ "برای حذف کاربران Samba، بر روی دکمه <em> <حذف</em> فشار دهید.\n"
+#~ "کاربران برگزیده Samba، از پرونده smbpasswd حذف خواهند شد\n"
+#~ "و در سمت راست، به عنوان کاربران یونیکس که کاربران Samba نیستند، دوباره "
+#~ "ظاهر خواهند شد.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "تنظیمات &پایه‌"
+
+#~ msgid "Samba config file:"
+#~ msgstr "پرونده پیکربندی Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&بار کردن‌"
+
+#~ msgid "Server Identification"
+#~ msgstr "شناسایی کارساز"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "گروه &کار:‌"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "اینجا نام گروه کار/دامنه خود را وارد کنید."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "&رشته کارساز:‌"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "نام NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "سطح &امنیت‌"
+
+#~ msgid "Alt+"
+#~ msgstr "دگرساز+"
+
+#~ msgid "User"
+#~ msgstr "کاربر"
+
+#~ msgid "Server"
+#~ msgstr "کارساز"
+
+#~ msgid "Domai&n"
+#~ msgstr "&دامنه‌"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "اگر دارای شبکه خانگی یا شبکه دفتری کوچک هستید، از سطح امنیتی <i>مشترک</"
+#~ "i>استفاده کنید.<br> این به همه اجازه ‌خواندن تمام نامهای مشترک را قبل از "
+#~ "نیاز به ورود می‌دهد."
+
+#~ msgid "Further Options"
+#~ msgstr "گزینه‌های بیشتر"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "اسم رمز نام/نشانی کارساز:"
+
+#~ msgid "Real&m:"
+#~ msgstr "&ناحیه:‌"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "&حساب مهمان:‌"
+
+#~ msgid "Help"
+#~ msgstr "کمک"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "برای کمک مشروح در مورد هر گزینه، لطفاً، به مورد زیر نگاه کنید:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "راهنما: smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "‌‌&مشترکها‌"
+
+#~ msgid "Comment"
+#~ msgstr "توضیح"
+
+#~ msgid "Properties"
+#~ msgstr "ویژگیها"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "ویرایش &پیش‌فرضها...‌"
+
+#~ msgid "Add &New Share..."
+#~ msgstr "افزودن مشترک &جدید...‌"
+
+#~ msgid "Edit Share..."
+#~ msgstr "ویرایش مشترک..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&حذف مشترک‌"
+
+#~ msgid "Prin&ters"
+#~ msgstr "&چاپگرها‌"
+
+#~ msgid "Printer"
+#~ msgstr "چاپگر"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "ویرایش &پیش‌فرضها‌"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "افزودن چاپگر &جدید‌"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "ویرایش &چاپگر‌"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&حذف چاپگر‌"
+
+#~ msgid "&Users"
+#~ msgstr "&کاربران‌"
+
+#~ msgid "Disabled"
+#~ msgstr "غیرفعال‌شده"
+
+#~ msgid "Add"
+#~ msgstr "افزودن"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&حذف‌"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "کاربران &یونیکس‌"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "&تغییر اسم رمز...‌"
+
+#~ msgid "&Join Domain"
+#~ msgstr "&پیوند دامنه‌"
+
+#~ msgid "Advan&ced"
+#~ msgstr "&پیشرفته‌"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "در اینجا می‌توانید گزینه‌های پیشرفته کارساز SAMBA را تغییر دهید. فقط اگر "
+#~ "می‌دانید که چه‌ کار می‌کنید، چیزی را تغییر دهید."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "تخلیه پیشرفته"
+
+#~ msgid "Security"
+#~ msgstr "امنیت"
+
+#~ msgid "&General"
+#~ msgstr "&عمومی‌"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "پیروی از محدودیتهای PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "تغییر اسم رمز PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "سودهیهای دیگر"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "&اجازه دادن به دامنه‌های مورد اطمینان‌"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "امنیت کارساز Paranoid"
+
+#~ msgid "General"
+#~ msgstr "عمومی"
+
+#~ msgid "Auth methods:"
+#~ msgstr "روشهای احراز هویت:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&فهرست راهنمای ریشه:‌"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&واسطها:‌"
+
+#~ msgid "Map to guest:"
+#~ msgstr "نگاشت به مهمان:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "فقط مقید کردن واسطها"
+
+#~ msgid "Never"
+#~ msgstr "هرگز"
+
+#~ msgid "Bad User"
+#~ msgstr "کاربر بد"
+
+#~ msgid "Bad Password"
+#~ msgstr "اسم رمز بد"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "&هم‌ارز میزبانها:‌"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "پایه الگوریتمی خلاص کردن:"
+
+#~ msgid "Private dir:"
+#~ msgstr "فهرست راهنمای خصوصی:"
+
+#~ msgid "Pass&word"
+#~ msgstr "&اسم رمز‌"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "اسم رمزهای Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "&رمزبندی اسمهای رمز‌"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "پرونده Smb passwd:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "&پشتیبانی Passdb:‌"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "گپ passwd:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "اشکال‌زدائی گپ passwd"
+
+#, fuzzy
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "ثانیه"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "اتمام وقت گپ passwd:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "اسم رمزهای &تهی‌"
+
+#~ msgid "Password level:"
+#~ msgstr "سطح اسم رمز:"
+
+#~ msgid "Min password length:"
+#~ msgstr " طول کمینه اسم رمز:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "اتمام وقت اسم رمز ماشین:"
+
+#~ msgid "Migration"
+#~ msgstr "مهاجرت"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "به‌روزرسانی &رمزبندی‌شده‌"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "اسم رمزهای یونیکس"
+
+#~ msgid "Passwd program:"
+#~ msgstr "برنامه passwd:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "همگامی اسم رمز &یونیکس‌"
+
+#~ msgid "Userna&me"
+#~ msgstr "&نام کاربر‌"
+
+#~ msgid "User&name map:"
+#~ msgstr "نگاشت &نام کاربر:‌"
+
+#~ msgid "Username &level:"
+#~ msgstr "&سطح نام کاربر:‌"
+
+#~ msgid "Hide local users"
+#~ msgstr "مخفی ‌کردن کاربران محلی"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "محدود کردن &بی‌نام‌"
+
+#~ msgid "Use rhosts"
+#~ msgstr "استفاده از rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "&احراز هویت‌"
+
+#~ msgid "Client"
+#~ msgstr "کارخواه"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "امضای &کارخواه:‌"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "احراز هویت &متن‌ ساده کارخواه‌"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "احراز هویت lanman کارخواه"
+
+#~ msgid "Auto"
+#~ msgstr "خودکار"
+
+#~ msgid "Mandatory"
+#~ msgstr "اجباری"
+
+#~ msgid "Yes"
+#~ msgstr "بله"
+
+#~ msgid "No"
+#~ msgstr "خیر"
+
+#~ msgid "Client channel:"
+#~ msgstr "مجرای کارخواه:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "کارخواه از spnego استفاده می‌کند"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "احراز هویت &NTLMv2 کارخواه‌"
+
+#~ msgid "Server signing:"
+#~ msgstr "امضای کارساز:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "احراز هویت Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "مجرای کارساز:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "استفاده از sp&nego‌"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "احراز هویت NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "ثبت"
+
+#~ msgid "L&og file:"
+#~ msgstr "پرونده &ثبت:‌"
+
+#~ msgid "kB"
+#~ msgstr "کیلوبایت"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr " اندازه &بیشینه ثبت:‌"
+
+#~ msgid "Log &level:"
+#~ msgstr "&سطح ثبت:‌"
+
+#~ msgid "S&witches"
+#~ msgstr "&سودهیها‌"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&فقط Syslog‌"
+
+#~ msgid "Status"
+#~ msgstr "وضعیت"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "&مهر زمان‌"
+
+#~ msgid "microseconds"
+#~ msgstr "ریزثانیه‌ها"
+
+#~ msgid "Debug pid"
+#~ msgstr "اشکال‌زدایی شناسه فرآیند"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "&اشکال‌زدایی شناسه کاربر‌"
+
+#~ msgid "Tuning"
+#~ msgstr "میزان‌سازی"
+
+#~ msgid "Modules"
+#~ msgstr "پیمانه‌ها"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "&پیش بارگذاری پیمانه‌ها:‌"
+
+#~ msgid "Switches"
+#~ msgstr "سودهیها"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "نهانگاه &Getwd‌"
+
+#~ msgid "Use &mmap"
+#~ msgstr "استفاده از &mmap‌"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "&اخطار دادن تغییر هسته‌"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "مراجعه‌های &نام میزبان‌"
+
+#~ msgid "Read ra&w"
+#~ msgstr "خواندن &خام‌"
+
+#~ msgid "Write raw"
+#~ msgstr "نوشتن خام"
+
+#~ msgid "Times"
+#~ msgstr "زمانها"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "تغییر اتمام وقت اعلام کردن:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&زنده ‌نگه‌داری:‌"
+
+#, fuzzy
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "کمینه"
+
+#~ msgid "Deadtime:"
+#~ msgstr "زمان مرگ:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "زمان نهانگاه &Lpq:‌"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "اتمام وقت نهانگاه &نام:‌"
+
+#~ msgid "Sizes"
+#~ msgstr "اندازه‌ها"
+
+#~ msgid "Max disk size:"
+#~ msgstr " اندازه بیشینه دیسک:"
+
+#, fuzzy
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "مگابایت"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "&اندازه خواندن:‌"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "اندازه نهانگاه stat:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "xmit &بیشینه:‌"
+
+#~ msgid "Numbers"
+#~ msgstr "اعداد"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr " فرآیندهای بیشینه smbd:"
+
+#~ msgid "Max open files:"
+#~ msgstr "پرونده‌های بیشینه باز:"
+
+#~ msgid "Printing"
+#~ msgstr "چاپ کردن"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "تمام &کارهای چاپ:‌"
+
+#~ msgid "Drivers"
+#~ msgstr "گرداننده‌ها"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "نگاشت گرداننده OS&2:‌"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "&نام Printcap:‌"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "پرونده گرداننده &چاپگر:‌"
+
+#~ msgid "Commands"
+#~ msgstr "فرمانها"
+
+#~ msgid "Enumports command:"
+#~ msgstr "فرمان درگاههای شمارشی:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "فرمان افزودن چاپگر:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "فرمان حذف چاپگر:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "&بار کردن چاپگرها‌"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "&غیرفعال‌سازی اسپولها‌"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "نمایش &جادوگر افزودن چاپگر‌"
+
+#~ msgid "Domain"
+#~ msgstr "دامنه"
+
+#~ msgid "L&ocal master"
+#~ msgstr "راهبر &محلی‌"
+
+#~ msgid "Domai&n master"
+#~ msgstr "راهبر &دامنه‌"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "&ورود دامنه‌ها‌"
+
+#~ msgid "Preferred &master"
+#~ msgstr "&راهبر ارجح‌"
+
+#~ msgid "OS &level:"
+#~ msgstr "&سطح سیستم‌ عامل:‌"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "گروه سرپرست دامنه:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "گروه مهمان دامنه:"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "غیرفعال کردن &WINS‌"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "کنش به عنوان کارساز WI&NS‌"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "استفاده از کارسازی &دیگر WINS‌"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "&تنظیمات کارساز WINS‌"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "&پیشکار خدمت نام دامنه‌"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "&قلاب WINS:‌"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr " &زمان زنده ماندن بیشینه WINS:‌"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr " زمان زنده ماندن &کمینه WINS:‌"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "آی‌پی کارساز WINS یا نام خدمت نام دامنه"
+
+#~ msgid "General Options"
+#~ msgstr "گزینه‌های عمومی"
+
+#~ msgid "WINS partners:"
+#~ msgstr "شریکهای WINS:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "&پیشکار WINS‌"
+
+#~ msgid "Filenames"
+#~ msgstr "نام پرونده‌ها"
+
+#~ msgid "Ge&neral"
+#~ msgstr "&عمومی‌"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "&نقطه باریک‌"
+
+#~ msgid "&Mangling"
+#~ msgstr "&بریدن‌"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "&پشته بریده‌شده:‌"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "بریدن &پیشوند:‌"
+
+#~ msgid "Specia&l"
+#~ msgstr "&ویژه‌"
+
+#~ msgid "Stat cache"
+#~ msgstr "نهانگاه stat"
+
+#~ msgid "Locking"
+#~ msgstr "قفل‌گذاری"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "استفاده از قفلهای مناسب &هسته‌"
+
+#~ msgid "Direct&ories"
+#~ msgstr "&فهرستهای راهنما‌"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "&قفل کردن فهرست راهنما:‌"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&فهرست راهنمای شناسه فرآیند:‌"
+
+#~ msgid "Lock Spin"
+#~ msgstr "قفل کردن دوار"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "شمارش &قفل کردن دوار:‌"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "&زمان قفل کردن دوار:‌"
+
+#~ msgid "Very Advanced"
+#~ msgstr "بسیار پیشرفته"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "زمان &انتظار شکستن قفل مناسب:‌"
+
+#~ msgid "milliseconds"
+#~ msgstr "میلی‌ثانیه"
+
+#~ msgid "Charset"
+#~ msgstr "نویسه‌گان"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "نویسه‌گان &DOS:‌"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "نویسه‌گان &یونیکس:‌"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr " &نمایش نویسه‌گان:‌"
+
+#~ msgid "U&nicode"
+#~ msgstr "&یونی‌کد‌"
+
+#~ msgid "Character set:"
+#~ msgstr "مجموعه نویسه‌گان:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "نویسه‌های &معتبر:‌"
+
+#~ msgid "Code page directory:"
+#~ msgstr "فهرست راهنمای صفحه کد:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "سیستم &کدگذاری:‌"
+
+#~ msgid "Client code page:"
+#~ msgstr "صفحه کد کارخواه:"
+
+#~ msgid "Logon"
+#~ msgstr "ورود"
+
+#~ msgid "Add Scripts"
+#~ msgstr "افزودن دست‌نوشته‌ها"
+
+#~ msgid "Add user script:"
+#~ msgstr "افزودن دست‌نوشته کاربر:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "افزودن کاربر به دست‌نوشته گروه:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "افزودن دست‌نوشته &گروه:‌"
+
+#~ msgid "Add machine script:"
+#~ msgstr "افزودن دست‌نوشته ماشین:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "حذف دست‌نوشته گروه:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "حذف دست‌نوشته کاربر:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "حذف کاربر از دست‌نوشته گروه:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "دست‌نوشته گروه اصلی"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "تنظیم دست‌نوشته گروه &اصلی:‌"
+
+#~ msgid "Shutdown"
+#~ msgstr "تعطیل"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "&تعطیلی دست‌نوشته:‌"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "ساقط کردن تعطیلی دست‌نوشته:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "مسیر &ورود:‌"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "&آغازه ورود:‌"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "گرداننده &ورود:‌"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "دست‌نوشته &ورود:‌"
+
+#~ msgid "Socket"
+#~ msgstr "سوکت"
+
+#~ msgid "Socket address:"
+#~ msgstr "نشانی سوکت:"
+
+#~ msgid "Socket Options"
+#~ msgstr "گزینه‌های سوکت"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "کل حالت SSL را فعال یا غیرفعال می‌کند"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "این کل حالت SSL را فعال یا  غیرفعال می‌کند. اگر این با نه تنظیم شود، SSl "
+#~ "Samba فعال‌شده، دقیقاً مانند Samba غیر SSL رفتار می‌کند. اگر با بله تنظیم "
+#~ "شود، این به متغیرهای میزبانهای ssl وابستگی دارد، و اگر میزبانهای ssl به "
+#~ "اتصال ssl نیاز داشته باشند، کناره‌گیری می‌کنند. این فقط در صورتی در دسترس "
+#~ "است، که کتابخانه‌های SSL روی سیستم شما ترجمه شده باشند، و گزینه پیکربندی --"
+#~ "with-ssl در زمان پیکربندی داده ‌شده باشد."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "&فعال‌سازی SSL‌"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "&میزبانهای SSL:‌"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "بایتهای &درگاشت SSL:‌"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "رمزهای SSL:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "&دست ‌کشیدن میزبانهای SSL:‌"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "&همسازی SSL‌"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "فهرست راهنمای گواهی SSL CA:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "پرونده درگاشت SSL:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "سوکت SSL egd:"
+
+#~ msgid "SSL version:"
+#~ msgstr "نسخه SSL:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "پرونده گواهی‌نامه SSL CA:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "گواهی‌نامه کارخواه نیازمند به SSL"
+
+#~ msgid "SSL client key:"
+#~ msgstr "کلید کارخواه SSL:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "گواهی‌نامه کارساز &نیازمند به SSL‌"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "گواهی‌نامه کارساز &SSL:‌"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "گواهی‌نامه کارخواه SSL:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "&کلید کارساز SSL:‌"
+
+#~ msgid "Protocol"
+#~ msgstr "قرارداد"
+
+#~ msgid "Ti&me server"
+#~ msgstr "کارساز &زمان‌"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "خواندن نوشتن &بزرگ‌"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "پسوندهای یونیکس"
+
+#~ msgid "Read bmpx"
+#~ msgstr "خواندن bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "نسخه‌های قرارداد"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "&اعلام به عنوان:‌"
+
+#~ msgid "NT Workstation"
+#~ msgstr "ایستگاه‌ کار NT"
+
+#~ msgid "Announce version:"
+#~ msgstr "اعلام نسخه:"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "&قرارداد:‌"
+
+#~ msgid "Max protocol:"
+#~ msgstr " قرارداد بیشینه:"
+
+#~ msgid "Min protocol:"
+#~ msgstr " قرارداد کمینه:"
+
+#~ msgid "Limits"
+#~ msgstr "حدود"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "mux &بیشینه:‌"
+
+#~ msgid "Max tt&l:"
+#~ msgstr " &زمان زنده ماندن بیشینه:‌"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "درگاههای SMB  در حال گوش دادن"
+
+#~ msgid "SMB ports:"
+#~ msgstr "درگاههای SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "مرور"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "&فاصله LM:‌"
+
+#~ msgid "L&M announce:"
+#~ msgstr "اعلام &LM:‌"
+
+#~ msgid "Sec"
+#~ msgstr "ثانیه"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "&همگام‌سازی مرور دور:‌"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "فهرست &مرور‌"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "&مرور افزوده‌شده‌"
+
+#~ msgid "Pre&load:"
+#~ msgstr "&پیش‌بارگذاری:‌"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "شناسه کاربر &Winbind/Idmap:‌"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "&شناسه گروه Winbind/Idmap:‌"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "&فهرست شخصی قالب:‌"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "پوسته &قالب:‌"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "جداساز Winbind:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "گروه اصلی قالب:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "&زمان نهانگاه Winbind:‌"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "&همسازی Acl:‌"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "کاربران شمارشی Wi&nbind‌"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "گروههای شمارشی Winbind"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind از دامنه پیش‌فرض استفاده کند"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind حسابهای محلی را فعال کند"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "فقط دامنه‌های مورد اطمینان Winbind"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "گروههای تودرتو Winbind"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "&دامنه NetBIOS:‌"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "  نام‌گردانهای &NetBIOS:‌"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "&غیرفعال کردن netbios‌"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "ترتیب برطرف کردن &نام:‌"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "&میزبان msdfs‌"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "&پسوند LDAP:‌"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "پسوند ماشین LDAP:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "پسوند کاربر LDAP:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "پسوند &گروه LDAP:‌"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "پسوند LDAP idmap:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "پالایه LDAP:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&پشتیبانی Idmap:‌"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "خواب پاسخگویی LDAP:"
+
+#~ msgid "On"
+#~ msgstr "روشن"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "&همگام‌سازی LDAP:‌"
+
+#~ msgid "Only"
+#~ msgstr "فقط"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "افزودن &فرمان مشترک:‌"
+
+#~ msgid "Change share command:"
+#~ msgstr "تغییر فرمان مشترک:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "&حذف فرمان مشترک:‌"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "فرمان &پیام:‌"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "&فرمان Dfree:‌"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "تنظیم فرمان &سهمیه:‌"
+
+#~ msgid "Get quota command:"
+#~ msgstr "به دست آوردن فرمان سهمیه:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "کنش &درد:‌"
+
+#~ msgid "Misc"
+#~ msgstr "متفرقه"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "متفرقه"
+
+#~ msgid "Hide &local users"
+#~ msgstr "مخفی ‌کردن کاربران &محلی‌"
+
+#~ msgid "Default service:"
+#~ msgstr "خدمت پیش‌فرض:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "&انحراف زمان:‌"
+
+#, fuzzy
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "کمینه"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "&اعلام دور:‌"
+
+#~ msgid "Source environment:"
+#~ msgstr "محیط متن:"
+
+#~ msgid "NIS homedir"
+#~ msgstr "فهرست شخصی NIS"
+
+#~ msgid "Homedir map:"
+#~ msgstr "نگاشت فهرست شخصی:"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&فهرست راهنمای Utmp:‌"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "فهرست راهنمای &Wtmp:‌"
+
+#~ msgid "Debug"
+#~ msgstr "اشکال‌زدائی"
+
+#~ msgid "&NT status support"
+#~ msgstr "پشتیبانی وضعیت &NT‌"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "پشتیبانی NT S&MB‌"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "&پشتیبانی لوله NT‌"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "افزودن/ویرایش مشترک"
+
+#~ msgid "Pixmap"
+#~ msgstr "نگاشت تصویردانه‌ای"
+
+#~ msgid "D&irectory"
+#~ msgstr "&فهرست راهنما‌"
+
+#~ msgid "&Path:"
+#~ msgstr "&مسیر:‌"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "تمام &فهرستهای شخصی مشترک شوند‌"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "&شناسه‌"
+
+#~ msgid "Na&me:"
+#~ msgstr "&نام:‌"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "&توضیح:‌"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "&ویژگیهای اصلی‌"
+
+#~ msgid "Read onl&y"
+#~ msgstr "&فقط خواندنی‌"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&عمومی‌"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&قابل‌ مرور‌"
+
+#~ msgid "A&vailable"
+#~ msgstr "&در دسترس‌"
+
+#~ msgid "&Security"
+#~ msgstr "&امنیت‌"
+
+#~ msgid "Gu&ests"
+#~ msgstr "&مهمانها‌"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "این نام کاربر است، که برای دستیابی خدمتهایی که به عنوان تأیید مهمان مشخص "
+#~ "شده‌اند، استفاده خواهد شد. هر امتیازی که این کاربر دارد، برای هر کارخواه "
+#~ "متصل به خدمت مهمان در دسترس خواهد بود. معمولاً این کاربر در پرونده اسم رمز "
+#~ "وجود دارد، ولی ورود معتبری نخواهد داشت. حساب کاربر \\\"ftp\\\"   معمولاً "
+#~ "انتخابی خوب برای این پارامتر می‌باشد. اگر نام کاربر در خدمت داده‌شده‌ای مشخص "
+#~ "شده باشد، نام کاربر مشخص‌شده این یکی را باطل می‌کند."
+
+#~ msgid "&Guest account:"
+#~ msgstr "حساب &مهمان:‌"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "اگر این علامت زده شود، بعد از آن هیچ اسم رمزی برای اتصال به خدمت مورد "
+#~ "نیاز نخواهد بود. مزیتها همان مزیتهای حساب مهمان می‌باشند."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "فقط به &اتصالهای مهمان اجازه داده شود‌"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&میزبانها‌"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "در مقابل اجازه میزبانها - میزبانهای فهرست‌شده در اینجا، مجوز دستیابی به "
+#~ "خدمتها را ندارند، مگر خدمتهای مشخص که فهرستهای خود را برای لغو این یکی "
+#~ "دارند. جایی که فهرستها تناقض داشته باشند، فهرست مجاز مقدم می‌شود."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "این پارامتر، یک مجموعه‌ جداشده با کاما، فاصله، یا جهش از میزبانهایی که "
+#~ "برای دستیابی به خدمت اجازه داده شده‌اند، می‌باشد."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "&اجازه میزبانها:‌"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&انکار میزبانها:‌"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "پیوندهای &نمادین‌"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "اجازه دنبال ‌کردن &پیوندهای نمادین‌"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "اجازه دنبال ‌کردن پیوندهای نمادین، که به ناحیه‌های بیرون از درخت فهرست "
+#~ "راهنما &اشاره می‌کنند‌"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>اعتبارسنجی اسم رمز در مقابل نامهای کاربر، اگر کارخواه نتواند نام "
+#~ "کاربری تأمین کند:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "فقط اجاز دادن به اتصالهایی با &نام کاربران مشخص‌شده در این فهرست نام کاربر"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&پرونده‌های مخفی‌"
+
+#~ msgid "Hidden"
+#~ msgstr "مخفی"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "قفل مناسب Veto"
+
+#~ msgid "Size"
+#~ msgstr "اندازه"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "پرونده‌های &برگزیده‌"
+
+#~ msgid "Hi&de"
+#~ msgstr "&مخفی کردن‌"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "&قفل مناسب Veto‌"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "پیکربندی &دستی‌"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "پرونده‌های &Veto:‌"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "&پرونده‌های قفل مناسب Veto:‌"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "پرونده‌های &مخفی:‌"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "مخفی کردن پرونده‌های &غیرقابل نوشتن‌"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "مخفی کردن پرونده‌های &ویژه‌"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "مخفی کردن پرونده‌هایی که با یک نقطه &شروع می‌شوند‌"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "مخفی کردن پرونده‌های &ناخوانا‌"
+
+#~ msgid "&Advanced"
+#~ msgstr "&پیشرفته‌"
+
+#~ msgid "Force Modes"
+#~ msgstr "حالتهای اجبار"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "حالت &اجبار امنیت فهرست راهنما:‌"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "حالت &اجبار امنیت:‌"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "حالت اجبار &فهرست راهنما:‌"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "&حالت اجبار ایجاد:‌"
+
+#~ msgid "01234567"
+#~ msgstr "۰۱۲۳۴۵۶۷"
+
+#~ msgid "Masks"
+#~ msgstr "نقابها"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "نقاب امنیتی فهرست راهنما:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "&نقاب امنیتی:‌"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "نقاب &فهرست راهنما:‌"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "ایجاد &نقاب:‌"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "ارث بردن &aclها‌"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "پشتیبانی &NT ACL‌"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "اجبار کاربر &ناشناخته acl:‌"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "نگاشت &ارث acl‌"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "به ارث بردن مجوزها از فهرست راهنمای پدر"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "اجازه حذف پرونده‌های فقط خواندنی"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "نگاشت خصیصه DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "نگاشت &بایگانی DOS به اجرای مالک یونیکس‌"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "نگاشت مخفی DOS برای اجرای دنیای &یونیکس‌"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "نگاشت سیستم DOS برای اجرای &گروه یونیکس‌"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "ذخیره کردن خصیصه‌های DOS در خصیصه گسترش‌یافته"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "&همگام‌سازی اکید‌"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "&همیشه همگام‌سازی‌"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "تخصیص دادن &اکید‌"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "استفاده از &ارسال‌ پرونده‌"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr " تعداد&بیشینه اتصالهای همزمان:‌"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "&اندازه نهانگاه نوشتن:‌"
+
+#~ msgid "bytes"
+#~ msgstr "بایت"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "اندازه &بلوک:‌"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "سیاست &ذخیره در حافظه نهانگاهی سمت کارخواه:‌"
+
+#~ msgid "manual"
+#~ msgstr "راهنما"
+
+#~ msgid "documents"
+#~ msgstr "اسناد"
+
+#~ msgid "programs"
+#~ msgstr "برنامه‌ها"
+
+#~ msgid "disable"
+#~ msgstr "غیرفعال‌سازی"
+
+#~ msgid "Name Mangling"
+#~ msgstr "بریدن نام"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "فعال‌سازی بریدن &نام‌"
+
+#~ msgid "Man&gle case"
+#~ msgstr "&بریدن حالت‌"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "&پیش‌ذخیره حالت‌"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "&پیش‌ذخیره حالت کوتاه‌"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "&حساس به حالت‌"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "حالت &پیش‌فرض:‌"
+
+#~ msgid "Lower"
+#~ msgstr "پایینی"
+
+#~ msgid "Upper"
+#~ msgstr "بالایی"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "بریدن &نویسه:‌"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "&نگاشت بریده‌شده:‌"
+
+#~ msgid "Mangling method:"
+#~ msgstr "روش بریدن:"
+
+#~ msgid "hash"
+#~ msgstr "درهم"
+
+#~ msgid "hash2"
+#~ msgstr "درهم ۲"
+
+#~ msgid "Other Options"
+#~ msgstr "گزینه‌های دیگر"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "مخفی کردن نقطه &پشت‌بند‌"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "حالت پرونده &DOS‌"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "زمان &پرونده‌های DOS‌"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "دقت زمان پرونده DOS"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "فعال‌سازی &قفل‌گذاری‌"
+
+#~ msgid "Locki&ng"
+#~ msgstr "&قفل‌گذاری‌"
+
+#~ msgid "S&trict locking"
+#~ msgstr "قفل‌گذاری &اکید‌"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "&قفلهای بلوک‌کننده‌"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "قفل‌گذاری &Posix‌"
+
+#~ msgid "Share mo&des"
+#~ msgstr "&حالتهای مشترک‌"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "انتشار قفلهای &مناسب )oplocks(‌"
+
+#~ msgid "O&plocks"
+#~ msgstr "&قفلهای مناسب‌"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "قفلهای مناسب &سطح۲‌"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "&حد درگيري قفل مناسب:‌"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "قفلهای مناسب &قلابی‌"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "&اشیای Vfs:‌"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "&گزینه‌های Vfs:‌"
+
+#~ msgid "Exec"
+#~ msgstr "اجرا کردن"
+
+#~ msgid "P&reexec:"
+#~ msgstr "&پیش‌اجرا:‌"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "&پیش‌اجرای ریشه:‌"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "&پس‌اجرا:‌"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "&پس‌اجرای ریشه:‌"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "&بستن پیش‌اجرا‌"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "بستن &پیش‌اجرای ریشه‌"
+
+#~ msgid "&Volume:"
+#~ msgstr "&حجم صدا:‌"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "دست‌نوشته &جادویی:‌"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "خروجی &جادویی:‌"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "نزول &نشود:‌"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "&پیشکار Msdfs‌"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "فرمان setdir &مجاز می‌باشد‌"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "زمانهای ایجاد فهرست راهنمای &قلابی‌"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "ریشه &Msdfs‌"
+
+#~ msgid "&Help"
+#~ msgstr "&کمک‌"
+
+#~ msgid "Users"
+#~ msgstr "کاربران"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "تمام کاربران &مشخص‌نشده‌"
+
+#~ msgid "Reject"
+#~ msgstr "رد کردن"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "کاربران &مشخص‌شده‌"
+
+#~ msgid "Access Rights"
+#~ msgstr "حقوق دستیابی"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&افزودن کاربر...‌"
+
+#~ msgid "E&xpert"
+#~ msgstr "&خبره‌"
+
+#~ msgid "Add &Group..."
+#~ msgstr "افزودن &گروه...‌"
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&حذف برگزیده‌"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "تمام کاربران باید به کاربر/گروه &زیر مجبور شوند‌"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "&مجبور کردن کاربر:‌"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "&مجبور کردن گروه:‌"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "تغییردهنده‌های دستیابی"
+
+#~ msgid "Access Permissions"
+#~ msgstr "مجوزهای دستیابی"
+
+#~ msgid "Others"
+#~ msgstr "غیره"
+
+#~ msgid "Read"
+#~ msgstr "خواندن"
+
+#~ msgid "Write"
+#~ msgstr "نوشتن"
+
+#~ msgid "Sticky"
+#~ msgstr "چسبناک"
+
+#~ msgid "Set GID"
+#~ msgstr "تنظیم شناسه گروه"
+
+#~ msgid "Set UID"
+#~ msgstr "تنظیم شناسه کاربر"
+
+#~ msgid "Special"
+#~ msgstr "ویژه"
+
+#~ msgid "User Settings"
+#~ msgstr "تنظیمات کاربر"
+
+#~ msgid "&Valid users:"
+#~ msgstr "کاربران &معتبر:‌"
+
+#~ msgid "&Admin users:"
+#~ msgstr "کاربران &سرپرست:‌"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "کاربران &نامعتبر:‌"
+
+#~ msgid "&Write list:"
+#~ msgstr "&نوشتن فهرست:‌"
+
+#~ msgid "&Read list:"
+#~ msgstr "&خواندن فهرست:‌"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "&میزبانهای مجاز‌"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "فهرستی از میزبانهای مجاز"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "اینجا می‌توانید فهرستی از میزبانهایی که از طریق NFS، مجاز به دستیابی به "
+#~ "این فهرست راهنما می‌باشند را ببینید.\n"
+#~ "ستون اول نام یا نشانی میزبان را نمایش می‌دهد، ستون دوم پارامترهای دستیابی "
+#~ "را نمایش می‌دهد. نام »*«، امکان دستیابی عمومی را می‌دهد."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&افزودن میزبان...‌"
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&تغییر میزبان...‌"
+
+#~ msgid "&Remove Host"
+#~ msgstr "&حذف میزبان‌"
+
+#~ msgid "Name/Address"
+#~ msgstr "نام/نشانی"
+
+#~ msgid "Parameters"
+#~ msgstr "پارامترها"
+
+#~ msgid "Host Properties"
+#~ msgstr "ویژگیهای میزبان"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&نام/نشانی:‌"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>حوزه نام/نشانی</b>\n"
+#~ "<p>\n"
+#~ "اینجا می‌توانید نام یا نشانی میزبان را وارد کنید.<br>\n"
+#~ "میزبان ممکن است در چندین روش مشخص شود.\n"
+#~ "<p>\n"
+#~ "<i>تک میزبان</i>\n"
+#~ "<p>\n"
+#~ " این رایج‌ترین قالب می‌باشد. ممکن است میزبانی را با نامی مختصر، شناخته‌شده "
+#~ "توسط رأی‌دهنده، نام دامنه کاملاً شایسته، یا یک نشانی اینترنتی مشخص کنید.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>گروههای شبکه</i>\n"
+#~ "<p>\n"
+#~ "گروههای شبکه NIS، ممکن است به صورت @group داده شوند. فقط جزء میزبان هر یک "
+#~ "از اعضای گروه شبکه در بررسی عضویت در نظر گرفته می‌شوند. از جزء میزبانهای "
+#~ "خالی یا آنهایی که حاوی تک خط‌ تیره )-(  می‌باشند، چشم‌پوشی می‌شود.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>نویسه‌های عام</i>\n"
+#~ "<p>\n"
+#~ "نامهای ماشین، ممکن است حاوی نویسه‌های عام * و ؟ باشند. این می‌تواند برای "
+#~ "فشرده‌تر ساختن پرونده صادرات استفاده شود؛ برای نمونه، cs.foo.edu.* با تمام "
+#~ "میزبانها در دامنه cs.foo.edu منطبق می‌شود. در‌ هر‌ حال، این نویسه‌های عام، "
+#~ "نقطه‌های داخل نام‌ دامنه را تطبیق نمی‌دهند؛ پس الگوی بالا شامل میزبانهایی "
+#~ "مانند a.b.cs.foo.edu نمی‌باشند.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>شبکه‌های اینترنتی</i>\n"
+#~ "<p>\n"
+#~ " همچنین می‌توانید فهرستهای راهنما را به طور همزمان، به تمام میزبانها روی "
+#~ "یک )زیر(شبکه اینترنتی صادر کنید. این کار با مشخص کردن یک نشانی اینترنتی و "
+#~ "نقاب شبکه به صورت نشانی/نقاب شبکه جفت‌ شده، که نقاب شبکه می‌تواند در قالب "
+#~ "ده‌دهی نقطه‌ای، یا به صورت طول ماسکی متصل، مشخص شود. )برای مثال، یا "
+#~ "»/۲۵۵.۲۵۵.۲۵۲.۰«  یا »/۲۲« پیوست‌شده به نشانی پایه شبکه، به زیرشبکه‌های "
+#~ "یکسان با ۱۰  بیت میزبان منتهی می‌شود.(</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "دستیابی &عمومی‌"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>دستیابی عمومی</b>\n"
+#~ "<p>\n"
+#~ "اگر این را علامت بزنید، نشانی میزبان تک نویسه‌ای عام خواهد بود، که دستیابی "
+#~ "عمومی معنی می‌دهد.\n"
+#~ "این درست مانند این است که بخواهید نویسه عامی را در حوزه نشانی وارد کنید.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "گزینه‌ها"
+
+#~ msgid "&Writable"
+#~ msgstr "&قابل نوشتن‌"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>قابل نوشتن</b>\n"
+#~ "<p>\n"
+#~ "اجازه هر دو درخواست خواندن و نوشتن برای این حجم NFS.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "پیش‌فرض این است که، به هر درخواستی که سیستم پرونده را تغییر دهد، اجازه "
+#~ "داده نشود.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&ناامن‌"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>ناامن</b>\n"
+#~ "<p>\n"
+#~ "اگر این گزینه علامت زده شود، نیاز نیست درخواستهایی که روی درگاه اینترنتی "
+#~ "آغاز می‌شوند، کمتر از IPPORT_RESERVED (1024) باشند.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "اگر مطمئن نیستید، آن را علامت‌نزده رها کنید.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&همگام‌سازی‌"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>همگام‌سازی</b>\n"
+#~ "<p>\n"
+#~ "این گزینه درخواست می‌کند که تمام نوشتنهای پرونده، قبل از کامل شدن درخواست "
+#~ "نوشتن تصدیق شوند. این برای امنیت کامل داده در برابر فروپاشی کارساز مورد "
+#~ "نیاز می‌باشد، ولی متحمل یک ضربه کارایی می‌شود.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "پیش‌فرض این است که، به کارساز برای بیرون نوشتن داده، هر موقع که آماده است "
+#~ "اجازه داده شود.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "بدون &تأخیر‌ نوشتن‌"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>بدون تأخیر نوشتن</b>\n"
+#~ "<p>\n"
+#~ "این گزینه در صورتی دارای اثر می‌باشد، که همگام‌سازی نیز تنظیم شده باشد. "
+#~ "کارساز NFS اگر مظنون باشد، ممکن است که تقاضای نوشتن مرتبط دیگری در حال "
+#~ "پیشرفت باشد، یا ممکن است به زودی برسد، به صورت عادی، تصدیق تقاضای نوشتن "
+#~ "روی دیسک را کمی به تأخیر می‌اندازد. این اجازه می‌دهد که چندین تقاضای نوشتن "
+#~ "در دیسک با یک عمل تصدیق شود، که می‌تواند موجب بهتر شدن کارایی گردد. اگر "
+#~ "کارساز ‌NFSای درخواستهای اصلی کوچک بی‌ربط دریافت کند، این رفتار می‌تواند "
+#~ "واقعاً کارایی را کاهش دهد؛ پس بدون تأخیر نوشتن برای خاموش کردن آن، در "
+#~ "دسترس است. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "بدون &مخفی کردن‌"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>بدون مخفی‌ کردن</b>\n"
+#~ "<p>\n"
+#~ "این گزینه بر مبنای گزینه‌ای به همین اسم در IRIX NFS، که به طور عادی مهیا "
+#~ "شده است می‌باشد، اگر کارسازی، دو سیستم پرونده، که یکی روی دیگری سوار شده "
+#~ "است را صادر کند، آنگاه کارخواه باید هر دو سیستم پرونده را به طور صریح "
+#~ "برای دسترسی به آنها سوار کند. اگر فقط پدر را سوار کند، فهرست راهنمای "
+#~ "خالیی در جایی که سیستم پرونده دیگر سوار شده است خواهد دید. آن سیستم "
+#~ "پرونده »مخفی« است.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "تنظیم کردن گزینه بدون مخفی کردن در سیستم پرونده، باعث می‌شود که آن مخفی "
+#~ "نباشد، و کارخواهی به طور مقتضی اجازه‌ گرفته، و قادر به حرکت از پدر به آن "
+#~ "سیستم پرونده، بدون اخطار تغییر خواهد بود.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "در هر حال، بعضی از کارخواههای NFS به‌ خوبی از عهده این وضعیت بر‌نمی‌آیند، "
+#~ "برای مثال، امکان دارد که برای دو پرونده در یک سیستم پرونده معلوم، دارای "
+#~ "عدد گره اطلاعاتی یکسان باشند.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "در حال حاضر، گزینه بدون مخفی کردن فقط روی صادرات میزبان تک مؤثر می‌باشد. "
+#~ "این به طور مطمئن، با گروه شبکه، زیرشبکه، یا صادرات نویسه عام کار نمی‌کند.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "این گزینه می‌تواند در بعضی وضعیتها خیلی سودمند باشد، ولی باید با احتیاط "
+#~ "مقرر، و فقط بعد از تأیید این که سیستم کارخواه از عهده وضعیت به طور مؤثر "
+#~ "بر می‌آید، استفاده شود.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "بدون بررسی &زیردرخت‌"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>بدون بررسی زیردرخت</b>\n"
+#~ "<p>\n"
+#~ "این گزینه، بررسی زیردرخت را که دارای مفهومهای امنیتی سست هستند را غیرفعال "
+#~ "می‌کند؛ ولی در بعضی شرایط می‌توانند قابلیت اعتماد را بهبود بخشند.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "اگر زیرفهرست راهنمای یک سیستم پرونده صادر شود، ولی کل سیستم پرونده صادر "
+#~ "نشود، آنگاه هر موقع که تقاضای NFS می‌رسد، کارساز نه تنها باید بررسی کند که "
+#~ "پرونده دستیابی‌شده در سیستم پرونده اختصاص داده شده هست )که آسان است(، بلکه "
+#~ "همچنین باید بررسی کند که آن در درخت صادرشده نیز هست)که سخت‌تر است(. این "
+#~ "بررسی، subtree_check نامیده می‌شود.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "برای انجام این بررسی، کارساز باید شامل بعضی اطلاعات راجع به محل پرونده در "
+#~ "«filehandle» که به کارخواه داده می‌شود، باشد. هنگامی که یک کارخواه "
+#~ "پرونده‌ها را باز می‌کند، ممکن است باعث مشکلاتی در دستیابی به پرونده‌هایی که "
+#~ "تغییر نام داده می‌شوند، بشود )به هر حال، در بسیاری از حالات ساده، این "
+#~ "همچنان کار خواهد کرد(.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "بررسی زیردرخت همچنین برای مطمئن شدن از این‌ است که اگر سیستم پرونده با "
+#~ "no_root_squash صادر شده است، پرونده‌ها در فهرستهای راهنمایی که فقط ریشه به "
+#~ "آنها دستیابی دارد، می‌توانند دستیابی شوند )پایین را ببینید(، حتی خود "
+#~ "پرونده دستیابیهای عمومی بیشتری را اجازه می‌دهد.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "به عنوان یک راهنمای کلی، سیستم پرونده فهرست شخصی به طور عادی در ریشه صادر "
+#~ "می‌شود، و ممکن است ببیند که بسیاری از پرونده‌ها تغییر نام می‌دهند، و باید با "
+#~ "بررسی زیردرخت غیرفعال‌شده صادر شوند. سیستم پرونده‌ای که تقریباً بیشتر فقط "
+#~ "خواندنی است، و حداقل نمی‌بیند که بسیاری از پرونده‌ها تغییر نام "
+#~ "می‌دهند؛ )برای مثال: /usr با /var( و برای زیرفهرستهایی که ممکن است صادر "
+#~ "شوند، باید احتمالاً با بررسی زیردرخت فعال صادر شوند.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&قفلهای ناامن‌"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>قفلهای ناامن</b>\n"
+#~ "<p>\n"
+#~ "این گزینه به کارساز NFS می‌گوید که، به احراز هویت تقاضاهای قفل کردن نیاز "
+#~ "نداشته باشد )برای مثال: تقاضاهایی که از قرارداد NLM استفاده می‌کنند(. به "
+#~ "طور عادی، کارساز NFS به یک تقاضای قفل برای نگه داشتن گواهی‌نامه برای "
+#~ "کاربری که دستیابی خواندن از پرونده را دارد نیاز خواهد داشت. با این پرچم، "
+#~ "هیچ بررسی دستیابی انجام نخواهد شد.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "پیاده‌سازیهای اولیه کارخواه ‌NFS، گواهی‌نامه‌ها را با تقاضاهای قفل "
+#~ "نمی‌فرستادند، و بسیاری از کارخواههای کنونی NFS هنوز وجود دارند، که بر "
+#~ "پیاده‌سازیهای قدیمی پایه‌گذاری شده‌اند. اگر متوجه شدید که فقط می‌توانید "
+#~ "پرونده‌هایی را قفل کنید که قابل خواندن جهانی باشند، از این پرچم استفاده "
+#~ "کنید.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "نگاشت کاربر"
+
+#~ msgid "All s&quash"
+#~ msgstr "تمام &کوبیده شوند‌"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>تمام کوبیده شوند</b>\n"
+#~ "<p>\n"
+#~ "نگاشت تمام شناسه‌های کاربر و شناسه‌های گروه به کاربر بی‌نام. برای فهرستهای "
+#~ "راهنمای قاپ عمومی صادرشده از NFS،  فهرستهای راهنمای اسپول اخبار و غیره، "
+#~ "سودمند است. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "بدون کوبیدن &ریشه‌"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>بدون کوبیدن ریشه</b>\n"
+#~ "<p>\n"
+#~ "کوبیدن ریشه را خاموش کن. کلاً این گزینه برای کارخواههای بدون دیسک سودمند "
+#~ "است.</p>\n"
+#~ "<i>کوبیدن ریشه</i>\n"
+#~ "<p>\n"
+#~ "تقاضاها را از شناسه کاربر/شناسه گروه ۰ به شناسه کاربر/شناسه گروه بی‌نام "
+#~ "نگاشت می‌کند. توجه کنید که این به هیچ شناسه کاربر دیگر، که ممکن است به طور "
+#~ "مساوی حساس باشد، مانند لاوک کاربر، اعمال نمی‌شود.</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "&شناسه  کاربر بی‌نام:‌"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>شناسه کاربر/شناسه گروه بی‌نام</b> <p>این گزینه‌ها به طور صریح شناسه "
+#~ "کاربر و شناسه گروه حساب بی‌نام را تنظیم می‌کنند. این گزینه، اصولاً برای "
+#~ "کارخواههای PC/NFS، که ممکن است بخواهید تمام تقاضاهای ظاهرشده از طرف یک "
+#~ "کاربر باشد، سودمند است.</p>"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "&شناسه گروه بی‌نام:‌"
+
+#~ msgid "Folder:"
+#~ msgstr "پوشه:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "مشترک با &NFS )لینوکس/یونیکس(‌"
+
+#~ msgid "NFS Options"
+#~ msgstr "گزینه‌های NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "&عمومی‌"
+
+#~ msgid "W&ritable"
+#~ msgstr "&قابل نوشتن‌"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "&گزینه‌های بیشتر NFS‌"
+
+#~ msgid "Samba Options"
+#~ msgstr "گزینه‌های Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "&عمومی‌"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "گزینه‌های &بیشتر Samba‌"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr " اجازه به اشتراک گذاشتن پوشه‌ها، به تمام کاربران داده شود"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "فقط کاربران گروه »%1« مجاز به اشتراک گذاشتن پوشه‌ها می‌باشند"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "کاربران »%1« گروه"
+
+#~ msgid "Remove User"
+#~ msgstr "حذف کاربر"
+
+#~ msgid "Add User"
+#~ msgstr "افزودن کاربر"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "اعضای گروه می‌توانند پوشه‌ها را بدون اسم رمز کاربر ارشد به اشتراک بگذارند"
+
+#~ msgid "Change Group..."
+#~ msgstr "تغییر گروه..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "کارسازهای SMB و NFS بر روی این ماشین نصب نشده‌اند، برای فعال‌سازی این "
+#~ "پیمانه، کارسازها باید نصب شوند."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "فعال‌سازی اشتراک‌ پرونده &شبکه محلی‌"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "اشتراک &ساده‌"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "فعال‌سازی اشتراک ساده برای اجازه دادن به کاربران، جهت به اشتراک‌گذاری "
+#~ "پوشه‌ها از پوشه HOME آنها، بدون دانستن اسم رمز کاربر ارشد."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "&اشتراک پیشرفته‌"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "فعال‌سازی اشتراک پیشرفته برای اجازه دادن به کاربران، جهت به اشتراک‌گذاری هر "
+#~ "پوشه‌ای، تا وقتی که آنها دستیابی نوشتن در پرونده‌های پیکربندی را دارند، یا "
+#~ "اسم رمز کاربر ارشد را می‌دانند."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "استفاده از &NFS )لینوکس/یونیکس(‌"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "استفاده از &Samba ))Microsoft(R) Windows(R(‌"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "کاربران &مجاز‌"
+
+#~ msgid "Shared Folders"
+#~ msgstr "پوشه‌های مشترک"
+
+#~ msgid "A&dd..."
+#~ msgstr "&افزودن...‌"
+
+#~ msgid "Chang&e..."
+#~ msgstr "&تغییر...‌"
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>پرونده پیکربندی SAMBA <strong>«smb.conf»</strong> نتوانست پیدا شود؛</"
+#~ "p>مطمئن شوید که  SAMBA را نصب کرده‌اید.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "مشخص کردن محل"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "به دست آوردن محل smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>پرونده <i>%1</i> نتوانست خوانده شود.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "نتوانست پرونده را بخواند"
+
+#~ msgid "Error while opening file"
+#~ msgstr "خطا هنگام باز کردن پرونده"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "خرابی در پیوستن دامنه %1."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>لطفاً، اسم رمزی برای کاربر <b>%1</b>وارد کنید</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr "<qt>خرابی در افزودن کاربر <b>%1</b>به دادگان کاربر Samba.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "خرابی در حذف کاربر %1 از دادگان کاربر Samba."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "لطفاً، برای کاربر »%1« یک اسم رمز وارد کنید"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "خرابی در تغییر اسم رمز کاربر »%1«."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>پیکربندی Samba</h1>·در اینجا می‌توانید کارساز Samba خود را پیکربندی "
+#~ "کنید."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "اگر دارای شبکه خانگی یا شبکه دفتری کوچک هستید، از سطح امنیتی <i>مشترک</i> "
+#~ "استفاده کنید.<br /> این، قبل از اینکه ورودی نیاز باشد، به همه اجازه ‌"
+#~ "خواندن فهرست تمام فهرستهای راهنما و چاپگرهای مشترک شما را می‌دهد."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "اگر دارای شبکه بزرگ‌تری ‌هستید، و نمی‌خواهید که به همه اجازه خواندن فهرست "
+#~ "فهرستهای راهنما و چاپگرهای مشترک را بدون یک ورود بدهید، از سطح امنیتی "
+#~ "<i>کاربر</i> استفاده کنید.<br /><br />اگر می‌خواهید که کارساز Samba خود را "
+#~ "به عنوان <b>کنترل‌کننده دامنه اصلی</b>(PDC) اجرا کنید، باید این گزینه را "
+#~ "تنظیم نمایید."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "اگر دارای شبکه بزرگی هستید، و کارساز Samba باید نام کاربر/اسم رمز را با "
+#~ "گذراندن آن به کارساز SMB دیگر، مانند یک جعبه NT اعتبارسنجی کند، از سطح "
+#~ "امنیتی <i>کارساز</i> استفاده کنید."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "اگر دارای شبکه بزرگی هستید، و کارساز Samba باید نام کاربر/اسم رمز را با "
+#~ "گذراندن آن به کنترل‌کننده دامنه اصلی یا پشتیبان ویندوز NT اعتبارسنجی کند، "
+#~ "از سطح امنیتی <i>دامنه</i> استفاده کنید."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "اگر دارای شبکه بزرگی هستید، و کارساز samba باید به عنوان یک عضو دامنه "
+#~ "درناحیه ADS رفتار کند، از سطح امنیتی <i>ADS</i> استفاده کنید."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "گزینه <em>%1</em> توسط نسخه Samba شما پشتیبانی نمی‌شود"
+
+#~ msgid "Unnamed"
+#~ msgstr "بدون نام"
+
+#~ msgid "&Hide"
+#~ msgstr "&مخفی ‌کردن‌"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "قفل مناسب &Veto‌"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>بعضی از پرونده‌هایی را که انتخاب کرده‌اید، برای اینکه با نقطه آغاز "
+#~ "می‌شوند، مخفی می‌باشند؛ آیا می‌خواهید تمام پرونده‌هایی را که با نقطه آغاز "
+#~ "می‌شوند، بدون علامت کنید؟</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "پرونده‌هایی که با نقطه آغاز می‌شوند"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "بدون علامت کردن مخفی"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "مخفی نگه داشتن"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>بعضی از پرونده‌هایی که انتخاب کرده‌اید، با رشته نویسه عام مطابقت "
+#~ "دارند<b>«%1»</b>آیا می‌خواهید تمام پرونده‌هایی را که با <b>«%1»</b> تطابق "
+#~ "دارند، بدون علامت کنید؟"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "رشته نویسه عام"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "بدون علامت کردن تطبیقها"
+
+#~ msgid "Keep Selected"
+#~ msgstr "برگزیده نگه داشتن"
+
+#~ msgid "Default"
+#~ msgstr "پیش‌فرض"
+
+#~ msgid "Admin"
+#~ msgstr "سرپرست"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>برای این فهرست راهنما<b>دستیابی خواندن عمومی</b> را مشخص کرده‌اید، ولی "
+#~ "حساب مهمان <b>%1</b>، مجوزهای لازم را برای خواندن ندارد.<br />در هر صورت "
+#~ "می‌خواهید ادامه دهید؟</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "اخطار"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>برای این فهرست راهنما<b>دستیابی نوشتن عمومی را</b> مشخص کرده‌اید، ولی "
+#~ "حساب مهمان <b>%1</b>، مجوزهای لازم را برای نوشتن ندارد؛<br />آیا در هر "
+#~ "صورت می‌خواهید ادامه دهید؟</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>برای این فهرست راهنما<b>دستیابی نوشتن عمومی</b>را برای کاربر <b>%1</"
+#~ "b>مشخص کرده‌اید، ولی کاربر مجوزهای لازم را برای نوشتن ندارد؛<br />در هر "
+#~ "صورت می‌خواهید ادامه دهید؟</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>برای این فهرست راهنما<b>دستیابی خواندن عمومی</b>را برای کاربر<b>%1</"
+#~ "b>مشخص کرده‌اید، ولی کاربر مجوزهای لازم را برای خواندن ندارد؛<br />در هر "
+#~ "صورت می‌خواهید ادامه دهید؟</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "از قبل یک مدخل عمومی وجود دارد."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "میزبان از قبل وجود دارد"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "لطفاً، یک نام‌ میزبان یا یک نشانی اینترنتی وارد کنید."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "نام‌ میزبان/نشانی اینترنتی وجود ندارد"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "میزبان »%1« از قبل وجود دارد."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "در حال خواندن پرونده پیکربندی Samba ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "در حال خواندن پرونده پیکربندی NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "لطفاً، مسیری معتبر را وارد کنید."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "فقط پوشه‌ها می‌توانند مشترک شوند."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "پوشه از قبل مشترک شده است."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "سرپرست، اجازه اشتراک با NFS را نمی‌دهد."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "خطا: نتوانست پرونده پیکربندی NFS را بخواند."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "سرپرست، اجازه اشتراک با Samba را نمی‌دهد."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "خطا: نتوانست پرونده پیکربندی Samba  را بخواند."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "باید نامی را برای مشترک Samba وارد کنید."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "باید برای مشترک کردن فهرستهای راهنما اجازه بگیرید."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "پیکربندی اشتراک پرونده..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "کارساز NFS روی این سیستم نصب نشده است"
+
+#~ msgid "Could not save settings."
+#~ msgstr "نتوانست تنظیمات را ذخیره کند."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "نتوانست پرونده »%1« را برای نوشتن باز کند: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "خرابی در ذخیره‌سازی"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>اشتراک پرونده</h1><p>این پیمانه می‌تواند برای فعال‌سازی اشتراک پرونده "
+#~ "روی شبکه، با استفاده از »سیستم پرونده شبکه« )NFS( یا SMB در Konqueror "
+#~ "استفاده شود. آخری شما را قادر به اشتراک پرونده‌های خود با رایانه‌های "
+#~ "Windows(R) روی شبکه‌تان می‌سازد.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "اشتراک پوشه"
+
+#~ msgid "Allowed Users"
+#~ msgstr "کاربران مجاز"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "تمام کاربران از قبل در گروه %1 می‌باشند."
+
+#~ msgid "Select User"
+#~ msgstr "برگزیدن کاربر"
+
+#~ msgid "Select a user:"
+#~ msgstr "یک کاربر انتخاب کنید:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "نتوانست کاربر »%1« را به گروه »%2« بیفزاید"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "نتوانست کاربر »%1« را از گروه »%2« حذف کند"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "باید گروه معتبری را انتخاب کنید."
+
+#~ msgid "New file share group:"
+#~ msgstr "گروه جدید اشتراک پرونده:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "افزودن کاربران از گروه اشتراک پرونده قدیمی به گروه جدید"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "حذف کاربران از گروه اشتراک پرونده قدیمی"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "حذف گروه اشتراک پرونده قدیمی"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "فقط کاربران یک گروه مطمئن، مجاز به اشتراک پوشه‌ها می‌باشند"
+
+#~ msgid "Choose Group..."
+#~ msgstr "انتخاب گروه..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "آیا واقعاً می‌خواهید تمام کاربران را از گروه »%1« حذف کنید؟"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "آیا واقعاً می‌خواهید گروه »%1« را حذف کنید؟"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "خرابی در حذف گروه »%1«."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "لطفاً، گروه معتبری را انتخاب کنید."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "این گروه »%1« وجود ندارد. باید ایجاد شود؟"
+
+#~ msgid "Do Not Create"
+#~ msgstr "ایجاد نشود"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "خرابی در ایجاد گروه »%1«."
+
+#~ msgid "Printer Settings"
+#~ msgstr "تنظیمات چاپگر"
+
+#~ msgid "Pr&inter"
+#~ msgstr "&چاپگر‌"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&مسیر:‌"
+
+#~ msgid "&Queue:"
+#~ msgstr "&صف:‌"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "&به اشتراک‌گذاری تمام چاپگرها‌"
+
+#~ msgid "I&dentifier"
+#~ msgstr "&شناسه‌"
+
+#~ msgid "&Name:"
+#~ msgstr "&نام:‌"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "&توضیح:‌"
+
+#~ msgid "Main Properties"
+#~ msgstr "ویژگیهای اصلی"
+
+#~ msgid "&Printing"
+#~ msgstr "&چاپ‌"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "&گرداننده چاپگر:‌"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "محل گرداننده &چاپگر:‌"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "&پست‌اسکریپت‌"
+
+#~ msgid "Printin&g:"
+#~ msgstr "&چاپ:‌"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr " &کارهای بیشینه چاپ گزارش‌شده:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "کارهای &بیشینه چاپ:‌"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "استفاده از گرداننده &کارخواه‌"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "حالت فرابری &پیش‌فرض‌"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&اجازه میزبانها:‌"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "سرپرست &چاپگر:‌"
+
+#~ msgid "Co&mmands"
+#~ msgstr "&فرمانها‌"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "فرمان &چاپ:‌"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "&فرمان lpq:‌"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "&فرمان lprm:‌"
+
+#~ msgid "lp&resume:"
+#~ msgstr "&از سر گرفتن lp:‌"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&مکث صف:‌"
+
+#~ msgid "&lppause:"
+#~ msgstr "&مکث lp:‌"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "&از سر گرفتن صف:‌"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&متفرقه‌"
+
+#~ msgid "p&reexec:"
+#~ msgstr "&پیش‌اجرا:‌"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "&پیش‌اجرای ریشه:‌"
+
+#~ msgid "root postexec:"
+#~ msgstr "پس‌اجرای ریشه:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "&پس‌اجرا:‌"
+
+#~ msgid "Tunin&g"
+#~ msgstr "&میزان‌سازی‌"
+
+#~ msgid "M&in print space:"
+#~ msgstr " فاصله &کمینه چاپ:‌"
+
+#~ msgid "&Logging"
+#~ msgstr "&ثبت‌"
+
+#~ msgid "S&tatus"
+#~ msgstr "&وضعیت‌"
+
+#~ msgid "Not share&d"
+#~ msgstr "&مشترک نشده است‌"
+
+#~ msgid "&Shared"
+#~ msgstr "&مشترک‌"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "گزینه‌های &پایه‌"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "این یک حوزه متن است، که هنگامی که کارخواهی از کارساز پرس‌و‌جوی فهرست می‌کند، "
+#~ "مشترکهای در دسترس، یا توسط همسایه شبکه یا توسط نمای شبکه، بعد از یک مشترک "
+#~ "دیده می‌شوند."
+
+#~ msgid "Name of the share"
+#~ msgstr "نام مشترک"
+
+#~ msgid "Commen&t:"
+#~ msgstr "&توضیح:‌"
+
+#~ msgid "Security Options"
+#~ msgstr "گزینه‌های امنیت"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "&انکار میزبانها:‌"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "اجازه &میزبانها:‌"
+
+#~ msgid "Guest &account:"
+#~ msgstr "&حساب مهمان:‌"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "اگر این علامت زده شود، ممکن است کاربران خدمت، پرونده‌های داخل فهرست "
+#~ "راهنمای خدمت را ایجاد نکرده یا تغییر ندهند."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "&مهمانها مجاز می‌باشند‌"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "این نام کاربر است، که اگر مهمانها مجاز باشند، برای دستیابی به این فهرست "
+#~ "راهنما استفاده می‌شود"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "این کنترل می‌کند، که آیا این مشترک در فهرست مشترکهای در دسترس، در نمای "
+#~ "شبکه و در فهرست مرور دیده می‌شود."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "جعبه بررسی به شما اجازه  \\\"خاموش کردن\\\" خدمت را می‌دهد. اگر علامت زده "
+#~ "نشود، تمام تلاشها برای متصل شدن به خدمت خراب خواهند شد. این گونه خرابیها "
+#~ "ثبت می‌شوند."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "&گزینه‌های بیشتر‌"
+
+#~ msgid "MB"
+#~ msgstr "مگابایت"
+
+#~ msgid "Min"
+#~ msgstr "کمینه"
+
+#~ msgid "KB"
+#~ msgstr "کیلوبایت"

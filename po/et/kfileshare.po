@@ -1,0 +1,3656 @@
+# translation of kfileshare.po to Estonian
+# Copyright (C) 2004, 2005 Free Software Foundation, Inc.
+#
+# Marek Laane <bald@starman.ee>, 2004-2009.
+# Hasso Tepper <hasso@kde.org>, 2004, 2005.
+# Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2016, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2020-03-16 18:35+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Keelatud"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Luba"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Ai&nult loetav"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Õigused"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "&FS tüüp:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "OS/2 stiilis laiendatud atribuutide toetus"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Kirjutatav"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "OS/2 stiilis laiendatud atribuutide toetus"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Kustutamise skriptid"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Õigused"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Õigused"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Omanik"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Omanik"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grupp"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Õigused"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Asukoht"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Õigused"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Õigused"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Li&gipääs puudub"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Õigused"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "Sh&are this folder with other computers on the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Selle kataloogi jagamine teiste arvutitega ko&htvõrgus"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nimi:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Külalised on lubatud"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Täielik kontroll"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Kirjutuskaitstud"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Li&gipääs puudub"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+#, fuzzy
+#| msgid "Show Samba status &monitor"
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Näita Samba oleku &jälgijat"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Parool"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Parool"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Paroolita"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Parool"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Õigused"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Loobu"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Samba must be installed before folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Kataloogide jagamiseks peab olema paigaldatud Samba."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba"
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Samba paigaldamine"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+#, fuzzy
+#| msgid "The Samba package failed to install."
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Samba paketi paigaldamine nurjus."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+#, fuzzy
+#| msgid "Restart the computer to complete the installation."
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Paigaldamise lõpetamiseks taaskäivita arvuti."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Taaskäivita"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Sa&mba kasutajad"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Failijagamine on välja lülitatud"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Seda kataloogi pole olemas."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "See on jagatud ressursi nimi"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Jagatud"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Loo"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Loo"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Jagatud ressursid"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Samba paigaldamine ..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Jagatud ressurss nimega <strong>%1</strong> on juba olemas.<br /> "
+#~ "Palun vali mingi muu nimi.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba pole sinu süsteemi paigaldatud."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "S&amba kasutamine (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Sambat ei saa paigaldada.</strong><br />Palun kontrolli, kas "
+#~ "kpackagekit on korrektselt paigaldatud.</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Vali kasutajad"
+
+#~ msgid "Select &Users"
+#~ msgstr "Vali kas&utajad"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "L&igipääs"
+
+#~ msgid "&Default"
+#~ msgstr "&Vaikimisi"
+
+#~ msgid "&Read access"
+#~ msgstr "&Lugemisõigus"
+
+#~ msgid "&Write access"
+#~ msgstr "&Kirjutamisõigus"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Administraatori õigused"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Ühine domeeniga"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Verifitseerimine:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Parool:"
+
+#~ msgid "&Username:"
+#~ msgstr "Kas&utajanimi:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domeeni ko&ntroller:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domeen:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Grupi valik"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Vali grupi&d"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Grupi lii&k"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX grupp"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S grupp"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNI&X ja NIS grupp"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Siin saab muuta failis smbpasswd salvestatud Samba kasutajaid.\n"
+#~ "<p>\n"
+#~ "Igal Samba kasutajal peab olemas olema ka vastav UNIX-i kasutaja.\n"
+#~ "Paremal on näha kõik failis passwd salvestatud UNIX-i kasutajad, kes pole "
+#~ "seadistatud Samba kasutajatena.\n"
+#~ "Samba kasutajad on näha vasakul.\n"
+#~ "<p>\n"
+#~ "Uue Samba kasutaja lisamiseks klõpsa nupule <em>&lt; lisa</em>.\n"
+#~ "Valitud UNIX-i kasutajatest saavad seejärel Samba kasutajad ja nad\n"
+#~ "eemaldatakse UNIX-i kasutajate nimekirjast (nad jäävad muidugi ka edasi "
+#~ "UNIX-i kasutajateks).\n"
+#~ "<p>\n"
+#~ "Samba kasutaja eemaldamiseks klõpsa nupule <em>&gt; eemalda</em>.\n"
+#~ "Valitud Samba kasutajad eemaldatakse failist smbpasswd\n"
+#~ "ja nad ilmuvad paremale UNIX-i kasutajatena, kes ei ole Samba kasutajad.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Baasseadistused"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba konfiguratsioonifail:"
+
+#~ msgid "&Load"
+#~ msgstr "&Laadi"
+
+#~ msgid "Server Identification"
+#~ msgstr "Serveri identifikaator"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Töö&grupp:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Anna siin oma töögrupi/domeeni nimi."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Serveri strin&g:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS nimi:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "&Turvatase"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Kasutaja"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domee&n"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>jagatud</i>, kui sul on koduvõrk või väikevõrk "
+#~ "kontoris.<br> See võimaldab kõigil näha jagatud ressursse, enne kui neilt "
+#~ "nõutakse sisselogimist."
+
+#~ msgid "Further Options"
+#~ msgstr "Lisavalikud"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Parooliserveri aadress/nimi:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&m:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "&Külaliskonto:"
+
+#~ msgid "Help"
+#~ msgstr "Abi"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Täpsemat infot iga valiku kohta annab:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Jagatud ressursid"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentaar"
+
+#~ msgid "Properties"
+#~ msgstr "Omadused"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "M&uuda vaikeväärtusi..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Lisa &uus jagatud ressurss..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Muuda jagatud ressurssi..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Ee&malda jagatud ressurss"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Prin&terid"
+
+#~ msgid "Printer"
+#~ msgstr "Printer"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "M&uuda vaikeväärtusi"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Lisa &uus printer"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Muu&da printerit"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Ee&malda printer"
+
+#~ msgid "&Users"
+#~ msgstr "&Kasutajad"
+
+#~ msgid "Disabled"
+#~ msgstr "Keelatud"
+
+#~ msgid "Add"
+#~ msgstr "Lisa"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Eemalda"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X-i kasutajad"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Muu&da parooli..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "Ü&hine domeeniga"
+
+#~ msgid "Advan&ced"
+#~ msgstr "L&isavõimalused"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Siin saab muuta SAMBA serveri lisavõimalusi.\n"
+#~ "Võta siin midagi ette ainult siis, kui tead, mida teed."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Täiustatud jagamine"
+
+#~ msgid "Security"
+#~ msgstr "Turvalisus"
+
+#~ msgid "&General"
+#~ msgstr "Ül&dine"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Allutakse PAM-i piirangutele"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM-i parooli muutus"
+
+#~ msgid "Other Switches"
+#~ msgstr "Muud lülitid"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Lu&batakse usaldusväärsed domeenid"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoiline serveri turvalisus"
+
+#~ msgid "General"
+#~ msgstr "Üldine"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Autentimismeetodid:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&Juurkataloog:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "Liid&esed:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Seotakse külalisega:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Seotakse ainult liidesed"
+
+#~ msgid "Never"
+#~ msgstr "Mitte kunagi"
+
+#~ msgid "Bad User"
+#~ msgstr "Halb kasutaja"
+
+#~ msgid "Bad Password"
+#~ msgstr "Halb parool"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "&Võrdõiguslikud masinad:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmilise RID-i baas:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privaatkataloog:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Pa&rool"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba paroolid"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Paroolide krüptimi&ne"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Samba paroolifail:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Paroolide andmebaasi taustapro&gramm:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Paroolivestlus:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Paroolivestluse silumine"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "sek"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Paroolivestluse aegumine:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Tühjad paroo&lid"
+
+#~ msgid "Password level:"
+#~ msgstr "Parooli tase:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Parooli min. pikkus:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Masina parooli aegumine:"
+
+#~ msgid "Migration"
+#~ msgstr "Migreerumine"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "&Krüptitute uuendamine"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX-i paroolid"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Parooliprogramm:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNI&X-i parooli sünkroniseerimine"
+
+#~ msgid "Userna&me"
+#~ msgstr "Kasutajani&mi"
+
+#~ msgid "User&name map:"
+#~ msgstr "Kasutaja&nime sidumine:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Kasuta&janime tase:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Kohalikud kasutajad peidetakse"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Piiran&gud anonüümsele"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Rhosts kasutamine"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "A&utentimine"
+
+#~ msgid "Client"
+#~ msgstr "Klient"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "K&Liendi signeerimine:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "&Kliendi lihttekstiga autentimine"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Kliendi lanman-autentimine"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Kohustuslik"
+
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Client channel:"
+#~ msgstr "Kliendi kanal:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Klient kasutab spnego't"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Kliendi NTLMv&2 autentimine"
+
+#~ msgid "Server signing:"
+#~ msgstr "Serveri signeerimine:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman-autentimine"
+
+#~ msgid "Server channel:"
+#~ msgstr "Serveri kanal:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Kasutab sp&nego't"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM autentimine"
+
+#~ msgid "Logging"
+#~ msgstr "Logimine"
+
+#~ msgid "L&og file:"
+#~ msgstr "Lo&gifail:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "M&aks. logi suurus:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "&Süsteemne logi:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Log&itase:"
+
+#~ msgid "S&witches"
+#~ msgstr "Lüliti&d"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Ai&nult süsteemne logi"
+
+#~ msgid "Status"
+#~ msgstr "Olek"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Ajate&mpel"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosekundit"
+
+#~ msgid "Debug pid"
+#~ msgstr "Silumise PID"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Sil&umise UID"
+
+#~ msgid "Tuning"
+#~ msgstr "Häälestus"
+
+#~ msgid "Modules"
+#~ msgstr "Moodulid"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "&Eellaaditavad moodulid:"
+
+#~ msgid "Switches"
+#~ msgstr "Lülitid"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd puhver"
+
+#~ msgid "Use &mmap"
+#~ msgstr "&Mmap kasutamine"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Kerneli muutuste mä&rguanne"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Masinanime &otsing"
+
+#~ msgid "Read ra&w"
+#~ msgstr "T&oorlugemine"
+
+#~ msgid "Write raw"
+#~ msgstr "Toorkirjutamine"
+
+#~ msgid "Times"
+#~ msgstr "Ajad"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Muutuste märguande aegumine:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "Hoita&kse elus:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "min"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Surmaaaeg:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q puhvri aegumine:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "&Nimepuhvri aegumine:"
+
+#~ msgid "Sizes"
+#~ msgstr "Suurused"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Ketta maks. suurus:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "L&ugemise suurus:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Stat-puhvri suurus:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Pa&keti maks. suurus:"
+
+#~ msgid "Numbers"
+#~ msgstr "Numbrid"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Maks. smbd protsesse:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Maks. avatud faile:"
+
+#~ msgid "Printing"
+#~ msgstr "Trükkimine"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "&Trükitöid kokku:"
+
+#~ msgid "Drivers"
+#~ msgstr "Draiverid"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 draiveri sidumine:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap-faili ni&mi:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Pri&nteri draiveri fail:"
+
+#~ msgid "Commands"
+#~ msgstr "Käsud"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Pordinäitamise käsk:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Printeri lisamise käsk:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Printeri kustutamise käsk:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Printerite &laadimine"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Puhverdusfai&lide keelamine"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Näidatakse printerinõu&stajat"
+
+#~ msgid "Domain"
+#~ msgstr "Domeen"
+
+#~ msgid "L&ocal master"
+#~ msgstr "K&ohalik master"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domee&ni master"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domeeni&kontroller"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Eelistatud &master"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS &tase:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domeeni admin grupp:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domeeni külalise (guest) grupp:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "&WINS väljas"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Käitumine WI&NS serverina"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Mõne muu WINS serveri kas&utamine"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "W&INS serveri seadistused"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS pu&hverserver"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS &haak:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Maks. WINS e&lusolekuaeg:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Min. WINS elusolekuaeg:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS serveri IP või DNS nimi"
+
+#~ msgid "General Options"
+#~ msgstr "Üldised valikud"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS partnerid:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS puh&verserver"
+
+#~ msgid "Filenames"
+#~ msgstr "Failinimed"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Üldi&ne"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "P&unktid eemaldatakse"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Moonutamine"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Moonutus&pinu:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Moonutuspre&fiks:"
+
+#~ msgid "Specia&l"
+#~ msgstr "E&ri"
+
+#~ msgid "Stat cache"
+#~ msgstr "Stat-puhver"
+
+#~ msgid "Locking"
+#~ msgstr "Lukustamine"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Kasutatakse ker&neli oplocki"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Katal&oogid"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Lu&kukataloog:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "P&ID-kataloog"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Luku küsimine"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Luku küsimise kordi:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Luku küsimise in&tervall:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Täppishäälestus"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Oplocki katkestamise ooteaeg:"
+
+#~ msgid "milliseconds"
+#~ msgstr "msek"
+
+#~ msgid "Charset"
+#~ msgstr "Kooditabel"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS kooditabel:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X kooditabel:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Ku&va kooditabel:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Kooditabel:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Korrektsed sümbo&lid:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Kooditabeli kataloog:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Ko&deerimissüsteem:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Kliendi kooditabel:"
+
+#~ msgid "Logon"
+#~ msgstr "Sisselogimine"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Lisamise skriptid"
+
+#~ msgid "Add user script:"
+#~ msgstr "Kasutaja lisamise skript:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Kasutaja gruppi lisamise skript:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Gr&upi lisamise skript:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Masina lisamise skript:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Grupi kustutamise skript:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Kasutaja kustutamise skript:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Kasutaja grupist kustutamise skript:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Primaarse grupi skript"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Pr&imaarse grupi määramise skript:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Seiskamine"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "S&eiskamise skript:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Seiskamise katkestamise skript:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Sisse&logimise asukoht:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Sisselo&gimise kodukataloog"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Sisselogi&mise ketas:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Sisselogimise s&kript:"
+
+#~ msgid "Socket"
+#~ msgstr "Sokkel"
+
+#~ msgid "Socket address:"
+#~ msgstr "Sokli aadress:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Sokli valikud"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Lubab või keelab SSL režiimi"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Lubab või keelab SSL režiimi tervikuna. Kui on välja lülitatud, käitub ka "
+#~ "toimiva SSL-iga Samba täpselt nagu SSL-ita Samba. Kui on sisse lülitatud, "
+#~ "sõltub muutujatest 'SSL-i nõudega masinad' (ssl hosts) ja 'SSL-i nõudeta "
+#~ "masinad' (ssl hosts resign), kas SSL ühendust nõutakse või mitte.\n"
+#~ "\n"
+#~ "Seda saab kasutada ainult juhul, kui sinu süsteemis on kompileeritud SSL-"
+#~ "i teegid ja konfigureerimisel kasutati võtit --with-ssl."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "SSL lubami&ne"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL-i &nõudega masinad:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL ent&roopiabaidid:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL šifrid:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL-i nõu&deta masinad:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL ühi&lduvus"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL SK sertifikaadikataloog:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL entroopiafail:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL EGD sokkel:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL versioon:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL SK serftifikaadifail:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL nõuab kliendilt sertifikaati"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL kliendi võti:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL nõua&b serverilt sertifikaati"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L serveri sertifikaat:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL kliendi sertifikaat:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL serveri &võti:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokoll"
+
+#~ msgid "Ti&me server"
+#~ msgstr "A&jaserver"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "Suur lu&gemine/kirjutamine"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX-i laiendid"
+
+#~ msgid "Read bmpx"
+#~ msgstr "BMPX lugemine"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokolli versioonid"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "T&eatatakse kui:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Teatatav versioon:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokoll:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Maks. protokoll:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Min. protokoll:"
+
+#~ msgid "Limits"
+#~ msgstr "Limiidid"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&ks. üheaegseid toiminguid:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Maks. e&lusolekuaeg:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "SMB portide jälgimine"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB pordid:"
+
+#~ msgid "Browsing"
+#~ msgstr "Sirvimine"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM i&ntervall:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M teadaanne:"
+
+#~ msgid "Sec"
+#~ msgstr "sek"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Võrgu sir&vimise sünkroniseerimine:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Sir&vimisnimekiri"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "&Täiustatud sirvimine"
+
+#~ msgid "Pre&load:"
+#~ msgstr "L&aaditakse eelnevalt:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Tüüpkodukatal&oog:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Tüüpshel&l:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind eraldaja:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Tüüpprimaargrupp:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbin&d puhverdusaeg:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "A&CL ühilduvus:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind kasutajate üleslugemine"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind gruppide üleslugemine"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind kasutab vaikedomeeni"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind kohalike kontode lubamine"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Ainult Windbindi usaldusväärsed domeenid"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbindi pesastatud grupid"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBIOS-e s&koop:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS-e aliased:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "NetBIOS kee&latud"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Ni&me lahendamise järjekord:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "MS&DFS masin"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP su&fiks:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP masina sufiks:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP kasutaja sufiks:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP &grupi sufiks:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap sufiks:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP filter:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP ad&min DN:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap taustaprogramm:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP dubleerimisuinak:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Väljas"
+
+#~ msgid "Start_tls"
+#~ msgstr "Elusoleku algus"
+
+#~ msgid "On"
+#~ msgstr "Sees"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDA&P sünkroniseerimine:"
+
+#~ msgid "Only"
+#~ msgstr "Ainult"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP D&N kustutamine"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Jagatud ressursi &lisamise käsk:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Jagatud ressursi muutmise käsk:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Jagatud ressursi k&ustutamise käsk:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Sõnu&mi käsk:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "D&free käsk"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "&Kvoodi määramise käsk:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Kvoodi hankimise käsk:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Toiming paa&nika puhul:"
+
+#~ msgid "Misc"
+#~ msgstr "Muud"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Muud"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Peidetakse koha&likud kasutajad"
+
+#~ msgid "Default service:"
+#~ msgstr "Vaiketeenus:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "A&janihe:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "min"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Võrgus kuulutami&ne:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Lähtekeskkond:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS kodukataloog"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Kodukataloogi sidumine:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Utmp kataloo&g:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp kataloog:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Silumine"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT oleku toetus"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB toetus"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT toru t&oetus"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Jagatud ressursi lisamine/muutmine"
+
+#~ msgid "Pixmap"
+#~ msgstr "Pilt"
+
+#~ msgid "D&irectory"
+#~ msgstr "K&ataloog"
+
+#~ msgid "&Path:"
+#~ msgstr "Asuko&ht:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Kõigi ko&dukataloogide jagamine"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tifikaator"
+
+#~ msgid "Na&me:"
+#~ msgstr "Ni&mi:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Komme&ntaar:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "&Põhiomadused"
+
+#~ msgid "Read onl&y"
+#~ msgstr "A&inult loetav"
+
+#~ msgid "Pub&lic"
+#~ msgstr "A&valik"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Sir&vimise õigus"
+
+#~ msgid "A&vailable"
+#~ msgstr "Saa&daolev"
+
+#~ msgid "&Security"
+#~ msgstr "Turvalisu&s"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Külalis&ed"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "See on kasutajanimi, millele võimaldatakse ligipääs külalisele lubatud "
+#~ "teenustele. Sellele kasutajale antud õigused kehtivad kõigile, kes "
+#~ "ühinevad teenusega külalisena (guest). Tavaliselt on see kasutaja olemas "
+#~ "paroolifails, kuid tal ei ole kehtivat kasutajanime. Enamasti on mõistlik "
+#~ "valida siin konto \\\"ftp\\\". Kui mingile teenusele on määratud "
+#~ "kasutajanimi, siis arvestatakse seda nime."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Külaliskonto:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Selle märkimisel ei nõuta teenusega ühendumiseks parooli. Kasutatakse "
+#~ "külalise (guest) konto õigusi."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Lubatakse ainult külaliste ühendus&i"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&Masinad"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Vastupidine lubatud masinatele - siin toodud masinatele EI lubata "
+#~ "ligipääsu teenustele, kui just konkreetsetel teenustel ei ole oma "
+#~ "nimekrija, mis siinse tühistab. Kui nimekirjad on konfliktis, "
+#~ "arvestatakse esmalt lubatute nimekirja."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Siin on komaga, tühikuga või tabeldusmärgiga eraldatult kirjas masinad, "
+#~ "millel on lubatud teenust kasutada."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "L&ubatud masinad:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Keela&tud masinad:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "N&imeviidad"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Lubatakse järgida nimeviitu"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr "Lubatakse järgida nimeviitu, mis osutavad välja&poole kataloogipuud"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Kui klient ei anna kasutajanime, kontrollitakse järgmiste "
+#~ "kasutajanimede parooli:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Lu&batakse ainult toodud nimekirjas olevate kasutajanimede ühendumist"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Peidetud &failid"
+
+#~ msgid "Hidden"
+#~ msgstr "Peidetud"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto Oplock"
+
+#~ msgid "Size"
+#~ msgstr "Suurus"
+
+#~ msgid "Date"
+#~ msgstr "Kuupäev"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Va&litud failid"
+
+#~ msgid "Hi&de"
+#~ msgstr "Pei&detud"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto oplo&ck"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Käsitsiseadistus"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ve&to failid:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Veto oplock fa&ilid:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "P&eidetud failid:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Peidetakse kirjutamisõiguseta &failid"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Peidetakse &spetsiaalsed failid"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Peidetakse punkti&ga algavad failid"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Peidetakse lu&gemisõiguseta failid"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Muud"
+
+#~ msgid "Force Modes"
+#~ msgstr "Sundrežiimid"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Sundkataloogi turvar&ežiim:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Sundtu&rvarežiim:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Sundkataloog&i režiim:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Sun&dloomise režiim:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maskid"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Kataloogi turvamask:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Turva&mask:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Ka&taloogimask:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Loomismas&k:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "&Profiili ACL-id"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Päritavad AC&L-id"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT ACL toetus"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "T&undmatu ACL-i sundkasutaja:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Pär&itavate ACL-ide vastendamine"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Õigused päritakse emakataloogilt"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Lubatakse loetavate failide kustutamine"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS atribuutide vastendamine"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "DOS-i arhii&viatribuudi vastendamine UNIX-i omaniku käivitusbitiga"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr ""
+#~ "DOS-i peidetud atribuudi vastendamine UNI&X-i globaalse käivitusbitiga"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "DOS-i süsteemiatribuudi vastendamine UNIX-i &grupi käivitusbitiga"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "DOS-i atribuudid salvestatakse laiendatud atribuudina"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Ran&ge sünkroniseerimine"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Sünk&roniseeritakse alati"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "&Range ruumieraldus"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Kasutatakse sen&dfile'i"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maks. arv üheaegseid ühendusi:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Kirjutamispuhvri &suurus:"
+
+#~ msgid "bytes"
+#~ msgstr "baiti"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Blo&ki suurus:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Kliendipoolne puhverdusree&gel:"
+
+#~ msgid "manual"
+#~ msgstr "käsitsi"
+
+#~ msgid "documents"
+#~ msgstr "dokumendid"
+
+#~ msgid "programs"
+#~ msgstr "programmid"
+
+#~ msgid "disable"
+#~ msgstr "keelatud"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Nimemoonutus"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Ni&memoonutuse lubamine"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Tõ&stu moonutamine"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Tõ&st säilitatakse"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Lühinim&e tõstu säilitamine"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "&Tõstutundlik"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "&Vaiketõst"
+
+#~ msgid "Lower"
+#~ msgstr "väiketähed"
+
+#~ msgid "Upper"
+#~ msgstr "suurtähed"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Moonutusmä&rk:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "M&oonutuste seosed:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Moonutusmeetod:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Muud valikud"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "&Peidetakse lõpetav punkt"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS-i failirežiim"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS-i fa&iliajad"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS-i failiaja lahendus"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Lukustuse lubam&ine"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Lukustami&ne"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Karm lukus&tus"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Blokeerin&gulukud"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "POSI&X lukustamine"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Jagagamisrežiimi&d"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Opo&rtunistliku lukustuse (oplock) kasutamine"
+
+#~ msgid "O&plocks"
+#~ msgstr "O&plock"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Le&vel2 oplockid"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Oplock konkurentsi li&miit:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Võlts-oplo&ck"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "VFS ob&jektid:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "V&FS valikud:"
+
+#~ msgid "Exec"
+#~ msgstr "Käivitamine"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Täitmis&eelne:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Administ&raatori täitmiseelne"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "&Täitmisjärgne:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Administraatori täitmis&järgne:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "Täitmiseelne su&lgemine"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "&Administraatori täitmiseelne sulgemine"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Kettanimi:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Maa&giline skript:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Maag&iline väljund:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Ei sise&neta:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs pro&xy"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Käsu setdir lu&bamine"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Võltsitud &kataloogi loomise ajad"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs juur"
+
+#~ msgid "&Help"
+#~ msgstr "&Abi"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Kasutajad"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Kõik &määramata kasutajad"
+
+#~ msgid "Reject"
+#~ msgstr "Keeldu"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Mää&ratud kasutajad"
+
+#~ msgid "Access Rights"
+#~ msgstr "Ligipääsuõigused"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Lis&a kasutaja..."
+
+#~ msgid "E&xpert"
+#~ msgstr "&Ekspertrežiim"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Lisa &grupp..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Eemalda &valitud"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Kõigil kasutajail on &järgmise kasutaja/grupi õigused"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Koh&ustuslik kasutaja:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Kohustuslik g&rupp:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Ligipääsu modifikaatorid"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Ligipääsuõigused"
+
+#~ msgid "Others"
+#~ msgstr "Muud"
+
+#~ msgid "Read"
+#~ msgstr "Lugemine"
+
+#~ msgid "Write"
+#~ msgstr "Kirjutamine"
+
+#~ msgid "Sticky"
+#~ msgstr "Kleepuv"
+
+#~ msgid "Set GID"
+#~ msgstr "SGID"
+
+#~ msgid "Set UID"
+#~ msgstr "SUID"
+
+#~ msgid "Special"
+#~ msgstr "Spetsiaalne"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Kasutaja seadistused"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Kehti&vad kasutajad:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administraatorist kasutajad:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "M&ittekehtivad kasutajad:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Kirjutamisõigusega:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Lu&gemisõigusega:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Lubatud &masinad"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Lubatud masinate nimekiri"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Siin näidatakse masinaid, millel on lubatud antud kataloogi üle NFS "
+#~ "kasutada.\n"
+#~ "Esimeses veerus on masina nimi või aadress, teises ligipääsu parameetrid. "
+#~ "Nimi '*' tagab avaliku ligipääsu."
+
+#~ msgid "&Add Host..."
+#~ msgstr "Lis&a masin..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Muu&da masinat..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Eemalda masin"
+
+#~ msgid "Name/Address"
+#~ msgstr "Nimi/aadress"
+
+#~ msgid "Parameters"
+#~ msgstr "Parameetrid"
+
+#~ msgid "Host Properties"
+#~ msgstr "Masina omadused"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Nimi/aadress:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nime/aadressiväli</b>\n"
+#~ "<p>\n"
+#~ "Siin saab anda masina nime või aadressi.<br>\n"
+#~ "Masinat on võimalik määratleda mitmel moel:\n"
+#~ "<p>\n"
+#~ "<i>konkreetne masin</i>\n"
+#~ "<p>\n"
+#~ " See on levinuim viis. Masina võib anda nimelahendjale tuntud lühendiga, "
+#~ "täielikult kvalifitseeritud domeeninimega või IP aadressiga.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>võrgugrupid</i>\n"
+#~ "<p>\n"
+#~ " NIS võrgugrupid (netgroups) võib anda kujul @group. Liikmelisuse "
+#~ "kontrollimisel arvestatakse sel juhul ainult iga grupi liikmeid. Tühje "
+#~ "masinaid või kriipsu (-) sisaldavaid kirjeid ignoreeritakse.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>metamärgid</i>\n"
+#~ "<p>\n"
+#~ " Masinanimed võivad sisaldada metamärke * ja ?. Seda saab pruukida "
+#~ "ekspordifaili kompaktsemaks muutmiseks. Näiteks *.cs.suva.ee vastab "
+#~ "kõigile masinatele domeenis cs.suva.ee. Siiski jätavad metamärgid "
+#~ "arvestada domeeninimes leiduvad punktid, nii et toodud näites ei leita "
+#~ "näiteks masinat a.b.cs.suva.ee.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP võrgud</i>\n"
+#~ "<p>\n"
+#~ " Kataloogid võib ka eksportida ühekorraga kõigile masinatele IP "
+#~ "(alam)võrgus. Selleks tuleb anda IP-aadress ja võrgumask kujul aadress/"
+#~ "võrgumask, kus võrgumask võib olla nii punktidega eraldatud numbrite kui "
+#~ "ka maski pikkuse kujul (näiteks nii `/255.255.252.0' kui ka `/22', mis on "
+#~ "lisatud võrgu baasaadressile, annavad tulemuseks ühesugused alamvõrgud).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "A&valik ligipääs"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Avalik ligipääs</b>\n"
+#~ "<p>\n"
+#~ "Selle valimisel on masina aadress üksik metamärk, mis tähendabki avalikku "
+#~ "ligipääsu.\n"
+#~ "See võrdub metamärgi andmisega aadressiväljal.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Valikud"
+
+#~ msgid "&Writable"
+#~ msgstr "&Kirjutatav"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Kirjutatav</b>\n"
+#~ "<p>\n"
+#~ "Lubab NFS kettale esitada nii lugemis- kui kirjutamissoove.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Vaikimisi ei lubata ühtki soovi, mis muudab failisüsteemi.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Ebaturval&ine"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ebaturvaline</b>\n"
+#~ "<p>\n"
+#~ "Märkimisel ei nõuta, et soovid pärineks internetipordist, mis on väiksem "
+#~ "kui IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Kui sa ei ole kindel, jäta märkimata.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sünkroonis"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Sünkroonis</b>\n"
+#~ "<p>\n"
+#~ "See nõuab, et kirjutatavad failid oleks alati kettale salvestatud, enne "
+#~ "kui kirjutamine lõpeb. See on vajalik andmete turvalisuse tagamiseks "
+#~ "näiteks serveri krahhi korral, kuid mõjutab muidugi tuntavalt jõudlust.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Vaikimisi lubatakse serveril andmeid kirjutada siis, kui ta on selleks "
+#~ "valmis.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Kir&jutamine viivituseta"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Kirjutamine viivituseta</b>\n"
+#~ "<p>\n"
+#~ "See mõjub ainult siis, kui valitud on 'sünkroonis'. NFS server viivitab "
+#~ "tavaliselt veidi kettale kirjutamisega, kui tal on kahtlus, et mõni "
+#~ "sellega seotud kirjutamissoov kas veel käib või kohe saabub. See võimalus "
+#~ "lubab kettale salvestada mitu kirjutamissoovi korraga, mis suurendab "
+#~ "tublisti jõudlust. Kui NFS server saab peamiselt väikeseid omavahel "
+#~ "sidumata soove, võib see aga jõudlust hoopis kärpida, mistõttu selle "
+#~ "võimaluse saab ka vajaduse korral välja lülitada. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "&Peitmiseta"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Peitmiseta</b>\n"
+#~ "<p>\n"
+#~ "See on sarnane samanimelise võimalusega (nohide) IRIX NFS-il. Kui server "
+#~ "ekspordib kaht failisüsteemi, millest üks on teisele ühendatud, siis "
+#~ "klient peab tavaliselt otseselt ühendama mõlemad failisüsteemid, et neile "
+#~ "ligi pääseda. Kui ta ühendab ainult eellassüsteemi, on seal, kuhu on "
+#~ "ühendatud teine failisüsteem, näha ainult tühi kataloog. See tähendab, et "
+#~ "failisüsteem on \"peidetud\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Siinse võimaluse valimine ei peida failisüsteemi ning vastavate õigustega "
+#~ "klient võib eellas-failisüsteemilt järglassüsteemile liikuda ilma midagi "
+#~ "erilist ette võtmata või õigupoolest muutust märkamatagi.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Mõned NFS kliendid ei tule sellise asjaga siiski väga hästi toime, sest "
+#~ "siis on näiteks võimalik, et kahel näiliselt ühes failisüsteemis asuval "
+#~ "failil on sama inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Praegu on peitmiseta võimalus korralikult kasutatav ainult üksikmasina "
+#~ "väljajagamise korral. Võrgugruppide, alamvõrgu või metamärkidega ekspordi "
+#~ "korral see väga hästi ei toimi.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Mõnes olukorras võib see võimalus olla väga kasulik, kuid igal juhul "
+#~ "tuleks seda pruukida ettevaatlikult ja alles pärast selguselejõudmist, et "
+#~ "kliendi süsteem suudab olukorraga toime tulla.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Alampu&u kontrollita"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Alampuu kontrollita</b>\n"
+#~ "<p>\n"
+#~ "See keelab alampuu kontrolli, mis mõnevõrra vähendab turvalisust, kuid "
+#~ "võib teatud olukorras parandada töökindlust.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Kui jagatakse välja failisüsteemi alamkataloog, aga mitte terve "
+#~ "failisüsteem, peab server NFS soovi saabudes kontrollima mitte ainult "
+#~ "seda, et kasutatav fail asub sobivas failisüsteemis (see on päris "
+#~ "lihtne), vaid ka seda, et see asub väljajagatavas puus (mis on palju "
+#~ "keerulisem). Seda nimetataksegi alampuu kontrolliks (subtree_check).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Sellise kontrolli teostamiseks peab server lisama teabe faili asukoha "
+#~ "kohta niinimetatud \"failipidemesse\", mis edastatakse kliendile. See "
+#~ "võib tekitada probleeme ligipääsul failidele, mis nimetati ümber ajal, "
+#~ "mil need olid kliendil avatud (paljudel lihtsamatel juhtudel ei juhtu "
+#~ "siiski midagi halba).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Alampuu kontrolliga tagatakse ka see, et sellistele failidele "
+#~ "kataloogides, millele on ligipääs ainult administraatoril, pääseb ligi "
+#~ "ainult juhul, kui failisüsteem on välja jagatud administraatorit "
+#~ "teisendamata (vaata allpool), isegi juhul, kui fail ise võimaldab laiemat "
+#~ "ligipääsu.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Rusikareeglina tuleks kodukataloogi failisüsteem, mis tavaliselt "
+#~ "jagatakse välja juurena ja kus võib ette tulla hulganisti failide "
+#~ "ümbernimetamisi, eksportida alampuu kontrolli välja lülitades. Peamiselt "
+#~ "lugemiseks mõeldud failisüsteem, kus usutavasti failide ümbernimetamine "
+#~ "on harv nähtus (nt. /usr või /var) ja milles jagatakse välja "
+#~ "alamkatalooge, tuleks tõenäoliselt välja jagada alampuu kontrolli "
+#~ "lubades.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "E&baturvaline lukustus"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ebaturvaline lukustus</b>\n"
+#~ "<p>\n"
+#~ "See paneb NFS serveri loobuma nõudmast autentimist lukustussoovide korral "
+#~ "(s.t soovid, mis kasutavad NLM protokolli). Tavaliselt nõuab NFS server "
+#~ "lukustussoovi korral selle kasutaja tunnuseid, kel on faili lugemisõigus. "
+#~ "Selle lipu korral aga seda ei kontrollita.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Varasemad NFS klientrakendused ei saatnud lukustussoovidega tunnuseid ja "
+#~ "veel tänagi ei tee seda paljud NFS kliendid. Kasuta seda lippu, kui "
+#~ "leiad, et saad lukustada ainult globaalselt loetavaid faile.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Kasutaja vastendamine"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Kõigi teisendamine"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Kõigi teisendamine</b>\n"
+#~ "<p>\n"
+#~ "Seob kõik UID-id ja GID-id anonüümse kasutajaga. Mõistlik avalike FTP "
+#~ "kataloogide, uudistegruppide puhverkataloogide jms. väljajagamisel NFS "
+#~ "kaudu. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Administraato&rit ei teisendata"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Administraatorit ei teisendata</b>\n"
+#~ "<p>\n"
+#~ "Lülitab administraatori teisendamise välja. Mõistlik peamiselt "
+#~ "terminalide korral.\n"
+#~ "</p>\n"
+#~ "<i>administraatori teisendamine</i>\n"
+#~ "<p>\n"
+#~ "Seob UID/GID 0 soovid anonüümse kasutaja UID/GID-iga. Pane tähele, et see "
+#~ "ei kehti muude, samuti tundlikuks osutuda võivate UID-ide kohta, näiteks "
+#~ "kasutaja 'bin'.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonüümne &UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonüümne UID/GID</b> <p> Nendega määratakse otseselt anonüümse konto "
+#~ "UID ja GID. Peamiselt mõttekas PC/NFS klientidele, kus soovitakse lasta "
+#~ "kõigil soovidel näida ühe kasutaja soovidena. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonüümne &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Kataloog:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "&NFS kasutamine (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS valikud"
+
+#~ msgid "Pu&blic"
+#~ msgstr "A&valik"
+
+#~ msgid "W&ritable"
+#~ msgstr "Ki&rjutatav"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Rohkem NFS valikui&d"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba valikud"
+
+#~ msgid "P&ublic"
+#~ msgstr "&Avalik"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Rohk&em Samba valikuid"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Katalooge lubatakse jagada kõigil kasutajatel"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Katalooge lubatakse jagada ainult grupi '%1' kasutajatel"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "'%1' grupi kasutajad"
+
+#~ msgid "Remove User"
+#~ msgstr "Kasutaja eemaldamine"
+
+#~ msgid "Add User"
+#~ msgstr "Kasutaja lisamine"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Grupi liikmed võivad katalooge jagada administraatori paroolita"
+
+#~ msgid "Change Group..."
+#~ msgstr "Muuda gruppi..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB ja NFS serverid ei ole arvutisse paigaldatud. Selle mooduli "
+#~ "kasutamiseks aga peavad need olema paigaldatud."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Lubatakse &failijagamine kohtvõrgus"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Li&htne jagamine"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Sisselülitamisel võivad kasutajad jagada oma kodukataloogi katalooge ilma "
+#~ "administraatori parooli teadmata."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "&Täiustatud jagamine"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Sisselülitamisel võivad kasutajad jagada mis tahes kataloogi, kui neil on "
+#~ "vajalike seadistusfailide kirjutamise õigus või kui nad teavad "
+#~ "administraatori parooli."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "&NFS kasutamine (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "&Samba kasutamine (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Lu&batud kasutajad"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Jagatud kataloogid"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Lis&a..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Muuda..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>SAMBA konfiguratsioonifaili <strong>'smb.conf'</strong> ei leitud.</"
+#~ "p>Palun kontrolli, et SAMBA on ikka paigaldatud.\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Asukoha määramine"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba seadistustefail\n"
+#~ "*|Kõik failid"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Hangi smb.conf asukoht"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Fail <i>%1</i> ei ole loetav.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Faili lugemine nurjus"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Viga faili avamisel"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Ühinemine domeeniga %1 nurjus."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Palun anna kasutaja <b>%1</b> parool</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Kasutaja <b>%1</b> lisamine Samba kasutajate andmebaasi nurjus.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Kasutaja %1 eemaldamine Samba kasutajate andmebaasist nurjus."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Palun anna kasutaja %1 parool"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Kasutaja %1 parooli muutmine nurjus."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Samba seadistused</h1> siin saab seadistada oma SAMBA serverit."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>jagatud</i>, kui sul on koduvõrk või väikevõrk "
+#~ "kontoris.<br /> See võimaldab kõigil näha jagatud katalooge ja "
+#~ "printereid, enne kui neilt nõutakse sisselogimist."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>kasutaja</i>, kui sul on suurem võrk ja sa ei soovi, "
+#~ "et kõik näeksid jagatud katalooge ja printereid ilma sisse logimata.<br /"
+#~ "><br />Kui soovid panna Samba serveri tööle <b>primaarse "
+#~ "domeenikontrollerina</b> (PDC), peaksid samuti selle võimaluse valima."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>server</i>, kui sul on suur võrk ja Samba server "
+#~ "peab kontrollima kasutajanime ning parooli edastades selle mõnele muule "
+#~ "SMB serverile, näiteks NT masinale."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>domeen</i>, kui sul on suur võrk ja Samba server "
+#~ "peab kontrollima kasutajanime ning parooli enne selle edastamist Windowsi "
+#~ "primaarsele või varudomeenikontrollerile."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Kasuta turvataset <i>ADS</i>, kui sul on suur võrk ja Samba server peab "
+#~ "toimima ADS domeeni liikmena."
+
+#~ msgid "Sorry"
+#~ msgstr "Vabandust"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Sisestasid kaks erinevat parooli. Palun proovi uuesti."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Sinu Samba versioon ei toeta võimalust <em>%1</em>"
+
+#~ msgid "Unnamed"
+#~ msgstr "Nimetu"
+
+#~ msgid "&Hide"
+#~ msgstr "&Peidetud"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto Oplock"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Mõned valitud failidest on peidetud, sest nende nimi algab punktiga. "
+#~ "Soovid sa eemaldada peitmismärke kõigilt punktiga algavatelt failidelt?</"
+#~ "qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Punktiga algavad failid"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Eemalda punkt"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Jäta peidetuks"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Mõned valitud failid sobivad metamärgiga stringile <b>'%1'</b>. "
+#~ "Kas soovid eemaldada märke kõigilt failidelt, millele sobib <b>'%1'</b>"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Metamärgiga string"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Eemalda sobivad"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Hoia valitud alles"
+
+#~ msgid "Default"
+#~ msgstr "Vaikimisi"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Määrasid selle kataloogi <b>avalikult loetavaks</b>, kuid "
+#~ "külaliskontol <b>%1</b> ei ole vajalikku lugemisõigust.<br />Kas soovid "
+#~ "sellele vaatamata jätkata?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Hoiatus"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Määrasid selle kataloogi <b>avalikult kirjutatavaks</b>, kuid "
+#~ "külaliskontol <b>%1</b> ei ole vajalikku kirjutamisõigust.<br />Kas "
+#~ "soovid sellele vaatamata jätkata?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Andsid kasutajale <b>%1</b> selles kataloogis <b>kirjutamisõiguse</"
+#~ "b>, kuid kasutajal ei ole vajalikku kirjutamisõigust.<br />Kas soovid "
+#~ "sellele vaatamata jätkata?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Andsid kasutajale <b>%1</b> selles kataloogis <b>lugemisõiguse</b>, "
+#~ "kuid kasutajal ei ole vajalikku lugemisõigust.<br />Kas soovid sellele "
+#~ "vaatamata jätkata?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Avalik kirje on juba olemas."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Masin on juba olemas"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Palun anna masinanimi või IP aadress."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Masina nimi/IP aadress puudub"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Masin '%1' on juba olemas."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Samba konfiguratsioonifaili lugemine..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "NFS konfiguratsioonifaili lugemine..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Palun anna korrektne asukoht."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Jagada saab ainult katalooge."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "See kataloog on juba jagatud."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Administraator ei luba jagamist NFS-iga."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Viga: NFS seadistustefaili lugemine nurjus."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Administraator ei luba jagamist Sambaga."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Viga: Samba seadistustefaili lugemine nurjus."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Anda tuleb Samba jagatud ressursi nimi."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Kataloogide jagamiseks peavad olema ka vastavad õigused."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Failijagamise seadistamine..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "NFS serverit pole paigaldatud"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Seadistuste salvestamine nurjus."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Faili '%1' avamine kirjutamiseks nurjus: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Salvestamine nurjus"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Failide jagamine</h1><p>See moodul võimaldab lubada failide jagamise "
+#~ "üle võrgu \"võrgufailisüsteemi\" (NFS) või SMB vahendusel Konqueroris. "
+#~ "SMB lubab jagada faile võrgus olevate Windows(R) arvutitega.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Kataloogi jagamine"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Lubatud kasutajad"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Kõik kasutajad on juba grupis %1."
+
+#~ msgid "Select User"
+#~ msgstr "Kasutaja valik"
+
+#~ msgid "Select a user:"
+#~ msgstr "Kasutaja:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Kasutaja '%1' lisamine gruppi '%2' nurjus"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Kasutaja '%1' eemaldamine grupist '%2' nurjus"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Valida tuleb korrektne grupp."
+
+#~ msgid "New file share group:"
+#~ msgstr "Uus failijagamisgrupp:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Vana failijagamisgrupi kasutajad lisatakse uude gruppi"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Kasutajad eemaldatakse vanast failijagamisgrupist"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Kustutatakse vana failijagamisgrupp"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Katalooge jagada lubatakse ainult teatud grupi kasutajatel"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Vali grupp..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Kas tõesti eemaldada kõik kasutajad grupist '%1'?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Kas tõesti kustutada grupp '%1'?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Grupi '%1' kustutamine nurjus."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Palun vali korrektne grupp."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Gruppi '%1' ei ole olemas. Kas luua see?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Ära loo"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Grupi '%1' loomine nurjus."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Printeri seadistused"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Pr&inter"
+
+#~ msgid "Pa&th:"
+#~ msgstr "Asukoh&t:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Järjekord:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Kõigi p&rinterite jagamine"
+
+#~ msgid "I&dentifier"
+#~ msgstr "I&dentifikaator"
+
+#~ msgid "&Name:"
+#~ msgstr "&Nimi:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Komm&entaar:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Põhiomadused"
+
+#~ msgid "&Printing"
+#~ msgstr "&Trükkimine"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Printeri drai&ver:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Print&eri draiveri asukoht:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "Trü&kkimine:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Maks. aruande&ga trükitöid:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "&Maks. trükitöid:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "K&liendi draiveri kasutamine"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "&Vaikimisi seadmerežiim"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Lubatud masinad:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "P&rinteri administraator:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Käs&ud"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Trükk&imise käsk:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "lpq &käsk:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "lprm kä&sk:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "&lppause:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "M&uud"
+
+#~ msgid "p&reexec:"
+#~ msgstr "Täitmis&eelne:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "Administ&raatori täitmiseelne:"
+
+#~ msgid "root postexec:"
+#~ msgstr "Administraatori täitmis&järgne:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "&Täitmisjärgne:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "&Häälestus"
+
+#~ msgid "M&in print space:"
+#~ msgstr "M&in. ruum trükkimiseks:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Logimine"
+
+#~ msgid "S&tatus"
+#~ msgstr "Ole&k"
+
+#~ msgid "Not share&d"
+#~ msgstr "Ja&gamata"
+
+#~ msgid "&Shared"
+#~ msgstr "&Jagatud"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "B&aasvalikud"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "See on tekstiväli jagatud ressursi kõrval, mida klient näeb serverile "
+#~ "päringut esitades kas kohtvõrgus või üle interneti, kui ta soovib näha, "
+#~ "millised jagatud ressursid on saadaval."
+
+#~ msgid "Name of the share"
+#~ msgstr "Jagatud ressursi nimi"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Kommen&taar:"
+
+#~ msgid "Security Options"
+#~ msgstr "Turvavalikud"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "&Keelatud masinad:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "Lu&batud masinad:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Kül&aliskonto:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Selle märkimisel ei ole teenuse kasutajatel õigust luua või muuta faile "
+#~ "teenusekataloogis."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "Külaliste l&ubamine"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "See on kasutajanimi, millele lubatakse ligipääs sellele kataloogile, kui "
+#~ "külalised on lubatud."
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "See määrab, kas antud jagatud ressurss on nähtav saadaolevate ressursside "
+#~ "nimekirjas võrgu- ja sirvimisvaadetes."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "See võimaldab teenuse \\\"välja lülitada\\\". Märkimatajätmisel nurjuvad "
+#~ "KÕIK katsed teenusega ühendust saada. Sellised katsed logitakse."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Rohkem val&ikuid"

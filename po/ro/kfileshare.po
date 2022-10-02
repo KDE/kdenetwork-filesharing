@@ -1,0 +1,1903 @@
+# Traducerea kfileshare.po în Română
+# This file is distributed under the same license as the kfileshare package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-14 16:46+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Refuză"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Permite"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Numai acest dosar"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Acest dosar, subdosare și fișiere"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Acest dosar și subdosare"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Acest dosar și fișiere"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Numai subdosare și fișiere"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Numai subdosare"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Numai fișiere"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Permisiuni distante"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Tip:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Se aplică la:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Inscriptibil"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Șterge"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Required Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Permisiuni necesare"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgctxt "@action:button changes permissions"
+#| msgid "Change Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Schimbă permisiunile"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Proprietate"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Proprietar:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grup:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Nicio permisiune găsită"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Pentru a gestiona partajări de utilizator Samba, trebuie să fiți membru al "
+"grupului <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Fă-mă membru al grupului"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Se adaugă utilizatorul „%1” la grupul „%2” ca să poată configura partajări "
+"de utilizator Samba"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Pentru a gestiona partajări de utilizator Samba, trebuie să fiți membru al "
+"grupului <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Calea fișierului"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Permisiuni actuale"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Permisiuni necesare"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Se refuză accesul"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Refuzarea accesului previne folosirea acestei partajări, chiar și atunci "
+"când altă regulă de acces ar putea oferi accesul.\n"
+"O regulă de interzicere are mereu prioritate. În special interzicerea "
+"accesului pentru <resource>Toți</resource> chiar\n"
+"dezactivează accesul pentru oricine. În general, nu e nevoie să blocați pe "
+"nimeni deoarece permisiunile obișnuite ale\n"
+"dosarelor și fișierelor se aplică și la dosarele partajate. Un utilizator "
+"fără acces local la dosar va continua să nu-l\n"
+"poată accesa de la distanță, chiar dacă regulile de acces la partajare i-ar "
+"permite."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+"Acest dosar are nevoie de permisiuni suplimentare pentru ca partajarea să "
+"funcționeze"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Repară permisiunile"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Partajarea poate să nu funcționeze corect deoarece dosarul partajat sau "
+"căile acestuia au permisiuni avansate: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Partajează acest dosar cu alte calculatoare din rețeaua locală"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Denumire:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Această denumire nu poate fi folosită. Denumirile partajărilor nu trebuie să "
+"fie nume de utilizatori și nu trebuie să existe două partajări cu aceeași "
+"denumire în tot sistemul."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Această denumire poate fi prea lungă. Aceasta poate provoca probleme de "
+"interoperabilitate sa fi respinsă de Samba."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Permite oaspeți"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Accesul oaspeților e dezactivat de configurația Samba a sistemului."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Control deplin"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Numai citire"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Fără acces"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Arată monitor de stare Samba"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Stabilește parola"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Parolă"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Confirmă parola"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Parolele trebuie să se potrivească"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Stabilește parola"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Dosarul <filename>%1</filename> are nevoie de permisiuni suplimentare "
+"pentru ca partajarea să funcționeze.</para>\n"
+"<para>Doriți să adăugați aceste permisiuni acum?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Schimbă permisiunile"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Nu s-au putut schimba permisiunile pentru: %1. Toate schimbările de "
+"permisiuni au fost restabilite la starea inițială."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Renunță"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba trebuie instalat înainte să puteți partaja dosare."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Instalează Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Instalarea pachetului Samba a eșuat."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Reporniți calculatorul pentru a finaliza modificările."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Repornește"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba folosește o bază de date cu utilizatori separată de cea a sistemului.\n"
+"Aceasta presupune crearea unei parole Samba separate pentru fiecare "
+"utilizator\n"
+"care doriți să se poată autentifica.\n"
+"</para>\n"
+"<para>\n"
+"Trebuie să vă creați o parolă Samba înainte de a putea accesa partajărilecu "
+"contul de utilizator actual.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Creează parolă Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Funcții suplimentare de gestiune a utilizatorilor și parolelor sunt "
+"disponibile prin\n"
+"utilitarul Samba în linie de comandă <command>smbpasswd</command>."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Ați epuizat numărul maxim de dosare partajate pe care le puteți avea active "
+"în același timp."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Denumirea partajării nu e validă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Denumirea partajării e folosită deja pentru alt dosar."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Calea nu e validă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Calea nu există."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Calea nu e un dosar."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Calea e relativă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Calea nu poate fi partajată."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Regula de acces nu e validă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Utilizatorul unei reguli de acces nu e valid."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Regula de acces „Oaspete” nu e validă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Activarea accesului pentru oaspeți nu e permisă."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>A intervenit o eroare la încercarea de a partaja dosarul. Partajarea "
+"nu a fost creată.</para><para>Raport din interiorul Samba:</para><message>"
+"%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Crearea partajării de rețea a eșuat"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>A intervenit o eroare la încercarea de a des-partaja dosarul "
+"Partajarea nu a fost eliminată.</para><para>Raport din interiorul Samba:</"
+"para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Eliminarea partajării de rețea a eșuat"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Se verifică dacă utilizatorul Samba „%1” există"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Se creează utilizator Samba nou „%1”"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Modificările de grup au eșuat."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Se pare că nu aveți suficiente permisiuni pentru a gestiona partajări de "
+#~ "utilizator Samba."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Partajare"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Creează"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Creează"
+
+#~ msgid "&Share"
+#~ msgstr "&Partajare"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Niciun server Samba instalat în acest sistem"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Partajează cu S&amba (Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "Alegeți utilizatorii"
+
+#~ msgid "Select &Users"
+#~ msgstr "Alege &utilizatorii"
+
+#~ msgid "Name"
+#~ msgstr "Nume"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Acc&es"
+
+#~ msgid "&Default"
+#~ msgstr "&Implicit"
+
+#~ msgid "&Read access"
+#~ msgstr "Acces citi&re"
+
+#~ msgid "&Write access"
+#~ msgstr "Acces &scriere"
+
+#~ msgid "&Admin access"
+#~ msgstr "Acces &administrare"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Alăturare la domeniu"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Verificare:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Parolă:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Utilizator:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domeniu:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Alegeți grupurile"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Alege gr&upuri"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Grup &UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "Grup NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Gru&p UNIX și NIS"
+
+#~ msgid "&Base Settings"
+#~ msgstr "Configurări de &bază"
+
+#~ msgid "&Load"
+#~ msgstr "În&carcă"
+
+#, fuzzy
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Grup de lucru:"
+
+#, fuzzy
+#~ msgid "Alt+"
+#~ msgstr "Alt+1"
+
+#~ msgid "User"
+#~ msgstr "Utilizator"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#, fuzzy
+#~ msgid "Domai&n"
+#~ msgstr "Domeniu:"
+
+#~ msgid "Help"
+#~ msgstr "Ajutor"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Partajări"
+
+#~ msgid "Comment"
+#~ msgstr "Comentariu"
+
+#~ msgid "Properties"
+#~ msgstr "Proprietăți"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Editare imp&licite..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Adăugare partajare &nouă..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Editare partajare..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Eli&mină partajarea"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Impriman&te"
+
+#~ msgid "Printer"
+#~ msgstr "Imprimantă"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Editare imp&licite"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Ada&ugă imprimantă nouă"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Editează imprima&nta"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Eli&mină imprimanta"
+
+#~ msgid "&Users"
+#~ msgstr "&Utilizatori"
+
+#~ msgid "Disabled"
+#~ msgstr "Dezactivat"
+
+#~ msgid "Add"
+#~ msgstr "Adaugă"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Elimină"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Utilizatori UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Modificare par&olă..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "Alătu&rare la domeniu"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Avan&sat"
+
+#~ msgid "Security"
+#~ msgstr "Securitate"
+
+#~ msgid "&General"
+#~ msgstr "&General"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Schimbare parolă PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Alte comutatoare"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Securitate server paranoică"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Metode de autentif.:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Director rădă&cină:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "I&nterfețe:"
+
+#~ msgid "Never"
+#~ msgstr "Niciodată"
+
+#~ msgid "Bad User"
+#~ msgstr "Utilizator greșit"
+
+#~ msgid "Bad Password"
+#~ msgstr "Parolă greșită"
+
+#~ msgid "Pass&word"
+#~ msgstr "&Parolă"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Parole Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Criptea&ză parolele"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sec"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Parole nu&le"
+
+#~ msgid "Password level:"
+#~ msgstr "Nivel parolă:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Lungime minimă parolă:"
+
+#~ msgid "Migration"
+#~ msgstr "Migrare"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Parole UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Program Passwd:"
+
+#~ msgid "Userna&me"
+#~ msgstr "U&tilizator"
+
+#~ msgid "Hide local users"
+#~ msgstr "Ascunde utilizatori locali"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Int&erzice anonimi"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Autenti&ficare"
+
+#~ msgid "Client"
+#~ msgstr "Client"
+
+#~ msgid "Auto"
+#~ msgstr "Automat"
+
+#~ msgid "Mandatory"
+#~ msgstr "Obligatoriu"
+
+#~ msgid "Yes"
+#~ msgstr "Da"
+
+#~ msgid "No"
+#~ msgstr "Nu"
+
+#~ msgid "Client channel:"
+#~ msgstr "Canal client:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Autentificare Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Canal server:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Utilizează sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Autentificare NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Jurnalizare"
+
+#~ msgid "L&og file:"
+#~ msgstr "Fișier-j&urnal:"
+
+#~ msgid "kB"
+#~ msgstr "kO"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Mărime ma&ximă jurnal:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "Jurnal de s&istem:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Nive&l de jurnalizare:"
+
+#~ msgid "Status"
+#~ msgstr "Stare"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "A&mprentă de timp"
+
+#~ msgid "microseconds"
+#~ msgstr "microsecunde"
+
+#~ msgid "Tuning"
+#~ msgstr "Reglaj"
+
+#~ msgid "Modules"
+#~ msgstr "Module"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Utilizează &mmap"
+
+#, fuzzy
+#~ msgid "H&ostname lookups"
+#~ msgstr "Căutare nume mașini:"
+
+#, fuzzy
+#~ msgid "&Keepalive:"
+#~ msgstr "Ține în viață"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Sizes"
+#~ msgstr "Dimensiuni"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MO"
+
+#~ msgid "Numbers"
+#~ msgstr "Numere"
+
+#~ msgid "Printing"
+#~ msgstr "Imprimare"
+
+#~ msgid "Drivers"
+#~ msgstr "Driveri"
+
+#~ msgid "Commands"
+#~ msgstr "Comenzi"
+
+#~ msgid "Domain"
+#~ msgstr "Domeniu"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "Prox&y DNS"
+
+#~ msgid "General Options"
+#~ msgstr "Opțiuni generale"
+
+#~ msgid "Filenames"
+#~ msgstr "Denumiri fișiere"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Ge&neral"
+
+#~ msgid "Specia&l"
+#~ msgstr "Specia&l"
+
+#~ msgid "Locking"
+#~ msgstr "Blocare"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Direct&oare"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Foarte avansat"
+
+#~ msgid "milliseconds"
+#~ msgstr "milisecunde"
+
+#~ msgid "Charset"
+#~ msgstr "Set de caractere"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Set de caractere D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Set de caractere UNI&X:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicod"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Set de caractere:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Caractere va&lide:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Sistem de c&odare:"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Adaugă scripturi"
+
+#~ msgid "Shutdown"
+#~ msgstr "Oprire"
+
+#~ msgid "Socket"
+#~ msgstr "Soclu"
+
+#~ msgid "Socket address:"
+#~ msgstr "Adresă soclu:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Opțiuni soclu"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Activează sau dezactivează întregul regim SSL"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Activea&ză SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "&Gazde SSL:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL version:"
+#~ msgstr "Versiune SSL:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protocol"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Extensii UNIX"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Versiuni protocol"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "Stație de lucru NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otocol:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Limits"
+#~ msgstr "Limite"
+
+#~ msgid "Browsing"
+#~ msgstr "Răsfoire"
+
+#~ msgid "Sec"
+#~ msgstr "Sec"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Dezacti&vează netbios"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "Off"
+#~ msgstr "Dezactivat"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Activat"
+
+#~ msgid "Only"
+#~ msgstr "Numai"
+
+#~ msgid "Misc"
+#~ msgstr "Diverse"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Diverse"
+
+#~ msgid "Default service:"
+#~ msgstr "Serviciu implicit:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Depanare"
+
+#~ msgid "Pixmap"
+#~ msgstr "Hartă de pixeli"
+
+#~ msgid "D&irectory"
+#~ msgstr "D&irector"
+
+#~ msgid "&Path:"
+#~ msgstr "&Cale:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Partajează toate &dosarele personale"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tificator"
+
+#~ msgid "Na&me:"
+#~ msgstr "Nu&me:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Come&ntariu:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "P&roprietăți principale"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Numai-ci&tire"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Pub&lic"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Răs&foibil"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Disponibil"
+
+#~ msgid "&Security"
+#~ msgstr "&Securitate"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Oasp&eți"
+
+#, fuzzy
+#~ msgid "Hos&ts"
+#~ msgstr "Gazde"
+
+#, fuzzy
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Legături simbolice"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&Fișiere ascunse"
+
+#~ msgid "Hidden"
+#~ msgstr "Ascuns"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Size"
+#~ msgstr "Dimensiune"
+
+#~ msgid "Date"
+#~ msgstr "Dată"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Fișiere a&lese"
+
+#~ msgid "Hi&de"
+#~ msgstr "Ascun&de"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Configurare &manuală"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Fișiere ascu&nse:"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Ascunde fișierele s&peciale"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Ascunde fișierele ce încep cu &punct"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Avansat"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Măști"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "bytes"
+#~ msgstr "octeți"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Dimensiune blo&c:"
+
+#~ msgid "manual"
+#~ msgstr "manual"
+
+#~ msgid "documents"
+#~ msgstr "documente"
+
+#~ msgid "programs"
+#~ msgstr "programe"
+
+#~ msgid "disable"
+#~ msgstr "dezactivează"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Sensibil la regis&tru"
+
+#~ msgid "Lower"
+#~ msgstr "Inferioară"
+
+#~ msgid "Upper"
+#~ msgstr "Superioară"
+
+#~ msgid "Other Options"
+#~ msgstr "Alte opțiuni"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "Locki&ng"
+#~ msgstr "&Blocare"
+
+#~ msgid "Exec"
+#~ msgstr "Exec"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Volum:"
+
+#~ msgid "&Help"
+#~ msgstr "&Ajutor"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Utilizatori"
+
+#~ msgid "Reject"
+#~ msgstr "Respinge"
+
+#~ msgid "Access Rights"
+#~ msgstr "Drepturi de acces"
+
+#~ msgid "A&dd User..."
+#~ msgstr "A&dăugare utilizator..."
+
+#~ msgid "E&xpert"
+#~ msgstr "E&xpert"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Adăugare &grup..."
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Modificatori de acces"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Permisiuni de acces"
+
+#~ msgid "Others"
+#~ msgstr "Altele"
+
+#~ msgid "Read"
+#~ msgstr "Citire"
+
+#~ msgid "Write"
+#~ msgstr "Scriere"
+
+#~ msgid "Sticky"
+#~ msgstr "Lipicios"
+
+#~ msgid "Set GID"
+#~ msgstr "Setat GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Setat UID"
+
+#~ msgid "Special"
+#~ msgstr "Special"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Lista gazdelor permise"
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Adăugare gazdă..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Mo&dificare gazdă..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "Eli&mină gazda"
+
+#~ msgid "Name/Address"
+#~ msgstr "Denumire/adresă"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametri"
+
+#~ msgid "Host Properties"
+#~ msgstr "Proprietăți gazdă"
+
+#~ msgid "&Name/address:"
+#~ msgstr "De&numire/adresă:"
+
+#~ msgid "&Public access"
+#~ msgstr "Acces &public"
+
+#~ msgid "Options"
+#~ msgstr "Opțiuni"
+
+#~ msgid "&Writable"
+#~ msgstr "&Inscriptibil"
+
+#~ msgid "&Insecure"
+#~ msgstr "Nes&igur"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sincronizare"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "&UID anonim:"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "&GID anonim:"
+
+#~ msgid "Folder:"
+#~ msgstr "Dosar:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Partajează cu &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Opțiuni NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Pu&blic"
+
+#~ msgid "W&ritable"
+#~ msgstr "Insc&riptibil"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Mai mul&te opțiuni NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Opțiuni Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&ublic"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Mai mul&te opțiuni Samba"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Permite tuturor utilizatorilor să partajeze fișiere"
+
+#~ msgid "Remove User"
+#~ msgstr "Elimină utilizator"
+
+#~ msgid "Add User"
+#~ msgstr "Adaugă utilizator"
+
+#~ msgid "Change Group..."
+#~ msgstr "Schimbare grup..."
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Partajare si&mplă"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Partajare &avansată"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Folosește &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Folosește Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "&Utilizatori permiși"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Dosare partajate"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "A&daugă..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "M&odifică..."
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Nu s-a putut citi fișierul"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Eroare la deschiderea fișierului"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Alăturarea la domeniul %1 a eșuat"
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Introduceți o parolă pentru utilizatorul <b>%1</b></qt>"
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Introduceți o parolă pentru utilizatorul %1"
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Configurare Samba</h1> aici vă puteți configura serverul Samba."
+
+#~ msgid "Sorry"
+#~ msgstr "Scuze"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Ați introdus două parole diferite. Încercați din nou."
+
+#~ msgid "Unnamed"
+#~ msgstr "Anonim"
+
+#~ msgid "&Hide"
+#~ msgstr "&Ascunde"
+
+#~ msgid "Default"
+#~ msgstr "Implicit"
+
+#~ msgid "Warning"
+#~ msgstr "Avertisment"
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Gazda există deja"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Introduceți un nume de gazdă sau o adresă IP."
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Gazda „%1” există deja."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Citire fișier de configurare Samba..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Citire fișier de configurare NFS..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Introduceți o cale validă."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Numai dosarele pot fi partajate."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Acest dosar este partajat deja."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Administratorul nu permite partajarea cu NFS."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Administratorul nu permite partajarea cu Samba."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Trebuie să introduceți o denumire pentru partajarea Samba."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Configurează partajarea de fișiere..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Niciun server NFS instalat în acest sistem"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Imposibil de salvat configurările."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Fișierul „%1” nu a putut fi deschis pentru scriere: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Salvarea a eșuat"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Partajare fișiere</h1><p>Acest modul poate fi utilizat pentru a "
+#~ "activa partajarea de fișiere prin rețea utilizând „Network File "
+#~ "System” (NFS) sau SMB în Konqueror. Cel din urmă vă permite să partajați "
+#~ "fișierele cu calculatoarele Windows(R) din rețea.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Partajează dosarul"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Utilizatori permiși"
+
+#~ msgid "Select User"
+#~ msgstr "Alege utilizatorul"
+
+#~ msgid "Select a user:"
+#~ msgstr "Alegeți un utilizator:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Utilizatorul „%1” nu a putut fi adăugat în grupul „%2”"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Utilizatorul „%1” nu a putut fi eliminat din grupul „%2”"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Trebuie să alegeți un grup valid."
+
+#~ msgid "Choose Group..."
+#~ msgstr "Alegere grup..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Sigur doriți să eliminați toți utilizatorii din grupul %1?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Sigur doriți să ștergeți grupul „%1”?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Ștergerea grupului „%1” a eșuat."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Alegeți un grup valid."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Grupul „%1” nu există. Să fie creat?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Nu crea"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Crearea grupului „%1” a eșuat."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Configurări imprimantă"
+
+#~ msgid "Pr&inter"
+#~ msgstr "&Imprimantă"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&Cale:"
+
+#~ msgid "&Queue:"
+#~ msgstr "C&oadă:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Pa&rtajează toate imprimantele"
+
+#~ msgid "I&dentifier"
+#~ msgstr "I&dentificator"
+
+#~ msgid "&Name:"
+#~ msgstr "&Nume:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Com&entariu:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Proprietăți principale"
+
+#~ msgid "&Printing"
+#~ msgstr "Im&primare"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Dri&ver imprimantă:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Locați&e driver imprimantă:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "Imp&rimare:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "Comenzi"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "C&omanda de tipărire:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Diverse"
+
+#~ msgid "p&reexec:"
+#~ msgstr "p&re-execuție:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Jurnalizare"
+
+#~ msgid "S&tatus"
+#~ msgstr "S&tare"
+
+#~ msgid "Not share&d"
+#~ msgstr "Nepartaja&t"
+
+#~ msgid "&Shared"
+#~ msgstr "&Partajat"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Opțiuni d&e bază"
+
+#, fuzzy
+#~ msgid "Commen&t:"
+#~ msgstr "Com&entariu:"

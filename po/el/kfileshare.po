@@ -1,0 +1,3745 @@
+# translation of kfileshare.po to greek
+#
+# Spiros Georgaras <sng@hellug.gr>, 2005, 2006, 2007.
+# Vasileios Giannakopoulos <kde@billg.gr>, 2005.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2007, 2008, 2009.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <sstavra@gmail.com>, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2021-06-20 10:50+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Άρνηση"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Επιτρέπονται"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&Μόνο ανάγνωση"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Άδειες"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Fst&ype:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Υποστήριξη στυλ εκτεταμένων ιδιοτήτων OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Εγγράψιμο"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Υποστήριξη στυλ εκτεταμένων ιδιοτήτων OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Διαγραφή σεναρίων"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Άδειες"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Άδειες"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Ιδιοκτήτης"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Ιδιοκτήτης"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Ομάδα"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Άδειες"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Για τη διαχείριση των κοινών πόρων των χρηστών της Samba πρέπει να είστε "
+"μέλος της ομάδας <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@button makes user a member of the samba share group"
+#| msgid "Make me a Group Member"
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Κάνε με μέλος της ομάδας"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Προστίθεται ο χρήστης '%1' στην ομάδα '%2' ώστε να μπορεί να διαμορφώσει "
+"τους κοινούς πόρους των χρηστών της Samba"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Για τη διαχείριση των κοινών πόρων των χρηστών της Samba πρέπει να είστε "
+"μέλος της ομάδας <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Διαδρομή"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Άδειες"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Άδειες"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Άρνηση πρόσβασης"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Η άρνηση πρόσβασης αποτρέπει τη χρήση αυτού του πόρου ακόμη και όταν κάποιος "
+"άλλος κανόνας παρέχει πρόσβαση. Ο κανόνας άρνησης\n"
+"έχει πάντα προτεραιότητα. Ειδικότερα η άρνηση πρόσβασης σε <resource>Όλους</"
+"resource> απενεργοποιεί την πρόσβαση για όλους.\n"
+"Γενικά δεν είναι απαραίτητη η άρνηση σε όλους επειδή τα κανονικά δικαιώματα "
+"για καταλόγους και αρχεία εφαρμόζονται στους κοινούς\n"
+"καταλόγους. Ένας χρήστης ο οποίος δέν έχει τοπική πρόσβαση στον κατάλογο δεν "
+"θα μπορεί να έχει ούτε απομακρυσμένη ακόμη\n"
+"και όταν οι κανόνες πρόσβασης στον πόρο το επιτρέπουν."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Άδειες"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr ""
+"Να διαμοιραστεί αυτός ο φάκελος με άλλους υπολογιστές στο τοπικό δίκτυο"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Όνομα:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Αυτό το όνομα δεν μπορεί να χρησιμοποιηθεί. Τα ονόματα των κοινών πόρων δεν "
+"πρέπει να είναι ονόματα χρηστών και δεν πρέπει να υπάρχουν σε όλο τπ σύστημα "
+"δύο κοινοί πόροι με το ίδιο όνομα."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Αυτό το όνομα έχει μεγάλο μήκος. Ίσως να προκαλέσει προβλήματα "
+"διαλειτουργικότητας ή η Samba να το απορρίψει."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Να επιτρέπονται επισκέπτες"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+"Η πρόσβαση στους επισκέπτες έχει απενεργοποιηθεί από τη διαμόρφωση Samba του "
+"συστήματος"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Πλήρης έλεγχος"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Για ανάγνωση μόνο"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Καμία πρόσβαση"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Εμφάνιση οθόνης κατάστασης Samba"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Ρύθμιση κωδικού πρόσβασης"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Επιβεβαίωση κωδικού πρόσβασης"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Οι κωδικοί πρόσβασης πρέπει να ταιριάζουν"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Ρύθμιση κωδικού πρόσβασης"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Άδειες"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Ακύρωση"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Η Samba πρέπει να εγκατασταθεί πριν να γίνουν κοινόχρηστοι οι φάκελοι."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Εγκατάσταση της Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Αποτυχία εγκατάστασης του πακέτου Samba."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Επανεκκινήστε τον υπολογιστή για να ολοκληρωθούν οι αλλαγές."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Η Samba χρησιμοποιεί μια ξεχωριστή βαη δεδομένων χρηστών από το σύστημα "
+"ένα.\n"
+"Αυτό απαιτεί να ορίσετε ένα ξεχωριστό κωδικό πρόσβασης στη Samba για κάθε "
+"χρήστη που θέλετε\n"
+"να μπορεί να ταυτοποιηθεί.\n"
+"</para>\n"
+"<para>\n"
+"Πριν αποκτήσετε πρόσβαση σε κοινούς πόρους με τον τρέχοντα λογαριασμό σας "
+"πρέπει να ορίσετε έναν κωδικό πρόσβασης για τη Samba.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Δημιουργία κωδικού πρόσβασης στη Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Η διαχείριση επιπλέον χρηστών και των κωδικών τους μπορεί να γίνει με το "
+"εργαλείο της Samba <command>smbpasswd</command>\n"
+"από τη γραμμή εντολών."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Έχετε εξαντλήσει το μέγιστο πλήθος των κοινόχρηστων καταλόγων που μπορεί να "
+"είναι ταυτόχρονα ενεργοί."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Το όνομα του κοινού πόρου δεν είναι έγκυρο."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Το όνομα του κοινού πόρου είναι ήδη σε χρήση για έναν άλλο κατάλογο."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Η διαδρομή δεν είναι έγκυρη."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Η διαδρομή δεν υπάρχει."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Η διαδρομή δεν είναι κατάλογος."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Η διαδρομή είναι σχετική."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Αυτή η διαδρομή δεν μπορεί να γίνει κοινόχρηστη."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Ο κανόνας πρόσβασης δεν είναι έγκυρος."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Ο χρήστης σύμφωνα με τον κανόνα πρόσβασης δεν είναι έγκυρος."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Ο κανόνας πρόσβασης για τον 'Επισκέπτη' δεν είναι έγκυρος."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Η ενεργοποίηση της πρόσβασης σε επισκέπτες δεν επιτρέπεται."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Παρουσιάστηκε σφάλμα στην προσπάθεια να γίνει κοινόχρηστος ο "
+"κατάλογος. Ο κοινός πόρος δεν δημιουργήθηκε.</para><para>Αναφορά εσωτερικών "
+"διαδικασιών της Samba:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Αποτυχία δημιουργίας κοινού πόρου στο δίκτυο"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Παρουσιάστηκε σφάλμα στην προσπάθεια να αναιρεθεί η κοινή χρήση του "
+"καταλόγου. Ο κοινός πόρος δεν αφαιρέθηκε.</para><para>Αναφορά εσωτερικών "
+"διαδικασιών της Samba:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Αποτυχία αφαίρεσης κοινού πόρου στο δίκτυο"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Έλεγχος αν υπάρχει ο χρήστης '%1' της Samba"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Δημιουργία νέου χρήστη '%1' της Samba"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Αποτυχία αλλαγών στην ομάδα."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Φαίνεται ότι δεν έχετε επαρκή δικαιώματα για να διαχειριστείτε τους "
+#~ "κοινούς πόρους των χρηστών της Samba."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Κοινός πόρος"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Δημιουργία"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Δημιουργία"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "Κοινή χρή&ση"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Γίνεται εγκατάσταση της Samba..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Υπάρχει ήδη ένας κοινόχρηστος πόρος με το όνομα <strong>%1</strong>."
+#~ "<br /> Παρακαλώ επιλέξτε ένα άλλο όνομα.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Η Samba δεν έχει εγκατασταθεί στο σύστημά σας."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Κοινή χρήση με S&amba (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Αδυναμία εγκατάστασης Samba.</strong><br />Ελέγξτε αν το "
+#~ "kpackagekit έχει εγκατασταθεί σωστά</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Επιλογή χρηστών"
+
+#~ msgid "Select &Users"
+#~ msgstr "Επιλογή &χρηστών"
+
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Πρόσ&βαση"
+
+#~ msgid "&Default"
+#~ msgstr "&Προκαθορισμένο"
+
+#~ msgid "&Read access"
+#~ msgstr "Πρόσβαση &ανάγνωσης"
+
+#~ msgid "&Write access"
+#~ msgstr "Πρόσβαση &εγγραφής"
+
+#~ msgid "&Admin access"
+#~ msgstr "Πρόσβαση &διαχειριστή"
+
+#~ msgid "&OK"
+#~ msgstr "&Εντάξει"
+
+#~ msgid "Join Domain"
+#~ msgstr "Σύνδεση σε τομέα"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Επαλήθευση:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Κωδικός πρόσβασης:"
+
+#~ msgid "&Username:"
+#~ msgstr "Ό&νομα χρήστη:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Ελε&γκτής τομέα:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Τομέας:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Επιλογή ομάδων"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Επιλο&γή ομάδων"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Είδος ομάδας"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Ομάδα &UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "Ομάδα NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "&Ομάδα UNIX και NIS"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Εδώ μπορείτε να επεξεργαστείτε τους χρήστες Samba, που είναι "
+#~ "αποθηκευμένοι στο αρχείο smbpasswd.\n"
+#~ "<p>\n"
+#~ "Κάθε χρήστης Samba πρέπει να έχει έναν αντίστοιχο λογαριασμό χρήστη "
+#~ "UNIX.\n"
+#~ "Στα δεξιά βλέπετε όλους τους χρήστες UNIX, που είναι αποθηκευμένοι στο "
+#~ "αρχείο passwd και δεν είναι ρυθμισμένοι ως χρήστες Samba.\n"
+#~ "Μπορείτε να δείτε τους χρήστες Samba στην αριστερή πλευρά.\n"
+#~ "<p>\n"
+#~ "Για να προσθέσετε νέους χρήστες Samba απλά πατήστε το κουμπί <em>&lt; "
+#~ "προσθήκη</em>.\n"
+#~ "Οι επιλεγμένοι χρήστες UNIX θα γίνουν χρήστες Samba και θα αφαιρεθούν από "
+#~ "τη λίστα χρηστών UNIX (θα παραμείνουν χρήστες UNIX).\n"
+#~ "<p>\n"
+#~ "Για να αφαιρέσετε χρήστες Samba κάντε κλικ στο κουμπί <em>&gt; αφαίρεση</"
+#~ "em>.\n"
+#~ "Οι επιλεγμένοι χρήστες Samba θα αφαιρεθούν από το αρχείο smbpasswd\n"
+#~ "και θα εμφανιστούν ξανά στη δεξιά πλευρά, ως χρήστες UNIX που δεν είναι "
+#~ "και χρήστες Samba.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Βασικές ρυθμίσεις"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Αρχείο ρυθμίσεων Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&Φόρτωση"
+
+#~ msgid "Server Identification"
+#~ msgstr "Ταυτοποίηση εξυπηρετητή"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Ομά&δα εργασίας:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Εισάγετε εδώ το όνομα της ομάδας εργασίας/τομέα σας."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Συμβολοσειρά ε&ξυπηρετητή:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Όνομα NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Επίπεδο ασ&φαλείας"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Χρήστης"
+
+#~ msgid "Server"
+#~ msgstr "Εξυπηρετητής"
+
+#~ msgid "Domai&n"
+#~ msgstr "Το&μέας"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>κοινή χρήση</i> αν έχετε ένα "
+#~ "δίκτυο στο σπίτι ή ένα μικρό δίκτυο γραφείου.<br> Επιτρέπει σε καθέναν να "
+#~ "διαβάσει όλα τα κοινόχρηστα ονόματα χωρίς να χρειάζεται σύνδεση."
+
+#~ msgid "Further Options"
+#~ msgstr "Περισσότερες επιλογές"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Διεύθυνση/όνομα εξυπηρετητή κωδικών:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Περιο&χή:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Λογαρια&σμός guest:"
+
+#~ msgid "Help"
+#~ msgstr "Βοήθεια"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr ""
+#~ "Για αναλυτικές πληροφορίες σχετικά με κάθε επιλογή παρακαλώ δείτε το:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Κοινόχρηστοι πόροι"
+
+#~ msgid "Comment"
+#~ msgstr "Σχόλιο"
+
+#~ msgid "Properties"
+#~ msgstr "Ιδιότητες"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Επεξεργασία &προκαθορισμένων..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Προσθήκη &νέου κοινόχρηστου πόρου..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Επεξεργασία κοινόχρηστου πόρου..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Α&φαίρεση κοινόχρηστου πόρου"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Εκτυπω&τές"
+
+#~ msgid "Printer"
+#~ msgstr "Εκτυπωτής"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Επεξεργασία προκαθορι&σμένων"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Προσθήκη νέο&υ εκτυπωτή"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Επεξεργασία εκτυπ&ωτή"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Αφ&αίρεση εκτυπωτή"
+
+#~ msgid "&Users"
+#~ msgstr "&Χρήστες"
+
+#~ msgid "Disabled"
+#~ msgstr "Απενεργοποιημένο"
+
+#~ msgid "Add"
+#~ msgstr "Προσθήκη"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Αφαί&ρεση"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Χρήστες UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "&Αλλαγή κωδικού πρόσβασης..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Σύνδεση σε τομέα"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Για προχω&ρημένους"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να τροποποιήσετε τις προχωρημένες επιλογές του εξυπηρετητή "
+#~ "SAMBA.\n"
+#~ "Τροποποιήστε κάτι μόνο αν γνωρίζετε τι κάνετε."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Προχωρημένη αποτύπωση"
+
+#~ msgid "Security"
+#~ msgstr "Ασφάλεια"
+
+#~ msgid "&General"
+#~ msgstr "&Γενικά"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Υπακοή στους περιορισμούς PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Αλλαγή κωδικού πρόσβασης PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Άλλοι διακόπτες"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Ε&πιτρέπονται έμπιστοι τομείς"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Παρανοϊκή ασφάλεια εξυπηρετητή"
+
+#~ msgid "General"
+#~ msgstr "Γενικά"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Μέθοδοι πιστοποίησης:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Ριζικός κατάλο&γος:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&Διασυνδέσεις:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Αντιστοίχηση σε guest:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Σύνδεση μόνο διασυνδέσεων"
+
+#~ msgid "Never"
+#~ msgstr "Ποτέ"
+
+#~ msgid "Bad User"
+#~ msgstr "Λάθος χρήστης"
+
+#~ msgid "Bad Password"
+#~ msgstr "Λάθος κωδικός πρόσβασης"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Ισο&δύναμοι υπολογιστές:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Αλγοριθμική βάση rid:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Ιδιωτικός κατάλογος:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Κωδικός πρόσ&βασης"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Κωδικοί πρόσβασης Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Κρ&υπτογράφηση κωδικών πρόσβασης"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Αρχείο passwd Smb:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Σύστημα υποστήρι&ξης Passdb:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Συνομιλία Passwd:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Αποσφαλμάτωση συνομιλίας Passwd"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Δευτ"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Χρονικό όριο συνομιλίας Passwd:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Κε&νοί κωδικοί πρόσβασης"
+
+#~ msgid "Password level:"
+#~ msgstr "Επίπεδο κωδικού πρόσβασης:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Ελάχιστο μήκος κωδικού πρόσβασης:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Χρονικό όριο μηχανής κωδικού:"
+
+#~ msgid "Migration"
+#~ msgstr "Μετάβαση"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Κρυπτογραφημένη εν&ημέρωση"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Κωδικοί πρόσβασης του UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Πρόγραμμα Passwd:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Συγχρονισμός κωδικών UNI&X"
+
+#~ msgid "Userna&me"
+#~ msgstr "Όνομα &χρήστη"
+
+#~ msgid "User&name map:"
+#~ msgstr "Αντισ&τοίχηση ονόματος χρήστη:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Ε&πίπεδο ονόματος χρήστη:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Απόκρυψη τοπικών χρηστών"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Περιορισμός του α&νώνυμου χρήστη"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Χρήση rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Ταυτοποίη&ση"
+
+#~ msgid "Client"
+#~ msgstr "Πελάτης"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "Υ&πογραφή πελάτη:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Ταυτοποίηση πελάτη απλού &κειμένου"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Ταυτοποίηση πελάτη lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Αυτόματο"
+
+#~ msgid "Mandatory"
+#~ msgstr "Υποχρεωτικό"
+
+#~ msgid "Yes"
+#~ msgstr "Ναι"
+
+#~ msgid "No"
+#~ msgstr "Όχι"
+
+#~ msgid "Client channel:"
+#~ msgstr "Κανάλι πελάτη:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Ο πελάτης χρησιμοποιεί spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Ταυτοποίηση πελάτη NTLMv&2"
+
+#~ msgid "Server signing:"
+#~ msgstr "Υπογραφή εξυπηρετητή:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Ταυτοποίηση Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Κανάλι εξυπηρετητή:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Χρήση sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Ταυτοποίηση NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Καταγραφή"
+
+#~ msgid "L&og file:"
+#~ msgstr "Αρ&χείο καταγραφής:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Μέ&γιστο μέγεθος καταγραφής:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Επίπε&δο καταγραφής:"
+
+#~ msgid "S&witches"
+#~ msgstr "Δια&κόπτες"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Μό&νο Syslog"
+
+#~ msgid "Status"
+#~ msgstr "Κατάσταση"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "&Χρονική σφραγίδα"
+
+#~ msgid "microseconds"
+#~ msgstr "εκατομμυριοστά"
+
+#~ msgid "Debug pid"
+#~ msgstr "Αποσφαλμάτωση pid"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Αποσφαλμάτω&ση uid"
+
+#~ msgid "Tuning"
+#~ msgstr "Ρύθμιση"
+
+#~ msgid "Modules"
+#~ msgstr "Αρθρώματα"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Προ&φόρτωση αρθρωμάτων:"
+
+#~ msgid "Switches"
+#~ msgstr "Διακόπτες"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Λανθάνουσα μνήμη &Getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Χρήση &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Ειδο&ποίηση αλλαγή πυρήνα"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Αναζητήσεις ο&νομάτων υπολογιστών"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Ανάγνωση α&κατέργαστη"
+
+#~ msgid "Write raw"
+#~ msgstr "Εγγραφή ακατέργαστη"
+
+#~ msgid "Times"
+#~ msgstr "Φορές"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Αλλαγή χρονικού ορίου ειδοποίησης:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Διατήρηση ενεργού:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Λεπτά"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Προθεσμία:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Χρόνος λανθάνουσας Lp&q:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Χρονικό όριο λανθάνουσας ο&νομάτων:"
+
+#~ msgid "Sizes"
+#~ msgstr "Μεγέθη"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Μέγιστο μέγεθος στο δίσκο:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Μέ&γεθος ανάγνωσης:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Μέγεθος λανθάνουσας στατιστικών:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Μέγισ&το xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Αριθμοί"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Μέγιστος αριθμός διεργασιών smbd:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Μέγιστος αριθμός ανοικτών αρχείων:"
+
+#~ msgid "Printing"
+#~ msgstr "Εκτύπωση"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Συνολικές ερ&γασίες εκτύπωσης:"
+
+#~ msgid "Drivers"
+#~ msgstr "Οδηγοί"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "Αντιστοίχηση οδηγού OS&2:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Ό&νομα Printcap:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Αρχείο οδηγού ε&κτυπωτή: "
+
+#~ msgid "Commands"
+#~ msgstr "Εντολές"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Εντολή Enumports:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Εντολή Addprinter:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Εντολή Deleteprinter:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Φό&ρτωση εκτυπωτών"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Α&πενεργοποίηση νημάτων"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Εμφάνιση μά&γου προσθήκης εκτυπωτή"
+
+#~ msgid "Domain"
+#~ msgstr "Τομέας"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Το&πικός κύριος"
+
+#~ msgid "Domai&n master"
+#~ msgstr "&Κύριος τομέα"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Συν&δέσεις τομέα"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Προτεινόμενος &κύριος"
+
+#~ msgid "OS &level:"
+#~ msgstr "Ε&πίπεδο OS:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Ομάδα διαχειριστών τομέα:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Ομάδα guest τομέα:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Απενεργοποίηση &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Λειτουργία σαν εξυπηρετητής WI&NS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Χρήση ενός ά&λλου εξυπηρετητή WINS"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Ρυ&θμίσεις εξυπηρετητή WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "Διαμεσολα&βητής DNS"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS σύν&δεση:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Μέγιστο WINS tt&l:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "Ε&λάχιστο WINS ttl:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS εξυπηρετητής IP ή DNS όνομα"
+
+#~ msgid "General Options"
+#~ msgstr "Γενικές επιλογές"
+
+#~ msgid "WINS partners:"
+#~ msgstr "Συνεργάτες WINS:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "Διαμεσολαβη&τής WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "Ονόματα αρχείων"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Γε&νικά"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Αφαίρεση τελ&είας"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Διαμερισμός"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Στοί&βα διαμερισμού:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Πρό&θεμα διαμερισμού:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Ειδι&κό"
+
+#~ msgid "Stat cache"
+#~ msgstr "Λανθάνουσα στατιστικών"
+
+#~ msgid "Locking"
+#~ msgstr "Κλείδωμα"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Χρή&ση oplocks πυρήνα"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Κατά&λογοι"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Κατάλογος &κλειδώματος:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "Κατά&λογος Pid:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Εναλλαγή κλειδώματος"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Πλήθος εναλλαγών κλειδώματος:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Χρόνος εναλλαγών κλειδώ&ματος:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Για πολύ προχωρημένους"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "&Χρόνος αναμονής διακοπής Oplock:"
+
+#~ msgid "milliseconds"
+#~ msgstr "χιλιοστά"
+
+#~ msgid "Charset"
+#~ msgstr "Σύνολο χαρακτήρων"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Σύνολο χαρακτήρων D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Σύνολο χαρακτήρων UNI&X:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Εμφάνιση σ&υνόλου χαρακτήρων:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Σύνολο χαρακτήρων:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Έγκυ&ροι χαρακτήρες:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Κατάλογος κωδικοσελίδας:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Σύστημα κω&δικοποίησης:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Κωδικοσελίδα πελάτη:"
+
+#~ msgid "Logon"
+#~ msgstr "Σύνδεση"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Προσθήκη σεναρίων"
+
+#~ msgid "Add user script:"
+#~ msgstr "Σενάριο προσθήκης χρήστη:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Σενάριο προσθήκη χρήστη σε ομάδα:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Σενάριο προσθήκης ο&μάδας:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Σενάριο προσθήκης μηχανής:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Διαγραφή σεναρίου ομάδας:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Διαγραφή σεναρίου χρήστη:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Διαγραφή σεναρίου χρήστη από ομάδα:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Σενάριο κύριας ομάδας"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Ορισμός σεναρίου κ&ύριας ομάδας:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Τερματισμός"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Σενάριο &τερματισμού:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Σενάριο εγκατάλειψης τερματισμού:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Διαδρομή σύ&νδεσης:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Προ&σωπικός φάκελος σύνδεσης:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Οδηγός σύνδεσ&ης:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Σενά&ριο σύνδεσης:"
+
+#~ msgid "Socket"
+#~ msgstr "Υποδοχή"
+
+#~ msgid "Socket address:"
+#~ msgstr "Διεύθυνση υποδοχής:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Επιλογές υποδοχής"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Ενεργοποιεί ή απενεργοποιεί ολόκληρη τη λειτουργία SSL"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Αυτό ενεργοποιεί ή απενεργοποιεί ολόκληρη τη λειτουργία SSL. Αν επιλεχθεί "
+#~ "το 'όχι', το Samba με ενεργοποίηση SSL συμπεριφέρεται ακριβώς όπως το "
+#~ "Samba χωρίς SSL. Αν οριστεί το 'ναι', εξαρτάται ανάλογα με τις μεταβλητές "
+#~ "στους υπολογιστές ssl αν θα απαιτείται σύνδεση SSL.\n"
+#~ "\n"
+#~ "Αυτό είναι διαθέσιμο μόνο αν οι βιβλιοθήκες SSL έχουν μεταγλωττιστεί στο "
+#~ "σύστημά σας και έχει δοθεί η επιλογή --with-ssl κατά τη φάση ρύθμισης της "
+#~ "μεταγλώττισης."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Ε&νεργοποίηση SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL &υπολογιστές:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL byte ε&ντροπίας:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL κρυπτογραφήματα:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL &παραίτηση υπολογιστών:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Συ&μβατότητα SSL"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL αρχείο εντροπίας:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL υποδοχή egd:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Έκδοση SSL:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL απαίτηση clientcert"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Κλειδί πελάτη SSL:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL απαί&τηση servercert"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L πιστοπ. εξυπηρετητή:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL πιστοπ. πελάτη:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL &κλειδί εξυπηρετητή:"
+
+#~ msgid "Protocol"
+#~ msgstr "Πρωτόκολλο"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Εξυπηρετητής ώ&ρας"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "Με&γάλη ανάγνωση/γραφή"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Επεκτάσεις UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Ανάγνωση bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Εκδόσεις πρωτοκόλλου"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Α&νακοίνωση ως:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "Σταθμός εργασίας NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Έκδοση που ανακοινώνεται:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Πρ&ωτόκολλο:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Μέγιστο πρωτόκολλο:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Ελάχιστο πρωτόκολλο:"
+
+#~ msgid "Limits"
+#~ msgstr "Όρια"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Μέ&γιστο mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Μέγιστο tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Θύρες ανίχνευσης SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Θύρες SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "Περιήγηση"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM χρονικό &διάστημα:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M ανακοίνωση:"
+
+#~ msgid "Sec"
+#~ msgstr "Δευτ"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Σ&υγχρονισμός απομακ. περιήγησης:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Λίστα &περιήγησης"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Βελτιωμένη &περιήγηση"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Προ&φόρτωση:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Πρότυπο πρ&οσωπικού φακέλου:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Πρό&τυπο κελύφους:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Διαχωριστικό Winbind:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Πρότυπο κύριας ομάδας:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind χρόνος λαν&θάνουσας:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Σ&υμβατότητα Acl:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind αρίθμηση χρηστών"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind αρίθμηση ομάδων"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind χρήση προκαθορισμένου τομέα"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind ενεργοποίηση τοπικών λογαριασμών"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind μόνο έμπιστους τομείς"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind διαδοχικές ομάδες"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "Εμ&βέλεια NetBIOS:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Ψευδώνυμα &NetBIOS:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Απενερ&γοποίηση του NetBIOS"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "&Σειρά επίλυσης ονομάτων:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "Msdfs υ&πολογιστή"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "Πρό&θεμα LDAP:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "Πρόθεμα μηχανής LDAP:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "Πρόθεμα χρήστη LDAP:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "Πρόθεμα ο&μάδας LDAP:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "Πρόθεμα LDAP idmap:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Φίλτρο LDAP:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP &διαχείριση τομέα:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Σύστημα υποστή&ριξης Idmap:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP αδράνεια αντιγραφής:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Ανενεργό"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Ενεργό"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP &συγχρονισμός:"
+
+#~ msgid "Only"
+#~ msgstr "Μόνο"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP διαγραφή το&μέα"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Ε&ντολή προσθήκης κοινόχρηστου πόρου:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Εντολή αλλαγής κοινόχρηστου πόρου:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Εντολή &διαγραφής κοινόχρηστου πόρου:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Εντολή &μηνύματος:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Εντο&λή Dfree:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Εντολή ορισμού &ορίου:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Εντολή ανάκτησης ορίου:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Ενέργεια πα&νικού:"
+
+#~ msgid "Misc"
+#~ msgstr "Διάφορα"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Διάφορα"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Απόκρυψη &τοπικών χρηστών"
+
+#~ msgid "Default service:"
+#~ msgstr "Προκαθορισμένη υπηρεσία:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Χρονική &μετατόπιση:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Λεπτά"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Απομακρυσμένη α&νακοίνωση:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Περιβάλλον πηγής:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "Προσωπικός φάκελος NIS"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Αντιστοίχηση προσωπικού φακέλου:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Κατάλογος &Utmp:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Κατάλογος &Wtmp:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Αποσφαλμάτωση"
+
+#~ msgid "&NT status support"
+#~ msgstr "Υποστήριξη κατάστασης &NT"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "Υποστήριξη NT S&MB"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "Υποστήριξη &διασωλήνωσης NT"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Προσθήκη/επεξεργασία κοινόχρηστου πόρου"
+
+#~ msgid "Pixmap"
+#~ msgstr "Εικόνα"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Κατάλογος"
+
+#~ msgid "&Path:"
+#~ msgstr "&Διαδρομή:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Κοινή χρήση όλων των προσωπικών φακέ&λων"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "&Αναγνωριστικό"
+
+#~ msgid "Na&me:"
+#~ msgstr "Ό&νομα:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Σ&χόλιο:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Κύ&ριες ιδιότητες"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Μόνο για α&νάγνωση"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Δημόσιο"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&Περιηγήσιμο"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Διαθέσιμο"
+
+#~ msgid "&Security"
+#~ msgstr "&Ασφάλεια"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gu&ests"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Αυτό είναι ένα όνομα χρήστη που θα χρησιμοποιηθεί για την πρόσβαση "
+#~ "υπηρεσιών στις οποίες είναι αποδεκτός ο χρήστης guest. Όλα τα δικαιώματα "
+#~ "που έχει αυτός ο χρήστης θα είναι διαθέσιμα σε οποιονδήποτε πελάτη "
+#~ "συνδέεται σε μια υπηρεσία guest. Βασικά αυτός ο χρήστης θα υπάρχει στο "
+#~ "αρχείο κωδικών, αλλά δε θα έχει μια έγκυρη σύνδεση συνεδρίας. Ο "
+#~ "λογαριασμός χρήστη \\\"ftp\\\" είναι μια καλή επιλογή για αυτή την "
+#~ "παράμετρο. Αν ένα όνομα χρήστη ορίζεται σε μια δοσμένη υπηρεσία , το "
+#~ "όνομα αυτό αντικαθιστά το επιλεγμένο."
+
+#~ msgid "&Guest account:"
+#~ msgstr "Λογ&αριασμός guest:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Αν ενεργοποιηθεί αυτή η επιλογή, δεν απαιτείται κωδικός για σύνδεσης για "
+#~ "σύνδεση με την υπηρεσία. Τα δικαιώματα θα είναι αυτά ενός λογαριασμού "
+#~ "guest."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Αποδοχή μόνο συν&δέσεων guest"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&Υπολογιστές"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Το αντίθετο των υπολογιστών που επιτρέπονται - οι υπολογιστές που "
+#~ "εμφανίζονται εδώ ΔΕΝ επιτρέπεται να έχουν πρόσβαση σε υπηρεσίες εκτός αν "
+#~ "αυτές έχουν δικές τους λίστες που επιτρέπουν κάτι τέτοιο. Όταν "
+#~ "συγκρούονται οι λίστες, η λίστα που επιτρέπει την πρόσβαση προηγείται."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Αυτή η παράμετρος είναι μια λίστα διαχωρισμένη με κόμματα, κενά ή "
+#~ "στηλοθέτες των υπολογιστών στους οποίους επιτρέπεται η πρόσβαση σε μια "
+#~ "υπηρεσία."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "&Επιτρέπονται οι υπολογιστές:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Απαγόρευση υπολογιστών:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Συ&μβολικοί δεσμοί"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Επιτρέπεται η ακολούθηση συμβολικών &δεσμών"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Επιτρέπεται η ακολούθηση συμβολικών δεσμών που δεί&χνουν σε περιοχές έξω "
+#~ "από το δέντρο καταλόγων"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Πιστοποίηση κωδικού πρόσβασης με τα παρακάτω ονόματα χρηστών αν ο "
+#~ "πελάτης δε προσφέρει ένα όνομα χρήστη:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Επίτρεψε μόνο τις συνδέσεις με ονόματα χ&ρηστών που ορίζονται σε αυτήν τη "
+#~ "λίστα"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Κρυφά &αρχεία"
+
+#~ msgid "Hidden"
+#~ msgstr "Κρυφό"
+
+#~ msgid "Veto"
+#~ msgstr "Βέτο"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Βέτο Oplock"
+
+#~ msgid "Size"
+#~ msgstr "Μέγεθος"
+
+#~ msgid "Date"
+#~ msgstr "Ημερομηνία"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Επι&λεγμένα αρχεία"
+
+#~ msgid "Hi&de"
+#~ msgstr "Απόκρυ&ψη"
+
+#~ msgid "&Veto"
+#~ msgstr "&Βέτο"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Βέτο oploc&k"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Χειροκίνητη ρύθμιση"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Αρχεία &βέτο:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Α&ρχεία βέτο oplock:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Κρυφά &αρχεία:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Απόκρυψη μη ε&γγράψιμων αρχείων"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Απόκρυψη ε&ιδικών αρχείων"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Απόκρυψη αρχείων που αρχί&ζουν με τελεία"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Απόκρυψη μη αναγ&νώσιμων αρχείων"
+
+#~ msgid "&Advanced"
+#~ msgstr "Για &προχωρημένους"
+
+#~ msgid "Force Modes"
+#~ msgstr "Λειτουργίες εξαναγκασμού"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Ε&ξαναγκασμός λειτουργίας ασφαλείας καταλόγου:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Εξ&αναγκασμός λειτουργίας ασφαλείας:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Εξαναγκασμός λειτουργίας καταλό&γου:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Εξαναγκασμός λειτουργίας &δημιουργίας:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Μάσκες"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Μάσκα ασφαλείας καταλόγου:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "&Μάσκα ασφαλείας:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Μάσκα κα&ταλόγου:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Μάσ&κα δημιουργίας:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "&Προφίλ acls"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Κληρονομιά ac&ls"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "Υποστήριξη &NT ACL"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Εξαναγκασμός άγνωστο&υ χρήστη acl:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Αντιστοίχηση &κληρονομιάς acl"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Κληρονομιά αδειών από το γονικό κατάλογο"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Επίτρεψε τη διαγραφή των αρχείων μόνο ανάγνωσης"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "Αντιστοίχηση ιδιοτήτων DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Αντιστοίχηση της &αρχειοθήκης DOS σε εκτέλεση ιδιοκτήτη UNIX"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Αντιστοίχηση απόκρυψης DOS σε καθολική εκτέλεση UNI&X"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Αντιστοίχηση συστήματος DOS σε εκτέλεση ο&μάδας UNIX"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Αποθήκευση των ιδιοτήτων DOS σε εκτεταμένες ιδιότητες"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Α&υστηρός συγχρονισμός"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "&Πάντα συγχρονισμός"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Αυ&στηρή κατανομή"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Χρήση του sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Μέγιστος αριθμός ταυτόχρονων συνδέσεων:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Μέγεθος &λανθάνουσας εγγραφής:"
+
+#~ msgid "bytes"
+#~ msgstr "byte"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Μέγεθος &τμήματος:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Πολιτική λαν&θάνουσας μνήμης του πελάτη:"
+
+#~ msgid "manual"
+#~ msgstr "εγχειρίδιο"
+
+#~ msgid "documents"
+#~ msgstr "έγγραφα"
+
+#~ msgid "programs"
+#~ msgstr "προγράμματα"
+
+#~ msgid "disable"
+#~ msgstr "απενεργοποίηση"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Διαμερισμός ονόματος"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Ενεργοποίηση &διαμερισμού ονόματος"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Διαμερισμός πεζών/κε&φαλαίων"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Διατή&ρηση πεζών/κεφαλαίων"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Σύντομη διατήρ&ηση πεζών/κεφαλαίων"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Διάκριση &πεζών/κεφαλαίων"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Προκα&θορισμός πεζών/κεφαλαίων:"
+
+#~ msgid "Lower"
+#~ msgstr "Πεζά"
+
+#~ msgid "Upper"
+#~ msgstr "Κεφαλαία"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "&Χαρακτήρας διαμερισμού:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Αντιστοίχηση δια&μερισμού:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Μέθοδος διαμερισμού:"
+
+#~ msgid "hash"
+#~ msgstr "αποτύπωμα"
+
+#~ msgid "hash2"
+#~ msgstr "αποτύπωμα2"
+
+#~ msgid "Other Options"
+#~ msgstr "Άλλες επιλογές"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Απόκρυψη τελείας &κατάληξης"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS λειτουργία αρχείου"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS ημερομηνίες α&ρχείου"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS επίλυση ημερομηνίας αρχείου"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Ενεργοποίηση κ&λειδώματος"
+
+#~ msgid "Locki&ng"
+#~ msgstr "&Κλείδωμα"
+
+#~ msgid "S&trict locking"
+#~ msgstr "&Αυστηρό κλείδωμα"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Κλειδώματα &εμπόδια"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Κλείδωμα Posi&x"
+
+#~ msgid "Share mo&des"
+#~ msgstr "&Λειτουργίες κοινής χρήσης"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Έκδοση ευ&καιριακών κλειδωμάτων (oplocks) "
+
+#~ msgid "O&plocks"
+#~ msgstr "O&plocks"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Επίπεδο&2 oplocks"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Ό&ριο διενέργειας Oplock:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "&Ψεύτικα oplocks"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "&Αντικείμενα Vfs:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Ε&πιλογές Vfs:"
+
+#~ msgid "Exec"
+#~ msgstr "Εκτέλεση"
+
+#~ msgid "P&reexec:"
+#~ msgstr "P&reexec:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Root pr&eexec:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Pos&texec:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Root &postexec:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "κ&λείσιμο preexec"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "κλείσιμο root pree&xec"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Τόμος:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Σενάριο Ma&gic:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Έξοδος Mag&ic:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "&Χωρίς επίσκεψη:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs δια&μεσολαβητής"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Επι&τρέπεται εντολή Setdir"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Ημερομηνίες δημιουργίας ψεύ&τικου καταλόγου"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs root"
+
+#~ msgid "&Help"
+#~ msgstr "&Βοήθεια"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Χρήστες"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Όλοι οι &μη καθορισμένοι χρήστες"
+
+#~ msgid "Reject"
+#~ msgstr "Απορρίπτονται"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Καθορισμένο&ι χρήστες"
+
+#~ msgid "Access Rights"
+#~ msgstr "Δικαιώματα πρόσβασης"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Προσθήκη χρήστη..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Προ&χωρημένος"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Προσθήκη &ομάδας..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Α&φαίρεση επιλεγμένων"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Όλοι η χρήστες θα εξαναγκαστούν στον &παρακάτω χρήστη/ομάδα"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Εξανα&γκασμός χρήστη:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Εξαναγ&κασμός ομάδας:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Τροποποιητές πρόσβασης"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Άδειες πρόσβασης"
+
+#~ msgid "Others"
+#~ msgstr "Άλλα"
+
+#~ msgid "Read"
+#~ msgstr "Ανάγνωση"
+
+#~ msgid "Write"
+#~ msgstr "Εγγραφή"
+
+#~ msgid "Sticky"
+#~ msgstr "Κολλημένο"
+
+#~ msgid "Set GID"
+#~ msgstr "Ορισμός GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Ορισμός UID"
+
+#~ msgid "Special"
+#~ msgstr "Ειδικό"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Ρυθμίσεις χρήστη"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Έγ&κυροι χρήστες:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Διαχειριστές:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Μη έγ&κυροι χρήστες:"
+
+#~ msgid "&Write list:"
+#~ msgstr "Λίστας &εγγραφής:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Λίστα &ανάγνωσης:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Επιτρεπόμενοι υπο&λογιστές"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Μια λίστα με τους επιτρεπόμενους υπολογιστές"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Εδώ μπορείτε να δείτε μια λίστα τον υπολογιστών στους οποίους επιτρέπεται "
+#~ "η πρόσβαση σε αυτόν τον κατάλογο μέσω του NFS.\n"
+#~ "Η πρώτη στήλη εμφανίζει το όνομα ή τη διεύθυνση του υπολογιστή, η δεύτερη "
+#~ "στήλη εμφανίζει τις παραμέτρους πρόσβασης. Το όνομα '*' υποδηλώνει "
+#~ "δημόσια πρόσβαση."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Προσθήκη υπολογιστή..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&Τροποποίηση υπολογιστή..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Αφαίρεση υπολογιστή"
+
+#~ msgid "Name/Address"
+#~ msgstr "Όνομα/διεύθυνση"
+
+#~ msgid "Parameters"
+#~ msgstr "Παράμετροι"
+
+#~ msgid "Host Properties"
+#~ msgstr "Ιδιότητες υπολογιστή"
+
+#~ msgid "&Name/address:"
+#~ msgstr "Ό&νομα/διεύθυνση:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Πεδίο ονόματος / διεύθυνσης</b>\n"
+#~ "<p>\n"
+#~ "Εδώ μπορείτε να εισάγετε το όνομα ή τη διεύθυνση του υπολογιστή.<br>\n"
+#~ "Ο υπολογιστής μπορεί να ορισθεί με ένα πλήθος μεθόδων:\n"
+#~ "<p>\n"
+#~ "<i>απλός υπολογιστής</i>\n"
+#~ "<p>\n"
+#~ " Αυτή είναι η πιο κοινή μορφή. Μπορείτε να ορίσετε έναν υπολογιστή είτε "
+#~ "με το όνομα με το οποίο αναγνωρίζεται από την επίλυση ονομάτων δικτύου, "
+#~ "το πλήρες όνομα τομέα, ή τη διεύθυνση IP του.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>ομάδες δικτύου</i>\n"
+#~ "<p>\n"
+#~ " Οι ομάδες δικτύου NIS μπορούν να δοθούν ως: @ομάδα. Μόνο το τμήμα "
+#~ "υπολογιστή κάθε ομάδας δικτύου αναλύεται για τον έλεγχο. Κενά τμήματα "
+#~ "υπολογιστή ή αυτά που περιέχουν μόνο μία παύλα (-) θα αγνοηθούν.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>σύμβολα υποκατάστασης</i>\n"
+#~ "<p>\n"
+#~ " Το ονόματα υπολογιστών μπορούν να περιέχουν τους χαρακτήρες "
+#~ "υποκατάστασης * και ?. Αυτό μπορεί να χρησιμοποιηθεί για να γίνει το "
+#~ "αρχείο εξαγωγών περισσότερο σύντομο: για παράδειγμα το *.cs.foo.edu "
+#~ "ταιριάζει με όλους τους υπολογιστές στον τομέα cs.foo.edu. Ωστόσο, αυτοί "
+#~ "οι χαρακτήρες υποκατάστασης δεν ταιριάζουν τις τελείες σε ένα όνομα "
+#~ "τομέα, έτσι το παραπάνω παράδειγμα δεν περιλαμβάνει υπολογιστές όπως ο a."
+#~ "b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>Δίκτυα IP</i>\n"
+#~ "<p>\n"
+#~ " Μπορείτε επίσης να εξάγετε καταλόγους σε όλους τους υπολογιστές ενός "
+#~ "δικτύου IP (υποδίκτυο) ταυτόχρονα. Αυτό γίνεται ορίζοντας μια διεύθυνση "
+#~ "IP και μάσκα δικτύου ως ένα ζευγάρι διεύθυνση/μάσκα όπου η μάσκα δικτύου "
+#~ "ορίζετε σε μορφή δεκαδική με τελείες, ή σαν ένα συνεχές μήκος μάσκας (για "
+#~ "παράδειγμα, τα `/255.255.252.0' και `/22' προστιθέμενα στη διεύθυνση "
+#~ "βάσης του δικτύου θα έχουν σαν αποτέλεσμα ακριβώς τα ίδια υποδίκτυα με 10 "
+#~ "bits υπολογιστών).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Δημόσια πρόσβαση"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Δημόσια πρόσβαση</b>\n"
+#~ "<p>\n"
+#~ "Αν ενεργοποιήσετε αυτή την επιλογή, η διεύθυνση του υπολογιστή θα γίνει "
+#~ "ένα απλό σύμβολο υποκατάστασης (*) το οποίο υποδηλώνει τη δημόσια "
+#~ "πρόσβαση.\n"
+#~ "Αυτό είναι το ίδιο με το να εισάγετε το σύμβολο υποκατάστασης στο πεδίο "
+#~ "της διεύθυνσης.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Επιλογές"
+
+#~ msgid "&Writable"
+#~ msgstr "Εγγρά&ψιμο"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Εγγράψιμο</b>\n"
+#~ "<p>\n"
+#~ "Επίτρεψε τόσο τις αιτήσεις ανάγνωσης όσο και τις αιτήσεις εγγραφής σε "
+#~ "αυτόν τον τόμο NFS.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Το προκαθορισμένο είναι η απαγόρευση οποιασδήποτε αίτησης που αλλάζει "
+#~ "σύστημα αρχείων\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Μη ασ&φαλές"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Μη ασφαλές</b>\n"
+#~ "<p>\n"
+#~ "Αν ενεργοποιηθεί αυτή η επιλογή, δε χρειάζεται οι αιτήσεις να προέρχονται "
+#~ "από μια θύρα μικρότερη από το IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Αν δεν είστε σίγουροι αφήστε την απενεργοποιημένη.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Συγχρονισμός"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Συγχρονισμός</b>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή απαιτεί όλες οι εγγραφές αρχείων να αποστέλλονται στο "
+#~ "δίσκο πριν την ολοκλήρωση της αίτησης εγγραφής. Αυτό χρειάζεται για πλήρη "
+#~ "ασφάλεια των δεδομένων σε περίπτωση κατάρρευσης του εξυπηρετητή, αλλά "
+#~ "έχει ταυτόχρονα επίπτωση στις επιδόσεις.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Το προκαθορισμένο είναι να επιτρέπεται στον εξυπηρετητή να γράφει τα "
+#~ "δεδομένα όποτε αυτά είναι έτοιμα.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Χωρίς κα&θυστέρηση εγγραφής"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Χωρίς καθυστέρηση εγγραφής</b>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή έχει αποτέλεσμα αν είναι επίσης ορισμένη και η επιλογή "
+#~ "συγχρονισμού. Κανονικά ο εξυπηρετητής NFS θα καθυστερεί ελάχιστα να "
+#~ "αποστέλλει μια αίτηση εγγραφής στο δίσκο αν υποπτευθεί ότι μια ακόμη "
+#~ "σχετιζόμενη αίτηση εγγραφής είναι σε πρόοδο ή θα ζητηθεί σύντομα. Αυτό "
+#~ "επιτρέπει σε πολλαπλές αιτήσεις εγγραφής να αποστέλλονται στο δίσκο με "
+#~ "μια εντολή και βελτιώνει τις επιδόσεις. Αν ένας εξυπηρετητής NFS λάβει "
+#~ "κυρίως μικρές μη σχετιζόμενες αιτήσεις, η παραπάνω συμπεριφορά στην "
+#~ "πραγματικότητα μπορεί να μειώσει την ταχύτητα. Γι' αυτό και είναι δυνατό "
+#~ "το κλείσιμο αυτής της λειτουργίας με αυτήν την επιλογή. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Χωρίς απόκρυ&ψη"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Χωρίς απόκρυψη</b>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή βασίζεται στην επιλογή με το ίδιο όνομα που προσφέρεται "
+#~ "στο IRIX NFS. Αν ένας εξυπηρετητής εξάγει δύο συστήματα αρχείων και το "
+#~ "ένα από τα δύο είναι προσαρτημένο στο άλλο, τότε ο πελάτης πρέπει να "
+#~ "προσαρτήσει και τα δύο συστήματα για να έχει πρόσβαση σε αυτά. Αν απλά "
+#~ "προσαρτήσει το γονικό φάκελο, θα βλέπει έναν κενό κατάλογο στη θέση όπου "
+#~ "είναι προσαρτημένο το άλλο σύστημα αρχείων. Αυτό το σύστημα αρχείων είναι "
+#~ "\"κρυφό\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ορίζοντας αυτή την επιλογή σε ένα σύστημα αρχείων έχει σαν αποτέλεσμα "
+#~ "αυτό να μην είναι κρυφό, και ένας εξουσιοδοτημένος πελάτης θα μπορεί να "
+#~ "μετακινηθεί από το γονικό κατάλογο σε αυτό το σύστημα αρχείων χωρίς να "
+#~ "καταλάβει την αλλαγή.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ωστόσο, μερικοί πελάτες NFS δε συνεργάζονται καλά με αυτή την κατάσταση, "
+#~ "γιατί για παράδειγμα, είναι πιθανό για δύο αρχεία σε ένα εμφανιζόμενο "
+#~ "σύστημα αρχείων έχουν τον ίδιο αριθμό inode.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Η επιλογή μη απόκρυψης έχει αποτέλεσμα μόνο σε εξαγωγές ενός υπολογιστή. "
+#~ "Δε λειτουργεί αξιόπιστα με ομάδες δικτύου, υποδίκτυα, ή εξαγωγές με "
+#~ "σύμβολα υποκατάστασης.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή μπορεί να φανεί πολύ χρήσιμη σε διάφορες καταστάσεις, αλλά "
+#~ "πρέπει να χρησιμοποιηθεί με πολλή προσοχή και μόνο αν επιβεβαιωθεί ότι το "
+#~ "σύστημα του πελάτη μπορεί να συνεργαστεί με αυτήν.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Χωρίς έλεγχο δομής &δέντρου"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Χωρίς έλεγχο δομής δέντρου</b>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή απενεργοποιεί τον έλεγχο της δομής δέντρου, το οποίο έχει "
+#~ "ελαφρές επιπλοκές ασφαλείας, αλλά μπορεί να βελτιώσει την αξιοπιστία σε "
+#~ "κάποιες περιπτώσεις.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Αν εξαχθεί ένας υποκατάλογος που βρίσκεται σε ένα σύστημα αρχείων, αλλά "
+#~ "όχι ολόκληρο το σύστημα αρχείων, τότε κάθε φορά που λαμβάνεται μια αίτηση "
+#~ "NFS, ο εξυπηρετητής πρέπει να ελέγξει τόσο ότι το ζητούμενο αρχείο "
+#~ "βρίσκεται στο κατάλληλο σύστημα αρχείων (το οποίο είναι εύκολο) όσο "
+#~ "επίσης και ότι βρίσκεται στη εξαγόμενη δομή δέντρου (δυσκολότερο). Αυτός "
+#~ "ο έλεγχος ονομάζεται έλεγχος δομής δέντρου.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Για να γίνει αυτός ο έλεγχος, ο εξυπηρετητής πρέπει να συμπεριλάβει "
+#~ "κάποιες πληροφορίες σχετικά με τη θέση του αρχείου στο \"χειριστή αρχείου"
+#~ "\" που προσφέρεται στον πελάτη. Αυτό μπορεί να δημιουργήσει προβλήματα με "
+#~ "την πρόσβαση αρχείων που μετονομάζονται ενώ ο πελάτης τα έχει ανοικτά "
+#~ "(παρόλο που σε μερικές περιπτώσεις αυτό μπορεί να δουλέψει κανονικά).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ο έλεγχος αυτός χρησιμοποιείται επίσης για να είναι σίγουρο ότι τα αρχεία "
+#~ "μέσα σε καταλόγους για τα οποία έχει πρόσβαση μόνο ο υπερχρήστης μπορούν "
+#~ "να εξαχθούν μόνο αν το σύστημα αρχείων έχει εξαχθεί με την επιλογή 'χωρίς "
+#~ "παράκαμψη υπερχρήστη' (δείτε παρακάτω), ακόμη και αν το αρχείο το ίδιο "
+#~ "επιτρέπει πιο γενική πρόσβαση.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Σαν γενικό κανόνα, ένα σύστημα αρχείων του προσωπικού φακέλου, το οποίο "
+#~ "συνήθως εξάγεται στο βασικό κατάλογο και στο οποίο συμβαίνουν πολλές "
+#~ "μετονομασίες αρχείων, θα πρέπει να εξαχθεί με απενεργοποιημένη αυτή την "
+#~ "επιλογή. Ένα σύστημα αρχείων το οποίο είναι κυρίως μόνο για ανάγνωση, ή "
+#~ "δεν συμβαίνουν σε αυτό πολλές μετονομασίες αρχείων (π.χ. /usr ή /var) και "
+#~ "οι υποκατάλογοί του μπορεί να εξαχθούν, πιθανότατα πρέπει να εξαχθεί με "
+#~ "ενεργοποιημένη αυτή την επιλογή.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Μη ασφαλή &κλειδώματα"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Μη ασφαλή κλειδώματα</b>\n"
+#~ "<p>\n"
+#~ "Αυτή η επιλογή καθορίζει στον εξυπηρετητή NFS να μην απαιτεί ταυτοποίηση "
+#~ "των αιτήσεων κλειδώματος (αιτήσεις που χρησιμοποιούν το πρωτόκολλο NLM). "
+#~ "Κανονικά ο εξυπηρετητής NFS χρειάζεται μια αίτηση κλειδώματος για να "
+#~ "διατηρήσει τα διαπιστευτήρια ενός χρήστη που έχει δικαιώματα ανάγνωσης σε "
+#~ "ένα αρχείο. Με αυτή την επιλογή δε θα γίνει έλεγχος πρόσβασης.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Οι αρχικές υλοποιήσεις πελατών NFS δεν στέλνανε διαπιστευτήρια με τις "
+#~ "αιτήσεις κλειδώματος, και πολλοί σημερινοί πελάτες NFS βασίζονται ακόμα "
+#~ "σε αυτή την παλιά υλοποίηση. Χρησιμοποιήστε αυτή την επιλογή αν "
+#~ "ανακαλύψετε ότι μπορείτε να κλειδώσετε τα αρχεία που είναι δημόσια για "
+#~ "ανάγνωση.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Αντιστοίχηση χρηστών"
+
+#~ msgid "All s&quash"
+#~ msgstr "Παρά&καμψη όλων"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Παράκαμψη όλων</b>\n"
+#~ "<p>\n"
+#~ "Αντιστοίχηση όλων των uids και gids με τον ανώνυμο χρήστη. Χρήσιμο για "
+#~ "δημόσιους καταλόγους FTP που εξάγονται με το NFS, καταλόγους με νήματα "
+#~ "νέων, κτλ. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Χωρίς παράκαμψη υπε&ρχρήστη"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Χωρίς παράκαμψη υπερχρήστη</b>\n"
+#~ "<p>\n"
+#~ "Απενεργοποίηση της παράκαμψης του υπερχρήστη. Αυτή η επιλογή είναι "
+#~ "χρήσιμη για πελάτες χωρίς δίσκο.\n"
+#~ "</p>\n"
+#~ "<i>παράκαμψη υπερχρήστη</i>\n"
+#~ "<p>\n"
+#~ "Αντιστοίχηση των αιτήσεων από το uid/gid 0 στο uid/gid του ανώνυμου "
+#~ "χρήστη. Σημειώστε ότι αυτό δεν εφαρμόζεται σε κανένα από τα άλλα uids που "
+#~ "μπορεί να είναι ισοδύναμα ευαίσθητο, όπως για παράδειγμα ο χρήστης bin.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "UID α&νώνυμου χρήστη:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>UID/GID ανώνυμου χρήστη</b> <p> Αυτές οι επιλογές ορίζουν άμεσα το uid "
+#~ "και το gid του λογαριασμού του ανώνυμου χρήστη. Αυτή η επιλογή είναι "
+#~ "χρήσιμη κυρίως για πελάτες PC/NFS, στους οποίους ίσως να επιθυμείτε όλες "
+#~ "οι αιτήσεις να εμφανίζονται να προέρχονται από έναν χρήστη. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "GID ανών&υμου χρήστη:"
+
+#~ msgid "Folder:"
+#~ msgstr "Φάκελος:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Κοινή χρήση με &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Επιλογές NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "&Δημόσιο"
+
+#~ msgid "W&ritable"
+#~ msgstr "Εγγρά&ψιμο"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Περισσότερες ε&πιλογές NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Επιλογές Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "Δ&ημόσιο"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Περισσότε&ρες επιλογές Samba"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Επίτρεψε σε όλους τους χρήστες να μοιράζουν φακέλους"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Μόνο χρήστες της ομάδας '%1' επιτρέπεται να μοιράζουν φακέλους"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Χρήστες της ομάδας '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Αφαίρεση χρήστη"
+
+#~ msgid "Add User"
+#~ msgstr "Προσθήκη χρήστη"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Τα μέλη της ομάδας μπορούν να μοιράζονται φακέλους χωρίς τον κωδικό του "
+#~ "υπερχρήστη"
+
+#~ msgid "Change Group..."
+#~ msgstr "Αλλαγή ομάδας..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Οι εξυπηρετητές SMB και NFS δεν είναι εγκατεστημένοι σε αυτό το μηχάνημα, "
+#~ "για να ενεργοποιήσετε αυτή τη μονάδα οι εξυπηρετητές πρέπει να είναι "
+#~ "εγκατεστημένοι."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Ενεργοποίηση κοινής χρήσης αρχείων στο τοπικό δί&κτυο"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Α&πλή κοινή χρήση"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Ενεργοποίηση της απλής κοινής χρήσης για να μπορούν οι χρήστες να "
+#~ "μοιράζονται φακέλους από το δικό τους Προσωπικό φάκελο, χωρίς τη χρήση "
+#~ "του κωδικού πρόσβασης του υπερχρήστη."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Προ&χωρημένη κοινή χρήση"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Ενεργοποιήστε την προχωρημένη κοινή χρήση για να επιτρέψετε σε χρήστες να "
+#~ "μοιράζονται οποιοδήποτε φάκελο, εφόσον έχουν άδεια εγγραφής στα "
+#~ "απαραίτητα αρχεία ρύθμισης, ή γνωρίζουν τον κωδικό υπερχρήστη."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Χρήση &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Χρήση Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Επιτ&ρεπόμενοι χρήστες"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Κοινόχρηστοι φάκελοι"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Προσ&θήκη..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Αλλα&γή..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Το αρχείο ρυθμίσεων της SAMBA <strong>'smb.conf'</strong> δεν μπορεί "
+#~ "να βρεθεί:</p>σιγουρευτείτε ότι έχετε εγκατεστημένη τη SAMBA.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Καθορισμός τοποθεσίας"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Αρχείο Samba conf. \n"
+#~ "*|Όλα τα αρχεία"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Λήψη της τοποθεσίας του smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Το αρχείο <i>%1</i> δεν μπορεί να αναγνωστεί.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Αδύνατη η ανάγνωση του αρχείου"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Σφάλμα κατά το άνοιγμα του αρχείου"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Η σύνδεση στον τομέα %1 απέτυχε."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr ""
+#~ "<qt>Παρακαλώ εισάγετε έναν κωδικό πρόσβασης για το χρήστη <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Η προσθήκη του χρήστη <b>%1</b> στη βάση δεδομένων των χρηστών Samba "
+#~ "απέτυχε.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Η αφαίρεση του χρήστη '%1' από τη βάση δεδομένων των χρηστών Samba "
+#~ "απέτυχε."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Παρακαλώ εισάγετε έναν κωδικό πρόσβασης για το χρήστη %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Η αλλαγή του κωδικού πρόσβασης του χρήστη %1 απέτυχε."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Ρύθμιση Samba</h1> Εδώ μπορείτε να ρυθμίσετε τον εξυπηρετητή SAMBA "
+#~ "σας."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>κοινή χρήση</i> αν έχετε ένα "
+#~ "δίκτυο στο σπίτι ή ένα μικρό δίκτυο γραφείου.<br /> Επιτρέπει σε καθέναν "
+#~ "να διαβάσει όλα τα κοινόχρηστα ονόματα καταλόγων και εκτυπωτών χωρίς να "
+#~ "χρειάζεται σύνδεση."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>χρήστης</i> αν έχετε ένα "
+#~ "μεγαλύτερο δίκτυο και δεν επιθυμείτε να επιτρέψετε σε οποιονδήποτε να "
+#~ "διαβάζει τη λίστα των κοινόχρηστων καταλόγων και εκτυπωτών χωρίς να "
+#~ "συνδεθεί πρώτα.<br /><br />Αν επιθυμείτε να λειτουργήσει ο εξυπηρετητής "
+#~ "Samba ως ένας <b>Πρωτεύον ελεγκτής τομέα</b> (PDC) πρέπει να ορίσετε αυτή "
+#~ "την επιλογή."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>εξυπηρετητής</i> αν έχετε ένα "
+#~ "μεγάλο δίκτυο και ο εξυπηρετητής samba θα επαληθεύει το όνομα χρήστη/"
+#~ "κωδικό πρόσβασης περνώντας το σε κάποιον άλλο εξυπηρετητή SMB, όπως ένας "
+#~ "υπολογιστής NT."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>τομέας</i> αν έχετε ένα μεγάλο "
+#~ "δίκτυο και ο εξυπηρετητής samba θα επαληθεύει το όνομα χρήστη/κωδικό "
+#~ "πρόσβασης περνώντας το σε έναν Windows NT πρωτεύον ή δευτερεύον ελεγκτή "
+#~ "τομέα."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Χρησιμοποιήστε το επίπεδο ασφαλείας <i>ADS</i> αν έχετε ένα μεγάλο δίκτυο "
+#~ "και ο εξυπηρετητής samba θα ενεργεί ως μέλος ενός τομέας σε μια περιοχή "
+#~ "ADS."
+
+#~ msgid "Sorry"
+#~ msgstr "Δυστυχώς"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr ""
+#~ "Έχετε εισάγει δυο διαφορετικούς κωδικούς. Παρακαλώ προσπαθήστε ξανά."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr ""
+#~ "Η επιλογή <em>%1</em> δεν υποστηρίζεται από αυτή την έκδοση της Samba"
+
+#~ msgid "Unnamed"
+#~ msgstr "Χωρίς όνομα"
+
+#~ msgid "&Hide"
+#~ msgstr "&Απόκρυψη"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Βέτο Oplock"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Κάποια από τα αρχεία που επιλέξατε είναι κρυφά επειδή ξεκινούν με μια "
+#~ "τελεία: επιθυμείτε την αποεπιλογή όλων των αρχείων που ξεκινούν με μια "
+#~ "τελεία;</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Αρχεία που αρχίζουν με τελεία"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Αποεπιλογή κρυφών"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Διατήρηση κρυφών"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Κάποια από τα αρχεία που επιλέξατε ταιριάζουν με τη συμβολοσειρά "
+#~ "υποκατάστασης <b>'%1'</b>: επιθυμείτε την αποεπιλογή των αρχείων που "
+#~ "ταιριάζουν με το <b>'%1'</b>;"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Συμβολοσειρά υποκατάστασης"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Αποεπιλογή ταιριασμάτων"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Διατήρηση ως επιλεγμένα"
+
+#~ msgid "Default"
+#~ msgstr "Προκαθορισμένο"
+
+#~ msgid "Admin"
+#~ msgstr "Διαχειριστής"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Καθορίσατε <b>δημόσια πρόσβαση για ανάγνωση</b> για τον κατάλογο "
+#~ "αυτόν, αλλά ο λογαριασμός guest <b>%1</b> δεν έχει τις κατάλληλες άδειες "
+#~ "ανάγνωσης:<br />επιθυμείτε τη συνέχεια;</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Προειδοποίηση"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Καθορίσατε <b>δημόσια πρόσβαση για εγγραφή</b> για τον κατάλογο "
+#~ "αυτόν, αλλά ο λογαριασμός guest <b>%1</b> δεν έχει τις κατάλληλες άδειες "
+#~ "εγγραφής:<br />επιθυμείτε τη συνέχεια;</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Καθορίσατε <b>πρόσβαση εγγραφής</b> για τον χρήστη <b>%1</b> στον "
+#~ "κατάλογο αυτόν, αλλά ο χρήστης δεν έχει τις κατάλληλες άδειες εγγραφής:"
+#~ "<br />επιθυμείτε τη συνέχεια;</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Καθορίσατε <b>πρόσβαση ανάγνωσης</b> για τον χρήστη <b>%1</b> στον "
+#~ "κατάλογο αυτόν, αλλά ο χρήστης δεν έχει τις κατάλληλες άδειες ανάγνωσης:"
+#~ "<br />επιθυμείτε τη συνέχεια;</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Υπάρχει ήδη μία δημόσια καταχώρηση."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Ο υπολογιστής υπάρχει ήδη"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Παρακαλώ εισάγετε ένα όνομα υπολογιστή ή μία διεύθυνση IP."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Δεν υπάρχει όνομα υπολογιστή/διεύθυνση IP"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Ο υπολογιστής '%1' υπάρχει ήδη."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Ανάγνωση αρχείου ρυθμίσεων της Samba..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Ανάγνωση αρχείου ρυθμίσεων του NFS..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Παρακαλώ εισάγετε μια έγκυρη διαδρομή."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Μπορούν να μοιραστούν μόνο φάκελοι."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Ο φάκελος είναι ήδη σε κοινή χρήση."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Ο διαχειριστής δεν επιτρέπει την κοινή χρήση με το NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Σφάλμα: αδυναμία ανάγνωσης του αρχείου ρυθμίσεων NFS."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Ο διαχειριστής δεν επιτρέπει την κοινή χρήση με Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Σφάλμα: αδυναμία ανάγνωσης του αρχείου ρυθμίσεων Samba."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Πρέπει να εισάγετε ένα όνομα για τον κοινόχρηστο πόρο Samba."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Πρέπει να έχετε άδεια για να μοιράζετε καταλόγους."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Ρύθμιση της κοινής χρήσης αρχείων..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Δεν υπάρχει εγκατεστημένος εξυπηρετητής NFS σε αυτό το σύστημα"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Αδύνατη η αποθήκευση των ρυθμίσεων."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Αδύνατο το άνοιγμα του αρχείου '%1' για εγγραφή: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Η αποθήκευση απέτυχε"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Κοινή χρήση αρχείων</h1><p>Αυτό το άρθρωμα μπορεί να χρησιμοποιηθεί "
+#~ "για την ενεργοποίηση της κοινής χρήσης αρχείων στο δίκτυο χρησιμοποιώντας "
+#~ "το \"Network File System\" (NFS) ή το SMB στον Konqueror. Το δεύτερο σας "
+#~ "επιτρέπει να μοιράζεστε τα αρχεία σας με υπολογιστές Windows(R) στο "
+#~ "δίκτυό σας.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Κοινή χρήση φακέλου"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Επιτρεπόμενοι χρήστες"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Όλοι οι χρήστες είναι ήδη στην ομάδα %1."
+
+#~ msgid "Select User"
+#~ msgstr "Επιλογή χρήστη"
+
+#~ msgid "Select a user:"
+#~ msgstr "Επιλέξτε ένα χρήστη:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Αδύνατη η προσθήκη του χρήστη '%1' στην ομάδα '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Αδύνατη η αφαίρεση του χρήστη '%1' από την ομάδα '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Πρέπει να επιλέξετε μία έγκυρη ομάδα."
+
+#~ msgid "New file share group:"
+#~ msgstr "Νέα ομάδα κοινής χρήσης αρχείων:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Προσθέστε χρήστες από την παλιά ομάδα κοινής χρήσης αρχείων στη νέα"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Αφαίρεση χρηστών από την παλιά ομάδα κοινής χρήσης αρχείων"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Διαγραφή της παλιάς ομάδας κοινής χρήσης αρχείων"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Μόνο χρήστες μιας ορισμένης ομάδας επιτρέπεται να μοιράζονται φακέλους"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Επιλέξτε ομάδα..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "Επιθυμείτε πραγματικά να αφαιρέσετε όλους τους χρήστες από την ομάδα '%1';"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Επιθυμείτε πραγματικά να διαγράψετε την ομάδα '%1';"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Η διαγραφή της ομάδας '%1' απέτυχε."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Παρακαλώ επιλέξτε μία έγκυρη ομάδα."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Η ομάδα '%1' δεν υπάρχει. Να δημιουργηθεί;"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Να μη δημιουργηθεί"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Η δημιουργία της ομάδας '%1' απέτυχε."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Ρυθμίσεις εκτυπωτή"
+
+#~ msgid "Pr&inter"
+#~ msgstr "&Εκτυπωτής"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&Διαδρομή:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Σειρά αναμονής:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Κοινή χ&ρήση όλων των εκτυπωτών"
+
+#~ msgid "I&dentifier"
+#~ msgstr "Α&ναγνωριστικό"
+
+#~ msgid "&Name:"
+#~ msgstr "Ό&νομα:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Σ&χόλιο:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Κύριες ιδιότητες"
+
+#~ msgid "&Printing"
+#~ msgstr "&Εκτύπωση"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "&Οδηγός εκτυπωτή:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Τοποθεσία οδ&ηγού εκτυπωτή:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "Εκτύ&πωση:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Μέγιστη αναφορά ε&ργασιών εκτύπωσης:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Μέ&γιστος αριθμός εργασιών εκτύπωσης:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "Χρήση οδηγού του &πελάτη"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "Προκα&θορισμένη λειτουργία συσκευής"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Επιτρέπονται οι υπολογιστές:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "Διαχειριστής εκ&τυπωτή:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Ε&ντολές"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Εντο&λή εκτύπωσης:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "Εντ&ολή lpq:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "Εν&τολή lprm:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "&lppause:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Διάφορα"
+
+#~ msgid "p&reexec:"
+#~ msgstr "p&reexec:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "root pr&eexec:"
+
+#~ msgid "root postexec:"
+#~ msgstr "root postexec:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "poste&xec:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "Ρύ&θμιση"
+
+#~ msgid "M&in print space:"
+#~ msgstr "Ε&λάχιστος χώρος εκτύπωσης:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Καταγραφή"
+
+#~ msgid "S&tatus"
+#~ msgstr "Κα&τάσταση"
+
+#~ msgid "Not share&d"
+#~ msgstr "Ό&χι σε κοινή χρήση"
+
+#~ msgid "&Shared"
+#~ msgstr "Σε κοινή &χρήση"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Βασι&κές επιλογές"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Αυτό είναι ένα πεδίο κειμένου το οποίο εμφανίζεται δίπλα σε ένα "
+#~ "κοινόχρηστο πόρο όταν ο πελάτης κάνει αναζήτηση στον εξυπηρετητή, είτε "
+#~ "μέσω της γειτονιάς του δικτύου ή μέσω της προβολής δικτύου, για την "
+#~ "εμφάνιση των κοινόχρηστων πόρων που είναι διαθέσιμοι."
+
+#~ msgid "Name of the share"
+#~ msgstr "Όνομα του κοινόχρηστου πόρου"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Σ&χόλιο:"
+
+#~ msgid "Security Options"
+#~ msgstr "Επιλογές ασφαλείας"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "&Απαγόρευση υπολογιστών:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&Επιτρέπονται οι υπολογιστές:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Λογ&αριασμός guest:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Αν ενεργοποιηθεί αυτή η επιλογή, οι χρήστες μιας υπηρεσίας δεν μπορούν να "
+#~ "δημιουργήσουν ή να αφαιρέσουν αρχεία στον κατάλογο της υπηρεσίας."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "Επιτρέπονται &guests"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Αυτό είναι ένα όνομα χρήστη το οποίο θα χρησιμοποιηθεί για την πρόσβαση "
+#~ "σε αυτόν τον κατάλογο αν επιτρέπονται οι χρήστες guest"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Αυτό ρυθμίζει αν αυτός ο κοινόχρηστος πόρος θα εμφανίζεται στη λίστα των "
+#~ "διαθέσιμων πόρων μιας προβολής περιήγησης δικτύου."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Το πλαίσιο επιλογής σας επιτρέπει να \\\"απενεργοποιήσετε\\\" μια "
+#~ "υπηρεσία. Αν δεν είναι ενεργοποιημένο, τότε ΟΛΕΣ οι προσπάθειες σύνδεσης "
+#~ "στην υπηρεσία θα αποτύχουν. Αυτές οι αποτυχίες σύνδεσης καταγράφονται."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Περισσότερες επιλο&γές"

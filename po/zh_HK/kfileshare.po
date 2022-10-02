@@ -1,0 +1,1067 @@
+# Chinese (Hong Kong) Translation of kfileshare
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# tonniewalker <tonniewalker@hotmail.com>, 2002.
+# Walter Cheuk <wwycheuk@netvigator.com>，2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_sambaconf\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2006-01-02 22:10+0800\n"
+"Last-Translator: Walter Cheuk <wwycheuk@netvigator.com>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"Language: zh_HK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr ""
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr ""
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "路徑"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr ""
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allowed &Hosts"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "容許的主機(&H)"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Remove User"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "移除使用者"
+
+#, fuzzy
+#~| msgid "Remove User"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "移除使用者"
+
+#, fuzzy
+#~| msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "使用 Sam&ba (Microsoft(R) Windows(R))"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "主機屬性"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "新增(&D)..."
+
+#~ msgid "Rem&ove"
+#~ msgstr "移除(&O)"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "容許的主機列表"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "在此您可看到容許以 NFS 存取這目錄的主機列表。\n"
+#~ "第一欄顯示主機的名稱或位址，第二欄顯示存取參數。名稱『*』代表公眾存取。"
+
+#~ msgid "&Add Host..."
+#~ msgstr "新增主機(&A)..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "修改主機(&D)..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "移除主機(&R)"
+
+#~ msgid "Name/Address"
+#~ msgstr "名稱/位址"
+
+#~ msgid "Parameters"
+#~ msgstr "參數"
+
+#~ msgid "Host Properties"
+#~ msgstr "主機屬性"
+
+#~ msgid "&Name/address:"
+#~ msgstr "名稱/位址(&N):"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>名稱 / 位址欄位</b>\n"
+#~ "<p>\n"
+#~ "您可在此輸入主機名稱或位址。<br>\n"
+#~ "主機可以多種方法指定:\n"
+#~ "<p>\n"
+#~ "<i>單一主機</i>\n"
+#~ "<p>\n"
+#~ "這是最普遍的格式。您可以解析器認識的縮寫名稱、完全網域名稱（fully "
+#~ "qualified domain name）或 IP 位址指定主機。\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>網絡群組</i>\n"
+#~ "<p>\n"
+#~ "NIS 網絡群組可以 @群組格式指定。只有每個網絡群組成員的主機部份會用作檢查成"
+#~ "員資格。如沒有主機部份或包括單一連接號（dash (-)）的名稱會被忽略。\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>萬用字元</i>\n"
+#~ "<p>\n"
+#~ "機器名稱可包括萬用字元 * 和 ? 。這可使匯出檔案小一些；與個例子， *.cs.foo."
+#~ "edu 可配對所有在 cs.foo.edu 網域的主機。但這些萬用字元不能配對網域名稱中的"
+#~ "點（dot），所以以上樣式不包括a.b.cs.foo.edu 這些主機。\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP 網絡</i>\n"
+#~ "<p>\n"
+#~ "您可以同一時間將目錄匯出予 IP（子）網絡的所有主機。IP 位址和網絡遮罩對以位"
+#~ "址/網絡遮罩方法指定，而網絡遮罩可以以點分隔的十進位數格式或連續的遮罩長度"
+#~ "（例如，不論 `/255.255.252.0' 或加在網絡基底位址後的 `/22' 都指向同一個有 "
+#~ "10 位元主機的子網絡）指定。\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "公眾存取(&P)"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>公眾存取</b>\n"
+#~ "<p>\n"
+#~ "如您啟用此選項，主機位址會是單一一個萬用字元，代表公眾存取。\n"
+#~ "這和您在位址欄輸入一個萬用字元是一樣的。\n"
+#~ "</p>"
+
+#~ msgid "&Writable"
+#~ msgstr "可寫入(&W)"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>可寫入</b>\n"
+#~ "<p>\n"
+#~ "在這 NFS 卷冊容許讀及寫。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "預設是不容許改變檔案系統\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "不安全(&I)"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>不安全</b>\n"
+#~ "<p>\n"
+#~ "如啟用此選項，來源的互聯網連接埠毋須大於 IPPORT_RESERVED (即 1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "如不肯定，不要選。\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "同步化(&S)"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>同步化</b>\n"
+#~ "<p>\n"
+#~ "此選項使檔案的寫入在寫入要求完成前要真的寫入硬碟。這可避免因伺服器當機而損"
+#~ "失資料，但會影響效能。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "預設是容許伺服器只在有空時才將資料寫入硬碟。\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "不容許寫入延遲(&D)"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>不容許寫入延遲</b>\n"
+#~ "<p>\n"
+#~ "此選項只在同時設定「同步」時才有效。 NFS 伺服器在正常情況下如果懷疑有個相"
+#~ "關的寫入要求正在進行或將要來到，它會延遲少許才將資料寫入硬碟。這樣令多個寫"
+#~ "入可以一次過完成，改善效能。如 NFS 伺服器接收的主要是沒有關連的要求，此舉"
+#~ "會確實減低效能，所以可以以「不容許寫入延遲」取消它。</p>"
+
+#~ msgid "No &hide"
+#~ msgstr "不隱藏(&H)"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>不隱藏</b>\n"
+#~ "<p>\n"
+#~ "此選項建基於 IRIX NFS 提供的同名選項。在正常情況下，如一伺服器匯出兩個檔案"
+#~ "系統，而其中一個是掛載在另一個上的，客戶端就要同時掛載兩者才能存取它們。如"
+#~ "它只掛載父檔案系統，在另一個檔案系統掛載的地方它只會看到一個空的目錄。這個"
+#~ "目錄就是「隱藏」了。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "在檔案系統上設定不隱藏會令它不再隱藏，有合適權限的使用戶可以從父檔案系統移"
+#~ "至這個檔案系統，而不會察覺他已改變了存取的檔案系統。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "但是有些 NFS 用戶端不能正確地處理這種情況，例如它看見的同一個檔案系統中可"
+#~ "以有兩個檔案有著相同的 inode 號碼。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "不隱藏選項目前只在單一匯出主機上有效。在網絡群組、子網絡、或萬用字元匯出主"
+#~ "機中不太可靠。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "這個選項在某些情況下很有用，但必須小心使用，和必須確定客戶端能有效地處理這"
+#~ "個情況。\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "不作子樹檢查(&B)"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>不作子樹檢查</b>\n"
+#~ "<p>\n"
+#~ "此選項停用子樹檢查，對保安有些微影響但在某些情況下可改善可靠性。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "如某一檔案系統的子目錄匯出了，但整個檔案系統未有匯出，當有 NFS 要求到達"
+#~ "時，伺服器不單必須檢查要存取的檔案是否在合適的檔案系統（這很容易），還要檢"
+#~ "查該檔案是在已匯出的樹狀結構裡（這個較難）。這個檢查就叫作子樹檢查"
+#~ "（subtree_check）。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "要進行這個檢查，伺服器必須在送給客戶端的「檔案識別碼（filehandle）」中包括"
+#~ "檔案位置的資訊。當有人開端了某個檔案，而另外有人將它們更名，可能會發生問題"
+#~ "（雖然大部份情況下都不會有問題）。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "子樹檢查亦用於確保如目錄內的檔案只能以 root 存取，它只有當以"
+#~ "no_root_squash 選項（見下面）匯出檔案系統時才能被存取，即使讓檔案本身容許"
+#~ "更大的存取。\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "通常來說，在根部開始匯出的家目錄檔案系統很可能會發生很多更名事件，應以不作"
+#~ "子樹檢查的方式匯出。主要用作讀取，不會有很多檔名更名的檔案系統（例如 /usr "
+#~ "或 /var），則應該以子樹檢查的方式匯出。\n"
+#~ "</p>"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "容讓所有使用者分享資料夾"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "只有『%1』群組的使用者可以分享資料夾"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "『%1』群組的使用者"
+
+#~ msgid "Add User"
+#~ msgstr "新增使用者"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "群組成員毋須系統管理員（root）密碼就可以分享資料夾"
+
+#~ msgid "Change Group..."
+#~ msgstr "更改群組..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "這部機器未安裝 SMB 及 NFS 伺服器，必須安裝這些伺服器才能開啟這個模組。"
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "啟動區域網絡檔案分享(&K)"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "簡單分享(&M)"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "啟動簡單分享讓使用者在他們的家目錄分享資料夾，毋須知道系統管理員密碼。"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "進階分享(&G)"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "啟動進階分享讓使用者分享任何資料夾，只要他們有所需檔案的寫入權限，或他們知"
+#~ "道系統管理員密碼。"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "使用 &NFS (Linux/UNIX)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "容許的使用者(&W)"
+
+#~ msgid "Shared Folders"
+#~ msgstr "分享的資料夾"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "新增(&D)..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "更改(&E)..."
+
+#~ msgid ""
+#~ "Some day, when I have nothing better to do, I will probably add some "
+#~ "really helpfull text in here."
+#~ msgstr "也許某天，當我閒得發慌時，我可能會在這裡增加些有用的文字。"

@@ -1,0 +1,1269 @@
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2010-03-31 00:09+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "เขียนได้"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "สคริปต์การลบต่าง ๆ"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr ""
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr ""
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "พาธ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr ""
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "เปิดการใ&ช้งานโฟลเดอร์นี้ร่วมกันบนเครือข่ายท้องถิ่น"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "ชื่อ:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "อนุญาตใ&ห้ผู้ใช้ประเภทแขก (Guest) ล็อกอินได้"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "อ่านได้เท่านั้น"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "รหัสผ่าน"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "ไม่มีรหัสผ่าน"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "รหัสผ่าน"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&ยกเลิก"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "กำหนดการใช้งานร่วมกันได้กับโฟลเดอร์ภายในเครื่องเท่านั้น"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "ผู้ใช้ต่าง ๆ บนบริการแซม&บ้า"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "การใช้งานแฟ้มร่วมกันถูกปิดการใช้งาน"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "ยังไม่มีโฟลเดอร์อยู่"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "ใช้ร่วมกัน"
+
+#, fuzzy
+#~| msgid "Remove User"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "เอาผู้ใช้ออก"
+
+#, fuzzy
+#~| msgid "Remove User"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "เอาผู้ใช้ออก"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "ใช้ร่วมกันผ่านทางบริการแซ&มบ้า (ระบบ Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "เลือกผู้ใช้"
+
+#~ msgid "Select &Users"
+#~ msgstr "เลือก&ผู้ใช้"
+
+#~ msgid "Name"
+#~ msgstr "ชื่อ"
+
+#~ msgid "UID"
+#~ msgstr "เลขผู้ใช้ (UID)"
+
+#~ msgid "GID"
+#~ msgstr "เลขกลุ่มผู้ใช้ (GID)"
+
+#~ msgid "&OK"
+#~ msgstr "&ตกลง"
+
+#~ msgid "Join Domain"
+#~ msgstr "เข้าร่วมโดเมน"
+
+#~ msgid "&Verify:"
+#~ msgstr "&ยืนยันรหัสผ่าน:"
+
+#~ msgid "&Password:"
+#~ msgstr "&รหัสผ่าน:"
+
+#~ msgid "&Username:"
+#~ msgstr "ชื่อ&ผู้ใช้:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "ตัว&ควบคุมโดเมน:"
+
+#~ msgid "&Domain:"
+#~ msgstr "โ&ดเมน:"
+
+#~ msgid "&Base Settings"
+#~ msgstr "ตั้งค่า&พื้นฐานต่าง ๆ"
+
+#~ msgid "Samba config file:"
+#~ msgstr "แฟ้มค่าปรับแต่งของบริการแซมบ้า:"
+
+#~ msgid "&Load"
+#~ msgstr "โ&หลด"
+
+#~ msgid "Server Identification"
+#~ msgstr "การแสดงตัวของแม่ข่าย"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "กลุ่ม&งาน:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "ป้อนชื่อของกลุ่มงาน หรือชื่อโดเมนของคุณ"
+
+#~ msgid "Server strin&g:"
+#~ msgstr "&ข้อความอธิยายแม่ข่าย:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "ชื่อที่ใช้กับ NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "ระดับความปลอด&ภัย"
+
+#~ msgid "User"
+#~ msgstr "ผู้ใช้"
+
+#~ msgid "Server"
+#~ msgstr "เครื่องแม่ข่าย"
+
+#~ msgid "Domai&n"
+#~ msgstr "โดเ&มน"
+
+#~ msgid "ADS"
+#~ msgstr "แอกทีฟไดเรกทอรีเซอร์วิส (ADS)"
+
+#~ msgid "Further Options"
+#~ msgstr "ตัวเลือกเสริม"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "เลขที่อยู่/ชื่อแม่ข่ายบริการรหัสผ่าน:"
+
+#~ msgid "Real&m:"
+#~ msgstr "ขอบข่าย (Real&m):"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "บัญชีผู้ใช้ของผู้ใช้ประเภทแขก:"
+
+#~ msgid "Help"
+#~ msgstr "วิธีใช้"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "ดูวิธีใช้ตัวเลือกต่าง ๆ อย่างละเอียดได้ที่:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "การใช้งาน&ร่วมกัน"
+
+#~ msgid "Comment"
+#~ msgstr "คำอธิบาย"
+
+#~ msgid "Properties"
+#~ msgstr "คุณสมบัติ"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "แก้ไขค่า&ปริยาย..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "เพิ่มตำแหน่งใช้งานร่วมกันตัวใ&หม่..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "แก้ไขตำแหน่งใช้งานร่วมกัน..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&ลบตำแหน่งใช้งานร่วมกัน"
+
+#~ msgid "Prin&ters"
+#~ msgstr "เครื่อง&พิมพ์ต่าง ๆ"
+
+#~ msgid "Printer"
+#~ msgstr "เครื่องพิมพ์"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "แก้ไขค่า&ปริยาย"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "เพิ่มเครื่องพิมพ์ใ&หม่"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "แก้ไขเครื่อ&งพิมพ์"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&ลบเครื่องพิมพ์"
+
+#~ msgid "&Users"
+#~ msgstr "ผู้ใช้ต่าง ๆ"
+
+#~ msgid "Disabled"
+#~ msgstr "ระงับการใช้งาน"
+
+#~ msgid "Add"
+#~ msgstr "เพิ่ม"
+
+#~ msgid "Rem&ove"
+#~ msgstr "เ&อาออก"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "ผู้ใช้ต่าง ๆ บนระบบ&ยูนิกซ์"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "เปลี่ย&นรหัสผ่าน..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "เ&ข้าร่วมโดเมน"
+
+#~ msgid "Advan&ced"
+#~ msgstr "ขั้น&สูง"
+
+#~ msgid "Security"
+#~ msgstr "ความปลอดภัย"
+
+#~ msgid "&General"
+#~ msgstr "&ค่าทั่วไป"
+
+#~ msgid "General"
+#~ msgstr "ค่าทั่วไป"
+
+#~ msgid "Auth methods:"
+#~ msgstr "วิธีการตรวจสอบสิทธิ์:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "ส่วนเ&ชื่อมต่อต่าง ๆ:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "กำหนดให้เป็นผู้ใช้ประเภทแขก:"
+
+#~ msgid "Never"
+#~ msgstr "ไม่ต้องเลย"
+
+#~ msgid "Bad User"
+#~ msgstr "เมื่อชื่อผู้ใช้ไม่ถูกต้อง"
+
+#~ msgid "Bad Password"
+#~ msgstr "เมื่อรหัสผ่านไม่ถูกต้อง"
+
+#~ msgid "Pass&word"
+#~ msgstr "&รหัสผ่าน"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "รหัสผ่านของแซมบ้า"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "เข้ารหัส&ข้อมูลรหัสผ่านต่าง ๆ"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "วินาที"
+
+#~ msgid "Password level:"
+#~ msgstr "ระดับของรหัสผ่าน:"
+
+#~ msgid "Min password length:"
+#~ msgstr "ความยาวต่ำสุดของรหัสผ่าน:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "ช่วงหมดเวลาของรหัสผ่านของเครื่อง:"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "รหัสผ่านของยูนิกซ์"
+
+#~ msgid "Userna&me"
+#~ msgstr "ชื่อ&ผู้ใช้"
+
+#~ msgid "Hide local users"
+#~ msgstr "ซ่อนผู้ใช้ต่าง ๆ ที่อยู่ภายในระบบ"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "การ&ตรวจสอบสิทธิ์"
+
+#~ msgid "Client"
+#~ msgstr "ไคลเอนต์"
+
+#~ msgid "Auto"
+#~ msgstr "อัตโนมัติ"
+
+#~ msgid "Yes"
+#~ msgstr "ใช่"
+
+#~ msgid "No"
+#~ msgstr "ไม่ใช่"
+
+#~ msgid "Logging"
+#~ msgstr "การทำปูมบันทึก"
+
+#~ msgid "L&og file:"
+#~ msgstr "แฟ้มปู&มบันทึก:"
+
+#~ msgid "kB"
+#~ msgstr "กิโลไบต์"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "ขนาดใหญ่&สุดของแฟ้มปูม:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "ปูม&ระบบ (Syslog):"
+
+#~ msgid "Log &level:"
+#~ msgstr "ระ&ดับการบันทึก:"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "ปูมระ&บบเท่านั้น"
+
+#~ msgid "Status"
+#~ msgstr "สถานะ"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "ประทับเ&วลา"
+
+#~ msgid "microseconds"
+#~ msgstr "ไมโครวินาที"
+
+#~ msgid "Tuning"
+#~ msgstr "ปรับอย่างละเอียด"
+
+#~ msgid "Modules"
+#~ msgstr "มอดูลต่าง ๆ"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "มอดูลต่าง ๆ ที่โห&ลดล่วงหน้า:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "นาที"
+
+#~ msgid "Sizes"
+#~ msgstr "ขนาดต่าง ๆ"
+
+#~ msgid "Max disk size:"
+#~ msgstr "ขนาดสูงสุดของดิสก์:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "เมกะไบต์"
+
+#~ msgid "Numbers"
+#~ msgstr "จำนวนต่าง ๆ"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "จำนวนโพรเซส smbd สูงสุด:"
+
+#~ msgid "Max open files:"
+#~ msgstr "จำนวนแฟ้มที่เปิดได้สูงสุด:"
+
+#~ msgid "Printing"
+#~ msgstr "การพิมพ์"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "งาน&พิมพ์รวม:"
+
+#~ msgid "Drivers"
+#~ msgstr "ไดรเวอร์"
+
+#~ msgid "Commands"
+#~ msgstr "คำสั่งต่าง ๆ"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "คำสั่งเพิ่มเครื่องพิมพ์:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "คำสั่งลบเครื่องพิมพ์:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "โหลดเครื่อ&งพิมพ์ต่าง ๆ"
+
+#~ msgid "Domain"
+#~ msgstr "โดเมน"
+
+#~ msgid "Filenames"
+#~ msgstr "ชื่อแฟ้มต่าง ๆ"
+
+#~ msgid "Ge&neral"
+#~ msgstr "&ค่าทั่วไป"
+
+#~ msgid "Locking"
+#~ msgstr "การล็อค"
+
+#~ msgid "milliseconds"
+#~ msgstr "มิลลิวินาที"
+
+#~ msgid "Charset"
+#~ msgstr "ชุดรหัสอักขระ"
+
+#~ msgid "Logon"
+#~ msgstr "การล็อกอิน"
+
+#~ msgid "Add Scripts"
+#~ msgstr "สคริปต์การเพิ่มต่าง ๆ"
+
+#~ msgid "Add user script:"
+#~ msgstr "สคริปต์เพิ่มผู้ใช้:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "สคริปต์เพิ่มผู้ใช้เข้าไปยังกลุ่ม:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "สคริปต์เพิ่มกลุ่ม:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "สคริปต์เพิ่มเครื่อง:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "สคริปต์ลบกลุ่ม:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "สคริปต์ลบผู้ใช้:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "สคริปต์ลบผู้ใช้ออกจากกลุ่ม:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "สคริปต์กลุ่มหลัก"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "สคริปต์ตั้งค่ากลุ่มห&ลัก:"
+
+#~ msgid "Shutdown"
+#~ msgstr "ปิดเครื่อง"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "สคริปต์การปิ&ดเครื่อง:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "สคริปต์ยกเลิกการปิดเครื่อง:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "พาธของล็อกอิน:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "พื้นที่ส่วนตัวของล็อกลิน:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "ไดรฟ์ของล็อกอิน:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "สคริปต์ล็อกอิน:"
+
+#~ msgid "Socket"
+#~ msgstr "ซ็อกเก็ต"
+
+#~ msgid "SSL"
+#~ msgstr "การเข้ารหัส SSL"
+
+#~ msgid "Protocol"
+#~ msgstr "โพรโทคอล"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "รุ่นของโพรโทคอลต่าง ๆ"
+
+#~ msgid "Sec"
+#~ msgstr "วินาที"
+
+#~ msgid "LDAP"
+#~ msgstr "บริการ LDAP"
+
+#~ msgid "Misc"
+#~ msgstr "เบ็ดเตล็ด"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "ค่าเบ็ดเตล็ดต่าง ๆ"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "นาที"
+
+#~ msgid "Debug"
+#~ msgstr "ดีบั๊ก"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "เพิ่ม/แก้ไขตำแหน่งใช้งานร่วมกัน"
+
+#~ msgid "D&irectory"
+#~ msgstr "ไดเ&รกทอรี"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "เครื่องที่ได้&รับอนุญาต"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "รายการของเครื่องที่ได้รับอนุญาต"
+
+#~ msgid "&Add Host..."
+#~ msgstr "เ&พิ่มเครื่อง..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "แก้ไขเ&ครื่อง..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&ลบเครื่องออก"
+
+#~ msgid "Name/Address"
+#~ msgstr "ชื่อเครื่อง/ที่อยู่ของเครื่อง"
+
+#~ msgid "Parameters"
+#~ msgstr "พารามิเตอร์ต่าง ๆ"
+
+#~ msgid "Host Properties"
+#~ msgstr "คุณสมบัติต่าง ๆ ของเครื่อง"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&ชื่อเครื่อง/ที่อยู่ของเครื่อง:"
+
+#~ msgid "Options"
+#~ msgstr "ตัวเลือก"
+
+#~ msgid "Folder:"
+#~ msgstr "โฟลเดอร์:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "ใช้ร่วมกันผ่านทางบริการ NFS (ระบบ&ลินุกซ์/ระบบยูนิกซ์)"
+
+#~ msgid "NFS Options"
+#~ msgstr "ตัวเลือกต่าง ๆ ของบริการ NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "&สาธารณะ"
+
+#~ msgid "W&ritable"
+#~ msgstr "เ&ขียนได้"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "ตัวเ&ลือกเพิ่มเติมของบริการ NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "ตัวเลือกต่าง ๆ ของบริการแซมบ้า"
+
+#~ msgid "P&ublic"
+#~ msgstr "&สาธารณะ"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "ตัวเ&ลือกเพิ่มเติมของบริการแซมบ้า"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "อนุญาตให้ผู้ใช้ทั้งหมดตั้งค่าโฟลเดอร์ใช้งานร่วมกันได้"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "อนุญาตผู้ใช้ในกลุ่มผู้ใช้ '%1' เท่านั้นที่สามารถตั้งค่าโฟลเดอร์ใช้งานร่วมกันได้"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "ผู้ใช้ที่อยู่ในกลุ่มผู้ใช้ '%1'"
+
+#~ msgid "Add User"
+#~ msgstr "เพิ่มผู้ใช้"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "สมาชิกของกลุ่มสามารถกำหนดโฟลเดอร์ใช้งานร่วมกันได้โดยไม่ต้องมีรหัสผ่านของ root"
+
+#~ msgid "Change Group..."
+#~ msgstr "เปลี่ยนกลุ่มผู้ใช้..."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "เปิดการใช้งานแฟ้มร่วมกันบนเครือข่ายท้อง&ถิ่น"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "การใช้ร่วมกันแบบ&พื้นฐาน"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "การใช้ร่วม&กันขั้นสูง"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "ใช้ร่วมกันผ่านทางบริการ NFS (ระบบ&ลินุกซ์/ระบบยูนิกซ์)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "ใช้ร่วมกันผ่านทางบริการแซ&มบ้า (ระบบ Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "ผู้ใช้ที่ได้รับอ&นุญาต"
+
+#~ msgid "Shared Folders"
+#~ msgstr "โฟลเดอร์ใช้งานร่วมกัน"
+
+#~ msgid "Samba"
+#~ msgstr "บริการแซมบ้า"
+
+#~ msgid "NFS"
+#~ msgstr "บริการ NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "เ&พิ่ม"
+
+#~ msgid "Chang&e..."
+#~ msgstr "เป&ลี่ยน..."
+
+#~ msgid "Could Not Read File"
+#~ msgstr "ไม่สามารถอ่านแฟ้มได้"
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>โปรดกำหนดรหัสผ่านให้กับผู้ใช้ <b>%1</b></qt>"
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "โปรดกำหนดรหัสผ่านให้กับผู้ใช้ %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "การเปลี่ยนรหัสผ่านให้กับผู้ใช้ %1 ล้มเหลว"
+
+#~ msgid "Sorry"
+#~ msgstr "ขออภัย"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "คุณป้อนรหัสผ่านไม่ตรงกัน โปรดลองใหม่อีกครั้ง"
+
+#~ msgid "Default"
+#~ msgstr "ค่าปริยาย"
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "โปรดป้อนพาธที่ใช้งานได้"
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "กำหนดการใช้งานร่วมกันได้กับโฟลเดอร์เท่านั้น"
+
+#~ msgid "The folder is already shared."
+#~ msgstr "โฟลเดอร์ถูกกำหนดให้ใช้งานร่วมกันอยู่แล้ว"
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "ผู้บริหารระบบไม่อนุญาตให้ใช้งานโฟลเดอร์ร่วมกันผ่านบริการ NFS"
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "คุณต้องได้รับอนุญาตสิทธิ์ก่อนจึงจะสามารถกำหนดการใช้ไดเรกทอรีร่วมกันได้"
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "ปรับแต่งการใช้งานแฟ้มร่วมกัน..."
+
+#~ msgid "Allowed Users"
+#~ msgstr "ผู้ใช้ที่ได้รับอนุญาต"
+
+#~ msgid "Select User"
+#~ msgstr "เลือกผู้ใช้"
+
+#~ msgid "Select a user:"
+#~ msgstr "เลือกผู้ใช้:"
+
+#~ msgid "Choose Group..."
+#~ msgstr "เลือกกลุ่มผู้ใช้..."

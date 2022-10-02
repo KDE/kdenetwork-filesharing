@@ -1,0 +1,3479 @@
+# Translation of kfileshare.po to Ukrainian
+# Copyright (C) 2004-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2004, 2005, 2007, 2008.
+# Andriy Rysin <rysin@kde.org>, 2006.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-13 09:04+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Заборонити"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Дозволити"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Невідомий"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Лише ця тека"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Ця тека, підтеки і файли"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Ця тека і підтеки"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Ця тека і файли"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Лише підтеки і файли"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Лише підтеки"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Лише файли"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Невідомий"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Права доступу до віддалених ресурсів"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Цей запис прав доступу успадковано від батьківського контейнера — його можна "
+"змінювати лише у батьківському записі (наприклад, у каталозі вищого рівня)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Тип:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Застосовується до:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Вхід до теки або виконання файла"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Отримання списку вмісту теки або читання даних"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Атрибути читання"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Розширені атрибути читання"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Створення файлів або запис даних"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Створення тек або дописування даних"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Атрибути запису"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Розширені атрибути запису"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Вилучати підтеки і файли"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Вилучити"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Права доступу до читання"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Змінити права доступу"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Отримання у власність"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Застосовувати ці права доступу до об'єктів і/або контейнерів у цьому "
+"контейнері"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Записи керування доступом"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Власність"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Власник:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Група:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Даних щодо прав доступу не знайдено"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+"Для цього файла, ймовірно, не встановлено прав доступу SMB, Windows або "
+"розширених прав доступу."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Цю теку не можна надати у спільне користування, оскільки не існує <filename>"
+"%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Цю помилку спричинено налаштуваннями правил оприлюднення даних Samba у "
+"вашому дистрибутиві. Ви можете виправити це створенням цієї теки вручну. "
+"Після створення теки закрийте це вікно і відкрийте його знову."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Цю теку не можна надати у спільне користування, оскільки для <filename>%1</"
+"filename> визначено невідповідну групу власника — <resource>%2</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Цю помилку спричинено невідповідними правилами оприлюднення даних Samba у "
+"вашому дистрибутиві. Виправити це можна зміною групи власника цієї теки на "
+"<resource>usershares</resource> і додаванням вашого користувача до учасників "
+"цієї групи. Після цього перезапустіть систему."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Цю теку не можна надати у спільне користування, ваш обліковий запис "
+"користувача не є учасником групи <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"Ви можете виправити це, додавши вашого користувача до учасників групи. Після "
+"додавання перезапустіть систему."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Зробити вас учасником групи"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Вміст цієї теки не може бути оприлюднено, оскільки ваш обліковий запис не "
+"має прав доступу до запису до <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"Ви можете виправити це, додавши права доступу для групи <resource>%1</"
+"resource> для запису до <filename>%2</filename>. Після додавання закрийте це "
+"вікно і відкрийте його знову."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Додаємо користувача «%1» до групи «%2», щоб він міг налаштовувати спільні "
+"ресурси користувачів Samba"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Не вдалося зробити користувача <resource>%1<resource> учасником групи "
+"<resource>%2<resource>"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Шлях до файла"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Поточні права доступу"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Потрібні права доступу"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Заборона доступу"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Заборона доступу не дозволить користуватися цим спільним ресурсом, навіть "
+"якщо доступ до нього буде відкрито якимось іншим правилом. Правило заборони\n"
+"завжди має вищий пріоритет. Зокрема, заборона доступу для "
+"<resource>Everyone</resource> фактично забороняє доступ для усіх.\n"
+"Загалом, немає потреби у забороні доступу будь-кому, оскільки до каталогів "
+"спільного користування застосовуються усі звичайні\n"
+"права доступу до файлів і каталогів. Користувач, у якого немає локальних "
+"прав доступу до каталогу, не матиме таких прав і віддалено,\n"
+"навіть якщо правила доступу до спільного ресурсу надають йому такий доступ."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+"Щоб цією текою можна було користуватися спільно, потрібні додаткові права "
+"доступу"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Виправити права доступу"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Спільний ресурс може працювати не так, як слід, оскільки тека спільного "
+"ресурсу або її батьківські теки мають додаткові права доступу: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Уможливити спільний доступ до цієї теки в локальній мережі"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Назва:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Цю назву не можна використовувати. Назви спільних ресурсів не повинні "
+"збігатися із іменами користувачів. Крім того, в усій системі не повинно бути "
+"двох спільних ресурсів із однаковими назвами."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Ця назва є надто довгою. Вона може спричинити проблеми із сумісністю або "
+"Samba взагалі відмовиться її реєструвати."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Дозволяти гостей"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Гостьовий доступ вимкнено через загальносистемні налаштування Samba."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Необмежене керування"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Лише для читання"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Немає доступу"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Показати монітор стану Samba"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Встановіть пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Підтвердьте пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Паролі мають збігатися"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Встановити пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Щоб текою <filename>%1</filename> можна було користуватися спільно, "
+"потрібні додаткові права доступу.</para>\n"
+"<para>Хочете додати ці права доступу зараз?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Змінити права доступу"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Не вдалося змінити права доступу для %1. Усі зміни у правах доступу було "
+"скасовано — повернуто початковий стан."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr ""
+"Перш ніж можна буде надавати теки у спільне користування, вам слід "
+"встановити Samba."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Встановити Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Не вдалося встановити пакунок Samba."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Перезапустіть комп'ютер, щоб завершити внесення змін."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Перезапустити"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"У Samba використовується окрема база даних користувачів, відмінна від "
+"загальносистемної.\n"
+"Через це вам слід встановити окремий пароль Samba для кожного користувача, "
+"від імені якого\n"
+"ви хочете проходити розпізнавання.\n"
+"</para>\n"
+"<para>\n"
+"Перш ніж ви отримаєте доступ до спільних ресурсів за допомогою вашого "
+"поточного облікового запису користувача, вам слід встановити пароль Samba.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Створити пароль Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Ширші можливості із керування записами користувачів та паролями можна "
+"отримати за допомогою\n"
+"засобу командного рядка Samba <command>smbpasswd</command>."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Вами вичерпано максимальну кількість каталогів спільного користування, "
+"доступ до яких можна відкривати одночасно."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Назва спільного ресурсу є некоректною."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Назву спільного ресурсу вже використано для іншого каталогу."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Шлях є некоректним."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Шляху не існує."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Шлях не є каталогом."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Шлях є відносним."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Не можна надавати спільний доступ до цього шляху."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Правило доступу є некоректним."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Користувач правила доступу є некоректним."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Правило гостьового доступу є некоректним."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Не можна вмикати гостьовий доступ."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Під час спроби надання каталогу у спільний доступ сталася помилка. "
+"Спільний ресурс не було створено.</para><para>Звіт від Samba:</para><message>"
+"%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Не вдалося створити спільний мережевий ресурс"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Під час спроби скасувати надання каталогу у спільний доступ сталася "
+"помилка. Спільний ресурс не було вилучено.</para><para>Звіт від Samba:</"
+"para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Не вдалося вилучити спільний мережевий ресурс"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Перевірка, чи існує запис користувача Samba «%1»"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Створення нового користувача Samba «%1»"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Не вдалося змінити групи."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Здається, у вас недостатні права доступу для керування спільними "
+#~ "ресурсами користувачів Samba."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Оприлюднити"
+
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Створення запису користувача"
+
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Створення запису користувача"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Спільний ресурс"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Встановлюємо Samba…"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Вже існує спільний ресурс з назвою <strong>%1</strong>.<br /> Будь "
+#~ "ласка, виберіть іншу назву.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "У вашій системі не встановлено Samba."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Спільний доступ через S&amba (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Не вдалося встановити Samba.</strong><br />Будь ласка, "
+#~ "перевірте, чи встановлено належним чином kpackagekit.</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Вибрати користувачів"
+
+#~ msgid "Select &Users"
+#~ msgstr "Вибрати &користувачів"
+
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Дост&уп"
+
+#~ msgid "&Default"
+#~ msgstr "&Типовий"
+
+#~ msgid "&Read access"
+#~ msgstr "Доступ для &читання"
+
+#~ msgid "&Write access"
+#~ msgstr "Доступ для &запису"
+
+#~ msgid "&Admin access"
+#~ msgstr "Доступ &адміністратора"
+
+#~ msgid "&OK"
+#~ msgstr "&Гаразд"
+
+#~ msgid "Join Domain"
+#~ msgstr "Приєднатись до домену"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Перевірити:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Пароль:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Ім'я користувача:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Ко&нтролер домену:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Домен:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Вибрати групи"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Вибра&ти групи"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Вид групи"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Група &UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "Група NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Гр&упа Unix і NIS"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Тут можна редагувати користувачів Samba, які зберігаються в файлі "
+#~ "smbpasswd.\n"
+#~ "<p>\n"
+#~ "Кожний користувач Samba повинен мати відповідного користувача Unix.\n"
+#~ "Праворуч можна бачити всіх користувачів Unix, які зберігаються в файлі "
+#~ "passwd, записи яких не налаштовано як записи користувачів Samba.\n"
+#~ "Ліворуч можна бачити користувачів Samba.\n"
+#~ "<p>\n"
+#~ "Щоб додати нових користувачів Samba, просто натисніть кнопку <em>&lt; "
+#~ "Додати</em>.\n"
+#~ "Тоді вибрані користувачі Unix стануть користувачами Samba і будуть\n"
+#~ "вилучені зі списку користувачів Unix (але вони залишатимуться "
+#~ "користувачами Unix).\n"
+#~ "<p>\n"
+#~ "Щоб вилучити користувачів Samba, натисніть кнопку <em>&gt; Вилучити</"
+#~ "em>.\n"
+#~ "Тоді вибрані користувачі Samba будуть вилучені з файла smbpasswd,\n"
+#~ "і з'являться з правого боку, так, як і користувачі Unix, які не є "
+#~ "користувачами Samba.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Основні параметри"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Файл налаштування Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&Завантажити"
+
+#~ msgid "Server Identification"
+#~ msgstr "Ідентифікація сервера"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Робо&ча група:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Введіть сюди назву вашої робочої групи/домену."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Назва се&рвера:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Назва NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Рівень бе&зпеки"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Користувач"
+
+#~ msgid "Server"
+#~ msgstr "Сервер"
+
+#~ msgid "Domai&n"
+#~ msgstr "Доме&н"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>спільний ресурс</i>, якщо у вас домашня "
+#~ "або невелика офісна мережа.<br> Таким чином буде можливо прочитати назви "
+#~ "всіх спільних ресурсів перш ніж буде вимагатись вхід."
+
+#~ msgid "Further Options"
+#~ msgstr "Інші параметри"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Адреса/назва сервера паролів:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Облас&ть:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Обліковий запис для го&стей:"
+
+#~ msgid "Help"
+#~ msgstr "Довідка"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Для детальної довідки для кожного параметра дивіться:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Спільні ресурси"
+
+#~ msgid "Comment"
+#~ msgstr "Коментар"
+
+#~ msgid "Properties"
+#~ msgstr "Властивості"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Змінити &типові параметри..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Додати &новий спільний ресурс..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Змінити спільний ресурс..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Ви&лучити спільний ресурс"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Прин&тери"
+
+#~ msgid "Printer"
+#~ msgstr "Принтер"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Змінити &типові параметри"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Додати но&вий принтер"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Змінити при&нтер"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Ви&лучити принтер"
+
+#~ msgid "&Users"
+#~ msgstr "&Користувачі"
+
+#~ msgid "Disabled"
+#~ msgstr "Вимкнено"
+
+#~ msgid "Add"
+#~ msgstr "Додати"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Вилуч&ити"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Користувачі UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "З&мінити пароль..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Приєднатись до домену"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Додат&кові параметри"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Тут можна змінити додаткові параметри сервера SAMBA.\n"
+#~ "Робіть зміни тільки якщо ви впевнені у тому, що робите."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Попереднє скидання"
+
+#~ msgid "Security"
+#~ msgstr "Безпека"
+
+#~ msgid "&General"
+#~ msgstr "&Загальне"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Підкорятись обмеженням PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Зміна пароля PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Інші перемикачі"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Дозво&ляти домени з довірою"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Параноїчна безпека сервера"
+
+#~ msgid "General"
+#~ msgstr "Загальне"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Методи автентифікації:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Кореневий катало&г:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&Інтерфейси:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Приписувати до гостя:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Прив'язувати тільки інтерфейси"
+
+#~ msgid "Never"
+#~ msgstr "Ніколи"
+
+#~ msgid "Bad User"
+#~ msgstr "Неправильний користувач"
+
+#~ msgid "Bad Password"
+#~ msgstr "Неправильний пароль"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Ек&вівалентні вузли:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Алгоритмічна база rid:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Приватний каталог:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Паро&ль"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Паролі Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Заши&фровувати паролі"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Файл паролів Samba:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "С&ервер passdb:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Комунікація з passwd:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Налагодження комунікації з passwd"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "сек"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Тайм-аут комунікації з passwd:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "&Нульові паролі"
+
+#~ msgid "Password level:"
+#~ msgstr "Рівень пароля:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Мін. довжина пароля:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Тайм-аут пароля комп'ютера:"
+
+#~ msgid "Migration"
+#~ msgstr "Міграція"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Оновити за&шифроване"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Паролі UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Програма passwd:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Синхронізація паролів UNI&X"
+
+#~ msgid "Userna&me"
+#~ msgstr "Корист&увач"
+
+#~ msgid "User&name map:"
+#~ msgstr "&Карта користувачів:"
+
+#~ msgid "Username &level:"
+#~ msgstr "&Рівень користувача:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Ховати локальних користувачів"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Обмежити анонімн&их користувачів"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Використовувати rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Автентифіка&ція"
+
+#~ msgid "Client"
+#~ msgstr "Клієнт"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "Підписування к&лієнта:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Автентифікація клієнта через простий тек&ст"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Автентифікація клієнта через lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Авто"
+
+#~ msgid "Mandatory"
+#~ msgstr "Обов'язкове"
+
+#~ msgid "Yes"
+#~ msgstr "Так"
+
+#~ msgid "No"
+#~ msgstr "Ні"
+
+#~ msgid "Client channel:"
+#~ msgstr "Канал клієнта:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Клієнт використовує spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Автентифікація клієнта через NTLMv&2"
+
+#~ msgid "Server signing:"
+#~ msgstr "Підписування сервера:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Автентифікація через lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Канал сервера:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Використовувати sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Автентифікація NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Вхід"
+
+#~ msgid "L&og file:"
+#~ msgstr "Файл &журналу:"
+
+#~ msgid "kB"
+#~ msgstr "КБ"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Мак&с. розмір журналу:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Рівень &запису журналу:"
+
+#~ msgid "S&witches"
+#~ msgstr "Пере&микачі"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Тіл&ьки syslog"
+
+#~ msgid "Status"
+#~ msgstr "Стан"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "&Мітка часу"
+
+#~ msgid "microseconds"
+#~ msgstr "мікросекунд"
+
+#~ msgid "Debug pid"
+#~ msgstr "pid налагодження"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "uid знева&дження"
+
+#~ msgid "Tuning"
+#~ msgstr "Налагодження"
+
+#~ msgid "Modules"
+#~ msgstr "Модулі"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Зазда&легідь завантажувати модулі:"
+
+#~ msgid "Switches"
+#~ msgstr "Перемикачі"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Кеш &getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Використовувати &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Інформувати про зміну &ядра"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Пошук назв в&узлів"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Зчитувати си&рі"
+
+#~ msgid "Write raw"
+#~ msgstr "Записувати сирі"
+
+#~ msgid "Times"
+#~ msgstr "Обмеження часу"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Тайм-аут сповіщення про зміни:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Утримувати з'єднання:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "хв"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Перервати з'єднання:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Час кешу lp&q:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Тайм-аут кешу &назв:"
+
+#~ msgid "Sizes"
+#~ msgstr "Розміри"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Макс. розмір диска:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "МБ"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Зчитати ро&змір:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Розмір стат. кешу:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Мак&с. xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Числа"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Максимум процесів smbd:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Максимум відкритих файлів:"
+
+#~ msgid "Printing"
+#~ msgstr "Друкування"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Всього &завдань друку:"
+
+#~ msgid "Drivers"
+#~ msgstr "Драйвери"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "Карта драйвера OS&2:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Наз&ва printcap:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Файл драйвера при&нтера: "
+
+#~ msgid "Commands"
+#~ msgstr "Команди"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Команда перелічення портів:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Команда додавання принтера:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Команда вилучення принтера:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Заванта&жувати принтери"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Вимкн&ути спулер (spools)"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Показувати ма&йстер додавання принтерів"
+
+#~ msgid "Domain"
+#~ msgstr "Домен"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Л&окальний контролер"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Контролер доме&ну"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "В&ходи в домен"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Головний &контролер"
+
+#~ msgid "OS &level:"
+#~ msgstr "&Рівень ОС:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Адмін група домену:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Група гостей домену:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Вимкнути &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Діяти як сервер WI&NS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Використовувати ін&ший сервер WINS"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Пар&аметри сервера WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "Прокс&і DNS"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "З'&єднання з WINS:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Максимальне tt&l:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Мінімальне ttl:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "IP або назва DNS сервера WINS"
+
+#~ msgid "General Options"
+#~ msgstr "Загальні параметри"
+
+#~ msgid "WINS partners:"
+#~ msgstr "Параметри WINS:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "Прок&сі WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "Назви файлів"
+
+#~ msgid "Ge&neral"
+#~ msgstr "За&гальне"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Забирати &крапку"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Спотворення"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Сте&к спотворення:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Пре&фікс спотворення:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Особлив&е"
+
+#~ msgid "Stat cache"
+#~ msgstr "Кеш stat"
+
+#~ msgid "Locking"
+#~ msgstr "Блокування"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Блокування (oplocks) через яд&ро"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Катал&оги"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Забло&кувати каталог:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "Катало&г номерів процесів (pid):"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Блокувальний цикл"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "Кількість &блокувальних циклів:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "&Тривалість блокувальних циклів:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Для експертів"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Час &очікування на зупинку блокування:"
+
+#~ msgid "milliseconds"
+#~ msgstr "мілісекунд"
+
+#~ msgid "Charset"
+#~ msgstr "Набір символів"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Набір символів D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Набір символів UNI&X:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Набір символів відобра&ження:"
+
+#~ msgid "U&nicode"
+#~ msgstr "&Unicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Набір символів:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Ді&йсні символи:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Каталог набору символів:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Ко&дова система:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Кодова сторінка клієнта:"
+
+#~ msgid "Logon"
+#~ msgstr "Вхід"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Скрипти додавання"
+
+#~ msgid "Add user script:"
+#~ msgstr "Скрипт додавання користувача:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Скрипт додавання користувача до групи:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Скрипт додавання г&рупи:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Скрипт додавання машини:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Скрипт вилучення групи:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Скрипт вилучення користувача:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Скрипт вилучення користувача з групи:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Скрипт головної групи"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Встановити скрипт &головної групи:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Вимкнення"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Скрипт ви&мкнення:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Переривання скрипту вимкнення:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Шля&х входу:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Дом&івка входу:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Дис&к входу:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Скри&пт входу:"
+
+#~ msgid "Socket"
+#~ msgstr "Сокет"
+
+#~ msgid "Socket address:"
+#~ msgstr "Адреса сокета:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Параметри сокета"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Вмикає або вимикає цілий режим SSL"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Цим вмикається або вимикається цілий режим SSL. Якщо пункт не буде "
+#~ "позначено, SSL в Samba поводиться так само як Samba без SSL. Якщо ж його "
+#~ "буде позначено, поведінка щодо використання з’єднання SSL залежатиме від "
+#~ "змінних «вузли ssl» і «підписка інших вузлів ssl..\n"
+#~ "\n"
+#~ "Ця функціональність наявна, лише якщо у вашій системі було зібрано "
+#~ "бібліотеки SSL і під час збирання системи було використано параметр --"
+#~ "with-ssl."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Вв&імкнути SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "Ву&зли SSL:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "Байти SSL ентропі&ї:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "Шифри SSL:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "Підписка інших ву&злів SSL:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2 або 3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Су&місність SSL"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "Файл ентропії SSL:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "Сокет egd для SSL:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Версія SSL:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL потребує сертифікат клієнта"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Ключ клієнта SSL:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL потре&бує сертифікат сервера"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "Сертифікат сервера SS&L:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "Сертифікат клієнта SSL:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "Кл&юч сервера SSL:"
+
+#~ msgid "Protocol"
+#~ msgstr "Протокол"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Сервер служби &часу"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "Ве&ликий рух (читання/запис)"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Розширення UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Читати bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Версії протоколів"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Оголо&шувати як:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "Робоча станція NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Оголошувати версію:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Пр&отокол:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Макс. протокол:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Мін. протокол:"
+
+#~ msgid "Limits"
+#~ msgstr "Обмеження"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Мак&с. mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Макс. tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Порти слухання SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Порти SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "Перегляд"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "І&нтервал LM:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "Оголошувати L&M:"
+
+#~ msgid "Sec"
+#~ msgstr "сек"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "С&инхронізація віддаленого перегляду:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Список п&ерегляду"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Розширений перегл&яд"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Зазда&легідь завантажувати:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Шаблон каталогу д&омівки:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Шаблон о&болонки:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Роздільник Winbind:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Головна група шаблону:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "&Час кешу Winbind:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Сумісніст&ь Acl:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Користувачі Wi&nbind"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Групи Winbind"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind використовує типовий домен"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind вмикає локальні облікові записи"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind тільки домени, які мають довіру"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Гніздові групи Winbind"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "&Охоплення NetBIOS:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Псевдоніми &NetBIOS:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Вимкн&ути netbios"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Порядок визначення на&зв:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "msdfs &вузла"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "Су&фікс LDAP:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "Суфікс комп'ютера LDAP:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "Суфікс користувача LDAP:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "Суфікс &групи LDAP:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "Суфікс idmap LDAP:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Фільтр LDAP:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "Ад&мін. dn LDAP:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&Сервер-програма Idmap:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "Сон реплікації LDAP:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Вимкнено"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Увімкнено"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "Син&хронізація LDAP:"
+
+#~ msgid "Only"
+#~ msgstr "Тільки"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "Вилучення d&n LDAP"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "К&оманда додавання спільного ресурсу:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Команда зміни спільного ресурсу:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Команда ви&лучення спільного ресурсу:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Команда повідомленн&я:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Ко&манда звільнення місця:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Команда встановлення квот&и:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Команда отримання квоти:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "&Дія паніки:"
+
+#~ msgid "Misc"
+#~ msgstr "Різне"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Різне"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Ховати &локальних користувачів"
+
+#~ msgid "Default service:"
+#~ msgstr "Типова служба:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "&Відставання в часі:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "хв"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Віддалене о&голошення:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Середовище джерела:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "Домашній каталог NIS"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Карта домашнього каталогу:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Катало&г Utmp:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Каталог &Wtmp:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Налагодження"
+
+#~ msgid "&NT status support"
+#~ msgstr "Стан підтримки &NT"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "Підтримка S&MB NT"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "Під&тримка каналу NT"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Додати/редагувати спільний ресурс"
+
+#~ msgid "Pixmap"
+#~ msgstr "Зображення"
+
+#~ msgid "D&irectory"
+#~ msgstr "Ка&талог"
+
+#~ msgid "&Path:"
+#~ msgstr "&Шлях:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Зробити всі домашні &каталоги спільними"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Іденти&фікатор"
+
+#~ msgid "Na&me:"
+#~ msgstr "На&зва:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Комента&р:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Основні в&ластивості"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Пуб&лічний"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Можливий &перегляд"
+
+#~ msgid "A&vailable"
+#~ msgstr "Дос&тупний"
+
+#~ msgid "&Security"
+#~ msgstr "&Безпека"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Гос&ті"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Це користувач, запис якого буде використано для доступу до служб, до яких "
+#~ "дозволений доступ гостей. Всі привілеї цього користувача будуть доступні "
+#~ "для будь-якого клієнта, що приєднується як гість. Як правило, запис цього "
+#~ "користувача існуватиме в файлі паролів, але без дійсного входу. Обліковий "
+#~ "запис користувача \\\"ftp\\\" — є одним з варіантів для заповнення цього "
+#~ "поля. Якщо у певній службі буде вказано користувача, вказаний користувач "
+#~ "має перевагу над користувачем, визначеним тут."
+
+#~ msgid "&Guest account:"
+#~ msgstr "Обліковий запис для &гостей:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Якщо позначено цей пункт, для з'єднання із службою пароль не "
+#~ "вимагатиметься. Будуть надані права доступу облікового запису для гостей."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Тільки гостям дозволяти з'&єднання"
+
+#~ msgid "Hos&ts"
+#~ msgstr "В&узли"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "На відміну від дозволених вузлів, переліченим тут вузлам доступ до служб "
+#~ "НЕ дозволений, за винятком певних служб з власними списками, які мають "
+#~ "вищий пріоритет за цей список. Якщо буде виявлено конфлікт між списками, "
+#~ "список дозволених вузлів матиме перевагу."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Цей параметр - це список вузлів розділених комами, пробілами або "
+#~ "табуляцією, яким дозволений доступ до служби."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Д&озволяти вузли:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Від&кидати вузли:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Си&мволічні посилання"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Дозволяти навігацію по символічних поси&ланнях"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Дозволяти навігацію по символічних посиланнях, які вка&зують на ділянки "
+#~ "поза деревом каталогу"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Перевіряти пароль супроти наступних користувачів, якщо клієнт не в "
+#~ "змозі надати ім'я користувача:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Дозволяти з'єднання тільки для корист&увачів вказаних в цьому списку "
+#~ "користувачів"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Сховані &файли"
+
+#~ msgid "Hidden"
+#~ msgstr "Сховано"
+
+#~ msgid "Veto"
+#~ msgstr "Вето"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Вето oplock"
+
+#~ msgid "Size"
+#~ msgstr "Розмір"
+
+#~ msgid "Date"
+#~ msgstr "Дата"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Виб&рані файли"
+
+#~ msgid "Hi&de"
+#~ msgstr "Хова&ти"
+
+#~ msgid "&Veto"
+#~ msgstr "&Вето"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto oploc&k"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Налаштування вручну"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ве&то файли:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Вето oplock фа&йли:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "С&ховані файли:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Ховати файли, в які неможливо &записувати"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Ховати &особливі файли"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Ховати файли, які почина&ються з крапки"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Ховати файли, які неможливо &читати"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Додаткові"
+
+#~ msgid "Force Modes"
+#~ msgstr "Примушення режимів"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "При&мушувати режим безпеки каталогу:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Приму&шувати режим безпеки:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Примушувати режим каталог&у:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Примушувати ре&жим створення:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Маски"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Маска безпеки каталогу:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Маска бе&зпеки:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Маска ка&талогу:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Створити мас&ку:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "ACL-и &профілів"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Успадковувати ac&l-и"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "Підтримка &NT ACL"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Примушувати неві&домого користувача acl:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Приписувати acl &успадковувати"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Успадковувати права доступу з батьківського каталогу"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Дозволяти вилучення «тільки для читання» файлів"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "Приписування атрибутів DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Приписати DOS archi&ve до UNIX owner execute"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Приписати DOS hidden до UNI&X world execute"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Приписати DOS system to UNIX &group execute"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Зберігати атрибути DOS в розширені атрибути"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Строга с&инхронізація"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Зав&жди синхронізувати"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Стро&ге виділення"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Використовувати sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Максимальна кількість одночасних з'єднань:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Ро&змір кешу запису:"
+
+#~ msgid "bytes"
+#~ msgstr "байтів"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Розмір бло&ку:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Правила ке&шування на боці клієнта:"
+
+#~ msgid "manual"
+#~ msgstr "вручну"
+
+#~ msgid "documents"
+#~ msgstr "документи"
+
+#~ msgid "programs"
+#~ msgstr "програми"
+
+#~ msgid "disable"
+#~ msgstr "вимкнути"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Спотворення назв"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Ввімкнути &спотворення назв"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Рег&істр спотворення"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Зберіга&ти регістр"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Коротке з&береження регістру"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "З &урахуванням регістру"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Типови&й регістр:"
+
+#~ msgid "Lower"
+#~ msgstr "Нижній"
+
+#~ msgid "Upper"
+#~ msgstr "Верхній"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Симв&ол спотворення:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Спотворена ка&рта:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Метод спотворення:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Інші параметри"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Ховати кін&цеву крапку"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "Режим файлів &DOS"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "Часи фа&йлів DOS"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "Визначення часів файлів DOS"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Ввімкнути бло&кування"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Блок&ування"
+
+#~ msgid "S&trict locking"
+#~ msgstr "С&троге блокування"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Блокувал&ьні замки"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Блокування в Posi&x"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Ре&жими спільних ресурсів"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Застосовувати опо&ртуністичне блокування (oplocks) "
+
+#~ msgid "O&plocks"
+#~ msgstr "О&портуністичне блокування (oplocks)"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Блокування (oplocks) Le&vel2"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Обме&ження нагромадження блокувань:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Фаль&шиве блокування (oplocks)"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Об'&єкти Vfs:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Па&раметри Vfs:"
+
+#~ msgid "Exec"
+#~ msgstr "Виконати"
+
+#~ msgid "P&reexec:"
+#~ msgstr "П&еред-виконання:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Перед-в&иконання адмін:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Післ&я-виконання:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Після-ви&конання адмін:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "закри&ття перед-виконання"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "закри&ття перед-виконання адмін"
+
+#~ msgid "&Volume:"
+#~ msgstr "Дис&к:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ма&гічний скрипт:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Маг&ічний вивід:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "&Без опускання:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Прокс&і msdfs"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Команда setdir до&зволена"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Часи створення фал&ьшивих каталогів"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Адмін ms&dfs"
+
+#~ msgid "&Help"
+#~ msgstr "&Довідка"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Користувачі"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Всі н&езазначені користувачі"
+
+#~ msgid "Reject"
+#~ msgstr "Відкинути"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Зазначен&і користувачі"
+
+#~ msgid "Access Rights"
+#~ msgstr "Права доступу"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Додати к&ористувача..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Е&ксперт"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Додати &групу..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Ви&лучити позначене"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr ""
+#~ "Всі користувачі повинні бути примушені до насту&пного користувача/групи"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "При&мусити користувача:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Прим&усити групу:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Модифікатори доступу"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Права доступу"
+
+#~ msgid "Others"
+#~ msgstr "Інші"
+
+#~ msgid "Read"
+#~ msgstr "Читати"
+
+#~ msgid "Write"
+#~ msgstr "Запис"
+
+#~ msgid "Sticky"
+#~ msgstr "Липкий"
+
+#~ msgid "Set GID"
+#~ msgstr "Встановити GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Встановити UID"
+
+#~ msgid "Special"
+#~ msgstr "Особливе"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Параметри користувача"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Чинні користувачі:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Адміністратори:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&Недійсні користувачі:"
+
+#~ msgid "&Write list:"
+#~ msgstr "З правами &запису (список):"
+
+#~ msgid "&Read list:"
+#~ msgstr "З правами &читання (список):"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Дозволені &вузли"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Список дозволених вузлів"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Тут можна подивитись на список вузлів, яким дозволений доступ до цього "
+#~ "каталогу через NFS.\n"
+#~ "Перший стовпчик показує назву або адресу вузла, а другий - параметри "
+#~ "доступу. Назва «*» надає загальний доступ."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Додати вузол..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Зм&інити вузол..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Вилучити вузол"
+
+#~ msgid "Name/Address"
+#~ msgstr "Назва/адреса"
+
+#~ msgid "Parameters"
+#~ msgstr "Параметри"
+
+#~ msgid "Host Properties"
+#~ msgstr "Властивості вузла"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Назва/адреса:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Поле назви/адреси</b>\n"
+#~ "<p>\n"
+#~ "Сюди можна ввести назву вузла або адресу.<br>\n"
+#~ "Вузол можна вказати декількома способами:\n"
+#~ "<p>\n"
+#~ "<i>один вузол</i>\n"
+#~ "<p>\n"
+#~ " Це найпоширеніший формат. Вузол можна вказати за допомогою або "
+#~ "абревіатури назви, яка розпізнається визначником, або повної назви "
+#~ "домену, або адреси IP.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>мережеві групи</i>\n"
+#~ "<p>\n"
+#~ " Мережеві групи NIS можуть бути вказані як @група. Для перевірки членства "
+#~ "кожної мережевої групи використовуватиметься тільки частина, що "
+#~ "стосується вузла. Якщо ці частини порожні або містять одну риску (-), "
+#~ "вони ігноруються.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>шаблони заміни</i>\n"
+#~ "<p>\n"
+#~ " Назви вузлів можуть містити шаблони заміни * і ?. Цим можна "
+#~ "скористатися, щоб зробити файли експорту компактнішими, наприклад, *.cs."
+#~ "foo.edu збігається з усіма вузлами в домені cs.foo.edu. Однак ці шаблони "
+#~ "заміни не збігаються з крапками в назві домену, тому приклад шаблону, "
+#~ "приведений вище, не збігається з a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>мережі IP</i>\n"
+#~ "<p>\n"
+#~ " Можна також одночасно експортувати каталоги до всіх вузлів у "
+#~ "(під-)мережі IP. Для цього потрібно вказати адресу IP і маску мережі як "
+#~ "пару адреса/маска, де маска мережі може бути вказана у форматі цифр з "
+#~ "крапками або як діапазон довжини маски (напр., і «/255.255.252.0», і "
+#~ "«/22» додані до базової адреси мережі призводять до отримання ідентичних "
+#~ "підмереж з 10 бітами для вузла).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Загальний доступ"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Загальний доступ</b>\n"
+#~ "<p>\n"
+#~ "Якщо ввімкнути цей параметр, шаблон заміни буде адресою вузла, а це "
+#~ "означає - загальний доступ.\n"
+#~ "Це те саме, що й ввести шаблон заміни в поле адреси.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Параметри"
+
+#~ msgid "&Writable"
+#~ msgstr "&Запис дозволено"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Запис дозволено</b>\n"
+#~ "<p>\n"
+#~ "Дозволяються запити читання і запису на цьому томі NFS.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Типово будь-які запити, які вносять зміни до файлової системи, "
+#~ "забороняються\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Незахищений"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Незахищений</b>\n"
+#~ "<p>\n"
+#~ "Якщо цей параметр ввімкнений, не вимагатиметься, щоб запити походили з "
+#~ "порту Інтернету меншого за номером ніж IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Якщо не впевнені, не вмикайте його.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Синхронізувати"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Синхронізувати</b>\n"
+#~ "<p>\n"
+#~ "Цей параметр вимагає, щоб всі файлові записи передавались на диск перед "
+#~ "закінченням запиту на запис. Це потрібно для цілковитої безпеки даних на "
+#~ "випадок аварії сервера, але несе з собою зниження швидкодії.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Типово серверу дозволяють записувати дані на диск, коли-небудь він "
+#~ "готовий.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Не &затримувати запис"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Не затримувати запис</b>\n"
+#~ "<p>\n"
+#~ "Цей параметр дієвий тільки тоді, коли синхронізацію також ввімкнено. "
+#~ "Сервер NFS зазвичай відкладає передачу запиту записування на диск, якщо "
+#~ "він сподівається, що може інший споріднений запит записування вже "
+#~ "знаходиться в процесі або незабаром поступить. Це дозволяє одночасно "
+#~ "передавати декілька запитів запису на диск, що може призвести до "
+#~ "покращання швидкодії. Якщо ж сервер NFS переважно отримує маленькі і "
+#~ "неспоріднені запити, - ця поведінка, навпаки, може погіршити швидкодію. "
+#~ "Тому параметр «Не затримувати запис» наявний, щоб вимкнути її. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Не &ховати"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Не ховати</b>\n"
+#~ "<p>\n"
+#~ "Цей параметр засновано на параметрі із IRIX NFS з тією самою назвою. "
+#~ "Зазвичай, якщо сервер експортує дві файлові системи, одна з яких "
+#~ "змонтована на іншій, клієнт змушений явно змонтувати обидві файлові "
+#~ "системи, щоб отримати до них доступ. Якщо змонтовано тільки батьківську "
+#~ "файлову систему, там, де інша файлова система змонтована, клієнт побачить "
+#~ "тільки порожній каталог. Таку файлову систему «сховано».\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Встановлення вищезгаданого параметра спричиняє її виявлення і, відповідно "
+#~ "уповноважений клієнт зможе пересуватись з батьківської до цієї файлової "
+#~ "системи не помічаючи зміни.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Однак, деякі клієнти NFS не можуть впоратися з цією ситуацією достатньо "
+#~ "добре, бо тоді, наприклад, два різних файла у одній файловій системі "
+#~ "можуть мати однаковий номер inode.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Параметр «не ховати» у поточній версії ефективний лише для окремих "
+#~ "вузлів. Він не працює надійно з мережевими групами, підмережами, або "
+#~ "експортуваннями з шаблонами замін.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Цей параметр може бути дуже придатним у деяких ситуаціях, але його слід "
+#~ "використовувати з належною обережністю, і тільки після того, як "
+#~ "перевірено, що система клієнта може впоратися з ситуацією достатньо "
+#~ "добре.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Не перевіряти &піддерева"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Не перевіряти піддерева</b>\n"
+#~ "<p>\n"
+#~ "Цей пункт вимикає перевірку піддерев, а це має незначний вплив на "
+#~ "безпеку, але може за деяких обставин підвищити надійність.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Якщо експортовано підкаталог файлової системи, а не цілу файлову систему, "
+#~ "коли б не надійшов запит NFS, сервер мусить перевіряти не тільки чи "
+#~ "певний файл знаходиться у відповідній файловій системі (це легко "
+#~ "зробити), але також перевірити чи він знаходиться в експортованому дереві "
+#~ "(це важче зробити). Ця перевірка називається subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Щоб виконати цю перевірку, сервер мусить включити деяку інформацію про "
+#~ "адресу файла до дескриптора файла «filehandle», який передається клієнту. "
+#~ "Це може спричинити проблеми з доступом до файлів, які буде перейменовано "
+#~ "під час доступу до них клієнта (хоча здебільшого у простих випадках "
+#~ "проблем не буде).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Перевірка піддерева також потрібна, щоб переконатись, що файли в "
+#~ "каталогах, до яких має доступ тільки адміністратор, можуть бути доступні "
+#~ "тільки якщо файлову систему експортовано з параметром «не приписувати "
+#~ "адміністратора» no_root_squash (див. нижче), навіть, якщо сам файл "
+#~ "дозволяє загальніший доступ.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Як правило, файлові системи домівок, які експортуються біля кореня і "
+#~ "зазнають багато перейменувань файлів, потрібно експортувати з вимкненим "
+#~ "параметром перевірки піддерева. А файлову систему, яку в загальному "
+#~ "використовують тільки для читання і яка, принаймні, не зазнає багато змін "
+#~ "назв файлів (напр. /usr або /var), і для якої підкаталоги можуть "
+#~ "експортуватись, потрібно експортувати з ввімкненим параметром перевірки "
+#~ "піддерева.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&Блокування без перевірки"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Блокування без перевірки</b>\n"
+#~ "<p>\n"
+#~ "Цей параметр наказує серверу NFS не вимагати автентифікації блокувальних "
+#~ "запитів (тобто запитів, які використовують протокол NLM). Зазвичай сервер "
+#~ "NFS вимагає від користувача підтвердження прав на доступ для читання "
+#~ "файла. З цим прапорцем перевірка прав доступу проводитись не буде.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ранні втілення клієнтів NFS не надсилали підтвердження прав із запитами "
+#~ "блокування, і існує ще багато сучасних клієнтів NFS, які збудовані на "
+#~ "базі старих. Скористайтесь цим прапорцем, якщо ви помітите, що вам "
+#~ "вдається блокувати тільки файли з загальним доступом до їхнього читання.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Приписування користувачів"
+
+#~ msgid "All s&quash"
+#~ msgstr "Пр&иписувати всі"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Приписувати всі</b>\n"
+#~ "<p>\n"
+#~ "Приписувати всі ІД користувачів і ІД груп до анонімного користувача. "
+#~ "Зручно для експортованих через NFS загальнодоступних каталогів FTP, "
+#~ "каталогів обробки новин і т.п.. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Не приписувати &адміністратора («no root squash»)"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Не приписувати адміністратора</b>\n"
+#~ "<p>\n"
+#~ "Вимкнути приписування адміністратора. Цей параметр важливий для "
+#~ "бездискових клієнтів.\n"
+#~ "</p>\n"
+#~ "<i>приписувати адміністратора</i>\n"
+#~ "<p>\n"
+#~ "Приписувати uid/gid 0 до анонімного uid/gid. Примітка: це не стосується "
+#~ "до ІД користувачів таких, як bin, що можуть бути однаково чутливими, .\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Анонімний &UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Анонімні UID/GID</b> <p> Ці параметри явно встановлюють uid і gid "
+#~ "анонімного облікового запису. Цей параметр найбільше корисний для "
+#~ "клієнтів PC/NFS, де можливо потрібно, щоб виглядало так, ніби всі запити "
+#~ "походять від одного користувача. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Анонімний &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Тека:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Спільний доступ через &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Параметри NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Пу&блічний"
+
+#~ msgid "W&ritable"
+#~ msgstr "За&пис дозволено"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Більше параме&трів NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Параметри Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "П&ублічний"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Більш&е параметрів Samba"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Дозволити всім користувачам спільний доступ до тек"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Тільки користувачам групи «%1» дозволяється спільний доступ до тек"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Користувачі групи «%1»"
+
+#~ msgid "Remove User"
+#~ msgstr "Вилучити користувача"
+
+#~ msgid "Add User"
+#~ msgstr "Додати користувача"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Члени групи можуть мати спільний доступ до тек без пароля адміністратора"
+
+#~ msgid "Change Group..."
+#~ msgstr "Змінити групу..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Сервер SMB та NFS на цій машині не встановлено, щоб ввімкнути цей модуль, "
+#~ "ці сервери мусять бути встановлені."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Увімкнути спільний доступ до файлів в локальній ме&режі"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Пр&остий спільний доступ"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Уможливити простий спільний доступ, щоб дозволити користувачам надавати "
+#~ "спільний доступ до тек із їхньої теки ДОМІВКИ без потреби знати пароль "
+#~ "адміністратора."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Роз&ширений спільний доступ"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Уможливити розширений спільний доступ, щоб дозволити користувачам "
+#~ "надавати спільний доступ до будь-яких тек, якщо вони мають дозвіл на "
+#~ "запис у потрібні файли налаштування або знають пароль адміністратора."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Використовувати &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Використовувати Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Доз&волені користувачі"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Спільні теки"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Додати..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Змінити..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Файл налаштування SAMBA <strong>«smb.conf»</strong> не знайдено;</"
+#~ "p>переконайтесь, що SAMBA встановлено.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Вказати адресу"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Файл налаштування Samba\n"
+#~ "*|Всі файли"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Отримати адресу smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Не вдалося прочитати файл <i>%1</i>.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Не вдалось прочитати файл"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Помилка відкриття файла"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Приєднання до домену %1 було невдалим."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Будь ласка, введіть пароль для користувача <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Додавання користувача <b>%1</b> до бази даних користувачів Samba було "
+#~ "невдалим.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Вилучення користувача %1 із бази даних користувачів Samba було невдалим."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Будь ласка, введіть пароль для користувача %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Зміна пароля користувача %1 була невдалою."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Налаштування Samba</h1> тут можна налаштувати сервер SAMBA."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>спільний ресурс</i>, якщо ви маєте "
+#~ "домашню або малу офісну мережу.<br /> Це дозволить всім, перш ніж вони "
+#~ "ввійдуть, читати список всіх спільних каталогів і принтерів."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>користувач</i>, якщо ви маєте велику "
+#~ "мережу і ви не хочете дозволяти будь-кому без входу читати список "
+#~ "спільних каталогів і принтерів.<br /><br />Якщо ви хочете використовувати "
+#~ "ваш сервер Samba, як <b>головний контролер домену</b> (PDC) ви мусите "
+#~ "встановити цей параметр."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>сервер</i>, якщо ви маєте велику мережу і "
+#~ "сервер samba мусить перевіряти користувачів/паролі відсилаючи їх до "
+#~ "іншого сервера SMB, наприклад коробки NT."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>домен</i>, якщо ви маєте велику мережу і "
+#~ "сервер samba мусить перевіряти користувачів/паролі відсилаючи їх до "
+#~ "головного або резервного контролера домену Windows NT."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Скористайтеся рівнем безпеки <i>ADS</i>, якщо ви маєте велику мережу і "
+#~ "сервер samba мусить поводитись як член домену в області ADS (Active "
+#~ "Directory Services)."
+
+#~ msgid "Sorry"
+#~ msgstr "Вибачте"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Ви набрали різні паролі. Спробуйте ще раз."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Параметр <em>%1</em> не підтримується вашою версією Samba"
+
+#~ msgid "Unnamed"
+#~ msgstr "Без назви"
+
+#~ msgid "&Hide"
+#~ msgstr "&Сховати"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Вето Oplock"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Деякі вибрані вами файли сховані, тому що вони починаються з крапки; "
+#~ "хочете зняти позначки для усіх файлів, які починаються крапкою?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Файли, які починаються з крапки"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Зняти позначки зі схованих"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Залишити схованими"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Деякі, вибрані вами, файли збігаються з рядком шаблону "
+#~ "заміни<b>«%1»</b>; хочете зняти позначки для всіх файлів, що збігаються з "
+#~ "<b>«%1»</b>?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Рядок з шаблонами заміни"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Зняти позначки зі збігань"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Залишити вибране"
+
+#~ msgid "Default"
+#~ msgstr "Типовий"
+
+#~ msgid "Admin"
+#~ msgstr "Адмін"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Ви вказали для цього каталогу <b>публічний доступ для читання</b>, "
+#~ "але обліковий запис для гостей <b>%1</b> не має достатньо прав доступу "
+#~ "для читання;<br />хочете продовжити поза все?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Попередження"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Ви вказали для цього каталогу <b>публічний доступ для запису</b>, але "
+#~ "обліковий запис для гостей <b>%1</b> не має достатньо прав доступу для "
+#~ "запису;<br />хочете продовжити поза все?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Ви вказали для цього каталогу <b>доступ для запису</b> для "
+#~ "користувача <b>%1</b>, але цей користувач не має достатньо привілеїв для "
+#~ "запису;<br />хочете продовжити поза все?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Ви вказали для цього каталогу <b>доступ для читання</b> для "
+#~ "користувача <b>%1</b>, але цей користувач не має достатньо привілеїв для "
+#~ "читання;<br />хочете продовжити поза все?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Вже існує публічний запис."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Вузол вже існує"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Будь ласка, введіть вузол або адресу IP."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Немає назви вузла/адреси IP"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Вузол «%1» вже існує."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Читання файла налаштування Samba..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Читання файла налаштування NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Будь ласка, введіть правильний шлях."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Спільний доступ дозволений тільки для тек."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Спільний доступ до цієї теки вже надано."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Адміністратор не дозволив спільний доступ через NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Помилка: не вдалось прочитати файл налаштування NFS."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Адміністратор не дозволив спільний доступ через Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Помилка: не вдалось прочитати файл налаштування Samba."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Потрібно ввести назву спільного ресурсу Samba."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr ""
+#~ "Потрібно бути уповноваженим, щоб надавати спільний доступ до каталогів."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Налаштувати спільний доступ до файлів..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "В цій системі не встановлений сервер NFS"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Не вдалось зберегти параметри."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Не вдалось відкрити файл «%1» для запису: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Помилка збереження"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Спільний доступ до файлів</h1><p>Можна скористатись цим модулем, щоб "
+#~ "ввімкнути в Konqueror спільний доступ до файлів через «Мережеву Файлову "
+#~ "Систему» (NFS) або через SMB. Остання дозволяє спільний доступ до файлів "
+#~ "з комп'ютерами Windows(R), які знаходяться у вашій мережі.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Спільний доступ до тек"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Дозволені користувачі"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Всі користувачі вже належать до групи %1."
+
+#~ msgid "Select User"
+#~ msgstr "Вибір користувача"
+
+#~ msgid "Select a user:"
+#~ msgstr "Виберіть користувача:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Не вдалось додати користувача «%1» в групу «%2»"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Не вдалось вилучити користувача «%1» з групи «%2»"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Ви мусите вибрати дійсну групу."
+
+#~ msgid "New file share group:"
+#~ msgstr "Нова група для спільних файлів:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Додати користувачів зі старої групи для спільних файлів у нову"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Вилучити користувачів зі старої групи для спільних файлів"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Вилучити стару групу для спільних файлів"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Тільки користувачам певної групи дозволений спільний доступ до тек"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Вибрати групу..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Дійсно хочете вилучити всіх користувачів з групи «%1»?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Дійсно хочете вилучити групу «%1»?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Не вдалось вилучити групу «%1»."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Будь ласка, виберіть дійсну групу."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Група «%1» не існує. Створити її?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Не створювати"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Створення групи «%1» було невдалим."

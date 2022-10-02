@@ -1,0 +1,3008 @@
+# translation of kfileshare.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2008.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-02-26 11:47+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "स्वीकारें"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "सिर्फ पढ़ने योग्य (&R)"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "एफएसटाइप: (&y)"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "ओएस/2 शैली विस्तारित गुण समर्थन"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "लिखने योग्य"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "ओएस/2 शैली विस्तारित गुण समर्थन"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "स्क्रिप्ट्स मिटाएँ"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "मालिक"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "मालिक"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "समूह"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "अनुमतियाँ"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "पथ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "कोई पहुँच नहीं (&N)"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "इस फ़ोल्डर को स्थानीय नेटवर्क में साझा करें (&h)"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "नाम:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "मेहमान लॉगइन स्वीकारें (&w)"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "सिर्फ पढ़ने के लिए"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "कोई पहुँच नहीं (&N)"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "पासवर्ड"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "पासवर्ड"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "कोई पासवर्ड नहीं"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "पासवर्ड"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "अनुमतियाँ"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "रद्द करें (&C)"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "सिर्फ स्थानीय फ़ोल्डर्स ही साझा हो सकते हैं."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "साम्बा उपयोक्ता (&m)"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "फ़ाइल साझा अक्षम है."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "फ़ोल्डर अस्तित्व में नहीं है."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "यह साझा का नाम है"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "साझेदारी"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "बनाएँ"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "बनाएँ"
+
+#~ msgid "&Share"
+#~ msgstr "साझेदारी (&S)"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>इस नाम <strong>%1</strong> के साथ एक साझा नाम पहले ही मौजूद है.<br /> "
+#~ "कृपया कोई भिन्न नाम चुनें.</qt>"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "इस तंत्र पर कोई साम्बा सर्वर संस्थापित नहीं है"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "साम्बा (माइक्रोसॉफ़्ट(R) विंडोज़ (R)) के साथ साझा करें (&a)"
+
+#~ msgid "Select Users"
+#~ msgstr "उपयोक्ता चुनें"
+
+#~ msgid "Select &Users"
+#~ msgstr "उपयोक्ता चुनें (&U)"
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "UID"
+#~ msgstr "यूआईडी"
+
+#~ msgid "GID"
+#~ msgstr "जीआईडी"
+
+#~ msgid "Acc&ess"
+#~ msgstr "पहुँच"
+
+#~ msgid "&Default"
+#~ msgstr "डिफ़ॉल्ट (&D)"
+
+#~ msgid "&Read access"
+#~ msgstr "पढ़ने की पहुँच (&R)"
+
+#~ msgid "&Write access"
+#~ msgstr "लिखने की पंहुच (&W)"
+
+#~ msgid "&Admin access"
+#~ msgstr "प्रशासक पहुँच (&A)"
+
+#~ msgid "&OK"
+#~ msgstr "ठीक (&O)"
+
+#~ msgid "Join Domain"
+#~ msgstr "डोमेन में शामिल हों"
+
+#~ msgid "&Verify:"
+#~ msgstr "सत्यापित: (&V)"
+
+#~ msgid "&Password:"
+#~ msgstr "पासवर्ड: (&P)"
+
+#~ msgid "&Username:"
+#~ msgstr "उपयोक्ता नाम: (&U)"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "डोमेन नियंत्रक: (&n)"
+
+#~ msgid "&Domain:"
+#~ msgstr "डोमेनः (&D)"
+
+#~ msgid "Select Groups"
+#~ msgstr "समूह चुनें"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "समूह चुनें (&t)"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "समूह का प्रकार (&K)"
+
+#~ msgid "&UNIX group"
+#~ msgstr "यूनिक्स समूह (&U)"
+
+#~ msgid "NI&S group"
+#~ msgstr "एनआईएस समूह (&S)"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "यूनिक्स तथा एनआईएस समूह (&o)"
+
+#~ msgid "&Base Settings"
+#~ msgstr "आधार विन्यास (&B)"
+
+#~ msgid "Samba config file:"
+#~ msgstr "साम्बा कॉन्फ़िग फ़ाइल:"
+
+#~ msgid "&Load"
+#~ msgstr "लोड करें (&L)"
+
+#~ msgid "Server Identification"
+#~ msgstr "सर्वर पहचान"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "वर्कग्रुप: (&k)"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "अपने वर्कग्रुप/डोमेन का नाम यहाँ प्रविष्ट करें."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "सर्वर स्ट्रिंगः (&g)"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "नेटबायोस नाम:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "सुरक्षा स्तर (&y)"
+
+#~ msgid "Alt+"
+#~ msgstr "ऑल्ट+"
+
+#~ msgid "User"
+#~ msgstr "उपयोक्ता"
+
+#~ msgid "Server"
+#~ msgstr "सर्वर"
+
+#~ msgid "Domai&n"
+#~ msgstr "डोमेन (&n)"
+
+#~ msgid "ADS"
+#~ msgstr "एडीएस"
+
+#~ msgid "Further Options"
+#~ msgstr "अन्य विकल्प"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "पासवर्ड सर्वर पता/नाम:"
+
+#~ msgid "Real&m:"
+#~ msgstr "रीयल्म: (&m)"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "मेहमान ख़ाता: (&o)"
+
+#~ msgid "Help"
+#~ msgstr "मदद"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "प्रत्येक विकल्प पर विस्तृत मदद के लिए यहाँ पर देखें:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "साझेदारी (&S)"
+
+#~ msgid "Comment"
+#~ msgstr "टिप्पणी"
+
+#~ msgid "Properties"
+#~ msgstr "गुण"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "डिफ़ॉल्ट्स संपादन... (&l)"
+
+#~ msgid "Add &New Share..."
+#~ msgstr "नई साझेदारी जोड़ें... (&N)"
+
+#~ msgid "Edit Share..."
+#~ msgstr "साझेदारी संपादन..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "साझेदारी मिटाएँ (&m)"
+
+#~ msgid "Prin&ters"
+#~ msgstr "प्रिंटर्स (&t)"
+
+#~ msgid "Printer"
+#~ msgstr "प्रिंटर"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "डिफ़ॉल्ट्स संपादन (&l)"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "नया प्रिंटर जोड़ें (&w)"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "प्रिंटर संपादन (&n)"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "प्रिंटर मिटाएँ (&m)"
+
+#~ msgid "&Users"
+#~ msgstr "उपयोक्ता (&U)"
+
+#~ msgid "Disabled"
+#~ msgstr "अक्षम"
+
+#~ msgid "Add"
+#~ msgstr "जोड़ें"
+
+#~ msgid "Rem&ove"
+#~ msgstr "मिटाएँ (&o)"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "यूनिक्स उपयोक्ता (&X)"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "पासवर्ड बदलें... (&g)"
+
+#~ msgid "&Join Domain"
+#~ msgstr "डोमेन में शामिल हों (&J)"
+
+#~ msgid "Advan&ced"
+#~ msgstr "विस्तृत (&c)"
+
+#~ msgid "Advanced Dump"
+#~ msgstr "विस्तृत डम्प"
+
+#~ msgid "Security"
+#~ msgstr "सुरक्षा"
+
+#~ msgid "&General"
+#~ msgstr "सामान्य (&G)"
+
+#~ msgid "PAM"
+#~ msgstr "पीएएम"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "पीएएम सीमाएँ मानें"
+
+#~ msgid "PAM password change"
+#~ msgstr "पीएएम पासवर्ड बदलें"
+
+#~ msgid "Other Switches"
+#~ msgstr "अन्य स्विचेस"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "भरोसेमंद डोमेन स्वीकारें (&l)"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "पैरानॉइड सर्वर सुरक्षा"
+
+#~ msgid "General"
+#~ msgstr "सामान्य"
+
+#~ msgid "Auth methods:"
+#~ msgstr "प्रमाणीकरण पद्धति:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "रूट डिरेक्ट्री: (&y)"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "इंटरफेसेस: (&n)"
+
+#~ msgid "Map to guest:"
+#~ msgstr "मेहमान से मैप:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "सिर्फ इंटरफेसेस बाइंड करें"
+
+#~ msgid "Never"
+#~ msgstr "कभी नहीं"
+
+#~ msgid "Bad User"
+#~ msgstr "खराब उपयोक्ता"
+
+#~ msgid "Bad Password"
+#~ msgstr "खराब पासवर्ड"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "होस्ट्स समतुल्य: (&q)"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "अल्गोरिद्मिक रिड आधार:"
+
+#~ msgid "Private dir:"
+#~ msgstr "निजी डिरेक्ट्रीः"
+
+#~ msgid "Pass&word"
+#~ msgstr "पासवर्ड (&w)"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "साम्बा पासवर्ड"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "पासवर्ड एनक्रिप्ट करें (&n)"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "एसएमबी पासवर्ड फ़ाइल:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "पास-डीबी बैकएण्ड: (&k)"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "पासवर्ड गपशप:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "पासवर्ड गपशप डिबग"
+
+#, fuzzy
+#~| msgid "Sec"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "सेक."
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "पासवर्ड गपशप टाइम-आउटः"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "नल पासवर्ड (&l)"
+
+#~ msgid "Password level:"
+#~ msgstr "पासवर्ड स्तर:"
+
+#~ msgid "Min password length:"
+#~ msgstr "पासवर्ड की न्यूनतम लम्बाई:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "मशीन पासवर्ड टाइम-आउटः"
+
+#~ msgid "Migration"
+#~ msgstr "माइग्रेशन"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "एनक्रिप्टेड अद्यतन (&y)"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "यूनिक्स पासवर्ड"
+
+#~ msgid "Passwd program:"
+#~ msgstr "पासवर्ड प्रोग्राम:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "यूनिक्स पासवर्ड सिंक (&X)"
+
+#~ msgid "Userna&me"
+#~ msgstr "उपयोक्ता नाम (&m)"
+
+#~ msgid "User&name map:"
+#~ msgstr "उपयोक्ता नाम मैप: (&n)"
+
+#~ msgid "Username &level:"
+#~ msgstr "उपयोक्ता नाम स्तर: (&l)"
+
+#~ msgid "Hide local users"
+#~ msgstr "स्थानीय उपयोक्ता छुपाएँ"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "अज्ञातनामों को मर्यादित करें (&y)"
+
+#~ msgid "Use rhosts"
+#~ msgstr "आर-होस्ट इस्तेमाल करें"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "प्रामाणीकरण (&o)"
+
+#~ msgid "Client"
+#~ msgstr "क्लाएंट"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "क्लाएंट हस्ताक्षर कर रहा है: (&l)"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "क्लाएंट सादा-पाठ प्रमाणीकरण (&x)"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "क्लाएंट लैनमेन प्रमाणीकरण"
+
+#~ msgid "Auto"
+#~ msgstr "स्वतः"
+
+#~ msgid "Mandatory"
+#~ msgstr "आवश्यक"
+
+#~ msgid "Yes"
+#~ msgstr "हाँ"
+
+#~ msgid "No"
+#~ msgstr "नहीं"
+
+#~ msgid "Client channel:"
+#~ msgstr "क्लाएंट चैनल:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "क्लाएंट स्पेनगो इस्तेमाल करे"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "क्लाएंट NTLMv&2 प्रमाणीकरण"
+
+#~ msgid "Server signing:"
+#~ msgstr "सर्वर हस्ताक्षर कर रहा है:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "लैनमेन प्रमाणीकरणः"
+
+#~ msgid "Server channel:"
+#~ msgstr "सर्वर चैनल:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "स्पेनगो इस्तेमाल करें (&n)"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "एनटीएलएम प्रमाणीकरण"
+
+#~ msgid "Logging"
+#~ msgstr "लॉग किया जा रहा है"
+
+#~ msgid "L&og file:"
+#~ msgstr "लॉग फ़ाइल: (&o)"
+
+#~ msgid "kB"
+#~ msgstr "कि.बा."
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "अधिकतम लॉग आकार: (&x)"
+
+#~ msgid "S&yslog:"
+#~ msgstr "सिसलॉग: (&y)"
+
+#~ msgid "Log &level:"
+#~ msgstr "लॉग स्तरः (&l)"
+
+#~ msgid "S&witches"
+#~ msgstr "स्विचेस (&w)"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "सिर्फ सिस-लॉग (&n)"
+
+#~ msgid "Status"
+#~ msgstr "स्थिति"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "समय-चिह्न (&m)"
+
+#~ msgid "microseconds"
+#~ msgstr "माइक्रोसेकण्ड्स"
+
+#~ msgid "Debug pid"
+#~ msgstr "डिबग पीआईडी"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "डिबग यूआईडी (&g)"
+
+#~ msgid "Tuning"
+#~ msgstr "ट्यूनिंग"
+
+#~ msgid "Modules"
+#~ msgstr "मॉड्यूल्स"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "मॉड्यूल्स प्रीलोड करें: (&l)"
+
+#~ msgid "Switches"
+#~ msgstr "स्विचेस"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "गेट-डबल्यूडी कैश (&G)"
+
+#~ msgid "Use &mmap"
+#~ msgstr "एम-मैप इस्तेमाल करें (&m)"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "कर्नेल परिवर्तन सूचना (&y)"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "होस्टनाम लुकअप्स (&o)"
+
+#~ msgid "Read ra&w"
+#~ msgstr "रॉ पढ़ें (&w)"
+
+#~ msgid "Write raw"
+#~ msgstr "रॉ लिखें"
+
+#~ msgid "Times"
+#~ msgstr "बार"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "परिवर्तन सूचना टाइमआउट:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "कीपअलाइव: (&K)"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "न्यून."
+
+#~ msgid "Deadtime:"
+#~ msgstr "डीडटाईम:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "एलपीक्यू कैश समय: (&q)"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "नाम कैश टाइमआउट: (&N)"
+
+#~ msgid "Sizes"
+#~ msgstr "आकार"
+
+#~ msgid "Max disk size:"
+#~ msgstr "अधिकतम डिस्क आकारः"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "मे.बा."
+
+#~ msgid "Read si&ze:"
+#~ msgstr "पढ़ने का आकार: (&z)"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "स्टेट कैश आकार:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "अधिकतम ट्रांसमिट: (&x)"
+
+#~ msgid "Numbers"
+#~ msgstr "संख्याएँ"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "अधिकतम एसएमबीडी प्रक्रिया:"
+
+#~ msgid "Max open files:"
+#~ msgstr "अधिकतम खुली फ़ाइलें:"
+
+#~ msgid "Printing"
+#~ msgstr "छापा जा रहा है"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "कुल छपाई कार्य: (&j)"
+
+#~ msgid "Drivers"
+#~ msgstr "ड्राइवर्स"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "ओएस&2 ड्राइवर मैप:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "प्रिंटकैप नाम: (&m)"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "प्रिंटर ड्राइवर फ़ाइल: (&n)"
+
+#~ msgid "Commands"
+#~ msgstr "कमांड्स"
+
+#~ msgid "Enumports command:"
+#~ msgstr "एनमपोर्ट्स कमांड:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "एडप्रिंटर कमांड:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "डिलीटप्रिंटर कमांड:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "प्रिंटर लोड करें (&o)"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "स्पूल्स अक्षम करें (&l)"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "प्रिंटर जोड़ें विज़ॉर्ड दिखाएँ (&z)"
+
+#~ msgid "Domain"
+#~ msgstr "डोमेन"
+
+#~ msgid "L&ocal master"
+#~ msgstr "स्थानीय मास्टर (&o)"
+
+#~ msgid "Domai&n master"
+#~ msgstr "डोमेन मास्टर (&n)"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "डोमेन लॉगऑन (&g)"
+
+#~ msgid "Preferred &master"
+#~ msgstr "पसंदीदा मास्टर (&m)"
+
+#~ msgid "OS &level:"
+#~ msgstr "ओएस स्तर: (&l)"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "डोमेन एडमिन समूह:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "डोमेन मेहमान समूह:"
+
+#~ msgid "WINS"
+#~ msgstr "विन्स"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "विन्स अक्रिय करें (&W)"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "विन्स सर्वर के रूप में काम करें (&N)"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "एक अन्य विन्स सर्वर इस्तेमाल करें (&o)"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "विन्स सर्वर विन्यास (&g)"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "डीएनएस प्रॉक्सी (&y)"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "विन्स हुक: (&k)"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "अधिकतम विन्स टीटीएल: (&l)"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "न्यूनतम विन्स टीटीएल: (&M)"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "विन्स सर्वर आईपी या डीएनएस नाम"
+
+#~ msgid "General Options"
+#~ msgstr "सामान्य विकल्प"
+
+#~ msgid "WINS partners:"
+#~ msgstr "विन्स पार्टनर्स:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "विन्स प्रॉक्सी (&x)"
+
+#~ msgid "Filenames"
+#~ msgstr "फ़ाइल नाम"
+
+#~ msgid "Ge&neral"
+#~ msgstr "सामान्य (&n)"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "स्ट्रिप डॉट (&o)"
+
+#~ msgid "&Mangling"
+#~ msgstr "मेंगलिंग (&M)"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "मैंगल्ड स्टैक: (&k)"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "प्रत्यय बिगाड़ें: (&x)"
+
+#~ msgid "Specia&l"
+#~ msgstr "स्पेशियल (&l)"
+
+#~ msgid "Stat cache"
+#~ msgstr "स्टेट कैश"
+
+#~ msgid "Locking"
+#~ msgstr "ताला लगाना"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "कर्नेल ऑपलॉक्स इस्तेमाल करें (&n)"
+
+#~ msgid "Direct&ories"
+#~ msgstr "डिरेक्ट्रीज़ (&o)"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "ताला डिरेक्ट्री: (&k)"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "पीआईडी डिरेक्ट्री: (&y)"
+
+#~ msgid "Lock Spin"
+#~ msgstr "लॉक स्पिन"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "लॉक स्पिन काउन्ट: (&L)"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "लॉक स्पिन समय: (&m)"
+
+#~ msgid "Very Advanced"
+#~ msgstr "बहुत विस्तृत"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "ऑपलॉक ब्रेक इंतजार समय: (&w)"
+
+#~ msgid "milliseconds"
+#~ msgstr "मि.से."
+
+#~ msgid "Charset"
+#~ msgstr "चरसेट"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "साम्बा &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "डास अक्षरसेट: (&O)"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "यूनिक्स अक्षरसेट: (&X)"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "प्रदर्शक अक्षरसेट: (&y)"
+
+#~ msgid "U&nicode"
+#~ msgstr "यूनिकोड (&n)"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "साम्बा &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "अक्षर सेटः"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "वैध अक्षर: (&l)"
+
+#~ msgid "Code page directory:"
+#~ msgstr "कोड पृष्ठ डिरेक्ट्री:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "कोडिंग तंत्र: (&g)"
+
+#~ msgid "Client code page:"
+#~ msgstr "क्लाएंट कोड पृष्ठ:"
+
+#~ msgid "Logon"
+#~ msgstr "लॉगऑन"
+
+#~ msgid "Add Scripts"
+#~ msgstr "स्क्रिप्ट्स जोड़ें"
+
+#~ msgid "Add user script:"
+#~ msgstr "उपयोक्ता स्क्रिप्ट जोड़ें:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "समूह स्क्रिप्ट में उपयोक्ता जोड़ें:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "समूह स्क्रिप्ट जोड़ें: (&o)"
+
+#~ msgid "Add machine script:"
+#~ msgstr "मशीन स्क्रिप्ट जोड़ें:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "समूह स्क्रिप्ट मिटाएँ:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "उपयोक्ता स्क्रिप्ट मिटाएँ:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "समूह स्क्रिप्ट से उपयोक्ता को मिटाएँ:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "प्राथमिक समूह स्क्रिप्ट"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "प्राथमिक समूह स्क्रिप्ट सेट करें: (&y)"
+
+#~ msgid "Shutdown"
+#~ msgstr "बन्दकरें"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "बन्द करने के लिए स्क्रिप्ट: (&w)"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "बन्द करने के लिए स्क्रिप्ट को छोड़ें:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "लॉगऑन पथ: (&n)"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "लॉगऑन घर: (&m)"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "लॉगऑन ड्राइव: (&L)"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "लॉगऑन स्क्रिप्ट: (&g)"
+
+#~ msgid "Socket"
+#~ msgstr "सॉकेट"
+
+#~ msgid "Socket address:"
+#~ msgstr "सॉकेट पता:"
+
+#~ msgid "Socket Options"
+#~ msgstr "सॉकेट विकल्प"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "एसएसएल"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "सम्पूर्ण एसएसएल मोड सक्षम या अक्षम करें"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "एसएसएल सक्षम करें (&n)"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "एसएसएल होस्ट्स: (&o)"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "एसएसएल एन्ट्रॉपी बाइट्स: (&y)"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "एसएसएल सायफर्स:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "एसएसएल होस्ट्स रीज़ाइन: (&g)"
+
+#~ msgid "ssl2"
+#~ msgstr "एसएसएल2"
+
+#~ msgid "ssl3"
+#~ msgstr "एसएसएल3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "एसएसएल2या3"
+
+#~ msgid "tls1"
+#~ msgstr "टीएलएस1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "एसएसएल संगतता (&m)"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "एसएसएल सीए सर्ट-डिर:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "एसएसएल एन्ट्रॉपी फ़ाइल:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "एसएसएल ईजीडी सॉकेट:"
+
+#~ msgid "SSL version:"
+#~ msgstr "एसएसएल संस्करण:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "एसएसएल सीए सर्ट-फ़ाइल:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "एसएसएल को क्लाएंट-सर्ट आवश्यक है"
+
+#~ msgid "SSL client key:"
+#~ msgstr "एसएसएल क्लाएंट कुंजी:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "एसएसएल को सर्व-सर्ट आवश्यक है (&q)"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "एसएसएल सर्वर सर्ट: (&L)"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "एसएसएल क्लाएंट सर्ट:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "एसएसएल सर्वर कुंजी (&k)"
+
+#~ msgid "Protocol"
+#~ msgstr "प्रोटोकाल"
+
+#~ msgid "Ti&me server"
+#~ msgstr "समय सर्वर (&m)"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "विशाल रीड-राइट (&g)"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "यूनिक्स एक्सटेंशन्स"
+
+#~ msgid "Read bmpx"
+#~ msgstr "बीएमपीएक्स पढ़ें"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "प्रोटोकॉल संस्करण"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "ऐसे घोषणा करें: (&n)"
+
+#~ msgid "NT"
+#~ msgstr "एन टी"
+
+#~ msgid "NT Workstation"
+#~ msgstr "एन टी वर्कस्टेशन"
+
+#~ msgid "win95"
+#~ msgstr "विन95"
+
+#~ msgid "WfW"
+#~ msgstr "डबल्यूएफ़डबल्यू"
+
+#~ msgid "Announce version:"
+#~ msgstr "संस्करण घोषणा:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "प्रोटोकॉल: (&o)"
+
+#~ msgid "NT1"
+#~ msgstr "एनटी1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "लैनमेन2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "लैनमैन1"
+
+#~ msgid "CORE"
+#~ msgstr "कोर"
+
+#~ msgid "COREPLUS"
+#~ msgstr "कोरप्लस"
+
+#~ msgid "Max protocol:"
+#~ msgstr "मेक्स प्रोटोकॉल:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "न्यून. प्रोटोकॉल:"
+
+#~ msgid "Limits"
+#~ msgstr "सीमाएँ"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "अधिकतम एमयूएक्स: (&x)"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "अधिकतम टीटीएल: (&l)"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "एसएमबी पोर्ट को सुन रहा है"
+
+#~ msgid "SMB ports:"
+#~ msgstr "एसएमबी पोर्ट्स:"
+
+#~ msgid "Browsing"
+#~ msgstr "ब्राउजिंग"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "एलएम अंतराल: (&n)"
+
+#~ msgid "L&M announce:"
+#~ msgstr "एलएम घोषणा: (&M)"
+
+#~ msgid "Sec"
+#~ msgstr "सेक."
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "रिमोट ब्राउज़ सिंक: (&y)"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "ब्राउज़ सूची (&w)"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "एनहैंस्ड ब्राउज़िंग (&g)"
+
+#~ msgid "Pre&load:"
+#~ msgstr "प्रीलोड करें: (&l)"
+
+#~ msgid "Winbind"
+#~ msgstr "विनबाइंड"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "विनबाइंड/आईडीमैप यूआईडी: (&W)"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "विनबाइंड/आईडीमैप यूआईडी: (&G)"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "प्रारूप घर डिरेक्ट्री: (&o)"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "प्रारूप शैल (&l)"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "विनबाइंड विभाजक:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "टैम्प्लेट प्राथमिक समूह:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "विनबाइंड कैश समय: (&m)"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "विन्डोज एन टी 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "विंडोज़ 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "एसीएल संगतता: (&y)"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "विनबाइंड एनम उपयोक्ता (&n)"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "विनबाइंड एनम समूह"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "विनबाइंड डिफ़ॉल्ट डोमेन इस्तेमाल करता है"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "विनबाइंड स्थानीय खाता सक्षम करता है"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "सिर्फ विश्वासी विनबाइंड डोमेन"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "विनबाइंड नेस्टेड समूह"
+
+#~ msgid "NetBIOS"
+#~ msgstr "नेटबॉयोस"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "नेटबॉयोस स्कोप: (&o)"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "नेटबायोस अलियास: (&N)"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "नेटबायोस अक्षम करें (&l)"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "नाम रीज़ॉल्व अनुक्रम: (&m)"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "एलएम-होस्ट्स होस्ट विन्स बी-कास्ट"
+
+#~ msgid "VFS"
+#~ msgstr "वीएफएस"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "होस्ट एमएसडीएफएस (&o)"
+
+#~ msgid "LDAP"
+#~ msgstr "एलडीएपी"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "एलडीएपी प्रत्यय: (&x)"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "एलडीएपी मशीन प्रत्यय:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "एलडीएपी उपयोक्ता प्रत्यय:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "एलडीएपी समूह प्रत्यय: (&g)"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "एलडीएपी आईडीमैप उपसर्ग:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "एलडीएपी फ़िल्टर:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "एलडीएपी एडमिन डीएन: (&m)"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "आईडीमैप बैकएण्ड: (&k)"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "एलडीएपी रीप्लिकेशन स्लीप:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "एलडीएपी एसएसएल: (&L) "
+
+#~ msgid "Off"
+#~ msgstr "बंद"
+
+#~ msgid "Start_tls"
+#~ msgstr "स्टार्ट_टीएलएस"
+
+#~ msgid "On"
+#~ msgstr "चालू"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "एलडीएपी सिंक: (&y)"
+
+#~ msgid "Only"
+#~ msgstr "सिर्फ"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "एलडीएपी मिटाएँ डीएन (&n)"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "साझेदारी जोड़ने का कमांड: (&o)"
+
+#~ msgid "Change share command:"
+#~ msgstr "साझेदारी बदलने का कमांड:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "साझेदारी मिटाने का कमांड: (&l)"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "संदेश कमांड: (&g)"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "डी-फ्री कमांड: (&m)"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "नियतांश तय करने का कमांड: (&q)"
+
+#~ msgid "Get quota command:"
+#~ msgstr "नियतांश पाने का कमांड"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "हड़बड़ी क्रिया: (&n)"
+
+#~ msgid "Misc"
+#~ msgstr "विविध"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "विविध"
+
+#~ msgid "Hide &local users"
+#~ msgstr "स्थानीय उपयोक्ता छुपाएँ (&l)"
+
+#~ msgid "Default service:"
+#~ msgstr "डिफ़ॉल्ट सेवा:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "टाइम ऑफसेट: (&o)"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "न्यून."
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "रिमोट घोषणा: (&n)"
+
+#~ msgid "Source environment:"
+#~ msgstr "स्रोत वातावरण:"
+
+#~ msgid "NIS"
+#~ msgstr "एनआईएस"
+
+#~ msgid "NIS homedir"
+#~ msgstr "एनआईएस घर-डिरेक्ट्री"
+
+#~ msgid "Homedir map:"
+#~ msgstr "घर-डिरेक्ट्री मैप:"
+
+#~ msgid "UTMP"
+#~ msgstr "यूटीएमपी"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "यूटीएमपी डिरेक्ट्री: (&y)"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "डबल्यूटीएमपी डिरेक्ट्री: (&W)"
+
+#~ msgid "Ut&mp"
+#~ msgstr "यूटीएमपी (&m)"
+
+#~ msgid "Debug"
+#~ msgstr "दोषसुधार"
+
+#~ msgid "&NT status support"
+#~ msgstr "एनटी स्थिति समर्थन (&N)"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "एनटी एसएमबी समर्थन (&M)"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "एनटी पाइप समर्थन (&o)"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "साझेदारी जोड़ें/संपादित करें"
+
+#~ msgid "Pixmap"
+#~ msgstr "पिक्समेप"
+
+#~ msgid "D&irectory"
+#~ msgstr "डिरेक्ट्री (&i)"
+
+#~ msgid "&Path:"
+#~ msgstr "पथः (&P)"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "सभी घर डिरेक्ट्रीज़ साझा करें (&d)"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "आइडेंटिफ़ायर (&t)"
+
+#~ msgid "Na&me:"
+#~ msgstr "नामः (&m)"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "टिप्पणी: (&n)"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "मुख्य गुण (&r)"
+
+#~ msgid "Read onl&y"
+#~ msgstr "सिर्फ पढ़ने लायक (&y)"
+
+#~ msgid "Pub&lic"
+#~ msgstr "पब्लिक (&l)"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "ब्राउज़ करने योग्य (&w)"
+
+#~ msgid "A&vailable"
+#~ msgstr "उपलब्ध (&v)"
+
+#~ msgid "&Security"
+#~ msgstr "सुरक्षा (&S)"
+
+#~ msgid "Gu&ests"
+#~ msgstr "गेस्ट (&e)"
+
+#~ msgid "&Guest account:"
+#~ msgstr "मेहमान ख़ाता: (&G)"
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "सिर्फ मेहमान कनेक्शनों की अनुमति दें (&i)"
+
+#~ msgid "Hos&ts"
+#~ msgstr "होस्ट्स (&t)"
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "होस्ट्स स्वीकारें: (&w)"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "होस्ट्स अस्वीकारें: (&d)"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "सिंबालिक कड़ियाँ (&m)"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "निम्न सिंबालिक लिंक स्वीकारें (&k)"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr "निम्न सिंबालिक लिंक स्वीकारें जो कि डिरेक्ट्री ट्री से बाहर पाइंट करते हैं (&p)"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "इस उपयोक्तानाम सूची में निर्धारित उपयोक्तानामों सहित कनेक्शनों को ही स्वीकारें"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "छुपी फ़ाइलें (&F)"
+
+#~ msgid "Hidden"
+#~ msgstr "छुपा"
+
+#~ msgid "Veto"
+#~ msgstr "वीटो"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "वीटो ऑपलॉक"
+
+#~ msgid "Size"
+#~ msgstr "आकार"
+
+#~ msgid "Date"
+#~ msgstr "तारीख़"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "चयनित फ़ाइलें (&l)"
+
+#~ msgid "Hi&de"
+#~ msgstr "छुपाएँ (&d)"
+
+#~ msgid "&Veto"
+#~ msgstr "वीटो (&V)"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "वीटो ऑपलॉक (&k)"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "मेनुअल कॉन्फ़िगरेशन (&M)"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "वीटो फ़ाइलें: (&t)"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "वीटो ऑपलॉक फ़ाइलें: (&i)"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "छुपी फ़ाइलें: (&n)"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "लिखी नहीं जा सकने योग्य फ़ाइलें छुपाएँ: (&w)"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "विशिष्ट फ़ाइलें छुपाएँ (&p)"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "डॉट के साथ प्रारंभ होने वाली फ़ाइलों को छुपाएँ (&g)"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "पढ़ने योग्य नहीं फ़ाइलों को छुपाएँ (&r)"
+
+#~ msgid "&Advanced"
+#~ msgstr "विस्तृत (&A)"
+
+#~ msgid "Force Modes"
+#~ msgstr "बाध्य मोड्स"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "बाध्य डिरेक्ट्री सुरक्षा मोड: (&e)"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "बाध्य सुरक्षा मोड: (&r)"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "बाध्य डिरेक्ट्री मोड: (&y)"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "बाध्य क्रिएट मोड: (&d)"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "मास्क्स"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "डिरेक्ट्री सुरक्षा मास्क:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "सुरक्षा मास्क: (&m)"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "डिरेक्ट्री मास्क: (&t)"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "मास्क बनाएँ: (&k)"
+
+#~ msgid "ACL"
+#~ msgstr "एसीएल"
+
+#~ msgid "&Profile acls"
+#~ msgstr "प्रोफ़ाइल एसीएलएस (&P)"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "इनहेरिट एसीएलएस (&l)"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "एनटी एसीएल समर्थन (&N)"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "बाध्य अज्ञात एसीएल उपयोक्ता: (&w)"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "मैप एसीएल इनहैरिट (&i)"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "पैरेंट डिरेक्ट्री में से अनुमतियाँ प्राप्त करें"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "फ़ाइलों को बेतरतीब मिटाने की अनुमति दें"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "डॉस गुण मैपिंग"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "यूनिक्स ओनर एक्ज़ीक्यूट पर डॉस अभिलेख मैप करें (&v)"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "यूनिक्स वर्ल्ड एक्ज़ीक्यूट पर डॉस हिडन मैप करें (&X)"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "यूनिक्स समूह एक्ज़ीक्यूट पर डॉस तंत्र मैप करें (&g)"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "विस्तारित गुण पर डॉस गुण भंडारित करें"
+
+#~ msgid "OS/2"
+#~ msgstr "ओएस/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "सख्त सिंक (&y)"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "हमेशा सिंक करें (&w)"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "सख्त आवंटन (&r)"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "सेंडफ़ाइल इस्तेमाल करें (&d)"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "एक साथ कनेक्शनों की अधिकतम संख्या: (&M)"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "लिखने का कैश आकारः (&z)"
+
+#~ msgid "bytes"
+#~ msgstr "बाइट्स"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "ब्लॉक आकार: (&k)"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "क्लाएंट-साइड कैचिंग पॉलिसी: (&g)"
+
+#~ msgid "manual"
+#~ msgstr "हस्तचालित"
+
+#~ msgid "documents"
+#~ msgstr "दस्तावेज़"
+
+#~ msgid "programs"
+#~ msgstr "प्रोग्राम्स"
+
+#~ msgid "disable"
+#~ msgstr "अक्षम"
+
+#~ msgid "Name Mangling"
+#~ msgstr "नाम बिगड़ना"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "नाम बिगड़ा सक्षम करें (&m)"
+
+#~ msgid "Man&gle case"
+#~ msgstr "केस बिगड़ना (&g)"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "केस सुरक्षित रखें (&v)"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "शॉर्ट केस सुरक्षित रखें (&e)"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "केस सेंसिटिव (&t)"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "डिफ़ॉल्ट केस: (&l)"
+
+#~ msgid "Lower"
+#~ msgstr "निचला"
+
+#~ msgid "Upper"
+#~ msgstr "ऊपरी"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "अक्षर बिगड़ना: (&r)"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "बिगड़ा मैप: (&p)"
+
+#~ msgid "Mangling method:"
+#~ msgstr "गड़बड़ी का तरीक़ा:"
+
+#~ msgid "hash"
+#~ msgstr "हैश"
+
+#~ msgid "hash2"
+#~ msgstr "हैश2"
+
+#~ msgid "Other Options"
+#~ msgstr "अन्य विकल्प"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "ट्रैलिंग बिन्दु छुपाएँ (&n)"
+
+#~ msgid "DOS"
+#~ msgstr "डॉस"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "डॉस फ़ाइल मोड (&D)"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "डॉस फ़ाइल समय (&i)"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "डॉस फ़ाइल समय रेज़ोल्यूशन"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "तालाबंद सक्षम करें (&i)"
+
+#~ msgid "Locki&ng"
+#~ msgstr "तालाबंद (&n)"
+
+#~ msgid "S&trict locking"
+#~ msgstr "सख्त ताला (&t)"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "ताला रोकें (&g)"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "पोसिक्स ताला (&x)"
+
+#~ msgid "Share mo&des"
+#~ msgstr "साझा मोड्स (&d)"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "अपॉर्च्युनिस्टिक ताला जारी करें (ऑपलाक्स) (&r)"
+
+#~ msgid "O&plocks"
+#~ msgstr "ऑपलॉक्स (&p)"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "स्तर2 ऑपलॉक्स (&v)"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "ऑपलॉक कन्टेन्शन सीमा: (&m)"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "नक़ली ऑपलॉक्स (&e)"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "वीएफएस ऑब्जेक्ट्स: (&j)"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "वीएफएस विकल्प: (&p)"
+
+#~ msgid "Exec"
+#~ msgstr "चलाना"
+
+#~ msgid "P&reexec:"
+#~ msgstr "प्रीएक्स: (&r)"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "रूट प्रीएक्सईसी: (&e)"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "पोस्टईएक्सईसी: (&t)"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "रूट पोस्टईएक्सईसी: (&p)"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "प्रीएक्सईसी बन्द (&l)"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "रूट प्रीएक्सईसी बन्द (&x)"
+
+#~ msgid "&Volume:"
+#~ msgstr "आवाज़ निर्धारक: (&V)"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "मैज़िक स्क्रिप्ट: (&g)"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "मैजिक आउटपुट: (&i)"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "उतरें नहीं: (&n)"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "एमएसडीएफएस प्रॉक्सी (&x)"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "सेटडिर कमांड स्वीकारें (&w)"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "फेक डिरेक्ट्री क्रिएट टाइम्स (&k)"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "एमएसडीएफएस रूट (&d)"
+
+#~ msgid "&Help"
+#~ msgstr "मदद (&H)"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "उपयोक्ता"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "सभी अनिर्दिष्ट उपयोक्ता (&n)"
+
+#~ msgid "Reject"
+#~ msgstr "अस्वीकृत"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "निर्दिष्ट उपयोक्ता (&i)"
+
+#~ msgid "Access Rights"
+#~ msgstr "पहुँच अधिकार"
+
+#~ msgid "A&dd User..."
+#~ msgstr "उपयोक्ता जोड़ें... (&d)"
+
+#~ msgid "E&xpert"
+#~ msgstr "एक्सपर्ट (&x)"
+
+#~ msgid "Add &Group..."
+#~ msgstr "समूह जोड़ें... (&G)"
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "चयनित मिटाएँ (&v)"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "सभी उपयोक्ताओं को निम्न समूह/उपयोक्ता में बाध्य किया जाएगा (&w)"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "बाध्य उपयोक्ता: (&e)"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "बाध्य समूह: (&r)"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "पहुँच परिवर्धक"
+
+#~ msgid "Access Permissions"
+#~ msgstr "पहुँच अनुमतियाँ"
+
+#~ msgid "Others"
+#~ msgstr "अन्य"
+
+#~ msgid "Read"
+#~ msgstr "पढ़ें"
+
+#~ msgid "Write"
+#~ msgstr "लिखें"
+
+#~ msgid "Sticky"
+#~ msgstr "स्टिकी"
+
+#~ msgid "Set GID"
+#~ msgstr "जीआईडी सेट करें"
+
+#~ msgid "Set UID"
+#~ msgstr "यूआईडी सेट करें"
+
+#~ msgid "Special"
+#~ msgstr "विशेष"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "उपयोक्ता विन्यास"
+
+#~ msgid "&Valid users:"
+#~ msgstr "वैध उपयोक्ता: (&V)"
+
+#~ msgid "&Admin users:"
+#~ msgstr "प्रशासक उपयोक्ता: (&A)"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "अवैध उपयोक्ता: (&I)"
+
+#~ msgid "&Write list:"
+#~ msgstr "लिखने की सूची: (&W)"
+
+#~ msgid "&Read list:"
+#~ msgstr "पढ़ने की सूची: (&R)"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "स्वीकार्य होस्ट (&H)"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "स्वीकार्य होस्ट्स की सूची"
+
+#~ msgid "&Add Host..."
+#~ msgstr "होस्ट जोड़ें... (&A)"
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "होस्ट परिवर्धित करें... (&d)"
+
+#~ msgid "&Remove Host"
+#~ msgstr "होस्ट मिटाएँ (&R)"
+
+#~ msgid "Name/Address"
+#~ msgstr "नाम/पता"
+
+#~ msgid "Parameters"
+#~ msgstr "पैरामीटर्स"
+
+#~ msgid "Host Properties"
+#~ msgstr "होस्ट गुण"
+
+#~ msgid "&Name/address:"
+#~ msgstr "नाम/पता: (&N)"
+
+#~ msgid "&Public access"
+#~ msgstr "पब्लिक एक्सेस (&P)"
+
+#~ msgid "Options"
+#~ msgstr "विकल्प"
+
+#~ msgid "&Writable"
+#~ msgstr "लिखनेयोग्य (&W)"
+
+#~ msgid "&Insecure"
+#~ msgstr "असुरक्षित (&I)"
+
+#~ msgid "&Sync"
+#~ msgstr "सिंक (&S)"
+
+#~ msgid "No w&delay"
+#~ msgstr "कोई देरी नहीं (&d)"
+
+#~ msgid "No &hide"
+#~ msgstr "छुपाएँ नहीं (&h)"
+
+#~ msgid "No su&btree check"
+#~ msgstr "कोई सबट्री जाँच नहीं (&b)"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "असुरक्षित ताला (&k)"
+
+#~ msgid "User Mapping"
+#~ msgstr "उपयोक्ता मैपिंग"
+
+#~ msgid "All s&quash"
+#~ msgstr "सभी स्क्वॉश (&q)"
+
+#~ msgid "No &root squash"
+#~ msgstr "कोई रूट स्क्वॉश नहीं (&r)"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "अज्ञातनाम यूआईडी: (&U)"
+
+#~ msgid "FF"
+#~ msgstr "एफएफ"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "अज्ञातनाम जीआईडी: (&G)"
+
+#~ msgid "Folder:"
+#~ msgstr "फोल्डरः"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "एनएफएस के साथ साझेदारी (लिनक्स/यूनिक्स) (&N)"
+
+#~ msgid "NFS Options"
+#~ msgstr "एनएफएस विकल्प"
+
+#~ msgid "Pu&blic"
+#~ msgstr "सार्वजनिक (&b)"
+
+#~ msgid "W&ritable"
+#~ msgstr "लिखनेयोग्य (&r)"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "और अधिक एनएफएस विकल्प (&t)"
+
+#~ msgid "Samba Options"
+#~ msgstr "साम्बा विकल्प"
+
+#~ msgid "P&ublic"
+#~ msgstr "सार्वजनिक (&u)"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "और अधिक साम्बा विकल्प (&e)"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "सभी उपयोक्ताओं को फ़ोल्डर्स साझा करने की अनुमति दें"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "सिर्फ समूह '%1' के उपयोक्ताओं को फ़ोल्डर साझा करने की अनुमति है"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "समूह '%1' के उपयोक्ता"
+
+#~ msgid "Remove User"
+#~ msgstr "उपयोक्ता मिटाएँ"
+
+#~ msgid "Add User"
+#~ msgstr "उपयोक्ता जोड़ें"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "समूह सदस्य फ़ोल्डरों को साझा कर सकते हैं रूट पासवर्ड के बगैर"
+
+#~ msgid "Change Group..."
+#~ msgstr "समूह बदलें..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "इस मशीन पर एसएमबी तथा एनएफएस सर्वर संस्थापित नहीं हैं, इस मॉड्यूल को सक्षम करने हेतु "
+#~ "ये सर्वर संस्थापित होने आवश्यक हैं."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "स्थानीय नेटवर्क फ़ाइल साझेदारी सक्षम करें (&k)"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "सरल साझेदारी (&m)"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "विस्तृत साझेदारी (&g)"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "एनएफएस इस्तेमाल करें (लिनक्स/यूनिक्स) (&N)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "साम्बा (माइक्रोसॉफ़्ट(R) विंडोज़ (R)) इस्तेमाल करें (&b)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "स्वीकार्य उपयोक्ता (&w)"
+
+#~ msgid "Shared Folders"
+#~ msgstr "साझा फ़ोल्डर"
+
+#~ msgid "Samba"
+#~ msgstr "साम्बा"
+
+#~ msgid "NFS"
+#~ msgstr "एनएफ़एस"
+
+#~ msgid "A&dd..."
+#~ msgstr "जोड़ें... (&d)"
+
+#~ msgid "Chang&e..."
+#~ msgstr "बदलें... (&e)"
+
+#~ msgid "Specify Location"
+#~ msgstr "स्थान बताएँ"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|साम्बा कॉन्फ़. फ़ाइल\n"
+#~ "*|सभी फ़ाइलें"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "smb.conf का स्थान पता करें"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt> फ़ाइल <i>%1</i> पढ़ा नहीं जा सका.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "फ़ाइल को पढ़ नहीं सका"
+
+#~ msgid "Error while opening file"
+#~ msgstr "फ़ाइल खोलने के दौरान त्रुटि हुई"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "डोमेन %1 में जुड़ने में असफल."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>कृपया उपयोक्ता <b>%1</b> के लिए पासवर्ड भरें</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr "<qt>उपयोक्ता <b>%1</b> को साम्बा उपयोक्ता डाटाबेस में जोड़ना असफल.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "उपयोक्ता %1 को साम्बा उपयोक्ता डाटाबेस से मिटाना असफल."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "कृपया उपयोक्ता %1 के लिए पासवर्ड भरें"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "उपयोक्ता %1 का पासवर्ड बदलना असफल."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>साम्बा कॉन्फ़िगरेशन</h1> आप यहाँ अपने साम्बा सर्वर को कॉन्फ़िगर कर सकते हैं"
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "विकल्प <em>%1</em> आपके साम्बा संस्करण के द्वारा समर्थित नहीं है"
+
+#~ msgid "Unnamed"
+#~ msgstr "बेनाम"
+
+#~ msgid "&Hide"
+#~ msgstr "छुपाएँ (&H)"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "वीटो ऑप्लॉक (&V)"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "फ़ाइलें जो डॉट के साथ प्रारंभ होती हैं"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "छुपा पर से चयन हटाएँ"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "छुपा बनाए रखें"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "वाइल्डकार्ड स्ट्रिंग"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "जोड़ों पर से चयन हटाएँ"
+
+#~ msgid "Keep Selected"
+#~ msgstr "चयनित बनाए रखें"
+
+#~ msgid "Default"
+#~ msgstr "डिफ़ॉल्ट"
+
+#~ msgid "Admin"
+#~ msgstr "प्रशासक"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>इस डिरेक्ट्री के लिए आपने <b>पब्लिक रीड एक्सेस</b> निर्दिष्ट किया है, परंतु मेहमान "
+#~ "खाता <b>%1</b> के पास पढ़ने की आवश्यक अनुमतियाँ नहीं हैं;<br />जैसे भी हो आप जारी "
+#~ "रखना चाहते हैं?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "चेतावनी"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>इस डिरेक्ट्री के लिए आपने <b>पब्लिक राइट एक्सेस</b> निर्दिष्ट किया है, परंतु मेहमान "
+#~ "खाता <b>%1</b> के पास लिखने की आवश्यक अनुमतियाँ नहीं हैं;<br />जैसे भी हो आप जारी "
+#~ "रखना चाहते हैं?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>आपने निर्दिष्ट किया है <b>राइट एक्सेस</b> इस डिरेक्ट्री के लिए उपयोक्ता:  <b>%1</"
+#~ "b> के लिए, परंतु उपयोक्ता के पास लिखने की आवश्यक अनुमतियाँ नहीं हैं;<br />जैसे भी हो आप "
+#~ "जारी रखना चाहते हैं?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>आपने निर्दिष्ट किया है <b>रीड एक्सेस</b> इस डिरेक्ट्री के लिए उपयोक्ता:  <b>%1</"
+#~ "b> के लिए, परंतु उपयोक्ता के पास पढ़ने की आवश्यक अनुमतियाँ नहीं हैं;<br />जैसे भी हो आप "
+#~ "जारी रखना चाहते हैं?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "वहाँ एक सार्वजनिक प्रविष्टि पहले से ही मौजूद है."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "होस्ट पहले ही मौजूद है"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "कृपया आईपी पता या होस्टनाम भरें."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "कोई आईपी पता या होस्टनाम नहीं"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "होस्ट '%1' पहले ही मौजूद है."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "साम्बा कॉन्फ़िगरेशन फ़ाइल पढ़ा जा रहा है..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "एनएफएस कॉन्फ़िगरेशन फ़ाइल पढ़ा जा रहा है..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "कृपया एक वैध पथ भरें."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "सिर्फ फ़ोल्डर्स ही साझा हो सकते हैं."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "फोल्डर पहले से ही साझा है"
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "प्रशासक एनएफएस के साथ साझा की अनुमति नहीं देता."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "त्रुटि: एनएफएस कॉन्फ़िगरेशन फ़ाइल पढ़ा नहीं जा सका."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "प्रशासक साम्बा के साथ साझा की अनुमति नहीं देता."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "त्रुटि: साम्बा कॉन्फ़िगरेशन फ़ाइल पढ़ा नहीं जा सका."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "साम्बा साझा के लिए आपको यहाँ एक नाम भरना होगा."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "आपको साझा डिरेक्ट्रीज में प्राधिकृत होना आवश्यक है."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "फ़ाइल साझा कॉन्फ़िगर करें..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "इस तंत्र पर कोई एनएफएस सर्वर संस्थापित नहीं है"
+
+#~ msgid "Could not save settings."
+#~ msgstr "विन्यास सहेज नहीं सका."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "फ़ाइल '%1' को लिखने के लिए खोल नहीं सका: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "सहेजने में असफल"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>फ़ाइल साझा</h1><p>यह मॉड्यूल नेटवर्क पर \"नेटवर्क फ़ाइल सिस्टम\" (एनएफएस) या "
+#~ "कॉन्क्वेरर में एसएमबी के उपयोग से फ़ाइल साझा सक्षम करने हेतु उपयोग में लिया जा सकता है. "
+#~ "एसएमबी आपको नेटवर्क पर आपकी फ़ाइलें विंडोस (R) कम्प्यूटर्स पर साझा करती हैं.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "फ़ोल्डर साझा"
+
+#~ msgid "Allowed Users"
+#~ msgstr "अनुमति प्राप्त उपयोक्ता"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "सभी उपयोक्ता पहले ही समूह %1 में हैं."
+
+#~ msgid "Select User"
+#~ msgstr "उपयोक्ता चुनें"
+
+#~ msgid "Select a user:"
+#~ msgstr "एक उपयोक्ता चुनें:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "उपयोक्ता '%1' को समूह '%2' में जोड़ नहीं सका"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "उपयोक्ता '%1' को समूह '%2' से मिटा नहीं सका"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "आपको एक वैध समूह चुनना होगा."
+
+#~ msgid "New file share group:"
+#~ msgstr "नई फ़ाइल साझा समूह:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "पुराना फ़ाइल साझा समूह में से नए में उपयोक्ताओं को जोड़ें"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "पुराना फ़ाइल साझा समूह में से नए में उपयोक्ताओं को मिटाएँ"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "पुराना फ़ाइल साझा समूह मिटाएँ"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "सिर्फ कुछ विशेष समूह के उपयोक्ता ही फ़ोल्डरों को साझा करने के लिए स्वीकार्य हैं"
+
+#~ msgid "Choose Group..."
+#~ msgstr "समूह चुनें..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "क्या आप सचमुच समूह '%1' में से उपयोक्ताओं को मिटाना चाहते हैं?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "क्या आप सचमुच में समूह '%1' को मिटाना चाहते हैं?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "समूह '%1' मिटाने में असफल."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "कृपया वैध समूह चुनें."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "समूह '%1' मौजूद नहीं है. क्या इसे बनाना है?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "बनाएँ नहीं"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "समूह '%1' बनाना असफल."
+
+#~ msgid "Printer Settings"
+#~ msgstr "प्रिंटर विन्यास"
+
+#~ msgid "Pr&inter"
+#~ msgstr "प्रिंटर (&i)"
+
+#~ msgid "Pa&th:"
+#~ msgstr "पथ: (&t)"
+
+#~ msgid "&Queue:"
+#~ msgstr "क़तार: (&Q)"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "सभी प्रिंटर साझा करें (&r)"
+
+#~ msgid "I&dentifier"
+#~ msgstr "पहचान (&d)"
+
+#~ msgid "&Name:"
+#~ msgstr "नाम: (&N)"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "टिप्पणीः (&e)"
+
+#~ msgid "Main Properties"
+#~ msgstr "मुख्य गुण"
+
+#~ msgid "&Printing"
+#~ msgstr "छपाई (&P)"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "प्रिंटर ड्राइवर: (&v)"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "प्रिंटर ड्राइवर स्थान: (&e)"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "पोस्ट स्क्रिप्ट (&i)"
+
+#~ msgid "Printin&g:"
+#~ msgstr "छपाई: (&g)"
+
+#~ msgid "sysv"
+#~ msgstr "सिस-वी"
+
+#~ msgid "aix"
+#~ msgstr "एआईएक्स"
+
+#~ msgid "hpux"
+#~ msgstr "एचपीयूएक्स"
+
+#~ msgid "bsd"
+#~ msgstr "बीएसडी"
+
+#~ msgid "qnx"
+#~ msgstr "क्यूएनएक्स"
+
+#~ msgid "plp"
+#~ msgstr "पीएलपी"
+
+#~ msgid "lprng"
+#~ msgstr "एलपीआरएनजी"
+
+#~ msgid "softq"
+#~ msgstr "सॉफ़्टक्यू"
+
+#~ msgid "cups"
+#~ msgstr "कप्स"
+
+#~ msgid "nt"
+#~ msgstr "एनटी"
+
+#~ msgid "os2"
+#~ msgstr "ओएस२"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "रपट किया गया अधिकतम छपाई कार्यः (&j)"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "अधिकतम छपाई कार्य: (&x)"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "क्लाएण्ट ड्राइवर इस्तेमाल करें (&l)"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "डिफ़ॉल्ट डेवमोड (&f)"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "होस्ट्स स्वीकार्य: (&l)"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "प्रिंटर प्रशासक: (&r)"
+
+#~ msgid "Co&mmands"
+#~ msgstr "कमांड्स (&m)"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "प्रिंट कमांड (&i)"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "एलपीक्यू कमांड: (&n)"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "एलपीआरएम कमांड: (&d)"
+
+#~ msgid "lp&resume:"
+#~ msgstr "एलपीरेज्यूम: (&r)"
+
+#~ msgid "&queuepause:"
+#~ msgstr "क्यूपॉज: (&q)"
+
+#~ msgid "&lppause:"
+#~ msgstr "एलपीपॉज: (&l)"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "कतारबहाल: (&e)"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "वििविध (&n)"
+
+#~ msgid "p&reexec:"
+#~ msgstr "प्रीएक्स: (&r)"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "रूट प्रीएक्सईसी: (&e)"
+
+#~ msgid "root postexec:"
+#~ msgstr "रूट पोस्टईएक्सईसी:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "पोस्टईएक्सईसी (&x)"
+
+#~ msgid "Tunin&g"
+#~ msgstr "ट्यूनिंग (&g)"
+
+#~ msgid "M&in print space:"
+#~ msgstr "न्यूनतम छपाई जगह: (&i)"
+
+#~ msgid "&Logging"
+#~ msgstr "लॉग किया जा रहा है (&L)"
+
+#~ msgid "S&tatus"
+#~ msgstr "स्थिति (&t)"
+
+#~ msgid "Not share&d"
+#~ msgstr "साझा नहीं (&d)"
+
+#~ msgid "&Shared"
+#~ msgstr "साझेदारी (&S)"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "आधार विकल्प (&e)"
+
+#~ msgid "Name of the share"
+#~ msgstr "साझेदारी का नाम"
+
+#~ msgid "Commen&t:"
+#~ msgstr "टिप्पणी: (&t)"
+
+#~ msgid "Security Options"
+#~ msgstr "सुरक्षा विकल्प"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "होस्ट्स नकारें: (&y)"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "होस्ट्स स्वीकारें: (&H)"
+
+#~ msgid "Guest &account:"
+#~ msgstr "मेहमान ख़ाता: (&a)"
+
+#~ msgid "G&uests allowed"
+#~ msgstr "मेहमान स्वीकार्य (&u)"
+
+#~ msgid "More Opt&ions"
+#~ msgstr "और अधिक विकल्प (&i)"
+
+#~ msgid "KB"
+#~ msgstr "कि.बा."

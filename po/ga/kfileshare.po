@@ -1,0 +1,2361 @@
+# Irish translation of kfileshare
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kfileshare package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdenetwork/kfileshare.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2004-12-03 14:52-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Diúltaigh"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Ceadaigh"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&Inléite amháin"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Ceadanna"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Fst&ype:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Inscríofa"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Scrios Scripteanna"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Ceadanna"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Ceadanna"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Úinéir"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Úinéir"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grúpa"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Ceadanna"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Conair"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Ceadanna"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Ceadanna"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Ga&n rochtain ar chor ar bith"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Ceadanna"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Com&hroinn an fillteán seo sa líonra logánta"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Ainm:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Ceadaigh Aíonna"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Rialú Iomlán"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Inléite amháin"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Ga&n rochtain ar chor ar bith"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Focal Faire"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Focal Faire"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Gan Focal Faire"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Focal Faire"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Ceadanna"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Cealaigh"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Is féidir fillteáin logánta amháin a chomhroinnt."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba..."
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Suiteáil Samba..."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Úsáideoirí Sa&mba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Tá comhroinnt na gcomhad díchumasaithe."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Níl an fillteán ann."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Is ainm na comhroinne é seo"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Comhroinn"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Cruthaigh"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Cruthaigh"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Comhroinn"
+
+#, fuzzy
+#~| msgid "Install Samba..."
+#~ msgid "Installing Samba..."
+#~ msgstr "Suiteáil Samba..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Tá comhroinn eile ann darb ainm <strong>%1</strong>.<br /> Roghnaigh "
+#~ "ainm eile.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Níl Samba suiteáilte ar do chóras."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Comhroinn trí S&amba (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Níorbh fhéidir Samba a shuiteáil.</strong><br />Bí cinnte go "
+#~ "bhfuil kpackagekit suiteáilte mar is gnáth</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Roghnaigh Úsáideoirí"
+
+#~ msgid "Select &Users"
+#~ msgstr "Roghnaigh Ú&sáideoirí"
+
+#~ msgid "Name"
+#~ msgstr "Ainm"
+
+#~ msgid "UID"
+#~ msgstr "Aitheantas Úsáideora"
+
+#~ msgid "GID"
+#~ msgstr "Aitheantas Grúpa"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Roc&htain"
+
+#~ msgid "&Default"
+#~ msgstr "&Réamhshocrú"
+
+#~ msgid "&Read access"
+#~ msgstr "&Rochtain léimh"
+
+#~ msgid "&Write access"
+#~ msgstr "Rochtain &scríofa"
+
+#~ msgid "&Admin access"
+#~ msgstr "Rocht&ain bainistithe"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Cinntigh:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Focal Faire:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Ainm Úsáideora:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Rialaitheoir fearai&nn:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Fearann:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Roghnaigh Grúpaí"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Ro&ghnaigh Grúpaí"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Cineál an Ghrúpa"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Grúpa &UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "Grúpa NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Grúpa UNIX ag&us NIS"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Bunsocruithe"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Comhad cumraíochta Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&Luchtaigh"
+
+#~ msgid "Server Identification"
+#~ msgstr "Aitheantas an Fhreastalaí"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Grúpa Oibrithe:"
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Tea&ghrán freastalaí:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Ainm NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Leibhéal Slándála"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Úsáideoir"
+
+#~ msgid "Server"
+#~ msgstr "Freastalaí"
+
+#~ msgid "Domai&n"
+#~ msgstr "Feara&nn"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid "Further Options"
+#~ msgstr "Roghanna Eile"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Seoladh/ainm freastalaí na bhfocal faire:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Flai&theas:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "C&untas cuairte:"
+
+#~ msgid "Help"
+#~ msgstr "Cabhair"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Comhranna"
+
+#~ msgid "Comment"
+#~ msgstr "Nóta"
+
+#~ msgid "Properties"
+#~ msgstr "Airíonna"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Cuir Réamhshocruithe in &Eagar..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Cuir Comhroinn &Nua Leis..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Cuir Comhroinn in Eagar..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Bai&n Comhroinn"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Prin&téirí"
+
+#~ msgid "Printer"
+#~ msgstr "Printéir"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Cuir &Réamhshocruithe in Eagar"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Cuir Printéir &Nua Leis"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Cuir Pri&ntéir in Eagar"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Bai&n Printéir"
+
+#~ msgid "&Users"
+#~ msgstr "Ú&sáideoirí"
+
+#~ msgid "Disabled"
+#~ msgstr "Díchumasaithe"
+
+#~ msgid "Add"
+#~ msgstr "Cuir Leis"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Bai&n"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Úsáideoirí UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Athr&aigh Focal Faire..."
+
+#~ msgid "Advan&ced"
+#~ msgstr "Casta"
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Dumpáil Chasta"
+
+#~ msgid "Security"
+#~ msgstr "Slándáil"
+
+#~ msgid "&General"
+#~ msgstr "&Ginearálta"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Géill le srianta PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Athrú an fhocal faire PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Lasca Eile"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Socruithe slándála na paranáia"
+
+#~ msgid "General"
+#~ msgstr "Ginearálta"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Modhanna fíordheimhnithe:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Fréamhchomhadl&ann:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "Comhéadai&n:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Comhéadain Bind amháin"
+
+#~ msgid "Never"
+#~ msgstr "Riamh"
+
+#~ msgid "Bad User"
+#~ msgstr "Drochúsáideoir"
+
+#~ msgid "Bad Password"
+#~ msgstr "Drochfhocal Faire"
+
+#~ msgid "Private dir:"
+#~ msgstr "Comhadlann phríobháideach:"
+
+#~ msgid "Pass&word"
+#~ msgstr "&Focal Faire"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Focail Fhaire Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Cri&ptigh focail fhaire"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Comhad passwd Smb:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "I&nneall passdb:"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Soic"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Focail fhaire nia&lasacha"
+
+#~ msgid "Password level:"
+#~ msgstr "Leibhéal an fhocal faire:"
+
+#~ msgid "Migration"
+#~ msgstr "Ascnamh"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Focail Fhaire UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Clár passwd:"
+
+#~ msgid "Userna&me"
+#~ msgstr "Ainm úsáideora"
+
+#~ msgid "Hide local users"
+#~ msgstr "Folaigh úsáideoirí logánta"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Úsáid rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Fíordheimhniú"
+
+#~ msgid "Client"
+#~ msgstr "Cliant"
+
+#~ msgid "Auto"
+#~ msgstr "Uathoibríoch"
+
+#~ msgid "Mandatory"
+#~ msgstr "Éigeantach"
+
+#  1. client channel combo: Yes/No/Auto
+#  2. server channel combo: Yes/No/Auto
+#  3. LM announce combo: Yes/No/Auto
+#  4. LDAP Sync combo: Yes/No/Only
+#~ msgid "Yes"
+#~ msgstr "Tá"
+
+#~ msgid "No"
+#~ msgstr "Níl"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Fíordheimhniú cliaint NTLMv&2"
+
+#~ msgid "Server signing:"
+#~ msgstr "Síniú freastalaí:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Fíordheimhniú Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Cainéal an fhreastalaí:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Úsáid sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Fíordheimhniú NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Logáil"
+
+#~ msgid "L&og file:"
+#~ msgstr "L&ogchomhad:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "&Uasmhéid an logchomhaid:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Leibhéal &logála:"
+
+#~ msgid "S&witches"
+#~ msgstr "L&asca"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Syslog &amháin"
+
+#~ msgid "Status"
+#~ msgstr "Stádas"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "St&ampa Ama"
+
+#~ msgid "microseconds"
+#~ msgstr "micreashoicind"
+
+#~ msgid "Tuning"
+#~ msgstr "Tiúnadh"
+
+#~ msgid "Modules"
+#~ msgstr "Modúil"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Réamh&luchtaigh modúil:"
+
+#~ msgid "Switches"
+#~ msgstr "Lasca"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Taisce &Getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Úsáid &mmap"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Léamh &amh"
+
+#~ msgid "Write raw"
+#~ msgstr "Scríobh amh"
+
+#~ msgid "Times"
+#~ msgstr "Amanna"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Nóim"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Aga marbh:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Aga taisce Lp&q:"
+
+#~ msgid "Sizes"
+#~ msgstr "Méideanna"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Numbers"
+#~ msgstr "Uimhreacha"
+
+#~ msgid "Printing"
+#~ msgstr "Priontáil"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Jabanna &priontála iomlána:"
+
+#~ msgid "Drivers"
+#~ msgstr "Tiománaithe"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "Mapa tiománaí OS&2:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Ain&m printcap:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Co&mhad an tiománaí priontála: "
+
+#~ msgid "Commands"
+#~ msgstr "Orduithe"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Ordú enumports:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Ordú addprinter:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Ordú deleteprinter:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "L&uchtaigh printéirí"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "&Díchumasaigh spólta"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Taispeáin &treoraí \"Printéir Nua\""
+
+#~ msgid "Domain"
+#~ msgstr "Fearann"
+
+#~ msgid "OS &level:"
+#~ msgstr "&Leibhéal an chórais:"
+
+# not "Cluichí Buaite"!
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Díghníomhachtaigh &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Bí freastalaí WI&NS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Úsáid &freastalaí WINS eile"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Socruithe Freastalaí &WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "&Seachfhreastalaí DNS"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "Crú&ca WINS:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "Seoladh IP an fhreastalaí WINS nó Ainm DNS"
+
+#~ msgid "General Options"
+#~ msgstr "Roghanna Ginearálta"
+
+#~ msgid "WINS partners:"
+#~ msgstr "Comhpháirtithe WINS:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "&Seachfhreastalaí WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "Ainmneacha comhaid"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Gi&nearálta"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Coscairt"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "&Cruach choscartha:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Speisi&alta"
+
+#~ msgid "Locking"
+#~ msgstr "Glasáil"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Comhad&lanna"
+
+# Not "Cuir comhadlann &faoi ghlas:", I don't think - KPS
+#~ msgid "Loc&k directory:"
+#~ msgstr "Comhadlann &ghlasála:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&Comhadlann Pid:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "An-Chasta"
+
+#~ msgid "milliseconds"
+#~ msgstr "milleasoicind"
+
+#~ msgid "Charset"
+#~ msgstr "Tacar carachtar"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Tacar carachtar D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Tacar carachtar UNI&X:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "&Taispeáin an tacar carachtar:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Tacar carachtar:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Carachtair bhai&lí:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Comhadlann na gcódleathanach:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Córas &códaithe:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Códleathanach an chliaint:"
+
+#~ msgid "Logon"
+#~ msgstr "Logáil isteach"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Cuir Scripteanna Leis"
+
+#~ msgid "Add user script:"
+#~ msgstr "Cuir script úsáideora leis:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Cuir úsáideoir le script ghrúpa:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Cuir script &ghrúpa leis:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Cuir script mheaisín leis:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Scrios script ghrúpa:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Scrios script úsáideora:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Príomhscript Ghrúpa"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Socraigh an phríomhscript &ghrúpa:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Múchadh"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Script &mhúchta:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Co&nair logála isteach:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "&Baile logála isteach:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Tiomántán &logála isteach:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Script lo&gála isteach:"
+
+#~ msgid "Socket"
+#~ msgstr "Soicéad"
+
+#~ msgid "Socket address:"
+#~ msgstr "Seoladh an tsoicéid:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Roghanna Soicéid"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Cumasaigh nó díchumasaigh mód SSL iomlán"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Cu&masaigh SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "Óstríomhairí &SSL:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "Bearta &eantrópachta SSL"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "Sifir SSL:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2nó3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Co&mhoiriúnacht SSL"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "Comhad eantrópachta SSL:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Leagan SSL:"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Eochair chliaint SSL:"
+
+#~ msgid "Protocol"
+#~ msgstr "Prótacal"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Freastalaí a&ma"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Eisínteachtaí UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Léigh bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Leagain an Phrótacail"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "Stáisiún Oibre NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Leagan fógraithe:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&ótacal:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Limits"
+#~ msgstr "Teorainneacha"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Poirt Éisteachta SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Poirt SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "Brabhsáil"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "A&ga LM:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "Fógra L&M:"
+
+#~ msgid "Sec"
+#~ msgstr "Soic"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Brabhsáil &liosta"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Brabhsáil &fheabhsaithe"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Réamh&luchtaigh:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "Aitheantas Úsáideora &Winbind/Idmap:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Aitheantas Grúpa Winbind/&Idmap:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Deighilteoir Winbind:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Comhoiriúnacht Acl:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind: áirigh úsáideoirí"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind: áirigh grúpaí"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind: úsáid fearann réamhshocraithe"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind: cumasaigh cuntais logánta"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind: grúpaí neadaithe"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "Scó&p NetBIOS:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Ailiasanna &NetBIOS:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Díc&humasaigh netbios"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "&Iarmhír LDAP:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Scagaire LDAP:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&Cúlra Idmap:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "ssl &LDAP:"
+
+#~ msgid "Off"
+#~ msgstr "As"
+
+#~ msgid "Start_tls"
+#~ msgstr "Tosaigh_tls"
+
+#~ msgid "On"
+#~ msgstr "Ann"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "s&ionc LDAP:"
+
+# LDAP sync combo box - Yes/No/Only
+#~ msgid "Only"
+#~ msgstr "Amháin"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Cuir &ordú comhroinne leis:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Athraigh ordú comhroinne:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Scrios ordú comh&roinne:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Ordú &Dfree:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Socraigh ordú &cuóta:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Faigh ordú &cuóta:"
+
+#~ msgid "Misc"
+#~ msgstr "Éagsúil"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Rudaí éagsúla"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Folaigh úsáideoirí &logánta"
+
+#~ msgid "Default service:"
+#~ msgstr "Seirbhís réamhshocraithe:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Nóim"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "Comhadlann bhaile NIS"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Comhad&lann Utmp:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Comhadlann &Wtmp:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Dífhabhtaigh"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "Tacaíocht S&MB NT"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Cruthaigh/Athraigh Comhroinn"
+
+#~ msgid "Pixmap"
+#~ msgstr "Mapa picteilíní"
+
+#~ msgid "D&irectory"
+#~ msgstr "C&omhadlann"
+
+#~ msgid "&Path:"
+#~ msgstr "&Conair:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Comhroinn &gach comhadlann bhaile"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Aith&eantóir"
+
+#~ msgid "Na&me:"
+#~ msgstr "Ain&m:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Nóta:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "P&ríomhairíonna"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Inléite &amháin"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Poi&blí"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Inbhra&bhsáilte"
+
+#~ msgid "A&vailable"
+#~ msgstr "A&r Fáil"
+
+#~ msgid "&Security"
+#~ msgstr "&Slándáil"
+
+#~ msgid "Gu&ests"
+#~ msgstr "&Cuairteoirí"
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Cuntas cuairte:"
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Ná ceadaigh ach aon nasc amháin cua&irte"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Ós&tríomhairí"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Na&isc Shiombalacha"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Lean &naisc shiombalacha"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&Comhaid Fholaithe"
+
+#~ msgid "Hidden"
+#~ msgstr "Folaithe"
+
+#~ msgid "Veto"
+#~ msgstr "Crosadh"
+
+#~ msgid "Size"
+#~ msgstr "Méid"
+
+#~ msgid "Date"
+#~ msgstr "Dáta"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Co&mhaid Roghnaithe"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Folaigh"
+
+#~ msgid "&Veto"
+#~ msgstr "&Crosadh"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Lá&mhchumraíocht"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Comhaid &fholaithe:"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Folaigh comhaid s&peisialta"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Casta"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maisc"
+
+#~ msgid "Security &mask:"
+#~ msgstr "&Masc slándála:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Cruthaigh mas&c:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "Tacaíocht ACL &NT"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+# appears singular in Irish after a number!
+#~ msgid "bytes"
+#~ msgstr "beart"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Méid na mblo&c:"
+
+#~ msgid "manual"
+#~ msgstr "lámhleabhar"
+
+#~ msgid "documents"
+#~ msgstr "cáipéisí"
+
+#~ msgid "programs"
+#~ msgstr "cláir"
+
+#~ msgid "disable"
+#~ msgstr "díchumasaigh"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Cásíogair"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Cás &réamhshocraithe:"
+
+#~ msgid "Lower"
+#~ msgstr "Cás Íochtair"
+
+#~ msgid "Upper"
+#~ msgstr "Cás Uachtair"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Modh coscartha:"
+
+#~ msgid "hash"
+#~ msgstr "haiseáil"
+
+#~ msgid "hash2"
+#~ msgstr "haiseáil2"
+
+#~ msgid "Other Options"
+#~ msgstr "Roghanna Eile"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Cumasaigh &glasáil"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Gl&asáil"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Glasáil &dhaingean"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Glasáil Posi&x"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Mói&d chomhroinnte"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "&Réada Vfs:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "R&oghanna Vfs:"
+
+#~ msgid "Exec"
+#~ msgstr "Rith"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Pree&xec:"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Imleabhar:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "&Script dhraíochta:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "&Seachfhreastalaí Msdfs"
+
+#~ msgid "&Help"
+#~ msgstr "Cab&hair"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Úsáideoirí"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Gach Úsáideoir Ga&n Sonrú"
+
+#~ msgid "Reject"
+#~ msgstr "Diúltaigh"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Úsáideoirí Sonra&ithe"
+
+#~ msgid "Access Rights"
+#~ msgstr "Cearta Rochtana"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Ú&sáideoir Nua..."
+
+#~ msgid "E&xpert"
+#~ msgstr "S&aineolaí"
+
+#~ msgid "Add &Group..."
+#~ msgstr "&Grúpa Nua..."
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Bunathraitheoirí Rochtana"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Ceadanna Rochtana"
+
+#~ msgid "Others"
+#~ msgstr "Eile"
+
+#~ msgid "Read"
+#~ msgstr "Léigh"
+
+#~ msgid "Write"
+#~ msgstr "Scríobh"
+
+#~ msgid "Sticky"
+#~ msgstr "Greamaitheach"
+
+#~ msgid "Set GID"
+#~ msgstr "Socraigh Aitheantas an Ghrúpa"
+
+#~ msgid "Set UID"
+#~ msgstr "Socraigh Aitheantas an Úsáideora"
+
+#~ msgid "Special"
+#~ msgstr "Speisialta"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Socruithe Úsáideora"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Úsáideoirí &bailí:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "Úsáideoirí bainistithe:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Úsá&ideoirí neamhbhailí:"
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Cuir Óstríomhaire Leis..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Mion&athraigh Óstríomhaire..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Bain Óstríomhaire"
+
+#~ msgid "Name/Address"
+#~ msgstr "Ainm/Seoladh"
+
+#~ msgid "Parameters"
+#~ msgstr "Paraiméadair"
+
+#~ msgid "Host Properties"
+#~ msgstr "Airíonna an Óstríomhaire"
+
+#~ msgid "&Name/address:"
+#~ msgstr "Ai&nm/seoladh:"
+
+#~ msgid "&Public access"
+#~ msgstr "Rochtain &phoiblí"
+
+#~ msgid "Options"
+#~ msgstr "Roghanna"
+
+#~ msgid "&Writable"
+#~ msgstr "&Inscríofa"
+
+#~ msgid "&Insecure"
+#~ msgstr "Éada&ingean"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sioncrónaigh"
+
+#~ msgid "No w&delay"
+#~ msgstr "Gan w&delay"
+
+#~ msgid "No &hide"
+#~ msgstr "Gan folac&h"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&Glasáil éadaingean"
+
+#~ msgid "User Mapping"
+#~ msgstr "Mapáil Úsáideora"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "&Aitheantas úsáideora gan ainm:"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Aitheantas &grúpa gan ainm:"
+
+#~ msgid "Folder:"
+#~ msgstr "Fillteán:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Comhroinn trí &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Roghanna NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Po&iblí"
+
+#~ msgid "W&ritable"
+#~ msgstr "Insc&ríofa"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Roghanna NFS Sa Bh&reis"
+
+#~ msgid "Samba Options"
+#~ msgstr "Roghanna Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&oiblí"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Roghanna Samba Sa Bhr&eis"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Úsáideoirí i nGrúpa '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Bain Úsáideoir"
+
+#~ msgid "Add User"
+#~ msgstr "Cuir Úsáideoir Leis"
+
+#~ msgid "Change Group..."
+#~ msgstr "Athraigh Grúpa..."
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Comhroinnt shi&mplí"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Comhroinnt &chasta"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Úsáid &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Úsáid Sam&ba (Microsoft® Windows®)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Úsáideoirí ceadaithe"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Comhfhillteáin"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "C&uir Leis..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Athraigh..."
+
+#~ msgid "Specify Location"
+#~ msgstr "Sonraigh Suíomh"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Comhad Cumr. Samba\n"
+#~ "*|Gach Comhad"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Faigh suíomh an chomhaid smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Níorbh fhéidir comhad <i>%1</i> a léamh.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Ní féidir an comhad a léamh"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Earráid agus comhad á oscailt"
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Cumraíocht Samba</h1> Is féidir leat d'fhreastalaí SAMBA a chumrú "
+#~ "anseo."
+
+#~ msgid "Sorry"
+#~ msgstr "Tá brón orm"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr ""
+#~ "D'iontráil tú dhá fhocal faire difriúil. Bain triail eile as le do thoil."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Ní thacaíonn do leagan Samba le rogha <em>%1</em>"
+
+#~ msgid "Unnamed"
+#~ msgstr "Gan ainm"
+
+#~ msgid "&Hide"
+#~ msgstr "Folaig&h"
+
+#~ msgid "Default"
+#~ msgstr "Réamhshocrú"
+
+#~ msgid "Admin"
+#~ msgstr "Bainistiú"
+
+#~ msgid "Warning"
+#~ msgstr "Rabhadh"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Tá iontráil phoiblí ann cheana."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Tá an tÓstríomhaire Ann Cheana"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Iontráil óstainm nó seoladh IP le do thoil."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Gan Óstainm/Seoladh IP"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Tá óstríomhaire '%1' ann cheana."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Comhad cumraíochta Samba á léamh ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Comhad cumraíochta NFS á léamh ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Iontráil conair bhailí le do thoil."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Is féidir fillteáin amháin a chomhroinnt."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Tá an fillteán comhroinnte cheana."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Ní cheadaíonn an riarthóir comhroinnt le NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Earráid: níorbh fhéidir an comhad cumraíochta NFS a léamh."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Ní cheadaíonn an riarthóir comhroinnt le Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Earráid: níorbh fhéidir an comhad cumraíochta Samba a léamh."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Ní mór duit ainm a chur ar an gcomhroinn Samba."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Cumraigh Comhroinnt na gComhad..."
+
+#~ msgid "Could not save settings."
+#~ msgstr "Níorbh fhéidir na socruithe a shábháil."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Ní féidir '%1' a oscailt le haghaidh scríofa: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Theip ar Shábháil"
+
+#~ msgid "Share Folder"
+#~ msgstr "Comhroinn Fillteán"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Tá gach úsáideoir i ngrúpa %1 cheana."
+
+#~ msgid "Select User"
+#~ msgstr "Roghnaigh Úsáideoir"
+
+#~ msgid "Select a user:"
+#~ msgstr "Roghnaigh úsáideoir:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Níorbh fhéidir úsáideoir '%1' a chur le grúpa '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Níorbh fhéidir úsáideoir '%1' a bhaint amach as ghrúpa '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Ní mór duit grúpa bailí a roghnú."
+
+#~ msgid "Choose Group..."
+#~ msgstr "Roghnaigh Grúpa..."
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "An bhfuil tú cinnte gur mian leat grúpa '%1' a scriosadh?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Theip ar scriosadh grúpa '%1'."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Roghnaigh grúpa bailí le do thoil."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Níl grúpa '%1' ann. Cruthaigh é?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Ná Cruthaigh"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Theip ar chruthú grúpa '%1'."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Socruithe Phriontála"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Pr&intéir"
+
+#~ msgid "Pa&th:"
+#~ msgstr "&Conair:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Ciú:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Comh&roinn gach printéir"
+
+#~ msgid "I&dentifier"
+#~ msgstr "A&itheantóir:"
+
+#~ msgid "&Name:"
+#~ msgstr "Ai&nm:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "&Nóta:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Príomhairíonna"
+
+#~ msgid "&Printing"
+#~ msgstr "&Priontáil"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Tiománaí &printéara:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "&Suíomh an tiománaí printéara:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "&Priontáil:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "devmode &réamhshocraithe"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "Bainistiú p&rintéara:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "&Orduithe"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Ordú pr&iontála:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "Ordú &lpq:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "Ordú l&prm:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "lppa&use:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Rudaí éagsúla"
+
+#~ msgid "p&reexec:"
+#~ msgstr "pree&xec:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "postexe&c:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "&Tiúnadh"
+
+#~ msgid "&Logging"
+#~ msgstr "&Logáil"
+
+#~ msgid "S&tatus"
+#~ msgstr "S&tádas"
+
+#~ msgid "Not share&d"
+#~ msgstr "Gan &chomhroinnt"
+
+#~ msgid "&Shared"
+#~ msgstr "C&omhroinnte"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "&Bunroghanna"
+
+#~ msgid "Name of the share"
+#~ msgstr "Ainm na comhroinne"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Nóta:"
+
+#~ msgid "Security Options"
+#~ msgstr "Roghanna Slándála"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Cuntas cu&airte:"
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Tui&lleadh Roghanna"
+
+#~ msgid "KB"
+#~ msgstr "kB"
+
+#~ msgid "UMTP"
+#~ msgstr "UMTP"

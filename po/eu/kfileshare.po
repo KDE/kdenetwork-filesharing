@@ -1,0 +1,3479 @@
+# Translation for kfileshare.po to Euskara/Basque (eu).
+# Copyright (C) 2005-2022, This file is copyright:
+# This file is distributed under the same license as the kdenetwork-filesharing package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2005.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009, 2011.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdenetwork-filesharing\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-17 08:09+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Ukatu"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Baimendu"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Karpeta hau bakarrik"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Karpeta hau, azpikarpetak eta fitxategiak"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Karpeta hau eta azpikarpetak"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Karpeta hau eta fitxategiak"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Azpikarpetak eta fitxategiak bakarrik"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Azpikarpetak bakarrik"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Fitxategiak bakarrik"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Ezezaguna"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Urruneko baimenak"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Baimen-sarrera hau guraso edukitzaile batetik heredatu da eta edukitzaile "
+"horretatik baino ezin da aldatu (adib. goragoko mailako direktorio bat)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Mota:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Honi ezartzen zaio:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Zeharkatu karpeta / exekutatu fitxategia"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Zerrendatu karpeta / irakurri datuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Irakurri atributuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Irakurri atributu hedatuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Sortu fitxategiak / idatzi datuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Sortu karpetak / erantsi datuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Idatzi atributuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Idatzi atributu hedatuak"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Ezabatu azpikarpetak eta fitxategiak"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Irakurri baimenak"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Aldatu baimenak"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Hartu jabetza"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Baimen hauek ezarri soilik edukitzaile barruko objektuei eta/edo "
+"edukitzaileei"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Sarrera kontrolatzeko sarrerak"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Jabetza"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Jabea:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Taldea:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Ez da baimenik aurkitu"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+"Fitxategi honetan seguruenik ez dago ezarrita SMB/Windows/baimen "
+"aurreraturik."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Karpeta hau ezin da partekatu <filename>%1</filename> ez delako existitzen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Errore hau zure banaketak Samba partekatzea behar bezala ez ezartzearen "
+"ondorio da. Zuk zeuk konpon dezakezu karpeta hori eskuz sortuta. Ondoren "
+"itxi eta berriz ireki leiho hau."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Karpeta hau ezin da partekatu <filename>%1</filename>(a)(r)en jabea behar ez "
+"bezala <resource>%2</resource> ezarria duelako."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Errore hau zure banaketak Samba partekatzea behar bezala ez ezartzearen "
+"ondorio da. Zuk zeuk konpon dezakezu karpeta horren jabe-taldea "
+"<resource>usershares</resource> ezarrita eta zeure erabiltzailea talde "
+"horretako partaide eginda. Ondoren berrabiarazi sistema."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Karpeta hau ezin da partekatu zure erabiltzaile-kontua ez delako <resource>"
+"%1</resource> taldeko partaidea."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"Hori konpondu dezakezu zure erabiltzailea talde horretako partaide eginda. "
+"Ondoren berrabiarazi sistema."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Egin nazazu taldeko kide"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Karpeta hau ezin da partekatu zure erabiltzaile-kontuak ez duelako <filename>"
+"%1</filename>(e)(a)n idazteko baimenik."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"Hau konpon dezakezu <resource>%1</resource> taldeak <filename>%2</filename> "
+"idazteko baimena duela ziurtatuz. Ondoren itxi eta berriz ireki leiho hau."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"«%1» erabiltzailea «%2» taldera gehitzea Samba-ko erabiltzaileen "
+"partekatzeak konfiguratu ahal ditzan."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"<resource>%1</resource> erabiltzailea <resource>%2<resource> taldeko "
+"partaide egitea huts egin du."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Fitxategiaren bide-izena"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Uneko baimenak"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Beharrezko baimenak"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Sarbidea ukatzea"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Sarbidea ukatzeak, partekatze hau erabiltzea eragozten du beste sarbide arau "
+"batek sarbidea eman dezakeenean ere.\n"
+"Ukatze-arau batek beti du lehentasuna. Bereziki, <resource>Guztiei</"
+"resource> sarbidea ukatzea, benetan ezgaitzen du guztientzako sarbidea.\n"
+"Oro har, ez da beharrezkoa inori ukorik egitea, direktorioen eta fitxategien "
+"baimen arruntak partekatutako direktorioei\n"
+"eragiten dietelako. Direktoriora, lokalki, sarbiderik ez duen erabiltzaile "
+"batek, ezin izango du urrunetik atzitu Partekatzeko\n"
+"sarbide-arauek utziko baliote ere."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr "Karpeta honek baimen gehigarriak behar ditu partekatzea ibil dadin"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Zuzendu baimenak"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Baliteke partekatzea behar bezala ez ibiltzea partekatutako karpeta edo "
+"haren bide-izenak baimen aurreratuak dituelako: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Partekatu karpeta hau sare lokaleko beste ordenagailu batzuekin"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Izena:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Izen hau ezin da erabili. Partekatzeen izenak ezin dira izan erabiltzaile-"
+"izenak eta ez dira egon behar sistema osoan izen bera duten bi partekatze."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Baliteke izen hau luzeegia izatea. Elkarreragingarritasun arazoak sor "
+"litzake edo Sambak errefusatu lezake."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Baimendu gonbidatuak"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Gonbidatuen sarbidea ezgaitua dago sistemako Samba konfigurazioan."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Erabateko kontrola"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Irakurtzeko soilik"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Sarbiderik ez"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Erakutsi Samba-ren egoeraren begiralea"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Ezarri pasahitza"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Pasahitza"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Berretsi pasahitza"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Pasahitzek bat etorri behar dute"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Ezarri pasahitza"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para><filename>%1</filename> karpetak baimen gehigarriak behar ditu "
+"partekatzea ondo ibil dadin.</para>\n"
+"<para>Baimen horiek orain gehitu nahi dituzu?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Aldatu baimenak"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Ezin izan ditu honen baimenak aldatu: %1. Baimen aldaketa guztiak hasierako "
+"egoerara lehengoratu dira."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Utzi"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba instalatu behar da karpetak partekatu ahal izateko."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Instalatu Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Samba paketea instalatzea huts egin du."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Berrabiarazi ordenagailua instalatzea osatzeko."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Berrabiarazi"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Sambak sistemarenetik bereizitako datu-base bat erabiltzen du.\n"
+"Honek, autentifikatzeko erabili nahi duzun erabiltzaile bakoitzerako Sambako "
+"pasahitz\n"
+"bereizi bat ezartzera behartzen zaitu.\n"
+"</para>\n"
+"<para>\n"
+"Uneko zure erabiltzaile-kontuarekin partekatzeak atzitzerik izan aurretik "
+"Sambako pasahitz bat ezarri behar duzu.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Sortu Samba-rako pasahitza"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Erabiltzaile- eta pasahitz-kudeaketa osagarria egin daiteke Samba-ren "
+"komando-lerroko <command>smbpasswd</command>\n"
+"baliagarritasuna erabiliz."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Aldi berean aktibo izan dezakezun direktorio partekatuen gehienezko kopurua "
+"agortu duzu."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Partekatze-izena baliogabea da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Partekatze-izena dagoeneko beste direktorio batekin erabili da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Bide-izena baliogabea da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Bide-izena ez da existitzen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Bide-izena ez dagokio direktorio bati."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Bide-izena erlatiboa da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Baliteke bide-izen hau partekatzerik ez izatea."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Sarbide-araua baliogabea da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Sarbide-arau baten erabiltzailea baliogabea da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "«Gonbidatu» sarbide-araua baliogabea da."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Gonbidatu sarbidea gaitzea ez da onartzen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Errore bat gertatu da direktorioa partekatzeko saiakeran. Partekatzea "
+"ez da sortu.</para><para>Samba barneko txostena:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Sareko partekatzea sortzea huts egin du"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Errore bat gertatu da direktorioa partekatzeari uzteko saiakeran. "
+"Partekatzea ez da kendu.</para><para>Samba barneko txostena:</para><message>"
+"%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Sareko partekatzea kentzea huts egin du"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Samba-ko «%1» erabiltzailea existitzen den egiaztatzen"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Samba-ko «%1» erabiltzaile berria sortzen"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Taldeko aldaketek huts egin dute."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Dirudienez, ez duzu Samba erabiltzaileen partekatzeak kudeatzeko adinako "
+#~ "baimenik."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Partekatzea"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Sortu"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Sortu"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Partekatu"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Samba instalatzen..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt><strong>%1</strong> izeneko partekatze bat badago lehendik ere.<br /> "
+#~ "Aukeratu beste izen bat.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba ez dago sisteman instalatuta."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Partekatu &Sambarekin (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Ezin izan da Samba instalatu.</strong><br />Egiaztatu "
+#~ "kpackagekit ongi instalatuta dagoela</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Hautatu erabiltzaileak"
+
+#~ msgid "Select &Users"
+#~ msgstr "Hautatu &erabiltzaileak"
+
+#~ msgid "Name"
+#~ msgstr "Izena"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Atzip&ena"
+
+#~ msgid "&Default"
+#~ msgstr "&Lehenetsia"
+
+#~ msgid "&Read access"
+#~ msgstr "I&rakurtzeko baimena"
+
+#~ msgid "&Write access"
+#~ msgstr "I&dazteko baimena"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Administratzaile baimena"
+
+#~ msgid "&OK"
+#~ msgstr "&Ados"
+
+#~ msgid "Join Domain"
+#~ msgstr "Sartu domeinuan"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Egiaztatu:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Pasahitza:"
+
+#~ msgid "&Username:"
+#~ msgstr "Erabiltzaile-&izena:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domeinu ko&ntrolatzailea:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domeinua:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Hautatu taldeak"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Hau&tatu taldeak"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Talde &mota"
+
+#~ msgid "&UNIX group"
+#~ msgstr "U&NIX taldea"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S taldea"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNIX eta NIS tal&dea"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Hemen smbpasswd fitxategian dauden Samba erabiltzaileak editatu "
+#~ "ditzakezu..\n"
+#~ "<p>\n"
+#~ "Samba erabiltzaile bakoitzak dagokion UNIX erabiltzaile bat izan behar "
+#~ "du.\n"
+#~ "Eskuinaldean UNIX erabiltzaile guztiak ikus ditzakezu, passwd fitxategian "
+#~ "daudenak baina Samba erabiltzaile bezala konfiguratu ez direnak.\n"
+#~ "Ezkerraldean Samba erabiltzaileak ikus ditzakezu.\n"
+#~ "<p>\n"
+#~ "Samba erabiltzaileak gehitzeko sakatu <em>&lt; gehitu</em> botoia.\n"
+#~ "Hautatutako UNIX erabiltzaileak Samba erabiltzaile bihurtuko dira eta\n"
+#~ "Unix erabiltzaile zerrendatik kenduko dira (baina Unix erabiltzaile "
+#~ "bezala mantenduko dira sisteman).\n"
+#~ "<p>\n"
+#~ "Samba erabiltzaile baT kentzeko, sakatu <em>&gt; kendu</em> botoia.\n"
+#~ "Hautatutako Samba erabiltzaileak smbpasswd fitxategitik kenduko dira,\n"
+#~ "at eskuin aldean berriro azalduko dira, Samba erabiltzaileak ez diren "
+#~ "UNIX erabiltzaile bezala..\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Oinarrizko ezarpenak"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba konfigurazio fitxategia:"
+
+#~ msgid "&Load"
+#~ msgstr "&Kargatu"
+
+#~ msgid "Server Identification"
+#~ msgstr "Zerbitzari identifikazioa"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Lan-&taldea:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Sartu hemen zure lan-taldearen/domeinuaren izena"
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Zerbitzari karaktere-&katea:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS izena:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "&Segurtasun maila"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Erabiltzailea"
+
+#~ msgid "Server"
+#~ msgstr "Zerbitzaria"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domei&nua"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Erabili <i>partekatze</i> segurtasun maila etxean sare bat edo bulegoko "
+#~ "sare txiki bat baduzu.<br> Honek edozeini sesioa hasi baino lehen "
+#~ "partekatze izen guztiak irakurtzeko aukera ematen dio."
+
+#~ msgid "Further Options"
+#~ msgstr "Aukera gehiago"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Pasahitz zerbitzariaren helbidea/izena:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Errei&nua:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Gonbidatuaren k&ontua:"
+
+#~ msgid "Help"
+#~ msgstr "Laguntza"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Aukera bakoitzaren laguntza xeherako begiratu hemen:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Partekatzeak"
+
+#~ msgid "Comment"
+#~ msgstr "Iruzkina"
+
+#~ msgid "Properties"
+#~ msgstr "Propietateak"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Editatu &lehenetsiak..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Gehitu partekatze &berria..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Editatu partekatzea..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Ke&ndu partekatzea"
+
+#~ msgid "Prin&ters"
+#~ msgstr "&Inprimagailuak"
+
+#~ msgid "Printer"
+#~ msgstr "Inprimagailua"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Editatu &lehenetsiak"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Gehitu inprimagailu be&rria"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Editatu i&nprimagailua"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Kendu inprimagailua"
+
+#~ msgid "&Users"
+#~ msgstr "&Erabiltzaileak"
+
+#~ msgid "Disabled"
+#~ msgstr "Ezgaituta"
+
+#~ msgid "Add"
+#~ msgstr "Gehitu"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Kendu"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X erabiltzaileak"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "&Aldatu pasahitza..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Sartu domeinuan"
+
+#~ msgid "Advan&ced"
+#~ msgstr "&Aurreratua"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Hemen SAMBA zerbitzariaren aukera aurreratuak alda ditzakezu.\n"
+#~ "Egiten ari zarena ongi badakizu bakarrik alda ezazu zerbait."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Iraulketa aurreratua"
+
+#~ msgid "Security"
+#~ msgstr "Segurtasuna"
+
+#~ msgid "&General"
+#~ msgstr "&Orokorra"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Obeditu PAM murriztapenak"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM pasahitza aldatu"
+
+#~ msgid "Other Switches"
+#~ msgstr "Beste aukerak"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "&Baimenu domeinu fidagarriak"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Zerbitzari segurtasun paranoidea"
+
+#~ msgid "General"
+#~ msgstr "Orokorra"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Autent metodoak:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Erro-&direktorioa:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "I&nterfazeak:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Gonbidatuaren mapatu:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Lotu interfazeak bakarrik"
+
+#~ msgid "Never"
+#~ msgstr "Inoiz"
+
+#~ msgid "Bad User"
+#~ msgstr "Erabiltzailea ez da zuzena"
+
+#~ msgid "Bad Password"
+#~ msgstr "Pasahitza ez da zuzena"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Ostalari baliokideak:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "RID-en oinarri algoritmikoa:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Helbide pribatua:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Pasa&hitza"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba pasahitzak"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "E&nkriptatu pasahitzak"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Smb passwd fitxategia:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb &euskarria:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Pasahitz negoziazioa:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Pasahitz negoziazio arazketa"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Seg."
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Pasahitz negoziazio denbora-muga:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Pasahitz hutsak"
+
+#~ msgid "Password level:"
+#~ msgstr "Pasahitza maila:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Pasahitz luzera min:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Makina pasahitz denbora-muga"
+
+#~ msgid "Migration"
+#~ msgstr "Migrazioa"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "&Enkriptatua eguneratu"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX pasahitzak"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Pasahitz programa:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNI&X pasahitza sinkronizatu "
+
+#~ msgid "Userna&me"
+#~ msgstr "&Erabiltzailea"
+
+#~ msgid "User&name map:"
+#~ msgstr "Erabil&tzailea mapatu:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Erabiltzaile &maila:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Ezkutatu erabiltzaile lokalak"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Murriztu anon&imoak"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Erabili rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Autentifikazi&oa"
+
+#~ msgid "Client"
+#~ msgstr "Bezeroa"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "B&ezeroaren sinadura:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Bezeroaren te&stu-soileko autentifikazioa"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Lanman bezeroaren autentifikazioa"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Derrigorrezkoa"
+
+#~ msgid "Yes"
+#~ msgstr "Bai"
+
+#~ msgid "No"
+#~ msgstr "Ez"
+
+#~ msgid "Client channel:"
+#~ msgstr "Bezeroaren kanala:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Bezeroak spnego erabiltzen du"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "NTLMv&2 bezeroaren autentifikazioa"
+
+#~ msgid "Server signing:"
+#~ msgstr "Zerbitzariaren sinadura:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman autentifikazioa"
+
+#~ msgid "Server channel:"
+#~ msgstr "Zerbitzariaren kanala:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Erabili sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM autentifikazioa"
+
+#~ msgid "Logging"
+#~ msgstr "Erregistroa"
+
+#~ msgid "L&og file:"
+#~ msgstr "&Erregistro-fitxategia:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Erregistro tamaina max:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&istemaren erregistroa:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Erregistro &maila:"
+
+#~ msgid "S&witches"
+#~ msgstr "&Parametroak"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Sistemaren erregistroa &bakarrik"
+
+#~ msgid "Status"
+#~ msgstr "Egoera"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Denbora-&marka"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosegundu"
+
+#~ msgid "Debug pid"
+#~ msgstr "Arazketa pid-a"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "&Arazketa uid-a"
+
+#~ msgid "Tuning"
+#~ msgstr "Doitu"
+
+#~ msgid "Modules"
+#~ msgstr "Moduluak"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Aurre-&kargatu moduluak:"
+
+#~ msgid "Switches"
+#~ msgstr "Parametroak"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd cache-a"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Erabili &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Nukleoaren aldaketa jakinarazi"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "&Ostalari izen bilaketak"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Irakurri &gordinik"
+
+#~ msgid "Write raw"
+#~ msgstr "Idatzi gordinik"
+
+#~ msgid "Times"
+#~ msgstr "Denborak"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Aldatu jakinarazpen denbora-muga:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "Bizirik &mantendu:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min."
+
+#~ msgid "Deadtime:"
+#~ msgstr "Denbora hila:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q cache denbora:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Izen cache-aren denbora-muga:"
+
+#~ msgid "Sizes"
+#~ msgstr "Tamainak"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Diska tamaina max:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Irakurketa &tamaina:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Estatistika cache tamaina:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "xmit max:"
+
+#~ msgid "Numbers"
+#~ msgstr "Zenbakiak"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "smbd prozesu max:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Fitxategi ireki max:"
+
+#~ msgid "Printing"
+#~ msgstr "Inprimaketa"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Inprimatutako &lan kopurua:"
+
+#~ msgid "Drivers"
+#~ msgstr "Kontrolatzaileak"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 kontrolatzaile mapa:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap ize&na:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Inprimagailuaren kontrolatzaile fitxategia:"
+
+#~ msgid "Commands"
+#~ msgstr "Aginduak"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Atakak ikusteko agindua:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Inprimagailua gehitzeko agindua:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Inprimagailua ezabatzeko agindua:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "&Kargatu inprimagailuak"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Ezgai&tu spool-ak"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Erakutsi inprimagailuak gehitzeko morroia"
+
+#~ msgid "Domain"
+#~ msgstr "Domeinua"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Maisu l&okala"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domei&nuaren maisua"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domeinu sesio &hasierak"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Nahien duzun &maisua"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS &maila:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domeinu administratzaile taldea:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domeinuko gonbidatu taldea:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Desaktibatu &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "WI&NS zerbitzari bezala jokatu"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Erabili b&este WINS zerbitzari bat"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "WINS zerbitzariaren &ezarpenak"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS prox&ia:"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS hoo&k:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "WINS tt&l maximoa:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "WINS ttl minimoa:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS zerbitzariaren IP-a edo DNS izena"
+
+#~ msgid "General Options"
+#~ msgstr "Aukera orokorrak"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS bikoteak:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS pro&xia"
+
+#~ msgid "Filenames"
+#~ msgstr "Fitxategi-izenak"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Oro&korra"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Ezabatu p&untua"
+
+#~ msgid "&Mangling"
+#~ msgstr "Izen &moldaketa"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Moldatuta&ko pila:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Moldatu au&rrizkia:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Bere&zia"
+
+#~ msgid "Stat cache"
+#~ msgstr "Estatistika cache-a"
+
+#~ msgid "Locking"
+#~ msgstr "Blokeoa"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Erabili ker&nel oplock-ak"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Direkt&orioak"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Blo&keo-direktorioa:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "Pid direktor&ioa:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Lock Spin"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Lock Spin kontagailua"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Lock spin de&nbora:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Oso aurreratua"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Oplock lotura itxarote denbora:"
+
+#~ msgid "milliseconds"
+#~ msgstr "milisegundu"
+
+#~ msgid "Charset"
+#~ msgstr "Karaktere-sorta"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS karaktere-sorta:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X karaktere-sorta:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Erakuts&i karaktere-sorta:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Karaktere-sorta:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Ba&liozko karaktereak:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Kode-orrialde direktorioa:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kodet&ze sistema:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Bezeroaren kode orrialdea:"
+
+#~ msgid "Logon"
+#~ msgstr "Saio hasiera"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Gehitu script-ak"
+
+#~ msgid "Add user script:"
+#~ msgstr "Gehitu erailtzailearen script-a:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Gehitu erabiltzailea talde script-ari"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Gehitu &talde script-a:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Gehitu makina script-a:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Ezabatu talde script-a:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Ezabatu erabiltzaile script-a:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Ezabatu erabiltzailea talde script-etik"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Talde nagusiaren script-a"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Ezarri talde nagus&iaren script-a:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Itzali"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Itzalt&zeko script-a:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Abortatu itzaltzeko script-a:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Saio-hasiera bide-izena:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Saio-hasiera direktorio &nagusia:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "&Saio hasiera unitatea:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Saio-&hasiera script-a:"
+
+#~ msgid "Socket"
+#~ msgstr "Socket-a"
+
+#~ msgid "Socket address:"
+#~ msgstr "Socket helbidea:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Socket aukerak"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Gaitu edo ezgaitu SSL modu osoa"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "SLL modu osoa gaitu edo ezgaitzen du. Ez baliora ezartzen bada, SSL-dun "
+#~ "Sambak SSL gabeko Samba moduan jokatzen du. Bai baliora ezartzen bada, "
+#~ "SSL konexioaren beharra ssl host eta ssl host resign aldagaien araberakoa "
+#~ "da.\n"
+#~ "\n"
+#~ "Hau SSL liburutegiak zure sisteman konpilatu baldin badira eta "
+#~ "konfigurazio denboran --with-ssl aukera erabili bada bakarrik egongo da "
+#~ "eskuragarri."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "&Gaitu SSL-a"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL &ostalariak:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL entrop&ia byte-ak:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL zifratzaileak:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL hosts resign:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2edo3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL konpatibilitatea"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL entropia fitxategia:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL egd socket-a:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL bertsioa:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL-ek bezero ziurtagiria behar du:"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL bezero giltza:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL-ek zerbitzari ziurtagiria behar du"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L zerbitzari ziurtagiria:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL bezero ziurtagiria:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL zerbitzari &giltza:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokoloa"
+
+#~ msgid "Ti&me server"
+#~ msgstr "De&nbora zerbitzaria"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "Irakurketa-idazketa handiak"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX luzapenak"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Irakurri bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokolo bertsioak"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Honela berri ema&n:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Bertsioaren berri eman:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokoloa"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Protokolo max:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Protokolo min:"
+
+#~ msgid "Limits"
+#~ msgstr "Mugak"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Mux ma&x:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Tt&l max:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "SMB atakak entzuten"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB atakak:"
+
+#~ msgid "Browsing"
+#~ msgstr "Arakatzen"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM ta&rtea:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M berri-ematea:"
+
+#~ msgid "Sec"
+#~ msgstr "Seg"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Urruneko arakatze sinkronizazioa:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Ara&katze zerrenda"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Araka&tze hobetua"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Aurrekar&gatu:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID-a:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID-a:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Direktorio-nagusiko plantilla:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Shell-aren plantilla:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind bereizlea:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Talde nagusiaren plantilla:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind cache de&nbora:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Acl bateragarr&itasuna:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind izendatu erabiltzaileak"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind izendatu taldeak"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind erabili domeinu lehenetsia"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind gaitu kontu lokalak"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind konfidantzazko domeinuak bakarrik"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind habiaratutako taldeak"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBIOS er&emua:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS alias-ak:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "E&zgaitu netbios"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "I&zen erresoluzio ordena:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "Msdfs &ostalaria"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP atzi&zkia:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP makina atzizkia:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP erabiltzaile atzizkia:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP talde atzizkia:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap atzizkia:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP iragazkia:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP ad&min dn:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap eus&karria:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP erreplikatze denbora-tartea:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Itzalita"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Piztuta"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP s&inkronizazioa:"
+
+#~ msgid "Only"
+#~ msgstr "Bakarrik"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP ezabatu d&n"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Gehitu partekatze ag&induak:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Aldatu partekatze aginduak:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Eza&batu partekatze aginduak:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Me&zu agindua:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Dfree agi&ndua:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Ezarri &quota agindua:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Eskuratu quota agindua:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Estua&ldiko ekintza:"
+
+#~ msgid "Misc"
+#~ msgstr "Misc"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Hainbat"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Ezkutatu erabiltzaile &lokalak"
+
+#~ msgid "Default service:"
+#~ msgstr "Zerbitzu lehenetsia:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Denbora &offset-a:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min."
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Urruneko berri-e&matea:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Iturburu ingurunea:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS direktorio nagusia"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Direktorio nagusi mapatu:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Utmp direktor&ioa:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp direktorioa:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Araztu"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT egoeraren euskarria"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB euskarria"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT pipe euskarr&ia"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Gehitu/Editatu partekatzea"
+
+#~ msgid "Pixmap"
+#~ msgstr "Pixmap"
+
+#~ msgid "D&irectory"
+#~ msgstr "D&irektorioa"
+
+#~ msgid "&Path:"
+#~ msgstr "&Bide-izena:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Partekatu direktorio-nagusi guztiak"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tifikadorea"
+
+#~ msgid "Na&me:"
+#~ msgstr "Ize&na:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Iru&zkina:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "P&ropietate nagusiak"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Pub&likoa"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Araka&garria"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Eskuragarri"
+
+#~ msgid "&Security"
+#~ msgstr "&Sekuritatea"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gonbid&atuak"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Gonbidatuei baimenduta dauden zerbitzuak erabiltzeko erabiliko den "
+#~ "erabiltzaile izena da hau. Erabiltzaile honek dituen baimen guztiak "
+#~ "gonbidatuen zerbitzura konektatzen diren bezero guztientzat eskuragarri "
+#~ "egongo dira. Normalean erabiltzaile hau pasahitz fitxategian egongo da, "
+#~ "baina ezin izango du sesiorik hasi. \\\"ftp\\\" erabiltzaile kontua "
+#~ "parametro honentzat aukera egokia izan da. Erabiltzaile izena emandako "
+#~ "zerbitzu batean zehazten bada, zehaztutako erabiltzaile izena erabiliko "
+#~ "da izen honen ordez."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Gonbidatu kontuak"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Hau hautatuta badago, ez da pasahitz behar izango zerbitzura "
+#~ "konektatzeko. Pribilegioak gonbidatu kontuarenak izango dira."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Gonbidatu konex&ioak bakarrik baimendu"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Os&talariak"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Baimendutako ostalarien kontrakoa. Hemen zerrendatutako ostalariek ez "
+#~ "dute zerbitzaria atzitzeko baimenik izango, zerbitzu espezifikoek "
+#~ "zerrenda honi kasurik egiten ez dioten beste zerrenda propio bat ez "
+#~ "badute."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Parametro hau zerbitzu hau atzitzeko baimena duten koma, espazio edo "
+#~ "tabulatzaileez banandutako ostalari sorta bat da."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Ostalari baimend&uak:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Ostalari &ukatuak:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Lotura si&nbolikoak"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Baimendu ondorengo lo&tura sinbolikoak"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Baimendu ondorengo direktorio zuhaitzetik kanpoko areak lotzen dituzten "
+#~ "lo&tura sinbolikoak"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Egiaztatu pasahitza ondorengo erabiltzaile izenekin bezeroak ezin "
+#~ "badu erabiltzaile izen bat eman.:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "E&rabiltzaile-izen zerrenda honetan zehazten diren erabiltzaile-izenak "
+#~ "erabiltzen dituzten konexioak bakarrik baimendu"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&Fitxategi ezkutuak"
+
+#~ msgid "Hidden"
+#~ msgstr "Ezkutua"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto Oplock"
+
+#~ msgid "Size"
+#~ msgstr "Tamaina"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Hau&tatutako fitxategiak"
+
+#~ msgid "Hi&de"
+#~ msgstr "E&zkutatu"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto oploc&k"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Eskuzko konfigurazioa"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ve&to fitxategiak:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Veto oplock f&itxategiak:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Fitxategi ezkutua&k:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Ezkutatu idatzi &ezin daitezkeen fitxategiak"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Ezkutatu fitxategi &bereziak"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Ezkutatu puntuareki&n hasten diren fitxategiak"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Ezkutatu i&rakurri ezin daitezkeen fitxategiak"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Aurreratua"
+
+#~ msgid "Force Modes"
+#~ msgstr "Behartu modua"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Beh&artu direktorio sekuritate modua:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Beh&artu sekuritate modua:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Behartu direktor&io modua:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Behartu sortze mo&dua:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maskarak"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Direktorio sekuritate maskarak:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Sekuritate &maskara:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Direk&torio maskara:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Sortu mas&kara:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "Acls &profilak"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Heredatu ac&ls-a"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT ACL euskarria"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Behartu acl erabiltzaile ezeza&guna:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Mapatu acl &herentzia"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Heredatu baimenak guraso direktoriotik"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Baimentu irakurketarako bakarrik diren fitxategiak"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS atributu mapatzea"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Mapatu DOS-eko 'artxi&batu' UNIX-eko 'jabea exekutatu'-ra"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Mapatu DOS 'ezkutua' UNI&X 'besteak exekutatu'-ra"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Mapatu DOS 'sistema' UNI&X 'taldea exekutatu'-ra"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Gorde DOS atributuak atributu hedatuetan"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "S&inkronizazio zorrotza"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Sinkronizatu &beti"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Esleipen zorrotza"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Erabili sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "Aldibereko konexio kopuru &maximoa"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Idazteko cache-aren tamai&na:"
+
+#~ msgid "bytes"
+#~ msgstr "byte"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Blo&ke tamaina:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Bezeroaren aldeko &cache politika:"
+
+#~ msgid "manual"
+#~ msgstr "eskuzkoa"
+
+#~ msgid "documents"
+#~ msgstr "dokumentuak"
+
+#~ msgid "programs"
+#~ msgstr "programak"
+
+#~ msgid "disable"
+#~ msgstr "ezgaitu"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Izen moldaketa"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Gaitu izen &moldaketa"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Maiuskula/minuskula&k moldatu"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Manten&du maiuskula/minuskulak"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Manten&du maiuskula/minuskulak izen motzetan"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Maiuskulak/Minusku&lak"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Maiuskula/minusku&la lehenetsia:"
+
+#~ msgid "Lower"
+#~ msgstr "Baxuagoa"
+
+#~ msgid "Upper"
+#~ msgstr "Altuagoa"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Moldaketa ka&rakterea:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Moldatutako ma&pa:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Moldaketa metodoa:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Beste aukerak"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Ezkutatu amaie&rako puntuak"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS fitxategi modua"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS f&itxategi denborak"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS fitxategi denbora erresoluzioa"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Ga&itu blokeoa"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Blo&keoa"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Blokeo &zorrotza"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Bloke b&lokeoa"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x blokeoa"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Partekatze mo&duak"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Blokeo oportunistak burutu (oplock-ak)"
+
+#~ msgid "O&plocks"
+#~ msgstr "O&plock-ak"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "2. mailako oplock-ak"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Oplock kontentzio &muga:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Sasioplock-ak"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Vfs ob&jektuak:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Vfs au&kerak:"
+
+#~ msgid "Exec"
+#~ msgstr "Exekutatu"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Au&rre-exekuzioa:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Root aurre&exekuzioa:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "A&tze-exekuzioa:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Root atze-exeku&zioa:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "aurre-exekuzio i&txiera"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "root aurre-exekuzio it&xiera"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Bolumena:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&gic script:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Mag&ic output:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Ez jarraitu beherantz:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs pro&xy-a"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Setdir agindua baime&ndua"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Sasi-dire&ktorio sortze denborak"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&defs erroa"
+
+#~ msgid "&Help"
+#~ msgstr "&Laguntza"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Erabiltzaileak"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Zehaztu &gabeko erabiltzaile guztiak"
+
+#~ msgid "Reject"
+#~ msgstr "Ezetsi"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Ze&haztutako erabiltzaileak"
+
+#~ msgid "Access Rights"
+#~ msgstr "Atzipen eskubideak"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Ge&hitu erabiltzaileak..."
+
+#~ msgid "E&xpert"
+#~ msgstr "A&ditua"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Gehitu &taldea..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Ken&du hautatutakoak"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr ""
+#~ "Erabiltzaile guztiak ondorengo Erabiltzaile/Taldera behartu beharko "
+#~ "lirateke"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Beh&artu erabiltzailea:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Behart&u taldea:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Atzipen aldatzaileak"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Atzipen baimenak"
+
+#~ msgid "Others"
+#~ msgstr "Beste"
+
+#~ msgid "Read"
+#~ msgstr "Irakurri"
+
+#~ msgid "Write"
+#~ msgstr "Idatzi"
+
+#~ msgid "Sticky"
+#~ msgstr "Itsaskorra"
+
+#~ msgid "Set GID"
+#~ msgstr "Ezarri GID-a"
+
+#~ msgid "Set UID"
+#~ msgstr "Ezarri UID-a"
+
+#~ msgid "Special"
+#~ msgstr "Berezia"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Erabiltzaile ezarpenak"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Baliozko erabiltzaileak"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administratzaileak:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Balio&gabeko erabiltzaileak:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Idazteko zerrenda:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Irakurtzeko zerrenda:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Baimendutako &ostalariak"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Baimendutako &ostalarien zerrenda"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Hemen NFS bidez direktorio honetara sartzeko baimena duten ostalarien "
+#~ "zerrenda ikus dezakezu.\n"
+#~ "Lehen lerroak ostalariaren helbidea edo izena erakusten du, bigarren "
+#~ "lerroak atzipen parametroak erakusten ditu. '*' izenak atzipen publikoa "
+#~ "baimentzen du."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Gehitu ostalaria..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&Aldatu ostalaria..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Kendu ostalaria"
+
+#~ msgid "Name/Address"
+#~ msgstr "Izena/Helbidea"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametroak"
+
+#~ msgid "Host Properties"
+#~ msgstr "Ostalariaren parametroak"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Izena/helbidea"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Izena / Helbidea eremua</b>\n"
+#~ "<p>\n"
+#~ "Hemen ostalariaren izena edo helbidea sar dezakezu.<br>\n"
+#~ " Ostalaria honako era honetan zehaz dezakezu:\n"
+#~ "<p>\n"
+#~ "<i>ostalari bakarra</i>\n"
+#~ "<p>\n"
+#~ "Hau da ohiko formatua. Ostalaria ebazleak ezagutzen duen izen labur "
+#~ "batekin, erabat kualifikatutako izen batekin edo IP helbide batekin zehaz "
+#~ "dezakezu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>taldeak</i>\n"
+#~ "<p>\n"
+#~ " NIS taldeak @talde bezala zehaz daitezke. Talde bakoitzeko ostalari "
+#~ "zatia bakarrik erabiltzen da kidetasuna egiaztatzean. Ostalari zatia "
+#~ "hutsik edo marra sinplea (-) duten ostalari zatiak ezikusten dira.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>Komodinak</i>\n"
+#~ "<p>\n"
+#~ " Makina izenek* eta ? komodin karaktereak eduki ditzakete. Hau esportazio "
+#~ "fitxategi txikiagoak lortzeko erabili daiteke, adibidez, *.cs.foo.edu cs."
+#~ "foo.edu domeinuko ostalari guztien parekoa da. Hala ere komodin "
+#~ "karaktereak ez dira domeinu izeneko puntuen pareko, eta beraz goiko "
+#~ "ereduak ez du a.b.cs.foo.edu-rekin bat egiten.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP sareak</i>\n"
+#~ "<p>\n"
+#~ "IP (azpi-)sareko ostalari guztientzat batera direktorioak parteka "
+#~ "ditzakezu. Hau IP helbidea eta sare-maskara bikotea helbidea/sare-maskara "
+#~ "moduan zehaztuz egin dezakezu. Sare-maskara puntuzbereizitako zenbakizko "
+#~ "notazioan edo maskara jarrai luzera batean zehaz dezakezu.(adibidez, sare "
+#~ "helbide-baseari gehituta, `/255.255.252.0' sare maskarak edo `/22' "
+#~ "maskarak 10 bit-dun ostalariko azpisare berbera adierazten dute).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "Atzipen &publikoa"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Atzipen publikoa</b>\n"
+#~ "<p>\n"
+#~ "Hau hautatzen baduzu, ostalari helbidea komodin bakarra izango da. Honek "
+#~ "atzipen publikoa adierazten du.\n"
+#~ "Hau helbide eremuan komodin bat sartu izan bazenu bezalakoa da.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Aukerak"
+
+#~ msgid "&Writable"
+#~ msgstr "&Idazteko baimena"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Idazteko baimena</b>\n"
+#~ "<p>\n"
+#~ "NFS bolumenean irakurtzeko eta idazteko eskaerak baimentzen ditu.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Lehenetsia fitxategi-sistema alda dezakeen eskaerak ez baimentzea da.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Segurtasun gabea"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Segurtasun gabea</b>\n"
+#~ "<p>\n"
+#~ "Aukera hau hautatzen bada, ez da beharrezkoa eskaerak egiten dituzten "
+#~ "interneteko atakak IPPORT_RESERVED (1024) baina txikiagoak izatea.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ziur ez bazaude utz ezazu hautatu gabe.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Sinkronizatu "
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Sinkronizatu</b>\n"
+#~ "<p>\n"
+#~ "Aukera honek fitxategi idazketa guztiak idazteko eskaera amaitu baina "
+#~ "lehen diskara guztiz idaztea eskatzen du.Hau beharrezkoa da datuen "
+#~ "segurtasun osoa lortzeko zerbitzariaren kraskaketa baten aurrean, baina "
+#~ "errendimendua jeisten du.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Lehenetsia zerbitzariari datuak nahi dituenean diskara idazteko baimena "
+#~ "ematea da.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "&Atzerapenik ez"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Atzerapenik ez</b>\n"
+#~ "<p>\n"
+#~ "Aukera honek eragina izan dezan \"sinkronizatu\" aukera ezarrita egon "
+#~ "behar da. NFS zerbitzariak normalean diskan idazteko eskaera bat atzeratu "
+#~ "egiten du pareko eskaera bat martxan badago edo laster etorriko delaren "
+#~ "susmoa badu. Honek idazteko eskaera asko eragiketa bakar batean burutzeko "
+#~ "aukera ematen du errendimendua hobetuz. NFS zerbitzariak erlaziorik "
+#~ "gabeko eskera txikiak jasotzen baditu normalean, portamolde honek "
+#~ "errendimendua okertzen du, eta beraz \"atzerapenik ez\" aukera desgaitu "
+#~ "dezakezu. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Ez &ezkutatu"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ez ezkutatu</b>\n"
+#~ "<p>\n"
+#~ "Aukera hau IRIX NFS-en izen berdineko aukeran oinarrituta dago. "
+#~ "Normalean, zerbitzariak bi fitxategi-sistema esportatzen baditu eta bata "
+#~ "bestean muntatuta badago, orduan bezeroak fitxategi-sistema biak muntatu "
+#~ "behar ditu, biak atzitzeko. Gurasoa bakarrik muntatzen baditu direktorio "
+#~ "huts bat ikusiko du beste fitxategi-sistema muntatuta dagoen lekuan. "
+#~ "Fitxategi-sistema hori \"ezkutatuta\" dago.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ez ezkutatu aukera gaitzean, bigarren fitxategi-sistema ez da eztututa "
+#~ "egongo eta baimena duten bezeroak gurasotik bigarren fitxategi-sistemara "
+#~ "mugituko dira aldaketa nabaritu gabe.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Hala ere, NFS bezero batzuk ez dute egoera hau ongi kudeatzen, adibidez, "
+#~ "bi fitxategiek inode zenbaki berbera izatea posible denean.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ez ezkutatu aukerak ostalari bakar baten esportatzioetan du eragina. Ez "
+#~ "du portamolde zuzenik izango talde, azpisare edo komodin esportazioetan.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Aukera hau oso erabilgarria izan daiteke egoera batzutan, baina kontu "
+#~ "askorekin erabili behar da bezero sistemak egoera hau ongi kudeatzen "
+#~ "duela zehaztu ondoren.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Ez &azpizuhaitzik egiaztatu"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ez azpizuhaitzik egiaztatu</b>\n"
+#~ "<p>\n"
+#~ "Aukera honek azp-zuhaitzen egiaztapena ezgaitzen du. Honek segurtasun-"
+#~ "arazo batzuk ekar ditzake, baina segurtasuna ere igo dezake zenbait "
+#~ "kasutan.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Fitxategi-sistema baten azpidirektorioa esportatzen denean (fitxategi-"
+#~ "sistema osoa esportu gabe), NFS eskaera iristen denean, zerbitzariak, "
+#~ "eskatzen den fitxategia fitxategi-sistema egokian dagoela egiaztatzeaz "
+#~ "gain (hau erraza da) esportatutako zuhaitzean dagoen egiaztatzen du (hau "
+#~ "zailagoa da). Egiaztapen hau azpizuhaitz egiaztapen bezala ezagutzen da.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Egiaztapen hau burutzeko, zerbitzariak fitxategiaren kokalekuari buruzko "
+#~ "informazioa bezeroari emandako \"fitxategi-maneiatzailean\" gorde behar "
+#~ "du. Honek arazoak sor ditzake bezeroak irekita duen duen fitxategi bat "
+#~ "berrizendatzen denean (hala ere, kasu sinple gehienetan funtzionatuko "
+#~ "du).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Azpizuhaitz egiaztapena ere root-ak atzitu ditzakeen direktorio barneko "
+#~ "fitxategiak fitxategi-sistema \"Ez root-a mapeatu\" aukerarekin (ikusi "
+#~ "behearago) esportatu bada bakarrik atzituko dela egiaztatzeko erabiltzen "
+#~ "da. Baita fitxategiak atzipen orokorragoa baimentzen badu ere.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Kontseilu orokor bezala, karpeta nagusiko fitxategi-sistema, normalean "
+#~ "errotik esportatzen dena eta fitxategi berrizenketa asko jasaten dituena, "
+#~ "azpi-zuhaitz egiaztapena ezgaituta esportatu beharko litzateke. "
+#~ "Gehienetan irakurketarako bakarrik erabiltzen den fitxategi-sistema bat "
+#~ "edo berrizendaketa gutxi jasaten dituena (adibidez, /usr edo /var) eta "
+#~ "bere azpidirektoriak esportatu daitezkeena, azpi-zuhaitz egiaztapena "
+#~ "gaituta esportatu beharko litzateke.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Segurtasunik gabeko blo&keoak"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Segurtasunik gabeko blokeoak</b>\n"
+#~ "<p>\n"
+#~ "Aukera honek NFS zerbitzariari blokeo eskaerei autentifikaziorik ez "
+#~ "eskatzeko esaten dio (adib. NLM protokoloa erabiltzen duten eskaerak). "
+#~ "Normalean NFS zerbitzariak blokeo eskaerari fitxategia irakurtzeko "
+#~ "baimena duen erabiltzaile baten kredentziala eskatzen dio. Aukera hau "
+#~ "gaitzen bada ez da egiaztapenik burutuko.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Lehen NFS bezero inplementazioek ez dute kredentzialik bidaltzen blokeo "
+#~ "eskaerekin, eta uneko NFS bezero asko lehen inplementazioetan oinarritzen "
+#~ "dira. Erabili aukera hau mundu guztiak irakurri ditzakeen fitxategiak "
+#~ "bakarrik blokea daitezkeela aurkitzen baduzu.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Erabili mapatzea"
+
+#~ msgid "All s&quash"
+#~ msgstr "Denak &mapatu"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Denak mapatu</b>\n"
+#~ "<p>\n"
+#~ "Mapatu uid eta gid guztiak erabiltzaile anonimoari. Erabilgarria da NFS "
+#~ "bidez esportatutako FTP direktorio publiko, berri ilara direktorio, "
+#~ "etabarrentzat.</p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Ez &root-a mapatu"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ez root-a mapatu </b>\n"
+#~ "<p>\n"
+#~ "Root-aren mapatzea ezgaitzen du. Aukera hau diskarik gabeko bezeroentzat "
+#~ "da erabilgarria..\n"
+#~ "</p>\n"
+#~ "<i>root-a mapatzea</i>\n"
+#~ "<p>\n"
+#~ "0 uid/gid-tik datozen eskaerak uid/gid anonimora mapatzen ditu. Kontuan "
+#~ "izan beste sentiberatasun berbera duten uid-tan, adibidez \"bin\" "
+#~ "erabiltzailean, honek ez duela eraginik.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "&UID anonimoa:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>UID anonimoa</b> <p> Aukera honek kontu anonimoaren uid eta gid-a "
+#~ "ezartzen ditu. Aukera hau PC/NFS bezeroentzat da erabilgarria, eskaera "
+#~ "guztiak erabiltzaile batetik datozelaren itxura nahi baduzu. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "&GID anonimoa:"
+
+#~ msgid "Folder:"
+#~ msgstr "Karpeta:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Partekatu &NFS erabiliz (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS aukerak"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Pu&blikoa"
+
+#~ msgid "W&ritable"
+#~ msgstr "Idazga&rria"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "NFS au&kera gehiago"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba aukerak"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&ublikoa"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Samba auk&era gehiago"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Erabiltzaile guztiei karpetak partekatzeko aukera ematen die"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr ""
+#~ "%1 taldekoak diren erabiltzaileek bakarrik dute karpetak partekatzeko "
+#~ "baimena"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "%1 taldeko erabiltzaile taldea"
+
+#~ msgid "Remove User"
+#~ msgstr "Kendu erabiltzailea"
+
+#~ msgid "Add User"
+#~ msgstr "Gehitu erabiltzailea"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Taldearen kideek karpetak root pasahitzik erabili gabe parteka ditzakete"
+
+#~ msgid "Change Group..."
+#~ msgstr "Aldatu taldea..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB eta NFS zerbitzariak ez daude instalatuta makina honetan. Modulu hau "
+#~ "gaitzeko, zerbitzariak instalatu behar dira."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Gaitu sare lo&kaleko fitxategiak partekatzea"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Partekatze &sinplea"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Gaitu partekatze sinplea erabiltzaileei beraien karpeta nagusia root "
+#~ "pasahitzik gabe partekatzeko aukera emateko."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Partekatze &aurreratua"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Gaitu partekatze aurreratua erabiltzaileei edozein karpeta partekatzeko "
+#~ "aukera emateko. Honetarako, beharrezko konfigurazio fitxategietan "
+#~ "idazteko baimena eduki edo root pasahitza jakin beharko dute."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Erabili &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Erabili Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Erabiltzaile &baimenduak"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Karpeta partekatuak"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Gehitu..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Aldatu..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>SAMBA konfigurazio fitxategia, <strong>'smb.conf'</strong>, ezin da "
+#~ "aurkitu;</p>ziurtatu SAMBA instalatuta dagoela.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Zehaztu kokalekua"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba konf. fitxategia\n"
+#~ "*|Fitxategi denak"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Eskuratu smb.conf-en kokalekua"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Ezin izan da <i>%1</i> fitxategia irakurri.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Ezin izan da fitxategia irakurri"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Errorea fitxategia irekitzean"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Errorea %1 domeinura sartzean."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Sartu pasahitz bat <b>%1</b> erabiltzailearentzat</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Errorea <b>%1</b> erabiltzailea Samba erabiltzaile datubasean "
+#~ "sartzean.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "%1 erabiltzailea Samba erabiltzaile datubasetik kentzen."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Sartu pasahitz bat %1 erabiltzailearentzat"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Errorea %1 erabiltzailearen pasahitza aldatzean."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Samba Konfigurazioa</h1> hemen zure SAMBA zerbitzaria konfigura "
+#~ "dezakezu."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Erabili <i>partekatu</i> sekuritate maila etxeko sare bat edo bulego sare "
+#~ "txiki bat baduzu.<br /> Honek zure partekatutako direktorio eta "
+#~ "inprimagailu guztien zerrenda irakurtzeko aukera ematen dizu, saio "
+#~ "hasiera baino lehen."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Erabili <i>erabiltzaile</i>aren sekuritate maila sare handiago bat baduzu "
+#~ "eta saio hasiera baina lehen edozeinek zure partekatutako direktorio eta "
+#~ "inprimagailu zerrenda irakurtzea nahi ez baduzu.<br /><br />Zure Samba "
+#~ "zerbitzariak <b>Domeinu kontrolatzaile nagusi</b> (PDC) bezala jokatzea "
+#~ "nahi baduzu aukera hau ezarri behar duzu."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Erabili <i>zerbitzari</i> sekuritate maila sare handi bat baduzu eta "
+#~ "samba zerbitzariak erabiltzaile/pasahitza egiaztatzeko beste SMB "
+#~ "zerbitzari bati (adibidez NT makina bati) pasatzea nahi baduzu."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Erabili <i>domeinu</i> sekuritate maila sare handi bat baduzu eta samba "
+#~ "zerbitzariak erabiltzaile/pasahitza egiaztatzeko Windows NT domeinu "
+#~ "kontrolatzaile nagusi edo babeskopia kontrolatzaile bati pasatzea nahi "
+#~ "baduzu."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Erabili <i>ADS</i> sekuritate maila sare handi bat baduzu eta samba "
+#~ "zerbitzariak ADS erreinuan domeinu kide bezala jokatzea nahi baduzu."
+
+#~ msgid "Sorry"
+#~ msgstr "Barkatu"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Bi pasahitz desberdin sartu dituzu. Saiatu berriro."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Zure Samba bertsioak ez du <em>%1</em> aukera onartzen"
+
+#~ msgid "Unnamed"
+#~ msgstr "Izengabea"
+
+#~ msgid "&Hide"
+#~ msgstr "&Ezkutatu"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto Oplock"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Hautatutako fitxategi batzuk ezkutatuta daude izenak puntu batekin "
+#~ "hasten direlako; puntuarekin hasten diren fitxategi guztiak desautatu "
+#~ "nahi al dituzu?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Puntu batekin hasten diren fitxategiak"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Desautatu ezkutuak"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Mantendu ezkututa"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b><b>\"%1\"</b>komodindun karaktere-kateak hautatutako fitxategi "
+#~ "batzurekin bat egin du; <b>'%1'</b> -ekin bat egiten duten fitxategi "
+#~ "guztiak desautatu nahi al dituzu?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Komodindun karaktere-katea"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Desautatu bat-egiteak"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Mantendu hautatutakoak"
+
+#~ msgid "Default"
+#~ msgstr "Lehenetsia"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Direktorio honentzat <b>irakurketarako atzipen publikoa</b> zehaztu "
+#~ "duzu, baina <b>%1</b> gonbidatu kontuak ez du beharrezko irakurketa "
+#~ "baimenik;<br />jarraitu dena den?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Abisua"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Direktorio honentzat <b>idazketarako atzipen publikoa</b> zehaztu "
+#~ "duzu, baina <b>%1</b> gonbidatu kontuak ez du beharrezko idazketa "
+#~ "baimenik;<br />jarraitu dena den?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>%1</b> erabiltzaileari <b>idazteko atzipena</b> zehaztu diozu, "
+#~ "baina erabiltzaile honek ez du beharrezko idazketa baimenik;<br /"
+#~ ">jarraitu dena den?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt><b>%1</b> erabiltzaileari <b>irakurtzeko atzipena</b> zehaztu diozu, "
+#~ "baina erabiltzaile honek ez du beharrezko idazketa baimenik; <br /"
+#~ ">jarraitu dena den?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Dagoeneko sarrera publiko bat existitzen da."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Ostalaria dagoeneko existitzen da"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Sartu ostalari-izen edo IP helbide bat."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Ostalari-izen/IP-helbiderik ez"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "'%1' ostalaria dagoeneko existitzen da."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Samba konfigurazio fitxategia irakurtzen ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "NFS konfigurazio fitxategia irakurtzen ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Sartu baliozko bide-izen bat."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Karpetak bakarrik parteka daitezke."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Karpeta dagoeneko partekatuta dago."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Administratzaileak ez du NFS partekatzerik baimentzen."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Errorea: ezin izan NFS konfigurazio fitxategia irakurri."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Administratzaileak ez du Samba partekatzerik baimentzen."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Errorea: ezin izan da Samba konfigurazio fitxategia irakurri."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Samba partekatzerako izen bat sartu behar duzu."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Baimena behar duzu direktorioak partekatzeko."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Konfiguratu fitxategi partekatzea..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Ez dago NFS zerbitzaririk instalatuta sisteman"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Ezin izan dira ezarpenak gorde."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Ezin izan '%1' fitxategia ireki idazteko: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Errorea gordetzean"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Fitxategi partekatzea</h1><p> Modulu hau, Konqueror-en \"Network File "
+#~ "System\" (NFS) or SMB erabiliz fitxategi partekatzea sare lokalean "
+#~ "gaitzeko erabiltzen da. SMB protokoloak zure fitxategiak Windows(R) "
+#~ "konputagailuekin partekatzeko aukera ematen dizu.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Partekatu karpeta"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Baimendutako erabiltzaileak"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Erabiltzaile guztiak %1 taldean daude dagoeneko."
+
+#~ msgid "Select User"
+#~ msgstr "Hautatu erabiltzailea"
+
+#~ msgid "Select a user:"
+#~ msgstr "Hautatu erabiltzaile bat:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Ezin izan da '%1' erabiltzailea gehitu '%2' taldera"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Ezin izan da '%1' erabiltzailea kendu '%2' taldetik"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Baliozko talde hautatu behar duzu."
+
+#~ msgid "New file share group:"
+#~ msgstr "Fitxategiak partekatzeko talde berria:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Gehitu erabiltzaileak partekatze talde zaharretik talde berrira"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Kendu erabiltzaileak partekatze talde zaharretik"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Ezabatu fitxategi partekatze talde zaharra"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Talde  jakin batzuetako erabiltzaileek bakarrik dute baimena karpetak "
+#~ "partekatzeko"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Hautatu taldea..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Ziur zaude '%1' taldeko erabiltzaile guztiak kendu nahi dituzula?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Ziur zaude '%1' taldea ezabatu nahi duzula?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Errorea '%1' taldea ezabatzean"
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Hautatu baliozko talde bat."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "'%1' talde hau ez da existitzen. Sortzea nahi duzu?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Ez sortu"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Errorea '%1' taldea sortzean."

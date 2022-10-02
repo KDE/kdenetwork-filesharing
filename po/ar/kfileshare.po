@@ -1,0 +1,4025 @@
+# translation of kfileshare.po to
+# Copyright (C) 2003, 2007 Free Software Foundation, Inc.
+# Nuriddin Aminagha <nuriddin@eminaga.de>, 2003.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-23 22:14+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "امنع"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "اسمح"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "مجهول"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "اقرأ"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "مجهول"
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "الأذون"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "النوع:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "نظام التّشغيل أسلوب موسّع دعم"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "قابل للكتابة"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "نظام التّشغيل أسلوب موسّع دعم"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "احذف"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "الأذون"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "غيّر الصّلاحيات"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "الملكيّة"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "المالك:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "المجموعة:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "الأذون"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "مسار الملف"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "الأذون"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "الأذون"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "لا وصول عند الكل"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "الأذون"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "مشاركة مجلد بوصة محليّ شبكة"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "الاسم:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "اسمح للضيوف"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "للقراءة فقط"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "ممنوع الوصول"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "ضع كلمة سر"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "كلمة السّر"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "أكد كلمة السر"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "يجب أن تتطابق كلمتي السر"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "ضع كلمة سر"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "غيّر الصّلاحيات"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "فقط محليّ."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "أعد التّشغيل"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "سامبا المستخدمون"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "مشاركة الملفات غير مُمكّنة."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "الـ مجلد ليس موجود."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "هذا هو الاسم من مشاركات"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "مشاركة"
+
+#, fuzzy
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "إنشاء"
+
+#, fuzzy
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "إنشاء"
+
+#, fuzzy
+#~ msgid "&Share"
+#~ msgstr "&شارك"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt> هناك هو a مشاركات مع الاسم<strong></strong><br /> رجاء اختيار الاسم</"
+#~ "qt>"
+
+#, fuzzy
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "لا سامبا خادم مُثبّتة يعمل نظام"
+
+#, fuzzy
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "مشاركة مع سامبا ميكروسوفت R النوافذ R"
+
+#, fuzzy
+#~ msgid "Select Users"
+#~ msgstr "انتقِ المستخدمون"
+
+#, fuzzy
+#~ msgid "Select &Users"
+#~ msgstr "انتقِ المستخدمون"
+
+#, fuzzy
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#, fuzzy
+#~ msgid "UID"
+#~ msgstr "رمز المستخدم"
+
+#, fuzzy
+#~ msgid "GID"
+#~ msgstr "رمز المجموعة"
+
+#, fuzzy
+#~ msgid "Acc&ess"
+#~ msgstr "الن&فاذ"
+
+#, fuzzy
+#~ msgid "&Default"
+#~ msgstr "ا&فتراضي"
+
+#, fuzzy
+#~ msgid "&Read access"
+#~ msgstr "اقرأ وصول"
+
+#, fuzzy
+#~ msgid "&Write access"
+#~ msgstr "اكتب وصول"
+
+#, fuzzy
+#~ msgid "&Admin access"
+#~ msgstr "مدير النظام وصول"
+
+#, fuzzy
+#~ msgid "&OK"
+#~ msgstr "&موافق"
+
+#, fuzzy
+#~ msgid "Join Domain"
+#~ msgstr "انضمّ إلى النّطاق"
+
+#, fuzzy
+#~ msgid "&Verify:"
+#~ msgstr "تأ&كّد:"
+
+#, fuzzy
+#~ msgid "&Password:"
+#~ msgstr "&كلمة المرور:"
+
+#, fuzzy
+#~ msgid "&Username:"
+#~ msgstr "&اسم المستخدم:"
+
+#, fuzzy
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "النطاق:"
+
+#, fuzzy
+#~ msgid "&Domain:"
+#~ msgstr "ال&نطاق:"
+
+#, fuzzy
+#~ msgid "Select Groups"
+#~ msgstr "انتقِ المجموعات"
+
+#, fuzzy
+#~ msgid "Selec&t Groups"
+#~ msgstr "انتقِ المجموعات"
+
+#, fuzzy
+#~ msgid "&Kind of Group"
+#~ msgstr "النوع من المجموعة"
+
+#, fuzzy
+#~ msgid "&UNIX group"
+#~ msgstr "يونيكس المجموعة"
+
+#, fuzzy
+#~ msgid "NI&S group"
+#~ msgstr "NI&S المجموعة"
+
+#, fuzzy
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "يونيكس و NIS المجموعة"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt> حرّر سامبا مستخدمون بوصة ملفّ\n"
+#~ "<p> سامبا مستخدم a يونيكس مستخدم يمين الكل يونيكس مستخدمون بوصة ملفّ و ليس "
+#~ "مُهيّء سامبا مستخدمون سامبا مستخدمون يعمل يسار\n"
+#~ "<p> اضف جديد سامبا مستخدمون ضغط<em>&lt; اضف</em> زر مُنتقى يونيكس مستخدمون "
+#~ "سامبا مستخدمون و من يونيكس مستخدمون قائمة بقي يونيكس مستخدمون\n"
+#~ "<p> أزِل سامبا مستخدمون انقر<em>&gt; أزِل</em> زر مُنتقى سامبا مستخدمون من "
+#~ "ملفّ يعمل يمين يونيكس مستخدمون ليس سامبا مستخدمون\n"
+#~ "</qt>"
+
+#, fuzzy
+#~ msgid "&Base Settings"
+#~ msgstr "الأساس إعدادات"
+
+#, fuzzy
+#~ msgid "Samba config file:"
+#~ msgstr "سامبا ملفّ:"
+
+#, fuzzy
+#~ msgid "&Load"
+#~ msgstr "&حمِل"
+
+#, fuzzy
+#~ msgid "Server Identification"
+#~ msgstr "الخادم التعريف"
+
+#, fuzzy
+#~ msgid "Wor&kgroup:"
+#~ msgstr "مجموعة العمل:"
+
+#, fuzzy
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "إدخال الاسم من مجموعة عمل نطاق."
+
+#, fuzzy
+#~ msgid "Server strin&g:"
+#~ msgstr "الخادم سلسلة نص:"
+
+#, fuzzy
+#~ msgid "NetBIOS name:"
+#~ msgstr "الاسم:"
+
+#, fuzzy
+#~ msgid "Securit&y Level"
+#~ msgstr "الأمن المستوى"
+
+#, fuzzy
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#, fuzzy
+#~ msgid "User"
+#~ msgstr "المستخدم"
+
+#, fuzzy
+#~ msgid "Server"
+#~ msgstr "الخادم"
+
+#, fuzzy
+#~ msgid "Domai&n"
+#~ msgstr "النطاق"
+
+#, fuzzy
+#~ msgid "ADS"
+#~ msgstr "خدمة الدّليل النّشط (ADS)"
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "إستعمل<i> مشاركات</i> أمن مستوى IF a home شبكة أو a صغير شبكة<br> "
+#~ "itإيطالياهو إلى قراءة الكل مشاركات قبل a دخول ، تسجيل هو مطلوب."
+
+#, fuzzy
+#~ msgid "Further Options"
+#~ msgstr "أكثر خيارات"
+
+#, fuzzy
+#~ msgid "Password server address/name:"
+#~ msgstr "كلمة المرور خادم عنوان الاسم:"
+
+#, fuzzy
+#~ msgid "Real&m:"
+#~ msgstr "عالم:"
+
+#, fuzzy
+#~ msgid "Guest acc&ount:"
+#~ msgstr "ضيف الحساب:"
+
+#, fuzzy
+#~ msgid "Help"
+#~ msgstr "مساعدة"
+
+#, fuzzy
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "لـ مساعدة حوْل كل خيار عند:"
+
+#, fuzzy
+#~ msgid "man:smb.conf"
+#~ msgstr "smb"
+
+#, fuzzy
+#~ msgid "&Shares"
+#~ msgstr "الأسهم"
+
+#, fuzzy
+#~ msgid "Comment"
+#~ msgstr "تعليق"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "خصائص"
+
+#, fuzzy
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "تحرير الإفتراضيّات."
+
+#, fuzzy
+#~ msgid "Add &New Share..."
+#~ msgstr "إضافة جديد مشاركة."
+
+#, fuzzy
+#~ msgid "Edit Share..."
+#~ msgstr "تحرير مشاركة."
+
+#, fuzzy
+#~ msgid "Re&move Share"
+#~ msgstr "احذف مشاركة"
+
+#, fuzzy
+#~ msgid "Prin&ters"
+#~ msgstr "الطابعات"
+
+#, fuzzy
+#~ msgid "Printer"
+#~ msgstr "الطابعة"
+
+#, fuzzy
+#~ msgid "Edit Defau&lts"
+#~ msgstr "تحرير الإفتراضيّات"
+
+#, fuzzy
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "إضافة جديد الطابعة"
+
+#, fuzzy
+#~ msgid "Edit Pri&nter"
+#~ msgstr "تحرير الطابعة"
+
+#, fuzzy
+#~ msgid "Re&move Printer"
+#~ msgstr "احذف الطابعة"
+
+#, fuzzy
+#~ msgid "&Users"
+#~ msgstr "المست&خدمون"
+
+#, fuzzy
+#~ msgid "Disabled"
+#~ msgstr "معطل"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "إضافة"
+
+#, fuzzy
+#~ msgid "Rem&ove"
+#~ msgstr "احذف"
+
+#, fuzzy
+#~ msgid "UNI&X Users"
+#~ msgstr "يونيكس المستخدمون"
+
+#, fuzzy
+#~ msgid "Chan&ge Password..."
+#~ msgstr "&تغيير كلمة المرور..."
+
+#, fuzzy
+#~ msgid "&Join Domain"
+#~ msgstr "انضم النطاق"
+
+#, fuzzy
+#~ msgid "Advan&ced"
+#~ msgstr "متقدم"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr "هنا تغيير متقدم خيارات من خادم تغيير شيء مّا IF."
+
+#, fuzzy
+#~ msgid "Advanced Dump"
+#~ msgstr "متقدم تفريغ"
+
+#, fuzzy
+#~ msgid "Security"
+#~ msgstr "الأمن"
+
+#, fuzzy
+#~ msgid "&General"
+#~ msgstr "&عام"
+
+#, fuzzy
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "طع"
+
+#, fuzzy
+#~ msgid "PAM password change"
+#~ msgstr "كلمة مرور تغيير"
+
+#, fuzzy
+#~ msgid "Other Switches"
+#~ msgstr "أخرى قاطعات"
+
+#, fuzzy
+#~ msgid "A&llow trusted domains"
+#~ msgstr "اسمح"
+
+#, fuzzy
+#~ msgid "Paranoid server security"
+#~ msgstr "مرتفع بجنونمرتفع جداالمذعور خادم أمن"
+
+#, fuzzy
+#~ msgid "General"
+#~ msgstr "عام"
+
+#, fuzzy
+#~ msgid "Auth methods:"
+#~ msgstr "استيثاق:"
+
+#, fuzzy
+#~ msgid "Root director&y:"
+#~ msgstr "الجذر دليل:"
+
+#, fuzzy
+#~ msgid "I&nterfaces:"
+#~ msgstr "الواجهات:"
+
+#, fuzzy
+#~ msgid "Map to guest:"
+#~ msgstr "الخريطة إلى ضيف:"
+
+#, fuzzy
+#~ msgid "Bind interfaces only"
+#~ msgstr ""
+#~ "يربط :: يوثق :: يقيّد :: يعوق عن الحركة :: يُلزِم :: يحْزم :: يعْصب :: يضمّد :: "
+#~ "يجعله متماسكاً :: يَعقِل :: يُجلّد :: يقي :: يُمتّن :: يتماسك :: يصبح صلباً :: "
+#~ "رِباط :: رَبْط :: ارتباط :: مأزق interfaces"
+
+#, fuzzy
+#~ msgid "Never"
+#~ msgstr "أبداً"
+
+#, fuzzy
+#~ msgid "Bad User"
+#~ msgstr "سيّئ المستخدم"
+
+#, fuzzy
+#~ msgid "Bad Password"
+#~ msgstr "سيّئ كلمة المرور"
+
+#, fuzzy
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "المستضيفين:"
+
+#, fuzzy
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "حسابيّ القاعدة:"
+
+#, fuzzy
+#~ msgid "Private dir:"
+#~ msgstr "خاص dir:"
+
+#, fuzzy
+#~ msgid "Pass&word"
+#~ msgstr "كلمة المرور"
+
+#, fuzzy
+#~ msgid "Samba Passwords"
+#~ msgstr "سامبا كلمات السر"
+
+#, fuzzy
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "تشفير"
+
+#, fuzzy
+#~ msgid "Smb passwd file:"
+#~ msgstr "SMBsmb ملفّ:"
+
+#, fuzzy
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "منتهى خلفي:"
+
+#, fuzzy
+#~ msgid "Passwd chat:"
+#~ msgstr "كلمة السر محادثة:"
+
+#, fuzzy
+#~ msgid "Passwd chat debug"
+#~ msgstr ""
+#~ "كلمة السر محادثة يصحح\n"
+#~ "تنقيح"
+
+#, fuzzy
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "ثواميثانية"
+
+#, fuzzy
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "كلمة السر محادثة:"
+
+#, fuzzy
+#~ msgid "Nu&ll passwords"
+#~ msgstr "مصفر"
+
+#, fuzzy
+#~ msgid "Password level:"
+#~ msgstr "كلمة المرور مستوى:"
+
+#, fuzzy
+#~ msgid "Min password length:"
+#~ msgstr "الحد الأدنى كلمة مرور الطول:"
+
+#, fuzzy
+#~ msgid "Machine password timeout:"
+#~ msgstr "المكنة كلمة مرور:"
+
+#, fuzzy
+#~ msgid "Migration"
+#~ msgstr "هجرة"
+
+#, fuzzy
+#~ msgid "Update encr&ypted"
+#~ msgstr "تحديث مشفر"
+
+#, fuzzy
+#~ msgid "UNIX Passwords"
+#~ msgstr "يونيكس كلمات السر"
+
+#, fuzzy
+#~ msgid "Passwd program:"
+#~ msgstr "كلمة السر برنامج:"
+
+#, fuzzy
+#~ msgid "UNI&X password sync"
+#~ msgstr "يونيكس كلمة مرور مزامنة"
+
+#, fuzzy
+#~ msgid "Userna&me"
+#~ msgstr "اسم المستخدم"
+
+#, fuzzy
+#~ msgid "User&name map:"
+#~ msgstr "اسم المستخدم خريطة:"
+
+#, fuzzy
+#~ msgid "Username &level:"
+#~ msgstr "اسم المستخدم مستوى:"
+
+#, fuzzy
+#~ msgid "Hide local users"
+#~ msgstr "إخفاء محليّ مستخدمون"
+
+#, fuzzy
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "حدّد مجهول"
+
+#, fuzzy
+#~ msgid "Use rhosts"
+#~ msgstr "إستعمل"
+
+#, fuzzy
+#~ msgid "Authenticati&on"
+#~ msgstr "التّوثيق"
+
+#, fuzzy
+#~ msgid "Client"
+#~ msgstr "العميل"
+
+#, fuzzy
+#~ msgid "C&lient signing:"
+#~ msgstr "العميل:"
+
+#, fuzzy
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "العميل توثق"
+
+#, fuzzy
+#~ msgid "Client lanman authentication"
+#~ msgstr "العميل توثق"
+
+#, fuzzy
+#~ msgid "Auto"
+#~ msgstr "تلقائي"
+
+#, fuzzy
+#~ msgid "Mandatory"
+#~ msgstr "إلزامي"
+
+#, fuzzy
+#~ msgid "Yes"
+#~ msgstr "نعم"
+
+#, fuzzy
+#~ msgid "No"
+#~ msgstr "لا"
+
+#, fuzzy
+#~ msgid "Client channel:"
+#~ msgstr "العميل القناة:"
+
+#, fuzzy
+#~ msgid "Client use spnego"
+#~ msgstr "العميل استخدام"
+
+#, fuzzy
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "العميل توثق"
+
+#, fuzzy
+#~ msgid "Server signing:"
+#~ msgstr "الخادم:"
+
+#, fuzzy
+#~ msgid "Lanman authentication"
+#~ msgstr "توثق"
+
+#, fuzzy
+#~ msgid "Server channel:"
+#~ msgstr "الخادم القناة:"
+
+#, fuzzy
+#~ msgid "Use sp&nego"
+#~ msgstr "إستعمل"
+
+#, fuzzy
+#~ msgid "NTLM authentication"
+#~ msgstr "توثق"
+
+#, fuzzy
+#~ msgid "Logging"
+#~ msgstr "تسجيل الوقائع"
+
+#, fuzzy
+#~ msgid "L&og file:"
+#~ msgstr "لغ ملفّ:"
+
+#, fuzzy
+#~ msgid "kB"
+#~ msgstr "ك. بايت"
+
+#, fuzzy
+#~ msgid "Ma&x log size:"
+#~ msgstr "الحد الأقصى سجل حجم:"
+
+#, fuzzy
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#, fuzzy
+#~ msgid "Log &level:"
+#~ msgstr "لغ مستوى:"
+
+#, fuzzy
+#~ msgid "S&witches"
+#~ msgstr "قاطعات"
+
+#, fuzzy
+#~ msgid "Syslog o&nly"
+#~ msgstr "Syslog"
+
+#, fuzzy
+#~ msgid "Status"
+#~ msgstr "الحالة"
+
+#, fuzzy
+#~ msgid "Ti&mestamp"
+#~ msgstr "توقيت"
+
+#, fuzzy
+#~ msgid "Debug pid"
+#~ msgstr "تنقيح"
+
+#, fuzzy
+#~ msgid "Debu&g uid"
+#~ msgstr "تنقيح رمز المستخدم"
+
+#, fuzzy
+#~ msgid "Tuning"
+#~ msgstr "المُوالفة"
+
+#, fuzzy
+#~ msgid "Modules"
+#~ msgstr "وحدات نمطية"
+
+#, fuzzy
+#~ msgid "Pre&load modules:"
+#~ msgstr "وحدات:"
+
+#, fuzzy
+#~ msgid "Switches"
+#~ msgstr "قاطعات"
+
+#, fuzzy
+#~ msgid "&Getwd cache"
+#~ msgstr ""
+#~ "ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ"
+
+#, fuzzy
+#~ msgid "Use &mmap"
+#~ msgstr "إستعمل"
+
+#, fuzzy
+#~ msgid "Kernel change notif&y"
+#~ msgstr "النواة تغيير إشعار"
+
+#, fuzzy
+#~ msgid "H&ostname lookups"
+#~ msgstr "اسم المضيف"
+
+#, fuzzy
+#~ msgid "Read ra&w"
+#~ msgstr "اقرأ خام"
+
+#, fuzzy
+#~ msgid "Write raw"
+#~ msgstr "اكتب خام"
+
+#, fuzzy
+#~ msgid "Times"
+#~ msgstr "Times"
+
+#, fuzzy
+#~ msgid "Change notify timeout:"
+#~ msgstr "غيّر إشعار:"
+
+#, fuzzy
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "الحد الأدنى"
+
+#, fuzzy
+#~ msgid "Lp&q cache time:"
+#~ msgstr ""
+#~ "ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ وقت:"
+
+#, fuzzy
+#~ msgid "&Name cache timeout:"
+#~ msgstr ""
+#~ "الاسم ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ:"
+
+#, fuzzy
+#~ msgid "Sizes"
+#~ msgstr "أحجام"
+
+#, fuzzy
+#~ msgid "Max disk size:"
+#~ msgstr "الحد الأقصى قرص حجم:"
+
+#, fuzzy
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "م.ب."
+
+#, fuzzy
+#~ msgid "Read si&ze:"
+#~ msgstr "اقرأ حجم:"
+
+#, fuzzy
+#~ msgid "Stat cache size:"
+#~ msgstr ""
+#~ "مباشرة ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ حجم:"
+
+#, fuzzy
+#~ msgid "Ma&x xmit:"
+#~ msgstr "الحد الأقصى:"
+
+#, fuzzy
+#~ msgid "Numbers"
+#~ msgstr "أرقام"
+
+#, fuzzy
+#~ msgid "Max smbd processes:"
+#~ msgstr "الحد الأقصى:"
+
+#, fuzzy
+#~ msgid "Max open files:"
+#~ msgstr "الحد الأقصى فتح ملفات:"
+
+#, fuzzy
+#~ msgid "Printing"
+#~ msgstr "طباعة"
+
+#, fuzzy
+#~ msgid "Total print &jobs:"
+#~ msgstr "المجموع طبع:"
+
+#, fuzzy
+#~ msgid "Drivers"
+#~ msgstr "السواق"
+
+#, fuzzy
+#~ msgid "OS&2 driver map:"
+#~ msgstr "سوّاق خريطة:"
+
+#, fuzzy
+#~ msgid "Printcap na&me:"
+#~ msgstr "الاسم:"
+
+#, fuzzy
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "الطابعة سوّاق ملفّ "
+
+#, fuzzy
+#~ msgid "Commands"
+#~ msgstr "أوامر"
+
+#, fuzzy
+#~ msgid "Enumports command:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "Addprinter command:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "Deleteprinter command:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "L&oad printers"
+#~ msgstr "تحميل"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "عطّل"
+
+#, fuzzy
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "اعرض اضف طابعة مرشد"
+
+#, fuzzy
+#~ msgid "Domain"
+#~ msgstr "النطاق"
+
+#, fuzzy
+#~ msgid "L&ocal master"
+#~ msgstr "محلي سيّد"
+
+#, fuzzy
+#~ msgid "Domai&n master"
+#~ msgstr "النطاق سيّد"
+
+#, fuzzy
+#~ msgid "Domain lo&gons"
+#~ msgstr "النطاق"
+
+#, fuzzy
+#~ msgid "Preferred &master"
+#~ msgstr "مفضلة سيّد"
+
+#, fuzzy
+#~ msgid "OS &level:"
+#~ msgstr "نظام التّشغيل مستوى:"
+
+#, fuzzy
+#~ msgid "Domain admin group:"
+#~ msgstr "النطاق ادر المجموعة:"
+
+#, fuzzy
+#~ msgid "Domain guest group:"
+#~ msgstr "النطاق ضيف المجموعة:"
+
+#, fuzzy
+#~ msgid "WINS"
+#~ msgstr "خدمة ويندوز لأسماء الإنترنت (WINS)"
+
+#, fuzzy
+#~ msgid "Deactivate &WINS"
+#~ msgstr "تعطيل خدمة ويندوز لأسماء الإنترنت (&WINS)"
+
+#, fuzzy
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "العمل a خدمة ويندوز لأسماء الإنترنت (WI&NS) خادم"
+
+#, fuzzy
+#~ msgid "Use an&other WINS server"
+#~ msgstr "إستعمل خدمة ويندوز لأسماء الإنترنت (WINS) خادم"
+
+#, fuzzy
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "خدمة ويندوز لأسماء الإنترنت (WINS) الخادم إعدادات"
+
+#, fuzzy
+#~ msgid "DNS prox&y"
+#~ msgstr ""
+#~ "DNS وكيل\n"
+#~ "مفوض"
+
+#, fuzzy
+#~ msgid "WINS hoo&k:"
+#~ msgstr "خدمة ويندوز لأسماء الإنترنت (WINS) موضع إضافة في الروتين:"
+
+#, fuzzy
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "الحد الأقصى خدمة ويندوز لأسماء الإنترنت (WINS):"
+
+#, fuzzy
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "الحد الأدنى خدمة ويندوز لأسماء الإنترنت (WINS):"
+
+#, fuzzy
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "خدمة ويندوز لأسماء الإنترنت (WINS) الخادم IP أو DNS الاسم"
+
+#, fuzzy
+#~ msgid "General Options"
+#~ msgstr "خيارات عامة"
+
+#, fuzzy
+#~ msgid "WINS partners:"
+#~ msgstr "خدمة ويندوز لأسماء الإنترنت (WINS):"
+
+#, fuzzy
+#~ msgid "WINS pro&xy"
+#~ msgstr ""
+#~ "خدمة ويندوز لأسماء الإنترنت (WINS) وكيل\n"
+#~ "مفوض"
+
+#, fuzzy
+#~ msgid "Filenames"
+#~ msgstr "أسماء الملفات"
+
+#, fuzzy
+#~ msgid "Ge&neral"
+#~ msgstr "عام"
+
+#, fuzzy
+#~ msgid "Strip d&ot"
+#~ msgstr "الشريط نقطة"
+
+#, fuzzy
+#~ msgid "&Mangling"
+#~ msgstr "تشويه"
+
+#, fuzzy
+#~ msgid "Mangled stac&k:"
+#~ msgstr ""
+#~ "مشوّه رصة\n"
+#~ "رصّ:"
+
+#, fuzzy
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "يعصر بالضغط:"
+
+#, fuzzy
+#~ msgid "Specia&l"
+#~ msgstr "خاص"
+
+#, fuzzy
+#~ msgid "Stat cache"
+#~ msgstr ""
+#~ "مباشرة ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ"
+
+#, fuzzy
+#~ msgid "Locking"
+#~ msgstr "قفل الشاشة"
+
+#, fuzzy
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "إستعمل نواة"
+
+#, fuzzy
+#~ msgid "Direct&ories"
+#~ msgstr "الأدلة"
+
+#, fuzzy
+#~ msgid "Loc&k directory:"
+#~ msgstr "أقفل دليل:"
+
+#, fuzzy
+#~ msgid "Pid director&y:"
+#~ msgstr "PIDPidرمز المهمةرمز العملية دليل:"
+
+#, fuzzy
+#~ msgid "Lock Spin"
+#~ msgstr "أقفل دوران"
+
+#, fuzzy
+#~ msgid "&Lock spin count:"
+#~ msgstr "أقفل تدوير العدد:"
+
+#, fuzzy
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "أقفل تدوير وقت:"
+
+#, fuzzy
+#~ msgid "Very Advanced"
+#~ msgstr "جدا متقدم"
+
+#, fuzzy
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "توقّف أنتطر وقت:"
+
+#, fuzzy
+#~ msgid "milliseconds"
+#~ msgstr "ملي ثانية"
+
+#, fuzzy
+#~ msgid "Charset"
+#~ msgstr "محارف"
+
+#, fuzzy
+#~ msgid "Samba &3.x"
+#~ msgstr "سامبا x"
+
+#, fuzzy
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS طقم محارف:"
+
+#, fuzzy
+#~ msgid "UNI&X charset:"
+#~ msgstr "يونيكس طقم محارف:"
+
+#, fuzzy
+#~ msgid "Displa&y charset:"
+#~ msgstr "العرض طقم محارف:"
+
+#, fuzzy
+#~ msgid "U&nicode"
+#~ msgstr "يونيكود"
+
+#, fuzzy
+#~ msgid "Samba &2.x"
+#~ msgstr "سامبا x"
+
+#, fuzzy
+#~ msgid "Character set:"
+#~ msgstr "حرف set:"
+
+#, fuzzy
+#~ msgid "Va&lid chars:"
+#~ msgstr "صالح:"
+
+#, fuzzy
+#~ msgid "Code page directory:"
+#~ msgstr "الرّمز صفحة دليل:"
+
+#, fuzzy
+#~ msgid "Codin&g system:"
+#~ msgstr "تشفير نظام:"
+
+#, fuzzy
+#~ msgid "Client code page:"
+#~ msgstr "العميل رمز صفحة:"
+
+#, fuzzy
+#~ msgid "Logon"
+#~ msgstr "تسجيل الدّخول"
+
+#, fuzzy
+#~ msgid "Add Scripts"
+#~ msgstr "إضافة نصوص تشفيرية"
+
+#, fuzzy
+#~ msgid "Add user script:"
+#~ msgstr "إضافة مستخدم برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Add user to group script:"
+#~ msgstr "إضافة مستخدم إلى المجموعة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Add gr&oup script:"
+#~ msgstr "إضافة المجموعة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Add machine script:"
+#~ msgstr "إضافة آلة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Delete group script:"
+#~ msgstr "احذف المجموعة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Delete user script:"
+#~ msgstr "احذف مستخدم برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Delete user from group script:"
+#~ msgstr "احذف مستخدم من المجموعة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Primary Group Script"
+#~ msgstr "أوّلي المجموعة مخطوط"
+
+#, fuzzy
+#~ msgid "Set primar&y group script:"
+#~ msgstr "ضبط أوّلي المجموعة برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Shutdown"
+#~ msgstr "إطفاء"
+
+#, fuzzy
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "إطفاء برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Abort shutdown script:"
+#~ msgstr "إلغاء أطفيء برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Logo&n path:"
+#~ msgstr "تسجيل الدّخول المسار:"
+
+#, fuzzy
+#~ msgid "Logon ho&me:"
+#~ msgstr "تسجيل الدّخول ho&me:"
+
+#, fuzzy
+#~ msgid "&Logon drive:"
+#~ msgstr "تسجيل الدّخول محرك أقراص:"
+
+#, fuzzy
+#~ msgid "Lo&gon script:"
+#~ msgstr "تسجيل الدّخول برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Socket"
+#~ msgstr "محجرمقبسالمقبس"
+
+#, fuzzy
+#~ msgid "Socket address:"
+#~ msgstr "محجرمقبسالمقبس عنوان:"
+
+#, fuzzy
+#~ msgid "Socket Options"
+#~ msgstr "محجرمقبسالمقبس خيارات"
+
+#, fuzzy
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP"
+
+#, fuzzy
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#, fuzzy
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "يمكّن أو SSL نمط"
+
+#, fuzzy
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "هذا أو SSL نمط إذا الإيطالية هو set إلى لا SSL ممكن سامبا مثل SSL سامبا "
+#~ "إذا set إلى نعم الإيطالية يتطلّب يعمل و SSL اتصال مطلوب n هو متوفّر IF SSL "
+#~ "يعمل نظام و أَعِّد خيار مع عند أَعِّد وقت."
+
+#, fuzzy
+#~ msgid "E&nable SSL"
+#~ msgstr "مكّن SSL"
+
+#, fuzzy
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL:"
+
+#, fuzzy
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL بايتات:"
+
+#, fuzzy
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL:"
+
+#, fuzzy
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL:"
+
+#, fuzzy
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL توافق"
+
+#, fuzzy
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL سلطة الشّهادات:"
+
+#, fuzzy
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL ملفّ:"
+
+#, fuzzy
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL مقبس:"
+
+#, fuzzy
+#~ msgid "SSL version:"
+#~ msgstr "إصدار الـSSL:"
+
+#, fuzzy
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL سلطة الشّهادات:"
+
+#, fuzzy
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL طلب"
+
+#, fuzzy
+#~ msgid "SSL client key:"
+#~ msgstr "SSL عميل مفتاح:"
+
+#, fuzzy
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL طلب"
+
+#, fuzzy
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L خادم:"
+
+#, fuzzy
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL عميل:"
+
+#, fuzzy
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL خادم مفتاح:"
+
+#, fuzzy
+#~ msgid "Protocol"
+#~ msgstr "البرتوكول"
+
+#, fuzzy
+#~ msgid "Ti&me server"
+#~ msgstr "الوقت خادم"
+
+#, fuzzy
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "كبير"
+
+#, fuzzy
+#~ msgid "UNIX extensions"
+#~ msgstr "يونيكس"
+
+#, fuzzy
+#~ msgid "Read bmpx"
+#~ msgstr "اقرأ"
+
+#, fuzzy
+#~ msgid "Protocol Versions"
+#~ msgstr "البرتوكول النسخ"
+
+#, fuzzy
+#~ msgid "A&nnounce as:"
+#~ msgstr "أعلن:"
+
+#, fuzzy
+#~ msgid "NT Workstation"
+#~ msgstr "محطة عمل"
+
+#, fuzzy
+#~ msgid "Announce version:"
+#~ msgstr "أعلن النسخة:"
+
+#, fuzzy
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#, fuzzy
+#~ msgid "Pr&otocol:"
+#~ msgstr "البرتوكول:"
+
+#, fuzzy
+#~ msgid "Max protocol:"
+#~ msgstr ""
+#~ "الحد الأقصى مراسم\n"
+#~ "ميفاق:"
+
+#, fuzzy
+#~ msgid "Min protocol:"
+#~ msgstr ""
+#~ "الحد الأدنى مراسم\n"
+#~ "ميفاق:"
+
+#, fuzzy
+#~ msgid "Limits"
+#~ msgstr "الحدود"
+
+#, fuzzy
+#~ msgid "Ma&x mux:"
+#~ msgstr "الحد الأقصى:"
+
+#, fuzzy
+#~ msgid "Max tt&l:"
+#~ msgstr "الحد الأقصى:"
+
+#, fuzzy
+#~ msgid "Listening SMB Ports"
+#~ msgstr "الإستماع SMB تحويلات"
+
+#, fuzzy
+#~ msgid "SMB ports:"
+#~ msgstr "SMB:"
+
+#, fuzzy
+#~ msgid "Browsing"
+#~ msgstr "التّصفّح"
+
+#, fuzzy
+#~ msgid "L&M announce:"
+#~ msgstr "إعلان:"
+
+#, fuzzy
+#~ msgid "Sec"
+#~ msgstr "ثواميثانية"
+
+#, fuzzy
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "عن بعد استعراض مزامنة:"
+
+#, fuzzy
+#~ msgid "Bro&wse list"
+#~ msgstr "تصفّح قائمة"
+
+#, fuzzy
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "محسّن"
+
+#, fuzzy
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#, fuzzy
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind رمز المستخدم:"
+
+#, fuzzy
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind رمز المجموعة:"
+
+#, fuzzy
+#~ msgid "Template h&omedir:"
+#~ msgstr "قالب:"
+
+#, fuzzy
+#~ msgid "Temp&late shell:"
+#~ msgstr "قالب صدَفة:"
+
+#, fuzzy
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind مفرق:"
+
+#, fuzzy
+#~ msgid "Template primary group:"
+#~ msgstr "قالب أوّلي المجموعة:"
+
+#, fuzzy
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr ""
+#~ "Winbind ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ وقت:"
+
+#, fuzzy
+#~ msgid "Windows NT 4"
+#~ msgstr "النوافذ 4"
+
+#, fuzzy
+#~ msgid "Windows 2000"
+#~ msgstr "النوافذ 2000"
+
+#, fuzzy
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "قائمة تحكم في الدخول توافق:"
+
+#, fuzzy
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind مستخدمون"
+
+#, fuzzy
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind"
+
+#, fuzzy
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind استخدام افتراضي نطاق"
+
+#, fuzzy
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind تمكين محليّ الحسابات"
+
+#, fuzzy
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind"
+
+#, fuzzy
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind"
+
+#, fuzzy
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "نطاق:"
+
+#, fuzzy
+#~ msgid "Disab&le netbios"
+#~ msgstr "عطّل"
+
+#, fuzzy
+#~ msgid "Na&me resolve order:"
+#~ msgstr "الاسم حلّ ،فرَّق ،حلَّل ترتيب:"
+
+#, fuzzy
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "مضيف"
+
+#, fuzzy
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#, fuzzy
+#~ msgid "H&ost msdfs"
+#~ msgstr "مضيف"
+
+#, fuzzy
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#, fuzzy
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP لاحقة:"
+
+#, fuzzy
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP آلة لاحقة:"
+
+#, fuzzy
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP مستخدم لاحقة:"
+
+#, fuzzy
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP المجموعة لاحقة:"
+
+#, fuzzy
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP لاحقة:"
+
+#, fuzzy
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP المرشّح:"
+
+#, fuzzy
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP ادر:"
+
+#, fuzzy
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "منتهى خلفي:"
+
+#, fuzzy
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP مضاعفة :: تكرار النوم:"
+
+#, fuzzy
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP:"
+
+#, fuzzy
+#~ msgid "Off"
+#~ msgstr "إيقاف"
+
+#, fuzzy
+#~ msgid "Start_tls"
+#~ msgstr "ابدأ"
+
+#, fuzzy
+#~ msgid "On"
+#~ msgstr "تشغيل"
+
+#, fuzzy
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP مزامنة:"
+
+#, fuzzy
+#~ msgid "Only"
+#~ msgstr "فقط"
+
+#, fuzzy
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP حذف"
+
+#, fuzzy
+#~ msgid "Add share c&ommand:"
+#~ msgstr "إضافة مشاركات أمر:"
+
+#, fuzzy
+#~ msgid "Change share command:"
+#~ msgstr "غيّر مشاركات أمر:"
+
+#, fuzzy
+#~ msgid "De&lete share command:"
+#~ msgstr "احذف مشاركات أمر:"
+
+#, fuzzy
+#~ msgid "Messa&ge command:"
+#~ msgstr "رسالة أمر:"
+
+#, fuzzy
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "Set &quota command:"
+#~ msgstr "ضبط حصّة أمر:"
+
+#, fuzzy
+#~ msgid "Get quota command:"
+#~ msgstr "احصل حصّة أمر:"
+
+#, fuzzy
+#~ msgid "Pa&nic action:"
+#~ msgstr "الرعب الأفعال:"
+
+#, fuzzy
+#~ msgid "Misc"
+#~ msgstr "متفرقات"
+
+#, fuzzy
+#~ msgid "Miscellaneous"
+#~ msgstr "متنوع"
+
+#, fuzzy
+#~ msgid "Hide &local users"
+#~ msgstr "إخفاء محليّ مستخدمون"
+
+#, fuzzy
+#~ msgid "Default service:"
+#~ msgstr "افتراضي خدمة:"
+
+#, fuzzy
+#~ msgid "Time &offset:"
+#~ msgstr "الوقت:"
+
+#, fuzzy
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "الحد الأدنى"
+
+#, fuzzy
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "عن بعد إعلان:"
+
+#, fuzzy
+#~ msgid "Source environment:"
+#~ msgstr "المصدر بيئة:"
+
+#, fuzzy
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#, fuzzy
+#~ msgid "NIS homedir"
+#~ msgstr "NIS"
+
+#, fuzzy
+#~ msgid "Homedir map:"
+#~ msgstr "خريطة:"
+
+#, fuzzy
+#~ msgid "Utmp director&y:"
+#~ msgstr "دليل:"
+
+#, fuzzy
+#~ msgid "&Wtmp directory:"
+#~ msgstr "دليل:"
+
+#, fuzzy
+#~ msgid "Debug"
+#~ msgstr "تنقيح"
+
+#, fuzzy
+#~ msgid "&NT status support"
+#~ msgstr "الحالة دعم"
+
+#, fuzzy
+#~ msgid "NT S&MB support"
+#~ msgstr "S&MB دعم"
+
+#, fuzzy
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "أنبوب دعم"
+
+#, fuzzy
+#~ msgid "Add/Edit Share"
+#~ msgstr "إضافة تحرير مشاركة"
+
+#, fuzzy
+#~ msgid "Pixmap"
+#~ msgstr "بكسماب"
+
+#, fuzzy
+#~ msgid "D&irectory"
+#~ msgstr "دليل"
+
+#, fuzzy
+#~ msgid "&Path:"
+#~ msgstr "الم&سار:"
+
+#, fuzzy
+#~ msgid "Share all home &directories"
+#~ msgstr "مشاركة الكل home"
+
+#, fuzzy
+#~ msgid "Iden&tifier"
+#~ msgstr "معرّف"
+
+#, fuzzy
+#~ msgid "Na&me:"
+#~ msgstr "الإ&سم:"
+
+#, fuzzy
+#~ msgid "Comme&nt:"
+#~ msgstr "تعليق:"
+
+#, fuzzy
+#~ msgid "Main P&roperties"
+#~ msgstr "رئيسي خصائص"
+
+#, fuzzy
+#~ msgid "Read onl&y"
+#~ msgstr "اقرأ"
+
+#, fuzzy
+#~ msgid "Pub&lic"
+#~ msgstr "عام"
+
+#, fuzzy
+#~ msgid "A&vailable"
+#~ msgstr "متوفر"
+
+#, fuzzy
+#~ msgid "&Security"
+#~ msgstr "الأمن"
+
+#, fuzzy
+#~ msgid "Gu&ests"
+#~ msgstr "الضيوف"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "هذا هو a اسم المستخدم مُستخدَم لـ وصول إلى ضيف موافق مهما مستخدم متوفّر إلى "
+#~ "أي منها عميل يتصل إلى ضيف خدمة نموذجيا مستخدم بوصة كلمة مرور ملفّ ليس a "
+#~ "سليم دخول ، تسجيل الـ مستخدم الحساب هو a اختيار لـ معلمة إذا a اسم "
+#~ "المستخدم هو بوصة a خدمة اسم المستخدم."
+
+#, fuzzy
+#~ msgid "&Guest account:"
+#~ msgstr "ضيف الحساب:"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "إذا هو مؤكّد لا كلمة مرور هو مطلوب إلى اتصال إلى خدمة صلاحيات من ضيف "
+#~ "الحساب."
+
+#, fuzzy
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "فقط اسمح ضيف"
+
+#, fuzzy
+#~ msgid "Hos&ts"
+#~ msgstr "المستضيفين"
+
+#, fuzzy
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "الـ من اسمح ليس وصول إلى قوائم إلى تجاوز أين قوائم تضارب اسمح قائمة."
+
+#, fuzzy
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr "هذا معلمة هو a فاصلة فراغ أو لسان set من إلى وصول a خدمة."
+
+#, fuzzy
+#~ msgid "Hosts allo&w:"
+#~ msgstr "المستضيفين اسمح:"
+
+#, fuzzy
+#~ msgid "Hosts &deny:"
+#~ msgstr "المستضيفين امنع:"
+
+#, fuzzy
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "رمزي وصلات"
+
+#, fuzzy
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "اسمح متابعة من وصلات"
+
+#, fuzzy
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr "اسمح متابعة من وصلات نقطة إلى خارج دليل شجرة"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr "<qt> صدِّقصدّق كلمة مرور متابعة IF عميل a اسم المستخدم</qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "فقط اسمح مع بوصة اسم المستخدم قائمة"
+
+#, fuzzy
+#~ msgid "Hidden &Files"
+#~ msgstr "مخفي ملفات"
+
+#, fuzzy
+#~ msgid "Hidden"
+#~ msgstr "مخفي"
+
+#, fuzzy
+#~ msgid "Veto"
+#~ msgstr "النقض"
+
+#, fuzzy
+#~ msgid "Veto Oplock"
+#~ msgstr "النقض"
+
+#, fuzzy
+#~ msgid "Size"
+#~ msgstr "الحجم"
+
+#, fuzzy
+#~ msgid "Date"
+#~ msgstr "التاريخ"
+
+#, fuzzy
+#~ msgid "Se&lected Files"
+#~ msgstr "مختار ملفات"
+
+#, fuzzy
+#~ msgid "Hi&de"
+#~ msgstr "إخفاء"
+
+#, fuzzy
+#~ msgid "&Veto"
+#~ msgstr "النقض"
+
+#, fuzzy
+#~ msgid "Veto oploc&k"
+#~ msgstr "النقض"
+
+#, fuzzy
+#~ msgid "&Manual Configuration"
+#~ msgstr "يدوي إعدادات"
+
+#, fuzzy
+#~ msgid "Ve&to files:"
+#~ msgstr "النقض ملفات:"
+
+#, fuzzy
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "النقض ملفات:"
+
+#, fuzzy
+#~ msgid "Hidde&n files:"
+#~ msgstr "مخفي ملفات:"
+
+#, fuzzy
+#~ msgid "Hide un&writable files"
+#~ msgstr "إخفاء ملفات"
+
+#, fuzzy
+#~ msgid "Hide s&pecial files"
+#~ msgstr "إخفاء ملفات"
+
+#, fuzzy
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "إخفاء ملفات بدء مع a نقطة "
+
+#, fuzzy
+#~ msgid "Hide un&readable files"
+#~ msgstr "إخفاء غير مقروء ملفات"
+
+#, fuzzy
+#~ msgid "&Advanced"
+#~ msgstr "مت&قدم"
+
+#, fuzzy
+#~ msgid "Force Modes"
+#~ msgstr "فرِض أنماط"
+
+#, fuzzy
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "فرِض دليل أمن نمط:"
+
+#, fuzzy
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "فرِض أمن نمط:"
+
+#, fuzzy
+#~ msgid "Force director&y mode:"
+#~ msgstr "فرِض دليل نمط:"
+
+#, fuzzy
+#~ msgid "Force create mo&de:"
+#~ msgstr "فرِض إ_نشئ نمط:"
+
+#, fuzzy
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~ msgid "Masks"
+#~ msgstr "أقنعة"
+
+#, fuzzy
+#~ msgid "Directory security mask:"
+#~ msgstr "دليل أمن حجاب ، قناع:"
+
+#, fuzzy
+#~ msgid "Security &mask:"
+#~ msgstr "الأمن حجاب ، قناع:"
+
+#, fuzzy
+#~ msgid "Direc&tory mask:"
+#~ msgstr "دليل حجاب ، قناع:"
+
+#, fuzzy
+#~ msgid "Create mas&k:"
+#~ msgstr "إنشاء حجاب ، قناع:"
+
+#, fuzzy
+#~ msgid "&Profile acls"
+#~ msgstr "الملف الشخصي"
+
+#, fuzzy
+#~ msgid "Inherit ac&ls"
+#~ msgstr "رث"
+
+#, fuzzy
+#~ msgid "&NT ACL support"
+#~ msgstr "دعم"
+
+#, fuzzy
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "فرِض مجهول مستخدم:"
+
+#, fuzzy
+#~ msgid "Map acl &inherit"
+#~ msgstr "الخريطة"
+
+#, fuzzy
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "رث الصلاحيات من أب دليل"
+
+#, fuzzy
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "اسمح حذف من ملفات"
+
+#, fuzzy
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS الصّفة التعيين"
+
+#, fuzzy
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "الخريطة DOS أرشيف إلى يونيكس مالك نفِّذ"
+
+#, fuzzy
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "الخريطة DOS مخفي إلى يونيكس العالم نفِّذ"
+
+#, fuzzy
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "الخريطة DOS نظام إلى يونيكس المجموعة نفِّذ"
+
+#, fuzzy
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "تخزين DOS موسّع وصف"
+
+#, fuzzy
+#~ msgid "OS/2"
+#~ msgstr "نظام التّشغيل 2"
+
+#, fuzzy
+#~ msgid "Strict s&ync"
+#~ msgstr "صارم مزامنة"
+
+#, fuzzy
+#~ msgid "Sync al&ways"
+#~ msgstr "المصاحبة دائماً"
+
+#, fuzzy
+#~ msgid "St&rict allocate"
+#~ msgstr "صارم يخصص"
+
+#, fuzzy
+#~ msgid "Use sen&dfile"
+#~ msgstr "إستعمل"
+
+#, fuzzy
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "الأقصى رقم من:"
+
+#, fuzzy
+#~ msgid "Write cache si&ze:"
+#~ msgstr ""
+#~ "اكتب ذاكرة مخبئة\n"
+#~ "تخزين مؤقت\n"
+#~ "مَخبأ حجم:"
+
+#, fuzzy
+#~ msgid "bytes"
+#~ msgstr "بايتات"
+
+#, fuzzy
+#~ msgid "Bloc&k size:"
+#~ msgstr "منع حجم:"
+
+#, fuzzy
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "العميل التّخبئة سياسة:"
+
+#, fuzzy
+#~ msgid "manual"
+#~ msgstr "يدوي"
+
+#, fuzzy
+#~ msgid "documents"
+#~ msgstr "مستندات"
+
+#, fuzzy
+#~ msgid "disable"
+#~ msgstr "تعطيل"
+
+#, fuzzy
+#~ msgid "Name Mangling"
+#~ msgstr "الاسم تشويه"
+
+#, fuzzy
+#~ msgid "Enable na&me mangling"
+#~ msgstr "مكّن الاسم"
+
+#, fuzzy
+#~ msgid "Man&gle case"
+#~ msgstr "يعصر بالضغط حالة"
+
+#, fuzzy
+#~ msgid "Preser&ve case"
+#~ msgstr "إبقاء حالة"
+
+#, fuzzy
+#~ msgid "Short pr&eserve case"
+#~ msgstr "قصير حالة"
+
+#, fuzzy
+#~ msgid "Case sensi&tive"
+#~ msgstr "الحالة حسّاس"
+
+#, fuzzy
+#~ msgid "Defau&lt case:"
+#~ msgstr "افتراضي حالة:"
+
+#, fuzzy
+#~ msgid "Lower"
+#~ msgstr "أدنى"
+
+#, fuzzy
+#~ msgid "Upper"
+#~ msgstr "الأعلى"
+
+#, fuzzy
+#~ msgid "Mangling cha&r:"
+#~ msgstr "تشويه رمز:"
+
+#, fuzzy
+#~ msgid "Mangled ma&p:"
+#~ msgstr "مشوّه خريطة:"
+
+#, fuzzy
+#~ msgid "Mangling method:"
+#~ msgstr "تشويه طريقة:"
+
+#, fuzzy
+#~ msgid "hash"
+#~ msgstr "تجزئة"
+
+#, fuzzy
+#~ msgid "Other Options"
+#~ msgstr "خيارات أخرى"
+
+#, fuzzy
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "إخفاء نقطة"
+
+#, fuzzy
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#, fuzzy
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS ملفّ نمط"
+
+#, fuzzy
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS ملفّ الوقت"
+
+#, fuzzy
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS ملفّ وقت استبانة"
+
+#, fuzzy
+#~ msgid "Enable lock&ing"
+#~ msgstr "مكّن إقفال ، إغلاق"
+
+#, fuzzy
+#~ msgid "Locki&ng"
+#~ msgstr "قفل الشاشة"
+
+#, fuzzy
+#~ msgid "S&trict locking"
+#~ msgstr "صارم إقفال ، إغلاق"
+
+#, fuzzy
+#~ msgid "Blockin&g locks"
+#~ msgstr "السّدّ"
+
+#, fuzzy
+#~ msgid "Posi&x locking"
+#~ msgstr "إقفال ، إغلاق"
+
+#, fuzzy
+#~ msgid "Share mo&des"
+#~ msgstr "مشاركة"
+
+#, fuzzy
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "إصدار "
+
+#, fuzzy
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "RE&MOVE:"
+
+#, fuzzy
+#~ msgid "Fak&e oplocks"
+#~ msgstr "مزيف"
+
+#, fuzzy
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "خيارات:"
+
+#, fuzzy
+#~ msgid "Exec"
+#~ msgstr "تنفيذ"
+
+#, fuzzy
+#~ msgid "Root pr&eexec:"
+#~ msgstr "الجذر:"
+
+#, fuzzy
+#~ msgid "Root &postexec:"
+#~ msgstr "الجذر:"
+
+#, fuzzy
+#~ msgid "preexec c&lose"
+#~ msgstr "اغلق"
+
+#, fuzzy
+#~ msgid "root pree&xec close"
+#~ msgstr "جذر اغلق"
+
+#, fuzzy
+#~ msgid "&Volume:"
+#~ msgstr "&حجم الصوت"
+
+#, fuzzy
+#~ msgid "Ma&gic script:"
+#~ msgstr "سحر برنامج نصي:"
+
+#, fuzzy
+#~ msgid "Mag&ic output:"
+#~ msgstr "سحر مخرجات:"
+
+#, fuzzy
+#~ msgid "Do &not descend:"
+#~ msgstr "تنفيذ ليس:"
+
+#, fuzzy
+#~ msgid "Msdfs pro&xy"
+#~ msgstr ""
+#~ "وكيل\n"
+#~ "مفوض"
+
+#, fuzzy
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "أمر المسموح لهم"
+
+#, fuzzy
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "مزيف دليل إ_نشئ الوقت"
+
+#, fuzzy
+#~ msgid "Ms&dfs root"
+#~ msgstr "جذر"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "&مساعدة"
+
+#, fuzzy
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#, fuzzy
+#~ msgid "Users"
+#~ msgstr "المستخدمون"
+
+#, fuzzy
+#~ msgid "All U&nspecified Users"
+#~ msgstr "الكل غير محدد المستخدمون"
+
+#, fuzzy
+#~ msgid "Reject"
+#~ msgstr "ارفض"
+
+#, fuzzy
+#~ msgid "Spec&ified Users"
+#~ msgstr "محدّد المستخدمون"
+
+#, fuzzy
+#~ msgid "Access Rights"
+#~ msgstr "حقوق النفاذ"
+
+#, fuzzy
+#~ msgid "A&dd User..."
+#~ msgstr "إضافة المستخدم."
+
+#, fuzzy
+#~ msgid "E&xpert"
+#~ msgstr "خبير"
+
+#, fuzzy
+#~ msgid "Add &Group..."
+#~ msgstr "إضافة المجموعة."
+
+#, fuzzy
+#~ msgid "Remo&ve Selected"
+#~ msgstr "احذف مختار"
+
+#, fuzzy
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "الكل المستخدمون يجب أن إجباري إلى المتابعة المستخدم المجموعة"
+
+#, fuzzy
+#~ msgid "Forc&e user:"
+#~ msgstr "فرِض مستخدم:"
+
+#, fuzzy
+#~ msgid "Fo&rce group:"
+#~ msgstr "فرِض المجموعة:"
+
+#, fuzzy
+#~ msgid "Access Modifiers"
+#~ msgstr "النفاذ مغيّرات"
+
+#, fuzzy
+#~ msgid "Access Permissions"
+#~ msgstr "إذون الوصول"
+
+#, fuzzy
+#~ msgid "Others"
+#~ msgstr "أخرى"
+
+#, fuzzy
+#~ msgid "Read"
+#~ msgstr "اقرأ"
+
+#, fuzzy
+#~ msgid "Write"
+#~ msgstr "اكتب"
+
+#, fuzzy
+#~ msgid "Sticky"
+#~ msgstr "لاصق"
+
+#, fuzzy
+#~ msgid "Set GID"
+#~ msgstr "تحديد GID"
+
+#, fuzzy
+#~ msgid "Set UID"
+#~ msgstr "تحديد UID"
+
+#, fuzzy
+#~ msgid "Special"
+#~ msgstr "خاص"
+
+#, fuzzy
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP"
+
+#, fuzzy
+#~ msgid "User Settings"
+#~ msgstr "إعدادات المستخدم"
+
+#, fuzzy
+#~ msgid "&Valid users:"
+#~ msgstr "صالح مستخدمون:"
+
+#, fuzzy
+#~ msgid "&Admin users:"
+#~ msgstr "مدير النظام مستخدمون:"
+
+#, fuzzy
+#~ msgid "&Invalid users:"
+#~ msgstr "غير صحيح مستخدمون:"
+
+#, fuzzy
+#~ msgid "&Write list:"
+#~ msgstr "اكتب قائمة:"
+
+#, fuzzy
+#~ msgid "&Read list:"
+#~ msgstr "اقرأ قائمة:"
+
+#, fuzzy
+#~ msgid "Allowed &Hosts"
+#~ msgstr "مسموح المستضيفين"
+
+#, fuzzy
+#~ msgid "A list of allowed hosts"
+#~ msgstr "A قائمة من المسموح لهم"
+
+#, fuzzy
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "هنا a قائمة من المسموح لهم إلى وصول دليل نظام ملفّات الشّبكة (NFS) الأوّل "
+#~ "عمود الاسم أو عنوان من مضيف ثانية عمود وصول البارامترات الـ الاسم عام "
+#~ "وصول."
+
+#, fuzzy
+#~ msgid "&Add Host..."
+#~ msgstr "إضافة مضيف."
+
+#, fuzzy
+#~ msgid "Mo&dify Host..."
+#~ msgstr "تعديل مضيف."
+
+#, fuzzy
+#~ msgid "&Remove Host"
+#~ msgstr "احذف مضيف"
+
+#, fuzzy
+#~ msgid "Name/Address"
+#~ msgstr "الاسم العنوان"
+
+#, fuzzy
+#~ msgid "Parameters"
+#~ msgstr "معاملات"
+
+#, fuzzy
+#~ msgid "Host Properties"
+#~ msgstr "مضيف خصائص"
+
+#, fuzzy
+#~ msgid "&Name/address:"
+#~ msgstr "الاسم عنوان:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> الاسم العنوان حقل</b>\n"
+#~ "<p> أدخل مضيف الاسم أو عنوان<br> مضيف أيار بوصة a رقم من\n"
+#~ "<p>\n"
+#~ "<i> فريد مضيف</i>\n"
+#~ "<p>\n"
+#~ " هذا هو شائع تنسيق أنت أيار تحديد a مضيف أداء الاسم أداء حالّ نطاق الاسم "
+#~ "أو IP عنوان\n"
+#~ "</p> n\n"
+#~ "<i></i>\n"
+#~ "<p>\n"
+#~ " NIS أيار المجموعة فقط مضيف جزء من هو بوصة فحص لـ فارغ مضيف أو a فريد خط "
+#~ "فاصل تجاهل\n"
+#~ "</p> n\n"
+#~ "<i></i>\n"
+#~ "<p>\n"
+#~ " المكنة أيار تحوي على حرف بدل محارف و هذا مُستخدَم إلى make ملفّ المزيد "
+#~ "متراص\n"
+#~ "مكتنز\n"
+#~ "مدّمج\n"
+#~ "متضام لـ مرة الكل بوصة نطاق على أية حال حرف بدل محارف ليس طابق بوصة a "
+#~ "نطاق الاسم أعلى التشكيلة ليس تضمين a b\n"
+#~ "</p> n\n"
+#~ "<i> IP</i>\n"
+#~ "<p>\n"
+#~ " أنت تصدير إلى الكل يعمل IP شبكة هذا هو done أداء IP عنوان و قناع الشبكة "
+#~ "زوج عنوان قناع الشبكة قناع الشبكة بوصة عشري تنسيق أو a حجاب ، قناع الطول "
+#~ "لـ أو إلى شبكة القاعدة عنوان نتيجو بوصة متطابقة مع من مضيف\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "&Public access"
+#~ msgstr "عام وصول"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> عام وصول</b>\n"
+#~ "<p> تفقّد مضيف عنوان a فريد حرف بدل عام وصول هو IF أدخل a حرف بدل بوصة "
+#~ "عنوان حقل\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "خيارات"
+
+#, fuzzy
+#~ msgid "&Writable"
+#~ msgstr "قابل للكتابة"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> قابل للكتابة</b>\n"
+#~ "<p> قراءة و كتابة الطّلبات يعمل نظام ملفّات الشّبكة (NFS) شدة الصوت\n"
+#~ "</p>\n"
+#~ "<p> افتراضي هو إلى أي منها طلب\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "&Insecure"
+#~ msgstr "غير آمن"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> غير آمن</b>\n"
+#~ "<p> خيار هو مؤكّد الإيطالية هو ليس مطلوب الطّلبات يعمل إنترنت منفذ\n"
+#~ "</p>\n"
+#~ "<p> الإيطالية غير محقّق\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "&Sync"
+#~ msgstr "المصاحبة"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> المصاحبة</b>\n"
+#~ "<p> خيار الطّلبات الكل ملفّ إلى قرص قبل كتابة طلب هذا هو مطلوب لـ كامل "
+#~ "أمن ، وقاية من البيانات بوصة من a خادم تحطّم a\n"
+#~ "</p>\n"
+#~ "<p> افتراضي هو إلى اسمح خادم إلى كتابة البيانات خارج الإيطالية هو جاهز\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "No w&delay"
+#~ msgstr "لا"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b> لا</b>\n"
+#~ "<p> خيار تأثير IF مزامنة هو set الـ نظام ملفّات الشّبكة (NFS) خادم مهلة، "
+#~ "تأخر a كتابة طلب إلى قرص IF الإيطالية كتابة طلب أيار بوصة progress أو "
+#~ "أيار هذا متعدد كتابة الطّلبات إلى إلى قرص مع عملية إذا نظام ملفّات الشّبكة "
+#~ "(NFS) خادم صغير بدون صلة الطّلبات سلوك نقص لا هو متوفّر إلى الإيطالية موقف</"
+#~ "p>"
+
+#, fuzzy
+#~ msgid "No &hide"
+#~ msgstr "لا إخفاء"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> لا إخفاء</b>\n"
+#~ "<p> خيار هو يعمل خيار من الاسم بوصة نظام ملفّات الشّبكة (NFS) عادة IF a "
+#~ "خادم إثنان من هو ركّب يعمل غير ذلك عميل إلى ضمّ إلى get وصول إلى إذا "
+#~ "الإيطالية أب الإيطالية فارغ دليل عند غير ذلك هو ركّب ذلك هو مخفي\n"
+#~ "</p>\n"
+#~ "<p> خيار يعمل a الإيطالية ليس إلى مخفي و عميل إلى انقل من أب إلى تغيير\n"
+#~ "</p>\n"
+#~ "<p> بعض نظام ملفّات الشّبكة (NFS) ليس مع لـ مرة الإيطالية هو لـ إثنان ملفات "
+#~ "بوصة إلى رقم\n"
+#~ "</p>\n"
+#~ "<p> خيار هو يعمل فريد مضيف itإيطالياهو ليس مع أو حرف بدل\n"
+#~ "</p>\n"
+#~ "<p> خيار بوصة بعض الإيطالية مُستخدَم مع REMOVE و بعد عميل نظام مع\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "No su&btree check"
+#~ msgstr "لا تفقّد"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> لا تفقّد</b>\n"
+#~ "<p> خيار فحص أمن ثِقَة ، ثبات هو بعض\n"
+#~ "</p>\n"
+#~ "<p> a من a هو هو ليس a نظام ملفّات الشّبكة (NFS) طلب خادم تفقّد ليس ملفّ هو "
+#~ "بوصة هو الإيطالية هو بوصة شجرة هو هذا تفقّد هو تفقّد\n"
+#~ "</p>\n"
+#~ "<p> ترتيب إلى تفقّد خادم تضمين بعض معلومات حوْل موقع من ملفّ بوصة هو إلى "
+#~ "عميل هذا مع ملفات بينما a عميل فتح بوصة بسيط الإيطالية\n"
+#~ "</p>\n"
+#~ "<p> فحص هو مُستخدَم إلى make ملفات داخل إلى جذر وصول IF هو مع لا جذر أسفل "
+#~ "ملفّ نفسها المزيد عام وصول\n"
+#~ "</p>\n"
+#~ "<p> a عام a home دليل هو عند جذر و أيار من ملفّ مع فحص معطل A هو قراءة و "
+#~ "عند ليس ملفّ e g أو و لـ أيار مع ممكن\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "Insecure loc&ks"
+#~ msgstr "غير آمن"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> غير آمن</b>\n"
+#~ "<p> خيار نظام ملفّات الشّبكة (NFS) خادم ليس إلى طلب توثق من إقفال ، إغلاق "
+#~ "الطّلبات i e الطّلبات استخدام مراسم\n"
+#~ "ميفاق عادة نظام ملفّات الشّبكة (NFS) خادم طلب a قفل طلب إلى إبقاء a لـ a "
+#~ "مستخدم قراءة وصول إلى ملفّ مع شارة لا وصول\n"
+#~ "</p>\n"
+#~ "<p> نظام ملفّات الشّبكة (NFS) عميل ليس إرسال مع قفل الطّلبات و الحالي نظام "
+#~ "ملفّات الشّبكة (NFS) يعمل إستعمل شارة IF ابحث قفل ملفات العالم مقروء\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "User Mapping"
+#~ msgstr "المستخدم التعيين"
+
+#, fuzzy
+#~ msgid "All s&quash"
+#~ msgstr "الكل"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b> الكل</b>\n"
+#~ "<p> الكل و إلى مجهول مستخدم مفيد لـ نظام ملفّات الشّبكة (NFS) عام FTP أخبار "
+#~ "بكرة</p>"
+
+#, fuzzy
+#~ msgid "No &root squash"
+#~ msgstr "لا جذر"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> لا جذر</b>\n"
+#~ "<p> من جذر هذا خيار هو لـ\n"
+#~ "</p>\n"
+#~ "<i> جذر</i>\n"
+#~ "<p> الطّلبات من رمز المستخدم إلى مجهول رمز المستخدم ملاحظة ليس تطبيق إلى "
+#~ "أي منها غير ذلك حسّاس مستخدم\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "Anonym. &UID:"
+#~ msgstr "رمز المستخدم:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b> رمز المستخدم رمز المجموعة</b><p> هذه خيارات set رمز المستخدم و من "
+#~ "مجهول الحساب هذا خيار هو لـ كمبيوتر شخصي نظام ملفّات الشّبكة (NFS) الكل "
+#~ "الطّلبات ظهور إلى من مستخدم</p>"
+
+#, fuzzy
+#~ msgid "FF"
+#~ msgstr "ن‌ن"
+
+#, fuzzy
+#~ msgid "Anonym. &GID:"
+#~ msgstr "رمز المجموعة:"
+
+#, fuzzy
+#~ msgid "Folder:"
+#~ msgstr "المجلد:"
+
+#, fuzzy
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "مشاركة مع نظام ملفّات الشّبكة (&NFS) لينكس يونيكس"
+
+#, fuzzy
+#~ msgid "NFS Options"
+#~ msgstr "نظام ملفّات الشّبكة (NFS) خيارات"
+
+#, fuzzy
+#~ msgid "Pu&blic"
+#~ msgstr "عام"
+
+#, fuzzy
+#~ msgid "W&ritable"
+#~ msgstr "قابل للكتابة"
+
+#, fuzzy
+#~ msgid "More NFS Op&tions"
+#~ msgstr "المزيد نظام ملفّات الشّبكة (NFS) خيارات"
+
+#, fuzzy
+#~ msgid "Samba Options"
+#~ msgstr "سامبا خيارات"
+
+#, fuzzy
+#~ msgid "P&ublic"
+#~ msgstr "عام"
+
+#, fuzzy
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "المزيد سامبا خيارات"
+
+#, fuzzy
+#~ msgid "Allow all users to share folders"
+#~ msgstr "اسمح الكل مستخدمون إلى مشاركات"
+
+#, fuzzy
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "فقط مستخدمون من المجموعة المسموح لهم إلى مشاركات"
+
+#, fuzzy
+#~ msgid "Users of '%1' Group"
+#~ msgstr "المستخدمون من المجموعة"
+
+#, fuzzy
+#~ msgid "Remove User"
+#~ msgstr "احذف المستخدم"
+
+#, fuzzy
+#~ msgid "Add User"
+#~ msgstr "أضف مستخدم"
+
+#, fuzzy
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "المجموعة مشاركات جذر كلمة مرور"
+
+#, fuzzy
+#~ msgid "Change Group..."
+#~ msgstr "غيّر المجموعة."
+
+#, fuzzy
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB و نظام ملفّات الشّبكة (NFS) خوادم ليس مُثبّتة يعمل آلة إلى تمكين وحدة "
+#~ "خوادم مُثبّتة."
+
+#, fuzzy
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "مكّن محلي الشبكة ملف مشاركة"
+
+#, fuzzy
+#~ msgid "Si&mple sharing"
+#~ msgstr "بسيط"
+
+#, fuzzy
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "مكّن بسيط إلى اسمح مستخدمون إلى مشاركات من الرئيسة مجلد جذر كلمة مرور."
+
+#, fuzzy
+#~ msgid "Advanced sharin&g"
+#~ msgstr "متقدم"
+
+#, fuzzy
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "مكّن متقدم إلى اسمح مستخدمون إلى مشاركات أي منها كتابة وصول إلى تشكيل "
+#~ "ملفات أو جذر كلمة مرور."
+
+#, fuzzy
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "إستعمل نظام ملفّات الشّبكة (&NFS) لينكس يونيكس"
+
+#, fuzzy
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "إستعمل سامبا ميكروسوفت R النوافذ R"
+
+#, fuzzy
+#~ msgid "Allo&wed Users"
+#~ msgstr "مسموح المستخدمون"
+
+#, fuzzy
+#~ msgid "Shared Folders"
+#~ msgstr "المجلدات المشتركة"
+
+#, fuzzy
+#~ msgid "Samba"
+#~ msgstr "سامبا"
+
+#, fuzzy
+#~ msgid "NFS"
+#~ msgstr "نظام ملفّات الشّبكة (NFS)"
+
+#, fuzzy
+#~ msgid "A&dd..."
+#~ msgstr "أ&ضف..."
+
+#, fuzzy
+#~ msgid "Chang&e..."
+#~ msgstr "تغ&يير..."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr "<p> الـ تشكيل ملفّ<strong> smb</strong> ليس موجود</p> make مُثبّتة n n"
+
+#, fuzzy
+#~ msgid "Specify Location"
+#~ msgstr "حدّد الموقع"
+
+#, fuzzy
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr "smb سامبا ملف n الكل ملفات"
+
+#, fuzzy
+#~ msgid "Get smb.conf Location"
+#~ msgstr "احصل smb الموقع"
+
+#, fuzzy
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt> الـ ملفّ<i></i> ليس قراءة</qt>"
+
+#, fuzzy
+#~ msgid "Could Not Read File"
+#~ msgstr "لم أستطع قراءة الملف"
+
+#, fuzzy
+#~ msgid "Error while opening file"
+#~ msgstr "خطأ بينما ملفّ"
+
+#, fuzzy
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "الإنضمام نطاق failed."
+
+#, fuzzy
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt> رجاء أدخل a كلمة مرور لـ مستخدم<b></b></qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt> الإضافة مستخدم<b></b> إلى سامبا مستخدم قاعدة بيانات failed</qt>"
+
+#, fuzzy
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "الإزالة مستخدم من سامبا مستخدم قاعدة بيانات failed."
+
+#, fuzzy
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "رجاء أدخل a كلمة مرور لـ مستخدم 1"
+
+#, fuzzy
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "التغيير كلمة مرور من مستخدم failed."
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1> سامبا إعدادات</h1> أَعِّد خادم."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "إستعمل<i> مشاركات</i> أمن مستوى IF a home شبكة أو a صغير شبكة<br /> "
+#~ "itإيطالياهو إلى قراءة قائمة من الكل و قبل a دخول ، تسجيل هو مطلوب."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "إستعمل<i> مستخدم</i> أمن مستوى IF a شبكة و ليس إلى اسمح إلى قراءة قائمة "
+#~ "من و a دخول ، تسجيل<br /><br /> إذا إلى تنفيذ سامبا خادم a<b> أوّلي "
+#~ "النطاق</b> إلى set خيار."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "إستعمل<i> خادم</i> أمن مستوى IF a شبكة و خادم التحقق من صحة اسم المستخدم "
+#~ "كلمة مرور أداء الإيطالية إلى SMB خادم مربّع."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "إستعمل<i> نطاق</i> أمن مستوى IF a شبكة و خادم التحقق من صحة اسم المستخدم "
+#~ "كلمة مرور أداء الإيطالية إلى a النوافذ أوّلي أو نسخ احتياطي النطاق جهاز "
+#~ "السيطرة."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "إستعمل<i> خدمة الدّليل النّشط (ADS)</i> أمن مستوى IF a شبكة و خادم a نطاق "
+#~ "عضو بوصة خدمة الدّليل النّشط (ADS)."
+
+#, fuzzy
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "الـ خيار<em></em> هو ليس مدعوم أداء سامبا النسخة"
+
+#, fuzzy
+#~ msgid "Unnamed"
+#~ msgstr "غير مسماة"
+
+#, fuzzy
+#~ msgid "&Hide"
+#~ msgstr "إ&خفاء"
+
+#, fuzzy
+#~ msgid "&Veto Oplock"
+#~ msgstr "النقض"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt> بعض ملفات مُنتقى مخفي تشغيل مع a نقطة إلى الكل ملفات بدء مع a نقطة</"
+#~ "qt>"
+
+#, fuzzy
+#~ msgid "Files Starting With Dot"
+#~ msgstr "ملفات جاري التشغيل مع نقطة"
+
+#, fuzzy
+#~ msgid "Uncheck Hidden"
+#~ msgstr "إزالة الاختيار مخفي"
+
+#, fuzzy
+#~ msgid "Keep Hidden"
+#~ msgstr "حافظ عليه مخفي"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b> بعض ملفات مُنتقى أداء سلسلة نص<b></b> إلى الكل ملفات مواءمة<b></b>?"
+
+#, fuzzy
+#~ msgid "Wildcarded String"
+#~ msgstr "سلسلة"
+
+#, fuzzy
+#~ msgid "Uncheck Matches"
+#~ msgstr "إزالة الاختيار مطابقات"
+
+#, fuzzy
+#~ msgid "Keep Selected"
+#~ msgstr "حافظ عليه مختار"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "افتراضي"
+
+#, fuzzy
+#~ msgid "Admin"
+#~ msgstr "مدير النظام"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt> أنت<b> عام قراءة وصول</b> لـ دليل ضيف الحساب<b></b> ليس قراءة "
+#~ "الصلاحيات<br /> إلى متابعة</qt>"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "تحذير"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt> أنت<b> عام كتابة وصول</b> لـ دليل ضيف الحساب<b></b> ليس كتابة "
+#~ "الصلاحيات<br /> إلى متابعة</qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt> أنت<b> كتابة وصول</b> إلى مستخدم<b></b> لـ دليل مستخدم ليس كتابة "
+#~ "الصلاحيات<br /> إلى متابعة</qt>"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt> أنت<b> قراءة وصول</b> إلى مستخدم<b></b> لـ دليل مستخدم ليس قراءة "
+#~ "الصلاحيات<br /> إلى متابعة</qt>"
+
+#, fuzzy
+#~ msgid "There already exists a public entry."
+#~ msgstr "هناك موجود a عام خانة."
+
+#, fuzzy
+#~ msgid "Host Already Exists"
+#~ msgstr "مضيف بالفعل يجد"
+
+#, fuzzy
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "رجاء أدخل a اسم مضيف أو IP عنوان."
+
+#, fuzzy
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "لا اسم المضيف IP العنوان"
+
+#, fuzzy
+#~ msgid "The host '%1' already exists."
+#~ msgstr "الـ مضيف موجود."
+
+#, fuzzy
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "جاري القراءة سامبا تشكيل ملفّ."
+
+#, fuzzy
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "جاري القراءة نظام ملفّات الشّبكة (NFS) تشكيل ملفّ."
+
+#, fuzzy
+#~ msgid "Please enter a valid path."
+#~ msgstr "رجاء أدخل a سليم المسار."
+
+#, fuzzy
+#~ msgid "Only folders can be shared."
+#~ msgstr "فقط."
+
+#, fuzzy
+#~ msgid "The folder is already shared."
+#~ msgstr "الـ مجلد هو."
+
+#, fuzzy
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "الـ مسيّر ليس اسمح مع نظام ملفّات الشّبكة (NFS)."
+
+#, fuzzy
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "خطأ ليس قراءة نظام ملفّات الشّبكة (NFS) تشكيل ملفّ."
+
+#, fuzzy
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "الـ مسيّر ليس اسمح مع سامبا."
+
+#, fuzzy
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "خطأ ليس قراءة سامبا تشكيل ملفّ."
+
+#, fuzzy
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "أنت إلى أدخل a الاسم لـ سامبا مشاركات."
+
+#, fuzzy
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "أنت إلى إلى مشاركات."
+
+#, fuzzy
+#~ msgid "Configure File Sharing..."
+#~ msgstr "إعداد مشاركة الملفات..."
+
+#, fuzzy
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "لا نظام ملفّات الشّبكة (NFS) خادم مُثبّتة يعمل نظام"
+
+#, fuzzy
+#~ msgid "Could not save settings."
+#~ msgstr "يمكن أن ليس حفظ خصائص."
+
+#, fuzzy
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "يمكن أن ليس فتح ملفّ لـ 2"
+
+#, fuzzy
+#~ msgid "Saving Failed"
+#~ msgstr "جاري الحفظ فشل"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1> ملف مشاركة</h1><p> هذا وحدة مُستخدَم إلى تمكين ملفّ شبكة الشبكة ملف "
+#~ "النظام نظام ملفّات الشّبكة (NFS) أو SMB بوصة كونكيورر الـ إلى مشاركات ملفات "
+#~ "مع النوافذ R يعمل شبكة</p>"
+
+#, fuzzy
+#~ msgid "Share Folder"
+#~ msgstr "مشاركة مجلّد"
+
+#, fuzzy
+#~ msgid "Allowed Users"
+#~ msgstr "المستخدمون المسموح لهم"
+
+#, fuzzy
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "الكل مستخدمون بوصة المجموعة."
+
+#, fuzzy
+#~ msgid "Select User"
+#~ msgstr "انتقي مستخدم"
+
+#, fuzzy
+#~ msgid "Select a user:"
+#~ msgstr "اختر مستخدماً:"
+
+#, fuzzy
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "يمكن أن ليس اضف مستخدم إلى المجموعة"
+
+#, fuzzy
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "يمكن أن ليس أزِل مستخدم من المجموعة"
+
+#, fuzzy
+#~ msgid "You have to choose a valid group."
+#~ msgstr "أنت إلى اختيار a سليم المجموعة."
+
+#, fuzzy
+#~ msgid "New file share group:"
+#~ msgstr "جديد ملفّ مشاركات المجموعة:"
+
+#, fuzzy
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "إضافة مستخدمون من ملفّ مشاركات المجموعة إلى جديد"
+
+#, fuzzy
+#~ msgid "Remove users from old file share group"
+#~ msgstr "احذف مستخدمون من ملفّ مشاركات المجموعة"
+
+#, fuzzy
+#~ msgid "Delete the old file share group"
+#~ msgstr "احذف ملفّ مشاركات المجموعة"
+
+#, fuzzy
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "فقط مستخدمون من a المجموعة المسموح لهم إلى مشاركات"
+
+#, fuzzy
+#~ msgid "Choose Group..."
+#~ msgstr "اختر المجموعة."
+
+#, fuzzy
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "تنفيذ إلى أزِل الكل مستخدمون من المجموعة?"
+
+#, fuzzy
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "تنفيذ إلى حذف المجموعة?"
+
+#, fuzzy
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "جاري الحذف المجموعة failed."
+
+#, fuzzy
+#~ msgid "Please choose a valid group."
+#~ msgstr "رجاء اختيار a سليم المجموعة."
+
+#, fuzzy
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "هذا المجموعة ليس يجب أن الإيطالية?"
+
+#, fuzzy
+#~ msgid "Do Not Create"
+#~ msgstr "لا تنشئ"
+
+#, fuzzy
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "إنشاء من المجموعة failed."
+
+#, fuzzy
+#~ msgid "Printer Settings"
+#~ msgstr "الطابعة إعدادات"
+
+#, fuzzy
+#~ msgid "Pr&inter"
+#~ msgstr "الطابعة"
+
+#, fuzzy
+#~ msgid "Pa&th:"
+#~ msgstr "المسار:"
+
+#, fuzzy
+#~ msgid "&Queue:"
+#~ msgstr "الطابور:"
+
+#, fuzzy
+#~ msgid "Sha&re all printers"
+#~ msgstr "مشاركة الكل"
+
+#, fuzzy
+#~ msgid "I&dentifier"
+#~ msgstr "معرّف"
+
+#, fuzzy
+#~ msgid "&Name:"
+#~ msgstr "الإ&سم:"
+
+#, fuzzy
+#~ msgid "Comm&ent:"
+#~ msgstr "&تعليق:"
+
+#, fuzzy
+#~ msgid "Main Properties"
+#~ msgstr "رئيسي خصائص"
+
+#, fuzzy
+#~ msgid "&Printing"
+#~ msgstr "طباعة"
+
+#, fuzzy
+#~ msgid "Printer dri&ver:"
+#~ msgstr "الطابعة سوّاق:"
+
+#, fuzzy
+#~ msgid "Print&er driver location:"
+#~ msgstr "الطابعة سوّاق موقع:"
+
+#, fuzzy
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#, fuzzy
+#~ msgid "Printin&g:"
+#~ msgstr "طباعة:"
+
+#, fuzzy
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "الحد الأقصى طبع:"
+
+#, fuzzy
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "الحد الأقصى طبع:"
+
+#, fuzzy
+#~ msgid "Use c&lient driver"
+#~ msgstr "إستعمل عميل سوّاق"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "افتراضي"
+
+#, fuzzy
+#~ msgid "Hosts a&llow:"
+#~ msgstr "المستضيفين اسمح:"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "الطابعة ادر:"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "الأ&وامر"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "اطبع أمر:"
+
+#, fuzzy
+#~ msgid "lpq comma&nd:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "lprm comman&d:"
+#~ msgstr "أمر:"
+
+#, fuzzy
+#~ msgid "Miscella&neous"
+#~ msgstr "متنوع"
+
+#, fuzzy
+#~ msgid "root pr&eexec:"
+#~ msgstr "جذر:"
+
+#, fuzzy
+#~ msgid "root postexec:"
+#~ msgstr "جذر:"
+
+#, fuzzy
+#~ msgid "Tunin&g"
+#~ msgstr "المُوالفة"
+
+#, fuzzy
+#~ msgid "M&in print space:"
+#~ msgstr "الحد الأدنى طبع فراغ:"
+
+#, fuzzy
+#~ msgid "&Logging"
+#~ msgstr "تسجيل الوقائع"
+
+#, fuzzy
+#~ msgid "S&tatus"
+#~ msgstr "الحالة"
+
+#, fuzzy
+#~ msgid "Not share&d"
+#~ msgstr "لا"
+
+#, fuzzy
+#~ msgid "&Shared"
+#~ msgstr "مشترك"
+
+#, fuzzy
+#~ msgid "Bas&e Options"
+#~ msgstr "الأساس خيارات"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "هذا هو a نص حقل هو روجع التالي إلى a مشاركات a عميل خادم شبكة أو اعرض إلى "
+#~ "قائمة متوفّر."
+
+#, fuzzy
+#~ msgid "Name of the share"
+#~ msgstr "الاسم من مشاركات"
+
+#, fuzzy
+#~ msgid "Commen&t:"
+#~ msgstr "تعليق:"
+
+#, fuzzy
+#~ msgid "Security Options"
+#~ msgstr "خيارات الأمن"
+
+#, fuzzy
+#~ msgid "Hosts den&y:"
+#~ msgstr "المستضيفين امنع:"
+
+#, fuzzy
+#~ msgid "&Hosts allow:"
+#~ msgstr "المستضيفين اسمح:"
+
+#, fuzzy
+#~ msgid "Guest &account:"
+#~ msgstr "ضيف الحساب:"
+
+#, fuzzy
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "إذا هو مؤكّد مستخدمون من a خدمة أيار ليس إ_نشئ أو تغيير ملفات بوصة خدمة s "
+#~ "دليل."
+
+#, fuzzy
+#~ msgid "G&uests allowed"
+#~ msgstr "الضيوف المسموح لهم"
+
+#, fuzzy
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr "هذا هو a اسم المستخدم مُستخدَم لـ وصول دليل IF المسموح لهم"
+
+#, fuzzy
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "هذا مشاركات هو روجع بوصة قائمة من متوفّر بوصة a اعرض و بوصة استعراض قائمة."
+
+#, fuzzy
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "صندوق تأشير موقف a خدمة إذا ليس مؤكّد الكلّ إلى اتصال إلى خدمة فشل مثل هذا."
+
+#, fuzzy
+#~ msgid "More Opt&ions"
+#~ msgstr "المزيد خيارات"
+
+#, fuzzy
+#~ msgid "KB"
+#~ msgstr "ك.ب."

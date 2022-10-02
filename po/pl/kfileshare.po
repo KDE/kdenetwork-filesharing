@@ -1,0 +1,3473 @@
+# translation of kfileshare.po to
+# Version: $Revision: 1634720 $
+# Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Michał 'podles' Podlewski <podles@aster.pl>, 2004.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
+# Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005, 2006.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2016, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-16 18:43+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Odmów"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Zezwól"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Nieznany"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Tylko ten katalog"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Ten katalog, podkatalogi i pliki"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Ten katalog i podkatalogi"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Ten katalog i pliki"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Tylko podkatalogi i pliki"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Tylko podkatalogi"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Tylko pliki"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Nieznany"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Uprawnienia zdalne"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Ten wpis o uprawieniach został odziedziczony z kontenera nadrzędnego i może "
+"być zmieniony poprzez niego (np. katalog z wyższego poziomu)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Rodzaj:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Stosuje się do:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Przeszukaj katalog / wykonaj plik"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Wypisywanie katalogu / odczyt danych"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Odczytaj atrybuty"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Wczytaj atrybuty rozszerzone"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Tworzenie plików / zapis danych"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Utwórz katalogi / dopisz dane"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Zapisz atrybuty"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Zapisz atrybuty rozszerzone"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Usuń podkatalogi i pliki"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Usuń"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Odczytaj atrybuty"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Zmień uprawnienia"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Stań się właścicielem"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Zastosuj te uprawnienia tylko do obiektów i/lub kontenerów wewnątrz tego "
+"kontenera"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Wpisy określające dostęp"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Właściciel"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Właściciel:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grupa:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Nie znaleziono żadnych uprawnień"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+"Prawdopodobnie nie ustawiono na tym pliku żadnych uprawnień SMB/Windowsa ani "
+"rozszerzonych."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Tego katalogu nie można udostępnić, bo <filename>%1</filename> nie istnieje."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Błąd ten jest spowodowany tym, że twoje distro nie ustawiło poprawnie "
+"współdzielenia Samby. Możesz to naprawić, tworząc ten katalog ręcznie. Po "
+"tym zamknij i otwórz to okno ponownie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Tego katalogu nie można udostępnić, bo <filename>%1</filename> ma on "
+"niepoprawnie ustawioną grupę właścicielską na <resource>%2</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Błąd ten jest spowodowany tym, że twoje distro nie ustawiło poprawnie "
+"współdzielenia Samby. Możesz to naprawić, zmieniając grupę właścicielską "
+"tego katalogu na <resource>usershares</resource> i czyniąc siebie członkiem "
+"tej grupy. Po tym uruchom system ponownie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Tego katalogu nie można udostępnić, bo twój użytkownik nie jest członkiem "
+"grupy <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"Możesz to naprawić czyniąc twojego użytkownika członkiem tej grupy. "
+"Następnie uruchom system ponownie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Uczyń mnie członkiem grupy"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Tego katalogu nie można udostępnić, bo twój użytkownik nie ma uprawnień do "
+"zapisu do <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"Możesz to naprawić, upewniając się, że grupa <resource>%1</resource> ma "
+"uprawnienia do zapisu do <filename>%2</filename>. Po tym zamknij i otwórz to "
+"okno ponownie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Dodawanie użytkownika '%1' do grupy '%2', tak aby mógł on ustawiać udziały "
+"użytkowników Samby"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Nie udało się uczynić użytkownika <resource>%1<resource> członkiem grupy "
+"<resource>%2<resource>"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Ścieżka do pliku"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Bieżące uprawnienia"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Wymagane uprawnienia"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Odmowa dostępu"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Odmówienie dostępu uniemożliwia korzystanie z tego udziału także wtedy, gdy "
+"inna zasada go przydziela. Zasada odmawiająca, zawsze\n"
+"ma pierwszeństwo. W szczególności odmówienie dostępu <resource>Każdemu</"
+"resource> uniemożliwia każdemu dostęp.\n"
+"Ogólnie, nie ma potrzeby odmówienia dostępu każdemu, bo uprawnienia do "
+"zwykłych katalogów i plików nadal mają zastosowanie, gdy po ich "
+"udostępnieniu.\n"
+"Użytkownik, który nie ma dostępu do katalogu lokalnie, nie będzie go też "
+"miał zdalnie\n"
+"nawet, gdy zasady udostępniania mu na to pozwolą."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+"Ten katalog  wymaga dodatkowych uprawnień, aby udostępnianie mogło działać"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Napraw uprawnienia"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Zasób może nie działać poprawnie, bo jego katalog lub ścieżka ma nadane "
+"rozszerzone uprawnienia: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Udostępnij ten katalog innym komputerom w sieci lokalnej"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nazwa:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Nie można nadać tej nazwy. Nazwy udziałów nie mogą być nazwami użytkowników "
+"i nie mogą być takie same jak nazwa innego udziału w całym systemie."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Nazwa może okazać zbyt długa. Może to powodować kłopoty przy współpracy z "
+"innymi systemami, bądź zostać odrzuconą przez Sambę."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Zezwól gościom"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Gościnny dostęp jest wyłączony w ustawieniach systemu Samby."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Pełne uprawnienia"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Tylko do odczytu"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Bez dostępu"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Pokaż monitor stanu Samby"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Ustaw hasło"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Hasło"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Potwierdź hasło"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Hasła muszą być takie same"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Ustaw hasło"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Katalog <filename>%1</filename> wymaga dodatkowych uprawnień, aby "
+"udostępnianie mogło działać.</para>\n"
+"<para>Czy chcesz przydzielić te uprawnienia teraz?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Zmień uprawnienia"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Nie można zmienić uprawnień do: %1. Wycofano wszystkie zmienione uprawnienia "
+"do stanu początkowego."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Aby udostępniać katalogi, trzeba mieć wgraną Sambę."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Wgraj Sambę"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Nie udało się wgrać pakietu Samba."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Uruchom komputer ponownie, aby dokończyć wprowadzanie zmian."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Uruchom ponownie"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba korzysta z oddzielnej bazy danych użytkowników od tej systemowej.\n"
+"Wymaga to ustawienia osobnego hasła do Samby dla każdego użytkownika, \n"
+"któremu chcesz umożliwić wejście.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Utwórz hasło Samby"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Aby zarządzać użytkownikami i ich hasłami użyj narzędzia wiersza poleceń o "
+"nazwie<command>smbpasswd</command>\n"
+"."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr "Wyczerpano dozwoloną liczbę udostępnianych katalogów na raz."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Nazwa udziału jest nieprawidłowa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Nazwa udziału jest już zajęta przez inny katalog."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Ścieżka jest nieprawidłowa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Ścieżka nie istnieje."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Ścieżka nie jest katalogiem."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Ścieżka jest względna."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Nie wolno udostępnić ścieżki."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Zasada dostępu jest nieprawidłowa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Zasada dostępu o nazwie \"użytkownik\" jest nieprawidłowa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Zasada dostępu o nazwie \"gość\" jest nieprawidłowa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Włączenie gościnnego dostępu jest niedozwolone."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Wystąpił błąd przy próbie udostępnienia katalogu. Udział nie został "
+"utworzony.</para><para>Samba wewnętrznie zgłasza:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Nie udało się utworzyć udziału sieciowego"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Wystąpił błąd przy próbie zaprzestania udostępniania katalogu. Udział "
+"nie został usunięty.</para><para>Samba wewnętrznie zgłasza:</para><message>"
+"%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Nie udało się usunąć udziału sieciowego"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Sprawdzanie, czy istnieje użytkownik Samby o nazwie '%1'"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Tworzenie nowego użytkownika Samby o nazwie '%1'"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Nie udało się wprowadzić zmian w grupie."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Nie posiadasz wystarczających uprawnień do zarządzania udziałami "
+#~ "użytkownika Samby."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Udostępnij"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Utwórz"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Utwórz"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "Udo&stępnij"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Wgrywanie Samby..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Zasób o tej nazwie <strong>%1</strong> jest już udostępniany.<br /> "
+#~ "Wybierz inną nazwę dla zasobu.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba nie jest wgrana na twoim systemie."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Udostępnij przy użyciu S&amby  (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Nie można zainstalować Samby.</strong><br />Proszę sprawdzić "
+#~ "czy kpackagekit został poprawnie zainstalowany</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Wybierz użytkowników"
+
+#~ msgid "Select &Users"
+#~ msgstr "Wybierz &Użytkowników"
+
+#~ msgid "Name"
+#~ msgstr "Nazwa"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Dostę&p"
+
+#~ msgid "&Default"
+#~ msgstr "&Domyślny"
+
+#~ msgid "&Read access"
+#~ msgstr "Prawdo do odc&zytu"
+
+#~ msgid "&Write access"
+#~ msgstr "Pra&wo do zapisu"
+
+#~ msgid "&Admin access"
+#~ msgstr "Dostęp &administracyjny"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Dołącz do domeny"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Weryfikuj:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Hasło:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Nazwa użytkownika:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Ko&ntroler domeny:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domena:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Wybierz grupy"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Wy&bierz grupy"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Rodzaj grupy"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Grupa &Uniksowa"
+
+#~ msgid "NI&S group"
+#~ msgstr "Grupa NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Gr&upa Uniksowa i NIS"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Tutaj możesz edytować użytkowników Samby, przechowywanych w pliku "
+#~ "smbpasswd.\n"
+#~ "<p>\n"
+#~ "Każdy użytkownik Samby musi mieć także konto Uniksowe.\n"
+#~ "Z prawej strony są wypisane konta Uniksowe, przechowywane w pliku passwd "
+#~ "i nieskonfigurowane jako użytkownicy Samby.\n"
+#~ "Użytkownicy Samby są wypisani po lewej stronie.\n"
+#~ "<p>\n"
+#~ "Aby dodać użytkowników Samby wystarczy wcisnąć przycisk <em>&lt; Dodaj</"
+#~ "em>\n"
+#~ "Zaznaczone konta Uniksowe staną się także kontami Samby i znikną z listy "
+#~ "po prawej strony (ale pozostaną również kontami Uniksowymi).\n"
+#~ "<p>\n"
+#~ "Aby usunąć użytkowników Samby wciśnij przycisk <em>&gt; Usuń</em>.\n"
+#~ "Zaznaczeni użytkownicy zostaną usunięci z pliku smbpasswd,\n"
+#~ "i pojawią się z powrotem na liście po prawej stronie jako użytkownicy "
+#~ "Uniksowi bez konta Samby.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "Ustawienia &podstawowe"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Plik konfiguracyjny Samby:"
+
+#~ msgid "&Load"
+#~ msgstr "&Wczytaj"
+
+#~ msgid "Server Identification"
+#~ msgstr "Identyfikacja serwera"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Grupa &robocza:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Wpisz nazwę swojej domeny/grupy roboczej."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Nazwa &serwera:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Nazwa NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Po&ziom bezpieczeństwa"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Użytkownik"
+
+#~ msgid "Server"
+#~ msgstr "Serwer"
+
+#~ msgid "Domai&n"
+#~ msgstr "Dome&na"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Użyj poziomu bezpieczeństwa <i> udostępnianie</i> jeśli masz małą domową "
+#~ "lub biurową sieć.<br> Poziom ten pozwala na użytkownikowi na przeczytanie "
+#~ "nazw wszystkich udostępnianych zasobów zanim zostanie poproszony o "
+#~ "zalogowanie."
+
+#~ msgid "Further Options"
+#~ msgstr "Dodatkowe ustawienia"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Adres/nazwa serwera haseł:"
+
+#~ msgid "Real&m:"
+#~ msgstr "&Dziedzina:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "K&onto gościa:"
+
+#~ msgid "Help"
+#~ msgstr "Pomoc"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Dokładnych informacji o każdej z opcji szukaj w:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Udostępniane zasoby"
+
+#~ msgid "Comment"
+#~ msgstr "Komentarz"
+
+#~ msgid "Properties"
+#~ msgstr "Właściwości"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Edytuj ustawienia domyś&lne..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Dodaj &nowy zasób do udostępnianych..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Edytuj udostępniany zasób..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Usuń udostępniany &zasób"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Dru&karki"
+
+#~ msgid "Printer"
+#~ msgstr "Drukarka"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Edytuj ustaw&ienia standardowe"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Dodaj no&wą drukarkę"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Edytuj właściwości &drukarki"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Usuń drukarkę"
+
+#~ msgid "&Users"
+#~ msgstr "&Użytkownicy"
+
+#~ msgid "Disabled"
+#~ msgstr "Wyłączone"
+
+#~ msgid "Add"
+#~ msgstr "Dodaj"
+
+#~ msgid "Rem&ove"
+#~ msgstr "U&suń"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Użytkownicy UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Zmień &hasło..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "Dołą&cz do domeny"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Zaawan&sowane"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Możesz tutaj zmienić zaawansowane opcje serera SAMBA.\n"
+#~ "Dokonuj zmian tylko jeśli masz pewność, że wiesz co robisz."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Zaawansowane zrzucanie"
+
+#~ msgid "Security"
+#~ msgstr "Bezpieczeństwo"
+
+#~ msgid "&General"
+#~ msgstr "&Główny"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Przestrzegaj ograniczeń PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Zmiana hasła PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Pozostałe opcje"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Pozwó&l na zaufane domeny"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoidalne zabezpieczenie serwera"
+
+#~ msgid "General"
+#~ msgstr "Główny"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Metody autoryzacji"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Katalog główn&y:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "I&nterfejsy:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Mapuj dla gościa:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Połącz tylko interfejsy"
+
+#~ msgid "Never"
+#~ msgstr "Nigdy"
+
+#~ msgid "Bad User"
+#~ msgstr "Nieprawidłowa nazwa użytkownika"
+
+#~ msgid "Bad Password"
+#~ msgstr "Nieprawidłowe hasło"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "&Odpowiednik komputera:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Podstawa algorytmu przydziału RID:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Katalog prywatny:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Hasł&o"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Hasła Samby"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "&Szyfruj hasła"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Plik z hasłami Samby:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Narzędzie obsługujące &Passdb:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Komunikacja z passwd:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Debugowanie komunikacji z passwd"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Ograniczenie czasu komunikacji z passwd:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "P&uste hasła"
+
+#~ msgid "Password level:"
+#~ msgstr "Poziom hasła:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Minimalna długość hasła:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Ograniczenie czasu hasła komputera:"
+
+#~ msgid "Migration"
+#~ msgstr "Migrowanie"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Uaktualnij zasz&yfrowane"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Hasła UNIXa"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Program passwd:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Synchronizacja haseł UNI&Xa"
+
+#~ msgid "Userna&me"
+#~ msgstr "Nazwa użytko&wnika"
+
+#~ msgid "User&name map:"
+#~ msgstr "Odwzorowanie nazw użytkowników:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Poziom &nazwy użytkownika:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Ukryj użytkowników lokalnych"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Nie wpuszczaj anonimowych użytkowników"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Używaj rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Uwierzytelnianie"
+
+#~ msgid "Client"
+#~ msgstr "Klient"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "Podpisywanie k&lienta:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Uwierzytelnianie klienta w trybie \"czysty tekst\""
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Uwierzytelnianie klienta w trybie lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Obowiązkowe"
+
+#~ msgid "Yes"
+#~ msgstr "Tak"
+
+#~ msgid "No"
+#~ msgstr "Nie"
+
+#~ msgid "Client channel:"
+#~ msgstr "Kanał klienta:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Klient używa spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Uwierzytelnianie klienta w trybie NTLMv&2"
+
+#~ msgid "Server signing:"
+#~ msgstr "podpisywanie serwera:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Uwierzytelnianie typu lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Kanał serwera:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Użyj sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Uwierzytelnianie typu NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Logowanie"
+
+#~ msgid "L&og file:"
+#~ msgstr "&Plik dziennika:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Ma&ksymalna wielkość pliku dziennika:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "Dziennik s&ystemowy"
+
+#~ msgid "Log &level:"
+#~ msgstr "Poziom &logowania:"
+
+#~ msgid "S&witches"
+#~ msgstr "Przełączniki"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Tylko &syslog"
+
+#~ msgid "Status"
+#~ msgstr "Stan"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Zna&cznik czasu"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosekundy"
+
+#~ msgid "Debug pid"
+#~ msgstr "Debugowanie id procesu (pid)"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Debu&gowanie UID"
+
+#~ msgid "Tuning"
+#~ msgstr "Dostrajanie"
+
+#~ msgid "Modules"
+#~ msgstr "Moduły"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Mo&duły ładowane przed uruchomieniem:"
+
+#~ msgid "Switches"
+#~ msgstr "Przełączniki"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Pamięć podręczna &getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Używaj &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Informowanie o zmianie &jądra"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "P&obieranie nazw komputerów"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Odczyt w trybie &surowym"
+
+#~ msgid "Write raw"
+#~ msgstr "Zapis w trybie surowym"
+
+#~ msgid "Times"
+#~ msgstr "Czas"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Ograniczenie czasu powiadamiania o zmianach:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Podtrzymywanie połączenia:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Czas zakończenia połączenia:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Czas pamięci podręcznej Lp&q:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Ograniczenie czasu pamięci podręcznej &nazw:"
+
+#~ msgid "Sizes"
+#~ msgstr "Rozmiary"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Maksymalny rozmiar dysku:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Odczytaj ro&zmiar:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Rozmiar pamięci podręcznej stat:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "&Maksimum wysyłania:"
+
+#~ msgid "Numbers"
+#~ msgstr "Numery"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Maksymalna liczba procesów smbd:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Maksymalna liczba otwartych plików:"
+
+#~ msgid "Printing"
+#~ msgstr "Drukowanie"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Wszystkie zadania drukowania:"
+
+#~ msgid "Drivers"
+#~ msgstr "Sterowniki"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "Mapa sterowników OS&2:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Nazwa &bazy danych właściwości drukarek (printcap):"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "&Nazwa pliku sterownika drukarki:"
+
+#~ msgid "Commands"
+#~ msgstr "Polecenia"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Polecenie Enumports:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Polecenie Addprinter:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Polecenie Deleteprinter:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Wczytaj &drukarki"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Wyłącz &buforowanie"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Pokaż asystenta dodawania drukarek"
+
+#~ msgid "Domain"
+#~ msgstr "Domena"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Lokalny &nadzorca"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Nadzorca dome&ny"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Lo&gowania do domeny"
+
+#~ msgid "Preferred &master"
+#~ msgstr "&Preferowany nadzorca"
+
+#~ msgid "OS &level:"
+#~ msgstr "Poziom systemu operacy&jnego:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Grupa administratora domeny:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Grupa gościa domeny:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Wyłącz &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Działaj jak serwer WI&NS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Używaj inneg&o serwera WINS"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Ustawienia serwera WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "pośredni&k DNS"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "&Podłączenie do WINS:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Maksymalna wartość tt&l dla WINS:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "Minimalna wartość tt&l dla WINS:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "Adres IP lub nazwa serwera WINS"
+
+#~ msgid "General Options"
+#~ msgstr "Główne ustawienia "
+
+#~ msgid "WINS partners:"
+#~ msgstr "Partnerzy WINS"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "Poś&rednik WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "Nazwy plików"
+
+#~ msgid "Ge&neral"
+#~ msgstr "O&gólne"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Oddziel kr&opki"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Maglowanie"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "&Stos maglowania:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Przed&rostek maglowania:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Specja&lne"
+
+#~ msgid "Stat cache"
+#~ msgstr "Pamięć podręczna stat"
+
+#~ msgid "Locking"
+#~ msgstr "Blokowanie"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Blokowa&nie przez jądro"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Katal&ogi"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Katalog blo&kad:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "Katalog przechow&ywania pid:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Wirujące blokady"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Liczba powtórzeń wirowania blokady:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "&Czas wirowania blokady:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Bardzo zaawansowane"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Czas oczekiwania na złamanie blokady oplock:"
+
+#~ msgid "milliseconds"
+#~ msgstr "milisekundy"
+
+#~ msgid "Charset"
+#~ msgstr "Układ klawiatury"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Układ klawiatury D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Układ klawiatury UNIX:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Tablica znaków dla wyświetlania:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Tablica znaków:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Prawidłowe znaki:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Katalog przechowywania strony kodowej:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kodowanie:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Tablica znaków klienta:"
+
+#~ msgid "Logon"
+#~ msgstr "Logowanie"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Dodawanie skryptów"
+
+#~ msgid "Add user script:"
+#~ msgstr "Dodaj skrypt użytkownika:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Dodaj użytkownika do skryptu grupy:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Dodaj skrypt grupy:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Dodaj skrypt maszyny:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Usuń skrypt grupy:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Usuń skrypt użytkownika:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Usuń użytkownika ze skryptu grupy:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Podstawowy skrypt grupy"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Ustaw podstawowy skrypt grupy:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Wyłącz"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Skrypt wyłączenia:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Przerwij skrypt wyłączania:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Ścieżka logowania:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Katalog domowy logowania:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Dysk &logowania:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Skrypt lo&gowania:"
+
+#~ msgid "Socket"
+#~ msgstr "Gniazdo"
+
+#~ msgid "Socket address:"
+#~ msgstr "Adres gniazda"
+
+#~ msgid "Socket Options"
+#~ msgstr "Ustawienia gniazda"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Włącza lub wyłącza cały moduł SSL"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Ta opcja włącza lub wyłącza całkowicie tryb SSL. Jeśli jest wyłączona, "
+#~ "SAMBA w trybie SSL zachowuje się dokładnie tak, jak SAMBA bez SSL. Jeśli "
+#~ "jest włączona, zachowanie (tzn. czy połączenie SSL będzie wymagane, czy "
+#~ "nie) jest zależne od wartości zmiennych \"ssl hosts\" oraz \"ssl hosts "
+#~ "resign\".\n"
+#~ "Opcja ta jest dostępna tylko pod warunkiem, że biblioteki SSL zostały "
+#~ "zainstalowane w Twoim systemie i podczas konfiguracji użyto opcji \"--"
+#~ "with-ssl\"."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "&Włącz SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "K&omputery używające SSL:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "Liczba &bajtów entropii SSL:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "Szyfry SSL:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "Podpisywanie &innych komputerów w SSL:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2 lub 3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Ko&mpatybilność z SSL"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "Katalog certyfikatów SSL Centrum autoryzacji:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "Plik entropii SSL:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "Gniazda egd dla SSL:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Wersja SSL:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "Plik certyfikatów SSL Centrum autoryzacji:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "Wymagaj certyfikatu klienta w SSL"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Klucz klienta SSL:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "Wymagaj certyfikatu &serwera w SSL"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "Certyfikat SSL serwera:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "Certyfikat SSL klienta:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "&Klucz SSL serwera:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokół"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Serwer usługi Ti&me"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Duże odczyty i zapisy"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Rozszerzenia UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Odczytuj bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Wersje protokołu"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Ogłasza&j jako:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Wersja ogłaszania:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokół:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Najwyższy protokół:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Najniższy protokół:"
+
+#~ msgid "Limits"
+#~ msgstr "Ograniczenia"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Mak&symalna liczba jednoczesnych połączeń:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Maksymalna wartość tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Porty nasłuchu SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Porty SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "Przeglądanie"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "Interwał LM:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "ogłaszanie L&M:"
+
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "S&ynchronizacja przeglądania zdalnego:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Lista przeglądania"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Rozszerzone przeglądanie"
+
+#~ msgid "Pre&load:"
+#~ msgstr "U&przednie wczytywanie:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Wz&orzec katalogu domowego:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "W&zorzec powłoki:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Separator Winbind:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Wzorzec grupy podstawowej:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Cz&as pamięci podręcznej Winbind:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Kompat&ybilność z Acl:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wylicza&nie użytkowników w Winbind"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Wyliczanie grup w Winbind"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind używa domyślnej domeny"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Włącz konta lokalne w Winbind"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Tylko zaufane domeny Winbind"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Zagnieżdżone grupy Winbind"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "Zakr&es NetBIOS:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Aliasy &NetBIOS:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "&Wyłącz netbios"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Kolejność sprawdzania nazw:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins rozgłoszenie"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "msdfs komputera"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "Przyrostek L&DAP:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "Przyrostek komputera LDAP:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "Przyrostek użytkownika LDAP:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "Przyrostek grupy LDAP:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "Przyrostek idmap dla LDAP:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Filtr LDAP:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "Ad&ministracyjna DN LDAP:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Źró&dło idmap:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "Czas oczekiwania na replikację LDAP:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Wyłączone"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Włączone"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "S&ynchronizuj z LDAP:"
+
+#~ msgid "Only"
+#~ msgstr "Tylko"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "Usuń D&N w LDAP"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "P&lecenie dodania zasobu:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Polecenie zmiany zasobu:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Pol&ecenie usunięcia zasobu:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Pol&ecenie wiadomości:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Polecenie D&free:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Polecenie &ustawienia limitu miejsca na dysku:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Polecenie pobrania informacji o limicie miejsca na dysku:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Akcja po a&warii programu serwera Samby:"
+
+#~ msgid "Misc"
+#~ msgstr "Różne"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Różne"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Ukryj użytkowników &lokalnych"
+
+#~ msgid "Default service:"
+#~ msgstr "Domyślne usługi:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Prze&sunięcie w czasie:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Zdalne o&głaszanie:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Środowisko źródłowe:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "Katalog domowy NIS"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Odwzorowanie katalogów domowych:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&Katalog Utmp:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Katalog &Wtmp:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Debugowanie"
+
+#~ msgid "&NT status support"
+#~ msgstr "Obsługa statusu &NT"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "Obsługa S&MB NT"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "&Obsługa potoków NT"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Dodaj/edytuj zasób"
+
+#~ msgid "Pixmap"
+#~ msgstr "Obrazek"
+
+#~ msgid "D&irectory"
+#~ msgstr "K&atalog"
+
+#~ msgid "&Path:"
+#~ msgstr "Ś&cieżka:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Udostępniaj wszystkie katalogi &domowe"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tyfikator"
+
+#~ msgid "Na&me:"
+#~ msgstr "Na&zwa:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Kome&ntarz:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Główne u&stawienia"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Pub&liczny"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Możliwe przegląda&nie"
+
+#~ msgid "A&vailable"
+#~ msgstr "Dos&tępny"
+
+#~ msgid "&Security"
+#~ msgstr "&Bezpieczeństwo"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gości&e"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "To jest nazwa użytkownika, która będzie przy dostępie do usług "
+#~ "przeznaczonych dla gości. Wszystkie uprawnienia tego użytkownika będą "
+#~ "dostępne dla kogokolwiek łączącego się jako gość. Użytkownik ten jest "
+#~ "zapisany w pliku z hasłami, ale ma zablokowaną możliwość logowania. Konto "
+#~ "użytkownika \\\"ftp\\\" jest często dobrym wyborem dla tego parametru. "
+#~ "Jeśli przy nazwie usługi podana jest nazwa użytkownika, dla tej usługi "
+#~ "użyty zostanie ten użytkownik, a nie określony globalnie."
+
+#~ msgid "&Guest account:"
+#~ msgstr "Konto &gościa:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Jeśli to zaznaczysz hasło do tej usługi nie będzie wymagane. Uprawnienia "
+#~ "będą takie, jak przypisane do  kota gościa."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Pozwól jedyn&ie na połączenia typu \"gość\""
+
+#~ msgid "Hos&ts"
+#~ msgstr "Kompu&tery"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "W przeciwieństwie do uprawnionych komputerów, komputery wymienione tutaj "
+#~ "NIE mają dostępu do usług za wyjątkiem sytuacji kiedy jakaś usługa ma "
+#~ "swoją własną listę uprawnionych komputerów, która zastąpi poniższą. W "
+#~ "wypadku niezgodności list, pierwszeństwo ma ta lista, która pozwala na "
+#~ "dostęp do zasobów."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Ten parametr jest listą komputerów uprawnionych do danej usługi "
+#~ "oddzielonych przecinkami, spacjami lub znakami tabulacji."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Komputery upo&ważnione:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Kompute&ry nieupoważnione:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Dowiązanie symboliczne"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Pozwól na podążanie za dowiązania&mi symbolicznymi"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Pozwól na podążanie za dowiązania&mi symbolicznymi, które prowadzą poza "
+#~ "drzewo katalogu"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Jeżeli klient nie może podać nazwy użytkownika, sprawdzaj hasło dla "
+#~ "następujących nazw użytkowników:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Ze&zwól na połączenia tylko dla użytkowników wyszczególnionych na liście"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Ukry&te pliki"
+
+#~ msgid "Hidden"
+#~ msgstr "Ukryty"
+
+#~ msgid "Veto"
+#~ msgstr "Weto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Weto oplock-a"
+
+#~ msgid "Size"
+#~ msgstr "Rozmiar"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Zaznaczone p&liki"
+
+#~ msgid "Hi&de"
+#~ msgstr "Uk&ryj"
+
+#~ msgid "&Veto"
+#~ msgstr "&Weto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Weto oploc&k-a"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Konfiguracja ręczna"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Pliki we&to:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Pl&iki weta oplock-a:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Ukry&te pliki:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Ukryj pliki tylko do odczytu"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Ukryj &pliki specjalne"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Ukryj pliki o naz&wach zaczynających się od kropki"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Uk&ryj pliki, których nie można odczytać"
+
+#~ msgid "&Advanced"
+#~ msgstr "Z&aawansowane"
+
+#~ msgid "Force Modes"
+#~ msgstr "Wymuszenie praw dostępu"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Try&b wymuszania prawa dostępu katalogów:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Narzuć tryb bezpieczeństwa:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Wymuś prawa dostępu &katalogów:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Wymuś prawa dostępu przy tworze&niu:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maski"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Maska bezpieczeństwa katalogu:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "&Maska bezpieczeństwa:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Maska ka&talogu:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Mas&ka tworzenia:"
+
+#~ msgid "ACL"
+#~ msgstr "Listy praw dostępu (ACL)"
+
+#~ msgid "&Profile acls"
+#~ msgstr "ACL dla &profilu"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Dziedzicz AC&L"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "Obsługa ACL-i &NT"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Wymuś użytko&wnika dla nieznanych ACL:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Odwzorowuj dziedz&iczenie ACL"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Dziedziczenie parametrów od katalogu nadrzędnego"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Zezwól na usuwanie plików tylko do odczytu"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "Mapowanie atrybutów DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr ""
+#~ "Odwzorowuj atrybut DOS archi&ve na uniksowy wykonywania dla użytkownika"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Odwzorowuj atrybut DOS &hidden na uniksowy wykonywania dla innych"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Odwzorowuj atrybut DOS &system na uniksowy wykonywania dla grupy"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Zapisuj atrybuty DOS w rozszerzonych atrybutach"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Ś&cisłe synchronizowanie"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Za&wsze synchronizuj"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Ścisłe przy&dzielanie miejsca"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Używaj sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maksymalna liczba jednoczesnych połączeń:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Rozmiar pamięci podręcznej zapisu:"
+
+#~ msgid "bytes"
+#~ msgstr "bajty"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Rozmiar bloku:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Polityk&a pamięci podręcznej po stronie klienta:"
+
+#~ msgid "manual"
+#~ msgstr "ręczna"
+
+#~ msgid "documents"
+#~ msgstr "dokumenty"
+
+#~ msgid "programs"
+#~ msgstr "programy"
+
+#~ msgid "disable"
+#~ msgstr "wyłącz"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Odwzorowywanie nazw"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Włącz odwzorowywanie &nazw"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Odwzorowuj &wielkość liter"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Zachowaj wie&lkość liter"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Zachowaj wie&lkość liter w krótkich nazwach"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Uwzględniaj wielkość li&ter"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Domyś&lna wielkość liter:"
+
+#~ msgid "Lower"
+#~ msgstr "Małe litery"
+
+#~ msgid "Upper"
+#~ msgstr "Duże litery"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "&Znak odwzorowywania nazwy:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Ma&pa odwzorowywania:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Metoda odwzorowywania:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Inne ustawienia"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Ukryj końcową k&ropkę"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "Tryb plików &DOS"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "Czasy plików DOS"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS-owa rozdzielczość czasów pliku"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Włącz blokowanie"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Blokowa&nie"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Ś&cisłe blokowanie"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Ws&trzymywanie blokad"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Blokowanie POSI&X"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Try&by udostępniania"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Wydawaj blokady opo&rtunistyczne (oplock-i) "
+
+#~ msgid "O&plocks"
+#~ msgstr "O&plock-i"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Oplock-i po&ziomu 2"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "O&graniczenie natłoku oplock-a:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "&Fałszywe oplock-i"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Ob&iekty VFS:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "O&pcje VFS:"
+
+#~ msgid "Exec"
+#~ msgstr "Wykonywanie"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Polecenie prz&ed połączeniem:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Polecenie po &rozłączeniu jako administrator:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Polecenie po &rozłączeniu:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Polecenie prz&ed połączeniem jako administrator:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "polecenie wstę&pnego rozłączenia"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "polecenie wstępnego rozłąc&zenia jako administrator"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Wolumin:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&giczny skrypt:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Wyjście mag&icznego skryptu:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Katalogi do których nie &wchodzić:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Pośredni&k Msdfs"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Zez&walaj na polecenie setdir"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Fałszywe czasy tworzenia &katalogów"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Korzeń Ms&dfs"
+
+#~ msgid "&Help"
+#~ msgstr "Pomo&c"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Użytkownicy"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Wszyscy niewyróżnieni &użytkownicy"
+
+#~ msgid "Reject"
+#~ msgstr "Odmów"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Wyróżnieni użytkownicy"
+
+#~ msgid "Access Rights"
+#~ msgstr "Prawa dostępu"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Dodaj użytkownika..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Tryb e&kspercki"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Dodaj &grupę..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Usuń zaznaczonych"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "&Wszyscy użytkownicy będą używać następującego użytkownika/grupy"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Wy&muś użytkownika:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Wymuś g&rupę:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Modyfikatory dostępu"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Prawa dostępu"
+
+#~ msgid "Others"
+#~ msgstr "Inni"
+
+#~ msgid "Read"
+#~ msgstr "Odczyt"
+
+#~ msgid "Write"
+#~ msgstr "Zapis"
+
+#~ msgid "Sticky"
+#~ msgstr "Bit lepkości"
+
+#~ msgid "Set GID"
+#~ msgstr "Ustaw GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Ustaw UID"
+
+#~ msgid "Special"
+#~ msgstr "Specjalne"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Ustawienia użytkownika"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Prawidłowi użytkownicy:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administratorzy:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "N&ieprawidłowi "
+
+#~ msgid "&Write list:"
+#~ msgstr "Lista upra&wnionych do zapisu:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Lista up&rawnionych do odczytu:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Uprawnione kom&putery"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Lista uprawnionych komputerów"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Tutaj są wypisane komputery uprawnione do dostępu do tego katalogu "
+#~ "poprzez NFS.\n"
+#~ "Pierwsza kolumna zawiera nazwę lub adres komputera, druga - parametry "
+#~ "dostępu. Asterisk ('*') oznacza, że katalog jest dostępny dla wszystkich. "
+
+#~ msgid "&Add Host..."
+#~ msgstr "Dodaj kompute&r..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Mo&dyfikuj właściwości komputera..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Usuń komputer..."
+
+#~ msgid "Name/Address"
+#~ msgstr "Nazwa/Adres"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametry"
+
+#~ msgid "Host Properties"
+#~ msgstr "Właściwości komputera"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Nazwa/Adres:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Pole adresu/nazwy</b>\n"
+#~ "<p>\n"
+#~ "Służy do wpisania adresu lub nazwy komputera.<br>\n"
+#~ "Komputer może być określony na kilka sposobów:\n"
+#~ "<p>\n"
+#~ "<i>Określenie pojedynczego komputera</i>\n"
+#~ "<p>\n"
+#~ "To najpopularniejszy sposób. Możesz wprowadzić skróconą nazwę "
+#~ "rozpoznawaną przez program tłumaczący nazwy na adresy, pełną nazwę domeny "
+#~ "i komputera, lub adres IP.\n"
+#~ " </p>\n"
+#~ "\n"
+#~ "<i>Grupy sieciowe</i>\n"
+#~ "<p>\n"
+#~ "Grupy sieciowe NIS (netgroups) można podawać jako @grupa. Tylko część "
+#~ "odpowiadająca za dany komputer w odpowiedniej grupie sieciowej jest brana "
+#~ "pod uwagę podczas sprawdzania przynależności do grupy. Wpisy posiadające "
+#~ "pustą część określającą komputer lub zawierające pojedynczy myślnik (-) "
+#~ "są ignorowane.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>Wzorce</i>\n"
+#~ "<p>\n"
+#~ "Nazwy komputerów mogą zawierać wzorce, takie jak * oraz ?. Pozwala to "
+#~ "zmniejszyć rozmiar plików konfiguracyjnych udostępniania. Na przykład *."
+#~ "twoja.domena oznacza wszystkie komputery w domenie .twoja.domena\n"
+#~ " Trzeba jednakże pamiętać, że takie dopasowanie nie uwzględnia kropek "
+#~ "wewnątrz poddomeny, więc powyższy wzorzec nie będzie pasował do komputera "
+#~ "a.b.twoja.domena\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>Sieci IP</i>\n"
+#~ "<p>\n"
+#~ "Możesz udostępniać katalogi wszystkim komputerom w danej (pod)sieci IP "
+#~ "jednocześnie. Musisz do tego podać adres IP oraz maskę podsieci jako parę "
+#~ "formatu: adres IP/podsieć. Maskę podsieci możesz zapisać jako liczby "
+#~ "dziesiętne oddzielone kropkami lub jako długość pola maski. Na przykład "
+#~ "dodanie do adresu '/255.255.252.0' zadziała tak samo jak dodanie '/22' - "
+#~ "w przykładzie tym komputer określany jest przez 10 bitów.\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "Dostęp &publiczny"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Dostęp publiczny</b>\n"
+#~ "<p>\n"
+#~ "Zaznaczenie tej opcji oznacza to samo, co wpisanie asteriska (*) w pole "
+#~ "adresu.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Opcje"
+
+#~ msgid "&Writable"
+#~ msgstr "&Zapisywalny"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Zapisywalny</b>\n"
+#~ "<p>\n"
+#~ "Pozwala na zapis i odczyt danego woluminu \n"
+#~ "NFS</p>\n"
+#~ "<p>\n"
+#~ "Standardowo nie pozwala na żadne żądania wprowadzające zmiany do systemu "
+#~ "plików.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "N&iezabezpieczony"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Niezabezpieczony</b>\n"
+#~ "<p>\n"
+#~ "Zaznaczenie tej opcji oznacza, że zgłoszenia nie muszą pochodzić z portu "
+#~ "o wartości mniejszej niż IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Jeśli nie jesteś pewien co zrobić, zostaw tę opcję niezaznaczoną.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Synchronizacja"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Synchronizacja (sync)</b>\n"
+#~ "<p>\n"
+#~ "Ta opcja wymaga aby zakończyć zapis wszystkich plików przed zakończeniem "
+#~ "żądania zapisu. Jest to wymagane dla całkowitego bezpieczeństwa danych na "
+#~ "wypadek awarii serwera, ale obniża wydajność.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standardowo pozwala się serwerowi zapisywać dane kiedy tylko jest "
+#~ "gotowy.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Nie o&późniaj zapisu"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Brak opóźniania zapisu</b>\n"
+#~ "<p>\n"
+#~ "Ta opcja ma znaczenie tylko wtedy, kiedy zaznaczona jest także "
+#~ "'Synchronizacja'. Standardowo serwer NFS opóźnia nieco wysłanie żądania "
+#~ "zapisu do dysku jeśli podejrzewa, że inne powiązane żądanie może być w "
+#~ "drodze lub nadejść niedługo. Pozwala to na wykonanie kilku żądań w ramach "
+#~ "jednej operacji, co zwiększa wydajność. Jeśli jednak serwer NFS otrzymuje "
+#~ "z reguły małe pojedyncze żądania, takie zachowanie w rzeczywistość wpływa "
+#~ "na wydajność niekorzystnie, dlatego można je wyłączyć za pomocą "
+#~ "niniejszej opcji.</p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Brak ukrywan&ia"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Brak ukrywania</b>\n"
+#~ "<p>\n"
+#~ "Opcja ta bazuje na opcji o tej samej nazwie w IRIX NFS. Standardowo, "
+#~ "jeśli serwer udostępnia dwa systemy plików, z których jeden jest "
+#~ "zamontowany wewnątrz drugiego, to klient, żeby uzyskać do nich dostęp, "
+#~ "musi zamontować je (sieciowo) oddzielnie. Jeśli zamontuje jedynie "
+#~ "macierzysty system plików to w miejscu drugiego systemu plików zobaczy "
+#~ "pusty katalog. Ten system plików jest \"ukryty\".</p>\n"
+#~ "<p>\n"
+#~ "Ustawienie braku ukrywania dla danego systemu plików oznacza, że klient z "
+#~ "odpowiednimi uprawnieniami będzie się mógł bez przeszkód poruszać między "
+#~ "systemem macierzystym a potomnymi.</p>\n"
+#~ "<p>\n"
+#~ "Jednakże niektóre programy klienckie NFS nie radzą sobie dobrze z taką "
+#~ "sytuacją ponieważ w takim wypadku możliwe jest, że dwa pliki, które zdają "
+#~ "się należeć do jednego systemu plików mają ten sam numer i-node.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Na chwilę obecną opcja 'Brak ukrywania' działa poprawnie tylko przy "
+#~ "udostępnianiu dla poszczególnych komputerów, a nie dla grup sieciowych, "
+#~ "podsieci czy udostępnianiu opisanemu z użyciem masek (asterisk itp).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Opcja ta może być bardzo przydatna w niektórych sytuacjach, ale powinna "
+#~ "być używana z uwagą i po upewnieniu się, że programy klienckie umieją ją "
+#~ "obsługiwać poprawnie.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Brak sprawdzania drzewa &podrzędnego"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Brak sprawdzania drzewa podrzędnego </b>\n"
+#~ "<p>\n"
+#~ "Opcja ta wyłącza sprawdzanie drzewa podrzędnego. Nie zmienia to "
+#~ "zasadniczo bezpieczeństwa systemu, ale w pewnych sytuacjach poprawia "
+#~ "stabilność.</p>\n"
+#~ "<p>\n"
+#~ "Jeśli tylko dany podkatalog jest udostępniany a cały system plików - nie, "
+#~ "wtedy za każdym razem, kiedy nadchodzi żądanie serwer NFS musi sprawdzać "
+#~ "nie tylko czy dany plik jest w odpowiednim systemie plików (co nie "
+#~ "sprawia kłopotów), ale także czy znajduje się w odpowiednim podkatalogu "
+#~ "(co jest trudniejsze). To właśnie nazywa się sprawdzaniem drzewa "
+#~ "podrzędnego.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "W celu przeprowadzenia tego sprawdzenia serwer musi zawrzeć pewne "
+#~ "informacje o pliku w jego \"uchwycie\" (filehandle), który przekazuje "
+#~ "klientowi. To może sprawiać kłopoty z dostępem do plików, których nazwa "
+#~ "zmienia się w czasie gdy są one otwarte przez klienta (chociaż w wielu "
+#~ "prostych sytuacjach to także działa).</p>\n"
+#~ "<p>\n"
+#~ "Sprawdzanie drzewa podrzędnego jest także używane do upewniania się, że "
+#~ "pliki wewnątrz katalogów, do których dostęp ma tylko administrator mogą "
+#~ "być otwierane jedynie kiedy są udostępniane z opcją \"no_root_squash"
+#~ "\" (patrz niżej), nawet jeśli sam plik pozwala na szerszy dostęp.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Generalna zasada jest taka, że system plików z katalogami domowymi, który "
+#~ "normalnie jest udostępniony cały i często są na nim wykonywane zmiany "
+#~ "nazw plików, powinien być udostępniany bez włączonej opcji sprawdzania "
+#~ "drzewa podrzędnego. System plików, który pracuje z reguły w trybie tylko "
+#~ "do odczytu i rzadko są w nim dokonywane zmiany nazw plików (np. /usr czy /"
+#~ "var), a którego podkatalogi bywają udostępniane, powinien być "
+#~ "udostępniany z zaznaczoną opcją sprawdzania drzewa podrzędnego.</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Niezabezpieczone blo&kowanie"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Niezabezpieczone blokowanie</b>\n"
+#~ "<p>\n"
+#~ "Ta opcja informuje serwer NFS, aby nie wymagał uwierzytelniania żądań "
+#~ "blokowania (np. żądań używających protokołu NLM). Normalnie serwer NFS "
+#~ "wymaga od użytkownika potwierdzenia jego prawa do odczytu danego pliku.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Wcześniejsze implementacje protokołu NFS, z których wciąż korzysta wiele "
+#~ "obecnych klientów tego protokołu nie wysyłały potwierdzenia uprawnień "
+#~ "wraz z żądaniem blokowania pliku. Zaznacz tę opcję, jeżeli zauważysz, że "
+#~ "możesz blokować tylko pliki, które mają prawo odczytu przez wszystkich.\n"
+#~ "</p> "
+
+#~ msgid "User Mapping"
+#~ msgstr "Mapowanie użytkownika"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Maskuj wszystkich"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Maskowanie wszystkich (all squash)</b>\n"
+#~ "<p>\n"
+#~ "Odwzorowuje numery uid/gid wszystkich użytkowników na numery użytkownika "
+#~ "anonimowego. Jest to przydatne dla udostępnianych przez NFS katalogów "
+#~ "publicznych serwera FTP, katalogów grup dyskusyjnych, itp. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Bez maskowania &administratora (\"root squash\")"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Bez maskowania administratora (\"root squash\")</b>\n"
+#~ "<p>\n"
+#~ "Wyłącza funkcję \"root squash\". Opcja ta jest przydatna w wypadku "
+#~ "bezdyskowych stacji roboczych.\n"
+#~ "</p>\n"
+#~ "<i>Maskowanie administratora</i>\n"
+#~ "<p>\n"
+#~ "Odwzorowuje żądania od użytkownika o numerze UID/GID równym 0 na żądania "
+#~ "użytkownika anonimowego. Należy pamiętać, że to nie odnosi się do "
+#~ "jakichkolwiek innych \"znaczących\" użytkowników (np. bin).\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonimowy &UID"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonimowy UID/GID</b> <p> Ta opcja bezpośrednio ustawia UID i GID dla "
+#~ "anonimowego konta. Jest to przydatne szczególnie w wypadku klientów PC/"
+#~ "NFS, kiedy to może być wygodniej, jeśli wszystkie żądania wyglądają na "
+#~ "pochodzące od jednego użytkownika. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonimowe &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Folder:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Udostępnij za pomocą &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Ustawienia NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Pu&bliczny"
+
+#~ msgid "W&ritable"
+#~ msgstr "Za&pisywalny"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Więcej us&tawień NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Ustawienia Samby"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&ubliczny"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Więcej ustawień Samby"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Pozwól wszystkim użytkownikom na udostępnianie katalogów"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr ""
+#~ "Tylko użytkownicy należący do grupy '%1' mają prawo do udostępniania "
+#~ "katalogów"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Użytkownicy należący do grupy '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Usuń użytkownika"
+
+#~ msgid "Add User"
+#~ msgstr "Dodaj użytkownika"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Członkowie grupy mogą udostępniać katalogi bez podawania hasła "
+#~ "administratora"
+
+#~ msgid "Change Group..."
+#~ msgstr "Zmień grupę..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Serwery NFS oraz SMB nie są zainstalowane na tym komputerze. Aby "
+#~ "korzystać z niniejszego komponentu serwery te muszą zostać zainstalowane."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Włącz udostępnianie katalogów w sieci lo&kalnej"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Proste u&dostępnianie"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Uruchom 'proste udostępnianie' aby umożliwić użytkownikom udostępnianie "
+#~ "swoich katalogów domowych bez podawania hasła administratora."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Zaawansowane udos&tępnianie"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Uruchom zaawansowane udostępnianie aby umożliwić użytkownikom "
+#~ "udostępnianie dowolnych katalogów o ile mają oni prawo zapisu do "
+#~ "odpowiednich plików konfiguracyjnych lub wprowadzą hasło administratora."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Używaj &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Używaj Sam&by (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Upra&wnieni użytkownicy "
+
+#~ msgid "Shared Folders"
+#~ msgstr "Udostępnione foldery"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Dodaj..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Zmi&eń..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Plik konfiguracyjny SAMBA <strong>'smb.conf'</strong> Nie został "
+#~ "odnaleziony;</p>Upewnij się, czy serwer SAMBA został zainstalowany.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Podaj położenie"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Plik konf. Samby\n"
+#~ "*|Wszystkie pliki"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Pobierz położenie smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Nie można odczytać <i>%1</i>.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Nie można odczytać pliku"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Błąd podczas otwierania pliku "
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Dołączanie do domeny '%1' nieudane."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Podaj hasło dla użytkownika <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Dodawanie użytkownika <b>%1</b> do bazy danych użytkowników Samby nie "
+#~ "powiodło się.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Usuwanie użytkownika '%1' z bazy danych użytkowników Samby nie powiodło "
+#~ "się."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Podaj hasło dla użytkownika '%1'"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Zmiana hasła dla użytkownika '%1' nie powiodła się."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Konfiguracja Samby</h1>Tutaj możesz skonfigurować serwer Samby."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Ustaw poziom bezpieczeństwa <i>share</i>, jeśli masz małą domową lub "
+#~ "biurową sieć.<br /> Poziom ten pozwala wszystkim na wgląd w listę Twoich "
+#~ "udostępnianych katalogów i drukarek przed zalogowaniem."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Ustaw poziom bezpieczeństwa <i>user</i>jeśli masz większą sieć i nie "
+#~ "chcesz pozwolić wszystkim na czytanie listy udostępnianych przez Ciebie "
+#~ "zasobów bez zalogowania.<br /><br />Zaznacz tę opcję także jeśli chcesz "
+#~ "uruchomić serwer Samba jako <b> podstawowy kontroler domeny</b> (Primary "
+#~ "domain controller - PDC)."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Użyj poziomu bezpieczeństwa <i>server</i>,  jeśli masz dużą sieć i Samba "
+#~ "powinna sprawdzać nazwę użytkownika i hasło wysyłając je do innego "
+#~ "serwera SMB, na przykład komputera z NT."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Używaj poziomu bezpieczeństwa <i>domain</i>, jeśli masz dużą sieć i "
+#~ "serwer Samba powinien sprawdzać nazwę użytkownika i hasło przesyłając je "
+#~ "do podstawowego lub zapasowego kontrolera domeny Windows NT."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Używaj poziomu bezpieczeństwa <i>ADS</i>, jeśli masz dużą sieć i serwer "
+#~ "Samba powinien zachowywać się jak członek domeny w domenie ADS."
+
+#~ msgid "Sorry"
+#~ msgstr "Niestety"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Podano dwa różne hasła. Proszę spróbować ponownie."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Opcja <em>%1</em> nie jest obsługiwana przez Twoją wersję Samby"
+
+#~ msgid "Unnamed"
+#~ msgstr "Nienazwany"
+
+#~ msgid "&Hide"
+#~ msgstr "&Ukryj"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "Weto oploc&k-a"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Niektóre z zaznaczonych plików są ukryte, ponieważ ich nazwa zaczyna "
+#~ "się od kropki. Czy chcesz odznaczyć wszystkie pliki zaczynające się od "
+#~ "kropki?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Pliki o nazwach zaczynających się od kropki"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Odznacz ukryte"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Zachowaj ukryte"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Niektóre z wybranych przez Ciebie plików pasują do wzorca <b>'%1'</"
+#~ "b>; Czy chcesz odznaczyć wszystkie pliki pasujące do <b>'%1'</b>?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Wyrażenie regularne"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Odznacz pasujące"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Zachowaj zaznaczone"
+
+#~ msgid "Default"
+#~ msgstr "Domyślny"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Wybrałeś dla tego katalogu<b>prawo do odczytu dla wszystkich</b>, ale "
+#~ "konto gościnne <b>%1</b> nie ma niezbędnych praw do odczytu;<br />Czy "
+#~ "mimo to chcesz kontynuować?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Ostrzeżenie"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Wybrałeś dla tego katalogu<b>prawo do zapisu dla wszystkich</b>, ale "
+#~ "konto gościnne <b>%1</b> nie ma niezbędnych praw do zapisu;<br />Czy mimo "
+#~ "to chcesz kontynuować?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Wybrałeś dla tego katalogu<b>prawo do zapisu</b> dla użytkownika <b>"
+#~ "%1</b>, ale użytkownik ten nie ma niezbędnych praw do zapisu;<br />Czy "
+#~ "mimo to chcesz kontynuować?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Wybrałeś dla tego katalogu<b>prawo do odczytu</b> dla użytkownika <b>"
+#~ "%1</b>, ale użytkownik ten nie ma niezbędnych praw do odczytu;<br />Czy "
+#~ "mimo to chcesz kontynuować?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Wpis publiczny już istnieje."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Podany komputer już istnieje"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Wpisz nazwę komputera lub adres IP."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Nie podano nazwy komputera ani adresu IP"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Komputer '%1' już istnieje."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Odczytywanie pliku konfiguracyjnego Samby..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Czytanie pliku konfiguracyjnego NFS..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Wprowadź prawidłową ścieżkę."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Tylko katalogi mogą być udostępniane."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Katalog jest już udostępniony."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Administrator nie zezwala na udostępnianie katalogów poprzez NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Błąd: Nie można odczytać pliku konfiguracyjnego NFS."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr ""
+#~ "Administrator nie zezwala na współdzielenie plików poprzez serwer Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Błąd: Nie można odczytać pliku konfiguracyjnego Samby."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Musisz wprowadzić nazwę dla zasobu udostępnianego przez Sambę."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Musisz mieć autoryzację aby móc udostępniać katalogi."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Skonfiguruj udostępnianie plików..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Serwer NFS nie jest zainstalowany"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Nie można zapisać ustawień"
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Nie można otworzyć pliku '%1' do zapisu: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Zapisywanie ustawień NIE powiodło się."
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Udostępnianie plików</h1><p>Moduł ten służy do udostępniania plików w "
+#~ "sieci przy użyciu protokołu \"Network File System\" (NFS) lub SMB w "
+#~ "przeglądarce Konqueror. Protokół SMB pozwala na udostępnianie zasobów "
+#~ "komputerom używającym systemu Windows(R).</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Udostępnij Katalog"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Uprawnieni użytkownicy"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Wszyscy użytkownicy są już w grupie %1."
+
+#~ msgid "Select User"
+#~ msgstr "Wybór użytkownika"
+
+#~ msgid "Select a user:"
+#~ msgstr "Wybierz użytkownika:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Nie można dodać użytkownika '%1' do grupy '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Nie można usunąć użytkownika '%1' z grupy '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Musisz wybrać poprawną grupę."
+
+#~ msgid "New file share group:"
+#~ msgstr "Nowa grupa udostępniania plików:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr ""
+#~ "Dodaj użytkowników z poprzedniej grupy udostępniania plików do nowej grupy"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Usuń użytkowników ze starej grupy udostępniania plików"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Usuń starą grupę udostępniania plików"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Tylko użytkownicy należący do pewnej grupy mogą udostępniać katalogi"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Wybierz grupę..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Czy na pewno chcesz usunąć wszystkich użytkowników z grupy '%1'?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Czy na pewno chcesz usunąć grupę '%1'?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Usuwanie grupy '%1' nie powiodło się."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Proszę wybrać poprawną grupę."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Grupa '%1' nie istnieje. Czy ma zostać utworzona?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Nie twórz"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Tworzenie grupy '%1' nie powiodło się."

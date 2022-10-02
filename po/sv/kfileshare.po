@@ -1,0 +1,3443 @@
+# translation of kfileshare.po to Swedish
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2016, 2019, 2020, 2021, 2022.
+# Mattias Newzella <newzella@linux.nu>, 2004, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-09-27 17:49+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Neka"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Tillåt"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Okänd"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Bara den här katalogen"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Den här katalogen, underkataloger och filer"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Den här katalogen och underkataloger"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Den här katalogen och filer"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Bara underkataloger och filer"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Bara underkataloger"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Bara filer"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Okänd"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Fjärrättigheter"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Rättighetsposten ärvdes från en överliggande behållare och kan bara ändras i "
+"där (t.ex. en överliggande katalog)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Typ:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Gäller:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Gå in i katalog / kör fil"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Lista katalog / läs data"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Läsattribut"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Läs utökade attribut"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Skapa filer / skriv data"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Skapa kataloger / lägg till data"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Skrivattribut"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Skriv utökade attribut"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Ta bort underkataloger och filer"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Ta bort"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Läsrättigheter"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Ändra rättigheter"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Bli ägare"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Verkställ bara rättigheterna för objekt och/eller behållare inom den här "
+"behållaren"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Åtkomstkontrollposter"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Ägare"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Ägare:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Grupp:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Inga rättigheter hittades"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+"Det finns troligen inga SMB/Windows/Avancerade rättigheter inställda för "
+"filen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr "Katalogen kan inte delas eftersom <filename>%1</filename> inte finns."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Felet orsakas av att distributionen inte har ställt in delning med Samba "
+"riktigt. Du kan rätta det själv genom att skapa katalogen manuellt. Stäng "
+"och öppna därefter det här fönstret igen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Katalogen kan inte delas eftersom <filename>%1</filename> har sin gruppägare "
+"olämpligt inställd till <resource>%2</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Felet orsakas av att distributionen inte har ställt in delning med Samba "
+"riktigt. Du kan rätta det själv genom att ändra katalogens gruppägare till "
+"<resource>usershares</resource> och göra dig till en medlem av den gruppen. "
+"Starta därefter om datorn."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Katalogen kan inte delas eftersom ditt användarkonto inte är medlem av "
+"gruppen <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"Du kan rätta det själv genom att göra användaren till en medlem av den "
+"gruppen. Starta därefter om datorn."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Gör mig till gruppmedlem"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Katalogen kan inte delas eftersom ditt användarkonto inte har rättighet att "
+"skriva till <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"Du kan rätta det genom att säkerställa att gruppen <resource>%1</resource> "
+"har skrivrättigheter för <filename>%2</filename>. Stäng och öppna därefter "
+"det här fönstret igen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Lägger till användare '%1' till gruppen '%2' så att de kan ställa in Samba "
+"användardelningar."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Misslyckades göra användaren <resource>%1<resource> medlem av gruppen "
+"<resource>%2<resource>"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Filsökväg"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Nuvarande rättigheter"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Nödvändiga rättigheter"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Nekar åtkomst"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Att neka åtkomst förhindrar att den delade resursen används även om en annat "
+"åtkomstregel kan ge åtkomst. En nekande\n"
+"regel har alltid företräde. I synnerhet att neka åtkomst till "
+"<resource>Everyone</resource> nekar verkligen åtkomst till alla.\n"
+"Det är i allmänhet inte nödvändigt att neka någon eftersom de vanliga "
+"katalog- och filrättigheterna också\n"
+"gäller för delade kataloger. En användare som inte har åtkomst till "
+"katalogen lokalt kan inte heller komma åt\n"
+"den från en annan dator även om den delade resursens åtkomstregler skulle "
+"tillåta det."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr "Katalogen kräver extra rättigheter för att delning ska fungera"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Korrigera rättigheter"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Den delade resursen kanske inte fungerar som den ska eftersom den delade "
+"katalogen eller dess sökvägar har avancerade rättigheter: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Dela katalogen med andra datorer i det lokala nätverket"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Namn:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Namnet kan inte användas. Namn på delade kataloger får inte vara "
+"användarnamn och det får inte finnas två delade kataloger med samma namn i "
+"hela systemet."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Namnet kan vara för långt. Det kan orsaka interoperabilitetsproblem eller "
+"avvisas av Samba."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Tillåt gäster"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Gäståtkomst är inaktiverad av systemets Samba-inställning."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Fullständig kontroll"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Skrivskyddad"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Ingen åtkomst"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Visa Samba statusövervakning"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Ange lösenord"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Lösenord"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Bekräfta lösenord"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Lösenord måste stämma"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Ange lösenord"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Katalogen <filename>%1</filename> kräver extra rättigheter för att "
+"delning ska fungera.</para>\n"
+"<para>Vill du lägga till rättigheterna nu?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Ändra rättigheter"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Kunde inte ändra rättigheter för: %1. Alla rättighetsändringar har "
+"återställts till det ursprungliga tillståndet."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba måste installeras innan kataloger kan delas."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Installera Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Installation av Samba-paketet misslyckades."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Starta om datorn för att slutföra ändringarna."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Starta om"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba använder en separat användardatabas i stället för den i systemet.\n"
+"Det kräver att ett separat Samba-lösenord ställs in för varje användare\n"
+"som ska kunna ges behörighet.\n"
+"</para>\n"
+"<para>\n"
+"Innan du kan komma åt delade resurser med ditt nuvarande användarkonto måste "
+"du ställa in ett Samba-lösenord.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Skapa Samba-lösenord"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Ytterligare hantering av användare och lösenords kan göra genom att använda\n"
+"Sambas kommandoradsverktyg <command>smbpasswd</command>.."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"Du har förbrukat det maximala antalet delade kataloger som kan vara aktiva "
+"samtidigt."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Delningsnamnet är ogiltigt."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Delningsnamnet används redan för en annan katalog."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Sökvägen är ogiltig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Sökvägen finns inte."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Sökvägen är inte en katalog."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Sökvägen är relativ."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Sökvägen får inte delas."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Åtkomstregeln är ogiltig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "En åtkomstregels användare är inte giltig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "Åtkomstregeln 'Gäst' är ogiltig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Aktivera gäståtkomst tillåts inte."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Ett fel uppstod vid försök att dela en katalog. Den delade katalogen "
+"har inte skapats.</para><para>Intern rapport från Samba:</para><message>%1</"
+"message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Misslyckades skapa delad nätverksåtkomst"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Ett fel uppstod vid försök att sluta dela en katalog. Den delade "
+"katalogen har inte tagits bort.</para><para>Intern rapport från Samba:</"
+"para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Misslyckades ta bort delad nätverksåtkomst"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Kontrollerar om Samba-användaren \"%1\" finns"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Skapar ny Samba-användare '%1'"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Gruppändringar misslyckades."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Det verkar inte som om du har tillräckliga rättigheter för att hantera "
+#~ "Samba användardelningar."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Dela"
+
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Skapa användare"
+
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Skapa användare"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Dela ut"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Installerar Samba..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Det finns redan en utdelad katalog med namnet <strong>%1</strong>."
+#~ "<br />Välj ett annat namn.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba är inte installerat på systemet."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Dela med S&amba (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Samba kunde inte installeras.</strong><br />Kontrollera om "
+#~ "Kpackagekit är riktigt installerat.</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Välj användare"
+
+#~ msgid "Select &Users"
+#~ msgstr "Väl&j användare"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Åtko&mst"
+
+#~ msgid "&Default"
+#~ msgstr "Stan&dard"
+
+#~ msgid "&Read access"
+#~ msgstr "Läs&åtkomst"
+
+#~ msgid "&Write access"
+#~ msgstr "Skrivåtk&omst"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Administratörsåtkomst"
+
+#~ msgid "&OK"
+#~ msgstr "&Ok"
+
+#~ msgid "Join Domain"
+#~ msgstr "Gå med i domän"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Verifiera:"
+
+#~ msgid "&Password:"
+#~ msgstr "Lösenor&d:"
+
+#~ msgid "&Username:"
+#~ msgstr "Anv&ändarnamn:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domänstyre&nhet:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domän:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Välj grupper"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Välj gr&upper"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Gruppt&yp"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Uni&x-grupp"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S-grupp"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Unix- &och NIS-grupp"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Här kan du redigera Samba-användare, lagrade i filen smbpasswd.\n"
+#~ "<p>\n"
+#~ "Varje Samba-användare måste ha motsvarande Unix-användare.\n"
+#~ "Till höger kan du se alla Unix-användare, lagrade i filen passwd och inte "
+#~ "inställda som Samba-användare.\n"
+#~ "Du kan se Samba-användarna till vänster.</p>\n"
+#~ "<p>\n"
+#~ "För att lägga till en ny Samba-användare, klicka helt enkelt på knappen "
+#~ "<em>&lt; Lägg till</em>.\n"
+#~ "De markerade Unix-användarna blir då Samba-användare och\n"
+#~ "tas bort från listan över Unix-användare (men de förblir Unix-användare)."
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "För att ta bort en Samba-användare tryck på knappen <em>&gt; Ta bort</"
+#~ "em>.\n"
+#~ "De markerade Samba-användarna tas bort från filen smbpasswd,\n"
+#~ "och visas igen till höger, som Unix-användare som inte är Samba-användare."
+#~ "</p>\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Grundinställningar"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba-inställningsfil:"
+
+#~ msgid "&Load"
+#~ msgstr "&Ladda"
+
+#~ msgid "Server Identification"
+#~ msgstr "Serveridentifiering"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Arbets&grupp:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Ange namnet på din arbetsgrupp eller domän här."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Serversträn&g:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-namn:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Säkerhets&nivå"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Användare"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domä&n"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>Dela ut</i> om du har ett hemnätverk eller ett "
+#~ "litet kontorsnätverk.<br>Den låter alla läsa alla namn på utdelade "
+#~ "kataloger innan en inloggning krävs."
+
+#~ msgid "Further Options"
+#~ msgstr "Ytterligare alternativ"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Lösenordsserver adress eller namn:"
+
+#~ msgid "Real&m:"
+#~ msgstr "O&mråde:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Gästk&onto:"
+
+#~ msgid "Help"
+#~ msgstr "Hjälp"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "För detaljerad hjälp om varje alternativ, titta i:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Utdelade kataloger"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentar"
+
+#~ msgid "Properties"
+#~ msgstr "Egenskaper"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "&Redigera standardvärden..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Lägg till &ny utdelad katalog..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Redigera utdelad katalog..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Ta bort utdelad katalog"
+
+#~ msgid "Prin&ters"
+#~ msgstr "S&krivare"
+
+#~ msgid "Printer"
+#~ msgstr "Skrivare"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "&Redigera standardvärden"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Lägg till n&y skrivare"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Redigera sk&rivare"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&Ta bort skrivare"
+
+#~ msgid "&Users"
+#~ msgstr "An&vändare"
+
+#~ msgid "Disabled"
+#~ msgstr "Inaktiverad"
+
+#~ msgid "Add"
+#~ msgstr "Lägg till"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Ta b&ort"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Uni&x-användare"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Än&dra lösenord..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Gå med i domän"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Avan&cerat"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Här kan du ändra avancerade inställningar i Samba-servern.\n"
+#~ "Ändra bara någonting om du vet vad du gör."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Avancerad dumpning"
+
+#~ msgid "Security"
+#~ msgstr "Säkerhet"
+
+#~ msgid "&General"
+#~ msgstr "A&llmänt"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Följ PAM-begränsningar"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM lösenordsändring"
+
+#~ msgid "Other Switches"
+#~ msgstr "Andra väljare"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Ti&llåt pålitliga domäner"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoid serversäkerhet"
+
+#~ msgid "General"
+#~ msgstr "Allmänt"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Behörighetsmetoder:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&Rotkatalog:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "Grä&nssnitt:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Avbildning till gäst:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Bara bindningsgränssnitt"
+
+#~ msgid "Never"
+#~ msgstr "Aldrig"
+
+#~ msgid "Bad User"
+#~ msgstr "Felaktig användare"
+
+#~ msgid "Bad Password"
+#~ msgstr "Felaktigt lösenord"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "E&kvivalenta värddatorer:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmisk RID-bas:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privat katalog:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Lösen&ord"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba-lösenord"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "&Kryptera lösenord"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Samba lösenordsfil:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "&Gränssnitt för lösenordsdatabas:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Lösenordschatt:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Avlusning av lösenordschatt"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Tidsgräns för lösenordschatt:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Tomma &lösenord"
+
+#~ msgid "Password level:"
+#~ msgstr "Lösenordsnivå:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Minsta lösenordslängd:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Tidsgräns för datorlösenord:"
+
+#~ msgid "Migration"
+#~ msgstr "Migration"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Kr&ypterad uppdatering"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Unix-lösenord"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Lösenordsprogram:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Uni&x lösenordssynkronisering"
+
+#~ msgid "Userna&me"
+#~ msgstr "Användarna&mn"
+
+#~ msgid "User&name map:"
+#~ msgstr "Avbildning av användar&namn:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Använ&darnamnsnivå:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Dölj lokala användare"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Begränsa anon&ym"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Använd rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Behörighetsk&ontroll"
+
+#~ msgid "Client"
+#~ msgstr "Klient"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "K&lientsignering:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Behörighetskontroll av klient i klarte&xt"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Behörighetskontroll av klient med Lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Obligatorisk"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nej"
+
+#~ msgid "Client channel:"
+#~ msgstr "Klientkanal:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Klienten använder SPNEGO"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Behörighetskontroll av klient med NTLM version &2"
+
+#~ msgid "Server signing:"
+#~ msgstr "Serversignering:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Behörighetskontroll med Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Serverkanal:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Använd SP&NEGO"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM-behörighetskontroll"
+
+#~ msgid "Logging"
+#~ msgstr "Loggning"
+
+#~ msgid "L&og file:"
+#~ msgstr "L&oggfil:"
+
+#~ msgid "kB"
+#~ msgstr "Kibyte"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Ma&ximal loggstorlek:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&ystemlogg:"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Loggnivå:"
+
+#~ msgid "S&witches"
+#~ msgstr "&Väljare"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&Bara systemlogg"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Tidsstä&mpling"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosekunder"
+
+#~ msgid "Debug pid"
+#~ msgstr "Process-id för avlusning"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Användar-id för avlusnin&g"
+
+#~ msgid "Tuning"
+#~ msgstr "Finjustering"
+
+#~ msgid "Modules"
+#~ msgstr "Moduler"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "För&ladda moduler:"
+
+#~ msgid "Switches"
+#~ msgstr "Växlar"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Arbetskatalo&gcache"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Använd &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Ändringsmeddelande från &kärnan"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Uppslagning av värddat&ornamn"
+
+#~ msgid "Read ra&w"
+#~ msgstr "O&behandlad läsning"
+
+#~ msgid "Write raw"
+#~ msgstr "Obehandlad skrivning"
+
+#~ msgid "Times"
+#~ msgstr "Tider"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Tidsgräns för ändringsmeddelande:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Håll vid liv"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Dödtid:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "&Cachetid för skrivarkö:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Tidsgräns för &namncache:"
+
+#~ msgid "Sizes"
+#~ msgstr "Storlekar"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Maximal diskstorlek:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "Mibyte"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "&Lässtorlek:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Statuscachestorlek:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Ma&ximal sändning:"
+
+#~ msgid "Numbers"
+#~ msgstr "Antal"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Maximalt antal SMBD-processer:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Maximalt antal öppna filer:"
+
+#~ msgid "Printing"
+#~ msgstr "Utskrift"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Totalt antal utskrifts&jobb:"
+
+#~ msgid "Drivers"
+#~ msgstr "Drivrutiner"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 drivrutinavbildning:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Na&mn på skrivardatafil:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Skrivardrivruti&nfil: "
+
+#~ msgid "Commands"
+#~ msgstr "Kommandon"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Kommando för portuppräkning:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Kommando för att lägga till skrivare:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Kommando för att ta bort skrivare:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "&Ladda skrivare"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "&Inaktivera skrivarköer"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Visa g&uiden för att lägga till skrivare"
+
+#~ msgid "Domain"
+#~ msgstr "Domän"
+
+#~ msgid "L&ocal master"
+#~ msgstr "L&okal huvuddator"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domä&nhuvuddator"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domäninlo&ggningar"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Föredragen &huvuddator"
+
+#~ msgid "OS &level:"
+#~ msgstr "Operativsystems&nivå:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domänadministrationsgrupp:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domängästgrupp:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Inaktivera &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Fu&ngera som WINS-server"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "&Använd en annan WINS-server"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Inställnin&gar av WINS-server"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS-prox&yserver"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS-in&koppling:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Maximalt antal WINS-termina&ler:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Minimalt antal WINS-terminaler:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS-server IP-adress eller DNS-namn"
+
+#~ msgid "General Options"
+#~ msgstr "Allmänna alternativ"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS-motparter:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS-pro&xyserver"
+
+#~ msgid "Filenames"
+#~ msgstr "Filnamn"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Allmä&nt"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Avlägsna p&unkt"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Behandling"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Behandla stac&k:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Behandla prefi&x:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Spe&cial"
+
+#~ msgid "Stat cache"
+#~ msgstr "Statuscache"
+
+#~ msgid "Locking"
+#~ msgstr "Låsning"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Använd kär&nans tillfälleslåsning"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Katal&oger"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Lås&katalog:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&Katalog för process-id:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Spinnlås"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "Spinn&låsantal:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Spinnlås&tid:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Mycket avancerade"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "&Väntetid för att bryta tillfälleslåsning:"
+
+#~ msgid "milliseconds"
+#~ msgstr "millisekunder"
+
+#~ msgid "Charset"
+#~ msgstr "Teckenuppsättning"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS-teckensnitt:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Uni&x-teckensnitt:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "S&kärmteckensnitt:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Teckenuppsättning"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Gi&ltiga tecken:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Katalog för kodsida:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kodnin&gssystem:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Klientens kodsida:"
+
+#~ msgid "Logon"
+#~ msgstr "Inloggning"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Tilläggsskript"
+
+#~ msgid "Add user script:"
+#~ msgstr "Skript för att lägga till användare:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Skript för att lägga till användare i grupp:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Skript för att lägga till gr&upp:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Skript för att lägga till dator:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Skript för att ta bort grupp:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Skript för att ta bort användare:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Skript för att ta bort användare från grupp:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Skript för primär grupp"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Skript för att ange &primär grupp:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Avstängning"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Skript för a&vstängning:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Skript för att avbryta avstängning:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "I&nloggningssökväg:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Inloggningshe&mkatalog:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "In&loggningsenhet:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Inlo&ggningsskript:"
+
+#~ msgid "Socket"
+#~ msgstr "Uttag"
+
+#~ msgid "Socket address:"
+#~ msgstr "Uttagsadress:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Uttagsalternativ"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Aktivera eller inaktivera hela SSL-läget"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Det här aktiverar eller inaktiverar hela SSL-läget. Om det är inaktivt, "
+#~ "beter sig Samba med SSL precis som Samba utan SSL. Om det är aktivt, "
+#~ "beror det på alternativen SSL-värddatorer och omsignerade SSL-värddatorer "
+#~ "om en SSL-anslutning krävs.\n"
+#~ "\n"
+#~ "Det här är bara tillgängligt om SSL-biblioteken har kompilerats på ditt "
+#~ "system och inställningsväljaren --with-ssl angavs vid konfigurering."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "A&ktivera SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL-värddat&orer:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL-entropib&yte:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL-krypton:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "Omsi&gnerade SSL-värddatorer:"
+
+#~ msgid "ssl2"
+#~ msgstr "SSL-2"
+
+#~ msgid "ssl3"
+#~ msgstr "SSL-3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "SSL-2 eller SSL-3"
+
+#~ msgid "tls1"
+#~ msgstr "TLS-1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL-fu&nktion"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL-certifikatkatalog för certifikatutfärdare:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL-entropifil:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL EGD-uttag:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL-version:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL-certifikatfil för certifikatutfärdare:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL kräver klientcertifikat"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL-klientnyckel:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL &kräver servercertifikat"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L-servercertifikat:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL-klientcertifikat:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL-servernyc&kel:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokoll"
+
+#~ msgid "Ti&me server"
+#~ msgstr "&Tidsserver"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Läs och skriv av stora filer"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Unix-utökningar"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Läs BMPX"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokollversioner"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "A&nnonsera som:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT-arbetsstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Annonsera version:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokoll:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Maximalt protokoll:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Minimalt protokoll:"
+
+#~ msgid "Limits"
+#~ msgstr "Begränsningar"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&ximalt antal multiplexrar:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Maximalt antal termina&ler:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "SMB-portar att lyssna på"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB-portar:"
+
+#~ msgid "Browsing"
+#~ msgstr "Bläddring"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM-i&ntervall:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M-meddelande:"
+
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "S&ynkronisering med fjärrbläddrare:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Blä&ddringslista"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Utökad bläddrin&g"
+
+#~ msgid "Pre&load:"
+#~ msgstr "För&ladda:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind och LDMAP användar-id:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind och LDMAP &grupp-id:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Mallhemkatal&og:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Ma&llskal:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind-avskiljare:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Mall för primär grupp:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind cache&tid:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "&Förenlig med åtkomstkontrollista:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind uppräknade användare"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind uppräknade grupper"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind använd standarddomän"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind aktivera lokala konton"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind bara pålitliga domäner"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind hierarkiska grupper"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBIOS-&omfattning:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS-alias:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "&Inaktivera NetBIOS"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Na&mnupplösningsordning:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "MSDFS-värddat&or"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP-suffi&x:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP-datorsuffix:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP-användarsuffix:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP-&gruppsuffix:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP-id-avbildningssuffix:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP-filter:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP administrera do&männamn:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&Gränssnitt för LDMAP:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP-kopieringsväntan:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP-SSL:"
+
+#~ msgid "Off"
+#~ msgstr "Av"
+
+#~ msgid "Start_tls"
+#~ msgstr "Starta TLS"
+
+#~ msgid "On"
+#~ msgstr "På"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP-s&ynkronisering:"
+
+#~ msgid "Only"
+#~ msgstr "Endast"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP ta bort domän&namn"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "K&ommando för att lägga till utdelad katalog:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Kommando för att ändra utdelad katalog:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Kommando för att ta bort utde&lad katalog:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Kommando för me&ddelande:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Ko&mmando för dfree:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Ange &kvoteringskommando:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Hämta kvoteringskommando:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Pa&nikåtgärd:"
+
+#~ msgid "Misc"
+#~ msgstr "Diverse"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Diverse"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Dölj &lokala användare"
+
+#~ msgid "Default service:"
+#~ msgstr "Standardtjänst:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Tids&avstånd:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Fjärrmeddela&nde:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Källomgivning:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS-hemkatalog"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Hemkatalogavbildning:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&UTMP-katalog:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&WTMP-katalog:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "UT&MP"
+
+#~ msgid "Debug"
+#~ msgstr "Avlusning"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT statusstöd"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB-stöd"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT &rörledningsstöd"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Lägg till eller redigera utdelad katalog"
+
+#~ msgid "Pixmap"
+#~ msgstr "Bitavbildning"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Katalog"
+
+#~ msgid "&Path:"
+#~ msgstr "&Sökväg:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "&Dela ut alla hemkataloger"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tifierare"
+
+#~ msgid "Na&me:"
+#~ msgstr "Na&mn:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Komme&ntar:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Huvude&genskaper"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Ö&ppen"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&Bläddringsbar"
+
+#~ msgid "A&vailable"
+#~ msgstr "T&illgängliga"
+
+#~ msgid "&Security"
+#~ msgstr "&Säkerhet"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gäst&er"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Det här är ett användarnamn som används för att komma åt tjänster som "
+#~ "anges som tillgängliga för gäster. Vilka rättigheter användaren än har, "
+#~ "blir de tillgängliga för alla klienter som ansluter till gästtjänsten. "
+#~ "Typiskt finns användaren med i lösenordsfilen, men har inte ett giltigt "
+#~ "inloggningskonto. Användarkontot \"ftp\" är ofta ett bra val för "
+#~ "parametern. Om ett användarnamn anges i en given tjänst, överskrider det "
+#~ "angivna användarnamnet det som anges här."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Gästkonto:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Om det här är markerat, krävs inget lösenord för att ansluta till "
+#~ "tjänsten. Rättigheter är de som gäller för gästkontot."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Tillåt bara gästanslutn&ingar"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Värdda&torer"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Motsatsen till tillåt värddatorer. Värddatorer som listas här tillåts "
+#~ "INTE komma åt tjänster, om inte en specifik tjänst har en egen lista som "
+#~ "överskrider denna. Där listorna har konflikter, gäller listan som "
+#~ "tillåter värddatorer."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Parametern är en uppsättning värddatorer som tillåts komma åt en tjänst, "
+#~ "åtskilda med kommatecken, mellanslag eller tabulatorer."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Tillåt &värddatorer:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Neka värd&datorer:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Sy&mboliska länkar"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Tillåt att symboliska län&kar följs"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Tillåts följa symboliska länkar som &pekar på områden utanför "
+#~ "katalogträdet"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Validera lösenordet mot följande användarnamn om klienten inte kan "
+#~ "tillhandahålla ett användarnamn:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "Tillåt ba&ra anslutningar med användarnamn som anges i listan"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Dolda &filer"
+
+#~ msgid "Hidden"
+#~ msgstr "Dold"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto tillfälleslåsning"
+
+#~ msgid "Size"
+#~ msgstr "Storlek"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Markerade fi&ler"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Dölj"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto tillfälles&låsning"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Manuell inställning"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ve&tofiler:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Veto tillfälleslåsningsf&iler:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "&Dolda filer:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Dölj oskri&vbara filer"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Dölj s&pecialfiler"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Dölj filer som &börjar med punkt "
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Dölj oläsba&ra filer"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Avancerat"
+
+#~ msgid "Force Modes"
+#~ msgstr "Tvingande lägen"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Tvinga katalogsäk&erhetsläge:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Tvinga säke&rhetsläge:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "T&vinga katalogläge:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Tvinga skapan&deläge:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Masker"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Katalogsäkerhetsmask:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Säkerhets&mask:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Ka&talogmask:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Skapa mas&k:"
+
+#~ msgid "ACL"
+#~ msgstr "Åtkomstkontrollista"
+
+#~ msgid "&Profile acls"
+#~ msgstr "&Profilera åtkomstkontrollistor"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Arv av åtkomstkontrol&listor"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT-stöd för åtkomstkontrollista"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Tvinga okänd an&vändare av åtkomstkontrollista:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Avb&ilda arv av åtkomstkontrollista"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Ärv rättigheter från överliggande katalog"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Tillåt borttagning av skrivskyddade filer"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS egenskapsavbildning"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Avbilda DOS arki&v till Unix körbart av ägare"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Avbilda DOS dold till Uni&x körbart av alla"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Avbilda DOS system till Unix körbart av &grupp"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Lagra DOS-egenskaper som utökade egenskaper"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Strikt s&ynkronisering"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "S&ynkronisera alltid"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "St&rikt tilldelning"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Använd sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maximalt antal samtidiga anslutningar:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Skrivcac&hestorlek:"
+
+#~ msgid "bytes"
+#~ msgstr "byte"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Bloc&kstorlek:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "&Cachepolicy för klientsidan:"
+
+#~ msgid "manual"
+#~ msgstr "handbok"
+
+#~ msgid "documents"
+#~ msgstr "dokument"
+
+#~ msgid "programs"
+#~ msgstr "program"
+
+#~ msgid "disable"
+#~ msgstr "inaktivera"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Namnbehandling"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Aktivera na&mnbehandling"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Behandla skiftlä&ge"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Be&vara skiftläge"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "B&evara kort skiftläge"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Skif&tlägeskänslig"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Norma&lt skiftläge:"
+
+#~ msgid "Lower"
+#~ msgstr "Gemena"
+
+#~ msgid "Upper"
+#~ msgstr "Versaler"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Behandlingste&cken:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "&Behandlad avbildning:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Behandlingsmetod:"
+
+#~ msgid "hash"
+#~ msgstr "omkastning"
+
+#~ msgid "hash2"
+#~ msgstr "omkastning 2"
+
+#~ msgid "Other Options"
+#~ msgstr "Andra alternativ"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Dölj efterfölja&nde punkt"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS-filläge"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS f&iltider"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS filtidsupplösning"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Aktivera låsn&ing"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Lås&ning"
+
+#~ msgid "S&trict locking"
+#~ msgstr "S&trikt låsning"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Blockerande låsnin&g"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x-låsning"
+
+#~ msgid "Share mo&des"
+#~ msgstr "&Delningslägen"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Utfä&rda tillfälleslåsning "
+
+#~ msgid "O&plocks"
+#~ msgstr "Till&fälleslåsning"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Ni&vå 2 tillfälleslåsning"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Konfliktgrä&ns för tillfälleslåsning:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Förfalska tillfäll&eslåsningar"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "VFS-ob&jekt:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "&VFS-alternativ:"
+
+#~ msgid "Exec"
+#~ msgstr "Kör"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Fö&rkörning:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "&Förkörning i systemadministratörsläge:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Ef&terkörning:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "&Efterkörning i systemadministratörsläge:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "Förkörning vid &stängning"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "Förkörning i s&ystemadministratörsläge vid stängning"
+
+#~ msgid "&Volume:"
+#~ msgstr "Vol&ym:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&giskt skript:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Mag&isk utmatning:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Gå i&nte ner:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "MSDFS-pro&xyserver"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "&Kommandot setdir tillåts"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "&Förfalska skapa katalogtid"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "MS&DFS-systemadministratör"
+
+#~ msgid "&Help"
+#~ msgstr "&Hjälp"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Användare"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Alla ospecificerade a&nvändare"
+
+#~ msgid "Reject"
+#~ msgstr "Avslå"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Ang&ivna användare"
+
+#~ msgid "Access Rights"
+#~ msgstr "Åtkomsträttigheter"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Lägg till användare..."
+
+#~ msgid "E&xpert"
+#~ msgstr "E&xpert"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Lägg till &grupp..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&Ta bort markerad"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Alla an&vändare ska tvingas till följande användare och grupp"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Tvinga användar&e:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Tvinga g&rupp:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Åtkomstmodifierare"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Åtkomstskydd"
+
+#~ msgid "Others"
+#~ msgstr "Övriga"
+
+#~ msgid "Read"
+#~ msgstr "Läs"
+
+#~ msgid "Write"
+#~ msgstr "Skriv"
+
+#~ msgid "Sticky"
+#~ msgstr "Klistrig"
+
+#~ msgid "Set GID"
+#~ msgstr "Sätt GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Sätt UID"
+
+#~ msgid "Special"
+#~ msgstr "Special"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Användarinställningar"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Giltiga användare:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administratörsanvändare:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Og&iltiga användare:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Skrivlista:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Läslista:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Tillåtna v&ärddatorer"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "En lista över tillåtna värddatorer"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Här kan du se en lista med värddatorer som har tillåtelse att komma åt "
+#~ "katalogen via NFS.\n"
+#~ "Den första kolumnen visar värddatorns namn eller adress, den andra "
+#~ "kolumnen visar åtkomstparametrarna. Namnet \"*\" anger öppen åtkomst."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Lägg till värddator..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Än&dra värddator..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "Ta bo&rt värddator"
+
+#~ msgid "Name/Address"
+#~ msgstr "Namn eller adress"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametrar"
+
+#~ msgid "Host Properties"
+#~ msgstr "Egenskaper för värddator"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Namn eller adress:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Namn eller adress fält</b>\n"
+#~ "<p>\n"
+#~ "Här kan du skriva in värddatornamn eller adress.<br>\n"
+#~ "Värddatorn kan anges på ett antal olika sätt:\n"
+#~ "<p>\n"
+#~ "<i>enstaka värddator</i>\n"
+#~ "<p>\n"
+#~ " Detta är det vanligaste formatet. Du kan antingen ange en värddator med "
+#~ "ett avkortat namn som känns igen av namnupplösningen, det fullständigt "
+#~ "kvalificerade domännamnet eller en IP-adress.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>nätgrupper</i>\n"
+#~ "<p>\n"
+#~ "NIS-nätgrupper kan anges som @grupp. Bara värddatordelen av varje "
+#~ "nätgrupp tas hänsyn till när medlemskap kontrolleras. Tomma "
+#~ "värddatordelar och de som bara innehåller ett ensamt streck (-) "
+#~ "ignoreras.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>jokertecken</i>\n"
+#~ "<p>\n"
+#~ " Datornamn kan innehålla jokertecknen * och ?. Det kan användas för att "
+#~ "göra exportfilen kompaktare, till exempel *.cs.xxx.edu matchar alla "
+#~ "värddatorer i domänen cs.xxx.edu. Dock matchar inte jokertecknen punkter "
+#~ "i domännamn, så mönstret ovan omfattar inte värddatorer som a.b.cs.xxx."
+#~ "edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-nätverk</i>\n"
+#~ "<p>\n"
+#~ " Du kan också exportera kataloger till alla värddatorer i ett IP-"
+#~ "(del)nätverk samtidigt. Det görs genom att ange paret IP-adress/nätmask, "
+#~ "där nätmasken kan anges på decimalform med punkter, eller som en "
+#~ "kontinuerlig masklängd (till exempel antingen \"/255.255.252.0\" eller "
+#~ "\"/22\" tillagt till nätverkets basadress resulterar i identiska "
+#~ "delnätverk med 10-bitars värddator).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "Ö&ppen åtkomst"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Öppen åtkomst</b>\n"
+#~ "<p>\n"
+#~ "Om du markerar det här kommer värddatoradressen vara ett ensamt "
+#~ "jokertecken, som betyder öppen åtkomst.\n"
+#~ "Det är precis samma sak som om du skrev in ett jokertecken i "
+#~ "adressfältet.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Väljare"
+
+#~ msgid "&Writable"
+#~ msgstr "&Skrivbar"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Skrivbar</b>\n"
+#~ "<p>\n"
+#~ "Tillåt både läs- och skrivbegäran för NFS-volymen.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standardvärdet är att inte tillåta någon begäran som ändrar filsystemet.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Osä&ker"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Osäker</b>\n"
+#~ "<p>\n"
+#~ "Om alternativet är markerat krävs det inte att en begäran kommer från en "
+#~ "Internetport mindre än IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Om du är osäker lämna det avmarkerat.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Synkronisera"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Synkronisera</b>\n"
+#~ "<p>\n"
+#~ "Det här alternativet begär att alla skrivningar till filer lagras på disk "
+#~ "innan skrivbegäran avslutas. Det krävs för fullständig datasäkerhet i "
+#~ "händelse av en serverkrasch, men orsakar en prestandaförsämring.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standardvärdet är att låta servern skriva ut data så fort det är klart.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Ingen skrivför&dröjning"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Ingen skrivfördröjning</b>\n"
+#~ "<p>\n"
+#~ "Det här alternativet har bara någon effekt om synkronisering är markerat. "
+#~ "NFS-servern fördröjer normalt en skrivbegäran till disk något om den "
+#~ "misstänker att en annan relaterad skrivbegäran kan pågå eller snart "
+#~ "anlända. Det tillåter att mer än en skrivbegäran kan lagras på disk med "
+#~ "en åtgärd, vilket kan förbättra prestanda. Om en NFS-server mest tar emot "
+#~ "små orelaterade skrivningar, kan beteendet i själva verket minska "
+#~ "prestanda, så alternativet ingen skrivfördröjning är tillgängligt för att "
+#~ "stänga av det.</p>"
+
+#~ msgid "No &hide"
+#~ msgstr "&Dölj inte"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Dölj inte</b>\n"
+#~ "<p>\n"
+#~ "Det här alternativet är baserat på alternativet med samma namn som "
+#~ "tillhandahålls av Irix NFS. Om en server exporterar två filsystem, där "
+#~ "ett är monterat i det andra, måste klienten normalt montera båda "
+#~ "filsystemen explicit för att kunna komma åt dem. Om den bara monterar det "
+#~ "överliggande, syns en tom katalog på platsen där det andra filsystemet är "
+#~ "monterat. Filsystemet är \"dolt\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Att ange alternativet dölj inte för ett filsystem gör att det inte döljs, "
+#~ "och en klient med lämplig behörighet kan gå från det överliggande till "
+#~ "det filsystemet utan att märka bytet.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Dock hanterar vissa NFS-klienter inte den här situationen bra, eftersom "
+#~ "det till exempel är möjligt för två filer i det skenbart enda filsystemet "
+#~ "att ha samma inode-nummer.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Alternativet dölj inte är för närvarande bara effektivt på export från en "
+#~ "enstaka värddator. Det fungerar inte tillförlitligt med export från "
+#~ "nätgrupper, delnät eller med jokertecken.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Alternativet kan vara mycket användbart i vissa fall, men det ska "
+#~ "användas med försiktighet, och bara efter att ha bekräftat att "
+#~ "klientsystemet klarar av att hantera situationen.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "&Ingen delträdskontroll"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ingen delträdskontroll</b>\n"
+#~ "<p>\n"
+#~ "Det här alternativet inaktiverar delträdskontroll, vilket har någon liten "
+#~ "påverkan på säkerhet, men kan förbättra tillförlitlighet i vissa fall.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "För att utföra kontrollen måste servern inkludera viss information om "
+#~ "filens plats i \"filhandtaget\" som skickas till klienten. Det kan orsaka "
+#~ "problem med att komma åt filer som byter namn medan klienten har dem "
+#~ "öppna (även om det fungerar i många enklare fall).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Delträdskontroll används också för att försäkra att filer inne i "
+#~ "kataloger som bara systemadministratören kan komma åt bara kan kommas åt "
+#~ "om filsystemet exporteras utan att undertrycka systemadministratören (se "
+#~ "nedan), även om själva filen tillåter en mer generell åtkomst.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Som en generell regel, ska ett filsystem med hemkataloger, som normalt "
+#~ "exporteras från roten och kan råka ut för många namnbyten av filer, "
+#~ "exporteras med delträdskontroll inaktiverad. Ett filsystem som i huvudsak "
+#~ "är skrivskyddat, eller åtminstone inte råkar ut för många namnbyten av "
+#~ "filer (t ex /usr eller /var) och där underkataloger kan exporteras, bör "
+#~ "troligtvis exporteras med delträdskontroll aktiverad.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&Osäker låsning"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Osäker låsning</b>\n"
+#~ "<p>\n"
+#~ "Det här alternativet talar om för NFS-servern att inte begära "
+#~ "behörighetskontroll för en låsningsbegäran (dvs. en begäran som använder "
+#~ "NLM-protokollet). Normalt kräver NFS-servern att en låsningsbegäran har "
+#~ "ett kreditiv för en användare som har läsåtkomst till filen. Med den här "
+#~ "flaggan görs ingen åtkomstkontroll.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Tidiga implementeringar av NFS-klienter skickade inte kreditiv med en "
+#~ "låsningsbegäran, och det finns fortfarande många aktuella NFS-klienter "
+#~ "som är baserade på de gamla implementeringarna. Använd flaggan om du "
+#~ "märker att du bara kan låsa filer som kan läsas av vem som helst.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Användaravbildning"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Undertryck alla"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Undertryck alla</b>\n"
+#~ "<p>\n"
+#~ "Avbilda alla användar-id och grupp-id på den anonyma användaren. "
+#~ "Användbart för NFS-exporterade öppna FTP-kataloger, kataloger för lagring "
+#~ "av diskussionsgrupper, etc.</p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Undertryck inte s&ystemadministratör"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Undertryck inte systemadministratör</b>\n"
+#~ "<p>\n"
+#~ "Stäng av undertryckning av systemadministratören. Alternativet är i "
+#~ "huvudsak användbart för klienter utan disk.\n"
+#~ "</p>\n"
+#~ "<i>undertryck systemadministratör</i>\n"
+#~ "<p>\n"
+#~ "Avbilda en begäran från användar- och grupp-id 0 till anonymt användar- "
+#~ "och grupp-id. Observera att detta inte gäller några andra användar-id som "
+#~ "kan vara lika känsliga, som användaren bin.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonym an&vändar-id:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonym användar-id och grupp-id</b> <p> Dessa alternativ anger "
+#~ "explicit användar-id och grupp-id för det anonyma kontot. Alternativet är "
+#~ "i huvudsak användbart för PC/NFS-klienter, där du kan vilja att varje "
+#~ "begäran verkar komma från en användare.</p>"
+
+#~ msgid "FF"
+#~ msgstr "Sidframmatning"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonym &grupp-id:"
+
+#~ msgid "Folder:"
+#~ msgstr "Katalog:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Dela med &NFS (Linux och Unix)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS-alternativ"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Öpp&en"
+
+#~ msgid "W&ritable"
+#~ msgstr "S&krivbar"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Fler NFS-al&ternativ"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba-alternativ"
+
+#~ msgid "P&ublic"
+#~ msgstr "Ö&ppen"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Fler Samba-alt&ernativ"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Tillåt alla användare att dela ut kataloger"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Bara användare i gruppen \"%1\" tillåts dela ut kataloger"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Användare i gruppen \"%1\""
+
+#~ msgid "Remove User"
+#~ msgstr "Ta bort användare"
+
+#~ msgid "Add User"
+#~ msgstr "Lägg till användare"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Gruppmedlemmar kan dela ut kataloger utan administratörens lösenord"
+
+#~ msgid "Change Group..."
+#~ msgstr "Ändra grupp..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB- och NFS-servrarna är inte installerade på den här datorn. För att "
+#~ "aktivera den här modulen måste dessa servrar vara installerade."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "A&ktivera filutdelning i lokalt nätverk"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Enkel &utdelning"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Aktivera enkel utdelning för att låta användare dela ut kataloger i sina "
+#~ "hemkataloger, utan att känna till administratörens lösenord."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Avan&cerad utdelning"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Aktivera avancerad utdelning för att låta användare dela ut vilken "
+#~ "katalog som helst, så länge de har skrivåtkomst till nödvändiga "
+#~ "inställningsfiler, eller känner till administratörens lösenord."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Använd &NFS (Linux och Unix)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Använd Sam&ba (Microsoft® Windows®)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Tillåtna an&vändare"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Utdelade kataloger"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Lä&gg till..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Än&dra..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Samba-inställningsfilen <strong>\"smb.conf\"</strong> kunde inte "
+#~ "hittas.</p>Försäkra dig om att du har installerat samba.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Ange plats"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba-inställningsfil\n"
+#~ "*|Alla filer"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Hämta plats för smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Filen <i>%1</i> kunde inte läsas.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Kunde inte läsa fil"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Fel när fil skulle öppnas"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Misslyckades gå med i domänen %1."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Ange ett lösenord för användaren <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Misslyckades lägga till användaren <b>%1</b> i användardatabasen i "
+#~ "Samba.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Misslyckades ta bort användaren %1 från användardatabasen i Samba."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Ange ett lösenord för användaren %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Misslyckades ändra lösenord för användaren %1."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Inställning av Samba</h1> Här kan du ställa in Samba-servern."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>dela ut</i> om du har ett hemnätverk eller ett "
+#~ "litet kontorsnätverk.<br /> Den gör det möjligt för alla att läsa listan "
+#~ "med alla dina kataloger och skrivare utan att en inloggning krävs."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>användare</i> om du har ett större nätverk och "
+#~ "inte vill låta vem som helst läsa listan över utdelade kataloger och "
+#~ "skrivare utan att logga in.<br /><br />Om du vill köra Samba-servern som "
+#~ "<b>primär domänstyrenhet</b> (PDC) måste du också ange alternativet."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>server</i> om du har ett stort nätverk och samba-"
+#~ "servern ska validera användarnamnet och lösenordet genom att skicka det "
+#~ "till en annan SMB-server, till exempel en dator med NT."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>domän</i> om du har ett stort nätverk och samba-"
+#~ "servern ska validera användarnamnet och lösenordet genom att skicka det "
+#~ "till en primär- eller reservdomänstyrenhet i Windows NT."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Använd säkerhetsnivån <i>ADS</i> om du har ett stort nätverk och samba-"
+#~ "servern ska fungera som en domänmedlem i ett ADS-område."
+
+#~ msgid "Sorry"
+#~ msgstr "Tyvärr"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Du skrev in två olika lösenord. Försök igen."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Alternativet <em>%1</em> stöds inte av din Samba-version"
+
+#~ msgid "Unnamed"
+#~ msgstr "Namnlös"
+
+#~ msgid "&Hide"
+#~ msgstr "&Dölj"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto tillfälleslåsning"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Vissa filer du har valt är dolda eftersom de börjar med en punkt. "
+#~ "Vill du avmarkera alla filer som börjar med en punkt?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Filer som börjar med punkt"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Avmarkera dolda"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Behåll dolda"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Vissa filer du har valt motsvaras av jokersträngen <b>'%1'</b>. "
+#~ "Vill du avmarkera alla filer som motsvarar <b>'%1'</b>?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Jokersträng"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Avmarkera"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Behåll markerade"
+
+#~ msgid "Default"
+#~ msgstr "Förval"
+
+#~ msgid "Admin"
+#~ msgstr "System"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivit <b>allmän läsåtkomst</b> till katalogen, men "
+#~ "gästkontot <b>%1</b> har inte nödvändiga läsrättigheter.<br />Vill du "
+#~ "fortsätta ändå?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Varning"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivit <b>allmän skrivåtkomst</b> till katalogen, men "
+#~ "gästkontot <b>%1</b> har inte nödvändiga skrivrättigheter.<br />Vill du "
+#~ "fortsätta ändå?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivit <b>skrivåtkomst</b> för användaren <b>%1</b> till "
+#~ "katalogen, men användaren har inte nödvändiga skrivrättigheter.<br />Vill "
+#~ "du fortsätta ändå?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivit <b>läsåtkomst</b> för användaren <b>%1</b> till "
+#~ "katalogen, men användaren har inte nödvändiga läsrättigheter.<br />Vill "
+#~ "du fortsätta ändå?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Det finns redan en öppen post."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Värddatorn finns redan"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Ange ett värddatornamn eller en IP-adress."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Ingen värddator eller IP-adress"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Värddatorn \"%1\" finns redan."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Läser Samba-inställningsfil..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Läser NFS-inställningsfil..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Ange en giltig sökväg."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Bara kataloger kan delas ut."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Katalogen delas redan ut."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Systemadministratören tillåter inte utdelning med NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Fel: Kunde inte läsa NFS-inställningsfil."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Systemadministratören tillåter inte utdelning med Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Fel: Kunde inte läsa Samba-inställningsfil."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Du måste ange ett namn på den utdelade katalogen med Samba."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Du måste ha behörighet för att dela ut kataloger."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Anpassa filutdelning..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Ingen NFS-server är installerad på systemet"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Kunde inte spara inställningar."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Kunde inte öppna filen \"%1\" för skrivning: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Spara misslyckades"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Filutdelning</h1><p>Den här modulen kan användas för att aktivera "
+#~ "filutdelning över nätverket med \"Nätverksfilsystemet\" (NFS) eller SMB i "
+#~ "Konqueror. Det senare låter dig dela filer med Windows®-datorer i "
+#~ "nätverket.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Utdelad katalog"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Tillåtna användare"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Alla användare är redan i gruppen %1."
+
+#~ msgid "Select User"
+#~ msgstr "Välj användare"
+
+#~ msgid "Select a user:"
+#~ msgstr "Välj en användare:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Kunde inte lägga till användaren \"%1\" i gruppen \"%2\""
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Kunde inte ta bort användaren \"%1\" från gruppen \"%2\""
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Du måste välja en giltig grupp."
+
+#~ msgid "New file share group:"
+#~ msgstr "Ny fildelningsgrupp:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Lägg till användare från den gamla fildelningsgruppen i den nya"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Ta bort användare från den gamla fildelningsgruppen"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Ta bort den gamla fildelningsgruppen"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Bara användare i en viss grupp tillåts dela ut kataloger"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Välj grupp..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Vill du verkligen ta bort alla användare från gruppen \"%1\"?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Vill du verkligen ta bort gruppen \"%1\"?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Misslyckades ta bort gruppen \"%1\"."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Välj en giltig grupp."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Gruppen \"%1\" finns inte. Ska den skapas?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Skapa inte"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Misslyckades skapa gruppen \"%1\"."

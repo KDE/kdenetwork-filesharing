@@ -1,0 +1,3647 @@
+# translation of kfileshare.po to
+# translation of kfileshare.po to Kazakh
+#
+# Sairan Kikkarin <sairan@computer.org>, 2006, 2007, 2008.
+# root <root@localhost.localdomain>, 2006.
+# Sairan Kikkarin <sairan@computer.org>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2011-06-28 08:42+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Тыйымды"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Рұқсат етілген"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Тек &оқу үшін"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Рұқасаттары"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Файл жүйесінің &түрі:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "OS/2 стилінде кеңейтлген атрибуттарды қолдау"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Жаза алатын"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "OS/2 стилінде кеңейтлген атрибуттарды қолдау"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Өшіру скрипттер"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Рұқасаттары"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Рұқасаттары"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Иесі"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Иесі"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Тобы"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Рұқасаттары"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Жолы"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Рұқасаттары"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Рұқасаттары"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "&Мүлдем тыйымды"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Рұқасаттары"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Бұл қапшық жергілікті желіде &ортақ болсын"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Атауы:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Меймандар рұқсат &етілсін"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Толық басқаруда"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Тек оқу үшін"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "&Мүлдем тыйымды"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Парольсіз"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Пароль"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Рұқасаттары"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Қ&айту"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Тек жергілікті қапшықтарды ғана ортақтастыруға болады."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba..."
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Samba-ны орнату..."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Sa&mba пайдаланушылары"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Файл ортақтастыруы бұғатталған."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Бұндай қапшық жоқ."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Бұл ортақ ресурстың атауы"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Share"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Құру"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Құру"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Ортақтастыру"
+
+#, fuzzy
+#~| msgid "Install Samba..."
+#~ msgid "Installing Samba..."
+#~ msgstr "Samba-ны орнату..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt><strong>%1</strong> деп аталған ортақ ресурс бар екен.<br /> Басқаша "
+#~ "атаңыз.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Жүйеңізде Samba орнатылмаған"
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "S&amba арқылы ортақтастыру (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Samba орнатылмады.</strong><br />Kpackagekit дұрыс "
+#~ "орнатылғанын тексеріңіз</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Пайдаланушыларды таңдау"
+
+#~ msgid "Select &Users"
+#~ msgstr "&Пайдаланушыларды таңдау"
+
+#~ msgid "Name"
+#~ msgstr "Аты"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Рұқ&саттары"
+
+#~ msgid "&Default"
+#~ msgstr "Ә&детті"
+
+#~ msgid "&Read access"
+#~ msgstr "&Оқу құқығы"
+
+#~ msgid "&Write access"
+#~ msgstr "&Жазу құқығы"
+
+#~ msgid "&Admin access"
+#~ msgstr "Әкім&ші құқығы"
+
+#~ msgid "&OK"
+#~ msgstr "&ОК"
+
+#~ msgid "Join Domain"
+#~ msgstr "Доменге кіру"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Тексеру:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Паролі:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Атауы:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Домен ко&нтроллері:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Домені:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Топтарды таңдау"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Топтарды &таңдау"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Топтың &түрі"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX тобы"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S тобы"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNIX пен NIS т&обы"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Мұнда smbpasswd файлында сақталатын Samba пайдаланушылар тізімін өзгерте "
+#~ "аласыз.\n"
+#~ "<p>\n"
+#~ "Әрбір Samba пайдаланушысына сәйкесті UNIX пайдаланушы болуға тиіс.\n"
+#~ "Оң жақта Samba пайдаланушысы ретінде тіркелмеген passwd файлындағы UNIX "
+#~ "пайдаланушылары көрсетілген.\n"
+#~ "Samba пайдаланушылары - сол жақта.\n"
+#~ "<p>\n"
+#~ "Жаңа Samba пайдаланушыны қосу үшін <em>&lt; қосу</em> батырмасын басып "
+#~ "қалыңыз.\n"
+#~ "Таңдалған UNIX пайдаланушылары Samba пайдаланушыларының тізіміне енеді "
+#~ "де,\n"
+#~ "UNIX пайдаланушылар тізімінен өшіріледі (бірақ UNIX пайдаланушысы болып "
+#~ "қалады).\n"
+#~ "<p>\n"
+#~ "Samba пайдаланушыларынан шығару үшін <em>&gt; өшіру</em> деген\n"
+#~ "батырманы басып қалыңыз. Пайдаланушылар smbpasswd файлынан\n"
+#~ "өшіріліп, Samba пайдаланушылары емес UNIX пайдаланушылары\n"
+#~ "қатарында қалады.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Негізгі параметрлері"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba баптаулар файлы:"
+
+#~ msgid "&Load"
+#~ msgstr "&Жүктеу"
+
+#~ msgid "Server Identification"
+#~ msgstr "Сервердің идентификациясы"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Жұмыс то&бы:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Мұнда жұмыс тобы/доменіңіздің атауын келтіріңіз."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Сервер&і:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS атауы:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Қа&уіпсіздік деңгейі"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "User"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domai&n"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Егер желіңіз үйдегі не шағын кеңседегі желі болса <i>share</i> "
+#~ "қауіпсіздік деңгейін таңдаңыз.<br> Бұл барлығына бүкіл ортақ ресурстар "
+#~ "атауларын көрінетін қылады."
+
+#~ msgid "Further Options"
+#~ msgstr "Басқа параметрлер"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Парольдер серверінің адресі/атауы:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Ау&мағы:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Мейман тірк&елгісі:"
+
+#~ msgid "Help"
+#~ msgstr "Анықтама"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Әрбір параметр туралы егжей-тегжей анықтамасы:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Ортақ ресурстар"
+
+#~ msgid "Comment"
+#~ msgstr "Түсініктеме"
+
+#~ msgid "Properties"
+#~ msgstr "Қасиеттері"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Әде&ттегісін өзгерту..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "&Жаңа ортақ ресурсты қосу..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Ортақ ресурсты өзгерту..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Ресурсты ортақтастырудан ш&ығару"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Прин&терлер"
+
+#~ msgid "Printer"
+#~ msgstr "Принтер"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Әдеттегі&лерді өзгерту"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Ж&аңа принтерді қосу"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "При&нтерді өзгерту"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Принтерді ө&шіру"
+
+#~ msgid "&Users"
+#~ msgstr "&Пайдаланушылар"
+
+#~ msgid "Disabled"
+#~ msgstr "Бұғатталған"
+
+#~ msgid "Add"
+#~ msgstr "Қосу"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Ө&шіру"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X пайдаланушылары"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Парольді ө&згерту..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "Доменге &кіру"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Қос&ымша"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Мұнда Сіз SAMBA серверінің қосымша параметрлерін өзгерте аласыз.\n"
+#~ "Мағынасын білетінді ғана өзгертіңіз."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Кеңейтілген дамп"
+
+#~ msgid "Security"
+#~ msgstr "Қауіпсіздік"
+
+#~ msgid "&General"
+#~ msgstr "&Жалпы"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "PAM шектеулеріне бағыну"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM паролін өзгерту"
+
+#~ msgid "Other Switches"
+#~ msgstr "Басқа ауыстырғыштары"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Сенімді домендер бо&лсын"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Күшейтілген сервердің қауіпсіздігі"
+
+#~ msgid "General"
+#~ msgstr "Жалпы"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Аутентификация тәсілдері:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Түбір каталог&ы:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "И&нтерфейстері:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Мейманға теңестіру:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Қолданатын интерфейстері"
+
+#~ msgid "Never"
+#~ msgstr "Ешқашан"
+
+#~ msgid "Bad User"
+#~ msgstr "Жарамсыз пайдаланушыны"
+
+#~ msgid "Bad Password"
+#~ msgstr "Жарамсыз парольдіні"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Б&алама хосттар:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "RID алгоритмдік негізі:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Жеке каталог:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Пар&оль"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba парольдері"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Парольдерді ши&фрлау"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Samba парольдер файлы:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Парольдерді сақтау қыз&меті:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Passwd сұхбаты:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Passwd сұхбатын түзету"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "сек"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Passwd сұхбатының күту уақыты:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Б&ос парольдер"
+
+#~ msgid "Password level:"
+#~ msgstr "Паролінің деңгейі:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Пароль қысқалығының шегі:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Парольді күту уақыты:"
+
+#~ msgid "Migration"
+#~ msgstr "Көшіп ауысу"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Шифрланғанд&ы жаңарту"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX парольдері"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Passwd бағдарламасы:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNI&X парольдерді қадамдастыру"
+
+#~ msgid "Userna&me"
+#~ msgstr "Пайдалану&шы"
+
+#~ msgid "User&name map:"
+#~ msgstr "Пайдала&нушының сәйкесі:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Пайдаланушының &деңгейі:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Жергілікті пайдаланушыларды жасыру"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Ан&онимды кіруі болмасын"
+
+#~ msgid "Use rhosts"
+#~ msgstr "rhosts-ты қолдану"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "А&утентификация"
+
+#~ msgid "Client"
+#~ msgstr "Клиент"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "К&лиенттің қолтаңбасы:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Жай &мәтін паролі"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "lanman аутентификациясы"
+
+#~ msgid "Auto"
+#~ msgstr "Авто"
+
+#~ msgid "Mandatory"
+#~ msgstr "Міндетті"
+
+#~ msgid "Yes"
+#~ msgstr "Иә"
+
+#~ msgid "No"
+#~ msgstr "Жоқ"
+
+#~ msgid "Client channel:"
+#~ msgstr "Клиент арнасы:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Клиент spnego қолданады"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "NTLMv&2 аутентификациясы"
+
+#~ msgid "Server signing:"
+#~ msgstr "Сервердың қолтаңбасы:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman аутентификациясы"
+
+#~ msgid "Server channel:"
+#~ msgstr "Сервер арнасы:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "sp&nego қолдану"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM аутентификациясы"
+
+#~ msgid "Logging"
+#~ msgstr "Журналды жүргізу"
+
+#~ msgid "L&og file:"
+#~ msgstr "Ж&урнал файлы:"
+
+#~ msgid "kB"
+#~ msgstr "Кб"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Журнал ұз&ындығының шегі:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "Жү&йелік журналы:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Журнал жүргізу дең&гейі:"
+
+#~ msgid "S&witches"
+#~ msgstr "А&уыстырғыштар"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "Т&ек жүйелік журналы"
+
+#~ msgid "Status"
+#~ msgstr "Күй-жайы"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "У&ақыт белгісі"
+
+#~ msgid "microseconds"
+#~ msgstr "микросекунд"
+
+#~ msgid "Debug pid"
+#~ msgstr "Жөндеу PID"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Жөнд&еу UID"
+
+#~ msgid "Tuning"
+#~ msgstr "Егжей-тегжейлі баптау"
+
+#~ msgid "Modules"
+#~ msgstr "Модульдер"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Жүк&телген модульдер:"
+
+#~ msgid "Switches"
+#~ msgstr "Ауыстырғыштар"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd кэші"
+
+#~ msgid "Use &mmap"
+#~ msgstr "&mmap-ты қолдану"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Өзекті өзгерту құлақтандыр&у"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Х&ост атауын анықтау"
+
+#~ msgid "Read ra&w"
+#~ msgstr "&Өңдеусіз оқу"
+
+#~ msgid "Write raw"
+#~ msgstr "Өңдеусіз жазу"
+
+#~ msgid "Times"
+#~ msgstr "Аралықтар"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Өзгеріс туралы құлақтандыру уақыты:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Ұстау уақыты:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "мин"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Аралықтың шегі:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q кэштеу уақыты:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "А&тауды кэштеу уақыты:"
+
+#~ msgid "Sizes"
+#~ msgstr "Көлемдері"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Дискі көлемінің шегі:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "Мб"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Оқу блок көле&мі:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Stat кэштеу көлемі:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "xmit &шегі:"
+
+#~ msgid "Numbers"
+#~ msgstr "Сандары"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "smbd процестердің шегі:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Ашылған файлдар шегі:"
+
+#~ msgid "Printing"
+#~ msgstr "Басып шығару"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Басу &тапсырмалар саны:"
+
+#~ msgid "Drivers"
+#~ msgstr "Драйверлер"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 драйвердың сәйкесі:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap а&тауы:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Пр&нтер драйверінің файлы: "
+
+#~ msgid "Commands"
+#~ msgstr "Командалар"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Порттарды түгелдеу командасы:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Принтерді қосу командасы:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Принтерді өшіру командасы:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Принтерді жү&ктеу"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Спулер істе&месін"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Принтерді қосу &шеберді шақыру"
+
+#~ msgid "Domain"
+#~ msgstr "Домен"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Ж&ергілікті контроллері"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Доме&н контроллері"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Доменге қос&ылулары"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Негізгі &контроллері"
+
+#~ msgid "OS &level:"
+#~ msgstr "OЖ &деңгейі:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Домен әкімшілер тобы:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Домен меймандар тобы:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "&WINS белсендіксіздіру"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "WI&NS сервердей істеу"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Б&асқа WINS серверді қолдану"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "WINS сервердің пара&метрлері"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS прокси&і"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS іле&ктіруі:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "WINS tt&l ұзындығының шегі:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "WINS ttl қ&ысқалығының шегі:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS сервердің IP адресі не DNS атауы"
+
+#~ msgid "General Options"
+#~ msgstr "Жалпы параметрлері"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS партнерлері:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS прок&сиі"
+
+#~ msgid "Filenames"
+#~ msgstr "Файл атаулары"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Жа&лпы"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "&Нүктені алып тастау"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Бұрмалау"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Бұрмалау с&тегі:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Бұрмалау префи&ксі:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Арнау&лы"
+
+#~ msgid "Stat cache"
+#~ msgstr "Stat кэші"
+
+#~ msgid "Locking"
+#~ msgstr "Бұғаттау"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Ө&зегі бейім-бұғатты қолдайды"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Катал&огтар"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Бұға&ттайтын каталог:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "PID каталог&ы:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Бұғат айналымы"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Бұғат айналымдар саны:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Бұғат айналым &уақыты:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Мықты білгіштер үшін"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Бейім-бұғатын шешуін &күту уақыты:"
+
+#~ msgid "milliseconds"
+#~ msgstr "милисекунд"
+
+#~ msgid "Charset"
+#~ msgstr "Кодтамасы"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS кодтамасы:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X кодтамасы:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Көрсетілеті&н кодтамасы:"
+
+#~ msgid "U&nicode"
+#~ msgstr "Ю&никод"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Кодтамасы:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Жа&рамды таңбалар:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Код парағының каталогы:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Ко&дтау жүйесі:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Клиент код парағы:"
+
+#~ msgid "Logon"
+#~ msgstr "Жүйеге кіру"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Қосу скрипттер"
+
+#~ msgid "Add user script:"
+#~ msgstr "Пайдаланушыны қосу скрипті:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Пайдаланушыны топқа қосу скрипті:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Т&обты қосу скрипті:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Компьютерді қосу скрипті:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Тобты өшіру скрипті:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Пайдаланушыны өшіру скрипті:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Пайдаланушыны топтан өшіру скрипті:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Негізгі топ скрипті"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Негі&згі топты орнату скрипті:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Сөндіру"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Сөн&діру скрипті:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Сөндіруді доғару скрипті:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Жүйе&ге кіру жолы:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Жүйеге кіргендегі ме&кені:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "&Жүйеге кіру дискжетегі:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Жүйеге к&іру скрипті:"
+
+#~ msgid "Socket"
+#~ msgstr "Сокет"
+
+#~ msgid "Socket address:"
+#~ msgstr "Сокет адресі:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Сокет параметрлері"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "SSL режімін қосу-өшіруі"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "SSL режімін қосу-өшіруі. Өшірулі болса SSL-қосулы Samba дәл SSL-сіз Samba "
+#~ "сияқты істейді. Қосулы болса, жағдай ssl хосттарға тәуелді, SSL қолдану-"
+#~ "қолданбауын ssl хосттар шешеді.\n"
+#~ "\n"
+#~ "Бұл жүйеңізде SSL жиындар файлдары бар болса және конфигурциялағанда \"--"
+#~ "with-ssl\" параметрі көрсетілген кезде ғана істейді."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "SSL қол&данылсын"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL х&осттар:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL энтропи&я байттары:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL шифрлар:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL хосттардың бас та&ртуы:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2 не 3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL үйл&есімділігі"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA каталогы:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL энтропия файлы:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL egd сокеті:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL нұсқасы:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA файлы:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL клиент куәлігі керек"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL клиенттің кілті:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL клиент куәлігі &керек"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L сервер куәлігі:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL клиент куәлігі:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL сервердің &кілті:"
+
+#~ msgid "Protocol"
+#~ msgstr "Протоколы"
+
+#~ msgid "Ti&me server"
+#~ msgstr "У&ақыт сервері"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Үлкен оқу-жазу блоктары"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX кеңейтулері"
+
+#~ msgid "Read bmpx"
+#~ msgstr "bmpx-ты оқу"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Протокол нұсқалары"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Былай ж&ариялау:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Жариялайтын нұсқасы:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Пр&отоколы:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Макс. протоколы:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Мин. протоколы:"
+
+#~ msgid "Limits"
+#~ msgstr "Шектеулер"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Мак&с. mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Макс. tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Тыңдайтын SMB порттары"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB порттары:"
+
+#~ msgid "Browsing"
+#~ msgstr "Шолу"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM а&ралығы:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M жариялымы:"
+
+#~ msgid "Sec"
+#~ msgstr "сек"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Қашықтағыларды қадамдастыр&у:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Ш&олу тізімі"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Кеңейтілген &шолу"
+
+#~ msgid "Pre&load:"
+#~ msgstr "&Жүктелгені:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "М&екен каталогының үлгісі:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Қоршау-ортаның үл&гісі:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind бөлгіші:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Негізгі топтың үлгісі:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind кэштеу у&ақыты:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Acl үйлес&імділігі:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Пайдала&нушыларды түгелдеу"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Топтарды түгелдеу"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Әдетті доменге кіру"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Жергілікті тіркелгілер рұқсат етілсін"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Тек сенімді домендерге кіру"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Бар топтарға қосылу"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBIOS ау&мағы:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS бүркеншік атаулары:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "NetBIOS &бұғатталсын"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "&Атауларды анықтау реті:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "Х&осттың msdfs жүйесі"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP жұрнағ&ы:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP машинаның жұрнағы:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP пайдаланушының жұрнағы:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP &тобының жұрнағы:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap жұрнағы:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP сүзгісі:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP әкім&ші dn-і:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap бағдарла&масы:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP рекпликация аралығы:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Ажыратылған"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Қосылған"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP қ&адамдастыруы:"
+
+#~ msgid "Only"
+#~ msgstr "Тек қана"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP өшірудің d&n-і"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Ортақ ресурсты қосу к&омандасы:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Ортақ ресурсты өзгерту командасы:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Ортақ ресурсты ө&шіру командасы:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Хаба&рлау командасы:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Dfree ко&мандасы:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "&Квота орнату командасы:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Квотаны білу командасы:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Тө&тенше жағдайдағы әрекеті:"
+
+#~ msgid "Misc"
+#~ msgstr "Түрлі басқа"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Түрлі басқа"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Жергілікті &пайдаланушыларды жасыру"
+
+#~ msgid "Default service:"
+#~ msgstr "Әдеттегі қызмет:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Уақыт ш&егінісі:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "мин"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Қашық жари&ялымы:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Бастапқы орта:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS мекені"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Мекеннің сәйкесі:"
+
+#~ msgid "UTMP"
+#~ msgstr "UMTP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Utmp каталог&&ы:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp каталогы:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Жөндеу"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT күйін қолдау"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB қолдау"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT тапсыруларды қ&олдау"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Ортақ ресурсты қосу/өзгерту"
+
+#~ msgid "Pixmap"
+#~ msgstr "Кескін"
+
+#~ msgid "D&irectory"
+#~ msgstr "Ка&талог"
+
+#~ msgid "&Path:"
+#~ msgstr "&Жолы:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Барлық мекен &каталогтарды ортақтастыру"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Иден&тификатор"
+
+#~ msgid "Na&me:"
+#~ msgstr "Ата&уы:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Түсі&ніктемесі:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Басты қасиетте&рі"
+
+#~ msgid "Read onl&y"
+#~ msgstr "&Тек оқу үшін"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Ашық"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Қа&рап-шығуға ашық"
+
+#~ msgid "A&vailable"
+#~ msgstr "Да&йын"
+
+#~ msgid "&Security"
+#~ msgstr "Қауіп&сіздік"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Ме&ймандар"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Бұл мейман дәрежелі қызметтеріне қатынау үшін қолданылатын пайдаланушының "
+#~ "атауы. Осы пайдаланушысының бүкіл құқықтары мейманға арналған қызметтерге "
+#~ "қосылған барлық клиеттерге беріледі. Әдетте бұл парольдер файлында "
+#~ "аталған бірақ жүйеге кіре алмайтын пайдаланушысы болу керек. Бұған \\\"ftp"
+#~ "\\\" деген пайдаланушысы әбден лайықты. Нақты бір қызметке нақты бір "
+#~ "пайдаланушысы арналған болса - онда осы арналғаны басымды."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Мейман тіркелгісі:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Құсбелгісі қойылса, қызметке қосылу үшін парольдің керегі жоқ. Рұқсаттар "
+#~ "майман тіркелгісіне берілгендей болады."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Тек мейман қос&ылымдар рұқсат етілсін"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Хост&тар"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Рұқсатты хосттарға керісінше - мұнда тізімделген хосттарға қызметтерге, "
+#~ "олардың өзіннің тізімі болмаса, қатынауға рұқсаты ЖОҚ. Тізімдер "
+#~ "арасындағы қайшылық рұқсатты тізімінің пайдасына шешіледі."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Бұл параметр - үтір, бос орын немесе кестелеу белгісімен бөліктелген, "
+#~ "қызыметке қатынауға рұқсатты, хосттар жинағы."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Рұқ&сатты хосттар:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Тыйымды хосттар:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Си&мволды сілтемелер"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Символды сілте&мелерге өту рұқсат етілсін"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Қаталог ішінден тыс &орындарға сілтейтін символды сілтемелерге өту рұқсат "
+#~ "етілсін"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Егер клиент пайдаланушының атауын келтіре алалмаса келесілер сынап "
+#~ "көрілсін:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "Осы тізіміндегі пайдалану&шыларға ғана қосылу рұқсат етілсін"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Жасырын &файлдар"
+
+#~ msgid "Hidden"
+#~ msgstr "Жасырын"
+
+#~ msgid "Veto"
+#~ msgstr "Тыйым"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Бейім-бұғатқа тыйым салу"
+
+#~ msgid "Size"
+#~ msgstr "Көлемі"
+
+#~ msgid "Date"
+#~ msgstr "Күні"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Таңда&лған файлдар"
+
+#~ msgid "Hi&de"
+#~ msgstr "Ж&асыру"
+
+#~ msgid "&Veto"
+#~ msgstr "&Тыйым"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Бейі&м-бұғатқа тыйым салу"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Қолмен конфигурациялау"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Т&ыйымды файлдар:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Бейім-бұғаттауына тыйым салынған ф&айлдар:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Жасыры&н файлдар:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Жа&зуы болмайтын файлдарды жасыру"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "А&рнаулы файлдарды жасыру"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Нүктеден басталат&ын файлдарды жасыру "
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Оқуға б&олмайтын файлдарды жасыру"
+
+#~ msgid "&Advanced"
+#~ msgstr "Қ&осымша"
+
+#~ msgid "Force Modes"
+#~ msgstr "Мәжбүрлеу режімдері"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Каталогқа мәжбүрл&еп берілген қауіпсіздік режімі:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Мәжбү&рлеп берген қауіпсіздік режімі:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Каталогты мәжбүрл&еу режімі:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Мәжбүрлеп құру р&ежімі:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Қалқалар"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Каталог қауіпсіздік қалқасы:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Қауіпсіздік қалқа&сы:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Ка&талог қалқасы:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Құру қалқас&ы:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "ACL &профайлдар"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "AC&L мұралау"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT ACL қолдау"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Бей&мәлім ACL пайдаланушыны мәжбүрлеу:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "ACL &мұралауды сәйкестіру"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Рұқсаттарды аталық каталогтан мұралау"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Тек оқу үшін файлдарды өшіруді рұқсат ету"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS атрибуттарды сәйкестіру"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "DOS архи&він UNIX иесі орындай алатынмен сәйкестіру"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "DOS жасырынды UNI&X барлығы орындай алатынмен сәйкестіру"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "DOS жүйелікті UNIX &тобы орындай алатынмен сәйкестіру"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "DOS артрибуттарды кеңейтілген атрибутында сақтау"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Қатаң қ&адамдастыру"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "Әрқа&шанда қадамдастыру"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Қа&таң орынды арнау"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "sen&dfile-ды қолдану"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "Біркездегі қосылымдардың &шегі:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Жазу кэшінің кө&лемі:"
+
+#~ msgid "bytes"
+#~ msgstr "байт"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Бло&ктың көлемі:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Клиент жағындағы &кэштеу ережесі:"
+
+#~ msgid "manual"
+#~ msgstr "қолмен"
+
+#~ msgid "documents"
+#~ msgstr "құжаттар"
+
+#~ msgid "programs"
+#~ msgstr "бағдарламалар"
+
+#~ msgid "disable"
+#~ msgstr "бұғаттау"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Атауын бұрмалау"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "&Атауы бұрмалансын"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Үлкен-кішілігін бұ&рмалау"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Үлкен-кішілігін сақ&тау"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Қысқа үлкен-кішілігін &сақтау"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Үлкен-кішілігін еске&ріп"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Әд&етті үлкен-кішілігі:"
+
+#~ msgid "Lower"
+#~ msgstr "Кіші"
+
+#~ msgid "Upper"
+#~ msgstr "Үлкен"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Бұрмалайтын таң&ба:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Бұрмалау сәй&кестігі:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Бұрмалау әдісі:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Басқа параметрлері"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "С&оңындағы нүктені жасыру"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS файл режімі"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS ф&айл уақыты"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS файл уақыттың айырымдылығы"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Бұғат&тау болсын"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Бұғатт&ау"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Қа&таң бұғаттау"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Бұғатты к&ідірту"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x бұғаттауы"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Ортақтастыру ре&жімдер"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "&Бейімделген бұғаттау (бейім-бұғат) болсын "
+
+#~ msgid "O&plocks"
+#~ msgstr "Бей&ім-бұғат"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "2-дең&гейлі бейім-бұғат"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Бейім-бұғаттың келісім ш&егі:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Жа&лған бейім-бұғат"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Vfs ны&сандары:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Vfs па&раметрлері:"
+
+#~ msgid "Exec"
+#~ msgstr "Орындау"
+
+#~ msgid "P&reexec:"
+#~ msgstr "P&reexec:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Root pr&eexec:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Pos&texec:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Root &postexec:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "preexec c&lose"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "root pree&xec close"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Томы:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&gic скрипт:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Mag&ic шығысы:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Мынадан төмнде&меу:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs про&кси"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Setdir командасы &рұқсат етілсін"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Жалға&н каталог құру уақыты"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs түбірі"
+
+#~ msgid "&Help"
+#~ msgstr "&Анықтама"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Пайдаланушылар"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Барлық к&елтірілмеген пайдаланушылар"
+
+#~ msgid "Reject"
+#~ msgstr "Рұқсат етілмеген"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Келтіріл&ген пайдаланушылар"
+
+#~ msgid "Access Rights"
+#~ msgstr "Қатынау құқықтары"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Пайдаланушыны қ&осу..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Білгі&ш"
+
+#~ msgid "Add &Group..."
+#~ msgstr "&Топты қосу..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Таңдалғанды өші&ру"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Барлығын мәжбүрлеп к&елесі пайдаланушы/топқа жатқызу"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Жатқызат&ын пайдаланушы:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Ж&атқызатын топ:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Қатынау түрлендіргіштері"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Қатынау рұқсаттары"
+
+#~ msgid "Others"
+#~ msgstr "Басқа"
+
+#~ msgid "Read"
+#~ msgstr "Оқу"
+
+#~ msgid "Write"
+#~ msgstr "Жазу"
+
+#~ msgid "Sticky"
+#~ msgstr "Орнықты"
+
+#~ msgid "Set GID"
+#~ msgstr "SGID"
+
+#~ msgid "Set UID"
+#~ msgstr "SUID"
+
+#~ msgid "Special"
+#~ msgstr "Арнаулы"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Пайдаланушы параметрлері"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Жөнді пайдаланушылар:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "Әк&імшілері:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Жөн&сіз пайдаланушылар:"
+
+#~ msgid "&Write list:"
+#~ msgstr "Жа&за алатындар:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Оқ&и алатындар:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Рұқсат етілген &хосттар"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Рұқсат етілген хосттар тізімі"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Мұнда осы каталогқа NFS арқылы қатынауға рұқсат етілген хосттар тізімі "
+#~ "көрсетіледі.\n"
+#~ "Бірінші баған хосттың атауы не адресі, екінші баған - қатынау рұқсаттары. "
+#~ "'*' деген бәріне ашық қатынауды белгілейді."
+
+#~ msgid "&Add Host..."
+#~ msgstr "Хостты қ&осу..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Хостты өз&герту..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "Хостты ө&шіру"
+
+#~ msgid "Name/Address"
+#~ msgstr "Атауы/Адресі"
+
+#~ msgid "Parameters"
+#~ msgstr "Параметрлері"
+
+#~ msgid "Host Properties"
+#~ msgstr "Хост қасиеттері"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Атауы/Адресі:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Атауы / Адресі деген өріс</b>\n"
+#~ "<p>\n"
+#~ "Мұнда Сіз хост атауын не адресін келтіре аласыз.<br>\n"
+#~ "Хостты түрлі жолдармен келтіруге болады:\n"
+#~ "<p>\n"
+#~ "<i>бөлек хост</i>\n"
+#~ "<p>\n"
+#~ " Бұл ең жалпы пішім. Жүйеңіз танитын қысқа атауын, толық домен атауын не "
+#~ "IP адресін келтіре аласыз.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>желі тобы</i>\n"
+#~ "<p>\n"
+#~ " NIS желілік тобы @тобы деп белгіленеді. Хост бөлігі ғана мүше болуына "
+#~ "тексеріледі. Бос хост не сызықшасы (-) бар атаулары қарастырылмайды.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>үлгі қалқасы</i>\n"
+#~ "<p>\n"
+#~ " Компьютердің атауында үлгі қалқасының * мен ? таңбаларын қолдануға "
+#~ "болады. Бұл файл ықшам қылуға қолданылады, мысалы, *.cs.foo.edu деген "
+#~ "барлық cs.foo.edu домендегі хосттарға сәйкес келеді. Алайда, бұл қалқа "
+#~ "нүктелерді есепке алмайды, мысалы, a.b.cs.foo.edu деген хост жоғардағы "
+#~ "қалқаға кірмейді.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP желілері</i>\n"
+#~ "<p>\n"
+#~ " Сонымен қатар IP (ішкі) желідегі барлық хосттарға қатынауды бірден аша "
+#~ "аласыз. Бұл IP адресі мен желі қалқасын адрес/қалқа түрінде келтіруге "
+#~ "болады. Қалқасын екі түрде келтіруге болады - нүктелермен бөліктенген "
+#~ "ондық сандар түрде немесе қалқа ұзындығы түрінде (мысалы, /255.255.252.0' "
+#~ "мен /22' деп жазылған қалқалардың екеуі де бір, ұзындығы 10 биттік ішкі "
+#~ "желі қалқасын белгілейді).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Ашық қатынау"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ашық қатынау</b>\n"
+#~ "<p>\n"
+#~ "Құсбелгісі қойылса, хост адресі тек жалғыз үлгі қалқасынан құрылады, бұл "
+#~ "ашық қатынауды белгілейді.\n"
+#~ "Бұл адрес өрісінде үлгі қалқасын келтіргенге тең..\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Параметрлері"
+
+#~ msgid "&Writable"
+#~ msgstr "&Жазатын"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Жазылатын</b>\n"
+#~ "<p>\n"
+#~ "Осы NFS томында оқу мен жазуды рұқсат етуі.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Әдетте файл жүйесінде барлық өзгерістерге тыйым салынған\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Қ&орғалмаған"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Қорғалмаған</b>\n"
+#~ "<p>\n"
+#~ "Құсбегісі қойылса, сұраныстар тек IPPORT_RESERVED (1024) дегеннен төмен "
+#~ "порттан ғана болсын деген талап қойылмайды.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Түсінбесеңіз, бос қалдырыңыз.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "Қа&дамдастыру"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Қадамдастыру</b>\n"
+#~ "<p>\n"
+#~ "Бұл параметр жазу сұранысы аяқталғанша дискіге барлық жазулар орынжалып "
+#~ "біткенін талап етеді. Бұл сервердегі деректерінің қауіпсіздігін "
+#~ "қамтамасыз етеді, бірақ жылдамдылығын тежеп тастайды.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Әдетте, сервер өз ыңғайына қарап жазу әрекетін орындай береді.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Жазуды кідірт&пеу"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Жазуды кідіртпеу</b>\n"
+#~ "<p>\n"
+#~ "Бұл параметр тек қана қадамдастыру параметры орнатылғанда ғана істейді. "
+#~ "NFS сервері әдетте, жазу әрекетін, келесі жазумен біріктіріп орындаймын "
+#~ "деп, сәл кідіртеді. Бұл бірнеше жазуларды біржолата орындап жылдамдығын "
+#~ "көтеру үшін. Егер NFS сервері көбінде шолақ, бір-біріне ілеспейтін жазу "
+#~ "тапсырмаларды алып тұрса, бұл жылдамдығын керсінше тежеп тастайды. Соңғы "
+#~ "жағдайды алдынан алу үшін осы параметр орнатылған. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Жасыр&мау"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Жасырмау</b>\n"
+#~ "<p>\n"
+#~ "Бұл параметр IRIX жүйесіндегі NFS-тың \"no hide\" параметріне ұқсас."
+#~ "Әдетте, сервер бір біріне тіркеген екі файл жүйесін экспорттаса, клиентке "
+#~ "екеуіне де қатынау үшін екеуін де тіркеп алу керек. Егер де ол аталық "
+#~ "файл жүйесін ғана тіркеп алса, екіншісі тіркелген каталогы бос болып "
+#~ "көрінеді, яғни \"жасырылады\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Жасырмау параметрі құқығы бар пайдаланушысына екінші файл жүйесіне аталық "
+#~ "файл жүйесінен ешбір кедергісіз қатынауға мүмкіншілік береді.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Алайда, кейбір NFS клиенттер бұл жағдайды ойдағыдай қамтамасыз ете "
+#~ "алмайды, мысалы екі файл жүйедегі файл бір inode нөміріне ие болса.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Жасырмау параметрі әзірше бір хосттың экспортын қамтамасыз ете алады. "
+#~ "Желі тобының, ішкі желінің, үлгі қалқалы экспорттауларда істемейі.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Бұл параметр кейбір жағдайларды өте пайдалы, бірақ бұнымен байқап, "
+#~ "жүйеңіз дұрыс істейтінін тексеріп, қолдану керек.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "І&шкі бұтақтарды тексермей"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ішкі бұтақтарды тексермей</b>\n"
+#~ "<p>\n"
+#~ "Ішкі каталогтарды тесеруді болдырмайтын параметр. Бұл, қауіпсіздікті сәл "
+#~ "төмендетіп, кейбір жағдайларда жүйенің тұрақтылығын арттырады.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Егер файл жүйесі тұтастай экспортталмай, ішкі бір каталогы экспортталса, "
+#~ "NFS сұранысы келген кезде, сервер сұралған файл файл жүйесінде бар екенін "
+#~ "ғана тексеру (оңай әрекет) мен қатар файл экспортталған бір ішкі "
+#~ "каталогында бар екенін тексереді (едәуір күрделі әрекет) . Соңғы тексеріс "
+#~ "\"ішкі бұтақтарды тексеру\" деп аталады.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Бұл тексерісті орындау үшін, сервер клиентке тапсырылатын файл "
+#~ "дескрипторына файлдың орналасу туралы мәліметі қосады. Бұндайда, егер "
+#~ "клиент ашып жатқан файлдың атауы сол кезде өзгертілсе, бұл қиыншылықтарға "
+#~ "апарып соғады (бұндай күрделі емес жағдайларда жүйе тегіс істей береді).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Сонымен қатар, бұтақтарды тексеру қолданатын мақсат - жайда әкімші қатнай "
+#~ "алатын ішкі каталогтарға, оларға қатынау рұқсаттары қаншадай кең болса "
+#~ "да, тек no_root_squash (төменде) параметрімен экспортталса ғана қатынауға "
+#~ "болатының анықтау үшін қолданылады.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Жалпы, мекен каталогы, әдете түбір ретінде экпортталады да файлдары жиі "
+#~ "атауын өзгертеді, сондықтан ішкі бұтақтарын тексермей экспортталуы жөн. "
+#~ "Көбіне тек оқу үшін қолданылатын, сондықтан файл атаулары сирек "
+#~ "өзгертілетін (/usr не /var секілді) каталогтар ішкі бұтақтарын тексеріп "
+#~ "экспортталған жөн.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Бейқауіпсіз бұға&ттау"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Бейқауіпсіз бұғаттау</b>\n"
+#~ "<p>\n"
+#~ "Бұл параметр NFS серверіне бұғаттау(мысалы, NLM протоколы бойынша) - "
+#~ "сұраушының аутентификацияламауын рұқсат етеді. Әдетте, NFS сервері "
+#~ "бұғаттау сұраныс үшін файлды оқуға рұқсаты бар пайдаланушыны талап етеді. "
+#~ "Ал осы жалаушасымен қатынау құқығы тексерілмейді.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Бұрынғы NFS клиент бағдарламалары бұғаттау сұранысымен бірге құқықтар "
+#~ "мәліметін жібермейді, қазіргі NFS клиенттерінің көбі әлі баяғы "
+#~ "пағдарламаларды негіздейді. Бәріне оқуға ашық файлдарды ғана бұғаттай "
+#~ "алатыныңызды байқасаңыз, осы жалаушаны қолданыңыз.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Пайдаланушыны сәйкестіру"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Барлығы үшін"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Барлығы үшін (all squash)</b>\n"
+#~ "<p>\n"
+#~ "Барлығының uid пен gid-терді анонимді пайдаланушысына сәйкестіру. NFS "
+#~ "арқылы экспортталған FTP каталогтар, жаңалық пул каталогтар, т.б. сол "
+#~ "сияқтыларға қолдануға ыңғайлы. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Ә&кімшіге емес"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Әкімші құқығын түрлендірмеу (no root squash)</b>\n"
+#~ "<p>\n"
+#~ "Әкімшіге ғана деген құқықты түрлендіруге бермейді. Бұл параметр әсіресе "
+#~ "дискісіз клиенттерге пайдалы.\n"
+#~ "</p>\n"
+#~ "<i>Әкімші құқығын түрлендіру</i>\n"
+#~ "<p>\n"
+#~ "Әкімшінің (0-ге тең) UID/GID-ті анонимді UID/GID-ке сәйкестіріледі. Бұл "
+#~ "басқа едәуір құқылы (мысалы bin секілді) пайдаланушыларға қатынасы жоқ "
+#~ "екенін ескеруге жөн.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Анонимді &UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Анонимді UID/GID</b> <p> Бұл анонимді UID пен GID-ті тікелей орнату. "
+#~ "Бұл PC/NFS клиенттерде сұраныстар бір пайдаланушыдан болдыру үшін әсіресе "
+#~ "пайдалы.</p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Анонимді &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Қапшық:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "&NFS арқылы ортақтастыру (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS параметрлері"
+
+#~ msgid "Pu&blic"
+#~ msgstr "А&шық"
+
+#~ msgid "W&ritable"
+#~ msgstr "Жа&зылатын"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Қосымша NFS па&раметрлері"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba параметрлері"
+
+#~ msgid "P&ublic"
+#~ msgstr "А&шық"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Қос&ымша Samba параметрлері"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Барлығына қапшықтарды ортақтастыруға рұқсат етілсін"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "'%1' тобындағыларға ғана қапшықтарды ортақтастыруға рұқсат етілсін"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "'%1' тобындағы пайдаланушылар"
+
+#~ msgid "Remove User"
+#~ msgstr "Пайдаланушыны өшіру"
+
+#~ msgid "Add User"
+#~ msgstr "Пайдаланушыны қосу"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Топтың мүшелері әкімшінің паролісіз қапшықтарды ортақтастыра алады"
+
+#~ msgid "Change Group..."
+#~ msgstr "Топты өзгерту..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB мен NFS серверлері бұл компьютерінде орнатылмаған, керек болса "
+#~ "серверлерді орнату керек."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Жергілекті желі&де файлды ортақтастыру рұқсат етілсін"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "&Оңай ортақтастыру"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Оңай ортақтастыру пайдаланушыларға өзінің мекен қапшығындағы ішкі "
+#~ "қапшықтарды әкімшінің паролісіз ортақтастыруға мүмкіндік береді."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Күрделі ор&тақтастыру"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Күрделі ортақтастыру пайдаланушыларға керек баптау файлдарға жазу құқығы "
+#~ "болса не әкімшінің паролін білсе кез келген қапшықтарды ортақтасыруға "
+#~ "мүмкіндік береді."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "&NFS пайдалану (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Sam&ba пайдалану (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Рұқсат &берілген пайдаланушылар"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Ортақ қапшықтар"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Қ&осу..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Өзг&ерту..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p><strong>'smb.conf'</strong> SAMBA конфигурациялық файлы табылмады;</"
+#~ "p>SAMBA орнатылған ба - тексеріңіз.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Орналусуын келтіріңіз"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba баптау файлы\n"
+#~ "*|Бүкіл файлдар"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "smb.conf орналасуын табу"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt><i>%1</i> деген файл оқылмайды.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Файл жазылмайды"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Файлды ашқанда қате пайда болды"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "%1 доменге қосылу қатесі."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt><b>%1</b> пайдаланушысының паролін келтіріңіз</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt><b>%1</b> пайдаланушысыны Samba пайдаланушыларға қосу қатесі.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "<b>%1</b> пайдаланушысыны Samba пайдаланушылардан өшіру қатесі."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "<b>%1</b> пайдаланушысының паролін келтіріңіз"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "<b>%1</b> пайдаланушысының паролін өзгерту қатесі."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Samba конфигурациясы</h1> мұнда SAMBA серверіңізді баптай аласыз."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Егер желіңіз үйдегі не шағын кеңселік болса, <i>ортақ</i> қауіпсіздік "
+#~ "деңгейін қолданыңыз.<br /> Доменге қосылмай - ақ отақтастырылған каталог "
+#~ "пен принтерлерді көруге мүмкіндік береді."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Егер желіңіз үлкен болып, доменге қосылмағандарға ортақтасырылған каталог "
+#~ "пен принтерлерді қөрсетпеймін десеңіз <i>пайдаланушы</i> қауіпсіздік "
+#~ "деңгейін қолданыңыз.<br /><br />Егер Samba серверіңіз <b>Негізгі домен "
+#~ "контроллері</b> (PDC) болуын қаласаңыз - осы параметрді таңдаңыз."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Егер желіңіз үлкен болып, samba сервері пайдаланушы/паролін басқа SMB "
+#~ "сарверіне, мысалы NT компьютеріне жіберіп тексеретін болса, <i>server</i> "
+#~ "қауіпсіздік деңгейін қолданыңыз."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Егер желіңіз үлкен болып, samba сервері пайдаланушы/паролін Windows NT "
+#~ "негізгі не қосалқы домен контроллеріне жіберіп тексекретін болса, "
+#~ "<i>domain</i> қауіпсіздік деңгейін қолданыңыз."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Егер желіңіз үлкен болып сервері ADS аумағында домен мүшесі ретінде "
+#~ "істейтін болса <i>ADS</i> қауіпсіздік деңгейін қолданыңыз."
+
+#~ msgid "Sorry"
+#~ msgstr "Кешіріңіз"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Келтірген парольдерңіздерде айырмашылық бар. Қайталап көріңіз."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "<em>%1</em> параметрi Сіздің Samba нұсқаңызды қолдамайды"
+
+#~ msgid "Unnamed"
+#~ msgstr "Атаусыз"
+
+#~ msgid "&Hide"
+#~ msgstr "&Жасыру"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "Бейім-бұғат &тыйымы"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Таңдалған файлдар арасында жасырын яғни атауы нүктеден басталатындар "
+#~ "бар; бұндайларды таңдаудан шығару керек пе?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Атауы нүктеден басталатын файлдар"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Жасырылғандардың таңдауын шешу"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Жасырылған қылып қалдыру"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Кейбір таңдалған файлдар <b>'%1'</b> үлгі қалқасына сәйкес келеді; "
+#~ "<b>'%1'</b> сәйкесті файлдарды таңдағандардан шығару керек пе?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Үлгі қалқасы"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Сәйкес келгендердің таңдауын шешу"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Таңдалғанды қалдыру"
+
+#~ msgid "Default"
+#~ msgstr "Әдетті"
+
+#~ msgid "Admin"
+#~ msgstr "Әкімшілік"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Сіз бұл каталогына <b>ашық оқу қатынауға</b> рұқсат бердіңіз, бірақ "
+#~ "<b>%1</b> деген мейман тіркелгісінде керек оқу құқықтары жоқ;<br/>сонда "
+#~ "да жалғастыра берейік пе?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Ескерту"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Сіз бұл каталогына <b>ашық жазу қатынауға</b> рұқсат бердіңіз, бірақ "
+#~ "<b>%1</b> деген мейман тіркелгісінде керек жазу құқықтары жоқ;<br/>сонда "
+#~ "да жалғастыра берейік пе?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Сіз бұл каталогына <b>%1</b> пайдаланушы үшін <b>жазу қатынауға</b> "
+#~ "рұқсат бердіңіз, бірақ бұл пайдаланушының керек жазу құқықтары жоқ;<br/"
+#~ ">сонда да жалғастыра берейік пе?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Сіз бұл каталогына <b>%1</b> пайдаланушы үшін <b>оқу қатынауға</b> "
+#~ "рұқсат бердіңіз, бірақ бұл пайдаланушының керек оқу құқықтары жоқ;<br/"
+#~ ">сонда да жалғастыра берейік пе?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Ашық қатынау әлден бар ғой."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Хост бар ғой"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Хост атауын не IP адресін келтіріңіз."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Хост атауы/IP адресі"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "'%1' деген хост бар ғой."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Samba конфигурация файлы оқылуда..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "NFS конфигурация файлы оқылуда..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Жолын дұрыс келтіріңіз."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Тек қапшықтарды ғана ортақтастыруға болады."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Бұл қапшық әлден ортақтастырылған ғой."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Әкімшісі NFS арқылы ортақтастыруға тыйым салған."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Қате: NFS конфигурация файлы оқылмады."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Әкімшісі Samba арқылы ортақтастыруға тыйым салған."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Қате: Samba конфигурация файлы оқылмады."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Samba ресурсының атауын келтіріңіз."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Каталогты ортақтастыру үшін рұқсатыңыз болу керек."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Файл ортақтастыруды баптау..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Жүйеде NFS сервері орнатылмаған"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Параметрлер сақталмады."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "'%1' деген файлы жазуға ашылмады: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Сақтау жаңылысы"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Файл ортақтастыруы</h1><p>Бұл модуль NFS - желілік файл жүйесі арқылы "
+#~ "немесе Konqueror-де SMB арқылы файлдарды ортақтастыру мүмкіндікті береді. "
+#~ "Соңғысы желіңізде Windows(R) компьютерлерімен файлдарды ортақтастыру "
+#~ "мүмкіндігін береді.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Қапшықты ортақтастыру"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Рұқсат етілген пайдаланушылар"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "%1 тобында барлық пайдаланушылар шоғырланған ғой."
+
+#~ msgid "Select User"
+#~ msgstr "Пайдаланушыны таңдау"
+
+#~ msgid "Select a user:"
+#~ msgstr "Пайдаланушыны таңдаңыз:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "'%1' пайдаланушы '%2' тобына қосылмады"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "'%1' пайдаланушы '%2' тобынан өшірілмеді"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Дұрыс топты таңдау керек."
+
+#~ msgid "New file share group:"
+#~ msgstr "Файл ортақтастыру жаңа тобы:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Ескі файл ортақтастыру топтың пайдаланушыларын жаңасына қосу"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Ескі файл ортақтастыру топтың пайдаланушыларын өшіру"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Ескі файл ортақтастыру тобын өшіру"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Тек нақты бір топтың пайдаланушыларына қапшықтарды ортақтастыруға болады"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Топты таңдау..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "Шынымен '%1' деген топтан барлық пайдаланушыларын өшіргіңіз келе ме?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Шынымен '%1' деген топты өшіргіңіз келе ме?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "'%1' деген топты өшіру қатесі."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Дұрыс топты таңдаңыз."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "'%1' деген топ жоқ қой. Құрылсын ба?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Керегі жоқ"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "'%1' деген топты құру қатесі."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Принтер параметрлері"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Пр&интер"
+
+#~ msgid "Pa&th:"
+#~ msgstr "Ж&олы:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Кезегі:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Барлық принтерлер &ортақ болсын"
+
+#~ msgid "I&dentifier"
+#~ msgstr "И&дентификаторы"
+
+#~ msgid "&Name:"
+#~ msgstr "&Аты:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "&Түсініктеме:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Негізгі қасиеттері"
+
+#~ msgid "&Printing"
+#~ msgstr "&Басып шығару"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Принтердің д&райвері:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Принт&ер драйверінің орналасуы:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "Бас&ып шығару:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Хабарлайтын &тапсырмалар шегі:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Басу тапсырмалар &шегі:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "К&лиенттегі драйвер қолданылсын"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "Әд&етті режімі"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "Рұқ&сатты хосттар:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "П&ринтер әкімшісі:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Ко&мандалары"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Б&асу командасы:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "lpq кома&ндасы:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "lprm коман&дасы:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "lp&resume:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&queuepause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "&lppause:"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "qu&eueresume:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "Тү&рлі басқа"
+
+#~ msgid "p&reexec:"
+#~ msgstr "p&reexec:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "root pr&eexec:"
+
+#~ msgid "root postexec:"
+#~ msgstr "root postexec:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "poste&xec:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "Егжей-тегжейлі &баптау"
+
+#~ msgid "M&in print space:"
+#~ msgstr "М&инималды басу көлемі:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Журналды жүргізу"
+
+#~ msgid "S&tatus"
+#~ msgstr "Күй-ж&айы"
+
+#~ msgid "Not share&d"
+#~ msgstr "Ортақ е&мес"
+
+#~ msgid "&Shared"
+#~ msgstr "&Ортақ"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Н&егізгі параметрлер"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Желі төңірегін не желіні шолу арқылы ортақ ресурстарды түгелдегенде бұл "
+#~ "мәтін ортақ ресурсыға қатар жазылады."
+
+#~ msgid "Name of the share"
+#~ msgstr "Ортақ ресурстың атауы"
+
+#~ msgid "Commen&t:"
+#~ msgstr "&Түсініктемесі:"
+
+#~ msgid "Security Options"
+#~ msgstr "Қауіпсіздік параметрлері"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "Т&ыйымды хосттар:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "Рұқсатты &хосттар:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Мейман т&іркелгісі:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Құсбелгісі қойылса, қызмет пайдаланушысы қызмет каталогында файлдарды "
+#~ "құра не өзгерте алмайды."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "М&еймандар рұқсат етілсін"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Бұл меймендар рұқсат етілгендегі осы каталогына қатынауға қолданынатын "
+#~ "пайдаланушысының атауы"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Бұл параметр осы ресурс желіні шолу кезіндегі көрсетілетін тізімінде "
+#~ "болуын-болмауын басқарады."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Бұл құсбелгі көзі қызметті \\\"өшіруге\\\" мүмкіндік береді. Көзі "
+#~ "белгіленбесе бүкіл қызметке қосылу әрекеттері жоққа шығарылады. Бұндай "
+#~ "әрекеттер журналға жазылып алынады."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Қосымша пара&метрлері"

@@ -1,0 +1,1926 @@
+# KDE breton translation
+# Thierry Vignaud <tvignaud@mandriva.com>, 2004-2005
+msgid ""
+msgstr ""
+"Project-Id-Version: kdenetwork/kfileshare.pot\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2004-09-21 14:45+0200\n"
+"Last-Translator: Thierry Vignaud <tvignaud@mandriva.com>\n"
+"Language-Team: br <LL@li.org>\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Aotreañ"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&Lenn-hepken"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Aotreoù"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Skrivabl"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Dilemel an urzhiaouegoù"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Aotreoù"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Aotreoù"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Perc'henn"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Perc'henn"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Strollad"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Aotreoù"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Hent"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Aotreoù"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Aotreoù"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr ""
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Aotreoù"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Anv :"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allowed &Hosts"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "&Ostizien aotreet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Lenn-hepken"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Tremenger"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Tremenger"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Tremenger ebet"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Tremenger"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Aotreoù"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Nullañ"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Arveriaded Sa&mba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "N'eus ket ur renkell."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Setu anv ar rannad"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Lodenniñ"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Krouiñ"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Krouiñ"
+
+#~ msgid "&Share"
+#~ msgstr "&Lodenniñ"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "N'eus servijer NFS ebet staliet war ar reiziad-se"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Lodenniñ gantS&amba (Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "Dibabit arveriaded"
+
+#~ msgid "Select &Users"
+#~ msgstr "Dibabit un &arveriad"
+
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "&Default"
+#~ msgstr "&Dre ziouer"
+
+#~ msgid "&OK"
+#~ msgstr "&Mat eo"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Gwiriekaat :"
+
+#~ msgid "&Password:"
+#~ msgstr "&Tremenger :"
+
+#~ msgid "&Username:"
+#~ msgstr "Anv &arveriad :"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domani :"
+
+#~ msgid "Select Groups"
+#~ msgstr "Dibab ar strolladoù"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Dibabi&t ar strolladoù"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Rizh a strollad"
+
+#~ msgid "&UNIX group"
+#~ msgstr "Strollad &UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "Strollad NI&S"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Str&ollad UNIX ha NIS"
+
+#~ msgid "&Base Settings"
+#~ msgstr "Klefuniadur &diazez"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Restr ar gefluniadur Samba :"
+
+#~ msgid "&Load"
+#~ msgstr "&Kargañ"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Str&ollad al labour :"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Anv NetBIOS :"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "&Live ar surentez"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Arveriad"
+
+#~ msgid "Server"
+#~ msgstr "Servijer"
+
+#~ msgid "Domai&n"
+#~ msgstr "Doman&i"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&m :"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "K&ont ar c'houviad :"
+
+#~ msgid "Help"
+#~ msgstr "Skoazell"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "Comment"
+#~ msgstr "Askelenn"
+
+#~ msgid "Properties"
+#~ msgstr "Perzhioù"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Aozañ dre &ziouer ..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Ouzhpennañ ur rannad &nevez ..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Aozañ ar rannad ..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Le&mel ur rannad"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Moul&lerezioù"
+
+#~ msgid "Printer"
+#~ msgstr "Moullerez"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Aozañ dre &ziouer"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Ouzhpennañ ur voullerez ne&vez"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Aozañ ar &voullerez"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Le&mel ar voullerez"
+
+#~ msgid "&Users"
+#~ msgstr "&Arveriaded"
+
+#~ msgid "Disabled"
+#~ msgstr "Marv"
+
+#~ msgid "Add"
+#~ msgstr "Ouzhpennañ"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Lem&el"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Arveriaded UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Kemmañ an &tremenger ..."
+
+#~ msgid "Advan&ced"
+#~ msgstr "Barek"
+
+#~ msgid "Security"
+#~ msgstr "Surentez"
+
+#~ msgid "&General"
+#~ msgstr "&Pennañ"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "General"
+#~ msgstr "Pennañ"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Hentennoù dilesadur :"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Renkell gwriz&ienn :"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "E&trefasoù :"
+
+#~ msgid "Never"
+#~ msgstr "Gwech ebet"
+
+#~ msgid "Bad User"
+#~ msgstr "Arveriad fall"
+
+#~ msgid "Bad Password"
+#~ msgstr "Fall eo an tremenger"
+
+#~ msgid "Pass&word"
+#~ msgstr "Trem&enger"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Tremengerioù Samba"
+
+#, fuzzy
+#~| msgid "Sec"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Eil"
+
+#~ msgid "Password level:"
+#~ msgstr "Live an tremenger :"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Tremengerioù UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Goulev passwd :"
+
+#~ msgid "Userna&me"
+#~ msgstr "Anv an arve&riad"
+
+#~ msgid "Username &level:"
+#~ msgstr "&Live anv an arveriad :"
+
+#~ msgid "Hide local users"
+#~ msgstr "Kuzhat an arveriaded lec'hel"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Implijit rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "&Dilesadur"
+
+#~ msgid "Client"
+#~ msgstr "Kliant"
+
+#~ msgid "Auto"
+#~ msgstr "Emgefreek"
+
+#~ msgid "Yes"
+#~ msgstr "Ya"
+
+#~ msgid "No"
+#~ msgstr "N'eo ket"
+
+#~ msgid "Client channel:"
+#~ msgstr "Kanol ar pratik :"
+
+#~ msgid "Server channel:"
+#~ msgstr "Kanol ar servijer :"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Implijit sp&nego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Dilesadur NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Oc'h ereañ"
+
+#~ msgid "L&og file:"
+#~ msgstr "Restr k&erzlevr :"
+
+#~ msgid "kB"
+#~ msgstr "ko"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog :"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Live kerzlevr :"
+
+#~ msgid "Status"
+#~ msgstr "Stad"
+
+#~ msgid "Modules"
+#~ msgstr "Molladoù"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Krubuilh &Getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Implijit &mmap"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Klask an &ostiz"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Mun"
+
+#~ msgid "Sizes"
+#~ msgstr "Mentoù"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "Mo"
+
+#~ msgid "Numbers"
+#~ msgstr "Niver"
+
+#~ msgid "Printing"
+#~ msgstr "War voulañ"
+
+#~ msgid "Drivers"
+#~ msgstr "Sturieroù"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "A&nv Printcap :"
+
+#~ msgid "Commands"
+#~ msgstr "Urzhiadoù"
+
+#~ msgid "L&oad printers"
+#~ msgstr "K&argañ ar moullerezioù"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "Marv"
+
+#~ msgid "Domain"
+#~ msgstr "Domani"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Mestr l&ec'hel"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Mestr an doma&ni"
+
+#~ msgid "Preferred &master"
+#~ msgstr "&Mestr gwellañ karet"
+
+#~ msgid "OS &level:"
+#~ msgstr "Live an RK :"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Marvaat &WINS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Implijit ur servijer WINS &all"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Kefluniadur ar servijer WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "Pro&ksi DNS"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "IP pe anv DNS ar servijer WINS"
+
+#~ msgid "General Options"
+#~ msgstr "Dibarzhoù hollek"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "Pro&ksi WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "Anvioù ar restroù"
+
+#~ msgid "Ge&neral"
+#~ msgstr "&Pennañ"
+
+#~ msgid "Specia&l"
+#~ msgstr "Dibar"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Renkell&où"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Barek-tre"
+
+#~ msgid "milliseconds"
+#~ msgstr "millieilenn"
+
+#~ msgid "Charset"
+#~ msgstr "Arouezenner"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Arouezenner D&OS :"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Arouezenner UNI&X :"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Diskouez an arouezenner :"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Arouezenneg :"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Arouezennoù m&at :"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Reizhiad &kodadur :"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Ouzhpennañ an urzhiaouegoù"
+
+#~ msgid "Add user script:"
+#~ msgstr "Ouzhpennañ un urzhiaoueg arveriad :"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Lemel an urzhiaoueg arveriad :"
+
+#~ msgid "Shutdown"
+#~ msgstr "Lazhañ"
+
+#~ msgid "Socket"
+#~ msgstr "Lugell"
+
+#~ msgid "Socket address:"
+#~ msgstr "Chomlec'h lugell :"
+
+#~ msgid "Socket Options"
+#~ msgstr "Dibarzhoù al lugell"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF :"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF :"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT :"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT :"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Be&vaat SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "&Ostiz SSL :"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL version:"
+#~ msgstr "Doare SSL :"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Alc'hwez ar c'hliant SSL :"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "Testeni ar servijer SS&L :"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "Alc'hwez ar servijer SSL :"
+
+#~ msgid "Protocol"
+#~ msgstr "Komenad"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Servijer a&mzer"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Astennoù UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Lenn bmpx"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "4.2"
+#~ msgstr "4,2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "&Komenad :"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "KALON"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Porzhioù SMB :"
+
+#~ msgid "Browsing"
+#~ msgstr "Emaon o furchal"
+
+#~ msgid "Sec"
+#~ msgstr "Eil"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Roll fur&chal"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Rak&kargañ :"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "UID &Winbind/Idmap :"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "&GID Winbind/Idmap :"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "&Ostiz msdfs"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "Dibenn-&ger LDAP :"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "Dibenn-ger arveriad LDAP :"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "Dibenn-ger strollad LDAP :"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "Dibenn-ger idmap LDAP :"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Sil LDAP :"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "Ssl &LDAP :"
+
+#~ msgid "Off"
+#~ msgstr "Lazhet"
+
+#~ msgid "On"
+#~ msgstr "War enaou"
+
+#~ msgid "Only"
+#~ msgstr "Hepken"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Urzhiad ar c'heme&nnad :"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Ur&zhiad Dfree :"
+
+#~ msgid "Misc"
+#~ msgstr "A bep seurt"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "A bep seurt"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Kuzhat an arveriaded &lec'hel"
+
+#~ msgid "Default service:"
+#~ msgstr "Servij dre ziouer :"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Mun"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "Renkell ar gêr NIS"
+
+#, fuzzy
+#~ msgid "UTMP"
+#~ msgstr "UMTP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Renkel&l Utmp :"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Pixmap"
+#~ msgstr "Piksmap"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Renkell"
+
+#~ msgid "&Path:"
+#~ msgstr "&Hent :"
+
+#~ msgid "Na&me:"
+#~ msgstr "&Anv :"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "&Askelenn :"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Diba&rzhoù kentañ"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Lenn-&hepken"
+
+#~ msgid "Pub&lic"
+#~ msgstr "For&an"
+
+#~ msgid "A&vailable"
+#~ msgstr "D&a gaout"
+
+#~ msgid "&Security"
+#~ msgstr "&Surentez"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Ko&uvidi"
+
+#~ msgid "&Guest account:"
+#~ msgstr "Kont ar &c'houviad :"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&Ostizien"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Er&eoù arouezel"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&Restroù kuzh"
+
+#~ msgid "Hidden"
+#~ msgstr "Kuzh"
+
+#~ msgid "Size"
+#~ msgstr "Ment"
+
+#~ msgid "Date"
+#~ msgstr "Deiziad"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Restroù &diuzet"
+
+#~ msgid "Hi&de"
+#~ msgstr "K&uzhat"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Kefluniadur &diwar zorn"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Restroù &kuzh :"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Barek"
+
+#~ msgid "..."
+#~ msgstr " ..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maskloù"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "Maskl ar ren&kell :"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "ACLoù ar &profil"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Implijit sen&dfile"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Men&t ar grubuilh skrivañ :"
+
+#~ msgid "bytes"
+#~ msgstr "okted"
+
+#~ msgid "manual"
+#~ msgstr "diwar zorn"
+
+#~ msgid "documents"
+#~ msgstr "teulioù"
+
+#~ msgid "programs"
+#~ msgstr "goulevioù"
+
+#~ msgid "disable"
+#~ msgstr "marvaat"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Evezhiek o&uzh ar c'hef"
+
+#~ msgid "Lower"
+#~ msgstr "Izelaat"
+
+#~ msgid "Other Options"
+#~ msgstr "Dibarzhoù all"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "Mod restr &DOS"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "T&raoù Vfs :"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "D&ibaboù Vfs :"
+
+#~ msgid "Exec"
+#~ msgstr "Seveniñ"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Nerzh :"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Prok&si Msdfs"
+
+#~ msgid "&Help"
+#~ msgstr "&Skoazell"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Arveriaded"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Pep arveriad n'eo ket s&pisaet"
+
+#~ msgid "Reject"
+#~ msgstr "Nac'h"
+
+#~ msgid "A&dd User..."
+#~ msgstr "O&uzhpennañ un arveriad ..."
+
+#~ msgid "E&xpert"
+#~ msgstr "M&ailh"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Ouzhpennañ ur &strollad ..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Le&mel an hini dibabet"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Aotreoù moned"
+
+#~ msgid "Others"
+#~ msgstr "Ar re all"
+
+#~ msgid "Read"
+#~ msgstr "Lenn"
+
+#~ msgid "Write"
+#~ msgstr "Skrivañ"
+
+#~ msgid "Sticky"
+#~ msgstr "Pegañ"
+
+#~ msgid "Set GID"
+#~ msgstr "Lakaat ar GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Lakaat an UID"
+
+#~ msgid "Special"
+#~ msgstr "Dibar"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT :"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF :"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT :"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Dibaboù an arveriad"
+
+#, fuzzy
+#~| msgid "Va&lid chars:"
+#~ msgid "&Valid users:"
+#~ msgstr "Arouezennoù m&at :"
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Ouzhpennañ un ostiz ..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&Kemmañ an oztiz ..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Dilemel an ostiz"
+
+#~ msgid "Name/Address"
+#~ msgstr "Anv/Chomlec'h"
+
+#~ msgid "Parameters"
+#~ msgstr "Rannbennadoù"
+
+#~ msgid "Host Properties"
+#~ msgstr "Dibarzhoù an ostiz"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Anv/chomlec'h :"
+
+#~ msgid "Options"
+#~ msgstr "Dibarzhoù"
+
+#~ msgid "&Writable"
+#~ msgstr "&Skrivabl"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "&UID dizanv :"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "&GID dizanv :"
+
+#~ msgid "Folder:"
+#~ msgstr "Renkell :"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Lodenniñ gant &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Dibarzhoù NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Fo&ran"
+
+#~ msgid "W&ritable"
+#~ msgstr "S&krivabl"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Di&barzhoù NFS muioc'h"
+
+#~ msgid "Samba Options"
+#~ msgstr "Dibarzhoù Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "F&oran"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Dibarzhoù Samba mui&oc'h"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Arveriaded ar strollad '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Lemel an arveriad"
+
+#~ msgid "Add User"
+#~ msgstr "Ouzhpennañ un arveriad"
+
+#~ msgid "Change Group..."
+#~ msgstr "Kemmañ ar strollad ..."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Implij &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Implijit Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Arveriaded ao&treet"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Renkelloù rannet"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Ouzhpennañ ..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "K&emmañ ..."
+
+#~ msgid "Specify Location"
+#~ msgstr "Roit al lec'hiadur"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Tapout lec'hiadur smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Ar restr <i>%1</i> n'hell ket bezañ lenn.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Ne m'eus ket gallet lenn ar restr"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Fazi en ur zigeriñ ar restr"
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Roit un tremenger evit an arveriad <b>%1</b> mar plij</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Sac'het eo ouzhpennañ an arveriad <b>%1</b> da stlennvon arveriaded "
+#~ "Samba.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Sac'het eo lemel arveriad %1 eus stlennvon an arveriaded."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Roit un tremenger evit an arveriad %1 mar plij"
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Kefluniadur Samba</h1> amañ e c'hellit kefluniañ ho servijer SAMBA."
+
+#~ msgid "Unnamed"
+#~ msgstr "Anv ebet"
+
+#~ msgid "&Hide"
+#~ msgstr "&Kuzhat"
+
+#~ msgid "Default"
+#~ msgstr "Dre ziouer"
+
+#~ msgid "Admin"
+#~ msgstr "Merour"
+
+#~ msgid "Warning"
+#~ msgstr "Diwallit"
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Endeo eo an ostiz"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Roit ur chomlec'h IP pe un anv an ostiz mar plij."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Anv an ostiz pe chomlec'h IP ebet"
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Emaon o lenn ar restr kefluniadur Samba ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Emaon o lenn ar restr kefluniadur NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Roit un hent mat mar plij."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "C'hoazh rannet eo ar renkell-es."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Red eo deoc'h da reiñ anv d'ar rannad Samba."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "N'eus ket bet ur servijer ebet staliet war ar reiziad-se"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Ne m'eus ket gallet enrollañ an dibarzhoù."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "N'hellan ket digeriñ ar restr '%1' evit skrivañ : %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Fazi en ur enrollañ"
+
+#~ msgid "Share Folder"
+#~ msgstr "Lodenniñ ar renkell"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Arveriaded aotreet"
+
+#~ msgid "Select User"
+#~ msgstr "Dibabit un arveriad"
+
+#~ msgid "Select a user:"
+#~ msgstr "Dibabit un arveriad :"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "N'hellan ket ouzhpennañ an arveriad '%1' d'ar strollad '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Ne m'eus ket gallet dilemel an arveriad '%1' eus ar strollad '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Ret eo deoc'h dibab ur strollad mat."
+
+#~ msgid "Choose Group..."
+#~ msgstr "Dibabit ar strollad ..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "C'hoant ho peus da zilemel an holl arveriaded eus ar strollad '%1' ?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Ha fellout a ra deoc'h da vat lemel ar strollad %1 ?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Sac'het eo lemel ar strollad '%1'."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Dibabit ur strollad a zo mad mar plij."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "N'eo ket endeo ar strollad « %1 ». Gwell vije bet krouet anezhañ ?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Ne krouit ket"
+
+#~ msgid "Printer Settings"
+#~ msgstr "Kefluniadur ar voullerez"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Mo&ullerez"
+
+#~ msgid "Pa&th:"
+#~ msgstr "He&nt :"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Lost :"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "R&annañ pep moullerez"
+
+#~ msgid "&Name:"
+#~ msgstr "&Anv :"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Aske&lenn :"
+
+#~ msgid "Main Properties"
+#~ msgstr "Dibarzhoù kentañ"
+
+#~ msgid "&Printing"
+#~ msgstr "&War voulañ"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Sturier ar voulle&rez :"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Lec'hiadur sturier ar voull&erez :"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "War vou&lañ :"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "Implijit sturier ur p&ratik"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "Servij dre ziouer :"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "Moullerez"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Ur&zhiadoù"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Urzhiad moul&añ :"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "urzhi&ad lpq :"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "urzhia&d lprm :"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "A bep se&urt"
+
+#~ msgid "&Logging"
+#~ msgstr "&Oc'h ereañ"
+
+#~ msgid "S&tatus"
+#~ msgstr "S&tad"
+
+#~ msgid "Not share&d"
+#~ msgstr "N'eo ket ranne&t"
+
+#~ msgid "&Shared"
+#~ msgstr "&Rannet"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Dibarzhoù diaz&ez"
+
+#~ msgid "Name of the share"
+#~ msgstr "Anv ar rannad"
+
+#~ msgid "Commen&t:"
+#~ msgstr "As&kelenn :"
+
+#~ msgid "Security Options"
+#~ msgstr "Dibarzhoù ar surentez"
+
+#~ msgid "Guest &account:"
+#~ msgstr "&Kont ar c'houviad :"
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Di&barzhoù muioc'h"
+
+#~ msgid "KB"
+#~ msgstr "KO"
+
+#~ msgid "Users of the '%1' Group"
+#~ msgstr "Arveriaded ar strollad '%1'"
+
+#~ msgid "Umtp"
+#~ msgstr "Umtp"

@@ -1,0 +1,3677 @@
+# translation of kfileshare.po to Tajik
+# translation of kfileshare.po to Тоҷикӣ
+# Copyright (C) 2004 Free Software Foundation, Inc.
+# 2004, infoDev, a World Bank organization
+# 2004, Khujand Computer Technologies, Inc.
+# Roger V Kovacs, <rkovacs@khujand.org>, 2004.
+# Abrorova <H_Abrorova@rambler.ru>, 2004
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2004-09-03 17:58+0000\n"
+"Last-Translator: Abrorova <H_Abrorova@rambler.ru>\n"
+"Language-Team: Tajik\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Иҷозат"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "&Танҳо барои хондан"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Рухсатҳо"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Fst&ype:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Пуштибонии мушаххасоти навъи паҳнгардидаи OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Навишташаванда"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Пуштибонии мушаххасоти навъи паҳнгардидаи OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Нобуд кардани Дастнависҳо"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Рухсатҳо"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Рухсатҳо"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Соҳиб"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Соҳиб"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Гурӯҳ"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Рухсатҳо"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Роҳ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Рухсатҳо"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Рухсатҳо"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "&Тамоман иҷозат нест"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Рухсатҳо"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Ин феҳристро дар шабакаи маҳаллӣ &муштарак гардонед"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Ном:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Иҷозатдиҳии &вуруди меҳмон"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Танҳо-хондан"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "&Тамоман иҷозат нест"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Гузарвожа"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Гузарвожа"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Гузарвожа Нест"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Гузарвожа"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Рухсатҳо"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Пешрафта"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Танҳо феҳристҳои маҳаллӣ муштаракан истифода мегарданд."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Корвандони Sa&mba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Ҳисса кардани файлҳо хомӯш аст."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Феҳрист мавҷуд нест."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Ин номи сарчашмаи муштарак"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Муштарак"
+
+#, fuzzy
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Офаридани &ниқоб:"
+
+#, fuzzy
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Офаридани &ниқоб:"
+
+#~ msgid "&Share"
+#~ msgstr "&Муштаракан доштан"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>There is already a share with the name <strong>%1</strong>.<br> "
+#~| "Please choose another name.</qt>"
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Тақсимоти муштарак бо номи <strong>%1</strong> аллакай мавҷуд а<br> "
+#~ "Номи дигарро интихоб кунед.</qt>"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Хидматрасони Samba дар системаи шумо кор гузошта нашудааст"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Муштаракгардонӣ бо S&amba (Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "Интихоби Корвандон"
+
+#~ msgid "Select &Users"
+#~ msgstr "Интихоби &Корвандон"
+
+#~ msgid "Name"
+#~ msgstr "Ном"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "&Иҷозат"
+
+#~ msgid "&Default"
+#~ msgstr "&Бо нобаёнӣ"
+
+#~ msgid "&Read access"
+#~ msgstr "&Иҷозати хондан"
+
+#~ msgid "&Write access"
+#~ msgstr "&Иҷозати навиштан"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Иҷозати идоракунӣ"
+
+#~ msgid "Join Domain"
+#~ msgstr "Ҳамроҳкунии Домен"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Бозбинӣ:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Гузарвожа:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Номи корванд:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Идоракунандаи &домен:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Домен:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Интихоби Гурӯҳҳо"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "&Интихоби Гурӯҳҳо"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Навъи Гурӯҳ"
+
+#, fuzzy
+#~ msgid "&UNIX group"
+#~ msgstr "Гурӯҳи NI&S"
+
+#~ msgid "NI&S group"
+#~ msgstr "Гурӯҳи NI&S"
+
+#, fuzzy
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "&Гурӯҳи Unix ва NIS"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding Unix user.\n"
+#~ "On the right you can see all Unix users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected Unix users will then become Samba users and will\n"
+#~ "removed from the Unix users list (but they will remain Unix users).\n"
+#~ "<p>\n"
+#~ "To remove a Samba users press the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file,\n"
+#~ "and reappear on the right side, as Unix users which are not Samba users.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Гузоришҳои Асосӣ"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Файли танзимотии Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&Боркунӣ"
+
+#~ msgid "Server Identification"
+#~ msgstr "Шиносоии Хидматрасон"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Гурӯҳи &Корӣ:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Дар ин ҷо номи гурӯҳи корӣ/домени худро ворид кунед."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "&Сатри хидматрасон:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "Номи NetBIOS:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Сатҳи &Бехатарӣ"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Корванд"
+
+#~ msgid "Server"
+#~ msgstr "Хидматрасон"
+
+#~ msgid "Domai&n"
+#~ msgstr "&Домен"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Сатҳи бехатариии <i>Муштаракгардонӣ</i>-ро истифода баред агар шумо "
+#~ "шабакаи хонагӣ ё шабакаи хурди ҷои корӣ дошта бошед.<br> Ин ба ҳама "
+#~ "имконияти хондани номҳои муштаракшударо пеш аз талаботи ворид, медиҳад."
+
+#~ msgid "Further Options"
+#~ msgstr "Хосиятҳои Оянда"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Гузарвожаи хидматрасон суроға/ном:"
+
+#~ msgid "Real&m:"
+#~ msgstr "&Соҳа:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Ҳисоби &меҳмон:"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Барои маълумоти пурра оиди ҳар як хосият нигаред ба:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Муштаракҳо"
+
+#~ msgid "Comment"
+#~ msgstr "Шарҳ"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "Хусусиятҳои Соҳиб"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Таҳрири &Бо Нобаёниҳо..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Иловакунии Муштаракҳои &Нав..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Таҳрири Сарчашмаҳои Муштарак..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Хориҷкунии Сарчашмаҳои Муштарак"
+
+#~ msgid "Prin&ters"
+#~ msgstr "&Чопгарон"
+
+#~ msgid "Printer"
+#~ msgstr "Чопгар"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Таҳрири &Бо Нобаёниҳо"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Иловакунии Чопгари &Нав"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Таҳрири &Чопгар"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Хориҷкунии &Чопгар"
+
+#~ msgid "&Users"
+#~ msgstr "&Корвандон"
+
+#~ msgid "Disabled"
+#~ msgstr "Хомӯш шуда"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "&Иловакунӣ..."
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Хориҷ кардан"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Корвандони UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Таъ&ғири Гузарвожа..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Ҳамроҳкунии Домен"
+
+#~ msgid "Advan&ced"
+#~ msgstr "&Мукаммалгашта"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Дар ин ҷо шумо хосиятҳои пешрафтаи хидматрасони SAMBA-ро иваз карда "
+#~ "метавонед.\n"
+#~ "Ҳамонеро иваз намоед, ки шумо медонед чӣ кор карда истодаед."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Рӯгирифти Мукаммалгашта"
+
+#~ msgid "Security"
+#~ msgstr "Бехатарӣ"
+
+#~ msgid "&General"
+#~ msgstr "&Умумӣ"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Фармонбарии монеъаи PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Ивази гузарвожаи PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "Дигар Гузарандаҳо"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Доменҳои боваринокро &иҷозат диҳед"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Бехатарии хидматрасони параноидӣ"
+
+#~ msgid "General"
+#~ msgstr "Умумӣ"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Усулҳои аслшиносӣ:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&Феҳристи решавӣ:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "&Интерфейсҳо:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Нақша барои меҳмон:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Ба ҳам пайвастани танҳо интерфейсҳо"
+
+#~ msgid "Never"
+#~ msgstr "Ҳеҷ гоҳ"
+
+#~ msgid "Bad User"
+#~ msgstr "Корванди Бад"
+
+#~ msgid "Bad Password"
+#~ msgstr "Гузарвожаи Бад"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "&Муродифии соҳибҳо:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Тозакунии алгоритмии асос:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Феҳристи шахсӣ:"
+
+#~ msgid "Pass&word"
+#~ msgstr "&Гузарвожа"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Гузарвожаи Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Гузарвожаҳои &рамзишуда"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Файли Smb passwd:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb &пасванд:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Чати гузарвожа:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Ғалатёби чати гузарвожа"
+
+#, fuzzy
+#~| msgid "Sec"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Сония"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Интиҳои вақти чати гузарвожа:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Гузарвожа &нест"
+
+#~ msgid "Password level:"
+#~ msgstr "Сатҳи Гузарвожа:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Дарозии камтарини гузарвожа:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Интиҳои вақти гузарвожаи мошина:"
+
+#~ msgid "Migration"
+#~ msgstr "Муҳоҷират"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Навсозии &рамзишуда"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Гузарвожаҳои UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Барномаи гузарвожа:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Ҳамзамонсози гузарвожаи UNI&X"
+
+#~ msgid "Userna&me"
+#~ msgstr "&Номи корванд"
+
+#~ msgid "User&name map:"
+#~ msgstr "Нақшаи &номи корванд:"
+
+#~ msgid "Username &level:"
+#~ msgstr "&Сатҳи номи корванд:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Корвандони маҳаллиро пинҳон кунед"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Монеъаи &номаълум"
+
+#~ msgid "Use rhosts"
+#~ msgstr " rhosts-ро истифода баред"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "&Аслшиносӣ"
+
+#~ msgid "Client"
+#~ msgstr "Мизоҷ"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "Имзои &Мизоҷ:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Аслшиносии матни &возеъи мизоҷ"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Мизоҷи аслшиносии lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Худкор"
+
+#~ msgid "Mandatory"
+#~ msgstr "Ҳатмӣ"
+
+#, fuzzy
+#~ msgid "Client channel:"
+#~ msgstr "Канали мизоҷ:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Мизоҷ spnego-ро истифода мебарад"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Аслшиносии NTLMv&2 мизоҷ"
+
+#~ msgid "Server signing:"
+#~ msgstr "Имзои Хидматрасон:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Аслшиносии Lanman"
+
+#, fuzzy
+#~ msgid "Server channel:"
+#~ msgstr "Канали хидматрасон:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "sp&nego-ро истифода баред"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "Аслшиносии NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "Номнавис"
+
+#~ msgid "L&og file:"
+#~ msgstr "Файли &номнавис:"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Андозаи &калонтарини номнавис:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "Номнависи &системавӣ:"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Сатҳи номнавис:"
+
+#~ msgid "S&witches"
+#~ msgstr "&Гузарандаҳо"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&Танҳо номнависи системавӣ"
+
+#~ msgid "Status"
+#~ msgstr "Ҳолат"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Ti&mestamp"
+
+#~ msgid "microseconds"
+#~ msgstr "микросонияҳо"
+
+#~ msgid "Debug pid"
+#~ msgstr "Ғалатёби pid"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "&Ғалатёби uid"
+
+#~ msgid "Tuning"
+#~ msgstr "Гардонидан"
+
+#~ msgid "Modules"
+#~ msgstr "Модулҳо"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "&Бозборкунии модулҳо:"
+
+#~ msgid "Switches"
+#~ msgstr "Гузаришҳо"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd ҳофизаи ниҳонӣ"
+
+#~ msgid "Use &mmap"
+#~ msgstr "&mmap-ро истифода баред"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "&Огоҳонии ивази ҳаста"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Ҷустуҷӯи &номи соҳиб"
+
+#~ msgid "Read ra&w"
+#~ msgstr "&Сатри хондан"
+
+#~ msgid "Write raw"
+#~ msgstr "Сатри навиштан"
+
+#~ msgid "Times"
+#~ msgstr "Дафъаҳо"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Ивази вақти интиҳоёбии огоҳонӣ:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Фаъол нигоҳдорӣ:"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Хурдтарин"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Вақти беҳаракатӣ:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q вақти ҳофизаи ниҳонӣ:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "&Номи интиҳои вақти ҳофизаи ниҳонӣ:"
+
+#~ msgid "Sizes"
+#~ msgstr "Андозаҳо"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Андозаи калонтарини диск:"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "Мб"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Хондани &андоза:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Андозаи омории ҳофизаи ниҳонӣ:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "&Зиёдтарин xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Рақамҳо"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Ҷараёнҳои зиёдтарини smbd:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Файлҳои зиёдтарини кушода:"
+
+#~ msgid "Printing"
+#~ msgstr "Дар ҳолати чоп"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Ҳамагӣ &супоришҳои чопкунӣ:"
+
+#~ msgid "Drivers"
+#~ msgstr "Гардонандаҳо"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 нақшаи гардонанда:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "&Номи Printcap:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Файли &гардонандаи чопгар "
+
+#~ msgid "Commands"
+#~ msgstr "Фармонҳо"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Фармони Enumports:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Фармони Addprinter:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Фармони Deleteprinter:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "&Боркунии чопгарон"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "&Хомӯшсозии чарха"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Нишондиҳии иловакунии &устоди чопгар"
+
+#~ msgid "Domain"
+#~ msgstr "Домен"
+
+#~ msgid "L&ocal master"
+#~ msgstr "Моҳири &маҳаллӣ"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Моҳири &домен"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "&Воридҳои домен"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Моҳири &мақбул"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS &сатҳ:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Гурӯҳи идоракунандаи домен:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Гурӯҳи меҳмони домен:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Ғайрифаъолсозии &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Амал кардан ҳамчун хидматрасони WI&NS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "&Дигар хидматрасони WINS-ро истифода баред"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "&Гузоришҳои Хидматрасони WINS "
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS &прокси"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "&Домҳои WINS:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Калонтарин WINS tt&l:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Хурдтарин WINS ttl:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS Хидматрасони IP ё DNS Ном"
+
+#~ msgid "General Options"
+#~ msgstr "Гузоришҳои Умумӣ"
+
+#~ msgid "WINS partners:"
+#~ msgstr "Ҳамкорони WINS:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS &прокси"
+
+#~ msgid "Filenames"
+#~ msgstr "Номҳои файл"
+
+#~ msgid "Ge&neral"
+#~ msgstr "&Умумӣ"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Кандани &нуқта"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Лағжанда"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "&Рафи лағжида:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Лағжидани &пешоянд:"
+
+#~ msgid "Specia&l"
+#~ msgstr "&Махсус"
+
+#~ msgid "Stat cache"
+#~ msgstr "Ҳофизаи ниҳонии оморӣ"
+
+#~ msgid "Locking"
+#~ msgstr "Бастан"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Бастани созишномавии &ҳаставиро истифода баред"
+
+#~ msgid "Direct&ories"
+#~ msgstr "&Феҳристҳо"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "&Бастани раҳнамоҳо:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&Феҳристи ночиз:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Бастани Бофтан"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "&Бастани ҳисоби бофтан:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Бастани &вақти бофтан:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Хеле Мукаммал гашта"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "Вақти &интизории шикасти бастани созишномавӣ:"
+
+#~ msgid "milliseconds"
+#~ msgstr "миллисонияҳо"
+
+#~ msgid "Charset"
+#~ msgstr "Маҷмӯъи аломатҳо"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "Маҷмӯъи аломатҳои D&OS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Маҷмӯъи аломатҳо UNI&X:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "&Намоиши маҷмӯъи аломатҳо:"
+
+#~ msgid "U&nicode"
+#~ msgstr "&Рамзи ягона"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Маҷмӯъи аломатҳо:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Аломатҳои &дуруст:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Рамзгузории феҳристи и саҳифа:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Системаи &рамзгузорӣ:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Саҳифаи рамзи мизоҷ:"
+
+#~ msgid "Logon"
+#~ msgstr "Ворид"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Иловакунии Дастнависҳо"
+
+#~ msgid "Add user script:"
+#~ msgstr "Иловакунии дастнависҳои корванд:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Иловакунии корванд ба гурӯҳи дастнависҳо:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Иловакунии &гурӯҳи дастнависҳо:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Илованамоии дастнависи мошина:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Нобуд кардани дастнависи гурӯҳ:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Нобуд кардани дастнависи корванд:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Нобуд кардани корванд аз дастнависи гурӯҳ:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Дастнависи Ибтидоии Гурӯҳ"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Гузориши дастнависи &ибтидоии гурӯҳ:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Хомӯш кардан"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "&Хомӯш кардани дастнавис:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Канда кардани хомӯшсозии дастнавис:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Роҳи &ворид:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "&Хонаи ворид:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Гардонандаи &ворид:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Дастнависи &ворид:"
+
+#~ msgid "Socket"
+#~ msgstr "Бастагоҳ"
+
+#~ msgid "Socket address:"
+#~ msgstr "Суроғаи бастагоҳ:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Интихобҳои Бастагоҳ"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Усули пурраи SSL-ро фаъол ё хомӯш месозед"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Ин усули пурраи SSL-ро фаъол ё хомӯш месозад. Агар ин ба не барпо шуда "
+#~ "бошад, SSL-и аъолгаштаи Samba ҳамчун ғайри SSL Samba рафтор мекунад. Агар "
+#~ "ин ба не барпо шуда бошад, вобаста ба соҳибҳои гуногуни ssl ва соҳибони "
+#~ "рафтаи ssl ҳамчунин пайвастшавии SSL дархоста мешавад.\n"
+#~ "\n"
+#~ "Он ҳамон вақт дастрас аст, ки китобхонаҳои SSL дар системаи шумо пурра "
+#~ "карда шаванд ва хосиятҳои батанзимдарорӣ --бо-ssl дар вақти танзимдарорӣ "
+#~ "дода шаванд."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "&Даргиронидани SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "&Соҳибҳои SSL:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL байтҳои &энтропӣ:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "Рамзҳои SSL:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL &баромади соҳибҳо:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2ё3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "&Ҳамсозии SSL"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL файли энтропӣ:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "Бастагоҳи SSL egd:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Нусхаи SSL:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certFile:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL талаботи сертификати мизоҷ"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL калиди мизоҷ:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL &талаботи сертификати хидматрасон"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L сертификати хидматрасон:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL сертификати мизоҷ:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL &калиди хидматрсон:"
+
+#~ msgid "Protocol"
+#~ msgstr "Қарордод"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Хидматрасони &вақт"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Калон хондан навиштан"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "Вусъатҳои UNIX"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Хондани bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Нусхаҳои Қарордод"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "&Эълон кардан ҳамчун:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Нусхаи эълоншуда:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "&Қарордод:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Қарордоди зиёдтарин:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Қарордоди хурдтарин:"
+
+#~ msgid "Limits"
+#~ msgstr "Маҳдудиятҳо"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "&Зиёдтарин mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Зиёдтарин tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "Гӯшкунии Даргоҳҳои SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "Даргоҳҳои SMB:"
+
+#~ msgid "Browsing"
+#~ msgstr "Баррасӣ кардан"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM &фосила:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "Эълони L&M:"
+
+#~ msgid "Sec"
+#~ msgstr "Сония"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "&Ҳамзамонсозии барраси дурдаст:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Рӯйхати &баррасӣ"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "&Баррасии мукаммалгашта"
+
+#~ msgid "Pre&load:"
+#~ msgstr "&Бозборкунӣ:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Қолаби &феҳристи хонагӣ:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "&Қолаби намуд:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Ҷудосози Winbind:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Қолаби гурӯҳи ибтидоӣ:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind вақти &ҳофизаи ниҳонӣ:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "&Ҳамсозии Acl:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Корвандони Wi&nbind enum"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Гурӯҳҳои Winbind enum"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind доменро бо нобаёнӣ истифода мебарад"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind даргиронидани ҳисоби маҳаллӣ"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Танҳо доменҳои бовариноки Winbind"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Гурӯҳҳои лонаии Winbind"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "&Намудсози NetBIOS:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "Тахаллусҳои &NetBIOS:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "netbios-ро &хомӯш созед"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "&Номи дархости бозҳалшуда:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "&Соҳиби msdfs"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "&Пасванди LDAP:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP пасванди мошина:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP пасванди корванд:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP пасванди &гурӯҳ:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP пасванди idmap:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "Полоягари LDAP:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP &мудир dn:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&Пасванди Idmap:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP нусхабардории ҳолати хоб:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#, fuzzy
+#~ msgid "On"
+#~ msgstr "Танҳо"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "&Ҳамзамонсозии LDAP:"
+
+#~ msgid "Only"
+#~ msgstr "Танҳо"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP нобуд кардани d&n"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "&Фармони муштаракнамоиро ҳамроҳ кунед:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Фармони муштаракнамоиро иваз кунед:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "&Фармони муштаракнамоиро нобуд кунед:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "&Фармони Пайём:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "&Фармони Dfree:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Барпосозии фармони &имтиёз:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Фармони имтиёзро гиред:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Амалиёти &паникӣ:"
+
+#~ msgid "Misc"
+#~ msgstr "Misc"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Корвандони &маҳаллиро пинҳон кунед"
+
+#~ msgid "Default service:"
+#~ msgstr "Хидмат бо нобаёнӣ:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "&Омезиши вақт:"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Хурдтарин"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "&Эълони дурдаст:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Муҳити сарчашма:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS феҳристи хонагӣ"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Нақшабандии феҳристи хонагӣ:"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&Феҳристи Utmp:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "Феҳристи &Wtmp:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Ғалатёб"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT пуштибонии ҳолати"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "Пуштибонии NT S&MB"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT &пуштибонии маҷро"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Илова кардан/Таҳрири Муштаракнамоӣ"
+
+#~ msgid "Pixmap"
+#~ msgstr "Pixmap"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Феҳрист"
+
+#~ msgid "&Path:"
+#~ msgstr "&Роҳ:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Ҳамаи &феҳристҳои хонагиро муштарак гардонед"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "&Аслшинос"
+
+#~ msgid "Na&me:"
+#~ msgstr "&Ном:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "&Шарҳ:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "&Хусусиятҳои Асосӣ"
+
+#~ msgid "Read onl&y"
+#~ msgstr "&Танҳо хондан"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Оммавӣ"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "Барраси &шаванда"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Дастрас"
+
+#~ msgid "&Security"
+#~ msgstr "&Бехатарӣ"
+
+#~ msgid "Gu&ests"
+#~ msgstr "&Меҳмон"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+
+#~ msgid "&Guest account:"
+#~ msgstr "Ҳисоби &меҳмон:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Агар ин интихоб шуда бошад, ягон гузарвожа барои пайвастшавӣ ба хизмат, "
+#~ "дархоста намешавад. Ин дастовардҳо монанди ҳисоби меҳмон ҳастанд."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Танҳи &пайвастшавиҳои меҳмонро иҷозат диҳед"
+
+#~ msgid "Hos&ts"
+#~ msgstr "&Соҳибҳо"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Ин параметри бардоштани гузоришҳои маҳдудияти вегул, фазо ё tab-и соҳиб, "
+#~ "ки дастрасӣ ба хизматро иҷозат медиҳад."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "&Дастрасии соҳибҳо:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Радкунии соҳибҳо:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Пасвандҳои &Аломатӣ"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Равонашавиро аз паси &пайвандҳои аломатӣ иҷозат диҳед"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Равонашавиро аз паси пайвандҳои аломатӣ иҷозат диҳед, ки ба мавқеъи берун "
+#~ "аз дарахти феҳрист &нишон медиҳад"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Тасдиқоти гузарвожа ба муқобили равонашавии номи корванд агар мизоҷ "
+#~ "номи корвандро таъмин карда натавонад:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Танҳо пайвастагиҳо бо &номи ковандро, ки дар ин рӯйхати номҳои корвандон "
+#~ "муайян гаштааст, иҷозат диҳед"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "&Файлҳои Пинҳонӣ"
+
+#~ msgid "Hidden"
+#~ msgstr "Пинҳонӣ"
+
+#~ msgid "Veto"
+#~ msgstr "Манъ кардан"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Манъ кардан бастани созишномавӣ"
+
+#~ msgid "Size"
+#~ msgstr "Андоза"
+
+#~ msgid "Date"
+#~ msgstr "Сана"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Файлҳои &Интихобгашта"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Пинҳон кардан"
+
+#~ msgid "&Veto"
+#~ msgstr "&Манъ кардан"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "&Манъ кардани бастани созишномавӣ"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Батанзимдарории Дастӣ"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Файлҳои &манъ шуда:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "&Файлҳои манъ кардани бастани созишномавӣ:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Файлҳои &Пинҳонгашта:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Файлҳои &навиштнопазирро пинҳон кунед"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Файлҳои &махсусро пинҳон кунед"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Файлҳое, ки бо нуқта &оғоз меёбанд, пинҳон кунед"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Файлҳои &хонданнопазирро пинҳон кунед"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Пешрафта"
+
+#~ msgid "Force Modes"
+#~ msgstr "Усулҳои Зӯрӣ"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Усули &қувваи бехатарии феҳрист:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Усули &бехатариро маҷбур созед:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "Усули &феҳристро маҷбур созед:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "&Усули офариданро маҷбур созед:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Ниқобҳо"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Ниқоби бехатарии феҳрист:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "&Ниқоби бехатарӣ:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "&Ниқоби феҳрист:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Офаридани &ниқоб:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "&Тахассуси acls"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "ac&ls-ро гиред"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "Пуштибонии &NT ACL"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Корванди &номаълуми acl-ро маҷбур созед:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Нақшабандии acl-ро &гиред"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Аз феҳристи волиди рухсатҳоро гиред"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Нобудкунии файлҳои танҳо хонданпазирро иҷозат диҳед"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "Мушаххасони Нақшабандии DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Нақшабандии &бойгонии DOS барои иҷроиши соҳиби UNIX"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Нақшабандии пинҳоншудаи DOS барои иҷроиши ҷаҳонии UNI&X"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Нақшабандии системаи DOS барои иҷроиши гурӯҳи UNI&X"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Мушаххасони DOS-ро ба мушаххасони паҳншуда захира кунед"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "&Ҳамзамонсозии муҳим"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "&Ҳамеша ҳамзамон созед"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "Ҷудосозии &муҳим"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "sen&dfile-ро истифода баред"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "Рақами &зиёдтарини пайвастагиҳои якзамона:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Навиштани &андозаи ҳофизаи пинҳонӣ:"
+
+#~ msgid "bytes"
+#~ msgstr "байтҳо"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Андозаи &қисм:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Қоидаҳои &ҳофизаи ниҳонии тарафи мизоҷ:"
+
+#~ msgid "manual"
+#~ msgstr "дастурамал"
+
+#~ msgid "documents"
+#~ msgstr "санадҳо"
+
+#~ msgid "programs"
+#~ msgstr "барномаҳо"
+
+#~ msgid "disable"
+#~ msgstr "хомӯш кардан"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Лағжидани Ном"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Лағжидани &номро даргиронед"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Ҳолати &лағжанда"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Ҳолати &захиракунӣ"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Ҳолати &захиракунии кӯтоҳ"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Ҳолати &ҳассосият"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Ҳолати бо &нобаёнӣ:"
+
+#~ msgid "Lower"
+#~ msgstr "Поёнтар"
+
+#~ msgid "Upper"
+#~ msgstr "Болотар"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "&Аломати лағжанда:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "&Нақшаи лағжанда:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Усули лағжанда:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Дигар Хосиятҳо"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Нуқтаи &пуштбандиро пинҳон кунед"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "Усули файли &DOS"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "Вақтҳои &файли DOS"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "Ҳалнокии вақти файли DOS"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Даргиронидани &бастан"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Бас&тан"
+
+#~ msgid "S&trict locking"
+#~ msgstr "Бастани &муҳим"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Бастани &пешдорӣ"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Бастани &номуҳим"
+
+#~ msgid "Share mo&des"
+#~ msgstr "&Усулҳои муштаракгардонӣ"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Барориши бастагиҳои &созишномавӣ (oplocks) "
+
+#~ msgid "O&plocks"
+#~ msgstr "O&plocks"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "&Сатҳи2 oplock-ҳо"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "&Маҳдудияти таркиби Oplock:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "&Сохтакории oplock-ҳо"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Vfs &объектҳо:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Vfs &хосиятҳо:"
+
+#~ msgid "Exec"
+#~ msgstr "Иҷроиш"
+
+#~ msgid "P&reexec:"
+#~ msgstr "P&reexec:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Реша pr&eexec:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Pos&texec:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Реша &postexec:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "preexec &хомӯш аст"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "pree&xec-и реша хомӯш шудааст"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Баландии овоз:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Дастнависи Ma&gic:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Ҳосили Mag&ic:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Поён &нафароред:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs &прокси"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "Фармони Setdir &иҷозат дода шудааст"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "&Сохтакории вақти офаридани феҳрист"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs реша"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "&Пинҳон кардан"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Корвандон"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Ҳамаи Корвандони &Муайянгашта"
+
+#~ msgid "Reject"
+#~ msgstr "Рад кардан"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Корвандони &Муайянгашта"
+
+#~ msgid "Access Rights"
+#~ msgstr "Ҳуқуқҳои Дастрасӣ"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Илова кардани Корванд..."
+
+#~ msgid "E&xpert"
+#~ msgstr "&Кордон"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Илова кардани &Гурӯҳ..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&Хориҷ кардани Интихобгашта"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Ҳамаи Корвандон Аз Паси Корванд/Гурӯҳ &Равона Шаванд"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Корвандро &маҷбур созед:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Гурӯҳро &маҷбур созед:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Тағирдиҳандагони Дастрасӣ"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Рухсатҳои Дастрасӣ"
+
+#~ msgid "Others"
+#~ msgstr "Дигарҳо"
+
+#~ msgid "Read"
+#~ msgstr "Хондан"
+
+#~ msgid "Write"
+#~ msgstr "Навиштан"
+
+#~ msgid "Sticky"
+#~ msgstr "Часбанда"
+
+#~ msgid "Set GID"
+#~ msgstr "Барпосозии GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Барпосозии UID"
+
+#~ msgid "Special"
+#~ msgstr "Махсус"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Гузоришҳои Корванд"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Корванди дуруст:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Корванди идора:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&Корванди нодуруст:"
+
+#~ msgid "&Write list:"
+#~ msgstr "Рӯйхати &Навиштан:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Рӯйхати &хондан:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "&Соҳибҳои Иҷозат гирифта"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Рӯйхати соҳибҳои иҷозат гирифта"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Дар ин ҷо шумо рӯйхати соҳибонеро, ки иҷозати дастрасӣ ба ин феҳрист ба "
+#~ "воситаи NFS гирифтаанд, дида метавонед.\n"
+#~ "Сутуни якум ном ё суроғаи соҳибро нишон медиҳад, сутуни дуюм нишонаҳои "
+#~ "дастрасиро нишон медиҳад. Номи '*' дастрасии оммавиро медиҳад."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Иловакунии Соҳиб..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Тағ&ири Соҳиб..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Хориҷкунии Соҳиб"
+
+#~ msgid "Name/Address"
+#~ msgstr "Ном/Суроға"
+
+#~ msgid "Parameters"
+#~ msgstr "Параметрҳо"
+
+#~ msgid "Host Properties"
+#~ msgstr "Хусусиятҳои Соҳиб"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Ном/суроға:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Майдони Ном / Суроға</b>\n"
+#~ "<p>\n"
+#~ "Дар ин ҷо шумо номи соҳиб ё суроғаро ворид карда метавонед.<br>\n"
+#~ "Соҳиб бо ин гуна роҳҳо муайян карда мешавад:\n"
+#~ "<p>\n"
+#~ "<i>соҳиби ягона</i>\n"
+#~ "<p>\n"
+#~ " Ин шаклбандии аз ҳама оммавӣ аст. Шумо онро ҳам бо номи кӯтоҳи аз тарафи "
+#~ "ҳалкунанда шинохташаванда, ҳам бо номи пурраи домен ё IP суроға таъин "
+#~ "карда метавонед.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>гурҳҳои шабакавӣ</i>\n"
+#~ "<p>\n"
+#~ " Гурӯҳҳои шабакавии NIS ҳамчун @group гирифта мешаванд. Танҳо қисми "
+#~ "соҳибии ҳар аъзои гурӯҳи шабакавӣ барои аъзогӣ дида баромада мешаванд. "
+#~ "Қисмҳои холии соҳиб ё онҳое, ки дар таркиби худ тире (-) доранд, рад "
+#~ "карда мешаванд.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>корти озод</i>\n"
+#~ "<p>\n"
+#~ " Номҳои мошин дар таркиби худ аломатҳои корти озоди * ва ? дошта "
+#~ "метавонанд. Ин барои бештар фишурда намудани файлҳои содиротӣ лозиманд; "
+#~ "масалан, *.cs.foo.edu ба ҳамаи соҳибҳо дар домениcs.foo.edu мутобиқат "
+#~ "мекунад. Лекин, ин аломатҳои корти озод ба нуқтаҳо дар номи доменҳо "
+#~ "мувофиқат намекунанд, ҳамин тавр намунаи дар боло буда соҳибҳоро ба "
+#~ "монанди a.b.cs.foo.edu-ро надоранд.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP шабакаҳо</i>\n"
+#~ "<p>\n"
+#~ " Инчунин шумо феҳристҳоро ба ҳамаи соҳибҳо дар IP (зер-) шабакаи ҳамзамон "
+#~ "содир карда метавонед. Ин бо роҳи таъинсозии IP суроға ва ҷуфти "
+#~ "ниқобишабака ҳамчун суроға/ниқоби шабака иҷро мегардад, ки дар он ниқоби "
+#~ "шабака дар шаклбандии даҳии бо нуқта ҷудошуда ё дарозии ниқоби давомнок "
+#~ "(масалан, ё `/255.255.252.0' ё `/22' вобаста ба ҳосили суроғаи дар асоси "
+#~ "шабака дар зершабакаи шабеҳ бо соҳибҳои 10 бита).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Дастрасии оммавӣ"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Дастрасии оммавӣ</b>\n"
+#~ "<p>\n"
+#~ "Агар инро қайд кунед, суроғаи соҳиб корти озоди якка мегардад, ки маънои "
+#~ "дастрасии оммавиро дорад.\n"
+#~ "Ин монанди он аст, ки агар шумо корти озодро дар майдони суроға ворид "
+#~ "кунед.\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Хосиятҳои NFS"
+
+#~ msgid "&Writable"
+#~ msgstr "&Навишташаванда"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Навишташаванда</b>\n"
+#~ "<p>\n"
+#~ "Ҳам дархости хондан ва ҳам навиштанро дар ин қиммати NFS иҷозат диҳед.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Бо нобаёнӣ - ин рад намудани иҷозати ҳар гуна дархосте, ки системаи "
+#~ "файлиро иваз менамояд\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Хатарнок"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Хатарнок</b>\n"
+#~ "<p>\n"
+#~ "Агар ин хосият интихоб гардад, маслиҳат дода намешавад, ки ба ғайр аз "
+#~ "даргоҳи интернетии IPPORT_RESERVED (1024) дархостҳо ташкил шаванд.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Агар хатарнок бошад, бе қайд гузоред.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Ҳамзамонсозӣ"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ҳамзамонсозӣ</b>\n"
+#~ "<p>\n"
+#~ "Ин хосият талаб мекунад, ки ҳамаи файлҳои навишта ба диск пеш аз он, ки "
+#~ "дархости навиштан иҷро гардад, гирифтор шаванд. Ин барои иҷроиши "
+#~ "бехатарии додаҳо баҳри пешгирии шикасти хидматрасон талаб мешавад, лекин "
+#~ "посухи намоишро ба худ бармегардонад.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Бо нобаёнӣ ин иҷозат додан ба хидматрасон барои навишта баровардани "
+#~ "додаҳо ҳар оина, ки он тайёр аст.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "&Ақибмонӣ нест"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "&Пинҳонкунӣ нест"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Санҷиши &зердарахт нест"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&Бастаниҳои хатарнок"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Нақшабандии Корванд"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Пахшкунии ҳама"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Пахшкунии ҳама</b>\n"
+#~ "<p>\n"
+#~ "Нақшабандии ҳамаи uids ва gids ба корванди номаълум. Барои феҳристҳои FTP "
+#~ "оммавии содиршавандаи NFS феҳристҳои гардандаи ахборот фоиданок аст. </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Пахш накардани &реша"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Пахш накардани реша</b>\n"
+#~ "<p>\n"
+#~ "Пахшнакардани решаро хомӯш созед. Ин хосият барои корвандони бедиск "
+#~ "фоидаовар аст.\n"
+#~ "</p>\n"
+#~ "<i>пахшкунии реша</i>\n"
+#~ "<p>\n"
+#~ "Нақшабанди аз uid/gid 0 ба uid/gid-и ношинос дархост мекунад. Дар хотир "
+#~ "доред, ки ин дигар uid -ҳоро, ки ҳассосияти баробар доранд иҷозат "
+#~ "намедиҳад.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Номаълум.&UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Номаълум. UID/GID</b> <p> Ин хосият ба uid ва gid ҳисоби номаълум "
+#~ "мебахшад. Ин хосият барои мизоҷони PC/NFS фоиданок аст, ки шумо метавонед "
+#~ "пайдо гардидани ҳамаи дархостҳоро аз яккорванд, хоҳед. </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Номаълум. &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Феҳрист:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Муштаракгардонӣ бо &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Хосиятҳои NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "&Оммавӣ"
+
+#~ msgid "W&ritable"
+#~ msgstr "&Навишташаванда"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "&Хосиятҳои Бештари NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Хосиятҳои Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "&Оммавӣ"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Хосиятҳои &Бештари Samba"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Ба ҳамаи корвандон иҷозати истифодаи муштараки феҳристҳоро диҳед"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr ""
+#~ "Танҳо ба корвандони гурӯҳи '%1' иҷозати истифодаи муштараки феҳристҳо "
+#~ "дода мешавад"
+
+#, fuzzy
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Корвандони гурӯҳи '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Хориҷкунии Корванд"
+
+#~ msgid "Add User"
+#~ msgstr "Иловакунии Корванд"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Аъзоёни гурӯҳи бе истифодаи гузарвожаи реша феҳристҳоро муштаракан дошта "
+#~ "метавонанд"
+
+#~ msgid "Change Group..."
+#~ msgstr "Ивази Гурӯҳ..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Хизматрасони SMB ва NFS дар ин мошина коргузорӣ нашудаанд, барои "
+#~ "даргиронидани ин модул хизматрасонҳо боянд коргузошта шаванд."
+
+#, fuzzy
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Истифодаи муштараки файлро дар &шабакаи маҳаллӣ даргиронед"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Истифодаи муштараки &оддӣ"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Истифодаи муштараки оддиро барои иҷозат додан ба корвандон оиди "
+#~ "истифодабарии муштараки феҳристҳо аз феҳристи ХОНАГИИ онҳо бе донистани "
+#~ "гузарвожаи решавӣ, даргиронед."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Истифодаи &муштараки мукаммалгашта"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Истифодаи муштараки мукаммалгаштаро барои иҷозат додан ба корвандон оиди "
+#~ "истифодабарии муштараки дилхоҳ феҳристҳо даргиронед, зеро онҳо иҷозати "
+#~ "навиштанро ба файли зарурии танзимот доранд ё онҳо гузарвожаи решавиро "
+#~ "медонанд."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "&NFS-ро истифода баред (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Sam&ba-ро истифода баред (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Корвандони &Иҷозат гирифта"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Феҳристҳои Муштарак"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Иловакунӣ..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "&Ивазнамоӣ..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Файли батанзимдарории SAMBA <strong>'smb.conf'</strong> пайдо нагардид;"
+#~ "</p>боварӣ ҳосил намоед, ки SAMBA кор гузошта шудааст.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Мавқеъиятро Муайян Кунед"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Мавқеъияти smb.conf-ро Гиред"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Файли <i>%1</i> хонда намешавад.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Файлро Хонда Намешавад"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Хатогӣ ҳангоми кушодани файл"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Ҳамроҳгардии домени %1 бо нокомӣ анҷомид."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr ""
+#~ "<qt>Марҳамат карда гузарвожаи корванди <b>%1</b>-ро ворид кунед</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Илованамоии корванди <b>%1</b> ба манбаи додаҳои корвандони Samba бо "
+#~ "нокомӣ анҷомид.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Хориҷкунии корванди %1 аз манбаи додаҳои корвандони Samba бо нокомӣ "
+#~ "анҷомид."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Марҳамат карда гузарвожаи корванди %1-ро ворид кунед"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Ивазнамоии гузарвожаи корванди %1 бо нокомӣ анҷомид."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Танзимоти Samba</h1> дар ин ҷо шумо хидматрасони SAMBA-и худро ба "
+#~ "танзим дароварда метавонед."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the <i>share</i> security level if you have a home network or a "
+#~| "small office network.<br> It allows everyone to read the list of all "
+#~| "your shared directories and printers before a login is required."
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Сатҳи бехатарии <i>муштарак</i>-ро истифода баред, агар шабакаи хонагӣ ё "
+#~ "шабакаи хурди корхонаро дошта бошед. <br> Ин ба ҳама хондани рӯйхати "
+#~ "ҳамаи феҳристҳои муштарак ва чопгаронрои шуморо пеш аз дархости ворид, "
+#~ "иҷозат медиҳад."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the <i>user</i> security level if you have a bigger network and you "
+#~| "do not want to allow everyone to read your list of shared directories "
+#~| "and printers without a login.<p>If you want to run your Samba server as "
+#~| "a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~| "option."
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Сатҳи бехатарии <i>корванд</i>-ро истифода баред, агар шабакаи калонтар "
+#~ "дошта бошед ва агар нахоҳед, ки каси дигар рӯйхати феҳристҳо ва "
+#~ "чопгаронро бе ворид хонад.<p>Агар хидматрасони Samba-ро ҳамчун "
+#~ "<b>Идоракунандаи Домени Ибтидоӣ</b> (PDC) иҷро кардан хоҳед, ин хосиятро "
+#~ "барпо созед."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Сатҳи бехатарии <i>хидматрасон</i>-ро истифода баред, агар шабакаи калон "
+#~ "дошта бошед ва хидматрасони samba номи корванд/гузарвожаро тасдиқ "
+#~ "мекунад, ба воситаи гузаронидани он ба дигар хидматрасони SMB ба монанди "
+#~ "NT box."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Сатҳи бехатарии <i>домен</i>-ро истифода баред, агар шабакаи калон дошта "
+#~ "бошед ва хидматрасони samba номи корванд/гузарвожаро тасдиқ мекунад, ба "
+#~ "воситаи гузаронидани он ба Windows NT Primary ё Идоракунандаи Домени "
+#~ "Захиракунӣ."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Сатҳи бехатарии <i>ADS</i>-ро истифода баред, агар шабакаи калон дошта "
+#~ "бошед. Хидматрасони samba ҳамчун аъзои домен дар соҳаи ADS амал хоҳад "
+#~ "кард."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr ""
+#~ "Ин хосияти <em>%1</em> аз тарафи нусхаи Samba-и шумо пуштибонӣ намегардад"
+
+#~ msgid "Unnamed"
+#~ msgstr "Беном"
+
+#~ msgid "&Hide"
+#~ msgstr "&Пинҳон кардан"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto Oplock"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Баъзеи аз файлҳои шумо интихобкарда пинҳон карда шуданд аз сабаби он, "
+#~ "ки онҳо бо нуқта сар мешаванд; шумо интихоби файлҳоеро, ки бо нуқта сар "
+#~ "мешаванд рад кардан мехоҳед?<br>(Агар не гӯед, ягон интихоби файл рад "
+#~ "намешавад.)</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Файлҳои Бо Нуқта Саршаванда"
+
+#, fuzzy
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Пинҳонӣ"
+
+#, fuzzy
+#~ msgid "Keep Hidden"
+#~ msgstr "Пинҳонӣ"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Баъзе файлҳое, ки шумо интихоб кардаед бо сатри корти озод "
+#~ "мувофиқат мекунанд <b>'%1'</b>; ҳамаи файлҳои мувофиқаткунандаро бекор "
+#~ "кардан мехоҳед <b>'%1'</b>? <br>(Агар не гӯед, ягон мувофиқати '%1' бекор "
+#~ "намегардад.)"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Сатри Корти Озод"
+
+#, fuzzy
+#~ msgid "Keep Selected"
+#~ msgstr "&Хориҷ кардани Интихобгашта"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "&Бо нобаёнӣ"
+
+#~ msgid "Admin"
+#~ msgstr "Мудир"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>public read access</b> for this directory, but "
+#~| "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~| "<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Шумо <b>дастрасии хондани омма</b>-ро барои ин феҳрист муайян кардед, "
+#~ "лекин ҳисоби меҳмон <b>%1</b> иҷозати заруриро барои хондан надорад;"
+#~ "<br>ба ҳар ҳол идома додан мехоҳед?</qt>"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "Дар ҳолати чоп"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>public write access</b> for this directory, "
+#~| "but the guest account <b>%1</b> does not have the necessary write "
+#~| "permissions;<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Шумо <b>дастрасии навиштани омма</b>-ро барои ин феҳрист муайян "
+#~ "кардед, лекин ҳисоби меҳмон <b>%1</b> иҷозати заруриро барои навиштан "
+#~ "надорад;<br>ба ҳар ҳол идома додан мехоҳед?</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>write access</b> to the user <b>%1</b> for "
+#~| "this directory, but the user does not have the necessary write "
+#~| "permissions;<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Шумо <b>дастрасии навиштан</b>-ро ба корванди <b>%1</b> барои ин "
+#~ "феҳрист муайян кардед, лекин корванд иҷозати заруриро барои навиштан "
+#~ "надорад;<br>ба ҳар ҳол идома додан мехоҳед?</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~| "directory, but the user does not have the necessary read permissions;"
+#~| "<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Шумо <b>дастрасии хондан</b>-ро ба корванди <b>%1</b> барои ин "
+#~ "феҳрист муайян кардед, лекин корванд иҷозати заруриро барои хондан "
+#~ "надорад;<br>ба ҳар ҳол идома додан мехоҳед?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Элементи оммавӣ аллакай мавҷуд аст."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Соҳиб Аллакай Мавҷуд аст"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Марҳамат карда номи соҳиб ё IP суроғаро ворид кунед."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Номи соҳиб/IP-Суроға нест"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Мизбони '%1' аллакай мавҷуд аст."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Хондани файли батанзимдарории Samba ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Хондани файли батанзимдарории NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Марҳамат карда роҳи дурустро ворид кунед."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Танҳо феҳристҳо муштаракан истифода мегарданд."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Феҳрист аллакай муштаракан истифода мегардад."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Идоракунанда истифодабарии муштаракро бо NFS иҷозат надод."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Хатогӣ: файли батанзимдарории NFS хонда нашуд."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Идоракунанда истифодабарии муштаракро бо Samba иҷозат надод."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Хатогӣ: файли батанзимдарории Samba хонда нашуд."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Шумо бояд номро барои тақсимоти муштараки Samba ворид кунед."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Барои истифодаи муштараки феҳристҳо шумо бояд аслшиносӣ гардед."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Танзимоти Муштаракан Доштани Файлҳо..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Хидматрасони NFS дар системаи шумо кор гузошта нашудааст"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Гузоришҳоро захира карда нашуд."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Барои навиштан файли '%1'-ро кушода нашуд: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Захиракунӣ бо Нокомӣ анҷомид"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Муштаракгардонии Файл</h1><p>Ин модул барои даргиронидани "
+#~ "муштаракгардонии файл дар шабака бо истифодабарии \"Системаи Файлии Шабака"
+#~ "\" (NFS) ё SMB дар Konqueror кор фармуда мешавад. Охирон барои муштарак "
+#~ "гардонидани файлҳои шумо бо компютерҳои Windows(R) дар шабакаи шумо, "
+#~ "шуморо фаъол мегардонад.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Муштарак гардонидани Феҳрист"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Корвандони Иҷозат Гирифта"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Ҳамаи корвандон аллакай дар гурӯҳи %1 ҳастанд."
+
+#~ msgid "Select User"
+#~ msgstr "Интихоби Корванд"
+
+#~ msgid "Select a user:"
+#~ msgstr "Корвандро интихоб кунед:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Корванди '%1'-ро ба гурӯҳи '%2' илова карда нашуда истодааст"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Корванди '%1'-ро аз гурӯҳи '%2' хориҷ карда нашуда истодааст"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Шумо бояд гурӯҳи мувофиқро интихоб кунед."
+
+#~ msgid "New file share group:"
+#~ msgstr "Гурӯҳи нави файли муштаракшуда:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr ""
+#~ "Корвандонро аз гурӯҳи кӯҳнаи файли муштаракшуда ба гурӯҳи нав илова кунед"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Корвандонро аз гурӯҳи кӯҳнаи файли муштаракшуда хориҷ кунед"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Гурӯҳи кӯҳнаи файли муштаракшударо нобуд созед"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr ""
+#~ "Танҳи корвандони гурӯҳи мувофиқ иҷозати муштарак гардонидани феҳристро "
+#~ "доранд"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Интихобнамоии Гурӯҳ..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "Дар ҳақиқат мехоҳед, ки ҳамаи корвандонро аз гурӯҳи '%1' хориҷ кунед?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Дар ҳақиқат мехоҳед, ки гурӯҳи '%1'-ро нобуд созед?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Хориҷкунии гурӯҳи '%1' бо нокомӣ анҷомид."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Марҳамат карда гурӯҳи дурустро интихоб кунед."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Ин гурӯҳи '%1' мавҷуд нест. Он офарида шавад?"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Офаридани гурӯҳи '%1' бо нокомӣ анҷомид."
+
+#, fuzzy
+#~ msgid "Printer Settings"
+#~ msgstr "Гузоришҳои Корванд"
+
+#, fuzzy
+#~ msgid "Pr&inter"
+#~ msgstr "Чопгар"
+
+#, fuzzy
+#~ msgid "Pa&th:"
+#~ msgstr "&Роҳ:"
+
+#, fuzzy
+#~ msgid "Sha&re all printers"
+#~ msgstr "&Боркунии чопгарон"
+
+#, fuzzy
+#~ msgid "I&dentifier"
+#~ msgstr "&Аслшинос"
+
+#~ msgid "&Name:"
+#~ msgstr "&Ном:"
+
+#, fuzzy
+#~ msgid "Comm&ent:"
+#~ msgstr "&Шарҳ:"
+
+#, fuzzy
+#~ msgid "Main Properties"
+#~ msgstr "&Хусусиятҳои Асосӣ"
+
+#, fuzzy
+#~ msgid "&Printing"
+#~ msgstr "Дар ҳолати чоп"
+
+#, fuzzy
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Файли &гардонандаи чопгар "
+
+#, fuzzy
+#~ msgid "Print&er driver location:"
+#~ msgstr "Файли &гардонандаи чопгар "
+
+#, fuzzy
+#~ msgid "Printin&g:"
+#~ msgstr "Дар ҳолати чоп"
+
+#, fuzzy
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Ҳамагӣ &супоришҳои чопкунӣ:"
+
+#, fuzzy
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Ҳамагӣ &супоришҳои чопкунӣ:"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "Хидмат бо нобаёнӣ:"
+
+#, fuzzy
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Дастрасии соҳибҳо:"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "Феҳристи шахсӣ:"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "Фармонҳо"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "Фармони Addprinter:"
+
+#, fuzzy
+#~ msgid "lpq comma&nd:"
+#~ msgstr "Фармони имтиёзро гиред:"
+
+#, fuzzy
+#~ msgid "lprm comman&d:"
+#~ msgstr "&Фармони Dfree:"
+
+#, fuzzy
+#~ msgid "&queuepause:"
+#~ msgstr "&Фаъол нигоҳдорӣ:"
+
+#, fuzzy
+#~ msgid "p&reexec:"
+#~ msgstr "P&reexec:"
+
+#, fuzzy
+#~ msgid "root pr&eexec:"
+#~ msgstr "Реша pr&eexec:"
+
+#, fuzzy
+#~ msgid "root postexec:"
+#~ msgstr "Реша &postexec:"
+
+#, fuzzy
+#~ msgid "poste&xec:"
+#~ msgstr "Pos&texec:"
+
+#, fuzzy
+#~ msgid "Tunin&g"
+#~ msgstr "Гардонидан"
+
+#, fuzzy
+#~ msgid "M&in print space:"
+#~ msgstr "Қарордоди хурдтарин:"
+
+#, fuzzy
+#~ msgid "&Logging"
+#~ msgstr "Номнавис"
+
+#, fuzzy
+#~ msgid "S&tatus"
+#~ msgstr "Ҳолат"
+
+#~ msgid "Not share&d"
+#~ msgstr "Муштарак &нест"
+
+#~ msgid "&Shared"
+#~ msgstr "&Муштарак"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Интихобҳои &Асосӣ"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Ин майдони матнӣ аст, ки ҳангоми дархостани мизоҷ ба хидматрасон ба "
+#~ "муштаракгардонӣ мегардад, ҳамчунин ба шабака ё дидабонии шабака, ба "
+#~ "рӯйхати муштаракҳои фаъол."
+
+#~ msgid "Name of the share"
+#~ msgstr "Номи сарчашмаи муштарак"
+
+#~ msgid "Commen&t:"
+#~ msgstr "&Шарҳ:"
+
+#~ msgid "Security Options"
+#~ msgstr "Хосиятҳои Бехатарӣ"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "&Радкунии соҳибҳо:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&Дастрасии соҳибҳо:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Ҳисоби &мизоҷ:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Агар ин интихоб шуда бошад, корвандони хизмат метавонанд файлҳоро дар "
+#~ "феҳристи хизмат, наофаранд ё тағир надиҳанд."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "&Меҳмонҳои иҷозатшуда"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Ин номи корванде, ки ҳангоми иҷозат гирифтани меҳмонон барои дастрасӣ ба "
+#~ "феҳрист, истифода бурда мешавад"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Ин идораҳо дар рӯйхати муштаракгардониҳои дастрас, намуди шабака ва "
+#~ "рӯйхати баррасиҳо намудоранд."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Қуттии қайдкунӣ ба шумо имконияти \\\"хомӯш кардани\\\" хизматро медиҳад. "
+#~ "Агар қайд нашуда бошад, онгоҳ кӯшишҳои пайвастшавии ALL ба хизмат бо "
+#~ "нокомӣ анҷом меёбанд. Чунин нокомиҳо номнависӣ шудаанд."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Бештар &Хосиятҳо"
+
+#~ msgid "KB"
+#~ msgstr "Кб"
+
+#~ msgid "Users of the '%1' Group"
+#~ msgstr "Корвандони Гурӯҳи '%1'"
+
+#~ msgid "Umtp"
+#~ msgstr "Umtp"
+
+#~ msgid "&Unix group"
+#~ msgstr "&Гурӯҳи Unix"

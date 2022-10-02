@@ -1,0 +1,2894 @@
+# Copyright (C) 2006, 2007 Free Software Foundation, Inc.
+# translation of kfileshare.po to Macedonian
+# Zoran Dimovski <decata@mt.net.mk>, 2004.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2004-10-17 21:51+0200\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Дозволи"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Само &читање"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Дозволи"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Запишливо"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Скрипти за бришење"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Дозволи"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Дозволи"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Сопственик"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Сопственик"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Група"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Дозволи"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Патека"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Дозволи"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Дозволи"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "&Никаков пристап"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Дозволи"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "&Дели ја папкава во локалната мрежа"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Име:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allo&w guest logins"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Дозволи &гостински најави"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Само за читање"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "&Никаков пристап"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Лозинка"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Лозинка"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Без лозинка"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Лозинка"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Дозволи"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Н&апредно"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Само локални папки може да се делат."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Корисници во Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Делењето на датотеки е оневозможено."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Папката не постои."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Ова е името на деленото"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Делено"
+
+#, fuzzy
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Множ. на знаци"
+
+#, fuzzy
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Множ. на знаци"
+
+#~ msgid "&Share"
+#~ msgstr "&Делено"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>There is already a share with the name <strong>%1</strong>.<br> "
+#~| "Please choose another name.</qt>"
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Веќе постои делено со име <strong>%1</strong>.<br> Изберете друго име."
+#~ "</qt>"
+
+#, fuzzy
+#~| msgid "No Samba server installed on this system"
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Нема инсталиран Samba-сервер на системов"
+
+#, fuzzy
+#~| msgid "Share with S&amba (Microsoft(R) Windows(R))"
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Дели со S&amba (Microsoft(R) Windows(R))"
+
+#~ msgid "Select Users"
+#~ msgstr "Изберете корисници"
+
+#~ msgid "Select &Users"
+#~ msgstr "Избери &корисници"
+
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Прис&тап"
+
+#~ msgid "&Default"
+#~ msgstr "&Стандардно"
+
+#~ msgid "&Read access"
+#~ msgstr "Пристап за &читање"
+
+#~ msgid "&Write access"
+#~ msgstr "Пристап за &запишување"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Админ. пристап"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Потврди:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Лозинка:"
+
+#~ msgid "&Username:"
+#~ msgstr "Корисничко &име:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Ко&нтролер на домен:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Домен:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Изберете групи"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Избери &групи"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "&Тип на група"
+
+#, fuzzy
+#~ msgid "&UNIX group"
+#~ msgstr "NI&S-група"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S-група"
+
+#, fuzzy
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "Unix и NIS гр&упа"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Тука може да ги уредувате корисниците на Samba, ставени во датотеката "
+#~ "smbpasswd.\n"
+#~ "<p>\n"
+#~ "Секој корисник во Samba мора да има соодветен корисник во Unix.\n"
+#~ "На десната страна ги гледате сите корисници во Unix, ставени во "
+#~ "датотеката passwd, кои не се конфигурирани како корисници во Samba.\n"
+#~ "Корисниците на Samba може да ги видите на левата страна.\n"
+#~ "<p>\n"
+#~ "За да додадете нови корисници во Samba притиснете го копчето <em>&lt; "
+#~ "додај</em>.\n"
+#~ "Тогаш избраните корисници во Unix ќе станат и корисници во Samba и ќе "
+#~ "бидат\n"
+#~ "отстранети од листата на корисници во Unix (но тие ќе останат корисници "
+#~ "во Unix).\n"
+#~ "<p>\n"
+#~ "За да отстраните корисник во Samba притиснете на копчето<em>&gt;отстрани</"
+#~ "em>.\n"
+#~ "Избраните корисници во Samba ќе бидат отстранети од датотеката "
+#~ "smbpasswd,\n"
+#~ "и ќе се појават на десната страна, како корисници во Unix кои не се "
+#~ "корисници во Samba.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Основни поставувања"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Датотека за конфиг. на Samba:"
+
+#~ msgid "&Load"
+#~ msgstr "&Вчитај"
+
+#~ msgid "Server Identification"
+#~ msgstr "Идентификација на сервер "
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "&Работна група:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Внесете го тука името на вашата работна група/домен."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "&Низа за сервер:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-име:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Ниво на &безбедност"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Корисник"
+
+#~ msgid "Server"
+#~ msgstr "Сервер"
+
+#~ msgid "Domai&n"
+#~ msgstr "Доме&н"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>делено</i> ако имате домашна мрежа "
+#~ "или мала мрежа на работа.<br> Ова им дозволува на сите да ги гледаат сите "
+#~ "имиња на делените пред да се побара најава."
+
+#~ msgid "Further Options"
+#~ msgstr "Понатамошни опции"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Адреса/име на сервер за лозинки:"
+
+#~ msgid "Real&m:"
+#~ msgstr "&Подрачје:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Г&остинска сметка:"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "За детална помош за сите опции погледнете на:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Делени"
+
+#~ msgid "Comment"
+#~ msgstr "Коментар"
+
+#, fuzzy
+#~ msgid "Properties"
+#~ msgstr "Својства на компјутерот"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Уреди &стандардни..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Додај &нова заедничка..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Уреди заедничка..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Отстрани заедничка"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Печа&тачи"
+
+#, fuzzy
+#~ msgid "Printer"
+#~ msgstr "Печатач"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Уреди &стандардни"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Додај но&в печатач"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Уреди &печатач"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&Отстрани печатач"
+
+#~ msgid "&Users"
+#~ msgstr "К&орисници"
+
+#~ msgid "Disabled"
+#~ msgstr "Оневозможено"
+
+#, fuzzy
+#~ msgid "Add"
+#~ msgstr "Д&одај..."
+
+#~ msgid "Rem&ove"
+#~ msgstr "Отстр&ани"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Корисници во UNI&X"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Про&мени лозинка..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Приклучи се на домен"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Н&апредно"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Тука може да ги менувате непредните опции на SAMBA-серверот.\n"
+#~ "Правете промени само ако знаете што правите."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Напредно исфрлање"
+
+#~ msgid "Security"
+#~ msgstr "Безбедност"
+
+#~ msgid "&General"
+#~ msgstr "&Општо"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Покори се на рестрикциите на PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "Промена на лозинката на PAM"
+
+#, fuzzy
+#~ msgid "Other Switches"
+#~ msgstr "Други можности"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Дозво&ли доверливи домени"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Параноична безбедност на сервер"
+
+#~ msgid "General"
+#~ msgstr "Општо"
+
+#, fuzzy
+#~ msgid "Auth methods:"
+#~ msgstr "Методи на проверка:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Коренов &именик:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "И&нтерфејси:"
+
+#, fuzzy
+#~ msgid "Never"
+#~ msgstr "Никогаш"
+
+#~ msgid "Bad User"
+#~ msgstr "Лош корисник"
+
+#~ msgid "Bad Password"
+#~ msgstr "Лоша лозинка"
+
+#~ msgid "Private dir:"
+#~ msgstr "Приватен именик:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Ло&зинка"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Лозинки на Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "&Криптирај лозинки"
+
+#, fuzzy
+#~ msgid "Smb passwd file:"
+#~ msgstr "Датотека Smb passwd:"
+
+#, fuzzy
+#~| msgid "Special"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Специјално"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Празни &лозинки"
+
+#~ msgid "Password level:"
+#~ msgstr "Ниво на лозинка:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Мин. долж. на лозинка:"
+
+#~ msgid "Migration"
+#~ msgstr "Миграција"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "Лозинки од UNIX"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Програма за passwd:"
+
+#~ msgid "Userna&me"
+#~ msgstr "Корисничко и&ме"
+
+#~ msgid "Username &level:"
+#~ msgstr "&Ниво на корисничко име:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Скриј локални корисници"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Користи rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Пров. на автентичн&ост"
+
+#~ msgid "Client"
+#~ msgstr "Клиент"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "Потпишување на к&лиент:"
+
+#, fuzzy
+#~ msgid "Auto"
+#~ msgstr "Автоматски"
+
+#~ msgid "Mandatory"
+#~ msgstr "Задолжително"
+
+#, fuzzy
+#~ msgid "Client channel:"
+#~ msgstr "Кодна страница на клиентот:"
+
+#~ msgid "Server signing:"
+#~ msgstr "Потпишување на сервер:"
+
+#, fuzzy
+#~ msgid "Server channel:"
+#~ msgstr "Потпишување на сервер:"
+
+#~ msgid "Logging"
+#~ msgstr "Евидентирање"
+
+#~ msgid "L&og file:"
+#~ msgstr "&Дневник:"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Макс. големина на дневник:"
+
+#, fuzzy
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Ниво на евид.:"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&Само Syslog"
+
+#~ msgid "Status"
+#~ msgstr "Статус"
+
+#~ msgid "microseconds"
+#~ msgstr "микросекунди"
+
+#, fuzzy
+#~ msgid "Modules"
+#~ msgstr "Модули"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Пред&вчитај модули:"
+
+#, fuzzy
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Мин"
+
+#~ msgid "Sizes"
+#~ msgstr "Големини"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Макс. големина на диск:"
+
+#, fuzzy
+#~| msgid "MB"
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Големина на читање:"
+
+#~ msgid "Numbers"
+#~ msgstr "Броеви"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Макс. smbd-процеси:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Макс, отворени датотеки:"
+
+#, fuzzy
+#~ msgid "Printing"
+#~ msgstr "Печатење"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Вкупно &задачи за печатење:"
+
+#~ msgid "Drivers"
+#~ msgstr "Управувачи"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "И&ме на Printcap:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Датотека со управувач за пе&чатач:"
+
+#, fuzzy
+#~ msgid "Commands"
+#~ msgstr "Команди"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Вч&итај печатачи"
+
+#, fuzzy
+#~ msgid "Disab&le spools"
+#~ msgstr "Оневозможено"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Покажи &волшебник за додавање на печатачи"
+
+#~ msgid "Domain"
+#~ msgstr "Домен"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Деактивирај &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Од&несувај се како WINS-сервер"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "К&ористи друг WINS-сервер"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "По&ставувања за WINS-сервер"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "IP-адреса на WINS-сервер или DNS-име"
+
+#~ msgid "General Options"
+#~ msgstr "Општи опции"
+
+#~ msgid "WINS partners:"
+#~ msgstr "Партнери на WINS:"
+
+#~ msgid "Filenames"
+#~ msgstr "Имиња на датотеки"
+
+#~ msgid "Ge&neral"
+#~ msgstr "О&пшто"
+
+#~ msgid "Specia&l"
+#~ msgstr "Специја&лно"
+
+#~ msgid "Locking"
+#~ msgstr "Заклучување"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Им&еници"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "За&клучи именик:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Многу напредно"
+
+#~ msgid "milliseconds"
+#~ msgstr "милисекунди"
+
+#~ msgid "Charset"
+#~ msgstr "Множ. на знаци"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "мн&ож. на знаци DOS:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "м&нож. на знаци:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "Прикажи множ. на знаци:"
+
+#, fuzzy
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "&Множ. на знаци:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Ва&лидни знаци:"
+
+#, fuzzy
+#~ msgid "Code page directory:"
+#~ msgstr "Именик за кодни страници:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Систем за &кодирање:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Кодна страница на клиентот:"
+
+#~ msgid "Logon"
+#~ msgstr "Најава"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Скрипти за додавање"
+
+#~ msgid "Add user script:"
+#~ msgstr "Скрипта за додавање корисник:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Скрипта за додавање корисник на група:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Скрипта за д&одавање група:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Скрипта за додавање машина:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Скрипта за бришење група:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Скрипта за бришење корисник:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Скрипта за бришење корисник од група:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Скрипта за примарна група"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Постави скрипта за примарна група:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Спуштање"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Скрипта за спуштање:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Скрипта за прекин на спуштањето:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Патека за &најава:"
+
+#, fuzzy
+#~ msgid "Socket"
+#~ msgstr "Socket"
+
+#, fuzzy
+#~ msgid "Socket address:"
+#~ msgstr "Адреса на Socket:"
+
+#, fuzzy
+#~ msgid "Socket Options"
+#~ msgstr "Опции за Socket "
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Го овозможува или оневозможува целосниот режим SSL"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "Овоз&можи SSL"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "Бајти за ентроп&ија на SSL:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "Шифри за SSL:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "Ко&мпатибилност на SSL"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "Датотека за ентропија на SSL:"
+
+#~ msgid "SSL version:"
+#~ msgstr "Верзија на SSL:"
+
+#~ msgid "SSL client key:"
+#~ msgstr "Клуч на SSL-клиентот:"
+
+#, fuzzy
+#~ msgid "Protocol"
+#~ msgstr "Протокол"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Верзии на протокол"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "&Објави како:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT Workstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Верзија за објавување:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Пр&отокол:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Макс. протокол:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Мин. протокол:"
+
+#~ msgid "Limits"
+#~ msgstr "Граници"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB-порти:"
+
+#~ msgid "Browsing"
+#~ msgstr "Разгледување"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Листа за &разгледување"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Унапредено разгле&дување"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Пред&вчитај:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Редослед на разреш. на и&ме:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#, fuzzy
+#~ msgid "On"
+#~ msgstr "Само"
+
+#~ msgid "Only"
+#~ msgstr "Само"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "К&оманда за додавање на делено:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Команда за менување на делено:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Команда за бриш&ење на делено:"
+
+#, fuzzy
+#~ msgid "Messa&ge command:"
+#~ msgstr "Команда за &порака:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Команда за поставување на &квота:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Команда за земање на квота:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Дејство при па&ника:"
+
+#~ msgid "Misc"
+#~ msgstr "Разно"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Скриј &локални корисници"
+
+#~ msgid "Default service:"
+#~ msgstr "Почетен сервис:"
+
+#, fuzzy
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Мин"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "Debug"
+#~ msgstr "Чистење од бубачки"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Додај/уреди делена"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Именик"
+
+#~ msgid "&Path:"
+#~ msgstr "&Патека:"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Иден&тификатор"
+
+#~ msgid "Na&me:"
+#~ msgstr "И&ме:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Коме&нтар:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Главни &својства"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Само за &читање"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Јавно"
+
+#, fuzzy
+#~ msgid "Bro&wseable"
+#~ msgstr "За &разгледување"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Достапно"
+
+#~ msgid "&Security"
+#~ msgstr "&Безбедност"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Гост&и"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Ова е корисничкото име кое ќе се користи за пристап кон сервиси за кои "
+#~ "гостинскиот пристап е во ред. Привилегиите што ги има овој корисник ќе "
+#~ "бидат достапни за било кој клиент кој ќе се поврзува на сервисот за "
+#~ "гости. Типично, овој корисник постои во датотеката со лозинки но нема "
+#~ "валидна најава. Корисничката сметка \\\"ftp\\\" е обично добар избор за "
+#~ "овој параметар. Ако е наведено корисничко име во даден сервис, ќе биде "
+#~ "прескокнато ова корисничко име."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Гостинска сметка:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Ако е ова обележано, тогаш не е потребна лозинка за поврзување на овој "
+#~ "сервис. Привилегиите ќе бидат тие на гостинската сметка."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Дозволи само гост&ински поврзувања"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Спротивното од дозволени компјутери - на компјутерите кои се прикажани "
+#~ "тука НЕ им е дозволен пристап до сервисите освен ако специфичните сервиси "
+#~ "имаат сопствени листи кои го прескокнуваат ова. Кога листите се во "
+#~ "конфликт, предност има листата за дозволени."
+
+#, fuzzy
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Овој параметар е множ. на компјутери, одделени со запирка, празно место, "
+#~ "или табулатор, кои имаат дозвола за пристап кон даден сервис."
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Си&мболички врски"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Дозволи следење на симболички врски"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Дозволи следење на симболички врски кои покажуваат на места надвор од "
+#~ "стеблото на именикот"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Валидирај лозинка спроти следните кориснички имиња ако клиентот не "
+#~ "може да достави корисничко име:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Дозволи поврзувања само со ко&риснички имиња наведени во листата со "
+#~ "кориснички имиња"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Скриени &датотеки"
+
+#~ msgid "Hidden"
+#~ msgstr "Скриени"
+
+#~ msgid "Size"
+#~ msgstr "Големина"
+
+#~ msgid "Date"
+#~ msgstr "Датум"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Из&брани датотеки"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Скриј"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Рачна &конфигурација"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Скрие&ни датотеки:"
+
+#, fuzzy
+#~ msgid "Hide un&writable files"
+#~ msgstr "Скриј не&запишливи датотеки"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Скриј с&пецијални датотеки"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Скриј ги датотеките кои &почнуваат со точка "
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Скриј нечитливи датотеки"
+
+#~ msgid "&Advanced"
+#~ msgstr "Н&апредно"
+
+#, fuzzy
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Маски"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Наследи дозволи од родителскиот именик"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Макс. број на истовремени поврзувања:"
+
+#~ msgid "bytes"
+#~ msgstr "бајти"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Големина на бло&к:"
+
+#~ msgid "manual"
+#~ msgstr "рачно"
+
+#~ msgid "documents"
+#~ msgstr "документи"
+
+#~ msgid "programs"
+#~ msgstr "програми"
+
+#~ msgid "disable"
+#~ msgstr "оневозможено"
+
+#~ msgid "Other Options"
+#~ msgstr "Други опции"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "Exec"
+#~ msgstr "Извршување"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "&Скриј"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Корисници"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Сите не&наведени корисници"
+
+#~ msgid "Reject"
+#~ msgstr "Одбиј"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Наведени кор&исници"
+
+#~ msgid "Access Rights"
+#~ msgstr "Права за пристап"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Додај корисник..."
+
+#~ msgid "E&xpert"
+#~ msgstr "Ек&сперт"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Додај &група..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&Отстрани ги избраните"
+
+#, fuzzy
+#~ msgid "Access Modifiers"
+#~ msgstr "Изменувачи на пристапот"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Дозволи за пристап"
+
+#~ msgid "Others"
+#~ msgstr "Други"
+
+#~ msgid "Read"
+#~ msgstr "Читање"
+
+#~ msgid "Write"
+#~ msgstr "Запишување"
+
+#~ msgid "Sticky"
+#~ msgstr "Лепливо"
+
+#~ msgid "Set GID"
+#~ msgstr "Постави GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Постави UID"
+
+#~ msgid "Special"
+#~ msgstr "Специјално"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Кориснички поставувања"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Валидни корисници:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Админ. корисници:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&Невалидни корисници:"
+
+#~ msgid "&Write list:"
+#~ msgstr "Листа за &запишување:"
+
+#~ msgid "&Read list:"
+#~ msgstr "Листа за &читање:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Дозволени &компјутери"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Листа на дозволените компјутери"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Тука може да видете листа на компјутери на кои им е дозволен пристап "
+#~ "преку NFS до овој именик.\n"
+#~ "Првата колона го покажува името или адресата на компјутерот, втората "
+#~ "колона ги покажува параметрите за пристап. Името „*“ дава јавен пристап."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Додај компјутер..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Из&мени компјутер..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Отстрани компјутер"
+
+#~ msgid "Name/Address"
+#~ msgstr "Име/Адреса"
+
+#~ msgid "Parameters"
+#~ msgstr "Параметри"
+
+#~ msgid "Host Properties"
+#~ msgstr "Својства на компјутерот"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Име/адреса:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Поле за име/адреса</b>\n"
+#~ "<p>\n"
+#~ "Тука може да го внесете името или адресата на компјутерот.<br>\n"
+#~ "Компјутерот може да биде зададен на различни начини:\n"
+#~ "<p>\n"
+#~ "<i>единечен компјутер</i>\n"
+#~ "<p>\n"
+#~ " Ова е најчестиот формат. Може да зададете компјутер со скратеното име "
+#~ "кое се препознава од разрешувачот, целосно квалификуваното име на домен, "
+#~ "или IP-адресата.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>мрежни групи</i>\n"
+#~ "<p>\n"
+#~ " Мрежните групи NIS може да се зададат како @group. За проверка на "
+#~ "членство се зема само делот со компјутерот од секоја мрежна група. "
+#~ "Деловите со празни имиња на компјутери или оние кои содржат цртичка (-) "
+#~ "се игнорираат.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>џокер-знаци</i>\n"
+#~ "<p>\n"
+#~ " Имињата на машините може да ги содржат џокер-знаците * и ?. Ова може да "
+#~ "се користи за да се направи покомпактна датотеката exports. На пример, *."
+#~ "cs.foo.edu одговара на сите компјутери во доменот cs.foo.edu. Сепак, овие "
+#~ "џокер-знаци не се совпаѓаат со точки во името на домен, па така горниот "
+#~ "шаблон не вклучува компјутери како a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-мрежи</i>\n"
+#~ "<p>\n"
+#~ " Исто така може симултано да експортирате именици на сите компјутери на "
+#~ "IP (под-) мрежа. Ова се прави со задавање на пар од IP-адреса и мрежна "
+#~ "маска како адреса/маска каде што мрежната маска може да биде наведена во "
+#~ "децимален формат со точки, или како маска со должина (на пример, или "
+#~ "„/255.255.252.0“ или „/22“, додадено на основата на мрежната адреса, ќе "
+#~ "даде идентични подмрежи со десет бита за компјутерот).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Јавен пристап"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Јавен пристап</b>\n"
+#~ "<p>\n"
+#~ "Доколку го изберете ова, адресата на компјутерот ќе биде џокер-знак, што "
+#~ "значи јавен пристап.\n"
+#~ "Ова е исто како да сте внеле џокер-знак во полето за адреса.\n"
+#~ "</p>"
+
+#, fuzzy
+#~ msgid "Options"
+#~ msgstr "Опции за NFS"
+
+#, fuzzy
+#~ msgid "&Writable"
+#~ msgstr "&Запишување"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Запишување</b>\n"
+#~ "<p>\n"
+#~ "Дозволува барања и за читање и за запишување на овој NFS-волумен.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Стандардно не се дозволени никави барања кои го менуваат датотечниот "
+#~ "систем\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Небезбедно"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Небезбедно</b>\n"
+#~ "<p>\n"
+#~ "Ако е избрана оваа опција, не е потребно барањата да потекнуваат од "
+#~ "интернет-порта помала од IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ако не сте сигурни оставете го ова одизбрано.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Синхронизација"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Синхронизација</b>\n"
+#~ "<p> Оваа опција бара сите запишувања на датотеки да се предадат на дискот "
+#~ "пред да заврши барањето за запишување. Ова се бара за комплетна сигурност "
+#~ "на податоците во случај на пад на серверот, но предизвикува намалување на "
+#~ "перформансите.\n"
+#~ "</p>\n"
+#~ "<p> Стандардно е да му се дозволи на серверот да ги запишува податоците "
+#~ "тогаш кога е подготвен.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Без w&delay"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Без wdelay</b>\n"
+#~ "<p>\n"
+#~ "Оваа опција има ефект само ако е поставена и опцијата за синхронизирање. "
+#~ "Нормално NFS-серверот ќе го одложи за кратко предавањето на барање за "
+#~ "запишување на диск ако се сомнева дека е во тек некое друго поврзано "
+#~ "барање за запишување или такво ќе пристигне наскоро. Ова дозволува на "
+#~ "дискот да бидат предадени повеќе барања за запишување со една операција "
+#~ "што ги подобрува перформансите. Ако NFS-серверот воглавно добива мали "
+#~ "неповрзани барања, ова однесување може и да ги намали перформансите. "
+#~ "Поради тоа е можно да се исклучи оваа опција. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Без &криење"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Без криење</b>\n"
+#~ "<p>\n"
+#~ "Оваа опција се базира на истоимената опција дадена во IRIX NFS. Нормално, "
+#~ "ако серверот експортира два датотечни системи од кои едниот е монтиран на "
+#~ "другиот, тогаш клиентот ќе мора експлицитно да ги монтира и двата за да "
+#~ "има достап до нив. Ако го монтира само родителот, ќе види празен именик "
+#~ "таму каде што е монтиран другиот датотечен систем. Тотј датотечен систем "
+#~ "е „скриен“.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Поставувањето на опцијата nohide на датотечен систем прави истиот да не "
+#~ "биде скриен, и соодветно авторизиран клиент ќе може да помине од "
+#~ "родителот на тој датотечен систем без да ја забележи смената.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Сепак, некои NFS-клиенти не се снаоѓаат со ваквите ситуации, затоа што "
+#~ "тогаш е возможно, на пример, две датотеки на едниот привиден датотечен "
+#~ "систем да го имаат истиот inode-број.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Опцијата nohide моментално е ефективна само на експорти на единечен "
+#~ "компјутер. Таа не работи доверливо со експорти на мрежни групи, подмрежи "
+#~ "или џокер-знаци.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Оваа опција може да биде доста корисна во некои ситуации, но треба да се "
+#~ "користи внимателно, и откако ќе се установи дека клиентот може ефективно "
+#~ "да се снајде со ситуацијата.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Без проверка на подсте&бло"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Без проверка на потстебло</b>\n"
+#~ "<p>\n"
+#~ "Оваа опција ја оневозможува проверката за потстебло, што има лесни "
+#~ "импликации за безбедноста, но може да ја подобри доверливоста во некои "
+#~ "околности.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Ако е експортиран подименик на датотечен систем, но не и целиот систем, "
+#~ "тогаш секогаш кога ќе пристигне NFS-барање, серверот мора да провери не "
+#~ "само дали е датотеката на која се пристапува во соодветниот датотечен "
+#~ "систем (што е лесно) туку и дали е таа во експортираното стебло (што е "
+#~ "потешко). Оваа проверка се вика проверка за потстебло.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "За да ја направи иваа проверка, серверот мора да вклучи информација за "
+#~ "локацијата на датотеката во „рачката за датотеката“ која му се дава на "
+#~ "клиентот. Ова може да предизвика проблемиthat is given to the client. "
+#~ "This can cause problems with accessing files that are renamed while a "
+#~ "client has them open (though in many simple cases it will still work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Небезбедни &заклучувања"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Небезбедни заклучувања</b>\n"
+#~ "<p>\n"
+#~ "Оваа опција му кажува на NFS-серверот да не бара проверка на автентичност "
+#~ "за барањата за заклучување. (т.е. барањата кои го користат протоколот "
+#~ "NLM). Нормално NFS-серверот ќе побарува барањето за заклучување да има "
+#~ "акредитиви за корисник кој има пристап за читање за датотеката. Со ова "
+#~ "знаменце нема да бидат направени проверки за пристап.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Првите имплементации на NFS-клиентите не испраќале акредитиви со барања "
+#~ "за заклучување, и многу од моменталните NFS-киенти се базирани на старите "
+#~ "имплементации. Користете го ова ако увидите дека може да заклучувате само "
+#~ "датотеки кои се читливи за сите.\n"
+#~ "</p>"
+
+#~ msgid "Folder:"
+#~ msgstr "Папка:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Дели со &NFS (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "Опции за NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Ј&авно"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Повеќе о&пции за NFS"
+
+#~ msgid "Samba Options"
+#~ msgstr "Опции за Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "Ја&вно"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Пов&еќе опции за Samba"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Дозволи на сите корисници да делат папки"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Само на корисниците од групата „%1“ им е дозволено да делат папки"
+
+#, fuzzy
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Корисници од групата „%1“"
+
+#~ msgid "Remove User"
+#~ msgstr "Отстрани корисник"
+
+#~ msgid "Add User"
+#~ msgstr "Додај корисник"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Членовите на групата можат да делат папки без лозинката на root "
+
+#~ msgid "Change Group..."
+#~ msgstr "Промени група..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "На оваа машина не се инсталирани сервери од тип SMB и NFS. За да се "
+#~ "активира овој модул мора да бидат инсталирани серверите."
+
+#, fuzzy
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Овозможи делење на датотеките на локалната &мрежа"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Ед&ноставно делење"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Овозможете едноставно делење за да им дозволите на корисниците да делат "
+#~ "папки од нивните сопствени Домашни папки, без да ја знаат лозинката на "
+#~ "root."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Напредно делењ&е"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Овозможете напредно делење за да им дозволите на корисниците да делат "
+#~ "било кои папки, се додека имаат дозвола да запишуваат во потребните "
+#~ "конфигурациски датотеки, или ја знаат лозинката на root."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Користи &NFS (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Користи Sam&ba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Дозво&лени корисници"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Делени папки"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Д&одај..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Измен&и..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Конфигурациската датотека на SAMBA <strong>'smb.conf'</strong> не беше "
+#~ "пронајдена.</p>Осигурете се дека имате инсталирано SAMBA.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Наведи локација"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Земи ја локацијата на smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Датотеката <i>%1</i> не можеше да се прочита.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Не може да се прочита датотеката"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Грешка при отворање на датотека"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Приклучувањето на доменот %1 не успеа."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Внесете лозинка за корисникот <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Додавањето на корисникот <b>%1</b> на базата на корисници на Samba не "
+#~ "успеа.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr ""
+#~ "Отстранувањето на корисникот %1 од базата на корисници на Samba не успеа."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Внесете лозинка за корисникот %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Менувањето на лозинката на корисникот %1 не успеа."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>Конфигурација на Samba</h1> Тука може да го конфигурирате вашиот "
+#~ "SAMBA-сервер."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the <i>share</i> security level if you have a home network or a "
+#~| "small office network.<br> It allows everyone to read the list of all "
+#~| "your shared directories and printers before a login is required."
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>делено</i> ако имате домашна мрежа "
+#~ "или мала мрежа на работа.<br> Ова им дозволува на сите да ја читаат "
+#~ "листата на сите ваши делени именици и печатачи пред да се побара најава."
+
+#, fuzzy
+#~| msgid ""
+#~| "Use the <i>user</i> security level if you have a bigger network and you "
+#~| "do not want to allow everyone to read your list of shared directories "
+#~| "and printers without a login.<p>If you want to run your Samba server as "
+#~| "a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~| "option."
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>корисник</i> ако имате поголема "
+#~ "мрежа и не сакате да дозволите секој да ја чита листата на вашите делени "
+#~ "именици и печатачи без најава.<p>Ако сакате вашиот Samba-сервер да работи "
+#~ "како <b>Контролер на примарен домен</b> (PDC) мора да ја поставите и оваа "
+#~ "опција."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>сервер</i> ако имате голема мрежа и "
+#~ "samba-серверот треба да ги валидира корисничките имиња и лозинките така "
+#~ "што ќе ги предаде на друг SMB-сервер, како што е компјутер со NT."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>домен</i> ако имате голема мрежа и "
+#~ "samba-серверот треба да ги валидира корисничките имиња и лозинките така "
+#~ "што ќе ги предаде на Windows NT Primary или Backup Domain Controller."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Користете го нивото на безбедност <i>ADS</i> ако имате голема мрежа и "
+#~ "samba-серверот треба да се однесува како член на домен во подрачје ADS."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Опцијата <em>%1</em> не е поддржана од вашата верзија на Samba"
+
+#~ msgid "Unnamed"
+#~ msgstr "Неименувано"
+
+#~ msgid "&Hide"
+#~ msgstr "&Скриј"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Некои датотеки кои ги избравте се скриени затоа што започнуваат со "
+#~ "точка. Дали сакате да ги одизберете сите датотеки кои започнуваат со "
+#~ "точка?<br>(Ако кажете не, ниедна датотека нема да биде одизбрана.)</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Датотеки кои започнуваат со точка"
+
+#, fuzzy
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Скриени"
+
+#, fuzzy
+#~ msgid "Keep Hidden"
+#~ msgstr "Скриени"
+
+#, fuzzy
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Некои датотеки кои ги избравте се совпаѓаат со џокер-низата "
+#~ "<b>„%1“</b>. Дали сакате да ги одизберете сите датотеки кои се совпаѓаат "
+#~ "со <b>'%1'</b>? <br>(Ако кажете не, нема да биде одизбрана ниедна "
+#~ "датотека која се совпаѓа со „%1“.)"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Џокер-низа"
+
+#, fuzzy
+#~ msgid "Keep Selected"
+#~ msgstr "&Отстрани ги избраните"
+
+#, fuzzy
+#~ msgid "Default"
+#~ msgstr "&Стандардно"
+
+#~ msgid "Admin"
+#~ msgstr "Администратор"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>public read access</b> for this directory, but "
+#~| "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~| "<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Зададовте <b>јавен пристап за читање</b> за овој именик, но "
+#~ "гостинската сметка <b>%1</b> ги нема потребните дозволи за читање."
+#~ "<br>Дали сакате сепак да продолжите?</qt>"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "Печатење"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>public write access</b> for this directory, "
+#~| "but the guest account <b>%1</b> does not have the necessary write "
+#~| "permissions;<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Зададовте <b>јавен пристап за запишување</b> за овој именик, но "
+#~ "гостинската сметка <b>%1</b> ги нема потребните дозволи за запишување."
+#~ "<br>Дали сакате сепак да продолжите?</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>write access</b> to the user <b>%1</b> for "
+#~| "this directory, but the user does not have the necessary write "
+#~| "permissions;<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Зададовте <b>пристап за запишување</b> за овој именик на корисникот "
+#~ "<b>%1</b>, но корисникот ги нема потребните дозволи за запишување."
+#~ "<br>Дали сакате сепак да продолжите?</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~| "directory, but the user does not have the necessary read permissions;"
+#~| "<br>do you want to continue anyway?</qt>"
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Зададовте <b>пристап за читање</b> за овој именик на корисникот <b>"
+#~ "%1</b>, но корисникот ги нема потребните дозволи за читање.<br>Дали "
+#~ "сакате сепак да продолжите?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Веќе постои јавен внес."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Компјутерот веќе постои"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Внесете име на компјутер или IP-адреса."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Нема име на компјутер/IP-адреса"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Компјутерот „%1“ веќе постои."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Ја читам конфигурациската датотека на Samba ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Ја читам конфигурациската датотека на NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Внесете валидна патека."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Само папки може да се делат."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Папката е веќе делена."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Администраторот не дозволува делење со NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Грешка: не може да се прочита конфигурациската датотека на NFS."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Администраторот не дозволува делење со Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Грешка: не може да се прочита конфигурациската датотека на Samba."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Мора да внесете име за деленото со Samba."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Треба да се авторизиран за да делите именици."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Конфигурирај делење на датотеки..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Нема инсталиран NFS-сервер на системов"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Не може да се снимат поставувањата."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Не може да се отвори датотеката „%1“ за запишување: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Зачувувањето не успеа"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Делење на датотеки</h1><p>Овој модул може да се користи за да "
+#~ "овозможи делење на датотеки преку мрежа со употреба на „Мрежниот "
+#~ "датотечен систем“ (NFS) или SMB во Konqueror. Последото ви овозможува да "
+#~ "ги делите вашите датотеки со компјутери во вашата мрежа со Windows(R).</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Дели именик"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Дозволени корисници"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Сите корисници се веќе во групата %1."
+
+#~ msgid "Select User"
+#~ msgstr "Избери корисник"
+
+#~ msgid "Select a user:"
+#~ msgstr "Избор на корисник:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Корисникот „%1“ не може да се додаде на групата „%2“"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Корисникот „%1“ не може да се отстрани од групата „%2“"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Мора да изберете валидна група."
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Само на корисниците од одредена група им е дозволено да делат папки"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Изберете група..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr ""
+#~ "Дали навистина сакате да ги избришете сите корисници од групата „%1“?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Дали навистина сакате да ја избришете групата „%1“?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Бришењето на групата „%1“ не успеа."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Изберете валидна група."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Групата „%1“ не постои. Треба ли да се создаде?"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Создавањето на групата „%1“ не успеа."
+
+#, fuzzy
+#~ msgid "Printer Settings"
+#~ msgstr "Кориснички поставувања"
+
+#, fuzzy
+#~ msgid "Pr&inter"
+#~ msgstr "Печатач"
+
+#, fuzzy
+#~ msgid "Pa&th:"
+#~ msgstr "&Патека:"
+
+#, fuzzy
+#~ msgid "Sha&re all printers"
+#~ msgstr "Вч&итај печатачи"
+
+#, fuzzy
+#~ msgid "I&dentifier"
+#~ msgstr "Иден&тификатор"
+
+#~ msgid "&Name:"
+#~ msgstr "&Име:"
+
+#, fuzzy
+#~ msgid "Comm&ent:"
+#~ msgstr "Коме&нтар:"
+
+#, fuzzy
+#~ msgid "Main Properties"
+#~ msgstr "Главни &својства"
+
+#, fuzzy
+#~ msgid "&Printing"
+#~ msgstr "Печатење"
+
+#, fuzzy
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Датотека со управувач за пе&чатач:"
+
+#, fuzzy
+#~ msgid "Print&er driver location:"
+#~ msgstr "Датотека со управувач за пе&чатач:"
+
+#, fuzzy
+#~ msgid "Printin&g:"
+#~ msgstr "Печатење"
+
+#, fuzzy
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Вкупно &задачи за печатење:"
+
+#, fuzzy
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Вкупно &задачи за печатење:"
+
+#, fuzzy
+#~ msgid "De&fault devmode"
+#~ msgstr "Почетен сервис:"
+
+#, fuzzy
+#~ msgid "Hosts a&llow:"
+#~ msgstr "Дозволени &компјутери:"
+
+#, fuzzy
+#~ msgid "P&rinter admin:"
+#~ msgstr "Приватен именик:"
+
+#, fuzzy
+#~ msgid "Co&mmands"
+#~ msgstr "Команди"
+
+#, fuzzy
+#~ msgid "Pr&int command:"
+#~ msgstr "Команда за поставување на &квота:"
+
+#, fuzzy
+#~ msgid "lpq comma&nd:"
+#~ msgstr "Команда за земање на квота:"
+
+#, fuzzy
+#~ msgid "lprm comman&d:"
+#~ msgstr "Команда за бриш&ење на делено:"
+
+#, fuzzy
+#~ msgid "M&in print space:"
+#~ msgstr "Мин. протокол:"
+
+#, fuzzy
+#~ msgid "&Logging"
+#~ msgstr "Евидентирање"
+
+#, fuzzy
+#~ msgid "S&tatus"
+#~ msgstr "Статус"
+
+#~ msgid "Not share&d"
+#~ msgstr "Не е делен&о"
+
+#~ msgid "&Shared"
+#~ msgstr "&Делено"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Основн&и опции"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Ова е текстуално поле кое прикажува листа на делени ресурси, кога "
+#~ "клиентот го прашува серверот преку мрежното соседство или преку мрежен "
+#~ "преглед."
+
+#~ msgid "Name of the share"
+#~ msgstr "Име на деленото"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Комента&р:"
+
+#~ msgid "Security Options"
+#~ msgstr "Опции за безбедност"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "Одбие&ни компјутери:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "Дозволени &компјутери:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Гостинска &сметка:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Ако е ова обележано, корисниците на сервис не може да создаваат или да "
+#~ "менуваат датотеки во именикот на датотеката."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "Дозволено за г&ости"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Ова е корисничкото име кое ќе се користи за пристап на овој именик ако се "
+#~ "дозволени гости"
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Ова контролира дали ова делено се гледа во листата на достапни делени во "
+#~ "мрежниот преглед и во листата за разгледување."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Полето ви овозможува да \\\"исклучите\\\" сервис. Ако не е избрано, тогаш "
+#~ "СИТЕ обиди за поврзување на сервисот ќе бидат неуспешни. Таквите неуспеси "
+#~ "ќе се евидентираат."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "Повеќе опц&ии"
+
+#~ msgid "KB"
+#~ msgstr "KB"
+
+#~ msgid "Users of the '%1' Group"
+#~ msgstr "Корисници на групата „%1“"
+
+#~ msgid "&Unix group"
+#~ msgstr "&Unix-група"

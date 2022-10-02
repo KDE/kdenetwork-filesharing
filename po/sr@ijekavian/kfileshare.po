@@ -1,0 +1,116 @@
+# Translation of kfileshare.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2004, 2005, 2006, 2009, 2010, 2011, 2016.
+# Slobodan Simic <slsimic@gmail.com>, 2005, 2008, 2009.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-08 02:10+0200\n"
+"PO-Revision-Date: 2016-11-23 19:27+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >> @item:inlistbox
+#: samba/filepropertiesplugin/delegate.cpp:41
+#, kde-format
+msgid "---"
+msgstr "---"
+
+# >> @item:inlistbox
+#: samba/filepropertiesplugin/delegate.cpp:42
+#, kde-format
+msgid "Full Control"
+msgstr "пуна контрола"
+
+# >> @item:inlistbox
+#: samba/filepropertiesplugin/delegate.cpp:43
+#, kde-format
+msgid "Read Only"
+msgstr "само за читање"
+
+# >> @item:inlistbox
+#: samba/filepropertiesplugin/delegate.cpp:44
+#, kde-format
+msgid "Deny"
+msgstr "одбијено"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:71
+#, kde-format
+msgid "&Share"
+msgstr "&Дијели"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:80
+#, kde-format
+msgid "The Samba package failed to install."
+msgstr "Пакет Самбе не може да се инсталира."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:90
+#, kde-format
+msgid "Samba must be installed before folders can be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:99
+#, kde-format
+msgid "Restart the computer to complete the installation."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:100
+#, kde-format
+msgid "Restart"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:109
+#, fuzzy, kde-format
+#| msgid "Install Samba..."
+msgid "Install Samba"
+msgstr "Инсталирај Самбу..."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Install Samba..."
+msgid "Installing Samba..."
+msgstr "Инсталирај Самбу..."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:298
+#, kde-format
+msgid ""
+"<qt>There is already a share with the name <strong>%1</strong>.<br /> Please "
+"choose another name.</qt>"
+msgstr ""
+"<qt>Већ постоји дијељење по имену <strong>%1</strong>.<br/>Изаберите друго "
+"име.</qt>"
+
+#. i18n: ectx: property (text), widget (QCheckBox, sambaChk)
+#: samba/filepropertiesplugin/sambausershareplugin.ui:19
+#, kde-format
+msgid "Sh&are this folder with other computers on the local network"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, textLabel1)
+#: samba/filepropertiesplugin/sambausershareplugin.ui:39
+#, kde-format
+msgid "Name:"
+msgstr "Име:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, sambaAllowGuestChk)
+#: samba/filepropertiesplugin/sambausershareplugin.ui:59
+#, kde-format
+msgid "Allow Guests"
+msgstr "Дозволи госте"
+
+#. i18n: ectx: property (text), widget (QPushButton, sambaStatusMonitorButton)
+#: samba/filepropertiesplugin/sambausershareplugin.ui:109
+#, kde-format
+msgid "Show Samba status &monitor"
+msgstr ""

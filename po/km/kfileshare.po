@@ -1,0 +1,3399 @@
+# translation of kfileshare.po to Khmer
+# Eng Vannak <evannak@khmeros.info>, 2006, 2007, 2008.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2008, 2009, 2010.
+# Auk Piseth <piseth_dv@khmeros.info>, 2008.
+# translation of kfileshare.po to
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2010-06-08 14:27+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-KH\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "បដិសេធ"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "អនុញ្ញាត"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "Read onl&y"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "បាន​តែ​អាន"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Fstype ៖"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "រចនាប័ទ្ម​ OS/2 បាន​បន្ថែម​ការ​គាំទ្រ​គុណ​លក្ខណៈ"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "អាច​សសេរ​បាន"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "រចនាប័ទ្ម​ OS/2 បាន​បន្ថែម​ការ​គាំទ្រ​គុណ​លក្ខណៈ"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "លុប​ស្គ្រីប"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "ម្ចាស់"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "ម្ចាស់"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "ក្រុម"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "សិទ្ធិ"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "ផ្លូវ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "គ្មាន​សិទ្ធិ​ទាំងអស់"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "S&hare this folder in the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "ចែក​រំលែក​ថត​នេះ​ក្នុង​បណ្ដាញ​មូលដ្ឋាន"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "ឈ្មោះ ៖"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "អនុញ្ញាត​ភ្ញៀវ​ឲ្យ​ចូល"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "សិទ្ធិ​ពេញលេញ"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "បាន​តែ​អាន"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "គ្មាន​សិទ្ធិ​ទាំងអស់"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "ពាក្យ​សម្ងាត់"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "ពាក្យ​សម្ងាត់"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "គ្មាន​ពាក្យ​សម្ងាត់"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "ពាក្យ​សម្ងាត់"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "សិទ្ធិ"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "បោះបង់"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Only local folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "មាន​តែ​ថត​មូលដ្ឋាន​ទេ​ដែល​អាច​ត្រូវ​បាន​ចែក​រំលែក​បាន ។"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba..."
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "ដំឡើង Samba..."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr ""
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "អ្នក​ប្រើ Samba"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "បិទ​ការ​ចែក​រំលែក​ឯកសារ ។"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "មិន​មាន​ថត ។"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "ចែក​រំលែក"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "បង្កើត"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "បង្កើត"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "ចែក​រំលែក"
+
+#, fuzzy
+#~| msgid "Install Samba..."
+#~ msgid "Installing Samba..."
+#~ msgstr "ដំឡើង Samba..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>មាន​ការ​ចែក​រំលែក​ជាមួយ​ឈ្មោះ <strong>%1</strong> រួច​ហើយ ។<br /> សូម​ជ្រើសរើស​ឈ្មោះ​"
+#~ "ផ្សេង​ទៀត ។</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "មិន​បាន​ដំឡើង ​Samba នៅ​ក្នុង​ប្រព័ន្ធ​​របស់​អ្នក​ទេ ។"
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "ចែក​រំលែក​ជាមួយ Samba (Microsoft(R) Windows(R))"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>មិន​អាច​ដំឡើង Samba បាន​ទេ ។</strong><br />សូម​ពិនិត្យ​មើលថាតើ  "
+#~ "kpackagekit ត្រូវ​បាន​ដំឡើង​ត្រឹមត្រូវ​ដែរឬទេ</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "ជ្រើស​អ្នក​ប្រើ"
+
+#~ msgid "Select &Users"
+#~ msgstr "ជ្រើស​អ្នក​ប្រើ"
+
+#~ msgid "Name"
+#~ msgstr "ឈ្មោះ"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "ចូល​ដំណើរ​ការ"
+
+#~ msgid "&Default"
+#~ msgstr "លំនាំ​ដើម"
+
+#~ msgid "&Read access"
+#~ msgstr "សិទ្ធិ​អាន"
+
+#~ msgid "&Write access"
+#~ msgstr "សិទ្ធិ​សរសេរ"
+
+#~ msgid "&Admin access"
+#~ msgstr "សិទ្ធិ​គ្រប់គ្រង"
+
+#~ msgid "&OK"
+#~ msgstr "យល់ព្រម"
+
+#~ msgid "Join Domain"
+#~ msgstr "ចូលរួម​ដែន"
+
+#~ msgid "&Verify:"
+#~ msgstr "បញ្ជាក់ ៖ "
+
+#~ msgid "&Password:"
+#~ msgstr "ពាក្យ​សម្ងាត់ ៖ "
+
+#~ msgid "&Username:"
+#~ msgstr "ឈ្មោះ​អ្នក​ប្រើ ៖ "
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "អ្នក​គ្រប់គ្រង​ដែន ៖ "
+
+#~ msgid "&Domain:"
+#~ msgstr "ដែន ៖ "
+
+#~ msgid "Select Groups"
+#~ msgstr "ជ្រើស​ក្រុម"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "ជ្រើស​ក្រុម"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "ប្រភេទ​ក្រុម"
+
+#~ msgid "&UNIX group"
+#~ msgstr "ក្រុម UNIX"
+
+#~ msgid "NI&S group"
+#~ msgstr "ក្រុម NIS"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "ក្រុម UNIX និង NIS"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "អ្នក​អាច​កែ​សម្រួល​អ្នក​ប្រើ Samba នៅ​ទីនេះ ដែល​បាន​រក្សា​ទុក​ក្នុង​ឯកសារ smbpasswd ។\n"
+#~ "<p>\n"
+#~ "គ្រប់​អ្នក​ប្រើ Samba ត្រូវ​តែ​មាន​អ្នក​ប្រើ យូនីក ដូច​គ្នា ។\n"
+#~ "អ្នក​អាច​ឃើញ​អ្នក​ប្រើ យូនីក ទាំងអស់​នៅ​ខាង​ស្ដាំ ដែល​រក្សា​ទុក​ក្នុង​ឯកសារ passwd ហើយ​មិន​ត្រូវ​បាន​កំណត់​"
+#~ "រចនា​សម្ព័ន្ធ​ដូច​អ្នក​ប្រើ Samba ទេ ។\n"
+#~ "អ្នក​អាច​មើល​អ្នក​ប្រើ Samba នៅ​ជ្រុង​ខាង​ស្ដាំ​ដៃ ។\n"
+#~ "<p>\n"
+#~ "ដើម្បី​បន្ថែម​អ្នក​ប្រើ Samba ដោយ​ចុច​ប៊ូតុង <em>&lt; បន្ថែម</em> ជា​ធម្មតា ។\n"
+#~ "អ្នក​ប្រើ យូនីក ដែល​បាន​ជ្រើស​នឹង​ក្លាយ​ជា​អ្នក​ប្រើ Samba ហើយ​នឹង​ត្រូវ​បាន​យក​ចេញ\n"
+#~ "ពី​បញ្ជី​អ្នក​ប្រើ យូនីក (ប៉ុន្តែ​ពួក​គេ​នៅ​តែ​ជា​អ្នក​ប្រើ យូនីក) ។\n"
+#~ "<p>\n"
+#~ "ដើម្បី​យក​អ្នក​ប្រើ Samba ចេញ ចុច​ប៊ូតុង <em>&gt; យក​ចេញ</em> ។\n"
+#~ "អ្នក​ប្រើ Samba ដែល​បាន​ជ្រើស​នឹង​ត្រូវ​បាន​យក​ចេញ​ពី​ឯកសារ smbpasswd\n"
+#~ "និង​លេច​ឡើង​វិញ​នៅ​លើ​ជ្រុង​ខាង​ស្ដាំ​ដៃ ជា​អ្នក​ប្រើ យូនីក ដែល​មិន​មែន​ជា​អ្នក​ប្រើ Samba ។\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "ការ​កំណត់​មូលដ្ឋាន"
+
+#~ msgid "Samba config file:"
+#~ msgstr "ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ Samba ៖"
+
+#~ msgid "&Load"
+#~ msgstr "ផ្ទុក"
+
+#~ msgid "Server Identification"
+#~ msgstr "ការ​កំណត់​អត្តសញ្ញាណ​ម៉ាស៊ីន​បម្រើ"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "ក្រុម​ធ្វើ​ការ ៖"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "បញ្ចូល​ឈ្មោះ​នៃ​ក្រុម​ធ្វើ​ការ/ដែន​ទីនេះ ។"
+
+#~ msgid "Server strin&g:"
+#~ msgstr "ខ្សែ​អក្សរ​ម៉ាស៊ីន​បម្រើ ៖"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "ឈ្មោះ NetBIOS ៖"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "កម្រិត​សុវត្ថិភាព"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "អ្នក​ប្រើ"
+
+#~ msgid "Server"
+#~ msgstr "ម៉ាស៊ីន​បម្រើ"
+
+#~ msgid "Domai&n"
+#~ msgstr "ដែន"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>ចែក​រំលែក</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​នៅ​​ផ្ទះ​ ឬ​​នៅ​ការិយាល័យ​តូច​មួយ ។<br> "
+#~ "វា​អនុញ្ញាត​ឲ្យ​អ្នក​រាល់គ្នា​អាន​​ឈ្មោះ​​ចែករំលែក​ទាំងអស់​មុន​ពេល​តម្រូវ​ឲ្យ​ចូល ។"
+
+#~ msgid "Further Options"
+#~ msgstr "ជម្រើស​បន្ថែម"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "ឈ្មោះ/អាសយដ្ឋាន​ម៉ាស៊ីន​បម្រើ​ពាក្យ​សម្ងាត់ ៖"
+
+#~ msgid "Real&m:"
+#~ msgstr "Realm ៖"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "គណនី​ភ្ញៀវ ៖"
+
+#~ msgid "Help"
+#~ msgstr "ជំនួយ"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "សម្រាប់​ជំនួយ​ដែល​បាន​លម្អិត​អំពី​ជម្រើស​ផ្សេងៗ សូម​មើល​នៅ ៖"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "ចែក​រំលែក"
+
+#~ msgid "Comment"
+#~ msgstr "មតិ​យោបល់"
+
+#~ msgid "Properties"
+#~ msgstr "លក្ខណៈ​សម្បត្តិ"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "កែ​សម្រួល​លំនាំ​ដើម..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "បន្ថែម​ការ​ចែក​រំលែក​ថ្មី..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "កែ​សម្រួល​ការ​ចែក​រំលែក..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "យក​ការ​ចែក​រំលែក​ចេញ"
+
+#~ msgid "Prin&ters"
+#~ msgstr "ម៉ាស៊ីន​បោះពុម្ព"
+
+#~ msgid "Printer"
+#~ msgstr "ម៉ាស៊ីន​បោះពុម្ព"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "កែ​សម្រួល​លំនាំ​ដើម"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "បន្ថែម​ម៉ាស៊ីន​បោះពុម្ព​ថ្មី"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "កែ​សម្រួល​ម៉ាស៊ីន​បោះពុម្ព"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "យក​ម៉ាស៊ីន​បោះពុម្ព​ចេញ"
+
+#~ msgid "&Users"
+#~ msgstr "អ្នក​ប្រើ"
+
+#~ msgid "Disabled"
+#~ msgstr "មិន​បាន​អនុញ្ញាត"
+
+#~ msgid "Add"
+#~ msgstr "បន្ថែម"
+
+#~ msgid "Rem&ove"
+#~ msgstr "យក​ចេញ"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "អ្នក​ប្រើ យូនីក"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "ផ្លាស់ប្ដូរ​ពាក្យ​សម្ងាត់..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "ចូលរួម​ដែន"
+
+#~ msgid "Advan&ced"
+#~ msgstr "កម្រិត​ខ្ពស់"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "អ្នក​អាច​ផ្លាស់ប្ដូរ​ជម្រើស​ដែល​មាន​កម្រិត​ខ្ពស់​នៃ​ម៉ាស៊ីន​បម្រើ SAMBA នៅ​ទីនេះ ។\n"
+#~ "គ្រាន់​តែ​ផ្លាស់ប្ដូរ​របស់​ខ្លះ ប្រសិន​បើ​អ្នក​ដឹង​ថា អ្នក​កំពុង​ធ្វើ​អ្វី ។​"
+
+#~ msgid "Advanced Dump"
+#~ msgstr "ការ​បោះបង់​កម្រិត​ខ្ពស់"
+
+#~ msgid "Security"
+#~ msgstr "សុវត្ថិភាព"
+
+#~ msgid "&General"
+#~ msgstr "ទូទៅ"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "គោរព​ការ​កម្រិត​របស់ PAM"
+
+#~ msgid "PAM password change"
+#~ msgstr "ការ​ផ្លាស់ប្ដូរ​ពាក្យ​សម្ងាត់​របស់ PAM"
+
+#~ msgid "Other Switches"
+#~ msgstr "ការ​ប្ដូរ​ផ្សេងៗ"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "អនុញ្ញាត​ដែន​ដែល​ជឿ​ទុក​ចិត្ត"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "សុវត្ថិភាព​ម៉ាស៊ីន​បម្រើ​ឆ្គួត"
+
+#~ msgid "General"
+#~ msgstr "ទូទៅ"
+
+#~ msgid "Auth methods:"
+#~ msgstr "វិធីសាស្ត្រ​ផ្ទៀតផ្ទាត់​ភាព​ត្រឹមត្រូវ ៖​"
+
+#~ msgid "Root director&y:"
+#~ msgstr "ថត root ៖"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "ចំនុច​ប្រទាក់ ៖ "
+
+#~ msgid "Map to guest:"
+#~ msgstr "ផ្គូផ្គង​ភ្ញៀវ ៖"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "ចង​តែ​ចំនុច​ប្រទាក់​"
+
+#~ msgid "Never"
+#~ msgstr "កុំ"
+
+#~ msgid "Bad User"
+#~ msgstr "អ្នក​ប្រើ​មិន​ល្អ"
+
+#~ msgid "Bad Password"
+#~ msgstr "ពាក្យ​សម្ងាត់​មិន​ល្អ"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "ម៉ាស៊ីន​ equiv ៖​"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "មូលដ្ឋាន​កម្ចាត់​ក្បួន​ដោះស្រាយ​ ៖"
+
+#~ msgid "Private dir:"
+#~ msgstr "ថត​ឯកជន ៖"
+
+#~ msgid "Pass&word"
+#~ msgstr "ពាក្យ​សម្ងាត់"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "ពាក្យ​សម្ងាត់ Samba"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "អ៊ីនគ្រីប​ពាក្យ​សម្ងាត់"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "ឯកសារ​ពាក្យ​សម្ងាត់ Smb ៖"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "កម្មវិធី Passdb ខាង​ក្រោយ ៖"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "ការ​ជជែក​កំសាន្ត Passwd ៖"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "បំបាត់​កំហុស​ការ​ជជែក​កំសាន្ត Passwd"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "វិ."
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "អស់ពេល​ជជែក​កំសាន្ត​ Passwd ៖"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "ពាក្យ​សម្ងាត់​ទទេ"
+
+#~ msgid "Password level:"
+#~ msgstr "កម្រិត​ពាក្យ​សម្ងាត់ ៖ "
+
+#~ msgid "Min password length:"
+#~ msgstr "ប្រវែង​ពាក្យ​សម្ងាត់​អប្បបរមា ៖"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "អស់​ពេល​ពាក្យ​សម្ងាត់​ម៉ាស៊ីន ៖"
+
+#~ msgid "Migration"
+#~ msgstr "ប្ដូរ"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "បាន​អ៊ីនគ្រីបបច្ចុប្បន្នភាព"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "ពាក្យ​សម្ងាត់ យូនីក"
+
+#~ msgid "Passwd program:"
+#~ msgstr "កម្មវិធី​ពាក្យ​សម្ងាត់ ៖ "
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "ធ្វើ​សមកាលកម្ម​ពាក្យ​សម្ងាត់ ​យូនីក"
+
+#~ msgid "Userna&me"
+#~ msgstr "ឈ្មោះ​អ្នក​ប្រើ"
+
+#~ msgid "User&name map:"
+#~ msgstr "ផ្គូរផ្គង​ឈ្មោះ​អ្នក​ប្រើ​ ៖​"
+
+#~ msgid "Username &level:"
+#~ msgstr "កម្រិត​ឈ្មោះ​អ្នក​ប្រើ ៖ "
+
+#~ msgid "Hide local users"
+#~ msgstr "លាក់​អ្នក​ប្រើ​មូលដ្ឋាន"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "ដាក់​កម្រិត​អនាមិក​​"
+
+#~ msgid "Use rhosts"
+#~ msgstr "ប្រើ rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ"
+
+#~ msgid "Client"
+#~ msgstr "ម៉ាស៊ីន​ភ្ញៀវ"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "ការ​ចុះ​ហត្ថលេខា​ម៉ាស៊ីន​ភ្ញៀវ ៖"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​អត្ថបទ​ធម្មតា​របស់​ម៉ាស៊ីន​ភ្ញៀវ"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "ការ​ផ្ទៀតផ្ទាត់​ភាព​ត្រឹមត្រូវ lanman ម៉ាស៊ីន​ភ្ញៀវ"
+
+#~ msgid "Auto"
+#~ msgstr "ស្វ័យ​ប្រវត្តិ"
+
+#~ msgid "Mandatory"
+#~ msgstr "ភាព​ចាំបាច់"
+
+#~ msgid "Yes"
+#~ msgstr "បាទ/ចាស"
+
+#~ msgid "No"
+#~ msgstr "ទេ"
+
+#~ msgid "Client channel:"
+#~ msgstr "ឆានែល​ម៉ាស៊ីន​ភ្ញៀវ ៖"
+
+#~ msgid "Client use spnego"
+#~ msgstr "ម៉ាស៊ីន​ភ្ញៀវ​ប្រើ spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ NTLMv2 របស់​ម៉ាស៊ីន​ភ្ញៀវ"
+
+#~ msgid "Server signing:"
+#~ msgstr "ការ​ចុះ​ហត្ថលេខា​ម៉ាស៊ីន​បម្រើ ៖"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​របស់ Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "ឆានែល​ម៉ាស៊ីន​បម្រើ ៖"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "ប្រើ spnego"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ NTLM"
+
+#~ msgid "Logging"
+#~ msgstr "ចូល"
+
+#~ msgid "L&og file:"
+#~ msgstr "ឯកសារ​ចុះ​កំណត់​ហេតុ ៖ "
+
+#~ msgid "kB"
+#~ msgstr "គីឡូបៃ"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "ទំហំ​ចុះ​កំណត់​ហេតុ​អតិបរមា ៖"
+
+#~ msgid "S&yslog:"
+#~ msgstr "កំណត់​ហេតុ​ប្រព័ន្ធ ៖"
+
+#~ msgid "Log &level:"
+#~ msgstr "កម្រិត​ចុះ​កំណត់​ហេតុ ៖ "
+
+#~ msgid "S&witches"
+#~ msgstr "ប្ដូរ"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "បាន​តែ​ Syslog"
+
+#~ msgid "Status"
+#~ msgstr "ស្ថានភាព"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "ត្រា​ពេល​វេលា​"
+
+#~ msgid "microseconds"
+#~ msgstr "មីល្លី​វិនាទី"
+
+#~ msgid "Debug pid"
+#~ msgstr "បំបាត់​កំហុស pid"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "បំបាត់​កំហុស​ uid"
+
+#~ msgid "Tuning"
+#~ msgstr "ប្ដូរ"
+
+#~ msgid "Modules"
+#~ msgstr "ម៉ូឌុល"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "ផ្ទុក​ម៉ូឌុល​ជាមុន ៖"
+
+#~ msgid "Switches"
+#~ msgstr "ប្ដូរ"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "ឃ្លាំង​សម្ងាត់ Getwd"
+
+#~ msgid "Use &mmap"
+#~ msgstr "ប្រើ mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "ជូន​ដំណឹង​ការ​ផ្លាស់ប្ដូរ​ខឺណែល"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "ការ​រក​មើល​ឈ្មោះ​ម៉ាស៊ីន"
+
+#~ msgid "Read ra&w"
+#~ msgstr "អាន​ឆៅ"
+
+#~ msgid "Write raw"
+#~ msgstr "សសេរ​ឆៅ"
+
+#~ msgid "Times"
+#~ msgstr "ពេល​វេលា"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "ផ្លាស់ប្ដូរ​​​ការ​អស់ពេល​ជូន​ដំណឹង ៖"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "នៅ​មាន​ជីវិត ៖​"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "នាទី"
+
+#~ msgid "Deadtime:"
+#~ msgstr "ពេល​កំណត់​ ៖​"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "ពេល​វេលា​ឃ្លាំង​សម្ងាត់ Lpq ៖"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "អស់​ពេល​ឃ្លាំង​សម្ងាត់​ឈ្មោះ ៖"
+
+#~ msgid "Sizes"
+#~ msgstr "ទំហំ"
+
+#~ msgid "Max disk size:"
+#~ msgstr "ទំហំ​ថាស​អតិបរមា ៖"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "ម.ប."
+
+#~ msgid "Read si&ze:"
+#~ msgstr "អាន​ទំហំ ៖"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "ទំហំ​ឃ្លាំង​សម្ងាត់​ស្ថានភាព ៖"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "xmit អតិបរមា ៖​"
+
+#~ msgid "Numbers"
+#~ msgstr "ចំនួន"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "ដំណើរ​ការ smbd អតិបរមា ៖​"
+
+#~ msgid "Max open files:"
+#~ msgstr "ឯកសារ​បើក​អតិបរមា ៖"
+
+#~ msgid "Printing"
+#~ msgstr "បោះពុម្ព"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "ការងារ​បោះពុម្ព​សរុប ៖"
+
+#~ msgid "Drivers"
+#~ msgstr "កម្មវិធី​បញ្ជា"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "ផ្គួផ្គង​កម្មវិធី​បញ្ជា​ OS2 ៖​"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "ឈ្មោះ Printcap ​៖"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "ឯកសារ​កម្មវិធី​បញ្ជា​ម៉ាស៊ីន​បោះពុម្ព ៖"
+
+#~ msgid "Commands"
+#~ msgstr "ពាក្យ​បញ្ជា"
+
+#~ msgid "Enumports command:"
+#~ msgstr "ពាក្យ​បញ្ជា Enumport ៖​"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "ពាក្យ​បញ្ជា​បន្ថែម​ម៉ាស៊ីន​បោះពុម្ព ៖"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "ពាក្យ​បញ្ជា​លុប​ម៉ាស៊ីន​បោះពុម្ព ៖"
+
+#~ msgid "L&oad printers"
+#~ msgstr "ផ្ទុក​ម៉ាស៊ីន​បោះពុម្ព"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "បិទ​ស្ពូល​"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "បង្ហាញ​អ្នក​ជំនួយ​ការ​ការ​បន្ថែម​ម៉ាស៊ីន​បោះពុម្ព​"
+
+#~ msgid "Domain"
+#~ msgstr "ដែន"
+
+#~ msgid "L&ocal master"
+#~ msgstr "មេ​មូលដ្ឋាន"
+
+#~ msgid "Domai&n master"
+#~ msgstr "មេ​ដែន"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "ដែន​ចូល"
+
+#~ msgid "Preferred &master"
+#~ msgstr "មេ​ដែល​ចូលចិត្ត"
+
+#~ msgid "OS &level:"
+#~ msgstr "កម្រិត OS ៖"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "ក្រុម​អ្នក​គ្រប់គ្រង​ដែន ៖"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "ក្រុម​ភ្ញៀវ​ដែន ៖ "
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "ធ្វើ​ឲ្យ WINS អសកម្ម"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "ធ្វើ​ដូចជា​ម៉ាស៊ីន​បម្រើ WINS"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "ប្រើ​ម៉ាស៊ីន​បម្រើ WINS មួយ​ផ្សេងទៀត"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "ការ​កំណត់​ម៉ាស៊ីន​បម្រើ WINS"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "ប្រូកស៊ី DNS"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "ទំពក់ WINS ៖​"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "WINS ttl អតិបរមា ៖"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "WINS ttl អប្បបរមា ៖​"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "IP ម៉ាស៊ីន​បម្រើ WINS ឬ ឈ្មោះ DNS"
+
+#~ msgid "General Options"
+#~ msgstr "ជម្រើស​ទូទៅ"
+
+#~ msgid "WINS partners:"
+#~ msgstr "ដៃ​គូ WINS ៖"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "ប្រូកស៊ី WINS"
+
+#~ msgid "Filenames"
+#~ msgstr "ឈ្មោះ​ឯកសារ"
+
+#~ msgid "Ge&neral"
+#~ msgstr "ទូទៅ"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "ចំណុច​ឆ្នូតៗ"
+
+#~ msgid "&Mangling"
+#~ msgstr "ធ្វើ​ឲ្យ​ខូច"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "ជង់​ដែល​បានធ្វើ​ឲ្យ​ខូច​ ៖​"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "ធ្វើ​ឲ្យ​បុព្វបទ​ខូច​ ៖"
+
+#~ msgid "Specia&l"
+#~ msgstr "ពិសេស"
+
+#~ msgid "Stat cache"
+#~ msgstr "ឃ្លាំង​សម្ងាត់​សភាព"
+
+#~ msgid "Locking"
+#~ msgstr "ចាក់​សោ"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "ប្រើ​ខឺណែល​ oplocks"
+
+#~ msgid "Direct&ories"
+#~ msgstr "ថត​"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "ចាក់​សោ​ថត ៖"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "ថត Pid ៖"
+
+#~ msgid "Lock Spin"
+#~ msgstr "ចាក់​សោ​ Spin"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "ចាក់​សោ​ការ​រាប់​បង្វិល ៖"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "ចាក់​សោ​ពេល​វេលា​បង្វិល ៖"
+
+#~ msgid "Very Advanced"
+#~ msgstr "កម្រិត​ខ្ពស់​បំផុត"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "ពេលវេលា​រងចាំ​បង្ខូច Oplock​ ៖"
+
+#~ msgid "milliseconds"
+#~ msgstr "មីល្លី​វិនាទី"
+
+#~ msgid "Charset"
+#~ msgstr "សំណុំ​តួ​អក្សរ"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba 3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "សំណុំ​តួ​អក្សរ DOS ៖"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "សំណុំ​តួ​អក្សរ យូនីក ៖"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "បង្ហាញ​សំណុំ​តួ​អក្សរ ៖"
+
+#~ msgid "U&nicode"
+#~ msgstr "យូនីកូដ"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba 2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "សំណុំ​តួ​អក្សរ ៖"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "តួ​អក្សរ​ត្រឹមត្រូវ ៖ "
+
+#~ msgid "Code page directory:"
+#~ msgstr "ទប់ស្កាត់​ថត​ទំព័រ ៖"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "ប្រព័ន្ធ​កូដ ៖"
+
+#~ msgid "Client code page:"
+#~ msgstr "ទំព័រ​កូដ​ម៉ាស៊ីន​ភ្ញៀវ ៖"
+
+#~ msgid "Logon"
+#~ msgstr "ចូល"
+
+#~ msgid "Add Scripts"
+#~ msgstr "បន្ថែម​ស្គ្រីប"
+
+#~ msgid "Add user script:"
+#~ msgstr "បន្ថែម​ស្គ្រីប​អ្នក​ប្រើ ៖"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "បន្ថែម​អ្នក​ប្រើ​ទៅ​ក្រុម​ស្គ្រីប ៖"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "បន្ថែម​ក្រុម​ស្គ្រីប ៖ "
+
+#~ msgid "Add machine script:"
+#~ msgstr "បន្ថែម​ស្គ្រីប​ម៉ាស៊ីន ៖ "
+
+#~ msgid "Delete group script:"
+#~ msgstr "លុប​ស្គ្រីប​ក្រុម ៖"
+
+#~ msgid "Delete user script:"
+#~ msgstr "លុប​ស្គ្រីប​អ្នក​ប្រើ ៖"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "លុប​អ្នក​ប្រើ​ពី​ស្គ្រីប​ក្រុម ៖"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "ស្គ្រីប​ក្រុម​ចម្បង"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "កំណត់​ស្គ្រីប​ក្រុម​ចម្បង ៖"
+
+#~ msgid "Shutdown"
+#~ msgstr "បិទ"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "ស្គ្រីប​បិទ ៖"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "បោះបង់​ស្គ្រីប​បិទ ៖ "
+
+#~ msgid "Logo&n path:"
+#~ msgstr "ផ្លូវ​ចូល ៖"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "ផ្ទះ​ចូល ៖"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "ដ្រាយ​ចូល ៖"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "ស្គ្រីប​ចូល ៖"
+
+#~ msgid "Socket"
+#~ msgstr "រន្ធ"
+
+#~ msgid "Socket address:"
+#~ msgstr "អាសយដ្ឋាន​រន្ធ ៖"
+
+#~ msgid "Socket Options"
+#~ msgstr "ជម្រើស​រន្ធ"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_SNDBUF ៖"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF ៖"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCVLOWAT ៖"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "បិទ ឬ​បើក​របៀប SSL ទាំង​មូល"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "វា​បិទ ឬ​បើក​របៀប SSL ទាំង​មូល ។ ប្រសិន​បើ​វា​កំណត់​ទៅ ទេ Samba ដែល​អនុញ្ញាត SSL ធ្វើ​ដូច​ជា មិន​"
+#~ "មែន SSL Samba ។ ប្រសិន​បើ​កំណត់​ទៅ បាទ វា​ពឹង​ផ្អែក​លើ​អថេរ​ម៉ាស៊ីន ssl និង ម៉ាស៊ីន ssl  ចុះ​"
+#~ "ហត្ថលេខា​ឡើងវិញ​ថា​តើ​ការ​តភ្ជាប់ SSL នឹង​ត្រូវ​បាន​ទាមទារ​ទេ ។\n"
+#~ "\n"
+#~ "វា​មាន​ប្រសិន​បើ​បណ្ណាល័យ SSL បាន​ត្រូវ​ចងក្រង​នៅ​លើ​ប្រព័ន្ធ​និង​ជម្រើស​កំណត់​រចនា​សម្ព័ន្ធ -- ជាមួយ ssl "
+#~ "ដែល​ត្រូវ​បាន​ទាមទារ​ក្នុង​ពេល​កំណត់​រចនា​សម្ព័ន្ធ ។"
+
+#~ msgid "E&nable SSL"
+#~ msgstr "បើក SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "ម៉ាស៊ីន SSL ៖"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "បៃ​ផ្ដើម​ធ្វើ SSL ៖"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "តួ​សូន្យ SSL ៖"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "បោះបង់​ចោល​ម៉ាស៊ីន SSL​ ៖​"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl​2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2or3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "ភាព​ឆបគ្នា​ SSL"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certDir ៖​"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "ឯកសារ​ផ្ដើម​ធ្វើ SSL ៖"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "រន្ធ egd SSL ៖"
+
+#~ msgid "SSL version:"
+#~ msgstr "កំណែ SSL ៖"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "ឯកសារ​វិញ្ញាបនបត្រ CA របស់ ​SSL ៖"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL ទាមទារ​វិញ្ញាបនបត្រ​ម៉ាស៊ីន​ភ្ញៀវ"
+
+#~ msgid "SSL client key:"
+#~ msgstr "កូន​សោ​ម៉ាស៊ីន​ភ្ញៀវ​ SSL ៖"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL ទាមទារ​វិញ្ញាបនបត្រ​ម៉ាស៊ីន​បម្រើ"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "វិញ្ញាបនបត្រ​ម៉ាស៊ីន​បម្រើ SSL ៖"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "វិញ្ញាបនបត្រ​ម៉ាស៊ីន​ភ្ញៀវ SSL ៖"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "កូន​សោ​ម៉ាស៊ីន​បម្រើ SSL ៖​"
+
+#~ msgid "Protocol"
+#~ msgstr "ពិធីការ"
+
+#~ msgid "Ti&me server"
+#~ msgstr "ម៉ាស៊ីន​បម្រើ​ម៉ោង"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "អាន​សរសេរ​មាន​ទ្រង់ទ្រាយ​ធំ​"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "ផ្នែក​បន្ថែម យូនីក"
+
+#~ msgid "Read bmpx"
+#~ msgstr "អាន bmpx"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "កំណែ​ពិធីការ"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "ប្រកាស​ជា ៖"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "ស្ថានីយ​ការងារ NT"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "ប្រកាស​កំណែ ៖"
+
+#~ msgid "4.2"
+#~ msgstr "៤.២"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "ពិធីការ ៖"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "ពិធីការ​អតិបរមា ៖"
+
+#~ msgid "Min protocol:"
+#~ msgstr "ពិធីការ​អប្បបរមា ៖"
+
+#~ msgid "Limits"
+#~ msgstr "លីមីត"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "mux អតិបរមា ៖​"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "ttl អតិបរមា​ ៖​"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "កំពុង​ស្តាប់​ច្រក SMB"
+
+#~ msgid "SMB ports:"
+#~ msgstr "ច្រក SMB ៖"
+
+#~ msgid "Browsing"
+#~ msgstr "រក​មើល"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "ចន្លោះ​ពេល LM ៖"
+
+#~ msgid "L&M announce:"
+#~ msgstr "ការ​ប្រកាស L&M ៖"
+
+#~ msgid "Sec"
+#~ msgstr "វិ."
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "ការ​រុករក sync ពី​ចម្ងាយ ៖"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "បញ្ជី​រក​មើល"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "បាន​បន្ថែម​​ការ​រកមើល"
+
+#~ msgid "Pre&load:"
+#~ msgstr "ផ្ទុក​ជាមុន ៖"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "Winbind/Idmap UID ៖"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap GID ៖"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "ពុម្ព​ថត​ផ្ទះ ៖"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "ស៊ែល​ពុម្ព ៖"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "កម្មវិធី​បំបែក Winbind ៖​"
+
+#~ msgid "Template primary group:"
+#~ msgstr "ពុម្ព​ក្រុម​ចម្បង ៖"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "ពេល​វេលា​ឃ្លាំង​សម្ងាត់ Winbind ៖"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows ២០០០"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "ភាព​ឆបគ្នា Acl ៖"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "អ្នក​ប្រើ Winbind enum"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "ក្រុម Winbind enum"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind ប្រើ​ដែន​លំនាំ​ដើម"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "បើក​មូលដ្ឋាន​គណនី​ Winbind"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "បាន​តែ​ដែន​ដែល​ទុក​ចិត្ត​ដោយ Winbind"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "ក្រុម​ដែល​ដាក់​​ក្នុង​ Winbind"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "វិសាលភាព NetBIOS ៖"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "ឈ្មោះ​ក្លែងក្លាយ NetBIOS ៖"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "បិទ netbios"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "លំដាប់​ដោះស្រាយ​ឈ្មោះ ៖"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "ម៉ាស៊ីន​ lmhosts wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "ម៉ាស៊ីន msdfs"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "បច្ច័យ LDAP ៖"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "បច្ច័យ​ម៉ាស៊ីន LDAP ៖"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "បច្ច័យ​អក្ន​ប្រើ LDAP ៖"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "បច្ច័យ​ក្រុម LDAP ៖"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "បច្ច័យ idmap LDAP ៖"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "តម្រង LDAP ៖"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP គ្រប់គ្រង dn ៖"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "កម្មវិធី Idmap ខាងក្រោយ ៖​"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "រង់ចាំ​ការ​ថត​ចម្លង LDAP ៖​"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "LDAP ssl ៖"
+
+#~ msgid "Off"
+#~ msgstr "បិទ"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "បើក"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "សមកាលកម្ម LDAP ៖"
+
+#~ msgid "Only"
+#~ msgstr "តែ​មួយ"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP លុប dn"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "បន្ថែម​ពាក្យ​បញ្ជា​ចែក​រំលែក ៖"
+
+#~ msgid "Change share command:"
+#~ msgstr "ផ្លាស់ប្ដូរ​ពាក្យ​បញ្ចា​ចែក​រំលែក ៖"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "លុប​ពាក្យ​បញ្ជា​ចែក​រំលែក ៖"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "ពាក្យ​បញ្ជា​ផ្ញើ​សារ ៖"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "ពាក្យ​បញ្ជា Dfree ៖​"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "កំណត់​ពាក្យ​បញ្ជា​កូតា ៖"
+
+#~ msgid "Get quota command:"
+#~ msgstr "យក​ពាក្យ​បញ្ជា​កូតា ៖"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "សកម្ម​ភាព​ដែល​ឈឺ​ចាប់ ៖"
+
+#~ msgid "Misc"
+#~ msgstr "ផ្សេងៗ"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "ផ្សេងៗ"
+
+#~ msgid "Hide &local users"
+#~ msgstr "លាក់​អ្នក​ប្រើ​មូលដ្ឋាន"
+
+#~ msgid "Default service:"
+#~ msgstr "សេវា​លំនាំ​ដើម ៖"
+
+#~ msgid "Time &offset:"
+#~ msgstr "អុហ្វសិត​ពេល​វេលា ៖"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "នាទី"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "ការ​ប្រកាស​ពី​ចម្ងាយ ៖"
+
+#~ msgid "Source environment:"
+#~ msgstr "បរិស្ថាន​ប្រពភ ៖"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "ថង​ផ្ទះ NIS"
+
+#~ msgid "Homedir map:"
+#~ msgstr "ផ្គូផ្គង​ថត​ផ្ទះ ៖​"
+
+#~ msgid "UTMP"
+#~ msgstr "UMTP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "ថត Utmp ៖"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "ថត Wtmp ៖"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Utmp"
+
+#~ msgid "Debug"
+#~ msgstr "បំបាត់​កំហុស"
+
+#~ msgid "&NT status support"
+#~ msgstr "គាំទ្រ​ស្ថានភាព NT"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "គាំទ្រ NT SMB"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "គាំទ្រ​បំពុង NT"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "បន្ថែម/កែប្រែ ការ​ចែក​រំលែក"
+
+#~ msgid "Pixmap"
+#~ msgstr "ផែនទី​ភីកសែល"
+
+#~ msgid "D&irectory"
+#~ msgstr "ថត"
+
+#~ msgid "&Path:"
+#~ msgstr "ផ្លូវ ៖"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "ចែក​រំលែក​ថត​ផ្ទះ​ទាំងអស់"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "អ្នក​កំណត់​អត្តសញ្ញាណ"
+
+#~ msgid "Na&me:"
+#~ msgstr "ឈ្មោះ ៖"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "មតិយោបល់ ៖"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "លក្ខណៈ​សម្បត្តិ​មេ"
+
+#~ msgid "Pub&lic"
+#~ msgstr "សាធារណៈ"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "ដែល​អាច​រុករក​បាន"
+
+#~ msgid "A&vailable"
+#~ msgstr "ដែល​អាច​មាន"
+
+#~ msgid "&Security"
+#~ msgstr "សុវត្ថិភាព"
+
+#~ msgid "Gu&ests"
+#~ msgstr "ភ្ញៀវ"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "នេះ​គឺ​ជា​ឈ្មោះ​អ្នកប្រើ ដែល​នឹង​ត្រូវ​បានប្រើ​សម្រាប់​ការ​ចូល​ដំណើរ​ការ​សេវា ​ដែល​ត្រូវ​បាន​បញ្ជាក់​ជា​"
+#~ "ភ្ញៀវ ។ សិទ្ធិ​អ្វី​ក៏ដោយ អ្នក​ប្រើ​នេះ​មាន នឹង​ត្រូវ​មាន​ចំពោះ​ម៉ាស៊ីន​ភ្ញៀវ​ដែល​តភ្ជាប់​ទៅ​សេវា​ភ្ញៀវ ។ ជា​"
+#~ "ធម្មតា​អ្នក​ប្រើ​នេះ​នឹង​មាន​ក្នុង​ឯកសារ​ពាក្យ​សម្ងាត់ ប៉ុន្តែ​នឹង​មិនមាន​ការ​ចូល​ត្រឹមត្រូវ​ទេ ។ គណនី​អ្នក​ប្រើ "
+#~ "\\\"ftp\\\" គឺ​តែងតែ​ជា​ជម្រើស​ដ៏​ល្អ​សម្រាប់​ប៉ារ៉ាម៉ែត្រ​នេះ ។ ប្រសិន​បើ​ឈ្មោះ​អ្នកប្រើ​ត្រូវ​បាន​បញ្ជាក់​"
+#~ "ក្នុង​សេវា​ដែល​បាន​ឲ្យ ឈ្មោះ​អ្នក​ប្រើ​ដែល​បាន​បញ្ជាក់​នឹង​បដិសេធ​មួយ​នេះ ។"
+
+#~ msgid "&Guest account:"
+#~ msgstr "គណនី​ភ្ញៀវ ៖ "
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr "ប្រសិន​បើ​ធីក​ជម្រើស​នេះ មិន​ទាមទារ​ឲ្យ​តភ្ជាប់​ទៅ​សេវា​ទេ ។ សិទ្ធិ​នឹង​ជា​គណនី​ភ្ញៀវ​ទាំងនោះ ។"
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "អនុញ្ញាត​តែ​ការ​តភ្ជាប់​របស់​ភ្ញៀវ"
+
+#~ msgid "Hos&ts"
+#~ msgstr "ម៉ាស៊ីន"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "ផ្ទុយ​ពី​ម៉ាស៊ីន​ដែល​អនុញ្ញាត - ម៉ាស៊ីន​ដែល​រាយ​បញ្ជី​ទីនេះ មិន​ត្រូវ​បាន​អនុញ្ញាត​ឲ្យ​ចូល​ដំណើរ​ការ​ទៅ​សេវា "
+#~ "ទាល់តែ​សេវា​ជាក់លាក់​មាន​បញ្ជី​ផ្ទាល់​ខ្លួន​វា ដើម្បី​បដិសេធ​ចំពោះ​បញ្ជី​នេះ ។ ដែល​បញ្ជី​ប៉ះ​ទង្គិច បញ្ជី​ដែល​"
+#~ "អនុញ្ញាត​មាន​អាទិភាព ។"
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "ប៉ារ៉ាម៉ែត្រ​នេះ​គឺ សញ្ញា​ក្បៀស ដក​ឃ្លា ឬ​ថេប​ដែល​មិន​កំណត់​សំណុំ​នៃ​ម៉ាស៊ីន ដែល​ត្រូវ​បាន​អនុញ្ញាត​ដើម្បី​ចូល​ដំណើរ​"
+#~ "ការ​សេវា ។"
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "ម៉ាស៊ីន​អនុញ្ញាត ៖"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "ម៉ាស៊ីន​បដិសេធន៍ ៖ "
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "តំណ​និមិត្ត​សញ្ញា"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "អនុញ្ញាត​តំណ​និមិត្ត​សញ្ញា​ខាងក្រោម"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr "អនុញ្ញាត​តំណ​និមិត្ត​សញ្ញា​ខាងក្រោម ដែល​ចង្អុល​ទៅ​ផ្ទៃ​ខាងក្រៅ​នៃ​មែកធាង​ថត"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>ពាក្យ​សម្ងាត់​ដែល​មាន​សុពលភាព​ប្រឆាំង​នឹង​ឈ្មោះ​អ្នក​ប្រើ​ខាងក្រោម ប្រសិន​បើ​ម៉ាស៊ីន​ភ្ញៀវ​មិន​អាច​ផ្ដល់​"
+#~ "ឈ្មោះ​អ្នក​ប្រើ ៖</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "អនុញ្ញាត​ការ​តភ្ជាប់​ជាមួយ​ឈ្មោះ​អ្នក​ប្រើ ដែល​បាន​បញ្ជាក់​ក្នុង​បញ្ជី​អ្នក​ប្រើ​នេះ"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "ឯកសារ​ដែល​លាក់"
+
+#~ msgid "Hidden"
+#~ msgstr "ដែល​លាក់"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto Oplock"
+
+#~ msgid "Size"
+#~ msgstr "ទំហំ"
+
+#~ msgid "Date"
+#~ msgstr "កាល​បរិច្ឆេទ"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "ឯកសារ​ដែល​ជ្រើស"
+
+#~ msgid "Hi&de"
+#~ msgstr "លាក់"
+
+#~ msgid "&Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto oplock"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "ការ​កំណត់​រចនា​សម្ព័ន្ធ​ដោយ​ដៃ"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "ឯកសារ Veto ៖​"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "ឯកសារ Veto oplock ៖"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "ឯកសារ​ដែល​​លាក់ ៖"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "លាក់​ឯកសារ​ដែល​មិន​អាច​សសេរ​បាន"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "លាក់​ឯកសារ​ពិសេស"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "លាក់​ឯកសារ​ដែល​ចាប់ផ្ដើម​ដោយ​ចំណុច "
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "លាក់​ឯកសារ​ដែល​មិន​អាច​អាន​បាន"
+
+#~ msgid "&Advanced"
+#~ msgstr "កម្រិត​ខ្ពស់"
+
+#~ msgid "Force Modes"
+#~ msgstr "របៀប​បង្ខំ"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "បង្ខំ​របៀប​សុវត្ថិភាព​ថត ៖"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "បង្ខំ​របៀប​សុវត្ថិភាព ៖ "
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "បង្ខំ​របៀប​ថត ៖ "
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "បង្ខំ​របៀប​បង្កើត ៖ "
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "០១២៣៤៥៦៧"
+
+#~ msgid "Masks"
+#~ msgstr "របាំង"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "របាំង​សុវត្ថិភាព​ថត ៖"
+
+#~ msgid "Security &mask:"
+#~ msgstr "របាំង​សុវត្ថិភាព ៖ "
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "របាំង​ថត ៖"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "បង្កើត​របាំង ៖ "
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "acls ទម្រង់"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "acls មរតក"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "ការ​គាំទ្រ NT ACL"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "បង្ខំ​អ្នក​ប្រើ​ដែល​មិន​ស្គាល់ acl ៖"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "ផ្គូផ្គង​មរតក​ acl"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "ទទួល​សិទ្ធិ​ពី​ថត​មេ"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "អនុញ្ញាត​ការ​លុប​នៃ​ឯកសារ​បាន​តែ​អាន"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "កំពុង​ផ្គូផ្គង​គុណ​លក្ខណៈ​របស់ DOS"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "ផ្គូផ្គង​បណ្ណសារ DOS ទៅ​និង​ម្ចាស់ យូនីក ដែល​ប្រតិបត្តិ"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "ផ្គូផ្គង DOS ដែល​លាក់​ទៅ​និង​ពិភព យូនីក ដែល​ប្រតិបត្តិ"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "ផ្គូផ្គង​ប្រព័ន្ធ DOS ទៅ​និង​ក្រុម UNIX ដែល​ប្រតិបត្តិ"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "រក្សា​ទុក​គុណ​លក្ខណៈ DOS ទៅ​លើ​គុណ​លក្ខណៈ​ដែល​បាន​ពង្រីក"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "ធ្វើ​សមកាលកម្ម​យ៉ាង​តឹងរឹង"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "ធ្វើ​សមកាលកម្ម​ជានិច្ច"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "ការ​បម្រុង​ទុក​យ៉ាង​តឹងរឹង​"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "ប្រើ​ផ្ញើ​ឯកសារ"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "ចំនួន​អតិបរមា​នៃ​ការ​តភ្ជាប់​ដែល​កើត​ឡើង​បន្ត​គ្នា ៖"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "សរសេរ​ទំហំ​ឃ្លាំង​សម្ងាត់ ៖"
+
+#~ msgid "bytes"
+#~ msgstr "បៃ"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "ទំហំ​ទប់ស្កាត់ ៖"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "គោលការណ៍​ឃ្លាំង​សម្ងាត់​ផ្នែក​ម៉ាស៊ីន​ភ្ញៀវ ៖"
+
+#~ msgid "manual"
+#~ msgstr "ដោយ​ដៃ"
+
+#~ msgid "documents"
+#~ msgstr "ឯកសារ"
+
+#~ msgid "programs"
+#~ msgstr "កម្មវិធី"
+
+#~ msgid "disable"
+#~ msgstr "បិទ"
+
+#~ msgid "Name Mangling"
+#~ msgstr "ការ​ធ្វើ​ឲ្យ​ឈ្មោះ​ខូច"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "អនុញ្ញាត​ការ​ធ្វើ​ឲ្យ​ឈ្មោះ​ខូច"
+
+#~ msgid "Man&gle case"
+#~ msgstr "បង្ខូច​លក្ខណៈ​អក្សរ"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "បង្ការ​លក្ខណៈ​អក្សរ"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "បង្ការ​លក្ខណៈ​អក្សរ​ខ្លី"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "ប្រកាន់​អក្សរ​តូច​ធំ"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "លក្ខណៈ​អក្សរ​លំនាំ​ដើម ៖"
+
+#~ msgid "Lower"
+#~ msgstr "ក្រោម"
+
+#~ msgid "Upper"
+#~ msgstr "លើ"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "តួ​អក្សរ​ធ្វើ​ឲ្យ​ខូច ៖"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "ផ្គូផ្គង​ដែល​ធ្វើ​ឲ្យ​ខូច​ ៖​"
+
+#~ msgid "Mangling method:"
+#~ msgstr "វិធី​សាស្ត្រ​បង្ខូច ៖"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "ជម្រើស​ផ្សេង​ទៀត"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "លាក់​ចំណុច​តាម​ដាន"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "របៀប​ឯកសារ DOS"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "ពេល​វេលា​ឯកសារ DOS"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "ដំណោះ​ស្រាយ​ពេល​វេលា​ឯកសារ DOS"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "បើក​ការ​ចាក់​សោ"
+
+#~ msgid "Locki&ng"
+#~ msgstr "ចាក់​សោ"
+
+#~ msgid "S&trict locking"
+#~ msgstr "ចាក់​សោ​យ៉ាង​តឹងរឹង​"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "ទប់ស្កាត់​ការ​ចាក់​សោ"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "ការ​ចាក់​សោ Posix"
+
+#~ msgid "Share mo&des"
+#~ msgstr "របៀប​ចែក​រំលែក"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "ចេញ​ផ្សាយ​ការ​ចាក់​សោ​កាលានុបវត្ត (oplocks)"
+
+#~ msgid "O&plocks"
+#~ msgstr "Oplocks"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "oplocks កម្រិត ២"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "កំណត់​សេចក្តី​អះអាង Oplock ៖​"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "oplocks ក្លែងក្លាយ​"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "វត្ថុ Vfs ៖​"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "ជម្រើស Vfs ៖"
+
+#~ msgid "Exec"
+#~ msgstr "ប្រតិបត្តិ"
+
+#~ msgid "P&reexec:"
+#~ msgstr "ប្រតិបត្តិ​ជាមុន ៖"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "ប្រតិ​បត្តិ root ជាមុន ៖​"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "ប្រតិបត្តិ​ក្រោយ ៖"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "ប្រតិបត្តិ root ក្រោយ ៖"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "បិទ​ប្រតិបត្តិ​ជាមុន"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "បិទ​ប្រតិបត្តិ root ជាមុន"
+
+#~ msgid "&Volume:"
+#~ msgstr "កម្រិត​សំឡេង ៖"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "ស្គ្រីប​វេទមន្ដ ៖"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "លទ្ធផល​វេទមន្ត ៖​"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "កុំ​រៀប​តាម​លំដាប់​ចុះ ៖"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "ប្រូកស៊ី Msdfs"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "ពាក្យ​បញ្ជា Setdir ដែល​អនុញ្ញាត"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "ពេល​វេលា​បង្កើត​ថត​មិន​ពិត"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Msdfs root"
+
+#~ msgid "&Help"
+#~ msgstr "ជំនួយ"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "អ្នក​ប្រើ"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "អ្នក​ប្រើ​ដែល​មិន​បាន​បញ្ជាក់​ទាំងអស់"
+
+#~ msgid "Reject"
+#~ msgstr "ច្រាន​ចោល"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "អ្នក​ប្រើ​ដែល​បាន​បញ្ជាក់"
+
+#~ msgid "Access Rights"
+#~ msgstr "សិទ្ធិ​ចូល​ដំណើរ​ការ"
+
+#~ msgid "A&dd User..."
+#~ msgstr "បន្ថែម​អ្នក​ប្រើ..."
+
+#~ msgid "E&xpert"
+#~ msgstr "អ្នក​ជំនាញ"
+
+#~ msgid "Add &Group..."
+#~ msgstr "បន្ថែម​ក្រុម..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "យក​ចេញ​ដែល​បាន​ជ្រើស"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "អ្នក​ប្រើ​ទាំងអស់​គួរ​តែ​ត្រូវ​បាន​បង្ខំ​ទៅ អ្នក​ប្រើ/ក្រុម ដូច​ខាង​ក្រោម"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "បង្ខំ​អ្នក​ប្រើ ៖"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "បង្ខំ​ក្រុម ៖"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "កម្មវិធី​កែប្រែ​ការ​ចូល​ដំណើរ​ការ"
+
+#~ msgid "Access Permissions"
+#~ msgstr "សិទ្ធិ​ចូល​ដំណើរ​ការ"
+
+#~ msgid "Others"
+#~ msgstr "ផ្សេងៗ"
+
+#~ msgid "Read"
+#~ msgstr "អាន"
+
+#~ msgid "Write"
+#~ msgstr "សសេរ"
+
+#~ msgid "Sticky"
+#~ msgstr "ស្អិត"
+
+#~ msgid "Set GID"
+#~ msgstr "កំណត់ GID"
+
+#~ msgid "Set UID"
+#~ msgstr "កំណត់ UID"
+
+#~ msgid "Special"
+#~ msgstr "ពិសេស"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT ៖​"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF ៖"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT ៖​"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "ការ​កំណត់​អ្នក​ប្រើ"
+
+#~ msgid "&Valid users:"
+#~ msgstr "អ្នក​ប្រើ​ត្រឹមត្រូវ ៖ "
+
+#~ msgid "&Admin users:"
+#~ msgstr "អ្នក​ប្រើ​គ្រប់គ្រង ៖ "
+
+#~ msgid "&Invalid users:"
+#~ msgstr "អ្នក​ប្រើ​មិន​ត្រឹមត្រូវ ៖ "
+
+#~ msgid "&Write list:"
+#~ msgstr "សសេរ​បញ្ជី ៖ "
+
+#~ msgid "&Read list:"
+#~ msgstr "អាន​បញ្ជី ៖ "
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "ម៉ាស៊ីន​ដែល​បាន​អនុញ្ញាត"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "បញ្ជី​នៃ​ម៉ាស៊ីន​ដែល​បាន​អនុញ្ញាត"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "ទីនេះ​អ្នក​អាច​ឃើញ​បញ្ជី​នៃ​ម៉ាស៊ីន​ដែល​បាន​អនុញ្ញាត​ឲ្យ​ចូល​ដំណើរ​ការ​ថត​នេះ​តាម​រយះ NFS ។\n"
+#~ "ជួរ​ឈរ​ដំបូង​បង្ហាញ​ឈ្មោះ ឬ​អាសយដ្ឋាន​នៃ​ម៉ាស៊ីន ជួរ​ឈរ​ទីពីរ​បង្ហាញ​ប៉ារ៉ាម៉ែត្រ​ចូល​ដំណើរ​ការ ។ ឈ្មោះ '*' "
+#~ "ឲ្យ​ការ​ចូល​ដំណើរ​ការ​ជា​សាធារណ ។"
+
+#~ msgid "&Add Host..."
+#~ msgstr "បន្ថែម​ម៉ាស៊ីន..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "កែប្រែ​ម៉ាស៊ីន..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "យក​ម៉ាស៊ីន​ចេញ"
+
+#~ msgid "Name/Address"
+#~ msgstr "ឈ្មោះ/អាសយដ្ឋាន"
+
+#~ msgid "Parameters"
+#~ msgstr "ប៉ារ៉ាមែត្រ"
+
+#~ msgid "Host Properties"
+#~ msgstr "លក្ខណ​សម្បត្តិ​របស់​ម៉ាស៊ីន"
+
+#~ msgid "&Name/address:"
+#~ msgstr "ឈ្មោះ/អាសយដ្ឋាន ៖ "
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>វាល ឈ្មោះ / អាសយដ្ឋាន</b>\n"
+#~ "<p>\n"
+#~ "ទីនេះ​អ្នក​អាច​បញ្ចូល​ឈ្មោះ ឬ​អាសយដ្ឋាន​ម៉ាស៊ីន ។<br>\n"
+#~ "ម៉ាស៊ីន​ប្រហែល​ជា​ត្រូវ​បាន​បញ្ជាក់​ក្នុង​ផ្លូវ​ជាច្រើន ៖\n"
+#~ "<p>\n"
+#~ "<i>ម៉ាស៊ីន​តែ​មួយ</i>\n"
+#~ "<p>\n"
+#~ "នេះ​គឺ​ជា​ទ្រង់ទ្រាយ​សាមញ្ញ​បំផុត ។ អ្នក​ប្រហែល​ជា​បញ្ជាក់​ម៉ាស៊ីន​ដោយ​ឈ្មោះ​កាត់​ដែល​សម្គាល់​ដោយ​អ្នក​"
+#~ "ដោះស្រាយ ឈ្មោះ​ដែន​ដែល​មាន​គុណភាព ឬ​ដោយ​អាសយដ្ឋាន IP ។\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>ក្រុម​បណ្ដាញ</i>\n"
+#~ "<p>\n"
+#~ "ក្រុម​បណ្ដាញ NIS ប្រហែល​ជា​ត្រូវ​បាន​ឲ្យ​ជា @group ។ មាន​តែ​ចំណែក​ម៉ាស៊ីន​នៃ​សមាជិក​ក្រុម​បណ្ដាញ​"
+#~ "នីមួយៗចាត់​ទុក​នៅ​ក្នុង​សមាជិក​ភាព ។ ចំណែក​ម៉ាស៊ីន​ទទេរ​ឬ​ដែល​មាន (-) តែ​មិន​ត្រូវ​បាន​អើពើ​ទេ ។\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>តួ​អក្សរ​ជំនួស</i>\n"
+#~ "<p>\n"
+#~ "ឈ្មោះ​ម៉ាស៊ីន​ប្រហែល​ជា​មាន​តួ​អក្សរ​ជំនួស * និង ? ។ វា​អាច​ត្រូវ​បាន​ប្រើ​ដើម្បី​ធ្វើ​ការ​នាំ​ចេញ​ឯកសារ​កាន់​"
+#~ "តែ​ចង្អៀត ជា​ឧទាហរណ៍ *.cs.foo.edu ផ្គូផ្គង​គ្រប់​ម៉ាស៊ីន​ទាំងអស់​នៅ​ក្នុង​ដែន cs.foo.edu ។ ទោះ​"
+#~ "យ៉ាងណា តួ​អក្សរ​ជំនួស​មិន​ផ្គូផ្គង​សញ្ញា​ចំនុច​នៅ​ក្នុង​ឈ្មោះ​ដែន​ទេ ដូច្នេះ​លំនាំ​ខាង​លើ​មិន​រួម​បញ្ចូល​ម៉ាស៊ីន​ដូចជា "
+#~ "a.b.cs.foo.edu ទេ ។\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>បណ្ដាញ IP</i>\n"
+#~ "<p>\n"
+#~ "អ្នក​អាច​នាំ​ថត​ចេញ​ទៅ​កាន់​ម៉ាស៊ីន​ទាំងអស់​តាម​បណ្ដាញ IP (រង-) ដែល​កើត​ឡើង​ដំណាល​គ្នា ។ វា​ត្រូវ​បាន​"
+#~ "ធ្វើ​ដោយ​បញ្ជាក់អាសយដ្ឋាន IP និង របាំង​បណ្ដាញ​​គូ​ជា អាសយដ្ឋាន/របាំង​បណ្ដាញ ដែល​របាំង​បណ្ដាញ​អាច​"
+#~ "ត្រូវ​បាន​បញ្ជាក់​នៅ​ក្នុង​ទ្រង់ទ្រាយ​ចំនុច​ប្រព័ន្ធ​គោល​ដប់ ឬ ជា​ប្រវែង​របាំង​ដែល​​បន្ត (ជា​ឧទាហរណ៍ "
+#~ "`/255.255.252.0' ឬ `/22' ត្រូវ​បាន​បន្ថែម​ខាង​ចុង​ទៅ​លទ្ធផល​អាសយដ្ឋាន​មូលដ្ឋាន​បណ្ដាញ​ក្នុង​"
+#~ "បណ្ដាញ​រង​ដែល​ដូច​បេះបិទ​ជាមួយ 10 ប៊ីត​នៃ​ម៉ាស៊ីន) ។\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "ចូល​ដំណើរ​ការ​ជា​សាធារណ"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>ចូល​ដំណើរ​ការ​ជា​សាធារណ</b>\n"
+#~ "<p>\n"
+#~ "ប្រសិន​បើ​អ្នក​ធីក​ជម្រើស​នេះ អាសយដ្ឋាន​ម៉ាស៊ីន​នឹងជា​តួ​អក្សរ​ជំនួស​តែ​មួយ  ដែល​មាន​ន័យ​ថា​ចូល​ដំណើរ​ការ​ជា​"
+#~ "សាធារណ ។\n"
+#~ "វា​ដូច​គ្នា​ថា​តើ​អ្នក​គួរ​បញ្ចូល​តួ​អក្សរ​ជំនួស​ក្នុង​វាល​អាសយដ្ឋាន\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "ជម្រើស"
+
+#~ msgid "&Writable"
+#~ msgstr "អាច​សសេរ​បាន"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>អាច​សរសេរ​បាន</b>\n"
+#~ "<p>\n"
+#~ "អនុញ្ញាត​សំណើ​ទាំងពីរ អាន និង​សរសេរ​លើ​ភាគ NFS នេះ ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "លំនាំ​ដើម​គឺ​មិន​អនុញ្ញាត​សំណើ​ណា​មួយ​ដែល​ផ្លាស់ប្ដូរ​ប្រព័ន្ធ​ឯកសារ\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "គ្មាន​សុវត្ថិភាព"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>គ្មាន​សុវត្ថិភាព</b>\n"
+#~ "<p>\n"
+#~ "ប្រសិន​បើ​ធីក​ជម្រើស​នេះ វា​មិន​ទាមទារ​ឲ្យ​សំណើ​នោះ​ចាប់​កំណើត​នៅ​លើ​ច្រក​អ៊ីនធឺណិត​តិច​ជា "
+#~ "IPPORT_RESERVED (1024) ទេ ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ប្រសិន​បើ​មិន​ប្រាកដ​សូម​កុំ​ធីក ។\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "ធ្វើ​សម្មកាល​កម្ម"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>ធ្វើ​សម្មកាល​កម្ម</b>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​ស្នើ​ឯកសារ​សសេរ​ទាំងអស់​ត្រូវ​ធ្វើ​ទៅ​ថាស​មុន​ពេល​សំណើ​សសេរ​បញ្ចប់ ។ វា​ត្រូវ​បាន​ទាមទារ​ឲ្យ​"
+#~ "បញ្ចប់​ដោយ​សុវត្ថិភាព​នៃ​ទិន្ន័យ​ក្នុង​ការ​ប្រឈរ​មុខ​នៃ​ការ​ប៉ះ​ទង្គិច​ម៉ាស៊ីន​បម្រើ ប៉ុន្តែ​ទទួល​រង​ការ​ចុច​ដំណើរ​"
+#~ "ការ ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "លំនាំ​ដើម​អនុញ្ញាត​ម៉ាស៊ីន​បម្រើ​ឲ្យ​សសេរ​ទិន្ន័យ​ចេញ​នៅ​ពេល​ណា​ដែល​វា​រួចរាល់ ។\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "គ្មាន wdelay"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>គ្មាន wdelay</b>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​មាន​ប្រសិទ្ធិភាព បើ​បាន​កំណត់ ធ្វើ​សម្មកាលកម្ម ផង​ដែរ ។ ម៉ាស៊ីន​បម្រើ NFS នឹង​ពន្យារ​ពេល​"
+#~ "ជា​ធម្មតា ការ​ប្រព្រឹត្ត​សំណើរ​សរសេរ​ទៅ​ថាស​យ៉ាង​តូច បើ​វា​សង្ស័យ​ថា​សំណើរ​សរសេរ​ប្រហែល​ស្ថិត​ក្នុង​"
+#~ "វឌ្ឍនភាព ឬ​នឹង​មក​ដល់​ឆាប់ៗ ។ វា​នេះ​អនុញ្ញាត​ឲ្យ​ប្រព្រឹត្ត​សំណើ​សរសេរ​ច្រើន​ទៅ​ថា ដែល​មាន​ប្រតិបត្តិការ​"
+#~ "មួយ ដែល​អាច​ធ្វើ​ឲ្យ​ដំណើរ​ការ​កាន់​តែ​ប្រសើរ ។ បើ​ម៉ាស៊ីន​បម្រើ NFS បាន​ទទួល​សំណើរ​មិន​ទាក់ទង​តូច​ចម្បង "
+#~ "ឥរិយាបទ​នេះ​អាច​កាត់​បន្ថយ​ដំណើរ​ការ​យ៉ាង​ពិត​ប្រាកដ ដូច្នេះ​គ្មាន wdelay ដើម្បី​បិទ​វា​ទេ ។ </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "មិន​លាក់"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>មិន​លាក់</b>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​ត្រូវ​បាន​ផ្អែក​លើ​ជម្រើស​នៃ​ឈ្មោះ​ដូចគ្នា ដែល​បាន​ផ្ដល់​ឲ្យ​ក្នុង IRIX NFS​ ។ ជា​ធម្មតា "
+#~ "ប្រសិន​បើ​ម៉ាស៊ីន​បម្រើ​នាំចេញ​ប្រព័ន្ធ​ឯកសារ​ពីរ ប្រព័ន្ធ​ឯកសារ​មួយ​ត្រូវ​បាន​ម៉ោន​ទៅ​កន្លែង​ផ្សេង បន្ទាប់​មក​"
+#~ "ម៉ាស៊ីន​ភ្ញៀវ​នឹង​ត្រូវ​តែ​ម៉ោន​ប្រព័ន្ធ​ឯកសារ​ទាំង​ពីរ​យ៉ាង​ជាក់លាក់ ដើម្បី​ចូល​ដំណើរ​ការ​ទៅ​ពួក​វា ។ ប្រសិន​បើ​វា​"
+#~ "គ្រាន់​តែ​ម៉ោន​ទៅ​មេ វា​នឹង​ឃើញ​ថត​ទទេ​នៅ​កន្លែង​ដែល​ប្រព័ន្ធ​ឯកសារ​ដែល​ត្រូវ​បាន​ម៉ោន ។ ប្រព័ន្ធ​ឯកសារ​នោះ​"
+#~ "គឺ \"លាក់\" ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "កំណត់​ជម្រើស​មិន​លាក់​ទៅ​លើ​ប្រព័ន្ធ​ឯកសារ​ដែល​បង្ករ​ឲ្យ​វា​មិន​អាច​ត្រូវ​បាន​លាក់ និង​ម៉ាស៊ីន​ភ្ញៀវ​ដែល​មាន​សេចក្ដី​"
+#~ "អនុញ្ញាត​យ៉ាង​សមរម្យ​នឹង​អាច​រំកិល​ពី​មេ​ទៅ​ប្រព័ន្ធ​ឯកសារ​ដោយ​គ្មាន​ចំណាំ​ការ​ផ្លាស់ប្ដូរ ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ទោះ​ជា​យ៉ាង​ណា ម៉ាស៊ីន​ភ្ញៀវ NFS ខ្លះ​មិន​បាន​ទប់ស្កាត់​យ៉ាង​ល្អ​ជាមួយ​ស្ថានភាព​នេះ ជា​ឧទាហរណ៍ វា​អាច​ទៅ​"
+#~ "រួច​សម្រាប់​ឯកសារ​ពីរ​ក្នុង​ប្រព័ន្ធ​ឯកសារ​ដែល​ជាក់​ច្បាស់​ដើម្បី​មានលេច inode ដូច​គ្នា ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​មិន​លាក់​ស្ថិត​នៅ​លើ​ការ​នាំ​ចេញ​ម៉ាស៊ីន​តែ​មួយ​ដែល​មាន​ប្រសិទ្ធិភាព​បច្ចុប្បន្ន ។ វា​មិន​ធ្វើ​កា​រដោយ​ពឹង​"
+#~ "ផ្អែក​លើ​​ក្រុម​បណ្ដាញ បណ្ដាញ​រង ឬ ការ​នាំចេញ​តួ​អក្សរ​ជំនួស ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​អាច​មាន​ប្រយោជន៍​ក្នុង​ស្ថានភាព​ខ្លះ ប៉ុន្តែ​វា​គួរ​ត្រូវ​បាន​ប្រើ​ជាមួយ​ការ​ថែរក្សារ និង​បន្ទាប់​ពី​"
+#~ "បញ្ជាក់​ថា​ម៉ាស៊ីន​ភ្ញៀវ​បាន​ទប់ស្កាត់​ស្ថានភាព​ដោយ​មាន​ប្រសិទ្ធិភាព ។\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "មិន​ពិនិត្យ​មែកធាង​រង"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>មិន​ពិនិត្យ​មែកធាង​រង</b>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​បិទ​ការ​ធីក​មែកធាង​រង ដែល​មាន​ការ​ជាប់​ទាក់ទង​សុវត្ថិភាព​កម្រិត​ស្រាល ប៉ុន្តែ​អាច​ធ្វើ​ឲ្យ​ភាព​ទុក​"
+#~ "ចិត្ត​បាន​ប្រសើរ​ក្នុង​កាលៈទេសៈ​មួយ​ចំនួន ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "បើ​ថត​រង​នៃ​ប្រព័ន្ធ​ឯកសារ​ត្រូវ​បាន​នាំចេញ ប៉ុន្តែ​មិន​មែន​ប្រព័ន្ធ​ឯកសារ​ទាំងមូល ដូច្នេះ​ពេល​ណា​ដែល​សំណើ "
+#~ "NFS មក​ដល់ ម៉ាស៊ីន​បម្រើ​ត្រូវ​តែ​ពិនិត្យ​ថា ឯកសារ​ដែល​ចូល​ដំណើរ​ការ​នៅ​ក្នុង​ប្រព័ន្ធ​ឯកសារ​សមរម្យ (ដែល​ងាយ​"
+#~ "ស្រួល) ប៉ុន្តែ​វា​ត្រូវ​តែ​នៅ​ក្នុង​មែកធាង​ដែល​នាំ​ចេញ​ផង​ដែរ (ដែល​លំបាក) ។ ការ​ពិនិត្យ​នេះ​ហៅ​ថា "
+#~ "subtree_check ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ដើម្បី​ដំណើរ​ការ​ការ​ពិនិត្យ​នេះ ម៉ាស៊ីន​បម្រើ​ត្រូវ​តែ​រួម​បញ្ចូល​ព័ត៌មាន​មួយ​ចំនួន​អំពី​ទីតាំង​ឯកសារ​ក្នុង "
+#~ "\"filehandle\" ដែល​ត្រូវ​បាន​ផ្ដល់​ទៅ​ម៉ាស៊ីន​ភ្ញៀវ ។ នេះ​អាច​បង្ក​បញ្ហា​ជាមួយ​ឯកសារ​ដែល​ចូល​ដំណើរ​"
+#~ "ការ ដែល​ត្រូវ​បាន​ប្ដូរ​ឈ្មោះ ខណៈ​ពេល​ម៉ាស៊ីន​ភ្ញៀវ​បើក​ពួក​វា (តែ​ទោះ​យ៉ាង​ណា ក្នុង​ករណី​ធម្មតា វា​នៅ​តែ​"
+#~ "ធ្វើការ) ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ការ​ពិនិត្យ​មែកធាង​រង​ត្រូវ​បាន​ធ្វើ​ឲ្យ​ប្រាកដ​ថា ឯកសារ​នៅ​ក្នុង​ថត ដែល​មាន​តែ root មាន​សិទ្ធិ អាច​ត្រូវ​"
+#~ "បាន​ចូល​ដំណើរ​ការ បើ​ប្រព័ន្ធ​ឯកសារ​ត្រូវ​បាន​នាំ​ចេញ​ដោយ no_root_squash (សូម​មើល​ខាង​ក្រោម) សូម្បី​"
+#~ "ឯកសារ​ខ្លួន​វា អនុញ្ញាត​សិទ្ធិ​ទូទៅ​បន្ថែម ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ជា​មគ្គុទ្ទេសក៏​ទូទៅ ប្រព័ន្ធ​ឯកសារ​ថត​ផ្ទះ ដែល​ជា​ធម្មតា​ត្រូវ​បាន​នាំ​ចេញ​នៅ​ថត root និង​ឃើញ​ឯកសារ​ជា​"
+#~ "ច្រើន​ប្ដូរ​ឈ្មោះ គួរ​តែ​ត្រូវ​បាន​នាំ​ចេញ​ដោយ​បិទ​ការ​ពិនិត្យ​ថត​រង ។ ប្រព័ន្ធ​ឯកសារ​ដែល​ភាគ​ច្រើន​បាន​តែ​"
+#~ "អាន និង​យ៉ាងហោច​ណាស់​មិន​ឃើញ​ឯកសារ​មួយ​ចំនួន​ប្ដូរ​ឈ្មោះ (ឧ. /usr or /var) និង​សម្រាប់​ថត​រង​ណាមួយ​ដែល​"
+#~ "មិន​ត្រូវ​បាន​នាំ​ចេញ គួរ​ត្រូវ​បាន​នាំចេញ​ដោយ​បិទ​ការ​ពិនិត្យ​ថត​រង ។\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "ការ​ចាក់​សោ​គ្មាន​សុវត្ថិភាព"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>ការ​ចាក់​សោ​គ្មាន​សុវត្ថិភាព</b>\n"
+#~ "<p>\n"
+#~ "ជម្រើស​នេះ​ប្រាប់​ម៉ាស៊ីន​បម្រើ NFS មិន​ឲ្យ​ទាមទារ​ការ​ផ្ទៀងផ្ទាត់​ភាព​ត្រឹមត្រូវ​នៃ​សំណើ​ចាក់សោ (ឧ. សំណើ​"
+#~ "ដែល​ប្រើ​ពីធីការ NLM) ។ តាម​ធម្មតា ​ម៉ាស៊ីន​បម្រើ NFS នឹង​ត្រូវ​ការ​សំណើ​ចាក់សោ​មួយ​ដើម្បី​ទទួល​យក​ភាព​"
+#~ "ទុកចិត្ត​សម្រាប់​អ្នក​ប្រើ​ ដែល​បាន​អាន​ការ​ចូល​ដំណើរ​ការ​ទៅកាន់​ឯកសារ ។ ជាមួយ​ទង់​នេះ គ្មាន​ការ​ត្រួត​"
+#~ "ពិនិត្យ​ការ​ចូល​ដំណើរការ​នឹង​ត្រូវ​បាន​អនុវត្ត ។\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "ការ​អនុវត្ត​ម៉ាស៊ីន​ភ្ញៀវ NFS មុន​មិន​បាន​ផ្ញើ​លិខិត​សម្គាល់​ជាមួយ​នឹង​សំណើ​ចាក់សោ និង​ម៉ាស៊ីន​ភ្ញៀវ​ NFS "
+#~ "បច្ចុប្បន្ន​ជា​ច្រើន​នៅ​តែ​មាន​ដែល​មាន​មូលដ្ឋាន​លើ​ការ​អនុវត្ត​ចាស់ៗ ។ ប្រើ​ទង់​នេះ​ ប្រសិន​បើ​អ្នក​រក​ឃើញ​"
+#~ "ថា អ្នក​អាច​ចាក់​សោ​តែ​ឯកសារ​ដែល​​ជា​ពាក្យ​ដែល​អាច​អាន​បាន ។\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "ការ​ផ្គូផ្គង​អ្នក​ប្រើ"
+
+#~ msgid "All s&quash"
+#~ msgstr "ការ​បំផ្លាញ​ទាំងអស់"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>ការ​បំផ្លាញ​ទាំងអស់</b>\n"
+#~ "<p>\n"
+#~ "ផ្គូផ្គង uids និង gids ទាំងអស់​ទៅ​និង​អ្នក​ប្រើ​អនាមិក ។ មាន​ប្រយោជន៍​សម្រាប់​ថត FTP សាធារណ​ដែល​"
+#~ "បាន​នាំចេញ​ដោយ NFS ថត​ស្ពូល​ព័ត៌មាន ។ល។ </p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "គ្មាន​ការ​បំផ្លាញ root"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>គ្មាន​ការ​បំផ្លាញ root</b>\n"
+#~ "<p>\n"
+#~ "បិទ​ការ​បំផ្លាញ​ root  ។ ជម្រើស​នេះ​មាន​ប្រយោជន៍​ចម្បង​សម្រាប់​ម៉ាស៊ីន​ភ្ញៀវ​ដែល​គ្មាន​ថាស ។\n"
+#~ "</p>\n"
+#~ "<i>ការ​បំផ្លាញ root</i>\n"
+#~ "<p>\n"
+#~ "ផ្គូផ្គង​សំណើ​ពី uid/gid 0 ទៅ uid/gid អនាមិក ។ ចំណាំ​ថា​នេះ​មិន​អនុវត្ត​ចំពោះ uid ផ្សេង​ទៀត ដែល​"
+#~ "អាច​ដឹង​ស្មើៗ​គ្នា ដូច​ជា​ធុង​សំរាម​អ្នក​ប្រើ ។\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "UID អនាមិក ៖ "
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>UID/GID អនាមិក</b> <p> ជម្រើស​ទាំងនេះ​កំណត់​យ៉ាង​ច្បាស់​នូវ uid និង gid នៃ​គណនី​អនាមិក ។ "
+#~ "ជម្រើស​នេះ​មាន​ប្រយោជន៍​ជា​ចម្បង​សម្រាប់​ម៉ាស៊ីន​ភ្ញៀវ PC/NFS កន្លែង​ដែល​អ្នក​ប្រហែល​ជា​ត្រូវ​ការ​ឲ្យ​សំណួរ​"
+#~ "ទាំងអស់​លេចឡើង​ចេញ​ពី​អ្នក​ប្រើ​មួយ ។ </p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "GID អនាមិក ៖ "
+
+#~ msgid "Folder:"
+#~ msgstr "ថត ៖"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "ចែក​រំលែក​ជាមួយ NFS (លីនុច/យូនីក)"
+
+#~ msgid "NFS Options"
+#~ msgstr "ជម្រើស NFS"
+
+#~ msgid "Pu&blic"
+#~ msgstr "សាធារណៈ"
+
+#~ msgid "W&ritable"
+#~ msgstr "អាច​សសេរ​បាន"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "ជម្រើស NFS បន្ថែម"
+
+#~ msgid "Samba Options"
+#~ msgstr "ជម្រើស Samba"
+
+#~ msgid "P&ublic"
+#~ msgstr "សាធារណៈ"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "ជម្រើស Samba បន្ថែម"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "អនុញ្ញាត​អ្នក​ប្រើ​ទាំងអស់​ចែក​រំលែក​ថត"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "មាន​តែ​អ្នក​ប្រើ​នៃ​ក្រុម '%1' ត្រូវ​បាន​អនុញ្ញាត​ចែក​រំលែក​ថត"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "អ្នក​ប្រើ​នៃ​ក្រុម '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "យក​អ្នក​ប្រើ​ចេញ"
+
+#~ msgid "Add User"
+#~ msgstr "បន្ថែម​អ្នក​ប្រើ"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "សមាជិក​ក្រុម​អាច​ចែក​រំលែក​ថត​ដោយ​គ្មាន​ពាក្យ​សម្ងាត់​របស់ root"
+
+#~ msgid "Change Group..."
+#~ msgstr "ផ្លាស់ប្ដូរ​ក្រុម..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "ម៉ាស៊ីន​បម្រើ SMB និង NFS មិន​បាន​ដំឡើង​នៅ​លើ​ម៉ាស៊ីន​នេះ​ទេ ដើម្បី​បើក​ម៉ូឌុល​នេះ​ម៉ាស៊ីន​បម្រើ​ត្រូវ​តែ​"
+#~ "ដំឡើង ។"
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "បើក​ការ​ចែក​រំលែក​ឯកសារ​បណ្ដាញ"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "ការ​ចែក​រំលែក​ធម្មតា"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "បើក​ការ​ចែក​រំលែក​ធម្មតា​ដើម្បី​អនុញ្ញាត​ឲ្យ​អ្នក​ប្រើ​ចែក​រំលែក​ថត​ពី​ថត​ផ្ទះ​របស់​គេ ដោយ​មិន​ដឹង​ពាក្យ​សម្ងាត់​"
+#~ "របស់ root ។"
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "ការ​ចែក​រំលែក​កម្រិត​ខ្ពស់​"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "បើក​ការ​ចែក​រំលែក​កម្រិត​ខ្ពស់ ដើម្បី​អនុញ្ញាត​ឲ្យ​អ្នក​ប្រើ​ចែក​​រំលែក​ថត​ច្រើន ដរាបណា​ពួក​គេ​មាន​សិទ្ធិ​ក្នុង​"
+#~ "ការ​សសេរ​ទៅ​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ​ដែល​ត្រូវការ ឬ​ពួក​គេ​ស្គាល់​ពាក្យ​សម្ងាត់​របស់ root ។"
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "ប្រើ NFS (លីនុច/យូនីក)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "ប្រើ Samba (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "អ្នក​ប្រើ​ដែល​បាន​អនុញ្ញាត"
+
+#~ msgid "Shared Folders"
+#~ msgstr "ថត​ដែល​ចែក​រំលែក"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "បន្ថែម..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "ផ្លាស់ប្ដូរ..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ SAMBA <strong>'smb.conf'</strong> មិន​អាច​រក​ឃើញ</p>សូម​"
+#~ "ប្រាកដ​ថា អ្នក​បាន​ដំឡើង SAMBA ។\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "បញ្ជាក់​ទីតាំង"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "ឯកសារ smb.conf|Samba conf.\n"
+#~ "*|All Files"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "យក​ទីតាំង smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>ឯកសារ <i>%1</i> មិន​អាច​អាន​បាន​ទេ ។</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "មិន​អាច​អាន​ឯកសារ"
+
+#~ msgid "Error while opening file"
+#~ msgstr "កំហុស​ខណៈ​ពេល​បើក​ឯកសារ"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "ការ​ចូលរួម​ដែន %1 បាន​បរាជ័យ ។"
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>សូម​បញ្ចូល​ពាក្យ​សម្ងាត់​សម្រាប់​អ្នក​ប្រើ <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>ការ​បន្ថែម​អ្នក​ប្រើ <b>%1</b> ទៅ​មូលដ្ឋាន​ទិន្ន័យ​អ្នក​ប្រើ Samba បាន​បរាជ័យ ។</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "យក​អ្នក​ប្រើ %1 ចេញ​ពី​មូលដ្ឋាន​ទិន្ន័យ​អ្នក​ប្រើ Samba បាន​បរាជ័យ ។"
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "សូម​បញ្ចូល​ពាក្យ​សម្ងាត់​សម្រាប់​អ្នក​ប្រើ %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "ការ​ផ្លាស់ប្ដូរ​ពាក្យ​សម្ងាត់​សម្រាប់​អ្នក​ប្រើ %1 បាន​បរាជ័យ ។"
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr ""
+#~ "<h1>ការ​កំណត់​រចនា​សម្ព័ន្ធ Samba</h1> អ្នក​អាច​កំណត់​រចនា​សម្ព័ន្ធ​ម៉ាស៊ីន​បម្រើ SAMBA របស់​អ្នក​"
+#~ "ទីនេះ ។"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>ការ​ចែក​រំលែក</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​នៅ​ផ្ទះ ឬ​បណ្ដាញ​នៅ​ការិយាល័យ ។"
+#~ "<br /> វា​អនុញ្ញាត​គ្រប់​គ្នា​ឲ្យ​អាន​បញ្ជី​នៃ​ថត​រួម​របស់​អ្នក​ទាំងអស់ និង​ម៉ាស៊ីន​បោះពុម្ព​មុន​ពេល​ការ​ចូល​ត្រូវ​"
+#~ "បាន​ទាមទារ ។"
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>អ្នក​ប្រើ</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​ធំ ហើយ​អ្នក​មិន​ចង់​អនុញ្ញាត​ឲ្យ​គ្រប់​គ្នា​"
+#~ "អាន​បញ្ជី​ និង​ម៉ាស៊ីន​បោះពុម្ព​ដែបាន​ចែក​រំលែក​របស់​អ្នក​ដោយ​គ្មាន​ការ​ចូល ។<br /><br />ប្រសិន​បើ​អ្នក​ចង់​"
+#~ "រត់​ម៉ាស៊ីន​បម្រើ Samba របស់​អ្នក ជា <b>អ្នក​គ្រប់គ្រង​ដែន​ចម្បង</b> (PDC) អ្នក​ត្រូវ​តែ​កំណត់​ជម្រើស​"
+#~ "នេះ​ផង​ដែ ។"
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>ម៉ាស៊ីន​បម្រើ</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​ធំ ហើយ​ម៉ាស៊ីន​បម្រើ samba គួរ​ធ្វើ​"
+#~ "ឲ្យ​ឈ្មោះ​អ្នក​ប្រើ/ពាក្យ​សម្ងាត់​មាន​សុពលភាព ដោយ​បញ្ជូន​វា​ទៅ​ម៉ាស៊ីន​បម្រើ SMB ផ្សេង​ទៀត ដូចជា ប្រអប់ "
+#~ "NT ។"
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>ដែន</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​ធំ​និង​ម៉ាស៊ីន​បម្រើ​គួរ​ធ្វើ​ឲ្យ​មាន​សុពលភាព "
+#~ "ឈ្មោះ​អ្នក​ប្រើ/ពាក្យ​សម្ងាត់​ដោយ​បញ្ជូន​វា​ទៅ Windows NT Primary ឬ Backup Domain "
+#~ "Controller ។"
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "ប្រើ​កម្រិត​សុវត្ថិភាព <i>ADS</i> ប្រសិន​បើ​អ្នក​មាន​បណ្ដាញ​ធំ និង​ម៉ាស៊ីន​បម្រើ samba គួរ​ធ្វើ​ដូច​ជា​"
+#~ "សមាជិក​ដែន​នៅ​ក្នុង ADS realm ។"
+
+#~ msgid "Sorry"
+#~ msgstr "សូម​អភ័យ​ទោស"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "អ្នក​បាន​បញ្ចូល​ពាក្យ​សម្ងាត់​​ពីរ​ខុស​គ្នា ។ សូម​ព្យាយាម​ម្ដង​ទៀត ។"
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "ជម្រើស <em>%1</em> មិន​ត្រូវ​បាន​គាំទ្រ​ដោយ​កំណែ Samba របស់​អ្នក​ទេ"
+
+#~ msgid "Unnamed"
+#~ msgstr "​​គ្មាន​ឈ្មោះ"
+
+#~ msgid "&Hide"
+#~ msgstr "លាក់"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "Veto Oplock"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>ឯកសារ​ខ្លះ​ដែល​អ្នក​បាន​ជ្រើស ត្រូវ​បាន​លាក់​ពីព្រោះ​ពួក​វា​ចាប់ផ្ដើម​ជាមួយ​សញ្ញា​ចុច តើ​អ្នក​ចង់​ដោះ​ធីក​"
+#~ "ឯកសារ ដែល​ចាប់ផ្ដើម​ដោយ​សញ្ញា​ចុច​ឬ?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "ឯកសារ​ដែល​ចាប់ផ្ដើម​ដោយ​សញ្ញា​ចុច"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "ដោះ​ធីក​ដែល​បាន​លាក់"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "រក្សា​ទុក​ដែល​បាន​លាក់"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>ឯកសារ​ខ្លះ​ដែល​អ្នក​បាន​ជ្រើស ត្រូវ​បាន​ផ្គូផ្គង​ដោយ​ខ្សែ​តួ​អក្សរ​ជំនួស <b>'%1'</b> តើ​អ្នក​ចង់​"
+#~ "ដោះ​ធីក​ឯកសារ​ទាំងអស់​ដែល​ផ្គូផ្គង​ <b>'%1'</b>ឬ?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "ខ្សែ​អក្សរ​ជំនួស"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "ដោះ​ធីក​ការ​ផ្គូផ្គង"
+
+#~ msgid "Keep Selected"
+#~ msgstr "រក្សា​ទុក​ដែល​បាន​ជ្រើស"
+
+#~ msgid "Default"
+#~ msgstr "លំនាំ​ដើម"
+
+#~ msgid "Admin"
+#~ msgstr "គ្រប់គ្រង"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​បាន​បញ្ជាក់ <b>សិទ្ធិ​អាន​សាធារណៈ</b> សម្រាប់​ថត​នេះ ប៉ុន្តែ​គណនី​ភ្ញៀវ <b>%1</b> មិន​"
+#~ "មាន​សិទ្ធិ​អាន​ចាំបាច់​ទេ<br />តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "ព្រមាន"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​បាន​បញ្ជាក់ <b>សិទ្ធិ​សរសេរ​សាធារណៈ</b> សម្រាប់​ថត​នេះ ប៉ុន្តែ​គណនី​ភ្ញៀវ <b>%1</b> មិន​"
+#~ "មាន​សិទ្ធិ​សសេរ​ចាំបាច់​ទេ<br />តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​បាន​បញ្ជាក់ <b>សិទ្ធិ​សរសេរ</b> សម្រាប់​ថត​នេះ ប៉ុន្តែ​គណនី​ភ្ញៀវ <b>%1</b> មិន​មាន​សិទ្ធិ​"
+#~ "សសេរ​ចាំបាច់​ទេ<br /> តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​បាន​បញ្ជាក់ <b>សិទ្ធិ​អាន</b> សម្រាប់​ថត​នេះ ប៉ុន្តែ​គណនី​ភ្ញៀវ <b>%1</b> មិន​មាន​សិទ្ធិ​អាន​"
+#~ "ចាំបាច់​ទេ<br /> តើ​អ្នក​ចង់​បន្ត​ឬ​ទេ?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "ធាតុ​សាធារណៈ​មាន​រួច​ហើយ ។"
+
+#~ msgid "Host Already Exists"
+#~ msgstr "ម៉ាស៊ីន​មាន​រួច​ហើយ"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "សូម​បញ្ចូល​ឈ្មោះ​ម៉ាស៊ីន​ឬ​អាសយដ្ឋាន IP ។"
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "គ្មាន ឈ្មោះ​ម៉ាស៊ីន/អាសយដ្ឋាន IP"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "ម៉ាស៊ីន '%1' មាន​រួច​ហើយ ។"
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "កំពុង​អាន​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ Samba ..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "កំពុង​អាន​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ NFS ..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "សូម​បញ្ចូល​ផ្លូវ​ត្រឹមត្រូវ ។"
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "មាន​តែ​ថត​ទេ​ដែល​អាច​ចែក​រំលែក​បាន ។"
+
+#~ msgid "The folder is already shared."
+#~ msgstr "ថត​ត្រូវ​បាន​ចែក​រំលែក​រួច​ហើយ ។"
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "អ្នក​គ្រប់គ្រង​មិន​អនុញ្ញាត​ឲ្យ​ចែក​រំលែក​ជាមួយ NFS ទេ ។"
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "កំហុស ៖ មិន​អាច​អាន​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ NFS ទេ ។"
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "អ្នក​គ្រប់គ្រង​មិន​អនុញ្ញាត​ឲ្យ​ចែក​រំលែក​ជាមួយ Samba ទេ ។"
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "កំហុស ៖ មិន​អាច​អាន​ឯកសារ​កំណត់​រចនា​សម្ព័ន្ធ Samba ទេ ។"
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "អ្នក​បាន​បញ្ចូល​ឈ្មោះ​សម្រាប់​ការ​ចែក​រំលែក Samba ។"
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "អ្នក​ត្រូវ​ការ​មាន​សេចក្ដី​អនុញ្ញាត​ដើម្បី​ចែក​រំលែក​ថត ។​"
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "កំណត់​រចនា​សម្ព័ន្ធ​ការ​ចែក​រំលែក​ឯកសារ..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "មិន​បាន​ដំឡើង​ម៉ាស៊ីន​បម្រើ NFS នៅ​ក្នុង​ប្រព័ន្ធ​នេះ​ទេ"
+
+#~ msgid "Could not save settings."
+#~ msgstr "មិន​អាច​រក្សា​ទុក​ការ​កំណត់ ។"
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "មិន​អាច​បើក​ឯកសារ '%1' សម្រាប់​សសេរ ៖ %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "បរាជ័យ​ក្នុង​ការ​រក្សា​ទុក"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>ការ​ចែក​រំលែក​ឯកសារ</h1><p>ម៉ូឌុល​នេះ​អាច​ត្រូវ​បាន​ប្រើ​ដើម្បី​អនុញ្ញាត​ការ​ចែក​រំលែក​ឯកសារ​នៅ​លើ​"
+#~ "បណ្ដាញ​ដោយ​ប្រើ \"ប្រព័ន្ធ​ឯកសារ​បណ្ដាញ\" (NFS) ឬ SMB ក្នុង Konqueror ។ ម៉ូឌុល​បន្ទាប់​អនុញ្ញាត​"
+#~ "ឲ្យ​អ្នក​ចែក​រំលែក​ឯកសារ​ជាមួយ​កុំព្យូទ័រ Windows(R) នៅ​លើ​បណ្ដាញ​របស់​អ្នក ។</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "ចែក​រំលែក​ថត"
+
+#~ msgid "Allowed Users"
+#~ msgstr "អ្នក​ប្រើ​ដែល​បាន​អនុញ្ញាត"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "អ្នក​ប្រើ​ទាំងអស់​គឺ​នៅ​ក្នុង​ក្រុម %1 រួច​ហើយ ។"
+
+#~ msgid "Select User"
+#~ msgstr "ជ្រើស​អ្នក​ប្រើ"
+
+#~ msgid "Select a user:"
+#~ msgstr "ជ្រើស​អ្នក​ប្រើ ៖"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "មិន​អាច​បន្ថែម​អ្នក​ប្រើ​ '%1' ទៅ​ក្រុម '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "មិន​អាច​យក​អ្នក​ប្រើ​ '%1' ចេញ​ពី​ក្រុម '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "អ្នក​ត្រូវ​តែ​ជ្រើស​ក្រុម​ត្រឹមត្រូវ ។"
+
+#~ msgid "New file share group:"
+#~ msgstr "ក្រុម​ចែក​រំលែក​ឯកសារ​ថ្មី ៖"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "បន្ថែម​អ្នក​ប្រើ​ពី​ក្រុម​ចែក​រំលែក​ឯកសារ​ចាស់​ទៅ​ក្រុម​ថ្មី​វិញ"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "យក​អ្នក​ប្រើ​ចេញ​ពី​ក្រុម​ចែក​រំលែក​ឯកសារ​ចាស់"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "លុប​ក្រុម​ចែក​រំលែក​ឯកសារ​ចាស់"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "មាន​តែ​អ្នក​ប្រើ​នៃ​ក្រុម​ដែល​ជាក់ច្បាស់​ទេ ដែល​អនុញ្ញាត​ឲ្យ​ចែក​រំលែក​ថត"
+
+#~ msgid "Choose Group..."
+#~ msgstr "ជ្រើស​ក្រុម..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "តើ​អ្នក​ពិត​ជា​ចង់​យក​អ្នក​ប្រើ​ចេញ​ពី​ក្រុម '%1' ​ឬ?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "តើ​អ្នក​ពិត​ជា​ចង់​លុប​ក្រុម '%1' ឬ?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "បរាជ័យ​ក្នុង​ការ​លុប​ក្រុម '%1' ។"
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "សូម​ជ្រើសរើស​ក្រុម​ដែល​ត្រឹមត្រូវ ។"
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "ក្រុម​ '%1' នេះ​មិន​មាន​ទេ ។ វា​គួរ​តែ​បង្កើត​ឬ?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "កុំ​បង្កើត"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "ការ​បង្កើត​នៃ​ក្រុម '%1' បាន​បរាជ័យ ។"

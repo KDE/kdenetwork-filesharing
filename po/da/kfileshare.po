@@ -1,0 +1,3655 @@
+# translation of kfileshare.po to
+# Danish translation of kfileshare
+# Copyright.
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2004, 2005, 2006.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2011, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2020-07-22 21:50+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Afvis"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Tillad"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, fuzzy, kde-format
+#| msgid "&Read only"
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Sk&rivebeskyttet"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Tilladelser"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+#, fuzzy
+#| msgid "Fst&ype:"
+msgctxt "@label"
+msgid "Type:"
+msgstr "Filsystemt&ype:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Støtte for udvidede egenskaber ifølge OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Skrivbar"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+#, fuzzy
+#| msgid "OS/2 style extended attributes support"
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Støtte for udvidede egenskaber ifølge OS/2"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+#, fuzzy
+#| msgid "Delete Scripts"
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Slette-script"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Tilladelser"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Tilladelser"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Ejer"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Ejer"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Gruppe"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Tilladelser"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, fuzzy, kde-format
+#| msgid "Path"
+msgctxt "@title"
+msgid "File Path"
+msgstr "Søgesti"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Tilladelser"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Tilladelser"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "I&ngen adgang over hovedet"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Tilladelser"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#, fuzzy
+#| msgid "Sh&are this folder with other computers on the local network"
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Del denne m&appen med andre computere på lokalnetværket"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#, fuzzy
+#| msgid "Name:"
+msgctxt "@label"
+msgid "Name:"
+msgstr "Navn:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#, fuzzy
+#| msgid "Allow Guests"
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Tillad gæster"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#, fuzzy
+#| msgid "Full Control"
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Fuld kontrol"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#, fuzzy
+#| msgid "Read Only"
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Skrivebeskyttet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#, fuzzy
+#| msgid "&No access at all"
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "I&ngen adgang over hovedet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+#, fuzzy
+#| msgid "Show Samba status &monitor"
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Vis Samba-status&overvågning"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+#, fuzzy
+#| msgid "Password"
+msgctxt "@title"
+msgid "Set password"
+msgstr "Adgangskode"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#, fuzzy
+#| msgid "Password"
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Adgangskode"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgid "No Password"
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Ingen adgangskode"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+#, fuzzy
+#| msgid "Password"
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Adgangskode"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#, fuzzy
+#| msgid "Permissions"
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Tilladelser"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#, fuzzy
+#| msgid "&Cancel"
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "&Annullér"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#, fuzzy
+#| msgid "Samba must be installed before folders can be shared."
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba skal være installeret for at mapper kan deles."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#, fuzzy
+#| msgid "Install Samba"
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Installér Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+#, fuzzy
+#| msgid "The Samba package failed to install."
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Samba-pakken kunne ikke installeres."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+#, fuzzy
+#| msgid "Restart the computer to complete the installation."
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Genstart computeren for at gennemføre installationen."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#, fuzzy
+#| msgid "Restart"
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Genstart"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+#, fuzzy
+#| msgid "Sa&mba Users"
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Sa&mba-brugere"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, fuzzy, kde-format
+#| msgid "File sharing is disabled."
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Fildeling er deaktiveret."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, fuzzy, kde-format
+#| msgid "The folder does not exists."
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Mappen findes ikke."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, fuzzy, kde-format
+#| msgid "This is the name of the share"
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Dette er den delte mappes navn"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr ""
+
+#, fuzzy
+#~| msgid "Share"
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Del"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Opret"
+
+#, fuzzy
+#~| msgid "Create"
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Opret"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Del"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Installerer Samba..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Der er allerede en delt mappe med navnet <strong>%1</strong>.<br /"
+#~ ">Vælg et andet navn.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba er ikke installeret på dit system."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Del med S&amba (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Samba kunne ikke installeres.</strong><br />Kontrollér om "
+#~ "kpackagekit er korrekt installeret</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Vælg brugere"
+
+#~ msgid "Select &Users"
+#~ msgstr "Væl&g brugere"
+
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Ad&gang"
+
+#~ msgid "&Default"
+#~ msgstr "Stan&dard"
+
+#~ msgid "&Read access"
+#~ msgstr "Læse&adgang"
+
+#~ msgid "&Write access"
+#~ msgstr "Skrivead&gang"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Administratorsadgang"
+
+#~ msgid "&OK"
+#~ msgstr "&O.k."
+
+#~ msgid "Join Domain"
+#~ msgstr "Gå med i domæne"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Verificér:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Adgangskode:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Brugernavn:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domæneko&ntrollør:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domæne:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Vælg grupper"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Vælg gr&upper"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "Gruppet&ype"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX-gruppe"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S-gruppe"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "&UNIX- og NIS-gruppe"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Her kan du redigere Samba-brugere, opbevarede i filen smbpasswd.\n"
+#~ "<p>\n"
+#~ "Hver Samba-bruger skal have en tilsvarende UNIX-brugere.\n"
+#~ "Til højre kan du se alle UNIX-brugere, opbevarede i filen passwd og ikke "
+#~ "indstillede som Samba-brugere.\n"
+#~ "Du kan se Samba-brugerne til venstre.</p>\n"
+#~ "<p>\n"
+#~ "For at tilføje en ny Samba-bruger, klik helt enkelt på knappen <em>&lt; "
+#~ "Tilføj</em>.\n"
+#~ "De markerede UNIX-brugere bliver nu Samba-brugere og\n"
+#~ "fjernes fra listen over UNIX-brugere (men de forbliver UNIX-brugere).</"
+#~ "p>\n"
+#~ "<p>\n"
+#~ "For at fjerne en Samba-bruger trykkes på knappen <em>&gt; Fjern</em>.\n"
+#~ "De markerede Samba-brugere fjernes fra filen smbpasswd,\n"
+#~ "og vises igen til højre, som UNIX-brugere som ikke er Samba-brugere.</p>\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Grundindstillinger"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba-indstillingsfil:"
+
+#~ msgid "&Load"
+#~ msgstr "&Indlæs"
+
+#~ msgid "Server Identification"
+#~ msgstr "Serveridentifikation"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Arbejds&gruppe:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Indtast navnet på din arbejdsgruppe eller dit domæne her."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Serverstren&g:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-navn:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Sikkerheds&niveau"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Bruger"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domæ&ne"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>Del</i> hvis du har et hjemmenetværk eller et "
+#~ "lille kontornetværk.<br>Det tillader alle at læse alle navne på delte "
+#~ "mapper før en indlogning kræves."
+
+#~ msgid "Further Options"
+#~ msgstr "Yderligere valgmuligheder"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Adgangskodeservers adresse/navn:"
+
+#~ msgid "Real&m:"
+#~ msgstr "O&mråde:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Gæstek&onto:"
+
+#~ msgid "Help"
+#~ msgstr "Hjælp"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "For detaljeret hjælp om hvert punkt, kig i:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Delte mapper"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentar"
+
+#~ msgid "Properties"
+#~ msgstr "Egenskaber"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "&Redigér standardværdier..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Tilføj &ny delt mappe..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Redigér delt mappe..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Fjern delt mappe"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Prin&tere"
+
+#~ msgid "Printer"
+#~ msgstr "Printer"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "&Redigér standardværdier"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Tilføj n&y printer"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Redigér p&rinter"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&Fjern printer"
+
+#~ msgid "&Users"
+#~ msgstr "&Brugere"
+
+#~ msgid "Disabled"
+#~ msgstr "Deaktiveret"
+
+#~ msgid "Add"
+#~ msgstr "Tilføj"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Fjern"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "Uni&x-brugere"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Æn&dr adgangskode..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "&Gå med i domæne"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Avan&ceret"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Her kan du ændre avancerede indstillinger i Samba-serveren.\n"
+#~ "Ændr kun noget hvis du véd hvad du gør."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Avanceret dumpning"
+
+#~ msgid "Security"
+#~ msgstr "Sikkerhed"
+
+#~ msgid "&General"
+#~ msgstr "&Generelt"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "Følg PAM-begrænsninger"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM adgangskodesændring"
+
+#~ msgid "Other Switches"
+#~ msgstr "Andre flag"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Ti&llad pålidelige domæner"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoid serversikkerhed"
+
+#~ msgid "General"
+#~ msgstr "Generelt"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Godkendelsesmetoder:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "&Rodmappe:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "Græ&nseflader:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Afbildning til gæst:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Kun bindingsgrænseflade"
+
+#~ msgid "Never"
+#~ msgstr "Aldrig"
+
+#~ msgid "Bad User"
+#~ msgstr "Dårlig bruger"
+
+#~ msgid "Bad Password"
+#~ msgstr "Dårlig adgangskode"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Æ&kvivalente værter:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmisk RID-basis:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privat mappe:"
+
+#~ msgid "Pass&word"
+#~ msgstr "Kode&ord"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba-adgangskoder"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "&Kryptér adgangskoder"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Samba passwd-fil:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb-&motor:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Passwd-chat:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Fejlsøgning af passwd-chat"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sek."
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Tidsgrænse for passwd-chat:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Tomme &adgangskoder"
+
+#~ msgid "Password level:"
+#~ msgstr "Adgangskodeniveau:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Mindste adgangskodelængde:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Tidsudløb for maskineadgangskode:"
+
+#~ msgid "Migration"
+#~ msgstr "Migration"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Kr&ypteret opdatering"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX-adgangskoder"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Passwd-program:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "Uni&x adgangskodesynkronisering"
+
+#~ msgid "Userna&me"
+#~ msgstr "Brugerna&vn"
+
+#~ msgid "User&name map:"
+#~ msgstr "Afbildning af bruger&navn:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Brugernavne&niveau:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Skjul lokale brugere"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Begræns anon&ym"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Brug rhosts"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "&Godkendelse"
+
+#~ msgid "Client"
+#~ msgstr "Klient"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "K&lientunderskrift:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Godkendelseskontrol af klient i klarte&kst"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Godkendelseskontrol af klient med lanman"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Tvungen"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nej"
+
+#~ msgid "Client channel:"
+#~ msgstr "Klient-kanal:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Klienten bruger SPNEGO"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Godkendelseskontrol af klient med NTLM version &2"
+
+#~ msgid "Server signing:"
+#~ msgstr "Serverunderskrift:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Gokendelseskontrol med Lanman"
+
+#~ msgid "Server channel:"
+#~ msgstr "Server-kanal:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "Brug SP&NEGO"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM-godkendelseskontrol"
+
+#~ msgid "Logging"
+#~ msgstr "Logning"
+
+#~ msgid "L&og file:"
+#~ msgstr "L&ogfil:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Ma&ksimal logstørrelse:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&ystemlog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Logniveau:"
+
+#~ msgid "S&witches"
+#~ msgstr "&Flag"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "&Kun systemlog"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Tidsste&mpling"
+
+#~ msgid "microseconds"
+#~ msgstr "mikrosekunder"
+
+#~ msgid "Debug pid"
+#~ msgstr "Proces- id for fejlsøgning"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Bruger-id for fejlsøgnin&g"
+
+#~ msgid "Tuning"
+#~ msgstr "Finjustering"
+
+#~ msgid "Modules"
+#~ msgstr "Moduler"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "For&indlæs moduler:"
+
+#~ msgid "Switches"
+#~ msgstr "Flag"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "Arbejdskatalo&g-cache"
+
+#~ msgid "Use &mmap"
+#~ msgstr "Brug &mmap"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Ændringsmeddelelse fra &kernen"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Opslag af værts&navn"
+
+#~ msgid "Read ra&w"
+#~ msgstr "U&behandlet læsning"
+
+#~ msgid "Write raw"
+#~ msgstr "Ubehandlet skrivning"
+
+#~ msgid "Times"
+#~ msgstr "Tider"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Tidsgrænse for ændringsmeddelelse:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "&Hold i live"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min."
+
+#~ msgid "Deadtime:"
+#~ msgstr "Dødtid:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "&Cachetid for printerkø:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "Tidsgrænse for &navnecache:"
+
+#~ msgid "Sizes"
+#~ msgstr "Størrelser"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Maksimal diskstørrelse:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "&Læsestørrelse:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Statuscachestørrelse:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Ma&ksimal sending:"
+
+#~ msgid "Numbers"
+#~ msgstr "Antal"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Maksimalt antal SMBD-processer:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Maksimalt antal åbne filer:"
+
+#~ msgid "Printing"
+#~ msgstr "Udskriver"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Totalt antal udskrifts&job:"
+
+#~ msgid "Drivers"
+#~ msgstr "Drivere"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2 driverafbildning:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Na&vn på printerdatafil:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Printerdriver&fil: "
+
+#~ msgid "Commands"
+#~ msgstr "Kommandoer"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Kommando for portnummerering:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Kommando for at tilføje printer:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Kommando for at fjerne printer:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "&Indlæs printer"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "&Deaktivér printerkøer"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Vis g&uiden for at tilføje printere"
+
+#~ msgid "Domain"
+#~ msgstr "Domæne"
+
+#~ msgid "L&ocal master"
+#~ msgstr "L&okal hovedmaskine"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domæ&nehovedmaskine"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domæneindlo&gninger"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Foretrukket &hovedmaskine"
+
+#~ msgid "OS &level:"
+#~ msgstr "Operativsystems&niveau:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domæneadministrationsgruppe:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domænegæstegruppe:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "Deaktivér &WINS"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Fu&ngerer som WINS-server"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "&Brug en anden WINS-server"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "Indstilin&ger af WINS-server"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS prox&y-server"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS-ind&kobling:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Maksimalt antal WINS-termina&ler:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Minimalt antal WINS-terminaler:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS-server IP-adresse eller DNS-navn"
+
+#~ msgid "General Options"
+#~ msgstr "Generelle tilvalg"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS-modparter:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS-pro&xy"
+
+#~ msgid "Filenames"
+#~ msgstr "Filnavne"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Ge&nerelt"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "Fjern p&unktum"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Behandling"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "Behandl sta&k:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Behandl præfi&ks:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Spe&ciel"
+
+#~ msgid "Stat cache"
+#~ msgstr "Statuscache"
+
+#~ msgid "Locking"
+#~ msgstr "Låsning"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Brug ker&nens op-lås"
+
+#~ msgid "Direct&ories"
+#~ msgstr "&Mapper"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Lås &mappe:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&Mappe for proces-id:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Spinlås"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "Spin&låseantal:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Spinlåse&tid:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Meget avancerede"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "&Ventetid for at bryde op-lås:"
+
+#~ msgid "milliseconds"
+#~ msgstr "millisekunder"
+
+#~ msgid "Charset"
+#~ msgstr "Tegnsæt"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS-tegnsæt:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "Uni&x-tegnsæt:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "S&kærmtegnsæt:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Tegnsæt"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Gy&ldige tegn:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Mappe for kodeside:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Kodnin&gssystem:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Klientens kodeside:"
+
+#~ msgid "Logon"
+#~ msgstr "Indlogning"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Tilføj scripter"
+
+#~ msgid "Add user script:"
+#~ msgstr "Script til at tilføje brugere:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Script til at tilføje brugere til gruppe:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Script til at tilføje gr&uppe:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Script til at tilføje maskine:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Script til at fjerne gruppe:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Script til at fjerne brugere:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Script til at fjerne brugere fra gruppe:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Script for primær gruppe"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Script til at angive &primær gruppe:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Nedlukning"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Nedlukings&script"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Script til at afbryde nedlukning:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "I&ndlogningssøgesti:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Indlogningshje&mmemappe:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Ind&logningsenhed:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Indlo&gningsscript:"
+
+#~ msgid "Socket"
+#~ msgstr "Sokkel"
+
+#~ msgid "Socket address:"
+#~ msgstr "Sokkeladresse:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Sokkel-tilvalg"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Aktivér eller deaktivér hele SSL-tilstand"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Dette aktiverer eller deaktiverer hele SSL-tilstanden. Hvis det er "
+#~ "inaktivt, opfører Samba med SSL sig præcis som Samba uden SSL. Hvis det "
+#~ "er aktivt, afhænger det af valgmulighederne SSL-vært og omsigneret SSL-"
+#~ "vært om en SSL-tilslutning kræves.\n"
+#~ "\n"
+#~ "Dette er kun tilgængeligt hvis SSL-bibliotekerne er kompileret på dit "
+#~ "system og indstillingsflaget --with-ssl blev angivet ved konfigurering."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "A&ktivér SSL"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL-vært&er:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL-entropib&yte:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL-kryptering:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "Omsi&gnerede SSL-værter:"
+
+#~ msgid "ssl2"
+#~ msgstr "SSL-2"
+
+#~ msgid "ssl3"
+#~ msgstr "SSL-3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "SSL-2 eller SSL-3"
+
+#~ msgid "tls1"
+#~ msgstr "TLS-1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL-&kompabilitet"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL-certifikatmappe for certifikatudstedere:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL-entropifil:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL EGD-sokkel:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL-version:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL-certifikatfil for certifikatudstedere:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL kræver klientcertifikat"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL-klientnøgle:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL &kræver servercertifikat"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L-servercertifikat:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL-klientcertifikat:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL-servernø&gle:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokol"
+
+#~ msgid "Ti&me server"
+#~ msgstr "&Tidsserver"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Læs og skriv store filer"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX-udvidelser"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Læs BMPX"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protokolversioner"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "A&nnoncér som:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT-arbejdsstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Annoncér version:"
+
+#~ msgid "4.2"
+#~ msgstr "4,2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otokol:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Maksimal protokol:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Minimal protokol:"
+
+#~ msgid "Limits"
+#~ msgstr "Grænser"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&ksimalt antal multiplekser:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Maksimalt antal termina&ler:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "SMB-porte at lytte på"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB-porte:"
+
+#~ msgid "Browsing"
+#~ msgstr "Søgning"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM-i&nterval:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M-meddelelse:"
+
+#~ msgid "Sec"
+#~ msgstr "Sek"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "S&ynkronisering med eksterne søgere:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Sø&geliste"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "Udvidet søgnin&g"
+
+#~ msgid "Pre&load:"
+#~ msgstr "For&indlæs:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind og LDMAP bruger-id:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind og LDMAP &gruppe-id:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Skabelon for hjemmemap&pe:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Skabelon-&skal:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind-adskiller:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Skabelon for primær gruppe:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Winbind cache&tid:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "&Forenelig med adgangkontrolliste:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind opregnede brugere"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind opregnede grupper"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind brug standarddomæne"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind aktivér lokale konti"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind kun pålidelige domæner"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind hierarkiske grupper"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBIOS-&omfatning:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS-alias:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "&Deaktivér NetBIOS"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Na&vneopløsningsrækkefølge:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "MSDFS-vært&er"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP-suffi&ks:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP-maskinesuffiks:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP-brugersuffiks:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP-&gruppeuffiks:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP-id-afbildningssuffiks:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP-filter:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP admin do&mænenavn:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "&Grænseflade for LDMAP:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP-kopieringsventen:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP-SSL:"
+
+#~ msgid "Off"
+#~ msgstr "Fra"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start TLS"
+
+#~ msgid "On"
+#~ msgstr "Til"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP-s&ynkronisering:"
+
+#~ msgid "Only"
+#~ msgstr "Kun"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP fjern domæn&navn"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "K&ommando for at tilføje delt mappe:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Kommando for at ændre delt mappe:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Kommando for at fjerne de&l mappe:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "Kommando for me&ddelelse:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "Ko&mmando for dfree:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "Angiv &kvoteringskommando:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Hent kvoteringskommando:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Pa&nikhandling:"
+
+#~ msgid "Misc"
+#~ msgstr "Diverse"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Diverse"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Skjul &lokale brugere"
+
+#~ msgid "Default service:"
+#~ msgstr "Standardtjeneste:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Tids&afstand:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min."
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Fjernmeddele&lse:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Kildeomgivelser:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS-hjemmemappe"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Hjemmemappeafbildning:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "&UTMP-mappe:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&WTMP-mappe:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "UT&MP"
+
+#~ msgid "Debug"
+#~ msgstr "Fejlsøgning"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT statusunderstøttelse"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB-understøttelse"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT &pipe-understøttelse"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Tilføj eller redigér delt mappe"
+
+#~ msgid "Pixmap"
+#~ msgstr "Bitafbildning"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Mappe"
+
+#~ msgid "&Path:"
+#~ msgstr "&Søgesti:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "&Del alle hjemmemapper"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tifikator"
+
+#~ msgid "Na&me:"
+#~ msgstr "Na&vn:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Komme&ntar:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Hovede&genskaber"
+
+#~ msgid "Read onl&y"
+#~ msgstr "Skrivebesk&yttet"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Offentlig"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&Søgbar"
+
+#~ msgid "A&vailable"
+#~ msgstr "&Tilgængelig"
+
+#~ msgid "&Security"
+#~ msgstr "&Sikkerhed"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gæst&er"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Dette er et brugernavn som bruges til adgang til tjenester som angives "
+#~ "som tilgængelige for gæster. Hvilke rettigheder brugeren end har, bliver "
+#~ "de tilgængelige for alle klienter som forbinder til gæstetjenesten. "
+#~ "Typisk er brugeren med i adgangskodefilen, men har ikke en gyldig "
+#~ "indlogningskonto. Brugerkontoen \"ftp\" er ofte et godt valg for "
+#~ "parameteren. Hvis et brugernavn angives i en given tjeneste, sættes det "
+#~ "angivne det brugernavn som angives her ud af kraft."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Gæstekonto:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Hvis dette er markeret, kræves ingen adgangskode for at forbinde til "
+#~ "tjenesten. Rettigheder er de som gælder for gæstekontoen."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Tillad kun gæstetilslutn&inger"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Vær&ter"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Det modsatte af tilladt vært. Værter på denne liste tillades IKKE adgang "
+#~ "til tjenester, hvis ikke en specifik tjeneste har en egen liste som sætte "
+#~ "denne ud af kraft. Når listerne har konflikter, gælder listen som "
+#~ "tillader vært."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Parameteren er et sæt værter som tillades adgang til  tjeneste, adskilt "
+#~ "med kommategn, mellemrum eller tabulatorer."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Tillad &værter:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Nægt vær&ter:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Sy&mbolske link"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Tillad at symbolske lin&k følges"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Tillad at følge symbolske link som &peger på områder udenfor mappetræet"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Validér adgangskode mod følgende brugernavn hvis klienten ikke kan "
+#~ "sørge for et brugernavn:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr "Tillad &kun tilslutninger med brugernavn som angives i listen"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Skjulte &filer"
+
+#~ msgid "Hidden"
+#~ msgstr "Skjult"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto op-lås"
+
+#~ msgid "Size"
+#~ msgstr "Størrelse"
+
+#~ msgid "Date"
+#~ msgstr "Dato"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Markerede fi&ler"
+
+#~ msgid "Hi&de"
+#~ msgstr "&Skjul"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto o&p-lås"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "&Manuel indstilling"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ve&tofiler:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Veto op-låsf&iler:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "S&kjulte filer:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "Skjul uskri&vbare filer"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "Skjul s&pecialfelter"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Skjul filer som &begynder med punktum"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Skjul ulæsba&re filer"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Avanceret"
+
+#~ msgid "Force Modes"
+#~ msgstr "Tvingende tilstand"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Tving til mappesik&erhedstilstand:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Tving til sikke&rhedstilstand:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "T&ving til mappetilstand:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Tving til skaben&de tilstand:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Masker"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Mappesikkerhedsmaske:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Sikkerheds&maske:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "&Mappemaske:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Opret mas&ke:"
+
+#~ msgid "ACL"
+#~ msgstr "Adgangkontrolliste"
+
+#~ msgid "&Profile acls"
+#~ msgstr "&Profilér adgangkontrollister"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Arv af adgangkontrol&lister"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT-understøttelse for adgangkontroliste"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "Tving til ukendt &bruger af adgangkontrolliste:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Afb&ild arv af adgangkontrolliste"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Arv rettigheder fra overliggende mappe"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Tillad sletning af skrivebeskyttete filer"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS egenskabsafbildning"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Afbild DOS arki&v til UNIX kørbart for ejer"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Afbild DOS skjult til Uni&x kørbart for alle"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Afbild DOS system til UNIX kørbart for &gruppe"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "Opbevar DOS-egenskaber som udvidede egenskaber"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Streng s&ynkronisering"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "S&ynkronisér altid"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "St&reng tildeling"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Brug sen&dfile"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maksimalt antal samtidige tilslutninger:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Skrivecac&hestørrelse:"
+
+#~ msgid "bytes"
+#~ msgstr "byte"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Blo&kstørrelse:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "&Cachepolitik for klientsiden:"
+
+#~ msgid "manual"
+#~ msgstr "håndbog"
+
+#~ msgid "documents"
+#~ msgstr "dokumenter"
+
+#~ msgid "programs"
+#~ msgstr "programmer"
+
+#~ msgid "disable"
+#~ msgstr "deaktivér"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Navnebehandling"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Aktivér na&vnebehandling"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Behandl versal&type"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Be&var versaltype"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "B&evar kort versaltype"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Ikke &versalfølsom"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "Norma&l versaltype:"
+
+#~ msgid "Lower"
+#~ msgstr "Små"
+
+#~ msgid "Upper"
+#~ msgstr "Versaler"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Behandlingste&gn:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "&Behandlet afbildning:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Behandlingsmetode:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Andre valgmuligheder"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Skjul efterfølge&nde punktum"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS-filtilstand"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS f&iltider"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS filtidsopløsning"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Aktivér låsn&ing"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Lås&ning"
+
+#~ msgid "S&trict locking"
+#~ msgstr "S&treng låsning"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Blokerende låsnin&g"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x-låsning"
+
+#~ msgid "Share mo&des"
+#~ msgstr "&Delningstilstand"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Uds&ted op-lås "
+
+#~ msgid "O&plocks"
+#~ msgstr "O&p-låse"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "Ni&veau 2 op-låse"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "Konfliktgræ&nse for op-låsning:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "Forfalsk op-&låse"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "VFS-ob&jekter:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "&VFS-tilvalg:"
+
+#~ msgid "Exec"
+#~ msgstr "Kør"
+
+#~ msgid "P&reexec:"
+#~ msgstr "Fø&rkørsel:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "&Forkørsel i systemadministratorstilstand:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Ef&terkørsel:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "&Efterkørsel i systemadministratorstilstand:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "Forkørsel ved &lukning"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "Forkørsel i s&ystemadministratorstilstand ved lukning"
+
+#~ msgid "&Volume:"
+#~ msgstr "Vol&umen:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&gisk script:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Mag&isk udskrift:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "Gå i&kke ned:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "MSDFS-pro&xyserver"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "&Kommandoen setdir tillades"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "&Forfalsk opret mappetid"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "MS&DFS-systemadministrator"
+
+#~ msgid "&Help"
+#~ msgstr "&Hjælp"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Brugere"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Alle uspecificerede &brugere"
+
+#~ msgid "Reject"
+#~ msgstr "Afslå"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Ang&ivne brugere"
+
+#~ msgid "Access Rights"
+#~ msgstr "Adgangrettigheder"
+
+#~ msgid "A&dd User..."
+#~ msgstr "&Tilføj bruger..."
+
+#~ msgid "E&xpert"
+#~ msgstr "E&kspert"
+
+#~ msgid "Add &Group..."
+#~ msgstr "Tilføj &gruppe..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "&Fjern markeret"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Alle &brugere skal tvinges til følgende bruger/gruppe"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Tving bruge&r:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Tving g&ruppe:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Adgangmodifikatorer"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Adgangstilladelser"
+
+#~ msgid "Others"
+#~ msgstr "Øvrige"
+
+#~ msgid "Read"
+#~ msgstr "Læs"
+
+#~ msgid "Write"
+#~ msgstr "Skriv"
+
+#~ msgid "Sticky"
+#~ msgstr "Klæbrig"
+
+#~ msgid "Set GID"
+#~ msgstr "Sæt GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Sæt UID"
+
+#~ msgid "Special"
+#~ msgstr "Speciel"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Brugerindstillinger"
+
+#~ msgid "&Valid users:"
+#~ msgstr "&Gyldige brugere:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Administratorsbrugere:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "&Ugyldige brugere:"
+
+#~ msgid "&Write list:"
+#~ msgstr "&Skriveliste:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Læseliste:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Tilladte v&ærter"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "En liste over tilladte værter"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Her kan du se en liste med værter som har lov at have adgang til mappen "
+#~ "via NFS.\n"
+#~ "Den første søjle viser værtens navn eller adresse, den anden søjle viser "
+#~ "adgangsparametrene. Navnet '*' angiver åben adgang."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Tilføj vært..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Æn&dr vært..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Fjern vært"
+
+#~ msgid "Name/Address"
+#~ msgstr "Navn/adresse"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametre"
+
+#~ msgid "Host Properties"
+#~ msgstr "Egenskaber for vært"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Navn eller adresse:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Navn- eller adressefelt</b>\n"
+#~ "<p>\n"
+#~ "Her kan du indtaste værtsnavn eller adresse.<br>\n"
+#~ "Værten kan angives på et antal forskellige måder:\n"
+#~ "<p>\n"
+#~ "<i>enkelt vært</i>\n"
+#~ "<p>\n"
+#~ " Dette er det almindeligste format. Du kan enten angive en vært med et "
+#~ "forkortet navn som genkendes igen af navneopløsningen, det fuldstændigt "
+#~ "kvalificerede domænenavn eller en IP-adresse.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgrupper</i>\n"
+#~ "<p>\n"
+#~ "NIS-netgrupper kan angives som @gruppe. Kun værtsdelen af hver netgruppe "
+#~ "tages hensyn til når medlemskab kontrolleres. Tomme værtsdele og de som "
+#~ "kun indeholder en enkelt bindestreg (-) ignoreres.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>jokertegn</i>\n"
+#~ "<p>\n"
+#~ " Maskinnavne kan indeholde jokertegnene * og ?. Dette kan bruges til at "
+#~ "gøre exportfilen kompaktere, for eksempel matcher *.cs.foo.edu alle "
+#~ "værter i domænet cs.foo.edu. Dog matchar jokertegnene ikke punktummer i "
+#~ "domænenavne, så mønstret ovenfor omfatter ikke værter såsom a.b.cs.foo."
+#~ "edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-netværk</i>\n"
+#~ "<p>\n"
+#~ " Du kan også eksportere mapper til alle værter i et IP-(del)netværk "
+#~ "samtidigt. Dette gøres ved at angive parret IP-adresse/netmaske, hvor "
+#~ "netmasken kan angives på decimalform med punktummer, eller som en "
+#~ "kontinuerlig maskelængde (for eksempel resultere enten '/255.255.252.0' "
+#~ "eller '/22' tilføjet til netværkets basisadresse i identiske delnetværk "
+#~ "med 10-bits vært).\n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Offentlig adgang"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Offentlig adgang</b>\n"
+#~ "<p>\n"
+#~ "Hvis du markerer dette, kommer værtadressen til at være et enkelt "
+#~ "jokertegn, som betyder åben adgang.\n"
+#~ "Det er præcis det samme som hvis du skrev et jokertegn i adressefeltet.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Indstillinger"
+
+#~ msgid "&Writable"
+#~ msgstr "&Skrivbar"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Skrivbar</b>\n"
+#~ "<p>\n"
+#~ "Tillad både læse- og skriveforespørgsler for NFS-volumen.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standardværdien er ikke at tillade forespørgsler som ændrer filsystemet.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Usikker"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Usikker</b>\n"
+#~ "<p>\n"
+#~ "Hvis dette er markeret kræves det ikke at en forespørgsel kommer fra en "
+#~ "Internetport mindre end IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Hvis du er usikker så lad dette være umarkeret.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Synkronisér"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Synkronisér</b>\n"
+#~ "<p>\n"
+#~ "Dette beder om at alle skrivninger til filer opbevares på disken før "
+#~ "skriveforespørgsler afsluttes. Dette kræves for fuldstændig datasikkerhed "
+#~ "i tilfælde af et serversammenbrud, men forårsager en ydelsesforværring.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standardværdien er at lade serveren udskrive data så snart den er klart.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Ingen skrive&forsinkelse"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Ingen skriveforsinkelse</b>\n"
+#~ "<p>\n"
+#~ "Dette har kun nogen virkning hvis synkronisering er markeret. NFS-"
+#~ "serveren forsinker normalt en skriveforespørgsel til disk noget, hvis den "
+#~ "har mistænke om at en anden relateret skriveforespørgsel kan være i gang "
+#~ "eller snart ankommer. Dette tillader at mere end en skriveforespørgsel "
+#~ "kan opbevares på disk med en handling, hvilket kan forbedre ydelsen. Hvis "
+#~ "en NFS-server mest tager imod små urelaterede skrivninger, kan opførslen "
+#~ "virkeligheden mindske ydelsen, så punktet ingen skriveforsinkelse er "
+#~ "tilgængeligt for at lukke af for det.</p>"
+
+#~ msgid "No &hide"
+#~ msgstr "&Skjul ikke"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Skjul ikke</b>\n"
+#~ "<p>\n"
+#~ "Dette punkt er baseret på punktet med samme navn som der sørges for af "
+#~ "IRIX NFS. Hvis en server eksporterer to filsystemer, hvor et er monteret "
+#~ "i det andet, skal klienten normalt montere begge filsystemer eksplicit "
+#~ "for at få adgang til dem. Hvis den kun monterer det overliggende, ses en "
+#~ "tom mappe på stedet hvor det andet filsystem er monteret. Filsystemet er "
+#~ "\"skjult\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "At angive punktet skjul ikke for et filsystem gør, at det ikke skjules, "
+#~ "og en klient med passende godkendelse kan gå fra det overliggende til "
+#~ "dette filsystemet uden at mærke skiftet.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Dog håndterer visse NFS-klienter ikke denne situationen godt, eftersom "
+#~ "det for eksempel er muligt for to filer i det tilsyneladende eneste "
+#~ "filsystem at have samme inode-nummer.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Valgmuligheden skjul ikke er for øjeblikket kun effektiv for eksport fra "
+#~ "en enkelt vært. Det virker ikke tilforladeligt med eksport fra "
+#~ "netgrupper, delnet eller med jokertegn.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Valgmuligheden kan være meget nyttig i visse tilfælde, men det skal "
+#~ "bruges med passande forsigtighed, og kun efter at have bekræftet at "
+#~ "klientsystemet klarer at håndtere situationen.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "&Ingen deltræskontrol"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ingen deltræskontroll</b>\n"
+#~ "<p>\n"
+#~ "Dette punkt deaktiverer deltræskontrol, hvilket har nogle lille "
+#~ "påvirkninger af sikkerheden, men kan forbedre tilforladeligheden i visse "
+#~ "tilfælde.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "For at udføre kontrollen skal serveren inkludere noget information om "
+#~ "filens sted i \"filhåndtaget\" som sendes til klienten. Det kan forårsage "
+#~ "problemer med adgang til filer som skifter navn mens klienten har dem "
+#~ "åbne (selv om det virker i mange simple tilfælde).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Deltræskontrol bruges også til at sikre at filer inde i mapper som kun "
+#~ "systemadministratøren har adgang til kan kommes til hvis filsystemet "
+#~ "eksporteres uden at undertrykke systemadministratoren (se nedenfor), "
+#~ "selvom selve filen tillader en mere generel adgang.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Som en generel regel, skal et filsystem med hjemmemapper, som normalt "
+#~ "eksporteres fra roden og kan komme ud for mange navneskift på af filer, "
+#~ "eksporteres med deltræskontrol deaktiveret. Et filsystem som i hovedsagen "
+#~ "er skrivebeskyttet, eller i det mindste ikke kommer ud for mange "
+#~ "navneskift af filer (f.eks. /usr eller /var) og hvor undermapper kan "
+#~ "eksporteres, bør formodentlig eksporteres med deltræskontrol aktiveret.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "&Usikker låsning"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Usikker låsning</b>\n"
+#~ "<p>\n"
+#~ "Dette punkt fortæller NFS-serveren at den ikke skal bede om  godkendelse "
+#~ "for en låsningsforespørgsel (dvs. en forespørgsel som bruger NLM-"
+#~ "protokollen). Normalt kræver NFS-serveren at en låsningsforespørgsel har "
+#~ "et kreditiv for en bruger som har læseadgang til filen. Med dette flag "
+#~ "udføres ingen adgangkontrol.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Tidlige implementeringer af NFS-klienter sendte ikke kreditiver med en "
+#~ "låsningsforespørgsel, og der er stadigvæk mange nuværende NFS-klienter "
+#~ "som er baserede på de gamle implementeringer. Brug flaget hvis du mærker "
+#~ "at du kun kan låse filer som kan læses af hvem som helst.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Brugerafbildning"
+
+#~ msgid "All s&quash"
+#~ msgstr "&Undertryk alle"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Undertryk alle</b>\n"
+#~ "<p>\n"
+#~ "Afbilde alle bruger-id og gruppe-id på den anonyme bruger. Nyttigt for "
+#~ "NFS-eksporterede åbne FTP-mapper, mapper til opbevaring af "
+#~ "diskussionsgrupper, osv.</p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Undertryk ikke s&ystemadministrator"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Undertryk ikke systemadministrator</b>\n"
+#~ "<p>\n"
+#~ "Slå undertrykning af systemadministratoren fra. Punktet er hovedsageligt "
+#~ "nyttigt for klienter uden disk.\n"
+#~ "</p>\n"
+#~ "<i>undertryk systemadministrator</i>\n"
+#~ "<p>\n"
+#~ "Afbild en forespørgsel fra bruger- og gruppe-id 0 til anonymt bruger- og "
+#~ "gruppe-id. Bemærk at dette ikke gælder nogle andre bruger-id'er som kan "
+#~ "være lige så følsomme, såsom brugeren bin.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonym &bruger-id:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonym bruger-id og gruppe-id</b> <p> Disse valgmuligheder angiver "
+#~ "eksplicit bruger-id og gruppe-id for den anonyme konto. Dette er især "
+#~ "nyttigt for PC/NFS-klienter, hvor du kan ville at hver forespørgsel ser "
+#~ "ud til at komme fra en bruger.</p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonym &gruppe-id:"
+
+#~ msgid "Folder:"
+#~ msgstr "Mappe:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Del med &NFS (Linux og UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS-tilvalg"
+
+#~ msgid "Pu&blic"
+#~ msgstr "&Offentlig"
+
+#~ msgid "W&ritable"
+#~ msgstr "S&krivbar"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Flere NFS-&tilvalg"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba-tilvalg"
+
+#~ msgid "P&ublic"
+#~ msgstr "&Offentlig"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "Flere Samba-&tilvalg"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Tillad alle brugere at dele mapper"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Kun brugere i gruppen '%1' tillades at dele mapper"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Brugere i gruppen '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Fjern bruger"
+
+#~ msgid "Add User"
+#~ msgstr "Tilføj bruger"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr ""
+#~ "Gruppemedlemmer kan dele mapper uden systemadministratorens adgangskode"
+
+#~ msgid "Change Group..."
+#~ msgstr "Ændr gruppe..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB- og NFS-serverne er ikke installerede på denne maskine. For at "
+#~ "aktivere dette modul skal disse servere være installerede."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "A&ktivér fildeling i lokalt netværk"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Simpel &deling"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Aktivér simpel deling for at tillade brugere at dele mapper i deres "
+#~ "hjemmemapper, uden at kende systemadministratorens adgangskode."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "Avan&ceret deling"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Aktivér avanceret deling for at tillade brugere at dele en hvilken som "
+#~ "helst mappe, når blot de har skriveadgang til nødvendige "
+#~ "indstillingsfiler, eller kender systemadministratorens adgangskode."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Brug &NFS (Linux og UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Brug Sam&ba (Microsoft® Windows®)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Tilladte &brugere"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Delte mapper"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Tilføj..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "Æn&dr..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Samba-indstillingsfilen <strong>'smb.conf'</strong> kunne ikke findes."
+#~ "</p>Sørg for dig at du har installeret samba.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Angiv sted"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba konf.-fil\n"
+#~ "*|Alle Filer"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Hent stedet for smb.conf"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Filen <i>%1</i> kunne ikke læses.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Kunne ikke læse fil"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Fejl da fil skulle åbnes"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Mislykkedes at gå med i domænet %1."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Indtast en adgangskode for brugeren <b>%1</b></qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Mislykkedes at tilføje brugeren <b>%1</b> til brugerdatabasen i Samba."
+#~ "</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Mislykkedes at fjerne brugeren %1 fra brugerdatabasen i Samba."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Angiv en adgangskode for brugeren %1"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Mislykkedes at ændre adgangskode for brugeren %1."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Indstilling af Samba</h1> Her kan du indstille Samba-serveren."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>dele</i> hvis du har et hjemmenetværk eller et "
+#~ "lille kontornetværk.<br /> Det gør det muligt for alle at læse listen med "
+#~ "alle dine mapper og printere uden at en indlogning kræves."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>bruger</i> hvis du har et større netværk og "
+#~ "ikke vil lade hvem som helst læse listen over delte mapper og printere "
+#~ "uden at logge ind.<br /><br />Hvis du vil køre samba-serveren som "
+#~ "<b>primær domænestyreenhed</b> (PDC) skal du også angive dette."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>server</i> hvis du har et stort netværk og "
+#~ "samba-serveren skal validere brugernavn/adgangskode ved at sende det til "
+#~ "en anden SMB-server, for eksempel en maskine med NT."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>domæne</i> hvis du har et stort netværk og "
+#~ "samba-serveren skal validere brugernavn/adgangskode ved at sende det til "
+#~ "en primær- eller reservedomænstyreenhed i Windows NT."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Brug sikkerhedsniveauet <i>ADS</i> hvis du har et stort netværk og samba-"
+#~ "serveren skal virke som et domænemedlem i et ADS-område."
+
+#~ msgid "Sorry"
+#~ msgstr "Beklager"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr "Du indtastede to forskellige adgangskoder. Prøv igen."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "Alternativet <em>%1</em> understøttes ikke af din Samba-version"
+
+#~ msgid "Unnamed"
+#~ msgstr "Unavngiven"
+
+#~ msgid "&Hide"
+#~ msgstr "&Skjul"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto op-lås"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Nogle filer du har valgt er skjulte fordi de starter med et punktum."
+#~ "Vil du afmarkere alle filer som starter med punktum? </qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Filer som begynder med punktum"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Markér ikke skjulte"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Behold skjult"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Nogle filer du har valgt matches af jokerstrengen <b>'%1'</b>. Vil "
+#~ "du afmarkere alle filer som matcher <b>'%1'</b>?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Jokerstreng"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Afmarkér"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Hold markeret"
+
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivet <b>offentlig læseadgang</b> for mappen, men "
+#~ "gæstekontoen <b>%1</b> har ikke de nødvendige læserettigheder.<br />Vil "
+#~ "du fortsætte alligevel?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Advarsel"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivet <b>offentlig skriveadgang</b> til mappen, men "
+#~ "gæstekontoen <b>%1</b> har ikke de nødvendige skriverettigheder.<br />Vil "
+#~ "du fortsætte alligevel?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivet <b>skriveadgang</b> for brugeren <b>%1</b> til mappen, "
+#~ "men brugeren har ikke de nødvendige skriverettigheder.<br />Vil du "
+#~ "fortsætte alligevel?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>Du har angivet <b>læseadgang</b> for brugeren <b>%1</b> for mappen, "
+#~ "men brugeren har ikke de nødvendige læserettigheder.<br />Vil du "
+#~ "fortsætte alligevel?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Der er allerede en åben indgang."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Værten findes allerede"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Indtast et værtsnavn eller en IP-adresse."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Ingen vært eller IP-adresse"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Værten '%1' findes allerede."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Læser Samba-indstillingsfil..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "Læser NFS-indstillingsfil..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Angiv en gyldig søgesti."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Kun mapper kan deles."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Mappen deles allerede."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Systemadministratoren tillader ikke deling med NFS."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Fejl: Kunne ikke læse NFS-indstillingsfil."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Systemadministratoren tillader ikke deling med Samba."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Fejl: Kunne ikke læse Samba-indstillingsfil."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Du skal indtaste et navn på den delte mappe med Samba."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Du skal have godkendelse for at dele mapper."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Indstil fildeling..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Ingen NFS-server er installeret på systemet"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Kunne ikke gemme indstillinger."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Kunne ikke åbne filen '%1' til skrivning: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Gem mislykkedes"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Fildeling</h1><p>Dette modulet kan bruges til at aktivere fildeling "
+#~ "over netværket med \"Netværksfilsystemet\" (NFS) eller SMB i Konqueror. "
+#~ "Det sidste lader dig dele filer med Windows®-maskiner på netværket.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Delt mappe"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Tilladte brugere"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Alle brugere er allerede i gruppen %1."
+
+#~ msgid "Select User"
+#~ msgstr "Vælg bruger"
+
+#~ msgid "Select a user:"
+#~ msgstr "Vælg en bruger:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Kunne ikke tilføje brugeren '%1' til gruppen '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Kunne ikke fjerne brugeren '%1' fra gruppen '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Du skal vælge en gyldig gruppe."
+
+#~ msgid "New file share group:"
+#~ msgstr "Ny fildelingsgruppe:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr "Tilføj brugere fra den gamle fildelingsgruppen til den nye"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Fjern brugere fra den gamle fildelingsgruppen"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Fjern den gamle fildelingsgruppen"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Kun brugere i en vis gruppe tillades at dele mapper"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Vælg gruppe..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Vil du virkelig fjerne alle brugere fra gruppen '%1'?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Vil du virkelig fjerne gruppen '%1'?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Mislykkedes at fjerne gruppen '%1'."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Vælg en gyldig gruppe."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Gruppen '%1' findes ikke. Skal den laves?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Opret ikke"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Mislykkedes at oprette gruppen '%1'."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Printerindstillinger"
+
+#~ msgid "Pr&inter"
+#~ msgstr "Pr&inter"
+
+#~ msgid "Pa&th:"
+#~ msgstr "S&ti:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Kø:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "&Del alle printere"
+
+#~ msgid "I&dentifier"
+#~ msgstr "Iden&tifikator"
+
+#~ msgid "&Name:"
+#~ msgstr "&Navn:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Komme&ntar:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Hovedegenskaber"
+
+#~ msgid "&Printing"
+#~ msgstr "&Udskriver"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Printerdriver&fil: "
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Printer&drivers sted:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "Postscr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "&Udskriver:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Max reported print &jobs:"
+#~ msgstr "Maks antal udskrifts&job:"
+
+#~ msgid "Ma&x print jobs:"
+#~ msgstr "Maks antal udskrifts&job:"
+
+#~ msgid "Use c&lient driver"
+#~ msgstr "Brug k&lientdriver"
+
+#~ msgid "De&fault devmode"
+#~ msgstr "Stan&dard devmode"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Tillad værter:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "&Printeradministration:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "Ko&mmandoer"
+
+#~ msgid "Pr&int command:"
+#~ msgstr "Udskr&iftskommando:"
+
+#~ msgid "lpq comma&nd:"
+#~ msgstr "Komma&ndo for lpq:"
+
+#~ msgid "lprm comman&d:"
+#~ msgstr "Komman&do for lprm:"
+
+#~ msgid "lp&resume:"
+#~ msgstr "Gen&optag printerkø:"
+
+#~ msgid "&queuepause:"
+#~ msgstr "&Køpause:"
+
+#~ msgid "&lppause:"
+#~ msgstr "Pause for &printerkø"
+
+#~ msgid "qu&eueresume:"
+#~ msgstr "Gen&optag kø:"
+
+#~ msgid "Miscella&neous"
+#~ msgstr "&Diverse"
+
+#~ msgid "p&reexec:"
+#~ msgstr "Fø&rkørsel:"
+
+#~ msgid "root pr&eexec:"
+#~ msgstr "&Forkørsel i systemadministratorstilstand:"
+
+#~ msgid "root postexec:"
+#~ msgstr "&Efterkørsel i systemadministratorstilstand:"
+
+#~ msgid "poste&xec:"
+#~ msgstr "Ef&terkørsel:"
+
+#~ msgid "Tunin&g"
+#~ msgstr "Finjusterin&g"
+
+#~ msgid "M&in print space:"
+#~ msgstr "M&inimal udskriftsplads:"
+
+#~ msgid "&Logging"
+#~ msgstr "&Logning"
+
+#~ msgid "S&tatus"
+#~ msgstr "S&tatus"
+
+#~ msgid "Not share&d"
+#~ msgstr "Ikke &delt"
+
+#~ msgid "&Shared"
+#~ msgstr "&Delt"
+
+#~ msgid "Bas&e Options"
+#~ msgstr "Basisalt&ernativ"
+
+#~ msgid ""
+#~ "This is a text field that is seen next to a share when a client queries "
+#~ "the server, either via the network neighborhood or via net view, to list "
+#~ "what shares are available."
+#~ msgstr ""
+#~ "Dette er et tekstfelt som ses ved siden af  en delt mappe når en klient "
+#~ "beder serveren om en liste over hvilke delte mapper der er tilgængelige, "
+#~ "enten via netværksnaboskabet eller via netvisning."
+
+#~ msgid "Name of the share"
+#~ msgstr "Den delte mappes navn"
+
+#~ msgid "Commen&t:"
+#~ msgstr "Kommen&tar:"
+
+#~ msgid "Security Options"
+#~ msgstr "Sikkerhedsvalgmuligheder"
+
+#~ msgid "Hosts den&y:"
+#~ msgstr "Nægt &vært:"
+
+#~ msgid "&Hosts allow:"
+#~ msgstr "&Tillad vært:"
+
+#~ msgid "Guest &account:"
+#~ msgstr "Gæste&konto:"
+
+#~ msgid ""
+#~ "If this is checked, then users of a service may not create or modify "
+#~ "files in the service's directory."
+#~ msgstr ""
+#~ "Hvis dette er markeret, må brugere af en tjeneste ikke oprette eller "
+#~ "ændre filer i tjenestens mappe."
+
+#~ msgid "G&uests allowed"
+#~ msgstr "&Gæster tilladte"
+
+#~ msgid ""
+#~ "This is a username which will be used for access this directory if guests "
+#~ "are allowed"
+#~ msgstr ""
+#~ "Dette er et brugernavn som bruges til at få adgang til mappen hvis gæster "
+#~ "tillades."
+
+#~ msgid ""
+#~ "This controls whether this share is seen in the list of available shares "
+#~ "in a net view and in the browse list."
+#~ msgstr ""
+#~ "Dette styrer om den delte mappe ses i listen med tilgængelige delte "
+#~ "mapper i en nedvisning og i søgelisten."
+
+#~ msgid ""
+#~ "Checkbox lets you \\\"turn off\\\" a service. If not checked, then ALL "
+#~ "attempts to connect to the service will fail. Such failures are logged."
+#~ msgstr ""
+#~ "Afkrydsningsfeltet lader dig \"lukke af\" for en tjeneste. Hvis den ikke "
+#~ "er markeret mislykkes alle forsøg på at forbinde til tjenesten. Sådanne "
+#~ "mislykkede forsøg logges."
+
+#~ msgid "More Opt&ions"
+#~ msgstr "&Flere valgmuligheder"

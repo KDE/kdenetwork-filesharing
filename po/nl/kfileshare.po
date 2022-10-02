@@ -1,0 +1,3475 @@
+# translation of kfileshare.po to Dutch
+# translation of kfileshare.po to
+# Jeroen Trappers <jeroen@trappers.be.tf>, 2004.
+# Bram Schoenmakers <bramschoenmakers@kde.nl>, 2004, 2005, 2006.
+# Tom Albers <tomalbers@kde.nl>, 2004.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007, 2008, 2010.
+# Kristof Bal <kristof.bal@gmail.com>, 2009.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2011, 2016, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-08-14 18:33+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, kde-format
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Weigeren"
+
+#: samba/aclproperties/plugin.cpp:61
+#, kde-format
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Toestaan"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr "Alleen deze map"
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr "Deze map, submappen en bestanden"
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr "Deze map en submappen"
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr "Deze map en bestanden"
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr "Submappen en alleen bestanden"
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr "Alleen submappen"
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr "Alleen bestanden"
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: samba/aclproperties/plugin.cpp:187
+#, kde-format
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Toegangsrechten op afstand"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+"Dit item met rechten is geërft van een hogere container en kan alleen "
+"gewijzigd  worden op dat hogere niveau (bijv. een map op een hoger niveau)."
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr "Type:"
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr "Is van toepassing op:"
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr "Loop door map / voer bestand uit"
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr "Lijst maken van map / gegevens lezen"
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr "Attributen lezen"
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr "Uitgebreide attributen lezen"
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr "Bestanden aanmaken / gegevens schrijven"
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr "Mappen aanmaken / gegevens achtervoegen"
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Attributen schrijven"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr "Uitgebreide attributen schrijven"
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr "Submappen en bestanden verwijderen"
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Leestoegangsrechten"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Rechten wijzigen"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr "Eigendom nemen"
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+"Alleen deze rechten toepassen op objecten en/of containers binnen deze "
+"container"
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr "Items voor toegangscontrole"
+
+#: samba/aclproperties/qml/MainPage.qml:29
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Eigendom"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Eigenaar:"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+msgctxt "@label"
+msgid "Group:"
+msgstr "Groep:"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Geen toegangsrechten gevonden"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+"Er zijn waarschijnlijk geen SMB/Windows/Geavanceerde rechten ingesteld op "
+"dit bestand."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Deze map kan niet gedeeld worden omdat <filename>%1</filename> niet bestaat."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+"Deze fout wordt veroorzaakt door uw distributie die het opzetten van Samba "
+"sharing niet juist doet. U kunt het zelf repareren door die map handmatig te "
+"configureren. Sluit daarna dit venster en heropen deze."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+"Deze map kan niet gedeeld worden omdat de groepseigenaar van <filename>%1</"
+"filename> onjuist is ingesteld op <resource>%2</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+"Deze fout wordt veroorzaakt door uw distributie die het opzetten van Samba "
+"sharing niet juist doet. U kunt het zelf repareren door de groepseigenaar "
+"van die map te wijzigen naar <resource>usershares</resource> en uzelf een "
+"lid van die groep te maken. Start het systeem opnieuw."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Deze map kan niet gedeeld worden omdat uw gebruikersaccount geen lid is van "
+"de groep <resource>%1</resource>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+"U kunt dit repareren door uw gebruiker lid te maken van die groep. Start uw "
+"systeem daarna opnieuw."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Maak me een groepslid"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Deze map kan niet gedeeld worden omdat uw gebruikersaccount geen "
+"schrijfrechten heeft in <filename>%1</filename>."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+"U kunt dit repareren door na te gaan dat de groep <resource>%1</resource> "
+"schrijfrechten heeft voor <filename>%2</filename>. Sluit dit venster daarna "
+"er open het opnieuw."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Gebruiker '%1' wordt toegevoegd aan groep '%2' zodat ze Samba-usershares "
+"kunnen configureren"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Gebruiker <resource>%1</resource> lid maken van groep <resource>%2</"
+"resource> is mislukt."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Bestandspad"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Huidige rechten"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Vereiste rechten"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Geen toegang"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Toegang weigeren voorkomt het gebruik van deze share zelfs wanneer een "
+"andere toegangsregel toegang zou geven. Een regel voor weigeren\n"
+"heeft voorrang. Speciaal toegang weigeren aan <resource>Iedereen</resource> "
+"schakelt toegang uit voor iedereen.\n"
+"Het is in het algemeen niet nodig om iedereen toegang te weigeren omdat de "
+"reguliere rechten op mappen en bestanden nog steeds van toepassing zijn op "
+"gedeelde mappen.\n"
+"Een gebruiker die geen toegang heeft tot de lokale map zal nog steeds niet "
+"in staat zijn toegang te hebben op afstand zelfs\n"
+"wanneer de regel voor toegang tot shares dat toestaat."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr "Deze map heeft extra rechten nodig om delen te laten werken"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Rechten repareren"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"De share zou niet juist kunnen werken omdat de share-map of zijn pad "
+"geavanceerde rechten heeft: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Deze map met andere computers op het lokale netwerk delen"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Naam:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Deze naam kan niet gebruikt worden. Namen van shares mogen geen "
+"gebruikersnamen zijn en er mogen geen twee shares met dezelfde naam op het "
+"gehele systeem zijn."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Deze naam kan te lang zijn. Het kan problemen met interoperabiliteit geven "
+"of geweigerd worden door Samba."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Gasten toelaten"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr ""
+"Gasttoegang is uitgeschakeld door de Samba-configuratie van het systeem."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Volledige besturing"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Alleen-lezen"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Geen toegang"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Statusmonitor van Samba tonen"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Wachtwoord instellen"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Wachtwoord bevestigen"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Wachtwoorden moeten overeenkomen"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Wachtwoord instellen"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>De map <filename>%1</filename> heeft extra rechten nodig om delen te "
+"laten werken.</para>\n"
+"<para>Wilt u deze rechten nu toevoegen?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Rechten wijzigen"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Kon de rechten voor niet wijzigen voor: %1 . Alle wijzigingen van rechten "
+"zijn teruggezet naar de initiële status."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba moet geïnstalleerd zijn voordat mappen kunnen worden gedeeld."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Samba installeren"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Pakket Samba installeren is mislukt."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "De computer herstarten om de wijzigingen te voltooien."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Opnieuw starten"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba gebruikt een gebruikersdatabase apart van de systeemdatabase.\n"
+"Dit vereist dat u een apart Samba wachtwoord instelt voor elke gebruiker die "
+"in\n"
+"staat wilt stellen om zich te authenticeren.\n"
+"</para>\n"
+"<para>\n"
+"Voordat u toegang krijgt tot shares met uw huidige gebruikersaccount moet u "
+"een Samba wachtwoord instellen.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Samba-wachtwoord aanmaken"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Extra beheer van gebruiker en wachtwoord kan gedaan worden met het "
+"opdrachtregelhulpmiddel van Samba <command>smbpasswd</command>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr ""
+"U hebt de maximum hoeveelheid gedeelde mappen gebruikt die u tegelijk actief "
+"mag hebben."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "De naam van de share is ongeldig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "De naam van de share is al in gebruik voor een andere map."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Het pad is ongeldig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "De pad bestaat niet."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Het pad is geen map."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Het pad is relatief."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Dit pad mag niet gedeeld worden."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "De toegangsregel is ongeldig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Een toegangsregel van een gebruiker is niet geldig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "De toegangsregel van 'Gast' is ongeldig."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Inschakelen van toegang voor gasten is niet toegestaan."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Er deed zich een fout voor toen u probeerde de map te delen. De share "
+"was niet aangemaakt.</para><para>Het interne rapportvan Samba:</"
+"para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Netwerkshare aanmaken is mislukt"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Er deed zich een fout voor toen u probeerde het delen van een map "
+"ongedaan te maken. De share is niet verwijderd.</para><para>Het interne "
+"rapport van Samba:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Netwerkshare verwijderen is mislukt"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Controleren of Samba-gebruiker '%1' bestaat"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Nieuwe Samba-gebruiker '%1' wordt aangemaakt"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Wijzigingen in groep zijn mislukt."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr "U hebt onvoldoende toegangsrechten om Samba-usershares te beheren."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Share"
+
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Gebruiker aanmaken"
+
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Gebruiker aanmaken"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Gedeeld"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Samba wordt geïnstalleerd..."
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>Er is al een gedeelde bron met de naam <strong>%1</strong>.<br /"
+#~ ">Gelieve een andere naam te kiezen.</qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Samba is niet op uw computer geïnstalleerd."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Met s&amba delen (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Samba kon niet geïnstalleerd worden.</strong><br />Controleer "
+#~ "a.u.b. of kpackagekit juist is geïnstalleerd</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Gebruikers selecteren"
+
+#~ msgid "Select &Users"
+#~ msgstr "Gebr&uikers selecteren"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "To&egang"
+
+#~ msgid "&Default"
+#~ msgstr "Stan&daard"
+
+#~ msgid "&Read access"
+#~ msgstr "&Leestoegang"
+
+#~ msgid "&Write access"
+#~ msgstr "&Schrijftoegang"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Admin toegang"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Toetreden tot domein"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Verifiëren:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Wachtwoord:"
+
+#~ msgid "&Username:"
+#~ msgstr "Gebr&uikersnaam:"
+
+#~ msgid "Domain co&ntroller:"
+#~ msgstr "Domei&ncontroller:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Domein:"
+
+#~ msgid "Select Groups"
+#~ msgstr "Groepen selecteren"
+
+#~ msgid "Selec&t Groups"
+#~ msgstr "Groepen selec&teren"
+
+#~ msgid "&Kind of Group"
+#~ msgstr "T&ype groep"
+
+#~ msgid "&UNIX group"
+#~ msgstr "&UNIX-groep"
+
+#~ msgid "NI&S group"
+#~ msgstr "NI&S groep"
+
+#~ msgid "UNIX and NIS gr&oup"
+#~ msgstr "UNIX- en NIS-gr&oep"
+
+#~ msgid ""
+#~ "<qt>\n"
+#~ "Here you can edit the Samba users, stored in the smbpasswd file.\n"
+#~ "<p>\n"
+#~ "Every Samba user must have a corresponding UNIX user.\n"
+#~ "On the right you can see all UNIX users, stored in the passwd file and "
+#~ "not configured as Samba users.\n"
+#~ "You can see the Samba users on the left-hand side.\n"
+#~ "<p>\n"
+#~ "To add new Samba users simply press the <em>&lt; add</em> button.\n"
+#~ "The selected UNIX users will then become Samba users and will be\n"
+#~ "removed from the UNIX users list (but they will remain UNIX users).\n"
+#~ "<p>\n"
+#~ "To remove Samba users click the <em>&gt; remove</em> button.\n"
+#~ "The selected Samba users will be removed from the smbpasswd file\n"
+#~ "and reappear on the right-hand side, as UNIX users which are not Samba "
+#~ "users.\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>\n"
+#~ "Hier kunt u de Samba-gebruikers bewerken, die opgeslagen zijn in het "
+#~ "smbpasswd-bestand.\n"
+#~ "<p>\n"
+#~ "Elke Samba-gebruiker moet een corresponderende UNIX-gebruiker hebben.\n"
+#~ "Rechts ziet u alle UNIX-gebruikers, opgeslagen in het passwd-bestand en "
+#~ "niet ingesteld als Samba-gebruiker.\n"
+#~ "Links ziet u de Samba-gebruikers. <p>\n"
+#~ "Om nieuwe Samba-gebruikers toe te voegen drukt u op de knop <em>&lt; "
+#~ "Toevoegen</em>.\n"
+#~ "De geselecteerde UNIX-gebruikers zullen Samba-gebruikers worden en ze "
+#~ "worden verwijderd uit de UNIX-gebruikerslijst (maar ze blijven UNIX-"
+#~ "gebruikers).\n"
+#~ "<p>\n"
+#~ "Om een Samba-gebruiker te verwijderen druk je op de knop <em>&gt; "
+#~ "verwijder</em>.\n"
+#~ "De geselecteerde Samba-gebruikers worden verwijderd van het smbpasswd-"
+#~ "bestand, en verschijnen terug aan de rechter kant, als UNIX-gebruikers "
+#~ "die geen Samba-gebruikers zijn.\n"
+#~ "</qt>"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Basis instellingen"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samba instellingenbestand:"
+
+#~ msgid "&Load"
+#~ msgstr "&Laden"
+
+#~ msgid "Server Identification"
+#~ msgstr "Serveridentificatie"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Wer&kgroep:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Voer hier de naam van uw werkgroep/domein in."
+
+#~ msgid "Server strin&g:"
+#~ msgstr "Server strin&g:"
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-naam:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "Beveiligingsni&veau"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Gebruiker"
+
+#~ msgid "Server"
+#~ msgstr "Server"
+
+#~ msgid "Domai&n"
+#~ msgstr "Domei&n"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br> It allows everyone to read all share names before a "
+#~ "login is required."
+#~ msgstr ""
+#~ "Gebruik het <i>gedeelde bron</i>-beveiligingsniveau als u een "
+#~ "thuisnetwerk of een klein kantoornetwerk hebt. <br /> Iedereen is "
+#~ "toegedaan alle gedeelde bronnen te lezen alvorens een login vereist is."
+
+#~ msgid "Further Options"
+#~ msgstr "Verdere opties"
+
+#~ msgid "Password server address/name:"
+#~ msgstr "Wachtwoordserver adres/naam:"
+
+#~ msgid "Real&m:"
+#~ msgstr "Real&m:"
+
+#~ msgid "Guest acc&ount:"
+#~ msgstr "Gast acc&ount:"
+
+#~ msgid "Help"
+#~ msgstr "Help"
+
+#~ msgid "For detailed help about every option please look at:"
+#~ msgstr "Voor gedetailleerde hulp over elke optie kijkt u bij:"
+
+#~ msgid "man:smb.conf"
+#~ msgstr "man:smb.conf"
+
+#~ msgid "&Shares"
+#~ msgstr "&Gedeelde bronnen"
+
+#~ msgid "Comment"
+#~ msgstr "Toelichting"
+
+#~ msgid "Properties"
+#~ msgstr "Eigenschappen"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Standaard&waarden bewerken..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Gedeelde bron toevoege&n..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Gedeelde bron bewerken..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "Gedeelde bron verw&ijderen"
+
+#~ msgid "Prin&ters"
+#~ msgstr "Prin&ters"
+
+#~ msgid "Printer"
+#~ msgstr "Printer"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Standaard&waarden bewerken"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Nieu&we printer toevoegen"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Pri&nter bewerken"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "Printer verw&ijderen"
+
+#~ msgid "&Users"
+#~ msgstr "Gebr&uikers"
+
+#~ msgid "Disabled"
+#~ msgstr "Uitgeschakeld"
+
+#~ msgid "Add"
+#~ msgstr "Toevoegen"
+
+#~ msgid "Rem&ove"
+#~ msgstr "Ve&rwijderen"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X-gebruikers"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "Wachtwoord wijzi&gen..."
+
+#~ msgid "&Join Domain"
+#~ msgstr "T&oetreden tot Domein"
+
+#~ msgid "Advan&ced"
+#~ msgstr "Geavan&ceerd"
+
+#~ msgid ""
+#~ "Here you can change advanced options of the SAMBA server.\n"
+#~ "Only change something if you know what you are doing."
+#~ msgstr ""
+#~ "Hier kunt u geavanceerde opties van de Samba-server wijzigen.\n"
+#~ "Voer enkel veranderingen door als u weet wat u doet."
+
+#~ msgid "Advanced Dump"
+#~ msgstr "Geavanceerde dump"
+
+#~ msgid "Security"
+#~ msgstr "Beveiliging"
+
+#~ msgid "&General"
+#~ msgstr "Al&gemeen"
+
+#~ msgid "PAM"
+#~ msgstr "PAM"
+
+#~ msgid "Obey PAM restrictions"
+#~ msgstr "PAM beperkingen naleven"
+
+#~ msgid "PAM password change"
+#~ msgstr "PAM-wachtwoord wijzigen"
+
+#~ msgid "Other Switches"
+#~ msgstr "Overige opties"
+
+#~ msgid "A&llow trusted domains"
+#~ msgstr "Vertrou&wde domeinen toestaan"
+
+#~ msgid "Paranoid server security"
+#~ msgstr "Paranoïde serverbeveiliging"
+
+#~ msgid "General"
+#~ msgstr "Algemeen"
+
+#~ msgid "Auth methods:"
+#~ msgstr "Autorisatiemethoden:"
+
+#~ msgid "Root director&y:"
+#~ msgstr "Hoofdma&p:"
+
+#~ msgid "I&nterfaces:"
+#~ msgstr "I&nterfaces:"
+
+#~ msgid "Map to guest:"
+#~ msgstr "Aan gast koppelen:"
+
+#~ msgid "Bind interfaces only"
+#~ msgstr "Enkel interfaces binden"
+
+#~ msgid "Never"
+#~ msgstr "Nooit"
+
+#~ msgid "Bad User"
+#~ msgstr "Slechte gebruiker"
+
+#~ msgid "Bad Password"
+#~ msgstr "Slecht wachtwoord"
+
+#~ msgid "Hosts e&quiv:"
+#~ msgstr "Hosts e&quiv:"
+
+#~ msgid "Algorithmic rid base:"
+#~ msgstr "Algoritmische rid basis:"
+
+#~ msgid "Private dir:"
+#~ msgstr "Privémap:"
+
+#~ msgid "Pass&word"
+#~ msgstr "&Wachtwoord"
+
+#~ msgid "Samba Passwords"
+#~ msgstr "Samba wachtwoorden"
+
+#~ msgid "E&ncrypt passwords"
+#~ msgstr "Wachtwoorden versleutele&n"
+
+#~ msgid "Smb passwd file:"
+#~ msgstr "Smbpasswd-bestand:"
+
+#~ msgid "Passdb bac&kend:"
+#~ msgstr "Passdb-bac&kend:"
+
+#~ msgid "Passwd chat:"
+#~ msgstr "Passwd gesprek:"
+
+#~ msgid "Passwd chat debug"
+#~ msgstr "Passwd gesprek debug"
+
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Sec"
+
+#~ msgid "Passwd chat timeout:"
+#~ msgstr "Passwd gesprek wachttijd:"
+
+#~ msgid "Nu&ll passwords"
+#~ msgstr "Nu&ll wachtwoorden"
+
+#~ msgid "Password level:"
+#~ msgstr "Wachtwoordniveau:"
+
+#~ msgid "Min password length:"
+#~ msgstr "Min wachtwoordlengte:"
+
+#~ msgid "Machine password timeout:"
+#~ msgstr "Machine wachtwoord wachttijd:"
+
+#~ msgid "Migration"
+#~ msgstr "Migratie"
+
+#~ msgid "Update encr&ypted"
+#~ msgstr "Ver&sleuteld bijwerken"
+
+#~ msgid "UNIX Passwords"
+#~ msgstr "UNIX-wachtwoorden"
+
+#~ msgid "Passwd program:"
+#~ msgstr "Passwd-programma:"
+
+#~ msgid "UNI&X password sync"
+#~ msgstr "UNI&X-wachtwoord synchronisatie"
+
+#~ msgid "Userna&me"
+#~ msgstr "Gebruikersnaa&m"
+
+#~ msgid "User&name map:"
+#~ msgstr "Gebruikers&naamkaart:"
+
+#~ msgid "Username &level:"
+#~ msgstr "Gebrui&kersnaamniveau:"
+
+#~ msgid "Hide local users"
+#~ msgstr "Verberg lokale gebruikers"
+
+#~ msgid "Restrict anon&ymous"
+#~ msgstr "Beperkt anon&iem"
+
+#~ msgid "Use rhosts"
+#~ msgstr "Rhosts gebruiken"
+
+#~ msgid "Authenticati&on"
+#~ msgstr "Authenticat&ie"
+
+#~ msgid "Client"
+#~ msgstr "Client"
+
+#~ msgid "C&lient signing:"
+#~ msgstr "C&lient ondertekening:"
+
+#~ msgid "Client plainte&xt authentication"
+#~ msgstr "Client-plattete&kst-authenticatie"
+
+#~ msgid "Client lanman authentication"
+#~ msgstr "Client lanman-authenticatie"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Mandatory"
+#~ msgstr "Vereist"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nee"
+
+#~ msgid "Client channel:"
+#~ msgstr "Client-kanaal:"
+
+#~ msgid "Client use spnego"
+#~ msgstr "Client gebruik spnego"
+
+#~ msgid "Client NTLMv&2 authentication"
+#~ msgstr "Client NTLMv&2-authenticatie"
+
+#~ msgid "Server signing:"
+#~ msgstr "Server tekenen:"
+
+#~ msgid "Lanman authentication"
+#~ msgstr "Lanman-authenticatie"
+
+#~ msgid "Server channel:"
+#~ msgstr "Serverkanaal:"
+
+#~ msgid "Use sp&nego"
+#~ msgstr "sp&nego gebruiken"
+
+#~ msgid "NTLM authentication"
+#~ msgstr "NTLM-authenticatie"
+
+#~ msgid "Logging"
+#~ msgstr "Loggen"
+
+#~ msgid "L&og file:"
+#~ msgstr "L&ogbestand:"
+
+#~ msgid "kB"
+#~ msgstr "kB"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Ma&ximum grootte van logbestand:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "&Logniveau:"
+
+#~ msgid "S&witches"
+#~ msgstr "Instellin&gen"
+
+#~ msgid "Syslog o&nly"
+#~ msgstr "E&nkel syslog"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Ti&mestamp"
+#~ msgstr "Tij&daanduiding"
+
+#~ msgid "microseconds"
+#~ msgstr "microseconden"
+
+#~ msgid "Debug pid"
+#~ msgstr "Debug pid"
+
+#~ msgid "Debu&g uid"
+#~ msgstr "Debu&g uid"
+
+#~ msgid "Tuning"
+#~ msgstr "Fijnafstemming"
+
+#~ msgid "Modules"
+#~ msgstr "Modules"
+
+#~ msgid "Pre&load modules:"
+#~ msgstr "Voor&laadmodules:"
+
+#~ msgid "Switches"
+#~ msgstr "Schakelaars"
+
+#~ msgid "&Getwd cache"
+#~ msgstr "&Getwd-cache"
+
+#~ msgid "Use &mmap"
+#~ msgstr "&Mmap gebruiken"
+
+#~ msgid "Kernel change notif&y"
+#~ msgstr "Kernelwijzigverwitti&ging"
+
+#~ msgid "H&ostname lookups"
+#~ msgstr "Opzoeken van h&ostnaam"
+
+#~ msgid "Read ra&w"
+#~ msgstr "Ru&we gegevens lezen"
+
+#~ msgid "Write raw"
+#~ msgstr "Ruwe gegevens schrijven"
+
+#~ msgid "Times"
+#~ msgstr "Tijden"
+
+#~ msgid "Change notify timeout:"
+#~ msgstr "Wijzig verwittig wachttijd:"
+
+#~ msgid "&Keepalive:"
+#~ msgstr "Verbinding le&vend houden:"
+
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Deadtime:"
+#~ msgstr "Doodtijd:"
+
+#~ msgid "Lp&q cache time:"
+#~ msgstr "Lp&q-cache-tijd:"
+
+#~ msgid "&Name cache timeout:"
+#~ msgstr "&Naamcache-wachttijd:"
+
+#~ msgid "Sizes"
+#~ msgstr "Groottes"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Max schijfgrootte:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "MB"
+
+#~ msgid "Read si&ze:"
+#~ msgstr "Leesgr&ootte:"
+
+#~ msgid "Stat cache size:"
+#~ msgstr "Stat cache grootte:"
+
+#~ msgid "Ma&x xmit:"
+#~ msgstr "Ma&x xmit:"
+
+#~ msgid "Numbers"
+#~ msgstr "Getallen"
+
+#~ msgid "Max smbd processes:"
+#~ msgstr "Max smbd-processen:"
+
+#~ msgid "Max open files:"
+#~ msgstr "Max open bestanden:"
+
+#~ msgid "Printing"
+#~ msgstr "Afdrukken"
+
+#~ msgid "Total print &jobs:"
+#~ msgstr "Totaal aanta&l afdruktaken:"
+
+#~ msgid "Drivers"
+#~ msgstr "Stuurprogramma's"
+
+#~ msgid "OS&2 driver map:"
+#~ msgstr "OS&2-stuurprogrammamap:"
+
+#~ msgid "Printcap na&me:"
+#~ msgstr "Printcap naa&m:"
+
+#~ msgid "Pri&nter driver file: "
+#~ msgstr "Pri&nterstuurprogrammabestand: "
+
+#~ msgid "Commands"
+#~ msgstr "Opdrachten"
+
+#~ msgid "Enumports command:"
+#~ msgstr "Enumpoorten-opdracht:"
+
+#~ msgid "Addprinter command:"
+#~ msgstr "Printertoevoeg opdracht:"
+
+#~ msgid "Deleteprinter command:"
+#~ msgstr "Verwijderprinter opdracht:"
+
+#~ msgid "L&oad printers"
+#~ msgstr "Printers l&aden"
+
+#~ msgid "Disab&le spools"
+#~ msgstr "Spoo&ls deactiveren"
+
+#~ msgid "Show add printer wi&zard"
+#~ msgstr "Printer-toevoegen-assistent &openen"
+
+#~ msgid "Domain"
+#~ msgstr "Domein"
+
+#~ msgid "L&ocal master"
+#~ msgstr "L&okale master"
+
+#~ msgid "Domai&n master"
+#~ msgstr "Domei&n master"
+
+#~ msgid "Domain lo&gons"
+#~ msgstr "Domeinaanmeldin&gen"
+
+#~ msgid "Preferred &master"
+#~ msgstr "Voorkeurs&master"
+
+#~ msgid "OS &level:"
+#~ msgstr "OS nivea&u:"
+
+#~ msgid "Domain admin group:"
+#~ msgstr "Domein beheersgroep:"
+
+#~ msgid "Domain guest group:"
+#~ msgstr "Domein gastgroep:"
+
+#~ msgid "WINS"
+#~ msgstr "WINS"
+
+#~ msgid "Deactivate &WINS"
+#~ msgstr "&WINS uitschakelen"
+
+#~ msgid "Act as a WI&NS server"
+#~ msgstr "Als WI&NS-server fungeren"
+
+#~ msgid "Use an&other WINS server"
+#~ msgstr "Andere WINS-server gebr&uiken"
+
+#~ msgid "WINS Server Settin&gs"
+#~ msgstr "WINS-server Instellin&gen"
+
+#~ msgid "DNS prox&y"
+#~ msgstr "DNS prox&y"
+
+#~ msgid "WINS hoo&k:"
+#~ msgstr "WINS hoo&k:"
+
+#~ msgid "Max WINS tt&l:"
+#~ msgstr "Max WINS tt&l:"
+
+#~ msgid "&Min WINS ttl:"
+#~ msgstr "&Min WINS ttl:"
+
+#~ msgid "WINS Server IP or DNS Name"
+#~ msgstr "WINS-Server IP of DNS Naam"
+
+#~ msgid "General Options"
+#~ msgstr "Algemene opties"
+
+#~ msgid "WINS partners:"
+#~ msgstr "WINS partners:"
+
+#~ msgid "WINS pro&xy"
+#~ msgstr "WINS pro&xy"
+
+#~ msgid "Filenames"
+#~ msgstr "Bestandsnamen"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Algemee&n"
+
+#~ msgid "Strip d&ot"
+#~ msgstr "P&unt verwijderen"
+
+#~ msgid "&Mangling"
+#~ msgstr "&Mengen"
+
+#~ msgid "Mangled stac&k:"
+#~ msgstr "&Gemengde stapel:"
+
+#~ msgid "Mangle prefi&x:"
+#~ msgstr "Gemeng&d voorvoegsel:"
+
+#~ msgid "Specia&l"
+#~ msgstr "Speciaa&l"
+
+#~ msgid "Stat cache"
+#~ msgstr "Stat cache"
+
+#~ msgid "Locking"
+#~ msgstr "Vergrendelen"
+
+#~ msgid "Use ker&nel oplocks"
+#~ msgstr "Ker&nel \"oplocks\"-grendels gebruiken"
+
+#~ msgid "Direct&ories"
+#~ msgstr "Ma&ppen"
+
+#~ msgid "Loc&k directory:"
+#~ msgstr "Map vergrendele&n:"
+
+#~ msgid "Pid director&y:"
+#~ msgstr "&Map-pid:"
+
+#~ msgid "Lock Spin"
+#~ msgstr "Grendel draaien"
+
+#~ msgid "&Lock spin count:"
+#~ msgstr "Aantal grende&l draaiingen:"
+
+#~ msgid "Lock spin ti&me:"
+#~ msgstr "Gr&endeldraaitijd:"
+
+#~ msgid "Very Advanced"
+#~ msgstr "Zeer geavanceerd"
+
+#~ msgid "Oplock break &wait time:"
+#~ msgstr "\"Oplock\"-&wachttijd:"
+
+#~ msgid "milliseconds"
+#~ msgstr "milliseconden"
+
+#~ msgid "Charset"
+#~ msgstr "Tekenset"
+
+#~ msgid "Samba &3.x"
+#~ msgstr "Samba &3.x"
+
+#~ msgid "D&OS charset:"
+#~ msgstr "D&OS tekenset:"
+
+#~ msgid "UNI&X charset:"
+#~ msgstr "UNI&X tekenset:"
+
+#~ msgid "Displa&y charset:"
+#~ msgstr "&Weergave tekenset:"
+
+#~ msgid "U&nicode"
+#~ msgstr "U&nicode"
+
+#~ msgid "Samba &2.x"
+#~ msgstr "Samba &2.x"
+
+#~ msgid "Character set:"
+#~ msgstr "Tekenset:"
+
+#~ msgid "Va&lid chars:"
+#~ msgstr "Ge&ldige tekens:"
+
+#~ msgid "Code page directory:"
+#~ msgstr "Codepagina map:"
+
+#~ msgid "Codin&g system:"
+#~ msgstr "Codeersystee&m:"
+
+#~ msgid "Client code page:"
+#~ msgstr "Client codepagina:"
+
+#~ msgid "Logon"
+#~ msgstr "Aanmelden"
+
+#~ msgid "Add Scripts"
+#~ msgstr "Scripts toevoegen"
+
+#~ msgid "Add user script:"
+#~ msgstr "Gebruiker script toevoegen:"
+
+#~ msgid "Add user to group script:"
+#~ msgstr "Gebruiker toevoegen aan groepscript:"
+
+#~ msgid "Add gr&oup script:"
+#~ msgstr "Gr&oepscript toevoegen:"
+
+#~ msgid "Add machine script:"
+#~ msgstr "Machinescript toevoegen:"
+
+#~ msgid "Delete group script:"
+#~ msgstr "Groepscript verwijderen:"
+
+#~ msgid "Delete user script:"
+#~ msgstr "Gebruikerscript verwijderen:"
+
+#~ msgid "Delete user from group script:"
+#~ msgstr "Gebruiker verwijderen van groepscript:"
+
+#~ msgid "Primary Group Script"
+#~ msgstr "Primair groepscript"
+
+#~ msgid "Set primar&y group script:"
+#~ msgstr "Prima&ir groepscript instellen:"
+
+#~ msgid "Shutdown"
+#~ msgstr "Afsluiten"
+
+#~ msgid "Shutdo&wn script:"
+#~ msgstr "Afsl&uitscript:"
+
+#~ msgid "Abort shutdown script:"
+#~ msgstr "Afsluitscript afbreken:"
+
+#~ msgid "Logo&n path:"
+#~ msgstr "Aa&nmeldingspad:"
+
+#~ msgid "Logon ho&me:"
+#~ msgstr "Aan&meldingsmap:"
+
+#~ msgid "&Logon drive:"
+#~ msgstr "Aanme&ldingsstation:"
+
+#~ msgid "Lo&gon script:"
+#~ msgstr "Aanmel&dscript:"
+
+#~ msgid "Socket"
+#~ msgstr "Socket"
+
+#~ msgid "Socket address:"
+#~ msgstr "Socketadres:"
+
+#~ msgid "Socket Options"
+#~ msgstr "Socket Opties"
+
+#~ msgid "TCP_NODELA&Y"
+#~ msgstr "TCP_NODELA&Y"
+
+#~ msgid "SO_S&NDBUF:"
+#~ msgstr "SO_S&NDBUF:"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "IPTOS_THROU&GHPUT"
+#~ msgstr "IPTOS_THROU&GHPUT"
+
+#~ msgid "SO_SNDLO&WAT:"
+#~ msgstr "SO_SNDLO&WAT:"
+
+#~ msgid "SO_&KEEPALIVE"
+#~ msgstr "SO_&KEEPALIVE"
+
+#~ msgid "SO_RCV&LOWAT:"
+#~ msgstr "SO_RCV&LOWAT:"
+
+#~ msgid "S&O_REUSEADDR"
+#~ msgstr "S&O_REUSEADDR"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "Enables or disables the entire SSL mode"
+#~ msgstr "Activeert of deactiveert de gehele SSLmodus"
+
+#~ msgid ""
+#~ "This enables or disables the entire SSL mode. If it is set to no, the SSL-"
+#~ "enabled Samba behaves exactly like the non-SSL Samba. If set to yes, it "
+#~ "depends on the variables ssl hosts and ssl hosts resign whether an SSL "
+#~ "connection will be required.\n"
+#~ "\n"
+#~ "This is only available if the SSL libraries have been compiled on your "
+#~ "system and the configure option --with-ssl was given at configure time."
+#~ msgstr ""
+#~ "Dit activeert of deactiveert de volledige SSL-modus. Als het ingesteld is "
+#~ "op nee, reageert de SSL-geactiveerde Samba exact hetzelfde als de niet-"
+#~ "SSL Samba. Als het ingesteld is op ja, hangt het af van de variabelen ssl-"
+#~ "hosts en ssl-hosts beslist of een SSL-verbinding vereist zal zijn.\n"
+#~ "\n"
+#~ "Dit is enkel beschikbaar als de SSL-bibliotheken gecompileerd zijn op uw "
+#~ "systeem en de instellingsoptie --with-ssl opgegeven was bij het instellen."
+
+#~ msgid "E&nable SSL"
+#~ msgstr "SSL activere&n"
+
+#~ msgid "SSL h&osts:"
+#~ msgstr "SSL h&osts:"
+
+#~ msgid "SSL entrop&y bytes:"
+#~ msgstr "SSL entrop&y bytes:"
+
+#~ msgid "SSL ciphers:"
+#~ msgstr "SSL-codes:"
+
+#~ msgid "SSL hosts resi&gn:"
+#~ msgstr "SSL-hosts a&fmelden:"
+
+#~ msgid "ssl2"
+#~ msgstr "ssl2"
+
+#~ msgid "ssl3"
+#~ msgstr "ssl3"
+
+#~ msgid "ssl2or3"
+#~ msgstr "ssl2 of 3"
+
+#~ msgid "tls1"
+#~ msgstr "tls1"
+
+#~ msgid "SSL co&mpatibility"
+#~ msgstr "SSL-co&mpatibiliteit"
+
+#~ msgid "SSL CA certDir:"
+#~ msgstr "SSL CA certMap:"
+
+#~ msgid "SSL entropy file:"
+#~ msgstr "SSL entropie bestand:"
+
+#~ msgid "SSL egd socket:"
+#~ msgstr "SSL egd socket:"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL-versie:"
+
+#~ msgid "SSL CA certFile:"
+#~ msgstr "SSL CA certBestand:"
+
+#~ msgid "SSL require clientcert"
+#~ msgstr "SSL vereist clientcert"
+
+#~ msgid "SSL client key:"
+#~ msgstr "SSL client sleutel:"
+
+#~ msgid "SSL re&quire servercert"
+#~ msgstr "SSL ver&eist server-cert"
+
+#~ msgid "SS&L server cert:"
+#~ msgstr "SS&L-server cert:"
+
+#~ msgid "SSL client cert:"
+#~ msgstr "SSL-client cert:"
+
+#~ msgid "SSL server &key:"
+#~ msgstr "SSL-server &sleutel:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protocol"
+
+#~ msgid "Ti&me server"
+#~ msgstr "Tij&dsserver"
+
+#~ msgid "Lar&ge readwrite"
+#~ msgstr "&Groot lezen-schrijven bestand"
+
+#~ msgid "UNIX extensions"
+#~ msgstr "UNIX uitbreidingen"
+
+#~ msgid "Read bmpx"
+#~ msgstr "Bmpx lezen"
+
+#~ msgid "Protocol Versions"
+#~ msgstr "Protocolversies"
+
+#~ msgid "A&nnounce as:"
+#~ msgstr "Aa&nkondigen als:"
+
+#~ msgid "NT"
+#~ msgstr "NT"
+
+#~ msgid "NT Workstation"
+#~ msgstr "NT-werkstation"
+
+#~ msgid "win95"
+#~ msgstr "win95"
+
+#~ msgid "WfW"
+#~ msgstr "WfW"
+
+#~ msgid "Announce version:"
+#~ msgstr "Aankondigingsversie:"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Pr&otocol:"
+#~ msgstr "Pr&otocol:"
+
+#~ msgid "NT1"
+#~ msgstr "NT1"
+
+#~ msgid "LANMAN2"
+#~ msgstr "LANMAN2"
+
+#~ msgid "LANMAN1"
+#~ msgstr "LANMAN1"
+
+#~ msgid "CORE"
+#~ msgstr "CORE"
+
+#~ msgid "COREPLUS"
+#~ msgstr "COREPLUS"
+
+#~ msgid "Max protocol:"
+#~ msgstr "Max protocol:"
+
+#~ msgid "Min protocol:"
+#~ msgstr "Min protocol:"
+
+#~ msgid "Limits"
+#~ msgstr "Limieten"
+
+#~ msgid "Ma&x mux:"
+#~ msgstr "Ma&x mux:"
+
+#~ msgid "Max tt&l:"
+#~ msgstr "Max tt&l:"
+
+#~ msgid "Listening SMB Ports"
+#~ msgstr "SMB-poorten beluisteren"
+
+#~ msgid "SMB ports:"
+#~ msgstr "SMB-poorten:"
+
+#~ msgid "Browsing"
+#~ msgstr "Bladeren"
+
+#~ msgid "LM i&nterval:"
+#~ msgstr "LM-i&nterval:"
+
+#~ msgid "L&M announce:"
+#~ msgstr "L&M-aankondiging:"
+
+#~ msgid "Sec"
+#~ msgstr "Sec"
+
+#~ msgid "Remote browse s&ync:"
+#~ msgstr "Op afstand bladeren s&ynchronisatie:"
+
+#~ msgid "Bro&wse list"
+#~ msgstr "Lijst door&bladeren"
+
+#~ msgid "Enhanced browsin&g"
+#~ msgstr "&Verbeterd bladeren"
+
+#~ msgid "Pre&load:"
+#~ msgstr "Voor&laden:"
+
+#~ msgid "Winbind"
+#~ msgstr "Winbind"
+
+#~ msgid "&Winbind/Idmap UID:"
+#~ msgstr "&Winbind/Idmap UID:"
+
+#~ msgid "Winbind/Idmap &GID:"
+#~ msgstr "Winbind/Idmap &GID:"
+
+#~ msgid "Template h&omedir:"
+#~ msgstr "Sjabl&oon beginmap:"
+
+#~ msgid "Temp&late shell:"
+#~ msgstr "Sjab&loonshell:"
+
+#~ msgid "Winbind separator:"
+#~ msgstr "Winbind scheiding:"
+
+#~ msgid "Template primary group:"
+#~ msgstr "Sjabloon primaire groep:"
+
+#~ msgid "Winbind cache ti&me:"
+#~ msgstr "Wi&nbind cache tijd:"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "Acl compatibilit&y:"
+#~ msgstr "Acl-compatibilite&it:"
+
+#~ msgid "Wi&nbind enum users"
+#~ msgstr "Wi&nbind enum-gebruikers"
+
+#~ msgid "Winbind enum groups"
+#~ msgstr "Winbind enum groepen"
+
+#~ msgid "Winbind use default domain"
+#~ msgstr "Winbind gebruikt standaarddomein"
+
+#~ msgid "Winbind enable local accounts"
+#~ msgstr "Winbind activeer lokale accounts"
+
+#~ msgid "Winbind trusted domains only"
+#~ msgstr "Winbind enkel vertrouwde domeinen"
+
+#~ msgid "Winbind nested groups"
+#~ msgstr "Winbind geneste groepen"
+
+#~ msgid "NetBIOS"
+#~ msgstr "NetBIOS"
+
+#~ msgid "NetBIOS sc&ope:"
+#~ msgstr "NetBI&OS-bereik:"
+
+#~ msgid "&NetBIOS aliases:"
+#~ msgstr "&NetBIOS-aliassen:"
+
+#~ msgid "Disab&le netbios"
+#~ msgstr "Netbios uitschake&len"
+
+#~ msgid "Na&me resolve order:"
+#~ msgstr "Volgorde van naa&m opzoeken:"
+
+#~ msgid "lmhosts host wins bcast"
+#~ msgstr "lmhosts host wins bcast"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "H&ost msdfs"
+#~ msgstr "H&ost msdfs"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "LDAP suffi&x:"
+#~ msgstr "LDAP ac&htervoegsel:"
+
+#~ msgid "LDAP machine suffix:"
+#~ msgstr "LDAP machineachtervoegsel:"
+
+#~ msgid "LDAP user suffix:"
+#~ msgstr "LDAP gebruikersachtervoegsel:"
+
+#~ msgid "LDAP &group suffix:"
+#~ msgstr "LDAP &groepsachtervoegsel:"
+
+#~ msgid "LDAP idmap suffix:"
+#~ msgstr "LDAP idmap achtervoegsel:"
+
+#~ msgid "LDAP filter:"
+#~ msgstr "LDAP filter:"
+
+#~ msgid "LDAP ad&min dn:"
+#~ msgstr "LDAP beheers-d&n:"
+
+#~ msgid "Idmap bac&kend:"
+#~ msgstr "Idmap bac&kend:"
+
+#~ msgid "LDAP replication sleep:"
+#~ msgstr "LDAP replicatie slaaptijd:"
+
+#~ msgid "&LDAP ssl:"
+#~ msgstr "&LDAP ssl:"
+
+#~ msgid "Off"
+#~ msgstr "Uit"
+
+#~ msgid "Start_tls"
+#~ msgstr "Start_tls"
+
+#~ msgid "On"
+#~ msgstr "Aan"
+
+#~ msgid "LDAP s&ync:"
+#~ msgstr "LDAP s&ynchronisatie:"
+
+#~ msgid "Only"
+#~ msgstr "Enkel"
+
+#~ msgid "LDAP delete d&n"
+#~ msgstr "LDAP d&n verwijderen"
+
+#~ msgid "Add share c&ommand:"
+#~ msgstr "Gedeelde bron toevoegen &opdracht:"
+
+#~ msgid "Change share command:"
+#~ msgstr "Gedeelde-bron-wijzigen-opdracht:"
+
+#~ msgid "De&lete share command:"
+#~ msgstr "Gedeelde bron verwijderen &opdracht:"
+
+#~ msgid "Messa&ge command:"
+#~ msgstr "&Berichtenopdracht:"
+
+#~ msgid "Dfree co&mmand:"
+#~ msgstr "&Dfree-opdracht:"
+
+#~ msgid "Set &quota command:"
+#~ msgstr "&Quota instellen opdracht:"
+
+#~ msgid "Get quota command:"
+#~ msgstr "Quota opzoeken opdracht:"
+
+#~ msgid "Pa&nic action:"
+#~ msgstr "Pa&niekactie:"
+
+#~ msgid "Misc"
+#~ msgstr "Diversen"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Diversen"
+
+#~ msgid "Hide &local users"
+#~ msgstr "Verberg &lokale gebruikers"
+
+#~ msgid "Default service:"
+#~ msgstr "Standaard dienst:"
+
+#~ msgid "Time &offset:"
+#~ msgstr "Tijdsvers&chuiving:"
+
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Remote a&nnounce:"
+#~ msgstr "Aa&nkondiging op afstand:"
+
+#~ msgid "Source environment:"
+#~ msgstr "Bron-omgeving:"
+
+#~ msgid "NIS"
+#~ msgstr "NIS"
+
+#~ msgid "NIS homedir"
+#~ msgstr "NIS beginmap"
+
+#~ msgid "Homedir map:"
+#~ msgstr "Thuismap:"
+
+#~ msgid "UTMP"
+#~ msgstr "UTMP"
+
+#~ msgid "Utmp director&y:"
+#~ msgstr "Utmp-ma&p:"
+
+#~ msgid "&Wtmp directory:"
+#~ msgstr "&Wtmp map:"
+
+#~ msgid "Ut&mp"
+#~ msgstr "Ut&mp"
+
+#~ msgid "Debug"
+#~ msgstr "Debug"
+
+#~ msgid "&NT status support"
+#~ msgstr "&NT status ondersteuning"
+
+#~ msgid "NT S&MB support"
+#~ msgstr "NT S&MB ondersteuning"
+
+#~ msgid "NT pipe supp&ort"
+#~ msgstr "NT-datastroom &ondersteuning"
+
+#~ msgid "Add/Edit Share"
+#~ msgstr "Gedeelde bron toevoegen/bewerken"
+
+#~ msgid "Pixmap"
+#~ msgstr "Pixmap"
+
+#~ msgid "D&irectory"
+#~ msgstr "&Map"
+
+#~ msgid "&Path:"
+#~ msgstr "&Pad:"
+
+#~ msgid "Share all home &directories"
+#~ msgstr "Alle thuismappen &delen"
+
+#~ msgid "Iden&tifier"
+#~ msgstr "Iden&tifier"
+
+#~ msgid "Na&me:"
+#~ msgstr "Naa&m:"
+
+#~ msgid "Comme&nt:"
+#~ msgstr "Toelichti&ng:"
+
+#~ msgid "Main P&roperties"
+#~ msgstr "Algemene eigen&schappen"
+
+#~ msgid "Pub&lic"
+#~ msgstr "Pub&liek"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "B&laderbaar"
+
+#~ msgid "A&vailable"
+#~ msgstr "Bes&chikbaar"
+
+#~ msgid "&Security"
+#~ msgstr "&Beveiliging"
+
+#~ msgid "Gu&ests"
+#~ msgstr "Gast&en"
+
+#~ msgid ""
+#~ "This is a username which will be used for access to services which are "
+#~ "specified as guest ok. Whatever privileges this user has will be "
+#~ "available to any client connecting to the guest service. Typically this "
+#~ "user will exist in the password file, but will not have a valid login. "
+#~ "The user account \\\"ftp\\\" is often a good choice for this parameter. "
+#~ "If a username is specified in a given service, the specified username "
+#~ "overrides this one."
+#~ msgstr ""
+#~ "Dit is een gebruikersnaam die gebruikt zal worden voor toegang tot "
+#~ "diensten die aangegeven worden gasten te accepteren. Eender welke rechten "
+#~ "deze gebruiker heeft zullen beschikbaar zijn voor elke client die "
+#~ "verbindt met de gastdienst. Deze gebruiker zal waarschijnlijk bestaan in "
+#~ "het wachtwoordenbestand, maar zal niet geldig kunnen aanmelden. Het "
+#~ "gebruikersaccount \\\"ftp\\\" is vaak een goede keuze voor deze "
+#~ "parameter. Als een gebruiker gespecificeerd is in een opgegeven dienst, "
+#~ "overschrijft de opgegeven gebruikersnaam die dienst."
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Gastaccount:"
+
+#~ msgid ""
+#~ "If this is checked , then no password is required to connect to the "
+#~ "service. Privileges will be those of the guest account."
+#~ msgstr ""
+#~ "Als dit geactiveerd is zal geen wachtwoord vereist zijn om met deze "
+#~ "dienst te verbinden. Rechten komen overeen met die van het gastaccount."
+
+#~ msgid "Only allow guest connect&ions"
+#~ msgstr "Alleen gastverbind&ingen toestaan"
+
+#~ msgid "Hos&ts"
+#~ msgstr "Hos&ts"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Het tegenovergestelde van toegelaten hosts - hosts hier getoond worden "
+#~ "GEEN toegang verleend tot diensten, tenzij de specifieke diensten hun "
+#~ "eigen lijst hebben om deze rechten te overschrijven. Waar de "
+#~ "verschillende lijsten conflicteren, heeft de toelatingslijst voorrang."
+
+#~ msgid ""
+#~ "This parameter is a comma, space, or tab delimited set of hosts which are "
+#~ "permitted to access a service."
+#~ msgstr ""
+#~ "Deze parameter is een komma, spatie of via tabulatie gescheiden "
+#~ "verzameling van hosts die toegang tot een service verleend worden."
+
+#~ msgid "Hosts allo&w:"
+#~ msgstr "Hosts toestaa&n:"
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "Hosts &weigeren:"
+
+#~ msgid "Sy&mbolic Links"
+#~ msgstr "Sy&mbolische koppelingen"
+
+#~ msgid "Allow following of symbolic lin&ks"
+#~ msgstr "Volgen van symbolische &koppelingen toestaan"
+
+#~ msgid ""
+#~ "Allow following of symbolic links that &point to areas outside the "
+#~ "directory tree"
+#~ msgstr ""
+#~ "Volgen van symbolische links die &wijzen buiten de mappenboom toestaan"
+
+#~ msgid ""
+#~ "<qt>Validate password against the following usernames if the client "
+#~ "cannot supply a username:</qt>"
+#~ msgstr ""
+#~ "<qt>Wachtwoord valideren bij de volgende gebruikersnamen als de client "
+#~ "geen gebruikersnaam kan leveren:</qt>"
+
+#~ msgid ""
+#~ "Only allow connections with use&rnames specified in this username list"
+#~ msgstr ""
+#~ "Enkel verbindingen met gebruike&rsnamen aanwezig in de "
+#~ "gebruikersnamenlijst toelaten"
+
+#~ msgid "Hidden &Files"
+#~ msgstr "Verborgen &bestanden"
+
+#~ msgid "Hidden"
+#~ msgstr "Verborgen"
+
+#~ msgid "Veto"
+#~ msgstr "Veto"
+
+#~ msgid "Veto Oplock"
+#~ msgstr "Veto \"Oplock\"-grendel"
+
+#~ msgid "Size"
+#~ msgstr "Grootte"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Se&lected Files"
+#~ msgstr "Gese&lecteerde bestanden"
+
+#~ msgid "Hi&de"
+#~ msgstr "Ver&bergen"
+
+#~ msgid "&Veto"
+#~ msgstr "&Veto"
+
+#~ msgid "Veto oploc&k"
+#~ msgstr "Veto \"oploc&k\"-grendel"
+
+#~ msgid "&Manual Configuration"
+#~ msgstr "Hand&matig configuratie"
+
+#~ msgid "Ve&to files:"
+#~ msgstr "Ve&to bestanden:"
+
+#~ msgid "Veto oplock f&iles:"
+#~ msgstr "Veto \"oplock\"-grendel &bestanden:"
+
+#~ msgid "Hidde&n files:"
+#~ msgstr "Verborge&n bestanden:"
+
+#~ msgid "Hide un&writable files"
+#~ msgstr "On&schrijfbare bestanden verbergen"
+
+#~ msgid "Hide s&pecial files"
+#~ msgstr "S&peciale bestanden verbergen"
+
+#~ msgid "Hide files startin&g with a dot "
+#~ msgstr "Bestanden be&ginnend met een punt verbergen"
+
+#~ msgid "Hide un&readable files"
+#~ msgstr "Onleesba&re bestanden verbergen"
+
+#~ msgid "&Advanced"
+#~ msgstr "Ge&avanceerd"
+
+#~ msgid "Force Modes"
+#~ msgstr "Modi afdwingen"
+
+#~ msgid "Forc&e directory security mode:"
+#~ msgstr "Mapbev&eiligingsmodus afdwingen:"
+
+#~ msgid "Fo&rce security mode:"
+#~ msgstr "Beveiligingsmodus afd&wingen:"
+
+#~ msgid "Force director&y mode:"
+#~ msgstr "&Mapmodus afdwingen:"
+
+#~ msgid "Force create mo&de:"
+#~ msgstr "Mo&dus maken afdwingen:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "01234567"
+#~ msgstr "01234567"
+
+#~ msgid "Masks"
+#~ msgstr "Maskers"
+
+#~ msgid "Directory security mask:"
+#~ msgstr "Mapbeveiligingsmasker:"
+
+#~ msgid "Security &mask:"
+#~ msgstr "Beveiligings&masker:"
+
+#~ msgid "Direc&tory mask:"
+#~ msgstr "&Mapmasker:"
+
+#~ msgid "Create mas&k:"
+#~ msgstr "Aanma&kenmasker:"
+
+#~ msgid "ACL"
+#~ msgstr "ACL"
+
+#~ msgid "&Profile acls"
+#~ msgstr "acls-&Profiel"
+
+#~ msgid "Inherit ac&ls"
+#~ msgstr "Ac&ls erven"
+
+#~ msgid "&NT ACL support"
+#~ msgstr "&NT ACL-ondersteuning"
+
+#~ msgid "Force unkno&wn acl user:"
+#~ msgstr "&Onbekende acl-gebruiker afdwingen:"
+
+#~ msgid "Map acl &inherit"
+#~ msgstr "Acl-erfen&is koppelen"
+
+#~ msgid "Inherit permissions from parent directory"
+#~ msgstr "Toegangsrechten van bovenliggende map erven"
+
+#~ msgid "Allow deletion of readonly files"
+#~ msgstr "Verwijderen van alleen-lezen-bestanden toelaten"
+
+#~ msgid "DOS Attribute Mapping"
+#~ msgstr "DOS attribuut koppeling"
+
+#~ msgid "Map DOS archi&ve to UNIX owner execute"
+#~ msgstr "Koppeling DOS-archief naar UNIX-eigenaar uit&voeren"
+
+#~ msgid "Map DOS hidden to UNI&X world execute"
+#~ msgstr "Koppeling verborgen DOS naar UNI&X werelduitvoerbaar"
+
+#~ msgid "Map DOS system to UNIX &group execute"
+#~ msgstr "Koppeling DOS systeem naar UNIX &groepuitvoering"
+
+#~ msgid "Store DOS attributes onto extended attribute"
+#~ msgstr "DOS attributen op uitgebreid attribuut opslaan"
+
+#~ msgid "OS/2"
+#~ msgstr "OS/2"
+
+#~ msgid "Strict s&ync"
+#~ msgstr "Strict s&ynchroniseren"
+
+#~ msgid "Sync al&ways"
+#~ msgstr "&Altijd synchroniseren"
+
+#~ msgid "St&rict allocate"
+#~ msgstr "St&rict alloceren"
+
+#~ msgid "Use sen&dfile"
+#~ msgstr "Sen&dfile gebruiken"
+
+#~ msgid "&Maximum number of simultaneous connections:"
+#~ msgstr "&Maximum aantal gelijktijdige verbindingen:"
+
+#~ msgid "Write cache si&ze:"
+#~ msgstr "Cache-grootte schrij&ven:"
+
+#~ msgid "bytes"
+#~ msgstr "bytes"
+
+#~ msgid "Bloc&k size:"
+#~ msgstr "Blo&kgrootte:"
+
+#~ msgid "Client-side cachin&g policy:"
+#~ msgstr "Clientzijde caching&beleid:"
+
+#~ msgid "manual"
+#~ msgstr "handmatig"
+
+#~ msgid "documents"
+#~ msgstr "documenten"
+
+#~ msgid "programs"
+#~ msgstr "programma's"
+
+#~ msgid "disable"
+#~ msgstr "uitschakelen"
+
+#~ msgid "Name Mangling"
+#~ msgstr "Naam menging"
+
+#~ msgid "Enable na&me mangling"
+#~ msgstr "Naam&mengen activeren"
+
+#~ msgid "Man&gle case"
+#~ msgstr "Hoofd-/kleine letters men&gen"
+
+#~ msgid "Preser&ve case"
+#~ msgstr "Hoofd-/kleine letters beho&uden"
+
+#~ msgid "Short pr&eserve case"
+#~ msgstr "Kort hoofd-/kleine letters b&ewaren"
+
+#~ msgid "Case sensi&tive"
+#~ msgstr "Hoofdle&ttergevoelig"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "&Standaard hoofd-/kleine letters:"
+
+#~ msgid "Lower"
+#~ msgstr "Kleine letter"
+
+#~ msgid "Upper"
+#~ msgstr "Hoofdletter"
+
+#~ msgid "Mangling cha&r:"
+#~ msgstr "Mengend &teken:"
+
+#~ msgid "Mangled ma&p:"
+#~ msgstr "Gemengde ma&p:"
+
+#~ msgid "Mangling method:"
+#~ msgstr "Mengingsmethode:"
+
+#~ msgid "hash"
+#~ msgstr "hash"
+
+#~ msgid "hash2"
+#~ msgstr "hash2"
+
+#~ msgid "Other Options"
+#~ msgstr "Andere opties"
+
+#~ msgid "Hide traili&ng dot"
+#~ msgstr "Punt op ei&nde verbergen"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "&DOS file mode"
+#~ msgstr "&DOS-bestandsmodus"
+
+#~ msgid "DOS f&ile times"
+#~ msgstr "DOS &bestandstijden"
+
+#~ msgid "DOS file time resolution"
+#~ msgstr "DOS bestandstijd-resolutie"
+
+#~ msgid "Enable lock&ing"
+#~ msgstr "Vergrendelen act&iveren"
+
+#~ msgid "Locki&ng"
+#~ msgstr "Vergre&ndelen"
+
+#~ msgid "S&trict locking"
+#~ msgstr "S&trict vergrendelen"
+
+#~ msgid "Blockin&g locks"
+#~ msgstr "Blokkerende &grendels"
+
+#~ msgid "Posi&x locking"
+#~ msgstr "Posi&x-vergrendeling"
+
+#~ msgid "Share mo&des"
+#~ msgstr "Gedeelde-bronnen-mo&di"
+
+#~ msgid "Issue oppo&rtunistic locks (oplocks) "
+#~ msgstr "Oppo&rtunistische \"Oplock\"-grendels uitgeven"
+
+#~ msgid "O&plocks"
+#~ msgstr "\"O&plocks\"-grendels"
+
+#~ msgid "Le&vel2 oplocks"
+#~ msgstr "&Versie 2 \"oplocks\"-grendels"
+
+#~ msgid "Oplock contention li&mit:"
+#~ msgstr "\"Oplocks\"-grendel geschillenli&miet:"
+
+#~ msgid "Fak&e oplocks"
+#~ msgstr "\"Oplocks\"-grendels nado&en"
+
+#~ msgid "Vfs ob&jects:"
+#~ msgstr "Vfs-ob&jecten:"
+
+#~ msgid "Vfs o&ptions:"
+#~ msgstr "Vfs-o&pties:"
+
+#~ msgid "Exec"
+#~ msgstr "Uitvoeren"
+
+#~ msgid "P&reexec:"
+#~ msgstr "P&re-uitvoer:"
+
+#~ msgid "Root pr&eexec:"
+#~ msgstr "Root pr&e-uitvoer:"
+
+#~ msgid "Pos&texec:"
+#~ msgstr "Na-ui&tvoering:"
+
+#~ msgid "Root &postexec:"
+#~ msgstr "Root &na-uitvoering:"
+
+#~ msgid "preexec c&lose"
+#~ msgstr "pre-uitvoer s&luiten"
+
+#~ msgid "root pree&xec close"
+#~ msgstr "root pre-uit&voer sluiten"
+
+#~ msgid "&Volume:"
+#~ msgstr "&Volume:"
+
+#~ msgid "Ma&gic script:"
+#~ msgstr "Ma&gic-script:"
+
+#~ msgid "Mag&ic output:"
+#~ msgstr "Magic-u&itvoer:"
+
+#~ msgid "Do &not descend:"
+#~ msgstr "&Niet afdalen:"
+
+#~ msgid "Msdfs pro&xy"
+#~ msgstr "Msdfs pro&xy"
+
+#~ msgid "Setdir command allo&wed"
+#~ msgstr "&Zetmapopdracht toelaten"
+
+#~ msgid "Fa&ke directory create times"
+#~ msgstr "Mapaanmaaktijden naboo&tsen"
+
+#~ msgid "Ms&dfs root"
+#~ msgstr "Ms&dfs root"
+
+#~ msgid "&Help"
+#~ msgstr "&Help"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Gebruikers"
+
+#~ msgid "All U&nspecified Users"
+#~ msgstr "Alle o&nvermelde gebruikers"
+
+#~ msgid "Reject"
+#~ msgstr "Verwerpen"
+
+#~ msgid "Spec&ified Users"
+#~ msgstr "Vermelde gebru&ikers"
+
+#~ msgid "Access Rights"
+#~ msgstr "Toegangsrechten"
+
+#~ msgid "A&dd User..."
+#~ msgstr "Gebr&uiker toevoegen..."
+
+#~ msgid "E&xpert"
+#~ msgstr "E&xpert"
+
+#~ msgid "Add &Group..."
+#~ msgstr "&Groep toevoegen..."
+
+#~ msgid "Remo&ve Selected"
+#~ msgstr "Selectie ve&rwijderen"
+
+#~ msgid "All Users Should be Forced to the Follo&wing User/Group"
+#~ msgstr "Alle gebruikers for&ceren tot de volgende gebruiker/groep"
+
+#~ msgid "Forc&e user:"
+#~ msgstr "Gebruiker f&orceren:"
+
+#~ msgid "Fo&rce group:"
+#~ msgstr "Groep &forceren:"
+
+#~ msgid "Access Modifiers"
+#~ msgstr "Toegang aanpassen"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Toegangsrechten"
+
+#~ msgid "Others"
+#~ msgstr "Overig"
+
+#~ msgid "Read"
+#~ msgstr "Lezen"
+
+#~ msgid "Write"
+#~ msgstr "Schrijven"
+
+#~ msgid "Sticky"
+#~ msgstr "Vastgeplakt"
+
+#~ msgid "Set GID"
+#~ msgstr "GID instellen"
+
+#~ msgid "Set UID"
+#~ msgstr "UID instellen"
+
+#~ msgid "Special"
+#~ msgstr "Speciaal"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Gebruikersinstellingen"
+
+#~ msgid "&Valid users:"
+#~ msgstr "Geldige gebr&uikers:"
+
+#~ msgid "&Admin users:"
+#~ msgstr "&Beheersgebruikers:"
+
+#~ msgid "&Invalid users:"
+#~ msgstr "Ongeld&ige gebruikers:"
+
+#~ msgid "&Write list:"
+#~ msgstr "S&chrijflijst:"
+
+#~ msgid "&Read list:"
+#~ msgstr "&Leeslijst:"
+
+#~ msgid "Allowed &Hosts"
+#~ msgstr "Toegestane &hosts"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Een lijst van toegestane hosts"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Hier ziet u een lijst van hosts die toegang hebben tot deze map via NFS.\n"
+#~ "De eerste kolom toont de naam of adres van de host, de tweede kolom toont "
+#~ "de toegangsparameters. De naam '*' duidt publieke toegang aan."
+
+#~ msgid "&Add Host..."
+#~ msgstr "Host toevoege&n..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "Host wijzi&gen..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "Host ve&rwijderen"
+
+#~ msgid "Name/Address"
+#~ msgstr "Naam/Adres"
+
+#~ msgid "Parameters"
+#~ msgstr "Parameters"
+
+#~ msgid "Host Properties"
+#~ msgstr "Hostinstellingen"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Naam/adres:"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Naam-/adresveld</b>\n"
+#~ "<p>\n"
+#~ "Hier kunt u de hostnaam of adres invoeren.<br />\n"
+#~ "De host kan op meerdere manieren gespecificeerd worden:\n"
+#~ "<p>\n"
+#~ "<i>enkele host</i>\n"
+#~ "<p>\n"
+#~ "Dit is de meest voorkomende indeling. U kunt een host specificeren door "
+#~ "ofwel de de afgekorte naam, die herkend wordt door de resolver, ofwel de "
+#~ "volledig gekwalificeerde domeinnaam, ofwel een IP-adres.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroepen</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroepen kunnen gegeven worden als @groep. Enkele het host "
+#~ "gedeelte van elk netgroeplid wordt beschouwd bij het controleren van het "
+#~ "lidmaatschap. Lege host gedeeltes of die een enkel liggend streepje (-) "
+#~ "bevatten worden genegeerd.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>jokertekens</i>\n"
+#~ "<p>\n"
+#~ " Machinenamen kunnen de jokertekens * en ? bevatten. Dit kan gebruikt "
+#~ "worden om de uitvoeringsbestanden compacter te maken; bijvoorbeeld, *.cs."
+#~ "foo.edu dekt alle hosts in het domein cs.foo.edu. Let wel op: deze "
+#~ "jokertekens dekken de punten in de domeinnaam niet, dus het bovenstaande "
+#~ "patroon dekt bijvoorbeeld a.b.cs.foo.edu niet.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-netwerken</i>\n"
+#~ "<p>\n"
+#~ " U kunt ook mappen gelijktijdig exporteren naar alle hosts op een IP "
+#~ "(sub-)netwerk. Dit kan gedaan worden door een IP-adres en netmasker paar "
+#~ "als adres/netmasker te specificeren. Het netmasker in gepunt-decimaal "
+#~ "formaat of als aaneensluitende maskerlengte (bijvoorbeeld, ofwel "
+#~ "'/255.255.252.0' of '/22' achter het netwerkbasisadres gevoegd met 10 "
+#~ "bits van de host) \n"
+#~ "</p>"
+
+#~ msgid "&Public access"
+#~ msgstr "&Publieke toegang"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b> Publieke toegang</b>\n"
+#~ "<p>\n"
+#~ "Als u dit activeert, zal het hostadres een enkel jokerteken zijn. Dit "
+#~ "geeft publieke toegang aan.\n"
+#~ "Dit is precies hetzelfde alsof u een jokerteken in het adresveld zou "
+#~ "invoeren.\n"
+#~ "</p>"
+
+#~ msgid "Options"
+#~ msgstr "Opties"
+
+#~ msgid "&Writable"
+#~ msgstr "Sc&hrijfbaar"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Schrijfbaar</b>\n"
+#~ "<p>\n"
+#~ "Zowel lees- als schrijfaanvragen toelaten op dit NFS-volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standaard wordt elke aanvraag die het bestandssysteem wijzigt niet "
+#~ "toegelaten\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "Onbeve&iligd"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Onbeveiligd</b>\n"
+#~ "<p>\n"
+#~ "Als deze optie ingeschakeld is, is het niet vereist dat aanvragen "
+#~ "vertrekken van op een internet poort lager dan IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Niet inschakelen als u onzeker bent.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Synchroniseren"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Synchronisatie</b>\n"
+#~ "<p>\n"
+#~ "Deze optie vraagt aan dat alle schrijfacties bevestigd worden voordat de "
+#~ "schrijfaanvraag voltooid is. Dit is vereist voor volledige veiligheid van "
+#~ "de gegevens wanneer een server zou falen, maar zorgt voor een aanslag op "
+#~ "de prestaties.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Standaard wordt de server toegestaan om de gegevens uit te schrijven "
+#~ "wanneer die daar klaar voor is.\n"
+#~ "</p>"
+
+#~ msgid "No w&delay"
+#~ msgstr "Geen w-ver&traging"
+
+#~ msgid ""
+#~ "<b>No wdelay</b>\n"
+#~ "<p>\n"
+#~ "This option only has effect if sync is also set. The NFS server will "
+#~ "normally delay committing a write request to disk slightly if it suspects "
+#~ "that another related write request may be in progress or may arrive soon. "
+#~ "This allows multiple write requests to be committed to disk with the one "
+#~ "operation which can improve performance. If an NFS server received mainly "
+#~ "small unrelated requests, this behavior could actually reduce "
+#~ "performance, so no wdelay is available to turn it off. </p>"
+#~ msgstr ""
+#~ "<b>Geen w-vertraging</b>\n"
+#~ "<p>\n"
+#~ "Deze optie heeft enkel effect als synchronisatie ook ingesteld is. De NFS-"
+#~ "server zal normaal gezien met kleine vertraging schrijfaanvragen "
+#~ "uitvoeren als een andere verwante schrijfopdracht bezig is of verwacht "
+#~ "wordt. Dit laat toe om meerdere schrijfaanvragen weg te schrijven met één "
+#~ "opdracht. Dit zorgt voor verbeterde prestaties. Als een NFS-server vooral "
+#~ "kleine onafhankelijke aanvragen krijgt, kan dit gedrag de prestaties "
+#~ "verslechteren, dus \"geen w-vertraging\" is beschikbaar om het uit te "
+#~ "schakelen. </p>"
+
+#~ msgid "No &hide"
+#~ msgstr "Niet ver&bergen"
+
+#~ msgid ""
+#~ "<b>No hide</b>\n"
+#~ "<p>\n"
+#~ "This option is based on the option of the same name provided in IRIX NFS. "
+#~ "Normally, if a server exports two filesystems one of which is mounted on "
+#~ "the other, then the client will have to mount both filesystems explicitly "
+#~ "to get access to them. If it just mounts the parent, it will see an empty "
+#~ "directory at the place where the other filesystem is mounted. That "
+#~ "filesystem is \"hidden\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Setting the nohide option on a filesystem causes it not to be hidden, and "
+#~ "an appropriately authorized client will be able to move from the parent "
+#~ "to that filesystem without noticing the change.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "However, some NFS clients do not cope well with this situation as, for "
+#~ "instance, it is then possible for two files in the one apparent "
+#~ "filesystem to have the same inode number.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The nohide option is currently only effective on single host exports. It "
+#~ "does not work reliably with netgroup, subnet, or wildcard exports.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "This option can be very useful in some situations, but it should be used "
+#~ "with due care, and only after confirming that the client system copes "
+#~ "with the situation effectively.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Niet verbergen</b>\n"
+#~ "<p>\n"
+#~ "Deze optie is gebaseerd op de optie van dezelfde naam voorzien in IRIX "
+#~ "NFS. Normaal gezien, als de server twee bestandensystemen naar buiten "
+#~ "brengt, waarvan een aangekoppeld is op het andere, dan zal de client "
+#~ "beide expliciet moeten aankoppelen om toegang te kunnen krijgen. Als "
+#~ "enkel de bovenliggende map aangekoppeld wordt, zal een lege map "
+#~ "waargenomen worden waar het andere bestandssysteem aangekoppeld is. Dat "
+#~ "bestandssysteem is dan \"verborgen\".\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "De optie \"niet verbergen\" aanzetten zorgt ervoor dat een "
+#~ "bestandssysteem niet verborgen is, en een client met de nodige rechten "
+#~ "zal van de bovenliggende map naar dat bestandssysteem kunnen navigeren "
+#~ "zonder iets uitzonderlijks te merken.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Sommige NFS-clients gaan niet goed om met deze situatie, het is dan "
+#~ "bijvoorbeeld mogelijk dat twee bestanden in één bestandssysteem hetzelfde "
+#~ "inode-getal hebben.</p>\n"
+#~ "<p>\n"
+#~ "De optie \"niet verbergen\" is momenteel enkel van toepassing op \"enkele "
+#~ "host\". Het werkt niet betrouwbaar met netgroep, subnet of jokertekens.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Deze optie kan heel nuttig zijn in sommige situaties, maar moet met de "
+#~ "nodige omzichtigheid behandeld worden. Ze mag enkel gebruikt worden als "
+#~ "bevestigd is dat het clientsysteem werkelijk met de situatie om kan "
+#~ "gaan.\n"
+#~ "</p>"
+
+#~ msgid "No su&btree check"
+#~ msgstr "Geen su&bboomcontrole"
+
+#~ msgid ""
+#~ "<b>No subtree check</b>\n"
+#~ "<p>\n"
+#~ "This option disables subtree checking, which has mild security "
+#~ "implications, but can improve reliability is some circumstances.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If a subdirectory of a filesystem is exported, but the whole filesystem "
+#~ "is not, then whenever a NFS request arrives, the server must check not "
+#~ "only that the accessed file is in the appropriate filesystem (which is "
+#~ "easy) but also that it is in the exported tree (which is harder). This "
+#~ "check is called the subtree_check.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "In order to perform this check, the server must include some information "
+#~ "about the location of the file in the \"filehandle\" that is given to the "
+#~ "client. This can cause problems with accessing files that are renamed "
+#~ "while a client has them open (though in many simple cases it will still "
+#~ "work).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "subtree checking is also used to make sure that files inside directories "
+#~ "to which only root has access can only be accessed if the filesystem is "
+#~ "exported with no_root_squash (see below), even the file itself allows "
+#~ "more general access.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "As a general guide, a home directory filesystem, which is normally "
+#~ "exported at the root and may see lots of file renames, should be exported "
+#~ "with subtree checking disabled. A filesystem which is mostly read-only, "
+#~ "and at least does not see many file renames (e.g. /usr or /var) and for "
+#~ "which subdirectories may be exported, should probably be exported with "
+#~ "subtree checks enabled.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Geen subboomcontrole</b>\n"
+#~ "<p>\n"
+#~ "Deze opties zet het controleren van subboom uit, dit heeft enkele milde "
+#~ "beveilingsgevolgen, maar kan de betrouwbaarheid onder bepaalde "
+#~ "omstandigheden verbeteren.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Als een submap van een bestandssysteem gedeeld wordt, maar niet het "
+#~ "volledige bestandssysteem, dan zal wanneer een NFS-aanvraag aankomt, de "
+#~ "server niet alleen moeten controleren of het bestand zich in het juiste "
+#~ "bestandssysteem bevindt (dat is gemakkelijk na te gaan) maar ook dat het "
+#~ "in de uitgevoerde boom zit (dat is moeilijker na te gaan). Deze controle "
+#~ "wordt subboomcontrole genoemd.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Om deze controle te kunnen uitvoeren, moet de server wat gegevens aan de "
+#~ "client meesturen in de \"filehandle\" over de locatie van het bestand.Dit "
+#~ "kan problemen geven wanneer het bestand verplaatst wordt terwijl de "
+#~ "client het bestand open heeft. In sommige, simpele, gevallen levert dit "
+#~ "echter geen problemen op.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Subboomcontrole wordt ook gebruikt om te controleren of bestanden zich "
+#~ "bevinden in mappen die alleen toegankelijk zijn voor root en het "
+#~ "filesysteem geëxporteerd wordt met no_root_squash (zie hierna). Zelfs "
+#~ "wanneer het bestand zelf meer algemene rechten heeft.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Als een algemen regel, zou je er voor moeten kiezen om de persoonlijke "
+#~ "mappen (/home) die normaal gesproken meegeëxporteerd wordt met de root "
+#~ "(/), te delen met de subboomcontrole uitgeschakeld. Mede omdat in /home "
+#~ "veelvuldig bestanden zullen worden verplaatst. Een bestandssysteem "
+#~ "waarvan eigenlijk alleen gelezen wordt en waarop weinig bestanden "
+#~ "verplaatst worden (bijvoorbeeld /usr en /var) en waarbij submappen "
+#~ "gedeeld worden, kunnen het best geëxporteerd worden met de "
+#~ "subboomcontrole aan.\n"
+#~ "</p>"
+
+#~ msgid "Insecure loc&ks"
+#~ msgstr "Onbe&veilligde grendels"
+
+#~ msgid ""
+#~ "<b>Insecure locks</b>\n"
+#~ "<p>\n"
+#~ "This option tells the NFS server not to require authentication of locking "
+#~ "requests (i.e. requests which use the NLM protocol). Normally the NFS "
+#~ "server will require a lock request to hold a credential for a user who "
+#~ "has read access to the file. With this flag no access checks will be "
+#~ "performed.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Early NFS client implementations did not send credentials with lock "
+#~ "requests, and many current NFS clients still exist which are based on the "
+#~ "old implementations. Use this flag if you find that you can only lock "
+#~ "files which are world readable.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Onbeveiligde grendels</b>\n"
+#~ "<p>\n"
+#~ "Deze optie verteld aan de NFS-server dat er geen authenticatie van de "
+#~ "vergrendelingsaanvragen benodigd is (bijvoorbeeld aanvragen die van het "
+#~ "NLM-protocol gebruik maken). Normaal gezien moet de gebruiker die "
+#~ "leesrechten heeft bepaalde identificatiebewijzen bezitten die de NFS-"
+#~ "server vereist voor een vergrendelingsaanvraag. Wanneer deze vlag gezet "
+#~ "is zullen geen toegangcontroles verricht worden.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Vroege implementaties van NFS-clients voegden geen identificatiebewijzen "
+#~ "aan de vergrendelingsaanvraag toe. Er zijn nog steeds veel van de huidige "
+#~ "NFS-clienten gebaseerd op oude implementaties. Gebruik deze vlag als u "
+#~ "ondervindt dat u enkel bestanden die voor iedereen leesbaar zijn kunt "
+#~ "vergrendelen.\n"
+#~ "</p>"
+
+#~ msgid "User Mapping"
+#~ msgstr "Gebruikersindeling"
+
+#~ msgid "All s&quash"
+#~ msgstr "Alles s&quash"
+
+#~ msgid ""
+#~ "<b>All squash</b>\n"
+#~ "<p>\n"
+#~ "Map all uids and gids to the anonymous user. Useful for NFS-exported "
+#~ "public FTP directories, news spool directories, etc. </p>"
+#~ msgstr ""
+#~ "<b>Alles squash</b>\n"
+#~ "<p>\n"
+#~ "Koppel alle uids en gids aan de anonieme gebruiker. Nuttig voor NFS-"
+#~ "geëxporteerde publieke ftp-, nieuws- en spool-mappen.</p>"
+
+#~ msgid "No &root squash"
+#~ msgstr "Geen &root-squash"
+
+#~ msgid ""
+#~ "<b>No root squash</b>\n"
+#~ "<p>\n"
+#~ "Turn of root squashing. This option is mainly useful for diskless "
+#~ "clients.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Map requests from uid/gid 0 to the anonymous uid/gid. Note that this does "
+#~ "not apply to any other uids that might be equally sensitive, such as user "
+#~ "bin.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Geen root-squash</b>\n"
+#~ "<p>\n"
+#~ "Zet root squashing uit. Deze optie is voornamelijk nuttig voor schijfloze "
+#~ "cliënten.\n"
+#~ "</p>\n"
+#~ "<i>root squashing</i>\n"
+#~ "<p>\n"
+#~ "Koppel alle uid en gid 0  aan de anonieme uid/gid. Let op dat dit niet "
+#~ "van toepassing is op andere uids die even gevoelig zijn, zoals de "
+#~ "gebruikers bin-map.\n"
+#~ "</p>"
+
+#~ msgid "Anonym. &UID:"
+#~ msgstr "Anonieme &UID:"
+
+#~ msgid ""
+#~ "<b>Anonym. UID/GID</b> <p> These options explicitly set the uid and gid "
+#~ "of the anonymous account. This option is primarily useful for PC/NFS "
+#~ "clients, where you might want all requests appear to be from one user. </"
+#~ "p>"
+#~ msgstr ""
+#~ "<b>Anonieme UID/GID</b> <p>Deze opties stellen expliciet de uid en gid "
+#~ "van de anonieme account in. Deze optie is voornamelijk nuttig voor PC/NFS-"
+#~ "clients, waarbij u alle aanvragen wilt zien alsof ze van één gebruiker "
+#~ "komen.</p>"
+
+#~ msgid "FF"
+#~ msgstr "FF"
+
+#~ msgid "Anonym. &GID:"
+#~ msgstr "Anonieme &GID:"
+
+#~ msgid "Folder:"
+#~ msgstr "Map:"
+
+#~ msgid "Share with &NFS (Linux/UNIX)"
+#~ msgstr "Met &NFS delen (Linux/UNIX)"
+
+#~ msgid "NFS Options"
+#~ msgstr "NFS Opties"
+
+#~ msgid "Pu&blic"
+#~ msgstr "Pu&bliek"
+
+#~ msgid "W&ritable"
+#~ msgstr "Sch&rijfbaar"
+
+#~ msgid "More NFS Op&tions"
+#~ msgstr "Meer NFS-op&ties"
+
+#~ msgid "Samba Options"
+#~ msgstr "Samba-opties"
+
+#~ msgid "P&ublic"
+#~ msgstr "P&ubliek"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "M&eer Samba-opties"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Alle gebruikers toestaan om mappen te delen"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Alleen de gebruikers van de groep '%1' mogen mappen delen"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Gebruikers van groep '%1'"
+
+#~ msgid "Remove User"
+#~ msgstr "Gebruiker verwijderen"
+
+#~ msgid "Add User"
+#~ msgstr "Gebruiker toevoegen"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Groepsleden kunnen mappen delen zonder root-wachtwoord"
+
+#~ msgid "Change Group..."
+#~ msgstr "Groep veranderen..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "Er zijn geen SMB- en NFS-servers op deze computer. Deze servers dienen "
+#~ "geïnstalleerd te zijn voordat u deze module kunt inschakelen."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Bestandsdeling op lokaal netwer&k inschakelen"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "Ee&nvoudig delen"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Schakel het eenvoudig delen van bestanden in om gebruikers toe te staan "
+#~ "om mappen in hun persoonlijke map te kunnen delen zonder dat ze het root-"
+#~ "wachtwoord hoeven te weten."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "&Geavanceerd delen"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Schakel het geavanceerd delen van bestanden in wanneer u wilt dat "
+#~ "gebruikers iedere map kunnen delen, als ze schrijftoegang tot de "
+#~ "configuratiebestanden hebben of het root-wachtwoord weten."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "&NFS gebruiken (Linux/UNIX)"
+
+#~ msgid "Use Sam&ba (Microsoft(R) Windows(R))"
+#~ msgstr "Sam&ba gebruiken (Microsoft(R) Windows(R))"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "&Toegestane gebruikers"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Gedeelde mappen"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "Toevoe&gen..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "V&eranderen..."
+
+#~ msgid ""
+#~ "<p>The SAMBA configuration file <strong>'smb.conf'</strong> could not be "
+#~ "found;</p>make sure you have SAMBA installed.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "<p>Het Samba-configuratiebestand <strong>smb.conf</strong> kon niet "
+#~ "worden gevonden.</p> Controleer of u Samba hebt geïnstalleerd.\n"
+#~ "\n"
+
+#~ msgid "Specify Location"
+#~ msgstr "Locatie opgeven"
+
+#~ msgid ""
+#~ "smb.conf|Samba conf. File\n"
+#~ "*|All Files"
+#~ msgstr ""
+#~ "smb.conf|Samba conf. bestand\n"
+#~ "*|Alle bestanden"
+
+#~ msgid "Get smb.conf Location"
+#~ msgstr "Locatie van smb.conf ophalen"
+
+#~ msgid "<qt>The file <i>%1</i> could not be read.</qt>"
+#~ msgstr "<qt>Het bestand <i>%1</i> kon niet worden gelezen.</qt>"
+
+#~ msgid "Could Not Read File"
+#~ msgstr "Kan bestand niet lezen"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Fout tijdens openen van bestand"
+
+#~ msgid "Joining the domain %1 failed."
+#~ msgstr "Aansluiten bij domein %1 mislukt."
+
+#~ msgid "<qt>Please enter a password for the user <b>%1</b></qt>"
+#~ msgstr "<qt>Voer een wachtwoord voor gebruiker <b>%1</b> in</qt>"
+
+#~ msgid ""
+#~ "<qt>Adding the user <b>%1</b> to the Samba user database failed.</qt>"
+#~ msgstr ""
+#~ "<qt>Kon gebruiker <b>%1</b> niet aan de Samba-gebruikersdatabase "
+#~ "toevoegen.</qt>"
+
+#~ msgid "Removing the user %1 from the Samba user database failed."
+#~ msgstr "Kon gebruiker %1 niet verwijderen uit de Samba-gebruikersdatabase."
+
+#~ msgid "Please enter a password for the user %1"
+#~ msgstr "Voer een wachtwoord voor gebruiker %1 in"
+
+#~ msgid "Changing the password of the user %1 failed."
+#~ msgstr "Wijzigen van het wachtwoord voor gebruiker %1 is mislukt."
+
+#~ msgid ""
+#~ "<h1>Samba Configuration</h1> here you can configure your SAMBA server."
+#~ msgstr "<h1>Samba-configuratie</h1> Hier kunt u uw Samba-server instellen."
+
+#~ msgid ""
+#~ "Use the <i>share</i> security level if you have a home network or a small "
+#~ "office network.<br /> It allows everyone to read the list of all your "
+#~ "shared directories and printers before a login is required."
+#~ msgstr ""
+#~ "Gebruik het beveiligingsniveau <i>share</i> als u een thuisnetwerk of een "
+#~ "klein kantoornetwerk hebt. <br />Dit staat iedereen toe om een lijst van "
+#~ "uw gedeelde mappen en printers te lezen zonder eerst aan te melden."
+
+#~ msgid ""
+#~ "Use the <i>user</i> security level if you have a bigger network and you "
+#~ "do not want to allow everyone to read your list of shared directories and "
+#~ "printers without a login.<br /><br />If you want to run your Samba server "
+#~ "as a <b>Primary Domain controller</b> (PDC) you also have to set this "
+#~ "option."
+#~ msgstr ""
+#~ "Gebruik het beveiligingsniveau <i>user</i> als u een groter netwerk hebt "
+#~ "en u niet wilt dat iedereen een lijst van gedeelde mappen en printers kan "
+#~ "raadplegen zonder eerst aan te melden.<br /><br />Als u uw Samba-server "
+#~ "als een <b>Primary Domain Controller</b> (PDC) wilt gebruiken dient u "
+#~ "deze optie te activeren."
+
+#~ msgid ""
+#~ "Use the <i>server</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to "
+#~ "another SMB server, such as an NT box."
+#~ msgstr ""
+#~ "Gebruik het beveiligingsniveau <i>server</i> als u een groot netwerk hebt "
+#~ "en de Samba-server gebruikersnamen en wachtwoorden dient te controleren "
+#~ "bij een andere SMB-server, bijvoorbeeld een NT-server."
+
+#~ msgid ""
+#~ "Use the <i>domain</i> security level if you have a big network and the "
+#~ "samba server should validate the username/password by passing it to a "
+#~ "Windows NT Primary or Backup Domain Controller."
+#~ msgstr ""
+#~ "Gebruik het beveiligingsniveau <i>domain</i> als u een groot netwerk hebt "
+#~ "en de Samba-server gebruikersnamen en wachtwoorden dient te controleren "
+#~ "bij een Windows NT Primary Domain Controller (PDC) of Backup Domain "
+#~ "Controller (BDC)."
+
+#~ msgid ""
+#~ "Use the <i>ADS</i> security level if you have a big network and the samba "
+#~ "server should act as a domain member in an ADS realm."
+#~ msgstr ""
+#~ "Gebruik het beveiligingsniveau <i>ADS</i> als u een groot netwerk hebt en "
+#~ "de Samba-server onderdeel is van een 'ADS realm'."
+
+#~ msgid "Sorry"
+#~ msgstr "Helaas"
+
+#~ msgid "You entered two different passwords. Please try again."
+#~ msgstr ""
+#~ "U hebt twee verschillende wachtwoorden ingevoerd. Probeer het nogmaals."
+
+#~ msgid "The option <em>%1</em> is not supported by your Samba version"
+#~ msgstr "De optie <em>%1</em> wordt niet door uw Samba-versie ondersteund"
+
+#~ msgid "Unnamed"
+#~ msgstr "Naamloos"
+
+#~ msgid "&Hide"
+#~ msgstr "&Verbergen"
+
+#~ msgid "&Veto Oplock"
+#~ msgstr "&Veto \"oplock\"-grendel"
+
+#~ msgid ""
+#~ "<qt>Some files you have selected are hidden because they start with a "
+#~ "dot; do you want to uncheck all files starting with a dot?</qt>"
+#~ msgstr ""
+#~ "<qt>Sommige bestanden die u hebt gekozen beginnen met een punt, en zijn "
+#~ "dus verborgen bestanden. Dit kunnen systeembestanden zijn. Wilt u alle "
+#~ "bestanden die beginnen met een punt deselecteren?</qt>"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Bestanden beginnend met een punt"
+
+#~ msgid "Uncheck Hidden"
+#~ msgstr "Verborgen deselecteren"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Verborgen behouden"
+
+#~ msgid ""
+#~ "<b></b>Some files you have selected are matched by the wildcarded string "
+#~ "<b>'%1'</b>; do you want to uncheck all files matching <b>'%1'</b>?"
+#~ msgstr ""
+#~ "<b></b>Sommige bestanden die u hebt geselecteerd komen overeen met het "
+#~ "zoekpatroon <b>%1</b>. Wilt u alle bestanden die overeenkomen met "
+#~ "<b>'%1'</b> deselecteren?"
+
+#~ msgid "Wildcarded String"
+#~ msgstr "Zoekpatroon"
+
+#~ msgid "Uncheck Matches"
+#~ msgstr "Overeenkomsten deselecteren"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Selectie behouden"
+
+#~ msgid "Default"
+#~ msgstr "Standaard"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public read access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary read permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>U hebt <b>publieke leestoegang</b> voor deze map opgegeven, maar de "
+#~ "gastaccount <b>%1</b> heeft niet de benodigde leesrechten.<br />Wilt u "
+#~ "toch doorgaan?</qt>"
+
+#~ msgid "Warning"
+#~ msgstr "Waarschuwing"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>public write access</b> for this directory, but "
+#~ "the guest account <b>%1</b> does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>U hebt <b>publieke schrijftoegang</b> voor deze map opgegeven, maar "
+#~ "de gastaccount <b>%1</b> heeft niet de benodigde schrijfrechten.<br /"
+#~ ">Wilt u toch doorgaan?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>write access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary write permissions;"
+#~ "<br />do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>U hebt <b>schrijftoegang</b> aan gebruiker <b>%1</b> voor deze map "
+#~ "opgegeven, maar de gebruiker heeft niet de benodigde schrijfrechten.<br /"
+#~ ">Wilt u toch doorgaan?</qt>"
+
+#~ msgid ""
+#~ "<qt>You have specified <b>read access</b> to the user <b>%1</b> for this "
+#~ "directory, but the user does not have the necessary read permissions;<br /"
+#~ ">do you want to continue anyway?</qt>"
+#~ msgstr ""
+#~ "<qt>U hebt <b>leestoegang</b> aan gebruiker <b>%1</b> voor deze map "
+#~ "opgegeven, maar de gebruiker heeft niet de benodigde leesrechten.<br /"
+#~ ">Wilt u toch doorgaan?</qt>"
+
+#~ msgid "There already exists a public entry."
+#~ msgstr "Er bestaat al een publieke ingang."
+
+#~ msgid "Host Already Exists"
+#~ msgstr "Host bestaat al"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Gelieve een hostnaam of IP-adres in te voeren."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Geen hostnaam/IP-adres"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "De host '%1' bestaat al."
+
+#~ msgid "Reading Samba configuration file ..."
+#~ msgstr "Samba-configuratiebestand aan het lezen..."
+
+#~ msgid "Reading NFS configuration file ..."
+#~ msgstr "NFS-configuratiebestand aan het lezen..."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Gelieve een geldig pad in te voeren."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Enkel mappen kunnen gedeeld worden."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "De map is al gedeeld."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "De beheerder laat delen met NFS niet toe."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Fout: Kon NFS-configuratiebestand niet lezen."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "De beheerder laat delen met Samba niet toe."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Fout: Kon Samba-configuratiebestand niet lezen."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "U moet een naam voor de Samba-deling invoeren."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "U moet gemachtigd zijn mappen te delen."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Bestandsdeling instellen..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Er is geen NFS-server geïnstalleerd op deze computer"
+
+#~ msgid "Could not save settings."
+#~ msgstr "Kon de instellingen niet opslaan."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Kon niet schrijven naar het bestand %1: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Opslaan mislukt"
+
+#~ msgid ""
+#~ "<h1>File Sharing</h1><p>This module can be used to enable file sharing "
+#~ "over the network using the \"Network File System\" (NFS) or SMB in "
+#~ "Konqueror. The latter enables you to share your files with Windows(R) "
+#~ "computers on your network.</p>"
+#~ msgstr ""
+#~ "<h1>Bestanden delen</h1><p>Met deze module kunt u de mogelijkheid "
+#~ "inschakelen om bestanden te delen over het netwerk met het \"Network File "
+#~ "System\" (NFS) of SMB in Konqueror. De laatste maakt het mogelijk om "
+#~ "bestanden te delen met Windows(R)-computers in uw netwerk.</p>"
+
+#~ msgid "Share Folder"
+#~ msgstr "Map delen"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Toegestane gebruikers"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Alle gebruikers zitten al in de groep %1."
+
+#~ msgid "Select User"
+#~ msgstr "Gebruiker selecteren"
+
+#~ msgid "Select a user:"
+#~ msgstr "Selecteer een gebruiker:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Kon de gebruiker '%1' niet toevoegen aan de groep '%2'"
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Kon de gebruiker '%1' niet verwijderen uit de groep '%2'"
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Kies een geldige groep."
+
+#~ msgid "New file share group:"
+#~ msgstr "Nieuwe groep voor bestandsdeling:"
+
+#~ msgid "Add users from the old file share group to the new one"
+#~ msgstr ""
+#~ "Gebruikers toevoegen vanuit de oude groep voor bestandsdeling naar de "
+#~ "nieuwe groep"
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Gebruikers verwijderen uit groep voor bestandsdeling"
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Oude groep voor bestandsdeling verwijderen"
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Enkel gebruikers van een bepaalde groep mogen mappen delen"
+
+#~ msgid "Choose Group..."
+#~ msgstr "Groep kiezen..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Wilt u alle gebruikers uit de groep '%1' verwijderen?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Wilt u de groep '%1' verwijderen?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Kan de groep '%1' niet verwijderen."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Gelieve een geldige groep te kiezen."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Deze groep '%1' bestaat niet. Wilt u die aanmaken?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Niet aanmaken"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Kon de groep '%1' niet aanmaken."

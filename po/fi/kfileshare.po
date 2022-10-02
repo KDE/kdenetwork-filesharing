@@ -1,0 +1,1704 @@
+# translation of kfileshare.po to
+#
+# KDE Finnish translation sprint participants:
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2008.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfileshare\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-28 00:47+0000\n"
+"PO-Revision-Date: 2022-04-15 23:14+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:24:35+0000\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: samba/aclproperties/plugin.cpp:59
+#, fuzzy, kde-format
+#| msgid "Deny"
+msgctxt "@option:radio an entry denying permissions"
+msgid "Deny"
+msgstr "Kiellä"
+
+#: samba/aclproperties/plugin.cpp:61
+#, fuzzy, kde-format
+#| msgid "Allow"
+msgctxt "@option:radio an entry allowing permissions"
+msgid "Allow"
+msgstr "Salli"
+
+#: samba/aclproperties/plugin.cpp:65
+#, kde-format
+msgctxt ""
+"@option:radio an unknown permission entry type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:72
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:74
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder, subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:76
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and subfolders"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:78
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "This folder and files"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:80
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders and files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:82
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Subfolders only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:84
+#, kde-format
+msgctxt "@option:radio permission applicability type"
+msgid "Files only"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:87
+#, kde-format
+msgctxt "@option:radio permission applicability type (doesn't really happen)"
+msgid "Unknown"
+msgstr ""
+
+#: samba/aclproperties/plugin.cpp:187
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Required Permissions"
+msgctxt "@title:tab"
+msgid "Remote Permissions"
+msgstr "Vaaditut käyttöoikeudet"
+
+#: samba/aclproperties/qml/ACEPage.qml:29
+msgctxt "@info"
+msgid ""
+"This permission entry was inherited from a parent container and can only be "
+"modified on that parent (e.g. a higher level directory)."
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:36
+msgctxt "@label"
+msgid "Type:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:46
+msgctxt "@label"
+msgid "Applies to:"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:59
+msgctxt "@option:check"
+msgid "Traverse folder / execute file"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:63
+msgctxt "@option:check"
+msgid "List folder / read data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:67
+msgctxt "@option:check"
+msgid "Read attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:71
+msgctxt "@option:check"
+msgid "Read extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:75
+msgctxt "@option:check"
+msgid "Create files / write data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:79
+msgctxt "@option:check"
+msgid "Create folders / append data"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:83
+#, fuzzy
+#| msgid "Writeable"
+msgctxt "@option:check"
+msgid "Write attributes"
+msgstr "Kirjoitettava"
+
+#: samba/aclproperties/qml/ACEPage.qml:87
+msgctxt "@option:check"
+msgid "Write extended attributes"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:91
+msgctxt "@option:check"
+msgid "Delete subfolders and files"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:95
+msgctxt "@option:check"
+msgid "Delete"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:99
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Required Permissions"
+msgctxt "@option:check"
+msgid "Read permissions"
+msgstr "Vaaditut käyttöoikeudet"
+
+#: samba/aclproperties/qml/ACEPage.qml:103
+#, fuzzy
+#| msgctxt "@action:button changes permissions"
+#| msgid "Change Permissions"
+msgctxt "@option:check"
+msgid "Change permissions"
+msgstr "Muuta käyttöoikeuksia"
+
+#: samba/aclproperties/qml/ACEPage.qml:107
+msgctxt "@option:check"
+msgid "Take ownership"
+msgstr ""
+
+#: samba/aclproperties/qml/ACEPage.qml:112
+msgctxt "@option:check"
+msgid ""
+"Only apply these permissions to objects and/or containers within this "
+"container"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:13
+msgctxt "@title"
+msgid "Access Control Entries"
+msgstr ""
+
+#: samba/aclproperties/qml/MainPage.qml:29
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@title file/folder owner info"
+msgid "Ownership"
+msgstr "Omistaja"
+
+#: samba/aclproperties/qml/MainPage.qml:33
+#, fuzzy
+#| msgid "Owner"
+msgctxt "@label"
+msgid "Owner:"
+msgstr "Omistaja"
+
+#: samba/aclproperties/qml/MainPage.qml:37
+#, fuzzy
+#| msgid "Group"
+msgctxt "@label"
+msgid "Group:"
+msgstr "Ryhmä"
+
+#: samba/aclproperties/qml/NoDataPage.qml:17
+#, fuzzy
+#| msgctxt "@action:button opens the change permissions page"
+#| msgid "Fix Permissions"
+msgctxt "@info"
+msgid "No Permissions Found"
+msgstr "Korjaa käyttöoikeudet"
+
+#: samba/aclproperties/qml/NoDataPage.qml:18
+msgctxt "@info"
+msgid ""
+"There are probably no SMB/Windows/Advanced permissions set on this file."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:39
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by creating that folder manually. Then close and re-"
+"open this window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> has its group "
+"owner inappropriately set to <resource>%2</resource>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:48
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distro not setting up Samba sharing properly. "
+"You can fix it yourself by changing that folder's group owner to "
+"<resource>usershares</resource> and making yourself a member of that group. "
+"Then restart the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Samban käyttäjäjakojen hallitsemiseksi on oltava ryhmän <resource>%1</"
+"resource> jäsen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:57
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group. Then restart "
+"the system."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@button makes user a member of the samba share group"
+#| msgid "Make me a Group Member"
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make me a Group Member"
+msgstr "Lisää minut ryhmän jäseneksi"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:70
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>. Then close and re-open this "
+"window."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:100
+#, kde-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgstr ""
+"Lisätään käyttäjä ”%1” ryhmään ”%2”, jotta hän voi muokata Samban "
+"käyttäjäjakoja"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:111
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid ""
+#| "To manage Samba user shares you need to be member of the <resource>%1</"
+#| "resource> group."
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1<resource> a member of group <resource>"
+"%2<resource>"
+msgstr ""
+"Samban käyttäjäjakojen hallitsemiseksi on oltava ryhmän <resource>%1</"
+"resource> jäsen."
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:91
+#, kde-format
+msgctxt "@title"
+msgid "File Path"
+msgstr "Tiedoston sijainti"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:93
+#, kde-format
+msgctxt "@title"
+msgid "Current Permissions"
+msgstr "Nykyiset käyttöoikeudet"
+
+#: samba/filepropertiesplugin/permissionshelper.cpp:95
+#, kde-format
+msgctxt "@title"
+msgid "Required Permissions"
+msgstr "Vaaditut käyttöoikeudet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+msgctxt "@title"
+msgid "Denying Access"
+msgstr "Estetään pääsy"
+
+#. i18n markup; this also means newlines are ignored!
+#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+msgctxt "@info"
+msgid ""
+"\n"
+"Denying access prevents using this share even when another access rule might "
+"grant access. A denial rule always\n"
+"takes precedence. In particular denying access to <resource>Everyone</"
+"resource> actually disables access for everyone.\n"
+"It is generally not necessary to deny anyone because the regular directory "
+"and file permissions still apply to shared\n"
+"directories. A user who does not have access to the directory locally will "
+"still not be able to access it remotely even\n"
+"when the Share access rules would allow it."
+msgstr ""
+"\n"
+"Käytön estämällä tätä jakoa ei voi käyttää, vaikka toinen käyttösääntö sen "
+"sallisi. Estosäännöllä on aina\n"
+"etusija. Etenkin jos estetään <resource>Everyone</resource> (kaikki), käyttö "
+"todella estetään kaikilta.\n"
+"Yleensä ei ole tarpeen estää ketään, koska jaettujen kansioiden ja "
+"tiedostojen tavalliset käyttöoikeudet\n"
+"pätevät yhä. Käyttäjä, jolla ei ole käyttöoikeutta kansioon paikallisesti, "
+"ei voi käyttää sitä etänäkään,\n"
+"vaikka jakosääntö sen sallisi."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+msgctxt "@label"
+msgid "This folder needs extra permissions for sharing to work"
+msgstr "Kansio tarvitaan jakamista varten lisäkäyttöoikeuksia"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+msgctxt "@action:button opens the change permissions page"
+msgid "Fix Permissions"
+msgstr "Korjaa käyttöoikeudet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+msgctxt "@label"
+msgid ""
+"The share might not work properly because share folder or its paths has "
+"Advanced Permissions: %1"
+msgstr ""
+"Jako ei ehkä toimi oikein, koska jakokansiolla tai sen sijainnilla on "
+"edistyneitä käyttöoikeuksia: %1"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+msgctxt "@option:check"
+msgid "Share this folder with other computers on the local network"
+msgstr "Jaa tämä kansio paikallisverkon muille tietokoneille"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+msgctxt "@label"
+msgid "Name:"
+msgstr "Nimi:"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+msgctxt "@label"
+msgid ""
+"This name cannot be used. Share names must not be user names and there must "
+"not be two shares with the same name on the entire system."
+msgstr ""
+"Tätä nimeä ei voi käyttää. Jakonimet eivät saa olla käyttäjätunnuksia eikä "
+"järjestelmässä saa olla kahta saman nimistä jakoa."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+msgctxt "@label"
+msgid ""
+"This name may be too long. It can cause interoperability problems or get "
+"rejected by Samba."
+msgstr ""
+"Nimi voi olla liian pitkä. Tästä saattaa seurata ongelmia ja Samba voi "
+"hylätä nimen."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+msgctxt "@option:check"
+msgid "Allow guests"
+msgstr "Salli vierailijat"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+msgctxt "@label"
+msgid "Guest access is disabled by the system's Samba configuration."
+msgstr "Järjestelmän Samba-asetuksissa vieraskäyttö on poistettu käytöstä."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+msgctxt "@option:radio user can read&write"
+msgid "Full Control"
+msgstr "Täydet oikeudet"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+msgctxt "@option:radio user can read"
+msgid "Read Only"
+msgstr "Vain luku"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+msgctxt "@option:radio user not allowed to access share"
+msgid "No Access"
+msgstr "Ei pääsyä"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+msgctxt "@button"
+msgid "Show Samba status monitor"
+msgstr "Näytä Samban tilavalvonta"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:24
+msgctxt "@title"
+msgid "Set password"
+msgstr "Aseta salasana"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+msgctxt "@label:textbox"
+msgid "Password"
+msgstr "Salasana"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+msgctxt "@label:textbox"
+msgid "Confirm password"
+msgstr "Vahvista salasana"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+msgctxt "@label error message"
+msgid "Passwords must match"
+msgstr "Salasanojen on täsmättävä"
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:117
+msgctxt ""
+"@action:button creates a new samba user with the user-specified password"
+msgid "Set Password"
+msgstr "Aseta salasana"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>The folder <filename>%1</filename> needs extra permissions for sharing "
+"to work.</para>\n"
+"<para>Do you want to add these permissions now?</para><nl/>\n"
+msgstr ""
+"\n"
+"<para>Kansio <filename>%1</filename> vaatii jakoa varten lisäkäyttöoikeuksia."
+"</para>\n"
+"<para>Haluatko lisätä nämä käyttöoikeudet nyt?</para><nl/>\n"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+msgctxt "@action:button changes permissions"
+msgid "Change Permissions"
+msgstr "Muuta käyttöoikeuksia"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+msgctxt "@label"
+msgid ""
+"Could not change permissions for: %1. All permission changes have been "
+"reverted to initial state."
+msgstr ""
+"Käyttöoikeuksia ei voitu muuttaa: %1. Kaikki käyttöoikeusmuutokset on "
+"palautettu alkutilaansa."
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+msgctxt "@action:button cancels permissions change"
+msgid "Cancel"
+msgstr "Peru"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgctxt "@label"
+msgid "Samba must be installed before folders can be shared."
+msgstr "Samba on asennettava, ennen kuin kansioita voi jakaa."
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+msgctxt "@button"
+msgid "Install Samba"
+msgstr "Asenna Samba"
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+msgctxt "@label"
+msgid "The Samba package failed to install."
+msgstr "Samba-paketin asennus epäonnistui."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+msgctxt "@label"
+msgid "Restart the computer to complete the changes."
+msgstr "Viimeistele muutokset käynnistämällä tietokone uudelleen."
+
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+msgctxt "@button restart the system"
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:65
+msgctxt "@info"
+msgid ""
+"\n"
+"<para>\n"
+"Samba uses a separate user database from the system one.\n"
+"This requires you to set a separate Samba password for every user that you "
+"want to\n"
+"be able to authenticate with.\n"
+"</para>\n"
+"<para>\n"
+"Before you can access shares with your current user account you need to set "
+"a Samba password.\n"
+"</para>"
+msgstr ""
+"\n"
+"<para>\n"
+"Samba käyttää eri käyttäjätietokantaa kuin järjestelmä.\n"
+"Kullekin käyttäjälle, jonka haluat todentaa, on asetettava erillinen\n"
+"Samba-salasana.\n"
+"</para>\n"
+"<para>\n"
+"Samba-salasana on asetettava ennen jakojen käyttöä nykyiseltä "
+"käyttäjätililtäsi.\n"
+"</para>"
+
+#: samba/filepropertiesplugin/qml/UserPage.qml:80
+msgctxt "@action:button opens dialog to create new user"
+msgid "Create Samba password"
+msgstr "Luo Samba-salasana"
+
+#. i18n markup
+#: samba/filepropertiesplugin/qml/UserPage.qml:88
+msgctxt "@info"
+msgid ""
+"\n"
+"Additional user management and password management can be done using Samba's "
+"<command>smbpasswd</command>\n"
+"command line utility."
+msgstr ""
+"\n"
+"Käyttäjiä ja salasanoja voi hallita lisää Samban <command>smbpasswd</"
+"command>-komentorivityökalulla."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid ""
+"You have exhausted the maximum amount of shared directories you may have "
+"active at the same time."
+msgstr "Olet ylittänyt kerrallaan aktiivisten jaettujen kansioiden määrän."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is invalid."
+msgstr "Jaon nimi on virheellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The share name is already in use for a different directory."
+msgstr "Jaon nimi on jo toisen kansion käytössä."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is invalid."
+msgstr "Sijainti on virheellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path does not exist."
+msgstr "Kohdetta ei ole olemassa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is not a directory."
+msgstr "Kohde ei ole kansio."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The path is relative."
+msgstr "Sijainti on suhteellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "This path may not be shared."
+msgstr "Tätä kohdetta ei voi jakaa."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The access rule is invalid."
+msgstr "Käyttösääntö on virheellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "An access rule's user is not valid."
+msgstr "Käyttösäännön käyttäjätunnus on virheellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "The 'Guest' access rule is invalid."
+msgstr "”Vieras”-käyttösääntö on virheellinen."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#, kde-format
+msgctxt "@info detailed error messsage"
+msgid "Enabling guest access is not allowed."
+msgstr "Vieraskäytön käyttöönottoa ei sallita."
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to share the directory. The share has "
+"not been created.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Kansion jakamista yritettäessä tapahtui virhe. Jakoa ei luotu.</"
+"para><para>Samban oma ilmoitus:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Create Network Share"
+msgstr "Verkkojaon luominen epäonnistui"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#, kde-kuit-format
+msgctxt "@info error in the underlying binaries. %1 is CLI output"
+msgid ""
+"<para>An error occurred while trying to un-share the directory. The share "
+"has not been removed.</para><para>Samba internals report:</para><message>%1</"
+"message>"
+msgstr ""
+"<para>Kansion jaon poistamista yritettäessä tapahtui virhe. Jakoa ei ole "
+"poistettu.</para><para>Samban oma ilmoitus:</para><message>%1</message>"
+
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#, kde-format
+msgctxt "@info/title"
+msgid "Failed to Remove Network Share"
+msgstr "Verkkojaon poistaminen epäonnistui"
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Checking if Samba user '%1' exists"
+msgstr "Tarkistetaan, onko Samba-käyttäjää ”%1” olemassa"
+
+#: samba/filepropertiesplugin/usermanager.cpp:118
+#, kde-format
+msgctxt "@label kauth action description %1 is a username"
+msgid "Creating new Samba user '%1'"
+msgstr "Luodaan uutta Samba-käyttäjää ”%1”"
+
+#~ msgctxt "@label failed to change user groups so they can manage shares"
+#~ msgid "Group changes failed."
+#~ msgstr "Ryhmämuutos epäonnistui."
+
+#~ msgctxt "@label"
+#~ msgid ""
+#~ "You appear to not have sufficient permissions to manage Samba user shares."
+#~ msgstr ""
+#~ "Oikeutesi eivät vaikuta riittävän Samban käyttäjäjakojen hallintaan."
+
+#~ msgctxt "@title:tab"
+#~ msgid "Share"
+#~ msgstr "Jaa"
+
+#~ msgctxt "@title"
+#~ msgid "Create User"
+#~ msgstr "Luo käyttäjä"
+
+#~ msgctxt "@action:button creates a new samba user"
+#~ msgid "Create User"
+#~ msgstr "Luo käyttäjä"
+
+#~ msgid "---"
+#~ msgstr "---"
+
+#~ msgid "&Share"
+#~ msgstr "&Jaa"
+
+#~ msgid "Installing Samba..."
+#~ msgstr "Asennetaan Sambaa…"
+
+#~ msgid ""
+#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
+#~ "Please choose another name.</qt>"
+#~ msgstr ""
+#~ "<qt>On jo olemassa jako <strong>%1</strong>.<br /> Valitse toinen nimi.</"
+#~ "qt>"
+
+#~ msgid "Samba is not installed on your system."
+#~ msgstr "Sambaa ei ole asennettu järjestelmään."
+
+#~ msgid "Share with S&amba (Microsoft Windows)"
+#~ msgstr "Jaa S&amballa (Microsoft Windows)"
+
+#~ msgid ""
+#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
+#~ "kpackagekit is properly installed</qt>"
+#~ msgstr ""
+#~ "<qt><strong>Sambaa ei voitu asentaa.</strong><br />Tarkista, että "
+#~ "kpackagekit on asennettu oikein</qt>"
+
+#~ msgid "Select Users"
+#~ msgstr "Valitse käyttäjät"
+
+#~ msgid "Select &Users"
+#~ msgstr "Valitse &käyttäjät"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "UID"
+#~ msgstr "UID"
+
+#~ msgid "GID"
+#~ msgstr "GID"
+
+#~ msgid "Acc&ess"
+#~ msgstr "Pä&ästä"
+
+#~ msgid "&Default"
+#~ msgstr "&Oletus"
+
+#~ msgid "&Read access"
+#~ msgstr "&Lukuoikeus"
+
+#~ msgid "&Write access"
+#~ msgstr "&Kirjoitusoikeus"
+
+#~ msgid "&Admin access"
+#~ msgstr "&Ylläpito-oikeus"
+
+#~ msgid "&OK"
+#~ msgstr "&OK"
+
+#~ msgid "Join Domain"
+#~ msgstr "Liity verkkoalueeseen"
+
+#~ msgid "&Verify:"
+#~ msgstr "&Tarkista:"
+
+#~ msgid "&Password:"
+#~ msgstr "&Salasana:"
+
+#~ msgid "&Username:"
+#~ msgstr "&Käyttäjänimi:"
+
+#~ msgid "&Domain:"
+#~ msgstr "&Verkkoalue:"
+
+#~ msgid "&Base Settings"
+#~ msgstr "&Perusasetukset"
+
+#~ msgid "Samba config file:"
+#~ msgstr "Samban asetustiedosto:"
+
+#~ msgid "&Load"
+#~ msgstr "&Lataa"
+
+#~ msgid "Wor&kgroup:"
+#~ msgstr "Työ&ryhmä:"
+
+#~ msgid "Enter here the name of your workgroup/domain."
+#~ msgstr "Anna tähän työryhmän/verkkoalueen nimi."
+
+#~ msgid "NetBIOS name:"
+#~ msgstr "NetBIOS-nimi:"
+
+#~ msgid "Securit&y Level"
+#~ msgstr "&Turvallisuustaso:"
+
+#~ msgid "Alt+"
+#~ msgstr "Alt+"
+
+#~ msgid "User"
+#~ msgstr "Käyttäjä"
+
+#~ msgid "Server"
+#~ msgstr "Palvelin"
+
+#~ msgid "Domai&n"
+#~ msgstr "Verkkoalue"
+
+#~ msgid "ADS"
+#~ msgstr "ADS"
+
+#~ msgid "Further Options"
+#~ msgstr "Lisäasetukset"
+
+#~ msgid "Help"
+#~ msgstr "Ohje"
+
+#~ msgid "&Shares"
+#~ msgstr "&Jaot"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentti"
+
+#~ msgid "Properties"
+#~ msgstr "Ominaisuudet"
+
+#~ msgid "Edit Defau&lts..."
+#~ msgstr "Muokkaa o&letuksia..."
+
+#~ msgid "Add &New Share..."
+#~ msgstr "Lisää &uusi jako..."
+
+#~ msgid "Edit Share..."
+#~ msgstr "Muokkaa jakoa..."
+
+#~ msgid "Re&move Share"
+#~ msgstr "&Poista jako"
+
+#~ msgid "Prin&ters"
+#~ msgstr "&Tulostimet"
+
+#~ msgid "Printer"
+#~ msgstr "Tulostin"
+
+#~ msgid "Edit Defau&lts"
+#~ msgstr "Muokkaa o&letuksia"
+
+#~ msgid "Add Ne&w Printer"
+#~ msgstr "Lisää &uusi tulostin"
+
+#~ msgid "Edit Pri&nter"
+#~ msgstr "Muokkaa tulosti&nta"
+
+#~ msgid "Re&move Printer"
+#~ msgstr "&Poista tulostin"
+
+#~ msgid "&Users"
+#~ msgstr "&Käyttäjät"
+
+#~ msgid "Disabled"
+#~ msgstr "Ei käytössä"
+
+#~ msgid "Add"
+#~ msgstr "Lisää"
+
+#~ msgid "Rem&ove"
+#~ msgstr "&Poista"
+
+#~ msgid "UNI&X Users"
+#~ msgstr "UNI&X-käyttäjät"
+
+#~ msgid "Chan&ge Password..."
+#~ msgstr "&Vaihda salasana..."
+
+#~ msgid "Security"
+#~ msgstr "Turvallisuus"
+
+#~ msgid "&General"
+#~ msgstr "&Yleiset"
+
+#~ msgid "General"
+#~ msgstr "Yleiset"
+
+#~ msgid "Never"
+#~ msgstr "Ei koskaan"
+
+#, fuzzy
+#~| msgid "Special"
+#~ msgctxt "seconds"
+#~ msgid "Sec"
+#~ msgstr "Erikoisasetukset"
+
+#~ msgid "Client"
+#~ msgstr "Asiakas"
+
+#~ msgid "Auto"
+#~ msgstr "Automaattinen"
+
+#~ msgid "Mandatory"
+#~ msgstr "Pakollinen"
+
+#~ msgid "Yes"
+#~ msgstr "Kyllä"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Logging"
+#~ msgstr "Siirrän lokiin"
+
+#~ msgid "L&og file:"
+#~ msgstr "L&okitiedosto:"
+
+#~ msgid "kB"
+#~ msgstr "kt"
+
+#~ msgid "Ma&x log size:"
+#~ msgstr "Lokitiedoston &enimmäiskoko:"
+
+#~ msgid "S&yslog:"
+#~ msgstr "S&yslog:"
+
+#~ msgid "Log &level:"
+#~ msgstr "Loki&taso:"
+
+#~ msgid "Status"
+#~ msgstr "Tila"
+
+#~ msgid "Modules"
+#~ msgstr "Moduulit"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minutes"
+#~ msgid "Min"
+#~ msgstr "Minimi"
+
+#~ msgid "Sizes"
+#~ msgstr "Koot"
+
+#~ msgid "Max disk size:"
+#~ msgstr "Levyn enimmäiskoko:"
+
+#~ msgctxt "mega byte"
+#~ msgid "MB"
+#~ msgstr "Mt"
+
+#~ msgid "Numbers"
+#~ msgstr "Numerot"
+
+#~ msgid "Printing"
+#~ msgstr "Tulostaminen"
+
+#~ msgid "Drivers"
+#~ msgstr "Ajurit"
+
+#~ msgid "Commands"
+#~ msgstr "Komennot"
+
+#~ msgid "Domain"
+#~ msgstr "Verkkoalue"
+
+#~ msgid "General Options"
+#~ msgstr "Yleiset asetukset"
+
+#~ msgid "Ge&neral"
+#~ msgstr "Ylei&nen"
+
+#~ msgid "Charset"
+#~ msgstr "Merkistö"
+
+#~ msgid "Socket Options"
+#~ msgstr "Pistokkeen optiot"
+
+#~ msgid "IPTOS_LOWDELAY"
+#~ msgstr "IPTOS_LOWDELAY"
+
+#~ msgid "SO_RCVBUF:"
+#~ msgstr "SO_RCVBUF:"
+
+#~ msgid "SO_BROADCAST"
+#~ msgstr "SO_BROADCAST"
+
+#~ msgid "SSL"
+#~ msgstr "SSL"
+
+#~ msgid "SSL version:"
+#~ msgstr "SSL-versio:"
+
+#~ msgid "Protocol"
+#~ msgstr "Protokolla"
+
+#~ msgid "4.2"
+#~ msgstr "4.2"
+
+#~ msgid "Limits"
+#~ msgstr "Rajat"
+
+#~ msgid "Browsing"
+#~ msgstr "Selaan"
+
+#~ msgid "Windows NT 4"
+#~ msgstr "Windows NT 4"
+
+#~ msgid "Windows 2000"
+#~ msgstr "Windows 2000"
+
+#~ msgid "VFS"
+#~ msgstr "VFS"
+
+#~ msgid "LDAP"
+#~ msgstr "LDAP"
+
+#~ msgid "Misc"
+#~ msgstr "Sekalaiset"
+
+#, fuzzy
+#~| msgid "Min"
+#~ msgctxt "minurtes"
+#~ msgid "Min"
+#~ msgstr "Minimi"
+
+#~ msgid "Debug"
+#~ msgstr "Debuggaus"
+
+#~ msgid "Pixmap"
+#~ msgstr "Kuva"
+
+#~ msgid "&Path:"
+#~ msgstr "&Polku:"
+
+#~ msgid "Na&me:"
+#~ msgstr "&Nimi"
+
+#~ msgid "Pub&lic"
+#~ msgstr "&Julkinen"
+
+#~ msgid "Bro&wseable"
+#~ msgstr "&Selattavissa"
+
+#~ msgid "A&vailable"
+#~ msgstr "Saata&villa"
+
+#~ msgid "&Guest account:"
+#~ msgstr "&Vierastili:"
+
+#~ msgid ""
+#~ "The opposite of hosts allow - hosts listed here are NOT permitted access "
+#~ "to services unless the specific services have their own lists to override "
+#~ "this one. Where the lists conflict, the allow list takes precedence."
+#~ msgstr ""
+#~ "Sallittujen koneiden vastakohta - tässä luetelluille koneille ei sallita "
+#~ "pääsyä palveluihin, ellei yksittäisellä palvelulla ole tämän määräyksen "
+#~ "ohittavaa luetteloa. Jos luettelot ovat ristiriidassa, sallitaan pääsy."
+
+#~ msgid "Hosts &deny:"
+#~ msgstr "&Kielletyt koneet:"
+
+#~ msgid "Hidden"
+#~ msgstr "Piilotettu"
+
+#~ msgid "Size"
+#~ msgstr "Koko"
+
+#~ msgid "Date"
+#~ msgstr "Päiväys"
+
+#~ msgid "&Advanced"
+#~ msgstr "&Lisäasetukset"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "bytes"
+#~ msgstr "tavua"
+
+#~ msgid "Defau&lt case:"
+#~ msgstr "&Oletusmerkkikoko:"
+
+#~ msgid "Lower"
+#~ msgstr "Pienet"
+
+#~ msgid "Upper"
+#~ msgstr "Isot"
+
+#~ msgid "Other Options"
+#~ msgstr "Muut asetukset"
+
+#~ msgid "DOS"
+#~ msgstr "DOS"
+
+#~ msgid "Exec"
+#~ msgstr "Suorita"
+
+#, fuzzy
+#~ msgid "&Help"
+#~ msgstr "&Piilota"
+
+#~ msgid "F1"
+#~ msgstr "F1"
+
+#~ msgid "Users"
+#~ msgstr "Käyttäjät"
+
+#~ msgid "Reject"
+#~ msgstr "Hylkää"
+
+#~ msgid "Access Permissions"
+#~ msgstr "Käyttöoikeudet"
+
+#~ msgid "Others"
+#~ msgstr "Muut"
+
+#~ msgid "Read"
+#~ msgstr "Lue"
+
+#~ msgid "Write"
+#~ msgstr "Kirjoita"
+
+#~ msgid "Sticky"
+#~ msgstr "Tahmea"
+
+#~ msgid "Set GID"
+#~ msgstr "Aseta GID"
+
+#~ msgid "Set UID"
+#~ msgstr "Määrittele UID"
+
+#~ msgid "Special"
+#~ msgstr "Erikoisasetukset"
+
+#~ msgid "SO_SNDLOWAT:"
+#~ msgstr "SO_SNDLOWAT:"
+
+#~ msgid "IPTOS_THROUGHPUT"
+#~ msgstr "IPTOS_THROUGHPUT"
+
+#~ msgid "SO_SNDBUF:"
+#~ msgstr "SO_SNDBUF:"
+
+#~ msgid "SO_KEEPALIVE"
+#~ msgstr "SO_KEEPALIVE"
+
+#~ msgid "TCP_NODELAY"
+#~ msgstr "TCP_NODELAY"
+
+#~ msgid "SO_RCVLOWAT:"
+#~ msgstr "SO_RCVLOWAT:"
+
+#~ msgid "SO_REUSEADDR"
+#~ msgstr "SO_REUSEADDR"
+
+#~ msgid "User Settings"
+#~ msgstr "Käyttäjän asetukset"
+
+#~ msgid "A list of allowed hosts"
+#~ msgstr "Luettelo sallituista koneista"
+
+#~ msgid ""
+#~ "Here you can see a list of hosts which are allowed to access this "
+#~ "directory via NFS.\n"
+#~ "The first column shows the name or address of the host, the second column "
+#~ "shows the access parameters. The name '*' donates public access."
+#~ msgstr ""
+#~ "Tässä näet luettelon koneista, jotka saavat käyttää tätä hakemistoa NFS:n "
+#~ "avulla.\n"
+#~ "Ensimmäisessä sarakkeessa on koneen nimi tai osoite, toisessa sarakkeessa "
+#~ "käyttöasetukset. Nimi '*' tarkoittaa julkista käyttöä."
+
+#~ msgid "&Add Host..."
+#~ msgstr "&Lisää kone..."
+
+#~ msgid "Mo&dify Host..."
+#~ msgstr "&Muokkaa konetta..."
+
+#~ msgid "&Remove Host"
+#~ msgstr "&Poista kone"
+
+#~ msgid "Name/Address"
+#~ msgstr "Nimi/Osoite"
+
+#~ msgid "Parameters"
+#~ msgstr "Parametrit"
+
+#~ msgid "Host Properties"
+#~ msgstr "Koneen ominaisuudet"
+
+#~ msgid "&Name/address:"
+#~ msgstr "&Nimi/osoite"
+
+#~ msgid ""
+#~ "<b>Name / Address field</b>\n"
+#~ "<p>\n"
+#~ "Here you can enter the host name or address.<br>\n"
+#~ "The host may be specified in a number of ways:\n"
+#~ "<p>\n"
+#~ "<i>single host</i>\n"
+#~ "<p>\n"
+#~ " This is the most common format. You may specify a host either by an "
+#~ "abbreviated name recognized by the resolver, the fully qualified domain "
+#~ "name, or an IP address.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>netgroups</i>\n"
+#~ "<p>\n"
+#~ " NIS netgroups may be given as @group. Only the host part of each "
+#~ "netgroup members is consider in checking for membership. Empty host parts "
+#~ "or those containing a single dash (-) are ignored.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>wildcards</i>\n"
+#~ "<p>\n"
+#~ " Machine names may contain the wildcard characters * and ?. This can be "
+#~ "used to make the exports file more compact; for instance, *.cs.foo.edu "
+#~ "matches all hosts in the domain cs.foo.edu. However, these wildcard "
+#~ "characters do not match the dots in a domain name, so the above pattern "
+#~ "does not include hosts such as a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP networks</i>\n"
+#~ "<p>\n"
+#~ " You can also export directories to all hosts on an IP (sub-) network "
+#~ "simultaneously. This is done by specifying an IP address and netmask pair "
+#~ "as address/netmask where the netmask can be specified in dotted-decimal "
+#~ "format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host).\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Nimi/osoite-kenttä</b>\n"
+#~ "<p>\n"
+#~ "Voit antaa tähän koneen nimen tai osoitteen.<br>\n"
+#~ "Kone voidaan määritellä useilla eri tavoilla\n"
+#~ "<p>\n"
+#~ "<i>yksi kone</i>\n"
+#~ "<p>\n"
+#~ "Tämä on tavallisin tapa. Voit määrittää koneen joko käyttämällä "
+#~ "lyhennettyä nimeä, täyttä nimeä tai IP-osoitetta.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>Verkkoryhmät</i>\n"
+#~ "<p>\n"
+#~ " NIS-verkkoryhmä voidaan antaa muodossa @ryhmä. Jäsenyyden "
+#~ "tarkistamisessa huomioidaan vain koneen nimeä tarkoittava osa. Tyhjät tai "
+#~ "ainoastaan yhdysmerkin ( - ) sisältävät jätetään huomiotta.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>jokerit</i>\n"
+#~ "<p>\n"
+#~ "Koneennimi voi sisältää jokerimerkkejä * ja ?. Näitä voidaan käyttää "
+#~ "määrittelyn tiivistämiseksi. Esimerkiksi  *.cs.foo.edu kelpuuttaa kaikki "
+#~ "verkkoalueen cs.foo.edu koneet. Nämä jokerimerkit eivät kuitenkaan vastaa "
+#~ "verkkoalueen nimen pisteitä, joten em. ilmaisu ei hyväksy esimerkiksi "
+#~ "konetta a.b.cs.foo.edu.\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<i>IP-verkot</i>\n"
+#~ "Voit myös viedä hakemistoja kaikille IP-(ali)verkon koneille "
+#~ "samanaikaisesti. This is done by specifying an IP address and netmask "
+#~ "pair as address/netmask where the netmask can be specified in dotted-"
+#~ "decimal format, or as a contiguous mask length (for example, either "
+#~ "`/255.255.252.0' or `/22' appended to the network base address result in "
+#~ "identical subnetworks with 10 bits of host)."
+
+#~ msgid "&Public access"
+#~ msgstr "&Yleisessä käytössä"
+
+#~ msgid ""
+#~ "<b>Public access</b>\n"
+#~ "<p>\n"
+#~ "If you check this, the host address will be a single wildcard , which "
+#~ "means public access.\n"
+#~ "This is just the same as if you would enter a wildcard in the address "
+#~ "field.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Yleisessä käytössä</b>\n"
+#~ "<p>\n"
+#~ "Jos valitset tämän, koneen osoite on yksi jokerimerkki, mikä tarkoittaa "
+#~ "yleistä käyttöä.\n"
+#~ "Tämä tarkoittaa samaa, kuin jos antaisit jokerimerkin osoitekenttään.}n </"
+#~ "p>"
+
+#~ msgid "Options"
+#~ msgstr "Asetukset"
+
+#~ msgid "&Writable"
+#~ msgstr "&Kirjoitettava"
+
+#~ msgid ""
+#~ "<b>Writable</b>\n"
+#~ "<p>\n"
+#~ "Allow both read and write requests on this NFS volume.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to disallow any request which changes the filesystem\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Kirjoitettava</b>\n"
+#~ "<p>}n Salli sekä luku- että kirjoituspyynnöt tähän NFS-taltioon.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Oletuksena kielletään kaikki pyynnöt, jotka muuttavat "
+#~ "tiedostojärjestelmää.\n"
+#~ "</p>"
+
+#~ msgid "&Insecure"
+#~ msgstr "&Ei turvallinen"
+
+#~ msgid ""
+#~ "<b>Insecure</b>\n"
+#~ "<p>\n"
+#~ "If this option is checked, it is not required that requests originate on "
+#~ "an internet port less than IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "If unsure leave it unchecked.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Ei turvallinen</b>\n"
+#~ "<p>\n"
+#~ "Jos tämä on valittuna, ei pyynnöiltä edellytetä niiden tulemista internet-"
+#~ "portista, joka on pienempi kuin IPPORT_RESERVED (1024).\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "Jos olet epävarma, jätä valitsematta.\n"
+#~ "</p>"
+
+#~ msgid "&Sync"
+#~ msgstr "&Synkroninen"
+
+#~ msgid ""
+#~ "<b>Sync</b>\n"
+#~ "<p>\n"
+#~ "This option requests that all file writes be committed to disk before the "
+#~ "write request completes. This is required for complete safety of data in "
+#~ "the face of a server crash, but incurs a performance hit.\n"
+#~ "</p>\n"
+#~ "<p>\n"
+#~ "The default is to allow the server to write the data out whenever it is "
+#~ "ready.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<b>Synkroninen</b>\n"
+#~ "<p>\n"
+#~ "Tämä valinta edellyttää, että kaikki tiedostot kirjoitetaan levylle ennen "
+#~ "kirjoituspyynnön suorittamista loppuun. Tämä on tarpeen, jotta tiedot "
+#~ "olisivat turvassa palvelimen kaatuessa, mutta samalla se heikentää "
+#~ "suorituskykyä. </p>\n"
+#~ "<p>\n"
+#~ "Oletuksena palvelimen sallitaan kirjoittaa tiedot heti kun se on "
+#~ "valmiina.\n"
+#~ "</p>"
+
+#~ msgid "Folder:"
+#~ msgstr "Kansio:"
+
+#~ msgid "P&ublic"
+#~ msgstr "J&ulkinen"
+
+#~ msgid "Mor&e Samba Options"
+#~ msgstr "&Lisää Samba-asetuksia"
+
+#~ msgid "Allow all users to share folders"
+#~ msgstr "Salli kaikkien käyttäjien jakaa kansioita"
+
+#~ msgid "Only users of the '%1' group are allowed to share folders"
+#~ msgstr "Vain käyttäjät ryhmässä '%1' voivat jakaa kansiota"
+
+#~ msgid "Users of '%1' Group"
+#~ msgstr "Ryhmän '%1' käyttäjät"
+
+#~ msgid "Remove User"
+#~ msgstr "Poista käyttäjä"
+
+#~ msgid "Add User"
+#~ msgstr "Lisää käyttäjä"
+
+#~ msgid "Group members can share folders without root password"
+#~ msgstr "Ryhmän jäsenet voivat jakaa kansioita ilman pääkäyttäjän salasanaa"
+
+#~ msgid "Change Group..."
+#~ msgstr "Vaihda ryhmää..."
+
+#~ msgid ""
+#~ "SMB and NFS servers are not installed on this machine, to enable this "
+#~ "module the servers must be installed."
+#~ msgstr ""
+#~ "SMB- tai NFS-palvelinta ei ole asennettu tälle koneelle. Voidaksesi "
+#~ "käyttää tätä moduulia, sinun täytyy asentaa kyseessä olevat palvelimet."
+
+#~ msgid "Enable Local Networ&k File Sharing"
+#~ msgstr "Ota &käyttöön tiedostonjako paikallisverkossa"
+
+#~ msgid "Si&mple sharing"
+#~ msgstr "&Yksinkertaiset jaot"
+
+#~ msgid ""
+#~ "Enable simple sharing to allow users to share folders from their HOME "
+#~ "folder, without knowing the root password."
+#~ msgstr ""
+#~ "Ota käyttöön yksinkertaiset jaot, mikä sallii käyttäjien jakaa "
+#~ "kotihakemistonsa alihakemistoja ilman pääkäyttäjän oikeuksia."
+
+#~ msgid "Advanced sharin&g"
+#~ msgstr "&Edistyneet jaot"
+
+#~ msgid ""
+#~ "Enable advanced sharing to allow users to share any folders, as long as "
+#~ "they have write access to the needed configuration files, or they know "
+#~ "the root password."
+#~ msgstr ""
+#~ "Ota käyttöön edistyneet jaot, mikä sallii käyttäjien jakaa mitä tahansa "
+#~ "hakemistoja, edellyttäen että heillä on kirjoitusoikeus tarvittaviin "
+#~ "asetustiedostoihin, tai että he tuntevat root-salasanan."
+
+#~ msgid "Use &NFS (Linux/UNIX)"
+#~ msgstr "Käytä &NFS-jakoja (Linux/UNIX)"
+
+#~ msgid "Allo&wed Users"
+#~ msgstr "Sallitut &käyttäjät"
+
+#~ msgid "Shared Folders"
+#~ msgstr "Jaetut kansiot"
+
+#~ msgid "Samba"
+#~ msgstr "Samba"
+
+#~ msgid "NFS"
+#~ msgstr "NFS"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Lisää..."
+
+#~ msgid "Chang&e..."
+#~ msgstr "M&uuta..."
+
+#~ msgid "Specify Location"
+#~ msgstr "Määritä sijainti"
+
+#~ msgid "Error while opening file"
+#~ msgstr "Virhe tiedostoa avattaessa."
+
+#~ msgid "Unnamed"
+#~ msgstr "Nimetön"
+
+#~ msgid "&Hide"
+#~ msgstr "&Piilota"
+
+#~ msgid "Files Starting With Dot"
+#~ msgstr "Pisteellä alkavat tiedostot"
+
+#~ msgid "Keep Hidden"
+#~ msgstr "Pidä piilotettuna"
+
+#~ msgid "Keep Selected"
+#~ msgstr "Pidä valittuna"
+
+#~ msgid "Default"
+#~ msgstr "Oletus"
+
+#~ msgid "Admin"
+#~ msgstr "Ylläpitäjä"
+
+#, fuzzy
+#~ msgid "Warning"
+#~ msgstr "Tulostaminen"
+
+#~ msgid "Please enter a hostname or an IP address."
+#~ msgstr "Anna koneennimi tai IP-osoite."
+
+#~ msgid "No Hostname/IP-Address"
+#~ msgstr "Ei koneennimeä/IP-osoitetta"
+
+#~ msgid "The host '%1' already exists."
+#~ msgstr "Kone %1 on jo olemassa."
+
+#~ msgid "Please enter a valid path."
+#~ msgstr "Anna kelvollinen polku."
+
+#~ msgid "Only folders can be shared."
+#~ msgstr "Vain kansioita voidaan jakaa."
+
+#~ msgid "The folder is already shared."
+#~ msgstr "Kansio on jo jaettu."
+
+#~ msgid "The administrator does not allow sharing with NFS."
+#~ msgstr "Ylläpitäjä ei salli NFS-jakoja."
+
+#~ msgid "Error: could not read NFS configuration file."
+#~ msgstr "Virhe: NFS-asetustiedostoa ei voitu lukea."
+
+#~ msgid "The administrator does not allow sharing with Samba."
+#~ msgstr "Ylläpitäjä ei salli Samba-jakoja."
+
+#~ msgid "Error: could not read Samba configuration file."
+#~ msgstr "Virhe: Samba-asetustiedostoa ei voitu lukea."
+
+#~ msgid "You have to enter a name for the Samba share."
+#~ msgstr "Sinun on annettava nimi Samba-jaolle."
+
+#~ msgid "You need to be authorized to share directories."
+#~ msgstr "Hakemistojen jaolle tulee antaa lupa."
+
+#~ msgid "Configure File Sharing..."
+#~ msgstr "Tiedostonjaon asetukset..."
+
+#~ msgid "No NFS server installed on this system"
+#~ msgstr "Tähän järjestelmään ei ole asennettu NFS-palvelinta."
+
+#~ msgid "Could not save settings."
+#~ msgstr "Asetuksia ei voitu tallentaa."
+
+#~ msgid "Could not open file '%1' for writing: %2"
+#~ msgstr "Tiedostoa %1 ei voitu avata kirjoittamista varten: %2"
+
+#~ msgid "Saving Failed"
+#~ msgstr "Tallennus epäonnistui"
+
+#~ msgid "Share Folder"
+#~ msgstr "Jaa kansio"
+
+#~ msgid "Allowed Users"
+#~ msgstr "Sallitut käyttäjät"
+
+#~ msgid "All users are in the %1 group already."
+#~ msgstr "Kaikki käyttäjät ovat jo ryhmässä %1."
+
+#~ msgid "Select User"
+#~ msgstr "Valitse käyttäjä"
+
+#~ msgid "Select a user:"
+#~ msgstr "Valitse käyttäjä:"
+
+#~ msgid "Could not add user '%1' to group '%2'"
+#~ msgstr "Käyttäjää %1 ei voitu lisätä ryhmään %2."
+
+#~ msgid "Could not remove user '%1' from group '%2'"
+#~ msgstr "Käyttäjää %1 ei voitu poistaa ryhmästä %2."
+
+#~ msgid "You have to choose a valid group."
+#~ msgstr "Valitse kelvollinen ryhmä."
+
+#~ msgid "Remove users from old file share group"
+#~ msgstr "Poista käyttäjiä vanhasta tiedostonjakoryhmästä."
+
+#~ msgid "Delete the old file share group"
+#~ msgstr "Poista vanha tiedostonjakoryhmä."
+
+#~ msgid "Only users of a certain group are allowed to share folders"
+#~ msgstr "Vain tietyn ryhmän jäsenet saavat jakaa kansioita."
+
+#~ msgid "Choose Group..."
+#~ msgstr "Valitse ryhmä..."
+
+#~ msgid "Do you really want to remove all users from group '%1'?"
+#~ msgstr "Haluatko varmasti poistaa kaikki käyttäjät ryhmästä %1?"
+
+#~ msgid "Do you really want to delete group '%1'?"
+#~ msgstr "Haluatko varmasti poistaa ryhmän %1?"
+
+#~ msgid "Deleting group '%1' failed."
+#~ msgstr "Ryhmän %1 poistaminen epäonnistui."
+
+#~ msgid "Please choose a valid group."
+#~ msgstr "Valitse kelvollinen ryhmä."
+
+#~ msgid "This group '%1' does not exist. Should it be created?"
+#~ msgstr "Ryhmää %1 ei ole olemassa. Luodaanko se?"
+
+#~ msgid "Do Not Create"
+#~ msgstr "Älä luo"
+
+#~ msgid "Creation of group '%1' failed."
+#~ msgstr "Ryhmän %1 luominen epäonnistui."
+
+#~ msgid "Printer Settings"
+#~ msgstr "Tulostimen asetukset"
+
+#~ msgid "Pr&inter"
+#~ msgstr "&Tulostin"
+
+#~ msgid "Pa&th:"
+#~ msgstr "Po&lku:"
+
+#~ msgid "&Queue:"
+#~ msgstr "&Jono:"
+
+#~ msgid "Sha&re all printers"
+#~ msgstr "Jaa &kaikki tulostimet"
+
+#~ msgid "I&dentifier"
+#~ msgstr "&Tunniste"
+
+#~ msgid "&Name:"
+#~ msgstr "&Nimi:"
+
+#~ msgid "Comm&ent:"
+#~ msgstr "Komm&entti:"
+
+#~ msgid "Main Properties"
+#~ msgstr "Pääominaisuudet"
+
+#~ msgid "&Printing"
+#~ msgstr "&Tulostus"
+
+#~ msgid "Printer dri&ver:"
+#~ msgstr "Tulostimen &ajuri:"
+
+#~ msgid "Print&er driver location:"
+#~ msgstr "Tulostim&en ajurin sijainti:"
+
+#~ msgid "PostScr&ipt"
+#~ msgstr "PostScr&ipt"
+
+#~ msgid "Printin&g:"
+#~ msgstr "T&ulostus:"
+
+#~ msgid "sysv"
+#~ msgstr "sysv"
+
+#~ msgid "aix"
+#~ msgstr "aix"
+
+#~ msgid "hpux"
+#~ msgstr "hpux"
+
+#~ msgid "bsd"
+#~ msgstr "bsd"
+
+#~ msgid "qnx"
+#~ msgstr "qnx"
+
+#~ msgid "plp"
+#~ msgstr "plp"
+
+#~ msgid "lprng"
+#~ msgstr "lprng"
+
+#~ msgid "softq"
+#~ msgstr "softq"
+
+#~ msgid "cups"
+#~ msgstr "cups"
+
+#~ msgid "nt"
+#~ msgstr "nt"
+
+#~ msgid "os2"
+#~ msgstr "os2"
+
+#~ msgid "Hosts a&llow:"
+#~ msgstr "&Sallitut koneet:"
+
+#~ msgid "P&rinter admin:"
+#~ msgstr "Tulostimen hallinta:"
+
+#~ msgid "Co&mmands"
+#~ msgstr "&Komennot"
+
+#~ msgid "&Logging"
+#~ msgstr "&Tallennus"
+
+#~ msgid "&Shared"
+#~ msgstr "&Jaettu"

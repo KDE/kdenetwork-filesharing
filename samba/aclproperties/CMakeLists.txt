@@ -11,4 +11,4 @@ target_link_libraries(SambaAcl
     Qt::QuickWidgets
 )
 
-install(TARGETS SambaAcl DESTINATION ${PLUGIN_INSTALL_DIR}/kf5/propertiesdialog/)
+install(TARGETS SambaAcl DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/propertiesdialog/)

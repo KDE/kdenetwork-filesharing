@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:47+0000\n"
-"PO-Revision-Date: 2022-10-12 15:39+0200\n"
+"PO-Revision-Date: 2022-11-28 15:57+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -18,21 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Nega"
 
 #: samba/aclproperties/plugin.cpp:61
-#, fuzzy, kde-format
-#| msgid "Allow"
+#, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Permitte"
 
 #: samba/aclproperties/plugin.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
@@ -75,25 +73,22 @@ msgid "Subfolders only"
 msgstr ""
 
 #: samba/aclproperties/plugin.cpp:84
-#, fuzzy, kde-format
-#| msgid "Read onl&y"
+#, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr "Solmente de le&ctura"
+msgstr "Solmente de lectura"
 
 #: samba/aclproperties/plugin.cpp:87
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Incognite"
 
 #: samba/aclproperties/plugin.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Required Permissions"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "Permissiones  requirite"
+msgstr "Permissiones  remote"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -128,11 +123,9 @@ msgid "Read attributes"
 msgstr ""
 
 #: samba/aclproperties/qml/ACEPage.qml:71
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr "Supporto de attributos extendite de stilo OS/2"
+msgstr "Attributos extendite de lectura"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
@@ -145,18 +138,14 @@ msgid "Create folders / append data"
 msgstr ""
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Scribibile"
+msgstr "Attributos de scriptura"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr "Supporto de attributos extendite de stilo OS/2"
+msgstr "Attributos extendite de scriptura"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
@@ -164,24 +153,16 @@ msgid "Delete subfolders and files"
 msgstr ""
 
 #: samba/aclproperties/qml/ACEPage.qml:95
-#, fuzzy
-#| msgid "Delete Scripts"
 msgctxt "@option:check"
 msgid "Delete"
 msgstr "Dele"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Required Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Permissiones  requirite"
+msgstr "Permissiones  delectura"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgctxt "@action:button changes permissions"
-#| msgid "Change Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
 msgstr "Cambia permissiones"
@@ -219,12 +200,9 @@ msgid "Group:"
 msgstr "Gruppo:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
-#| msgctxt "@action:button opens the change permissions page"
-#| msgid "Fix Permissions"
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "Fixa  (corrige) Permissiones"
+msgstr "Trovate Necun Permissiones"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
@@ -267,18 +245,14 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/groupmanager.cpp:55
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
-"Pro gerer partes (shares) de usator de Samba tu necessita esser membro del "
-"gruppo <resource>%1</resource>."
+"Iste dossier nonpote esser compartite proque tu conto de usator non es un "
+"membro del gruppo <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:57
 #, kde-kuit-format
@@ -320,18 +294,14 @@ msgstr ""
 "(shares) de usator de Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:111
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1<resource> a member of group <resource>"
 "%2<resource>"
 msgstr ""
-"Pro gerer partes (shares) de usator de Samba tu necessita esser membro del "
-"gruppo <resource>%1</resource>."
+"Falleva a render le usator <resource>%1<resource> un membro del gruppo "
+"<resource>%2<resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:91
 #, kde-format

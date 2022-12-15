@@ -3,7 +3,6 @@
 
 #include "debug.h"
 
-#include <cstdint>
 
 #include <QDebug>
 

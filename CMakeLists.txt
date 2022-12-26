@@ -14,6 +14,7 @@ include(FeatureSummary)
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
@@ -88,6 +89,10 @@ add_definitions(
     -DQT_NO_FOREACH
     -DQT_NO_KEYWORDS
 )
+
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+     KF 5.101.0
+    )
 
 add_subdirectory(samba)
 

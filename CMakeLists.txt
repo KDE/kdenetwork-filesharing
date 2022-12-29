@@ -4,7 +4,7 @@ project(filesharing)
 set(QT_MIN_VERSION "5.15.0")
 set(KF5_MIN_VERSION "5.92.0")
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
@@ -38,6 +38,8 @@ set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
     TYPE OPTIONAL
     PURPOSE "Needed to automatically install the samba package."
 )
+
+find_package(QCoro${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core)
 
 find_package(net)
 set_package_properties(net PROPERTIES
@@ -93,6 +95,8 @@ add_definitions(
 ecm_set_disabled_deprecation_versions(QT 5.15.2
      KF 5.101.0
     )
+
+qcoro_enable_coroutines()
 
 add_subdirectory(samba)
 

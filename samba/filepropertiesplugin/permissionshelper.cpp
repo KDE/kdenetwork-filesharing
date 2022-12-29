@@ -15,6 +15,8 @@
 #include <QMetaEnum>
 #include <KLocalizedString>
 
+#include <QCoro/QCoroSignal>
+
 #include "model.h"
 #include "usermanager.h"
 
@@ -28,14 +30,16 @@ static QString getUserPrimaryGroup(const QString &user)
     return user;
 }
 
-static KFileItem getCompleteFileItem(const QString &path)
+static QCoro::Task<KFileItem> getCompleteFileItem(const QString &path)
 {
     const QUrl url = QUrl::fromLocalFile(path);
     auto job = KIO::stat(url);
-    job->exec();
+
+    co_await qCoro(job, &KJob::result);
+
     KIO::UDSEntry entry = job->statResult();
     KFileItem item(entry, url);
-    return item;
+    co_return item;
 }
 
 static QString permissionsToString(QFile::Permissions perm)
@@ -139,10 +143,14 @@ PermissionsHelper::PermissionsHelper(const QString &path, const UserManager *use
 {
 }
 
-Q_INVOKABLE void PermissionsHelper::reload() {
+void PermissionsHelper::reload() {
+    reloadInternal();
+}
+
+QCoro::Task<void> PermissionsHelper::reloadInternal() {
     if (!m_userManager->currentUser()) {
         qWarning() << "PermissionsHelper::reload() failed: current user is null";
-        return;
+        co_return;
     }
 
     m_affectedPaths.clear();
@@ -183,7 +191,9 @@ Q_INVOKABLE void PermissionsHelper::reload() {
         addPath(fileInfo, permsForShare);
     }
     // check and store share POSIX ACL
-    if (getCompleteFileItem(m_path).hasExtendedACL()) {
+    KFileItem fileItem = co_await getCompleteFileItem(m_path);
+
+    if (fileItem.hasExtendedACL()) {
         m_filesWithPosixACL.append(m_path);
     }
 
@@ -200,7 +210,8 @@ Q_INVOKABLE void PermissionsHelper::reload() {
                 addPath(fileInfo, permsForSharePath);
             }
             // check and store share path element's POSIX ACL
-            if (getCompleteFileItem(currentPath).hasExtendedACL()) {
+            KFileItem fileItem = co_await getCompleteFileItem(m_path);
+            if (fileItem.hasExtendedACL()) {
                 m_filesWithPosixACL.append(currentPath);
             }
         }

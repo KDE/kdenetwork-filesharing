@@ -10,6 +10,8 @@
 #include <QObject>
 #include <QVariant>
 
+#include <QCoro/Task>
+
 class QFileInfo;
 class PermissionsHelper;
 class UserPermissionModel;
@@ -66,6 +68,7 @@ Q_SIGNALS:
 
 private:
     void addPath(const QFileInfo &fileInfo, QFile::Permissions requiredPermissions);
+    QCoro::Task<void> reloadInternal();
 
 private:
     const QString m_path;

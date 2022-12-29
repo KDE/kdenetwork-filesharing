@@ -25,6 +25,7 @@ target_link_libraries(sambausershareplugin
     Qt::Qml
     Qt::QuickWidgets
     KF5::AuthCore
+    QCoro${QT_MAJOR_VERSION}::Coro
 )
 
 if(SAMBA_INSTALL)

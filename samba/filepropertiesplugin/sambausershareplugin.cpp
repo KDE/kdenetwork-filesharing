@@ -119,7 +119,7 @@ bool SambaUserSharePlugin::isSambaInstalled()
 void SambaUserSharePlugin::showSambaStatus()
 {
     auto job = new KIO::CommandLauncherJob(QStringLiteral("kinfocenter"), {QStringLiteral("kcm_samba")});
-    job->setDesktopName(QStringLiteral("kinfocenter"));
+    job->setDesktopName(QStringLiteral("org.kde.kinfocenter"));
     job->start();
 }
 

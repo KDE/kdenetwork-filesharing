@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:47+0000\n"
-"PO-Revision-Date: 2022-12-28 09:16+0100\n"
+"PO-Revision-Date: 2022-12-29 02:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -181,6 +181,7 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"ეს წვდომები მხოლოდ ამ კონტეინერში მყოფ ობიეტქებზე/კონტეინერებზე გამოიყენეთ"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
@@ -229,6 +230,9 @@ msgid ""
 "You can fix it yourself by creating that folder manually. Then close and re-"
 "open this window."
 msgstr ""
+"შეცდომა თქვენ დისტრიბუტივის მიერ Samba-ის გაზიარების არასწორად მორგების "
+"გამოა. გაასწორეთ გაზიარება ხელით, შემდეგ კი დახურეთ ეს ფანჯარა და თავიდან "
+"გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
@@ -237,6 +241,8 @@ msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>."
 msgstr ""
+"ამ საქაღალდის გაზიარება შეუძლებელია, რადგან <filename>%1</filename>-ს "
+"მფლობელის ჯგუფი <resource>%2</resource>-ზე უყენია."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:48
 #, kde-kuit-format
@@ -536,7 +542,7 @@ msgctxt "@info detailed error messsage"
 msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
-msgstr ""
+msgstr "გადააჭარბეთ ერთდროულად გაზიარებული საქაღალდეების რაოდენობას."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:158
 #, kde-format
@@ -612,6 +618,8 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>შეცდომა საქაღალდის გაზიარებისას. გაზიარება არ შექმნილა.</"
+"para><para>Samba -ის შიდა ანგარიში:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:203
 #, kde-format
@@ -627,6 +635,8 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>შეცდომა საქაღალდის გაზიარების მოხსნისას. გაზიარებული არ წაშლილა.</"
+"para><para>Samba -ის შიდა ანგარიში:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:223
 #, kde-format

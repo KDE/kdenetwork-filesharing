@@ -1,5 +1,5 @@
 # translation of kfileshare.po to
-# Version: $Revision: 1634720 $
+# Version: $Revision: 1641066 $
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Michał 'podles' Podlewski <podles@aster.pl>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:47+0000\n"
-"PO-Revision-Date: 2022-08-16 18:43+0200\n"
+"PO-Revision-Date: 2022-12-29 11:25+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -196,7 +196,7 @@ msgstr "Wpisy określające dostęp"
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr "Właściciel"
+msgstr "Własność"
 
 #: samba/aclproperties/qml/MainPage.qml:33
 msgctxt "@label"
@@ -272,8 +272,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
-"Tego katalogu nie można udostępnić, bo twój użytkownik nie jest członkiem "
-"grupy <filename>%1</filename>."
+"Tego katalogu nie można udostępnić, bo twoje konto nie jest członkiem grupy "
+"<filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:57
 #, kde-kuit-format
@@ -298,7 +298,7 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
-"Tego katalogu nie można udostępnić, bo twój użytkownik nie ma uprawnień do "
+"Tego katalogu nie można udostępnić, bo twoje konto nie ma uprawnień do "
 "zapisu do <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:72
@@ -384,13 +384,12 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:61
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
-"Ten katalog  wymaga dodatkowych uprawnień, aby udostępnianie mogło działać"
+msgstr "Ten katalog wymaga dodatkowych uprawnień, aby móc go udostępniać"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:65
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr "Napraw uprawnienia"
+msgstr "Nadaj uprawnienia"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:77
 msgctxt "@label"
@@ -404,7 +403,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:83
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr "Udostępnij ten katalog innym komputerom w sieci lokalnej"
+msgstr "Udostępnij ten katalog innym komputerom w sieci miejscowej"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:100
 msgctxt "@label"
@@ -437,7 +436,7 @@ msgstr "Zezwól gościom"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:160
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr "Gościnny dostęp jest wyłączony w ustawieniach systemu Samby."
+msgstr "Dostęp dla gości został wyłączony w ustawieniach systemu Samby."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:239
 msgctxt "@option:radio user can read&write"

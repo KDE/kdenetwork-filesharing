@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:00+0000\n"
-"PO-Revision-Date: 2023-01-02 05:09+0100\n"
+"PO-Revision-Date: 2023-01-03 07:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -253,6 +253,10 @@ msgid ""
 "<resource>usershares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
+"ეს შეცდომა თქვენი დისტროს მიერ Samba-ის არასწორად მორგების შედეგია. "
+"შეგიძლიათ ის თქვენ თვითონ გაასწოროთ, რიცხვისაც საქაღალდის ჯგუფის "
+"მფლობელი<resource>usershares</resource>-ზე შეცვალეთ და თქვენი თავი იმ ჯგუფში "
+"ჩაამატეთ, შემდეგ კი დაარესტარტეთ სისტემა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
@@ -287,6 +291,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"საქაღალდის გაზიარება შეუძლებელია, რადგან თქვენს ანგარიშს <filename>%1</"
+"filename>-ში ჩაწერა არ შეუძლია."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:72
 #, kde-kuit-format
@@ -296,6 +302,9 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"რომ გაასწოროთ, დარწმუნდით, რომ <resource>%1</resource>-ის ჯგუფს <filename>"
+"%2</filename>-ზე ჩაწერის უფლება გააჩნია. შემდეგ დახურეთ ეს ფანჯარა და "
+"თავიდან გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:100
 #, kde-format
@@ -311,6 +320,8 @@ msgid ""
 "Failed to make user <resource>%1<resource> a member of group <resource>"
 "%2<resource>"
 msgstr ""
+"<resource>%1<resource>-ის ჯგუფის (<resource>%2<resource>) წევრად გახდომის "
+"შეცდომა"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format

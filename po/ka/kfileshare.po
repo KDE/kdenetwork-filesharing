@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:47+0000\n"
-"PO-Revision-Date: 2022-10-10 08:50+0200\n"
+"PO-Revision-Date: 2023-01-05 07:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -41,43 +41,43 @@ msgstr "უცნობი"
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "მხოლოდ ეს საქაღალდე"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "ეს საქაღალდე, ქვესაქაღალდე და ფაილები"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "ეს საქაღალდე და ქვესაქაღალდეები"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "ეს საქაღალდე და ფაილები"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "მხოლოდ  ქვესაქაღალდე და ფაილები"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "მხოლოდ ქვესაქაღალდეები"
 
 #: samba/aclproperties/plugin.cpp:84
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "მხოლოდ ფაილები"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "უცნობი"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr ""
+msgstr "დაშორებული წვდომები"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -97,6 +97,8 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"წვდომის უფლება მიღებულია მშობელი კონტეინერიდან და მხოლოდ მშობელზე (მაგ: ზემო "
+"დონის საქაღალდეზე) შეიძლება შეიცვალოს."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
@@ -106,52 +108,52 @@ msgstr "ტიპი:"
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "ეხება:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "საქაღალდის დათვალიერება / ფაილის გაშვება"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "საქაღალდის წაკითხვა / მონაცემების წაკითხვა"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "ატრიბუტების წაკითხვა"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "გაფართოებული ატრიბუტების წაკითხვა"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "ფაილების შექმნა / მონაცემების ჩაწერა"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "საქაღალდეების შექმნა / მონაცემების ბოლოში მიწერა"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr ""
+msgstr "ატრიბუტების ჩაწერა"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "გაფართოებული ატრიბუტების ჩაწერა"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "ქვესაქაღალდეებისა და ფაილების წაშლა"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
@@ -161,17 +163,17 @@ msgstr "წაშლა"
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr ""
+msgstr "წვდომების წაკითხვა"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr ""
+msgstr "წვდომების შეცვლა"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "მფლობელობის აღება"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -179,11 +181,12 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"ეს წვდომები მხოლოდ ამ კონტეინერში მყოფ ობიეტქებზე/კონტეინერებზე გამოიყენეთ"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "წვდომის კონტროლის ჩანაწერები"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
@@ -203,13 +206,13 @@ msgstr "ჯგუფი:"
 #: samba/aclproperties/qml/NoDataPage.qml:17
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr ""
+msgstr "წვდომები ვერ ვიპოვე"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
-msgstr ""
+msgstr "ფაილზე SMB/Windows/დამატებითი წვდომები დაყენებული არაა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:37
 #, kde-kuit-format
@@ -217,6 +220,7 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"ფაილის გაზიარება შეუძლებელია, რადგან <filename>%1</filename> არ არსებობს."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:39
 #, kde-kuit-format
@@ -226,6 +230,9 @@ msgid ""
 "You can fix it yourself by creating that folder manually. Then close and re-"
 "open this window."
 msgstr ""
+"შეცდომა თქვენ დისტრიბუტივის მიერ Samba-ის გაზიარების არასწორად მორგების "
+"გამოა. გაასწორეთ გაზიარება ხელით, შემდეგ კი დახურეთ ეს ფანჯარა და თავიდან "
+"გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
@@ -234,6 +241,8 @@ msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>."
 msgstr ""
+"ამ საქაღალდის გაზიარება შეუძლებელია, რადგან <filename>%1</filename>-ს "
+"მფლობელის ჯგუფი <resource>%2</resource>-ზე უყენია."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:48
 #, kde-kuit-format
@@ -244,6 +253,10 @@ msgid ""
 "<resource>usershares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
+"ეს შეცდომა თქვენი დისტროს მიერ Samba-ის არასწორად მორგების შედეგია. "
+"შეგიძლიათ ის თქვენ თვითონ გაასწოროთ, რიცხვისაც საქაღალდის ჯგუფის "
+"მფლობელი<resource>usershares</resource>-ზე შეცვალეთ და თქვენი თავი იმ ჯგუფში "
+"ჩაამატეთ, შემდეგ კი დაარესტარტეთ სისტემა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
@@ -252,6 +265,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"საქაღალდის გაზიარება შეუძლებელია, რადგან თქვენი მომხმარებლის ანგარიში "
+"<resource>%1</resource> ჯგუფის წევრი არაა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:57
 #, kde-kuit-format
@@ -260,12 +275,14 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"ეს შეგიძლიათ თქვენი მომხმარებლის შესაბამის ჯგუფში ჩამატებით გამოასწოროთ. "
+"შემდეგ კი გადატვირთეთ სისტემა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:61
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
-msgstr ""
+msgstr "ჯგუფის წევრებში ჩამატება"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:70
 #, kde-kuit-format
@@ -274,6 +291,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"საქაღალდის გაზიარება შეუძლებელია, რადგან თქვენს ანგარიშს <filename>%1</"
+"filename>-ში ჩაწერა არ შეუძლია."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:72
 #, kde-kuit-format
@@ -283,12 +302,16 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"რომ გაასწოროთ, დარწმუნდით, რომ <resource>%1</resource>-ის ჯგუფს <filename>"
+"%2</filename>-ზე ჩაწერის უფლება გააჩნია. შემდეგ დახურეთ ეს ფანჯარა და "
+"თავიდან გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:100
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
 msgstr ""
+"მომხმარებელი '%1' ჩაემატა ჯგუფში '%2'. ახლა მას Samba-ის მორგება შეუძლია"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:111
 #, kde-format
@@ -297,6 +320,8 @@ msgid ""
 "Failed to make user <resource>%1<resource> a member of group <resource>"
 "%2<resource>"
 msgstr ""
+"<resource>%1<resource>-ის ჯგუფის (<resource>%2<resource>) წევრად გახდომის "
+"შეცდომა"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:91
 #, kde-format
@@ -308,18 +333,18 @@ msgstr "ფაილის ბილიკი"
 #, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr ""
+msgstr "მიმდინარე წვდომები"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr ""
+msgstr "აუცილებელი წვდომები"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:28
 msgctxt "@title"
 msgid "Denying Access"
-msgstr ""
+msgstr "წვდომის უარყოფები"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:42
@@ -340,12 +365,12 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:61
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "გაზიარების სამუშაოდ საქაღალდეს დამატებით წვდომები ესაჭიროება"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:65
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr ""
+msgstr "წვდომების გასწორება"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:77
 msgctxt "@label"
@@ -353,11 +378,13 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"გაზიარებულმა შეიძლება სწორად არ იმუშაოს, რადგან გაზიარებულ საქაღალდეს ან მის "
+"ბილიკებს დამატებით წვდომები გააჩნიათ: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:83
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr ""
+msgstr "გააზიარეთ ეს საქაღალდე ლოკალურად სხვა კომპიუტერებისთვის"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:100
 msgctxt "@label"
@@ -370,6 +397,9 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"სახელის გამოყენება შეუძლებელია. გაზიარებულის სახელი მომხმარებლის სახელი არ "
+"შეიძლება იყოს და მთელ სისტემაში იგივე სახელის მქონე სხვა გაზიარებული ვერ "
+"იარსებებს."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:141
 msgctxt "@label"
@@ -377,26 +407,28 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"ეს სახელი მეტისმეტად გრძელია. მას თავსებადობის პრობლემების გამოწვევა შეუძლია "
+"ან უბრალოდ უარყოფილი იქნება Samba-ის მიერ."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:147
 msgctxt "@option:check"
 msgid "Allow guests"
-msgstr ""
+msgstr "სტუმრის დაშვება"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:160
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "სტუმრის წვდომა გათიშულია სისტემის Samba-ის კონფიგურაციაში."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:239
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
-msgstr ""
+msgstr "სრული კონტროლი"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:240
 msgctxt "@option:radio user can read"
 msgid "Read Only"
-msgstr ""
+msgstr "მხოლოდ-კითხვადი"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:241
 msgctxt "@option:radio user not allowed to access share"
@@ -406,7 +438,7 @@ msgstr "წვდომის გარეშე"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:267
 msgctxt "@button"
 msgid "Show Samba status monitor"
-msgstr ""
+msgstr "Samba-ს სტატუსის მონიტორის ჩვენება"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:24
 msgctxt "@title"
@@ -442,11 +474,15 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>საქაღალდეს <filename>%1</filename> გაზიარების სამუშაოდ დამატებითი "
+"წვდომები სჭირდება.</para>\n"
+"<para>გნებავთ, ეს წვდომები ახლა დაამატოთ?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr ""
+msgstr "წვდომების შეცვლა"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
 msgctxt "@label"
@@ -454,6 +490,8 @@ msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
 msgstr ""
+"%1-სთვის წვდომების შეცვლის შეცდომა. ყველა ცვლილება საწყის მდგომარეობაში "
+"დაბრუნდა."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
 msgctxt "@action:button cancels permissions change"
@@ -464,22 +502,22 @@ msgstr "გაუქმება"
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
 msgctxt "@label"
 msgid "Samba must be installed before folders can be shared."
-msgstr ""
+msgstr "საქაღალდის გასაზიარებლად Samba-ის დაყენება აუცილებელია."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
 msgid "Install Samba"
-msgstr ""
+msgstr "Samba-ის დაყენება"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:44
 msgctxt "@label"
 msgid "The Samba package failed to install."
-msgstr ""
+msgstr "Samba-ის პაკეტის დაყენების შეცდომა."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
 msgid "Restart the computer to complete the changes."
-msgstr ""
+msgstr "ცვლილებების დასასრულებლად გადატვირთეთ კომპიუტერი."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
 msgctxt "@button restart the system"
@@ -502,11 +540,21 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba სისტემურისგან განსხვავებულ მომხმარებლების ბაზას იყენებს.\n"
+"ეს მოითხოვს, რომ თითოეული დამატებითი მომხმარებლისთვის ცალკე\n"
+"პაროლი იქნას დაყენებული.\n"
+"</para>\n"
+"<para>\n"
+"სანამ თქვენი მიმდინარე მომხმარებლით ავთენტიკაციას შეძლებთ, Samba-ის პაროლი "
+"დაყენებაა საჭირო.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
 msgctxt "@action:button opens dialog to create new user"
 msgid "Create Samba password"
-msgstr ""
+msgstr "Samba-ის პაროლის შექმნა"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:88
@@ -517,6 +565,10 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"მომხმარებლებისა და პაროლების დამატებითი მართვა Samba-ის <command>smbpasswd</"
+"command>\n"
+"ბრძანებით შეგიძლიათ."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:156
 #, kde-format
@@ -524,73 +576,73 @@ msgctxt "@info detailed error messsage"
 msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
-msgstr ""
+msgstr "გადააჭარბეთ ერთდროულად გაზიარებული საქაღალდეების რაოდენობას."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:158
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr ""
+msgstr "გაზიარებულის სახელი არასწორია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:160
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "გაზიარებულის სახელი უკვე გამოიყენება სხვა საქაღალდისთვის."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:162
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
-msgstr ""
+msgstr "ბილიკი არასწორია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:164
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
-msgstr ""
+msgstr "ბილიკი არ არსებობს."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:166
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
-msgstr ""
+msgstr "ბილიკი საქაღალდე არაა."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:168
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
-msgstr ""
+msgstr "ბილიკი შედარებითია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:170
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
-msgstr ""
+msgstr "ბილკის გაზიარება შეუძლებელია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:172
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
-msgstr ""
+msgstr "წვდომის წესი არასწორია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:174
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
-msgstr ""
+msgstr "წვდომის წესის მომხმარებელი არასწორია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:176
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "'Gues' წვდომის წესი არასწორია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:178
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "სტუმრის წვდომის ჩართვა დაუშვებელია."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:196
 #, kde-kuit-format
@@ -600,12 +652,14 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>შეცდომა საქაღალდის გაზიარებისას. გაზიარება არ შექმნილა.</"
+"para><para>Samba -ის შიდა ანგარიში:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:203
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
-msgstr ""
+msgstr "ქსელური გაზიარების შექმნის შეცდომა"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:216
 #, kde-kuit-format
@@ -615,21 +669,23 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>შეცდომა საქაღალდის გაზიარების მოხსნისას. გაზიარებული არ წაშლილა.</"
+"para><para>Samba -ის შიდა ანგარიში:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:223
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
-msgstr ""
+msgstr "ქსელური გაზიარების წაშლის შეცდომა"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "შემოწმება, არსებობს თუ არა Samba-ის მომხმარებელი '%1'"
 
 #: samba/filepropertiesplugin/usermanager.cpp:118
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "Samba-ის ახალი მომხმარებლის შექმნა '%1'"

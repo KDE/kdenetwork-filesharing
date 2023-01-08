@@ -101,7 +101,7 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
         QStringLiteral("{%1}").arg(group),
         QStringLiteral("-m"),
         QStringLiteral("{%1}").arg(user) });
-#elif defined(Q_OS_LINUX)
+#elif defined(Q_OS_LINUX) || defined(Q_OS_HURD)
     p.setProgram(QStringLiteral("/usr/sbin/usermod"));
     p.setArguments({
         QStringLiteral("--append"),

@@ -18,14 +18,14 @@ endif()
 add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
 
 target_link_libraries(sambausershareplugin
-    KF5::CoreAddons
-    KF5::I18n
-    KF5::KIOCore
-    KF5::KIOWidgets
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::KIOWidgets
     Qt::Qml
     Qt::QuickWidgets
-    KF5::AuthCore
     QCoro${QT_MAJOR_VERSION}::Coro
+    KF${KF_MAJOR_VERSION}::AuthCore
 )
 
 if(SAMBA_INSTALL)
@@ -38,7 +38,7 @@ install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT
 
 kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)
 add_executable(authhelper authhelper.cpp)
-target_link_libraries(authhelper KF5::AuthCore KF5::ConfigCore KF5::I18n)
+target_link_libraries(authhelper KF${KF_MAJOR_VERSION}::AuthCore KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::I18n)
 
 kauth_install_helper_files(authhelper org.kde.filesharing.samba root)
 install(TARGETS authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

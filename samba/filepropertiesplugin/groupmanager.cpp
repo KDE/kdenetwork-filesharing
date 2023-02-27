@@ -43,7 +43,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (!info.exists()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> does not exist.", path);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distro not setting up Samba sharing properly. You can fix it yourself by creating that folder manually. Then close and re-open this window.");
+                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by creating that folder manually. Then close and re-open this window.");
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that creates the folder
             }
@@ -52,7 +52,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (m_targetGroup == QLatin1String("root")) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> has its group owner inappropriately set to <resource>%2</resource>.", path, m_targetGroup);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distro not setting up Samba sharing properly. You can fix it yourself by changing that folder's group owner to <resource>usershares</resource> and making yourself a member of that group. Then restart the system.");
+                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by changing that folder's group owner to <resource>usershares</resource> and making yourself a member of that group. Then restart the system.");
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that creates the group and applies it to the folder
             }

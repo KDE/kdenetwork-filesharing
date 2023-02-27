@@ -32,8 +32,15 @@ GroupManager::GroupManager(QObject *parent)
             m_user = KUser().loginName();
             const QStringList groups = KUser(m_user).groupNames();
 
-            // First check to see if the path where user shares will be exported exists
-            if (path.isEmpty() || !info.exists()) {
+            if (path.isEmpty()) {
+                m_errorText = xi18nc("@info:status", "Your Samba installation appears to be broken.");
+                Q_EMIT errorTextChanged();
+                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution.");
+                Q_EMIT errorExplanationChanged();
+            }
+
+            // Check to see if the path where user shares will be exported exists
+            else if (!info.exists()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> does not exist.", path);
                 Q_EMIT errorTextChanged();
                 m_errorExplanation = xi18nc("@info:status", "This error is caused by your distro not setting up Samba sharing properly. You can fix it yourself by creating that folder manually. Then close and re-open this window.");

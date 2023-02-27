@@ -35,7 +35,12 @@ GroupManager::GroupManager(QObject *parent)
             if (path.isEmpty()) {
                 m_errorText = xi18nc("@info:status", "Your Samba installation appears to be broken.");
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution.");
+                const auto err = proc->readAllStandardError().trimmed();
+                if (err.isEmpty()) {
+                    m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing.");
+                } else {
+                    m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing. Error:<nl/><message>%1</message>", QString::fromUtf8(err));
+                }
                 Q_EMIT errorExplanationChanged();
             }
 

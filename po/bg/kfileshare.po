@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:00+0000\n"
+"POT-Creation-Date: 2023-02-28 00:58+0000\n"
 "PO-Revision-Date: 2022-08-17 23:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -216,7 +216,29 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "Вероятно няма SMB/Windows/Разширени разрешения, зададени на този файл."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:37
+#: samba/filepropertiesplugin/groupmanager.cpp:36
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Your Samba installation appears to be broken."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:38
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution."
+msgstr ""
+"Тази грешка се дължи на това, че вашата дистрибуция не е настроила правилно "
+"споделянето на Samba. Можете да я поправите сами, като създадете тази папка "
+"ръчно. След това затворете и отновоотворете този прозорец."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:44
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -225,19 +247,24 @@ msgstr ""
 "Тази папка не може да се сподели, защото  <filename>%1</filename> не "
 "съществува."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:39
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
 msgctxt "@info:status"
 msgid ""
-"This error is caused by your distro not setting up Samba sharing properly. "
-"You can fix it yourself by creating that folder manually. Then close and re-"
-"open this window."
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. You can fix it yourself by creating that folder manually. Then "
+"close and re-open this window."
 msgstr ""
 "Тази грешка се дължи на това, че вашата дистрибуция не е настроила правилно "
 "споделянето на Samba. Можете да я поправите сами, като създадете тази папка "
 "ръчно. След това затворете и отновоотворете този прозорец."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
+#: samba/filepropertiesplugin/groupmanager.cpp:53
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -247,12 +274,18 @@ msgstr ""
 "Тази папка не може да бъде споделена, защото  <filename>%1</filename> е с "
 "неправилно зададена група на притежател <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:48
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by changing that folder's group owner "
+#| "to <resource>usershares</resource> and making yourself a member of that "
+#| "group. Then restart the system."
 msgctxt "@info:status"
 msgid ""
-"This error is caused by your distro not setting up Samba sharing properly. "
-"You can fix it yourself by changing that folder's group owner to "
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. You can fix it yourself by changing that folder's group owner to "
 "<resource>usershares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
@@ -261,7 +294,7 @@ msgstr ""
 "на групата на тази папка на <resource>usershares</resource> и да станете "
 "член на тази група. След това рестартирайте системата."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
+#: samba/filepropertiesplugin/groupmanager.cpp:62
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -271,7 +304,7 @@ msgstr ""
 "Тази папка не може да бъде споделена, защото вашият потребителски акаунт не "
 "е член на група <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:57
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -281,13 +314,13 @@ msgstr ""
 "Можете да поправите това, като направите потребителя член на тази група. "
 "След това рестартирайте системата."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:61
+#: samba/filepropertiesplugin/groupmanager.cpp:68
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Включване в групата"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:70
+#: samba/filepropertiesplugin/groupmanager.cpp:77
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -297,7 +330,7 @@ msgstr ""
 "Тази папка не може да бъде споделена, защото вашият потребителски акаунт "
 "няма разрешение да записва в <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:72
+#: samba/filepropertiesplugin/groupmanager.cpp:79
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -309,7 +342,7 @@ msgstr ""
 "resource> има право на запис за <filename>%2</filename>. След това затворете "
 "и отворете отново този прозорец."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:100
+#: samba/filepropertiesplugin/groupmanager.cpp:107
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -317,7 +350,7 @@ msgstr ""
 "Добавяне на потребител \"%1\" към група \"%2\", за да може да настройват "
 "потребителски споделяния със Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:111
+#: samba/filepropertiesplugin/groupmanager.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-02 01:00+0000\n"
+"POT-Creation-Date: 2023-02-28 00:58+0000\n"
 "PO-Revision-Date: 2022-08-14 18:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -220,7 +220,29 @@ msgstr ""
 "Er zijn waarschijnlijk geen SMB/Windows/Geavanceerde rechten ingesteld op "
 "dit bestand."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:37
+#: samba/filepropertiesplugin/groupmanager.cpp:36
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Your Samba installation appears to be broken."
+msgstr ""
+
+#: samba/filepropertiesplugin/groupmanager.cpp:38
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution."
+msgstr ""
+"Deze fout wordt veroorzaakt door uw distributie die het opzetten van Samba "
+"sharing niet juist doet. U kunt het zelf repareren door die map handmatig te "
+"configureren. Sluit daarna dit venster en heropen deze."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:44
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -228,19 +250,24 @@ msgid ""
 msgstr ""
 "Deze map kan niet gedeeld worden omdat <filename>%1</filename> niet bestaat."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:39
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:46
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
 msgctxt "@info:status"
 msgid ""
-"This error is caused by your distro not setting up Samba sharing properly. "
-"You can fix it yourself by creating that folder manually. Then close and re-"
-"open this window."
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. You can fix it yourself by creating that folder manually. Then "
+"close and re-open this window."
 msgstr ""
 "Deze fout wordt veroorzaakt door uw distributie die het opzetten van Samba "
 "sharing niet juist doet. U kunt het zelf repareren door die map handmatig te "
 "configureren. Sluit daarna dit venster en heropen deze."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
+#: samba/filepropertiesplugin/groupmanager.cpp:53
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -250,12 +277,18 @@ msgstr ""
 "Deze map kan niet gedeeld worden omdat de groepseigenaar van <filename>%1</"
 "filename> onjuist is ingesteld op <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:48
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:55
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by changing that folder's group owner "
+#| "to <resource>usershares</resource> and making yourself a member of that "
+#| "group. Then restart the system."
 msgctxt "@info:status"
 msgid ""
-"This error is caused by your distro not setting up Samba sharing properly. "
-"You can fix it yourself by changing that folder's group owner to "
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. You can fix it yourself by changing that folder's group owner to "
 "<resource>usershares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
@@ -264,7 +297,7 @@ msgstr ""
 "van die map te wijzigen naar <resource>usershares</resource> en uzelf een "
 "lid van die groep te maken. Start het systeem opnieuw."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
+#: samba/filepropertiesplugin/groupmanager.cpp:62
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -274,7 +307,7 @@ msgstr ""
 "Deze map kan niet gedeeld worden omdat uw gebruikersaccount geen lid is van "
 "de groep <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:57
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -284,13 +317,13 @@ msgstr ""
 "U kunt dit repareren door uw gebruiker lid te maken van die groep. Start uw "
 "systeem daarna opnieuw."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:61
+#: samba/filepropertiesplugin/groupmanager.cpp:68
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Maak me een groepslid"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:70
+#: samba/filepropertiesplugin/groupmanager.cpp:77
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -300,7 +333,7 @@ msgstr ""
 "Deze map kan niet gedeeld worden omdat uw gebruikersaccount geen "
 "schrijfrechten heeft in <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:72
+#: samba/filepropertiesplugin/groupmanager.cpp:79
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -312,7 +345,7 @@ msgstr ""
 "schrijfrechten heeft voor <filename>%2</filename>. Sluit dit venster daarna "
 "er open het opnieuw."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:100
+#: samba/filepropertiesplugin/groupmanager.cpp:107
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -320,7 +353,7 @@ msgstr ""
 "Gebruiker '%1' wordt toegevoegd aan groep '%2' zodat ze Samba-usershares "
 "kunnen configureren"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:111
+#: samba/filepropertiesplugin/groupmanager.cpp:118
 #, kde-format
 msgctxt "@info"
 msgid ""

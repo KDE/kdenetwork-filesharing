@@ -1,17 +1,17 @@
 # Translation of kfileshare.po to Catalan
-# Copyright (C) 2004-2022 This_file_is_part_of_KDE
+# Copyright (C) 2004-2023 This_file_is_part_of_KDE
 #
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005.
 # Sebastià Pla i Sanz <sps@sastia.com>, 2004, 2005.
-# Josep M. Ferrer <txemaq@gmail.com>, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022, 2023.
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:58+0000\n"
-"PO-Revision-Date: 2022-08-13 13:10+0200\n"
+"POT-Creation-Date: 2023-03-02 00:54+0000\n"
+"PO-Revision-Date: 2023-02-28 10:15+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -225,25 +225,42 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Sembla que aquesta instal·lació del Samba està trencada."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:38
+#: samba/filepropertiesplugin/groupmanager.cpp:40
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. Please file a bug with your distribution."
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution."
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Aquest error és causat perquè la vostra distribució no ha configurat "
-"correctament la compartició del Samba. Podeu arreglar-ho creant aquesta "
-"carpeta manualment. Després tanqueu i torneu a obrir aquesta finestra."
+"correctament la compartició del Samba. Informeu de l'error a la vostra "
+"distribució."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:44
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. Please file a bug with your distribution."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Aquest error és causat perquè la vostra distribució no ha configurat "
+"correctament la compartició del Samba. Informeu de l'error a la vostra "
+"distribució."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -252,13 +269,8 @@ msgstr ""
 "Aquesta carpeta no es pot compartir perquè <filename>%1</filename> no "
 "existeix."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#: samba/filepropertiesplugin/groupmanager.cpp:51
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -269,7 +281,7 @@ msgstr ""
 "correctament la compartició del Samba. Podeu arreglar-ho creant aquesta "
 "carpeta manualment. Després tanqueu i torneu a obrir aquesta finestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:53
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -279,14 +291,8 @@ msgstr ""
 "Aquesta carpeta no es pot compartir perquè <filename>%1</filename> té el seu "
 "propietari de grup establert inadequadament a <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#: samba/filepropertiesplugin/groupmanager.cpp:60
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -299,7 +305,7 @@ msgstr ""
 "propietari del grup d'aquesta carpeta a <resource>usershares</resource> i "
 "fent-vos membre d'aquest grup. Després reinicieu el sistema."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
+#: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -309,7 +315,7 @@ msgstr ""
 "Aquesta carpeta no es pot compartir perquè el vostre compte d'usuari no és "
 "membre del grup <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:69
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -319,13 +325,13 @@ msgstr ""
 "Podeu arreglar-ho fent que el vostre usuari sigui membre d'aquest grup. "
 "Després reinicieu el sistema."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:68
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Fes-me membre del grup"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:82
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -335,7 +341,7 @@ msgstr ""
 "Aquesta carpeta no es pot compartir perquè el vostre compte d'usuari no té "
 "permís per a escriure a <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:79
+#: samba/filepropertiesplugin/groupmanager.cpp:84
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -347,7 +353,7 @@ msgstr ""
 "permís d'escriptura per a <filename>%2</filename>. Després tanqueu i torneu "
 "a obrir aquesta finestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:107
+#: samba/filepropertiesplugin/groupmanager.cpp:112
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -355,7 +361,7 @@ msgstr ""
 "S'afegeix l'usuari «%1» al grup «%2» per tal que pugui configurar les "
 "comparticions d'usuari del Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:118
+#: samba/filepropertiesplugin/groupmanager.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:58+0000\n"
+"POT-Creation-Date: 2023-03-02 00:54+0000\n"
 "PO-Revision-Date: 2023-02-08 06:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -223,7 +223,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:38
+#: samba/filepropertiesplugin/groupmanager.cpp:40
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -233,13 +233,32 @@ msgstr ""
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution."
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Ĉi tiu eraro estas kaŭzita de via distribuo ne ĝuste agordante Samba "
 "kundividon. Vi povas ripari ĝin mem kreante tiun dosierujon permane. Poste "
 "fermu kaj remalfermu ĉi tiun fenestron."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:44
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Ĉi tiu eraro estas kaŭzita de via distribuo ne ĝuste agordante Samba "
+"kundividon. Vi povas ripari ĝin mem kreante tiun dosierujon permane. Poste "
+"fermu kaj remalfermu ĉi tiun fenestron."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -248,7 +267,7 @@ msgstr ""
 "Ĉi tiu dosierujo ne povas esti kunhavita ĉar <filename>%1</filename> ne "
 "ekzistas."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
+#: samba/filepropertiesplugin/groupmanager.cpp:51
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -265,7 +284,7 @@ msgstr ""
 "kundividon. Vi povas ripari ĝin mem kreante tiun dosierujon permane. Poste "
 "fermu kaj remalfermu ĉi tiun fenestron."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:53
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -275,7 +294,7 @@ msgstr ""
 "Ĉi tiu dosierujo ne povas esti kunhavita ĉar <filename>%1</filename> havas "
 "sian grupposedanton malkonvene agordita al <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -295,7 +314,7 @@ msgstr ""
 "dosierujo al <resource>usershares</resource> kaj farante vin membro de tiu "
 "grupo. Tiam rekomencu la sistemon."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
+#: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -305,7 +324,7 @@ msgstr ""
 "Ĉi tiu dosierujo ne povas esti kunhavita ĉar via uzantkonto ne estas membro "
 "de la grupo <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:69
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -315,13 +334,13 @@ msgstr ""
 "Vi povas ripari tion farante vian uzanton membro de tiu grupo. Tiam "
 "rekomencu la sistemon."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:68
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Fari min Grupano"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:82
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -331,7 +350,7 @@ msgstr ""
 "Ĉi tiu dosierujo ne povas esti kunhavita ĉar via uzantkonto ne havas "
 "permeson skribi en <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:79
+#: samba/filepropertiesplugin/groupmanager.cpp:84
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -343,14 +362,14 @@ msgstr ""
 "havas skribpermeson por <filename>%2</filename>. Poste fermu kaj remalfermu "
 "ĉi tiun fenestron."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:107
+#: samba/filepropertiesplugin/groupmanager.cpp:112
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
 msgstr ""
 "Aldonante uzanton '%1' al grupo '%2' por ke ili povu agordi Samba-uzantojn"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:118
+#: samba/filepropertiesplugin/groupmanager.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""

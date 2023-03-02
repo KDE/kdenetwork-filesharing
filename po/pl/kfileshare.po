@@ -1,5 +1,5 @@
 # translation of kfileshare.po to
-# Version: $Revision: 1645594 $
+# Version: $Revision: 1645815 $
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Michał 'podles' Podlewski <podles@aster.pl>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:58+0000\n"
+"POT-Creation-Date: 2023-03-02 00:54+0000\n"
 "PO-Revision-Date: 2022-12-29 11:25+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -227,7 +227,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:38
+#: samba/filepropertiesplugin/groupmanager.cpp:40
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -237,13 +237,32 @@ msgstr ""
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution."
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Błąd ten jest spowodowany tym, że twoje distro nie ustawiło poprawnie "
 "współdzielenia Samby. Możesz to naprawić, tworząc ten katalog ręcznie. Po "
 "tym zamknij i otwórz to okno ponownie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:44
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Błąd ten jest spowodowany tym, że twoje distro nie ustawiło poprawnie "
+"współdzielenia Samby. Możesz to naprawić, tworząc ten katalog ręcznie. Po "
+"tym zamknij i otwórz to okno ponownie."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -251,7 +270,7 @@ msgid ""
 msgstr ""
 "Tego katalogu nie można udostępnić, bo <filename>%1</filename> nie istnieje."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
+#: samba/filepropertiesplugin/groupmanager.cpp:51
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -268,7 +287,7 @@ msgstr ""
 "współdzielenia Samby. Możesz to naprawić, tworząc ten katalog ręcznie. Po "
 "tym zamknij i otwórz to okno ponownie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:53
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -278,7 +297,7 @@ msgstr ""
 "Tego katalogu nie można udostępnić, bo <filename>%1</filename> ma on "
 "niepoprawnie ustawioną grupę właścicielską na <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -298,7 +317,7 @@ msgstr ""
 "tego katalogu na <resource>usershares</resource> i czyniąc siebie członkiem "
 "tej grupy. Po tym uruchom system ponownie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
+#: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -308,7 +327,7 @@ msgstr ""
 "Tego katalogu nie można udostępnić, bo twoje konto nie jest członkiem grupy "
 "<filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:69
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -318,13 +337,13 @@ msgstr ""
 "Możesz to naprawić czyniąc twojego użytkownika członkiem tej grupy. "
 "Następnie uruchom system ponownie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:68
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Uczyń mnie członkiem grupy"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:82
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -334,7 +353,7 @@ msgstr ""
 "Tego katalogu nie można udostępnić, bo twoje konto nie ma uprawnień do "
 "zapisu do <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:79
+#: samba/filepropertiesplugin/groupmanager.cpp:84
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -346,7 +365,7 @@ msgstr ""
 "uprawnienia do zapisu do <filename>%2</filename>. Po tym zamknij i otwórz to "
 "okno ponownie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:107
+#: samba/filepropertiesplugin/groupmanager.cpp:112
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -354,7 +373,7 @@ msgstr ""
 "Dodawanie użytkownika '%1' do grupy '%2', tak aby mógł on ustawiać udziały "
 "użytkowników Samby"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:118
+#: samba/filepropertiesplugin/groupmanager.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""

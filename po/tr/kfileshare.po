@@ -8,13 +8,13 @@
 # Rıdvan CAN <ridvancan@linux-sevenler.org>, 2004.
 # S.Çağlar Onur <caglar@uludag.org.tr>, 2005.
 # obsoleteman <tulliana@gmail.com>, 2008-2009.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:58+0000\n"
-"PO-Revision-Date: 2022-08-14 10:18+0300\n"
+"POT-Creation-Date: 2023-03-02 00:54+0000\n"
+"PO-Revision-Date: 2023-02-28 11:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -226,38 +226,48 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Samba kurulumunuz bozuk gibi görünüyor."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:38
+#: samba/filepropertiesplugin/groupmanager.cpp:40
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. Please file a bug with your distribution."
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution."
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Bu hata, dağıtımınızın Samba paylaşımını düzgünce ayarlamamasından "
-"kaynaklanıyor. Bu sorunu, o klasörü el ile oluşturarak çözebilirsiniz. "
-"Sonrasında bu pencereyi kapatıp yeniden açın."
+"kaynaklanıyor. Lütfen dağıtımınıza bu durumu bildirin."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:44
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. Please file a bug with your distribution."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Bu hata, dağıtımınızın Samba paylaşımını düzgünce ayarlamamasından "
+"kaynaklanıyor. Lütfen dağıtımınıza bu durumu bildirin."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr "Bu tlasör paylaşılamıyor; çünkü <filename>%1</filename> yok."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#: samba/filepropertiesplugin/groupmanager.cpp:51
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -268,7 +278,7 @@ msgstr ""
 "kaynaklanıyor. Bu sorunu, o klasörü el ile oluşturarak çözebilirsiniz. "
 "Sonrasında bu pencereyi kapatıp yeniden açın."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:53
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -278,14 +288,8 @@ msgstr ""
 "Bu klasör paylaşılamıyor; çünkü <filename>%1</filename> grup sahibi, uygun "
 "olmayacak bir biçimde <resource>%2</resource> olarak ayarlanmış."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#: samba/filepropertiesplugin/groupmanager.cpp:60
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -298,7 +302,7 @@ msgstr ""
 "resource> olarak değiştirip özünüzü o grubun bir üyesi yaparak "
 "çözebilirsiniz. Sonrasında sistemi yeniden başlatın."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
+#: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -308,7 +312,7 @@ msgstr ""
 "Bu klasör paylaşılamıyor; çünkü kullanıcı hesabınız <resource>%1</resource> "
 "grubunun bir üyesi değil."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:69
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -318,13 +322,13 @@ msgstr ""
 "Bu sorunu, özünüzü o grubun bir üyesi yaparak çözebilirsiniz. Sonrasında "
 "sistemi yeniden başlatın."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:68
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Beni Grup Üyesi Yap"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:82
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -334,7 +338,7 @@ msgstr ""
 "Bu klasör paylaşılamıyor; çünkü kullanıcı hesabınızın <filename>%1</"
 "filename> ögesine yazma izni yok."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:79
+#: samba/filepropertiesplugin/groupmanager.cpp:84
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -346,7 +350,7 @@ msgstr ""
 "yazma izni olduğundan emin olarak çözebilirsiniz. Sonrasında bu pencereyi "
 "kapatıp yeniden açın."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:107
+#: samba/filepropertiesplugin/groupmanager.cpp:112
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -354,7 +358,7 @@ msgstr ""
 "'%1' kullanıcısı '%2' grubuna ekleniyor; böylelikle Samba kullanıcı "
 "paylaşımlarını yapılandırabilirler"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:118
+#: samba/filepropertiesplugin/groupmanager.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""

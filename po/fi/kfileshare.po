@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:58+0000\n"
+"POT-Creation-Date: 2023-03-02 00:54+0000\n"
 "PO-Revision-Date: 2022-09-28 19:54+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -241,7 +241,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:38
+#: samba/filepropertiesplugin/groupmanager.cpp:40
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -251,12 +251,30 @@ msgstr ""
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution."
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
 "luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:44
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distro not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
+"luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -265,7 +283,7 @@ msgstr ""
 "Tätä kansiota ei voi jakaa, koska kansiota <filename>%1</filename> ei ole "
 "olemassa."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:46
+#: samba/filepropertiesplugin/groupmanager.cpp:51
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -281,7 +299,7 @@ msgstr ""
 "Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
 "luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:53
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -291,7 +309,7 @@ msgstr ""
 "Tätä kansiota ei voi jakaa, koska kansion <filename>%1</filename> "
 "omistajaryhmäksi on väärin asetettu <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:55
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -311,7 +329,7 @@ msgstr ""
 "liittämällä oman tunnuksesi ryhmän jäseneksi ja käynnistämällä järjestelmän "
 "sitten uudelleen."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
+#: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -321,7 +339,7 @@ msgstr ""
 "Tätä kansiota ei voi jakaa, koska käyttäjätunnuksesi ei kuulu ryhmään "
 "<resource>%1</resource>. "
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:69
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -331,13 +349,13 @@ msgstr ""
 "Tämän voi korjata liittämällä tunnuksesi ryhmän jäseneksi ja käynnistämällä "
 "järjestelmän sitten uudelleen."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:68
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Lisää minut ryhmän jäseneksi"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:82
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -347,7 +365,7 @@ msgstr ""
 "Tätä kansiota ei voi jakaa, koska käyttäjätunnuksellasi ei ole oikeuksia "
 "kirjoittaa kansioon <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:79
+#: samba/filepropertiesplugin/groupmanager.cpp:84
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -359,7 +377,7 @@ msgstr ""
 "kirjoitusoikeudet kansioon <filename>%2</filename>. Sulje sitten ja avaa "
 "uudelleen tämä ikkuna."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:107
+#: samba/filepropertiesplugin/groupmanager.cpp:112
 #, kde-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
@@ -367,7 +385,7 @@ msgstr ""
 "Lisätään käyttäjä ”%1” ryhmään ”%2”, jotta hän voi muokata Samban "
 "käyttäjäjakoja"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:118
+#: samba/filepropertiesplugin/groupmanager.cpp:123
 #, kde-format
 msgctxt "@info"
 msgid ""

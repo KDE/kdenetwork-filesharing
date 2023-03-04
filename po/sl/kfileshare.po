@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:54+0000\n"
-"PO-Revision-Date: 2023-02-28 09:07+0100\n"
+"PO-Revision-Date: 2023-03-03 11:41+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -229,11 +229,7 @@ msgid "Your Samba installation appears to be broken."
 msgstr "Kaže, da je vaša namestitev Sambe pokvarjena."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. Please file a bug with your distribution."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -241,14 +237,11 @@ msgid ""
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Ta napaka je posledica tega, da vaša distribucija ni pravilno nastavila "
-"lastnosti deljenja Sambe. Poročajte o napaki vaše distribucije."
+"lastnosti deljenja Sambe. Poročajte o napaki vaše distribucije ali preverite "
+"dokumentacijo vaše distribucije o nastavitvah deljenja Sambe."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. Please file a bug with your distribution."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -257,7 +250,9 @@ msgid ""
 "><message>%1</message>"
 msgstr ""
 "Ta napaka je posledica tega, da vaša distribucija ni pravilno nastavila "
-"lastnosti deljenja Sambe. Poročajte o napaki vaše distribucije."
+"lastnosti deljenja Sambe. Poročajte o napaki vaše distribucije ali preverite "
+"dokumentacijo vaše distribucije o nastavitvah deljenja Sambe. Napaka:<nl/"
+"><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format

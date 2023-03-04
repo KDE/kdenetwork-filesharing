@@ -7,13 +7,13 @@
 # Henrique Marks <henriquemarks@gmail.com>, 2008.
 # Fernando Boaglio <boaglio@kde.org>, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2012.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2016, 2019, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2016, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-28 00:47+0000\n"
-"PO-Revision-Date: 2022-08-05 18:47-0300\n"
+"PO-Revision-Date: 2023-03-03 09:31-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -24,8 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Recusar"
@@ -34,70 +33,68 @@ msgstr "Recusar"
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
-msgstr ""
+msgstr "Permitir"
 
 #: samba/aclproperties/plugin.cpp:65
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Esta pasta apenas"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Esta pasta, subpastas e arquivos"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Esta pasta e subpastas"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Esta pasta e arquivos"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Subpastas e arquivos apenas"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Subpastas apenas"
 
 #: samba/aclproperties/plugin.cpp:84
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Arquivos apenas"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: samba/aclproperties/plugin.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Required Permissions"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "Permissões necessárias"
+msgstr "Permissões remotas"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -105,16 +102,18 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Esta entrada de permissão foi herdada de um contêiner pai e só pode ser "
+"modificada nesse pai (por exemplo, um diretório de nível superior)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
 msgid "Type:"
-msgstr ""
+msgstr "Tipo:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Aplica-se a:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
@@ -159,33 +158,27 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Excluir subpastas e arquivos"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
 msgid "Delete"
-msgstr ""
+msgstr "Excluir"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Required Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Permissões necessárias"
+msgstr "Permissões de leitura"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgctxt "@action:button changes permissions"
-#| msgid "Change Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr "Alterar permissões"
+msgstr "Permissões de modificações"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Virar proprietário"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -193,34 +186,33 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Apenas aplicar estas permissões para objetos e/ou contêineres dentro deste "
+"contêiner"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Entradas de controle de acesso"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr ""
+msgstr "Propriedade"
 
 #: samba/aclproperties/qml/MainPage.qml:33
 msgctxt "@label"
 msgid "Owner:"
-msgstr ""
+msgstr "Proprietário:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
 msgctxt "@label"
 msgid "Group:"
-msgstr ""
+msgstr "Grupo:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
-#| msgctxt "@action:button opens the change permissions page"
-#| msgid "Fix Permissions"
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "Corrigir permissões"
+msgstr "Nenhuma permissão encontrada"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
@@ -285,9 +277,7 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/groupmanager.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Tornar-me um membro do grupo"

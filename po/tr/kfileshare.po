@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-02 00:54+0000\n"
-"PO-Revision-Date: 2023-02-28 11:46+0300\n"
+"PO-Revision-Date: 2023-03-04 14:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -229,11 +229,7 @@ msgid "Your Samba installation appears to be broken."
 msgstr "Samba kurulumunuz bozuk gibi görünüyor."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. Please file a bug with your distribution."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -241,14 +237,11 @@ msgid ""
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Bu hata, dağıtımınızın Samba paylaşımını düzgünce ayarlamamasından "
-"kaynaklanıyor. Lütfen dağıtımınıza bu durumu bildirin."
+"kaynaklanıyor. Lütfen dağıtımınıza bir hata bildirin veya dağıtımınızın "
+"Samba paylaşımını ayarlama üzerine olan belgelendirmesine bir bakın."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. Please file a bug with your distribution."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -257,7 +250,9 @@ msgid ""
 "><message>%1</message>"
 msgstr ""
 "Bu hata, dağıtımınızın Samba paylaşımını düzgünce ayarlamamasından "
-"kaynaklanıyor. Lütfen dağıtımınıza bu durumu bildirin."
+"kaynaklanıyor. Lütfen dağıtımınıza bir hata bildirin veya dağıtımınızın "
+"Samba paylaşımını ayarlama üzerine olan belgelendirmesine bir bakın. Hata:"
+"<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format

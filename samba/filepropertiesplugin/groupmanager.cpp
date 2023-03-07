@@ -108,8 +108,8 @@ void GroupManager::performHelpfulAction()
             action.addArgument(QStringLiteral("user"), user);
             action.addArgument(QStringLiteral("group"), group);
             action.setDetailsV2({{KAuth::Action::AuthDetail::DetailMessage,
-                                i18nc("@label kauth action description %1 is a username %2 a group name",
-                                        "Adding user '%1' to group '%2' so they may configure Samba user shares",
+                                xi18nc("@label kauth action description %1 is a username %2 a group name",
+                                        "Adding user <resource>%1</resource> to group <resource>%2</resource> so they may configure Samba user shares",
                                         user,
                                         group) }
             });

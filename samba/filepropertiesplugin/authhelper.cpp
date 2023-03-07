@@ -87,6 +87,7 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
     // Harden against some input abuse.
     // TODO: add ability to resolve remote UID via KAuth and verify the request (or even reduce the arguments down to
     //    only the group and resolve the UID)
+    // Keep this condition in sync with the one in groupmanager.cpp
     if (!group.contains(QLatin1String("samba")) || group.contains(QLatin1String("admin")) ||
         group.contains(QLatin1String("root"))) {
         return ActionReply::HelperErrorReply();

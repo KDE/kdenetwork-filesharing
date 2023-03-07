@@ -120,7 +120,7 @@ void GroupManager::performHelpfulAction()
                     QString helpfulActionErrorText = job->errorString();
                     if (helpfulActionErrorText.isEmpty()) {
                         // unknown error :(
-                        helpfulActionErrorText = i18nc("@info", "Failed to make user <resource>%1<resource> a member of group <resource>%2<resource>", user, group);
+                        helpfulActionErrorText = xi18nc("@info", "Failed to make user <resource>%1</resource> a member of group <resource>%2</resource>", user, group);
                     }
                     Q_EMIT helpfulActionError(helpfulActionErrorText);
                     return;

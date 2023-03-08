@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:54+0000\n"
+"POT-Creation-Date: 2023-03-08 00:47+0000\n"
 "PO-Revision-Date: 2021-06-20 10:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -346,23 +346,28 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/groupmanager.cpp:112
-#, kde-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label kauth action description %1 is a username %2 a group name"
+#| msgid ""
+#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
 msgctxt "@label kauth action description %1 is a username %2 a group name"
-msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgid ""
+"Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
+"may configure Samba user shares"
 msgstr ""
 "Προστίθεται ο χρήστης '%1' στην ομάδα '%2' ώστε να μπορεί να διαμορφώσει "
 "τους κοινούς πόρους των χρηστών της Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:123
-#, fuzzy, kde-format
+#, fuzzy, kde-kuit-format
 #| msgctxt "@label"
 #| msgid ""
 #| "To manage Samba user shares you need to be member of the <resource>%1</"
 #| "resource> group."
 msgctxt "@info"
 msgid ""
-"Failed to make user <resource>%1<resource> a member of group <resource>"
-"%2<resource>"
+"Failed to make user <resource>%1</resource> a member of group <resource>%2</"
+"resource>"
 msgstr ""
 "Για τη διαχείριση των κοινών πόρων των χρηστών της Samba πρέπει να είστε "
 "μέλος της ομάδας <resource>%1</resource>."

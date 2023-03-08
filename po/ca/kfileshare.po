@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:54+0000\n"
+"POT-Creation-Date: 2023-03-08 00:47+0000\n"
 "PO-Revision-Date: 2023-03-02 11:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -348,19 +348,28 @@ msgstr ""
 "a obrir aquesta finestra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:112
-#, kde-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label kauth action description %1 is a username %2 a group name"
+#| msgid ""
+#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
 msgctxt "@label kauth action description %1 is a username %2 a group name"
-msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgid ""
+"Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
+"may configure Samba user shares"
 msgstr ""
 "S'afegeix l'usuari «%1» al grup «%2» per tal que pugui configurar les "
 "comparticions d'usuari del Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:123
-#, kde-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Failed to make user <resource>%1<resource> a member of group <resource>"
+#| "%2<resource>"
 msgctxt "@info"
 msgid ""
-"Failed to make user <resource>%1<resource> a member of group <resource>"
-"%2<resource>"
+"Failed to make user <resource>%1</resource> a member of group <resource>%2</"
+"resource>"
 msgstr ""
 "Ha fallat en fer que l'usuari <resource>%1<resource> sigui membre del grup "
 "<resource>%2<resource>"

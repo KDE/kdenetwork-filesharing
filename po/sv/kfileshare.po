@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-02 00:54+0000\n"
+"POT-Creation-Date: 2023-03-08 00:47+0000\n"
 "PO-Revision-Date: 2022-09-27 17:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -359,19 +359,28 @@ msgstr ""
 "det här fönstret igen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:112
-#, kde-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label kauth action description %1 is a username %2 a group name"
+#| msgid ""
+#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
 msgctxt "@label kauth action description %1 is a username %2 a group name"
-msgid "Adding user '%1' to group '%2' so they may configure Samba user shares"
+msgid ""
+"Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
+"may configure Samba user shares"
 msgstr ""
 "Lägger till användare '%1' till gruppen '%2' så att de kan ställa in Samba "
 "användardelningar."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:123
-#, kde-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Failed to make user <resource>%1<resource> a member of group <resource>"
+#| "%2<resource>"
 msgctxt "@info"
 msgid ""
-"Failed to make user <resource>%1<resource> a member of group <resource>"
-"%2<resource>"
+"Failed to make user <resource>%1</resource> a member of group <resource>%2</"
+"resource>"
 msgstr ""
 "Misslyckades göra användaren <resource>%1<resource> medlem av gruppen "
 "<resource>%2<resource>"

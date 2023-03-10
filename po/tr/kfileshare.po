@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 00:47+0000\n"
-"PO-Revision-Date: 2023-03-04 14:01+0300\n"
+"PO-Revision-Date: 2023-03-08 11:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -346,30 +346,23 @@ msgstr ""
 "kapatıp yeniden açın."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:112
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"'%1' kullanıcısı '%2' grubuna ekleniyor; böylelikle Samba kullanıcı "
-"paylaşımlarını yapılandırabilirler"
+"<resource>%1</resource> kullanıcısı <resource>%2</resource> grubuna "
+"ekleniyor; böylelikle Samba kullanıcı paylaşımlarını yapılandırabilirler"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:123
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"<resource>%1<resource> kullanıcısı, <resource>%2<resource> grubunun bir "
+"<resource>%1</resource> kullanıcısı, <resource>%2</resource> grubunun bir "
 "üyesi yapılamadı"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
@@ -747,48 +740,3 @@ msgstr "'%1' Samba kullanıcısının var olup olmadığı denetleniyor"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Yeni Samba kullanıcısı '%1' oluşturuluyor"
-
-#~ msgctxt "@label failed to change user groups so they can manage shares"
-#~ msgid "Group changes failed."
-#~ msgstr "Grup değişiklikleri başarısız oldu."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You appear to not have sufficient permissions to manage Samba user shares."
-#~ msgstr ""
-#~ "Samba kullanıcı paylaşımlarını yönetmek için gerekli izinlere sahip "
-#~ "değilsiniz gibi görünüyor."
-
-#, fuzzy
-#~| msgid "&Share"
-#~ msgctxt "@title:tab"
-#~ msgid "Share"
-#~ msgstr "&Paylaş"
-
-#~ msgid "---"
-#~ msgstr "---"
-
-#, fuzzy
-#~| msgid "Install Samba..."
-#~ msgid "Installing Samba..."
-#~ msgstr "Samba yükle..."
-
-#~ msgid ""
-#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
-#~ "Please choose another name.</qt>"
-#~ msgstr ""
-#~ "<qt><strong>%1</strong> adlı bir paylaşım zaten var.<br /> Lütfen başka "
-#~ "bir isim seçin.</qt>"
-
-#~ msgid "Samba is not installed on your system."
-#~ msgstr "Sisteminizde Samba kurulu değil."
-
-#~ msgid "Share with S&amba (Microsoft Windows)"
-#~ msgstr "S&amba ile paylaş (Microsoft Windows)"
-
-#~ msgid ""
-#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
-#~ "kpackagekit is properly installed</qt>"
-#~ msgstr ""
-#~ "<qt><strong>Samba kurulamadı.</strong><br />Lütfen kpackagekit paketinin "
-#~ "düzgün kurulduğunu kontrol edin</qt>"

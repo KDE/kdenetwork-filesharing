@@ -4,13 +4,13 @@
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-08 00:47+0000\n"
-"PO-Revision-Date: 2022-09-28 19:54+0300\n"
+"PO-Revision-Date: 2023-03-05 17:38+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,18 +19,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:24:35+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Kiellä"
 
 #: samba/aclproperties/plugin.cpp:61
-#, fuzzy, kde-format
-#| msgid "Allow"
+#, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Salli"
@@ -40,63 +38,61 @@ msgstr "Salli"
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Vain tämä kansio"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Tämä kansio alikansioineen ja tiedostoineen"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Tämä kansio alikansioineen"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Tämä kansio tiedostoineen"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Vain alikansiot ja tiedostot"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Vain alikansiot"
 
 #: samba/aclproperties/plugin.cpp:84
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Vain tiedostot"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Tuntematon"
 
 #: samba/aclproperties/plugin.cpp:187
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Required Permissions"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "Vaaditut käyttöoikeudet"
+msgstr "Etäkäyttöoikeudet"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -104,81 +100,76 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Tämä käyttöoikeus on peritty ylempää, ja sitä voi muuttaa vain siellä (esim. "
+"ylätason kansiossa)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
 msgid "Type:"
-msgstr ""
+msgstr "Tyyppi:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Käyttöala:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Siirry kansioon / suorita tiedosto"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Luettele kansio / lue tiedot"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Lue määritteet"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "Lue lisämääritteet"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Luo tiedostoja / kirjoita tietoa"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Luo kansioiita / lisää tietoa"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Kirjoitettava"
+msgstr "Kirjoita määritteet"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "Kirjoita lisämääritteet"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Poista alikansiot tiedostoineen"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
+# *** TARKISTA: Kaksitulkintainen: joko ”lue käyttöoikeudet” tai ”lukukäyttöoikeudet”
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Required Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Vaaditut käyttöoikeudet"
+msgstr "Lukukäyttöoikeudet"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgctxt "@action:button changes permissions"
-#| msgid "Change Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
 msgstr "Muuta käyttöoikeuksia"
@@ -186,84 +177,67 @@ msgstr "Muuta käyttöoikeuksia"
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Ota omistajuus"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
 msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
-msgstr ""
+msgstr "Käytä näitä oikeuksia vain tämän säilön kohteisiin tai säilöihin"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Käyttölupatietueet"
 
 #: samba/aclproperties/qml/MainPage.qml:29
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr "Omistaja"
+msgstr "Omistajuus"
 
 #: samba/aclproperties/qml/MainPage.qml:33
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@label"
 msgid "Owner:"
-msgstr "Omistaja"
+msgstr "Omistaja:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
-#, fuzzy
-#| msgid "Group"
 msgctxt "@label"
 msgid "Group:"
-msgstr "Ryhmä"
+msgstr "Ryhmä:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
-#| msgctxt "@action:button opens the change permissions page"
-#| msgid "Fix Permissions"
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "Korjaa käyttöoikeudet"
+msgstr "Käyttöoikeuksia ei löytynyt"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr ""
+"Tälle tiedostolle ei luultavasti ole asetettu SMB/Windows/"
+"lisäkäyttöoikeuksia."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Samba-asennus vaikuttaa rikkonaiselta."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
-"Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
-"luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
+"Virheen aiheuttaa se, ettei jakelu ole asettanut Samba-jakoa oikein. Ilmoita "
+"viasta jakelullesi tai tarkista jakelun ohjeet Samba-jaon asettamisesta."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -271,8 +245,9 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
-"Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
-"luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
+"Virheen aiheuttaa se, ettei jakelu ole asettanut Samba-jakoa oikein. Ilmoita "
+"viasta jakelullesi tai tarkista jakelun ohjeet Samba-jaon asettamisesta. "
+"Virhe:<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -284,20 +259,16 @@ msgstr ""
 "olemassa."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
-"Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
-"luomalla kansion itse. Sulje sitten ja avaa uudelleen tämä ikkuna."
+"Virheen aiheuttaa se, ettei jakelu ole asettanut Samba-jakoa oikein. Tämän "
+"voi korjata luomalla kansion itse ja sulkemalla ja avaamalla uudestaan tämän "
+"ikkunan."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
@@ -310,13 +281,7 @@ msgstr ""
 "omistajaryhmäksi on väärin asetettu <resource>%2</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -324,10 +289,10 @@ msgid ""
 "<resource>usershares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
-"Virhe johtuu siitä, ettei jakelu aseta Samba-jakoa oikein. Tämän voi korjata "
-"muuttamalla kansion omistavaksi ryhmäksi <resource>usershares</resource>, "
-"liittämällä oman tunnuksesi ryhmän jäseneksi ja käynnistämällä järjestelmän "
-"sitten uudelleen."
+"Virheen aiheuttaa se, ettei jakelu ole asettanut Samba-jakoa oikein. Tämän "
+"voi korjata itse vaihtamalla kansion omistajaksi <resource>usershares</"
+"resource>, lisäämällä oman käyttäjätunnuksesi tähän ryhmään ja "
+"käynnistämällä järjestelmän uudestaan."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:67
 #, kde-kuit-format
@@ -346,8 +311,8 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
-"Tämän voi korjata liittämällä tunnuksesi ryhmän jäseneksi ja käynnistämällä "
-"järjestelmän sitten uudelleen."
+"Tämän voi korjata lisäämällä oman käyttäjätunnuksesi ryhmään ja "
+"käynnistämällä järjestelmän uudelleen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-format

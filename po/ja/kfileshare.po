@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 00:47+0000\n"
+"POT-Creation-Date: 2023-03-11 00:48+0000\n"
 "PO-Revision-Date: 2011-08-27 14:21-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -254,25 +254,25 @@ msgid ""
 "close and re-open this window."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
+#: samba/filepropertiesplugin/groupmanager.cpp:62
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>."
+"owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>usershares</resource> and making yourself a member of that group. "
+"<resource>sambashares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:67
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -280,7 +280,7 @@ msgid ""
 "<resource>%1</resource> group."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:69
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -288,13 +288,13 @@ msgid ""
 "the system."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:77
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:82
+#: samba/filepropertiesplugin/groupmanager.cpp:86
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -302,7 +302,7 @@ msgid ""
 "permission to write into <filename>%1</filename>."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:84
+#: samba/filepropertiesplugin/groupmanager.cpp:88
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -311,7 +311,7 @@ msgid ""
 "window."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:112
+#: samba/filepropertiesplugin/groupmanager.cpp:116
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -319,7 +319,7 @@ msgid ""
 "may configure Samba user shares"
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:123
+#: samba/filepropertiesplugin/groupmanager.cpp:127
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

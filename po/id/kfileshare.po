@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 00:47+0000\n"
+"POT-Creation-Date: 2023-03-11 00:48+0000\n"
 "PO-Revision-Date: 2023-01-10 21:09+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -281,17 +281,21 @@ msgstr ""
 "benar. Kamu bisa memperbaikinya sendiri dengan membuat folder tersebut "
 "secara manual. Kemudian tutup dan buka kembali jendela ini."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:62
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This folder can't be shared because <filename>%1</filename> has its group "
+#| "owner inappropriately set to <resource>%2</resource>."
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>."
+"owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Folder ini tidak bisa dibagikan karena <filename>%1</filename> memiliki set "
 "pemilik grup yang tak pantas ke <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -303,7 +307,7 @@ msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>usershares</resource> and making yourself a member of that group. "
+"<resource>sambashares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
 "Kesalahan ini disebabkan oleh distro-mu yang tidak dipersiapkan berbagi "
@@ -311,7 +315,7 @@ msgstr ""
 "grup folder tersebut menjadi <resource>usershares</resource> dan menjadikan "
 "diri kamu anggota grup itu. Kemudian nyalakan ulang sistem."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:67
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -321,7 +325,7 @@ msgstr ""
 "Folder ini tidak bisa dibagikan karena akun pengguna kamu bukan anggota grup "
 "<resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:69
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -331,13 +335,13 @@ msgstr ""
 "Kamu bisa memperbaikinya dengan menjadikan pengguna kamu anggota grup itu. "
 "Lalu nyalakan ulang sistem."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:77
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Jadikan aku Anggota Grup"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:82
+#: samba/filepropertiesplugin/groupmanager.cpp:86
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -347,7 +351,7 @@ msgstr ""
 "Folder ini tidak bisa dibagikan karena akun pengguna kamu belum memiliki "
 "perizinan untuk menulis ke dalam <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:84
+#: samba/filepropertiesplugin/groupmanager.cpp:88
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -359,7 +363,7 @@ msgstr ""
 "resource> memiliki perizinan tulis untuk <filename>%2</filename>. Kemudian "
 "tutup dan buka kembali jendela ini."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:112
+#: samba/filepropertiesplugin/groupmanager.cpp:116
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -372,7 +376,7 @@ msgstr ""
 "Menambahkan pengguna '%1' ke grup '%2' sehingga ia dapat mengatur berbagi "
 "pengguna Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:123
+#: samba/filepropertiesplugin/groupmanager.cpp:127
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""

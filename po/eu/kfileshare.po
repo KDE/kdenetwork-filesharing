@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-08 00:47+0000\n"
+"POT-Creation-Date: 2023-03-12 04:53+0000\n"
 "PO-Revision-Date: 2022-08-17 08:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -288,17 +288,21 @@ msgstr ""
 "ondorio da. Zuk zeuk konpon dezakezu karpeta hori eskuz sortuta. Ondoren "
 "itxi eta berriz ireki leiho hau."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
-#, kde-kuit-format
+#: samba/filepropertiesplugin/groupmanager.cpp:62
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This folder can't be shared because <filename>%1</filename> has its group "
+#| "owner inappropriately set to <resource>%2</resource>."
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>."
+"owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Karpeta hau ezin da partekatu <filename>%1</filename>(a)(r)en jabea behar ez "
 "bezala <resource>%2</resource> ezarria duelako."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -310,7 +314,7 @@ msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>usershares</resource> and making yourself a member of that group. "
+"<resource>sambashares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
 "Errore hau zure banaketak Samba partekatzea behar bezala ez ezartzearen "
@@ -318,7 +322,7 @@ msgstr ""
 "<resource>usershares</resource> ezarrita eta zeure erabiltzailea talde "
 "horretako partaide eginda. Ondoren berrabiarazi sistema."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:67
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -328,7 +332,7 @@ msgstr ""
 "Karpeta hau ezin da partekatu zure erabiltzaile-kontua ez delako <resource>"
 "%1</resource> taldeko partaidea."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:69
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -338,13 +342,13 @@ msgstr ""
 "Hori konpondu dezakezu zure erabiltzailea talde horretako partaide eginda. "
 "Ondoren berrabiarazi sistema."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:77
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Egin nazazu taldeko kide"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:82
+#: samba/filepropertiesplugin/groupmanager.cpp:86
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -354,7 +358,7 @@ msgstr ""
 "Karpeta hau ezin da partekatu zure erabiltzaile-kontuak ez duelako <filename>"
 "%1</filename>(e)(a)n idazteko baimenik."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:84
+#: samba/filepropertiesplugin/groupmanager.cpp:88
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -365,7 +369,7 @@ msgstr ""
 "Hau konpon dezakezu <resource>%1</resource> taldeak <filename>%2</filename> "
 "idazteko baimena duela ziurtatuz. Ondoren itxi eta berriz ireki leiho hau."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:112
+#: samba/filepropertiesplugin/groupmanager.cpp:116
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -378,7 +382,7 @@ msgstr ""
 "«%1» erabiltzailea «%2» taldera gehitzea Samba-ko erabiltzaileen "
 "partekatzeak konfiguratu ahal ditzan."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:123
+#: samba/filepropertiesplugin/groupmanager.cpp:127
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""

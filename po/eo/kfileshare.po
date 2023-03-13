@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-11 00:48+0000\n"
-"PO-Revision-Date: 2023-02-08 06:30+0100\n"
+"PO-Revision-Date: 2023-03-12 22:53+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -221,15 +221,10 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Via Samba-instalaĵo ŝajnas esti rompita."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -237,16 +232,11 @@ msgid ""
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Ĉi tiu eraro estas kaŭzita de via distribuo ne ĝuste agordante Samba "
-"kundividon. Vi povas ripari ĝin mem kreante tiun dosierujon permane. Poste "
-"fermu kaj remalfermu ĉi tiun fenestron."
+"kundividon. Bonvolu kreu cimraporton ĉe via distribuo aŭ konsultu la "
+"dokumentaron de via distribuo pri kiel starigi Samba-kundividadon."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -255,8 +245,9 @@ msgid ""
 "><message>%1</message>"
 msgstr ""
 "Ĉi tiu eraro estas kaŭzita de via distribuo ne ĝuste agordante Samba "
-"kundividon. Vi povas ripari ĝin mem kreante tiun dosierujon permane. Poste "
-"fermu kaj remalfermu ĉi tiun fenestron."
+"kundividon. Bonvolu kreu cimraporton ĉe via distribuo aŭ konsultu la "
+"dokumentaron de via distribuo pri kiel starigi Samba-kundividon. Eraro:<nl/"
+"><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -268,12 +259,7 @@ msgstr ""
 "ekzistas."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -285,27 +271,18 @@ msgstr ""
 "fermu kaj remalfermu ĉi tiun fenestron."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:62
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This folder can't be shared because <filename>%1</filename> has its group "
-#| "owner inappropriately set to <resource>%2</resource>."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Ĉi tiu dosierujo ne povas esti kunhavita ĉar <filename>%1</filename> havas "
-"sian grupposedanton malkonvene agordita al <resource>%2</resource>."
+"sian grupposedanton malkonvene agordita al <resource>%2</resource>, kio ne "
+"estas permesata."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -315,7 +292,7 @@ msgid ""
 msgstr ""
 "Ĉi tiu eraro estas kaŭzita de via distribuo ne ĝuste agordante Samba "
 "kundividon. Vi povas ripari ĝin mem ŝanĝante la grupposedanton de tiu "
-"dosierujo al <resource>usershares</resource> kaj farante vin membro de tiu "
+"dosierujo al <resource>sambashares</resource> kaj farante vin membro de tiu "
 "grupo. Tiam rekomencu la sistemon."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71
@@ -367,30 +344,24 @@ msgstr ""
 "ĉi tiun fenestron."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"Aldonante uzanton '%1' al grupo '%2' por ke ili povu agordi Samba-uzantojn"
+"Aldonante uzanton <resource>%1</resource> al grupo <resource>%2</resource> "
+"por ke ili povu agordi Samba-uzantojn"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:127
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"Malsukcesis fari uzanton <resource>%1<resource> membro de grupo <resource>"
-"%2<resource>"
+"Malsukcesis fari uzanton <resource>%1</resource> membro de grupo <resource>"
+"%2</resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format

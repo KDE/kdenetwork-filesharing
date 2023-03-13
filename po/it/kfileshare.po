@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 04:53+0000\n"
-"PO-Revision-Date: 2023-03-03 02:56+0100\n"
+"PO-Revision-Date: 2023-03-12 19:38+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -280,28 +280,18 @@ msgstr ""
 "cartella manualmente. Quindi chiudi e riapri questa finestra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:62
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This folder can't be shared because <filename>%1</filename> has its group "
-#| "owner inappropriately set to <resource>%2</resource>."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Questa cartella non può essere condivisa perché <filename>%1</filename> ha "
-"il proprietario del gruppo impostato in modo inappropriato su <resource>%2</"
-"resource>."
+"il gruppo proprietario impostato in modo inappropriato su <resource>%2</"
+"resource>, che non è consentito."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -311,8 +301,8 @@ msgid ""
 msgstr ""
 "Questo errore è causato dalla tua distribuzione che non configura "
 "correttamente la condivisione Samba. Puoi correggerlo tu stesso cambiando il "
-"proprietario del gruppo della cartella a <resource>usershares</resource> e "
-"renderti membro di quel gruppo. Quindi riavvia il sistema."
+"gruppo proprietario della cartella a <resource>sambashares</resource> e "
+"aggiunge il tuo utente ai membri di quel gruppo. Quindi riavvia il sistema."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
@@ -363,31 +353,24 @@ msgstr ""
 "Quindi chiudi e riapri questa finestra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"Aggiunta dell'utente «%1» al gruppo «%2» in modo che possano configurare le "
-"condivisioni utente Samba"
+"Aggiunta dell'utente <resource>%1</resource> al gruppo <resource>%2</"
+"resource> in modo che possano configurare le condivisioni utente Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:127
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"Impossibile rendere l'utente <resource>%1<resource> membro del gruppo "
-"<resource>%2<resource>"
+"Impossibile rendere l'utente <resource>%1</resource> membro del gruppo "
+"<resource>%2</resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format

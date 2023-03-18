@@ -1,5 +1,5 @@
 # translation of kfileshare.po to
-# Version: $Revision: 1646898 $
+# Version: $Revision: 1647248 $
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Michał 'podles' Podlewski <podles@aster.pl>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-11 00:48+0000\n"
+"POT-Creation-Date: 2023-03-18 00:58+0000\n"
 "PO-Revision-Date: 2023-03-12 09:28+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -220,6 +220,70 @@ msgid ""
 msgstr ""
 "Prawdopodobnie nie ustawiono na tym pliku żadnych uprawnień SMB/Windowsa ani "
 "rozszerzonych."
+
+#: samba/filepropertiesplugin/authhelper.cpp:24
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"User name <resource>%1</resource> is not valid as the name of a Samba user; "
+"cannot check for its existence."
+msgstr ""
+
+#: samba/filepropertiesplugin/authhelper.cpp:43
+#, kde-kuit-format
+msgctxt ""
+"@info '%1 %2' together make up a terminal command; %3 is the command's output"
+msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
+msgstr ""
+
+#: samba/filepropertiesplugin/authhelper.cpp:58
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgstr ""
+
+#: samba/filepropertiesplugin/authhelper.cpp:63
+#, kde-format
+msgctxt "@info"
+msgid ""
+"For security reasons, creating Samba users with empty passwords is not "
+"allowed."
+msgstr ""
+
+#: samba/filepropertiesplugin/authhelper.cpp:103
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Failed to make user <resource>%1</resource> a member of group <resource>"
+#| "%2</resource>"
+msgctxt "@info"
+msgid ""
+"<resource>%1</resource> is not a valid user name; cannot add it to the group "
+"<resource>%2</resource>."
+msgstr ""
+"Nie udało się uczynić użytkownika <resource>%1</resource> członkiem grupy "
+"<resource>%2</resource>"
+
+#: samba/filepropertiesplugin/authhelper.cpp:108
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<resource>%1</resource> is not a valid group name; cannot make user "
+"<resource>%2</resource> a member of it."
+msgstr ""
+
+#: samba/filepropertiesplugin/authhelper.cpp:118
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"For security reasons, cannot make user <resource>%1</resource> a member of "
+"group <resource>%2</"
+"resource>.                                                    The group name "
+"is insecure; valid group names include the text <resource>samba</resource> "
+"and do not                                                    include the "
+"text <resource>admin</resource> or <resource>root</resource>."
+msgstr ""
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

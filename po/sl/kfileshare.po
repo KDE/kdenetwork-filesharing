@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 00:58+0000\n"
-"PO-Revision-Date: 2023-03-12 08:27+0100\n"
+"PO-Revision-Date: 2023-03-18 07:52+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -229,13 +229,15 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Uporabniško ime <resource>%1</resource> ni veljavno ime za uporabnika Sambe; "
+"ni pa mogoče preveriti njegovega obstoja."
 
 #: samba/filepropertiesplugin/authhelper.cpp:43
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Ukaz <command>%1 %2</command> je izpadel:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:58
 #, kde-kuit-format
@@ -243,6 +245,8 @@ msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid Samba user name; cannot create it."
 msgstr ""
+"<resource>%1</resource> ni veljavno uporabniško ime za Sambo; ni ga mogoče "
+"ustvariti."
 
 #: samba/filepropertiesplugin/authhelper.cpp:63
 #, kde-format
@@ -251,20 +255,18 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Iz varnostnih razlogov ustvarjanje uporabnikov Sambe s praznimi gesli ni "
+"dovoljeno."
 
 #: samba/filepropertiesplugin/authhelper.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1</resource> a member of group <resource>"
-#| "%2</resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid user name; cannot add it to the group "
 "<resource>%2</resource>."
 msgstr ""
-"Neuspelo nastavljanje uporabnika <resource>%1</resource> za člana skupine "
-"<resource>%2</resource>"
+"<resource>%1</resource> ni veljavno uporabniško ime; ni ga mogoče dodati k "
+"skupini <resource>%2</resource>."
 
 #: samba/filepropertiesplugin/authhelper.cpp:108
 #, kde-kuit-format
@@ -273,6 +275,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> ni veljavno ime skupine; uporabnika ni mogoče "
+"<resource>%2</resource> postaviti za njenega člana."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
 #, kde-kuit-format
@@ -285,6 +289,12 @@ msgid ""
 "and do not                                                    include the "
 "text <resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Iz varnostnih razlogov ni mogoče postaviti uporabnika <resource>%1</"
+"resource> za člana skupine <resource>%2</"
+"resource>.                                                    Ime skupine je "
+"nevarno; veljavna imena skupin vsebujejo besedilo <resource>samba</resource> "
+"in ne                                                     vsebujejo besedil "
+"<resource>admin</resource> ali <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

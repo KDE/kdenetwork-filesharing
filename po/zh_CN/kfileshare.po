@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 00:58+0000\n"
-"PO-Revision-Date: 2023-03-11 04:52\n"
+"PO-Revision-Date: 2023-03-26 02:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -217,20 +217,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"用户名 <resource>%1</resource> 不是一个有效的 Samba 用户名；无法检测它是否存"
+"在。"
 
 #: samba/filepropertiesplugin/authhelper.cpp:43
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "命令 <command>%1 %2</command> 失败：<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:58
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid Samba user name; cannot create it."
-msgstr ""
+msgstr "<resource>%1</resource> 不是一个有效的 Samba 用户名；无法创建它。"
 
 #: samba/filepropertiesplugin/authhelper.cpp:63
 #, kde-format
@@ -238,21 +240,17 @@ msgctxt "@info"
 msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
-msgstr ""
+msgstr "出于安全考虑，不允许创建密码为空的 Samba 用户。"
 
 #: samba/filepropertiesplugin/authhelper.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1</resource> a member of group <resource>"
-#| "%2</resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid user name; cannot add it to the group "
 "<resource>%2</resource>."
 msgstr ""
-"无法将用户 <resource>%1</resource> 设置为用户组 <resource>%2</resource> 的成"
-"员"
+"<resource>%1</resource> 不是一个有效的用户名；无法添加它到用户组 <resource>"
+"%2</resource>。"
 
 #: samba/filepropertiesplugin/authhelper.cpp:108
 #, kde-kuit-format
@@ -261,6 +259,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> 不是一个有效的用户组名称；无法将用户 <resource>%2</"
+"resource> 设为该用户组成员。"
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
 #, kde-kuit-format
@@ -273,6 +273,10 @@ msgid ""
 "and do not                                                    include the "
 "text <resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"出于安全考虑，无法将用户 <resource>%1</resource> 设置为用户组 <resource>%2</"
+"resource> 的成员。\n"
+"该用户组名称不安全；有效的用户组名称包含 <resource>samba</resource>，\n"
+"但不包含 <resource>admin</resource> 或者 <resource>root</resource>。"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
@@ -323,27 +327,17 @@ msgstr ""
 "可以手动创建该文件夹，然后关闭并重新打开此窗口。"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:62
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This folder can't be shared because <filename>%1</filename> has its group "
-#| "owner inappropriately set to <resource>%2</resource>."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "无法共享此文件夹，因为 <filename>%1</filename> 的用户组所有者被错误地设置为"
-"了 <resource>%2</resource>。"
+"了 <resource>%2</resource>，这是不允许的。"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -352,7 +346,7 @@ msgid ""
 "Then restart the system."
 msgstr ""
 "此错误是因为本机安装的发行版没有正确设置 Samba 共享所造成的。要修复此错误，您"
-"可以手动更改该文件夹的用户组所有者为 <resource>usershares</resource>，并将您"
+"可以手动更改该文件夹的用户组所有者为 <resource>sambashares</resource>，并将您"
 "的用户添加到该用户组，然后重启系统。"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71

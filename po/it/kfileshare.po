@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 00:58+0000\n"
-"PO-Revision-Date: 2023-03-12 19:38+0100\n"
+"PO-Revision-Date: 2023-03-18 19:22+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -232,13 +232,15 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Il nome utente <resource>%1</resource> non è valido come nome di un utente "
+"Samba; impossibile verificarne l'esistenza."
 
 #: samba/filepropertiesplugin/authhelper.cpp:43
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Comando <command>%1 %2</command> non riuscito:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:58
 #, kde-kuit-format
@@ -246,6 +248,8 @@ msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid Samba user name; cannot create it."
 msgstr ""
+"<resource>%1</resource> non è un nome utente Samba valido; impossibile "
+"crearlo."
 
 #: samba/filepropertiesplugin/authhelper.cpp:63
 #, kde-format
@@ -254,20 +258,18 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Per motivi di sicurezza, non è consentito creare utenti Samba con password "
+"vuote."
 
 #: samba/filepropertiesplugin/authhelper.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1</resource> a member of group <resource>"
-#| "%2</resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid user name; cannot add it to the group "
 "<resource>%2</resource>."
 msgstr ""
-"Impossibile rendere l'utente <resource>%1</resource> membro del gruppo "
-"<resource>%2</resource>"
+"<resource>%1</resource> non è un nome utente valido; impossibile aggiungerlo "
+"al gruppo <resource>%2</resource>."
 
 #: samba/filepropertiesplugin/authhelper.cpp:108
 #, kde-kuit-format
@@ -276,6 +278,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> non è un nome di gruppo valido; impossibile rendere "
+"l'utente <resource>%2</resource> un membro di tale gruppo."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
 #, kde-kuit-format
@@ -288,6 +292,13 @@ msgid ""
 "and do not                                                    include the "
 "text <resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Per motivi di sicurezza, non è possibile rendere l'utente <resource>%1</"
+"resource> membro del gruppo <resource>%2</"
+"resource>.                                                    l nome del "
+"gruppo non è sicuro; i nomi di gruppo validi includono il testo "
+"<resource>samba</resource>e "
+"non                                                    includono il testo "
+"<resource>admin</resource> o <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

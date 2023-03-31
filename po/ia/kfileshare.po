@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 00:58+0000\n"
-"PO-Revision-Date: 2023-03-20 15:20+0100\n"
+"PO-Revision-Date: 2023-03-30 22:36+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.80\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -224,6 +224,8 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Nomine de usator <resource>%1</resource> non es vaide como nomine de un "
+"usator de Samba; non pote verificar su existentia."
 
 #: samba/filepropertiesplugin/authhelper.cpp:43
 #, kde-kuit-format
@@ -238,6 +240,8 @@ msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid Samba user name; cannot create it."
 msgstr ""
+"<resource>%1</resource> non es un valide nomine de usator de Samba; non pote "
+"crear lo."
 
 #: samba/filepropertiesplugin/authhelper.cpp:63
 #, kde-format
@@ -246,6 +250,8 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Per ration de securitate, crear usatores de Samba con contrasignos vacue non "
+"es permittite."
 
 #: samba/filepropertiesplugin/authhelper.cpp:103
 #, kde-kuit-format
@@ -264,6 +270,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> non es un valide nomine de gruppo; non pote facer "
+"usator <resource>%2</resource> un membro de illo."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
 #, kde-kuit-format
@@ -276,6 +284,13 @@ msgid ""
 "and do not                                                    include the "
 "text <resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Per rationes de seuritate, non pote facer usator <resource>%1</resource> un "
+"membro de gruppo <resource>%2</"
+"resource>.                                                    Le nomine de "
+"gruppo es insecure; nomines de gruppo valide include le texto "
+"<resource>samba</resource> e "
+"non                                                     include le texto "
+"<resource>admin</resource> o <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

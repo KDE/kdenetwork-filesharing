@@ -2,7 +2,7 @@
 # Frank Schütte <F.Schuette@t-online.de>, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2004, 2005.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2004, 2005, 2006, 2007, 2008, 2009.
-# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2016, 2020, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011, 2012, 2016, 2020, 2022, 2023.
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2011.
 # Burkhard Lück <lueck@hube-lueck.de>, 2019, 2020, 2021.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 04:53+0000\n"
-"PO-Revision-Date: 2022-06-15 11:23+0200\n"
+"PO-Revision-Date: 2023-04-26 21:03+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,18 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.07.70\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Verweigern"
 
 #: samba/aclproperties/plugin.cpp:61
-#, fuzzy, kde-format
-#| msgid "Allow"
+#, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Zulassen"
@@ -39,56 +37,55 @@ msgstr "Zulassen"
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Unbekannt"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Nur diesen Ordner"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Diesen Ordner, Unterordner und Dateien"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Diesen Ordner und Unterordner"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Diesen Ordner und Dateien"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Nur Unterordner und Dateien"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Nur Unterordner"
 
 #: samba/aclproperties/plugin.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Read only"
+#, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr "Nur &Lesen"
+msgstr "Nur Dateien"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Unbekannt"
 
 #: samba/aclproperties/plugin.cpp:187
 #, fuzzy, kde-format
@@ -106,16 +103,14 @@ msgid ""
 msgstr ""
 
 #: samba/aclproperties/qml/ACEPage.qml:36
-#, fuzzy
-#| msgid "Fst&ype:"
 msgctxt "@label"
 msgid "Type:"
-msgstr "Fst&yp:"
+msgstr "Typ:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Gilt für:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
@@ -130,14 +125,12 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Attribute lesen"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr "Unterstützung für OS/2 Erweiterte Attribute"
+msgstr "Erweiterte Attribute lesen"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
@@ -150,51 +143,39 @@ msgid "Create folders / append data"
 msgstr ""
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Schreibbar"
+msgstr "Attribute schreiben"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr "Unterstützung für OS/2 Erweiterte Attribute"
+msgstr "Erweiterte Attribute schreiben"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Unterordner und Dateien löschen"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
-#, fuzzy
-#| msgid "Delete Scripts"
 msgctxt "@option:check"
 msgid "Delete"
-msgstr "Skripte löschen"
+msgstr "Löschen"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Required Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Benötigte Berechtigungen"
+msgstr "Berechtigungen zum Lesen"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgctxt "@action:button changes permissions"
-#| msgid "Change Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr "Berechtigungen ändern"
+msgstr "Berechtigungen zum Ändern"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Eigentümer werden"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -209,25 +190,19 @@ msgid "Access Control Entries"
 msgstr ""
 
 #: samba/aclproperties/qml/MainPage.qml:29
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
 msgstr "Eigentümer"
 
 #: samba/aclproperties/qml/MainPage.qml:33
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@label"
 msgid "Owner:"
-msgstr "Eigentümer"
+msgstr "Eigentümer:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
-#, fuzzy
-#| msgid "Group"
 msgctxt "@label"
 msgid "Group:"
-msgstr "Gruppe"
+msgstr "Gruppe:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
 #, fuzzy

@@ -2,6 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
 */
 
 import QtQuick 2.12
@@ -80,6 +81,7 @@ when the Share access rules would allow it.`)
 
         QQC2.CheckBox {
             id: shareEnabled
+            Layout.fillWidth: true
             text: i18nc("@option:check", "Share this folder with other computers on the local network")
             checked: sambaPlugin.shareContext.enabled
             onToggled: {
@@ -144,6 +146,7 @@ when the Share access rules would allow it.`)
 
             QQC2.CheckBox {
                 id: allowGuestBox
+                Layout.fillWidth: true
                 text: i18nc("@option:check", "Allow guests")
                 enabled: sambaPlugin.shareContext.canEnableGuest
                 checked: sambaPlugin.shareContext.guestEnabled
@@ -173,26 +176,35 @@ when the Share access rules would allow it.`)
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
                 Kirigami.Theme.inherit: false
 
-                Component.onCompleted: background.visible = true // crashes when initialized with this. god knows why
+                Component.onCompleted: {
+                    if (background) {
+                        background.visible = true
+                    }
+                }
 
-                contentItem: TableView {
+                TableView {
                     id: view
 
                     property bool itemComplete: false
 
-                    anchors.fill: parent
-                    anchors.margins: Kirigami.Units.smallSpacing
-                    clip: true
-                    interactive: false
                     model: sambaPlugin.userPermissionModel
 
-                    columnWidthProvider: function (column) {
+                    topMargin: Kirigami.Units.smallSpacing
+                    // This wouldn't work with horizontal scrollbar, but here
+                    // it doesn't matter, because it is never visible.
+                    bottomMargin: Kirigami.Units.smallSpacing
+
+                    rowSpacing: Kirigami.Units.smallSpacing
+                    columnSpacing: Kirigami.Units.smallSpacing
+
+                    columnWidthProvider: column => {
                         // Give 2/3 of the width to the access column for better looks.
-                        var accessWidth = Math.round(width / 1.5)
-                        if (column == Samba.UserPermissionModel.ColumnAccess) {
+                        const availableWidth = width - columnSpacing
+                        var accessWidth = Math.round(availableWidth / 1.5)
+                        if (column === Samba.UserPermissionModel.ColumnAccess) {
                             return accessWidth
                         }
-                        return width - accessWidth
+                        return availableWidth - accessWidth
                     }
 
                     Timer {
@@ -223,7 +235,8 @@ when the Share access rules would allow it.`)
 
                         QQC2.Label {
                             Layout.fillWidth: true
-                            visible: !combo.visible
+                            Layout.leftMargin: view.columnSpacing
+                            visible: column !== Samba.UserPermissionModel.ColumnAccess
                             text: display === undefined ? "" : display
                             elide: Text.ElideMiddle
                         }
@@ -231,9 +244,10 @@ when the Share access rules would allow it.`)
                         QQC2.ComboBox {
                             id: combo
                             Layout.fillWidth: true
+                            Layout.rightMargin: view.columnSpacing
                             textRole: "text"
                             valueRole: "value"
-                            visible: column == Samba.UserPermissionModel.ColumnAccess
+                            visible: column === Samba.UserPermissionModel.ColumnAccess
                             model: [
                                 { value: undefined, text: "---" },
                                 { value: "F", text: i18nc("@option:radio user can read&write", "Full Control") },

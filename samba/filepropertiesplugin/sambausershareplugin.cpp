@@ -89,6 +89,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant
     widget->setAttribute(Qt::WA_AlwaysStackOnTop, true);
     widget->quickWindow()->setColor(Qt::transparent);
     auto layout = new QVBoxLayout(m_page.get());
+    layout->setContentsMargins({});
     layout->addWidget(widget);
 
     widget->rootContext()->setContextProperty(QStringLiteral("sambaPlugin"), this);

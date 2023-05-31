@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-12 04:53+0000\n"
-"PO-Revision-Date: 2023-01-10 21:09+0700\n"
+"PO-Revision-Date: 2023-05-30 20:38+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -219,32 +219,22 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Instalasi Samba Anda muncul dengan kerusakan"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
-"Galat ini disebabkan oleh distro-mu belum dipersiapkan berbagi Samba secara "
-"benar. Kamu bisa memperbaikinya sendiri dengan membuat folder tersebut "
-"secara manual. Kemudian tutup dan buka kembali jendela ini."
+"Galat ini disebabkan oleh distribusi Anda belum dipersiapkan berbagipakai "
+"Samba secara benar. Silakan ajukan bug dengan distribusi Anda atau periksa "
+"dokumentasi distribusi Anda pada persiapan berbagipakai Samba."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -252,9 +242,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
-"Galat ini disebabkan oleh distro-mu belum dipersiapkan berbagi Samba secara "
-"benar. Kamu bisa memperbaikinya sendiri dengan membuat folder tersebut "
-"secara manual. Kemudian tutup dan buka kembali jendela ini."
+"Galat ini disebabkan oleh distribusi Anda belum dipersiapkan berbagipakai "
+"Samba secara benar. Silakan ajukan bug dengan distribusi Anda atau periksa "
+"dokumenasi distribusi Anda pada persiapan berbagipakai Samba. Galat: <nl/"
+"><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -265,44 +256,29 @@ msgstr ""
 "Folder ini tidak bisa dibagikan karena <filename>%1</filename> belum ada."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
-"Galat ini disebabkan oleh distro-mu belum dipersiapkan berbagi Samba secara "
-"benar. Kamu bisa memperbaikinya sendiri dengan membuat folder tersebut "
-"secara manual. Kemudian tutup dan buka kembali jendela ini."
+"Galat ini disebabkan oleh distribusi Anda belum dipersiapkan berbagipakai "
+"Samba secara benar. Anda bisa memperbaikinya sendiri dengan membuat folder "
+"tersebut secara manual. Kemudian tutup dan buka kembali jendela ini."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:62
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This folder can't be shared because <filename>%1</filename> has its group "
-#| "owner inappropriately set to <resource>%2</resource>."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Folder ini tidak bisa dibagikan karena <filename>%1</filename> memiliki set "
-"pemilik grup yang tak pantas ke <resource>%2</resource>."
+"pemilik grup yang tak layak ke <resource>%2</resource>, yang tidak diizinkan."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -310,10 +286,11 @@ msgid ""
 "<resource>sambashares</resource> and making yourself a member of that group. "
 "Then restart the system."
 msgstr ""
-"Kesalahan ini disebabkan oleh distro-mu yang tidak dipersiapkan berbagi "
-"Samba dengan benar. Kamu bisa memperbaikinya sendiri dengan mengubah pemilik "
-"grup folder tersebut menjadi <resource>usershares</resource> dan menjadikan "
-"diri kamu anggota grup itu. Kemudian nyalakan ulang sistem."
+"Kesalahan ini disebabkan oleh distribusi Anda yang tidak dipersiapkan "
+"berbagipakai Samba dengan benar. Anda bisa memperbaikinya sendiri dengan "
+"mengubah pemilik grup folder tersebut menjadi <resource>sambashares</"
+"resource> dan menjadikan diri Anda menjadi anggota grup itu. Kemudian "
+"nyalakan ulang sistem."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
@@ -364,31 +341,24 @@ msgstr ""
 "tutup dan buka kembali jendela ini."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"Menambahkan pengguna '%1' ke grup '%2' sehingga ia dapat mengatur berbagi "
-"pengguna Samba"
+"Menambahkan pengguna <resource>%1</resource> ke grup <resource>%2</resource> "
+"sehingga ia dapat mengatur berbagi pengguna Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:127
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"Gagal membuat pengguna <resource>%1<resource> menjadi anggota grup <resource>"
-"%2<resource>"
+"Gagal membuat pengguna <resource>%1</resource> menjadi anggota grup "
+"<resource>%2</resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format

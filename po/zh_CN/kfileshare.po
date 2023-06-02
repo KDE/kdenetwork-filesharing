@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 00:58+0000\n"
+"POT-Creation-Date: 2023-06-02 00:47+0000\n"
 "PO-Revision-Date: 2023-05-22 14:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -430,13 +430,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "所需权限"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#: samba/filepropertiesplugin/qml/ACLPage.qml:29
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "拒绝访问"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+#: samba/filepropertiesplugin/qml/ACLPage.qml:43
 msgctxt "@info"
 msgid ""
 "\n"
@@ -460,34 +460,34 @@ msgstr ""
 "不具备该目录的本地访问权限的用户同样无法远程访问该目录，即使是共享访问规则允"
 "许也无法访问。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+#: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
 msgstr "此文件夹需要额外的权限才能进行共享"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#: samba/filepropertiesplugin/qml/ACLPage.qml:66
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "修复权限"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+#: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr "共享可能无法正常工作，因为共享文件夹或其路径具有高级权限：%1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#: samba/filepropertiesplugin/qml/ACLPage.qml:85
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "与局域网的其他计算机共享此文件夹"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#: samba/filepropertiesplugin/qml/ACLPage.qml:102
 msgctxt "@label"
 msgid "Name:"
 msgstr "名称："
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+#: samba/filepropertiesplugin/qml/ACLPage.qml:134
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -495,39 +495,39 @@ msgid ""
 msgstr ""
 "此名称不能使用。共享名称不能为用户名，并且在整个系统中不能有重名的共享。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+#: samba/filepropertiesplugin/qml/ACLPage.qml:143
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr "这个名称可能过长，它可能会导致兼容性问题，或者直接被 Samba 拒绝。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#: samba/filepropertiesplugin/qml/ACLPage.qml:150
 msgctxt "@option:check"
 msgid "Allow guests"
 msgstr "允许访客"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+#: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "访客访问已在系统的 Samba 配置中禁用。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#: samba/filepropertiesplugin/qml/ACLPage.qml:253
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "完全控制"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#: samba/filepropertiesplugin/qml/ACLPage.qml:254
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "只读"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#: samba/filepropertiesplugin/qml/ACLPage.qml:255
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "禁止访问"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+#: samba/filepropertiesplugin/qml/ACLPage.qml:281
 msgctxt "@button"
 msgid "Show Samba status monitor"
 msgstr "显示 Samba 状态监视器"
@@ -656,7 +656,7 @@ msgstr ""
 "如需进行额外的用户和密码管理，\n"
 "请使用 Samba 的 <command>smbpasswd</command> 命令行工具。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -664,73 +664,73 @@ msgid ""
 "active at the same time."
 msgstr "您已经达到了同时活跃的共享目录的最大数量限制。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "共享名称无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "此共享名称已被用于另一个目录。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "路径无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "此路径不存在。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "此路径不是一个目录。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "此路径是相对路径。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "此路径不能共享。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "此访问规则无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "访问规则中的用户无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "访客访问规则无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "不允许启用访客访问。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:197
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -741,13 +741,13 @@ msgstr ""
 "<para>尝试共享此目录时发生错误。共享未被创建。</para><para>Samba 内部报告：</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:204
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "创建网络共享失败"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:217
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -758,7 +758,7 @@ msgstr ""
 "<para>尝试取消共享此目录时出错。共享未被取消。</para><para>Samba 内部报告：</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:224
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"

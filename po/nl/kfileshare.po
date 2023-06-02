@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 00:58+0000\n"
+"POT-Creation-Date: 2023-06-02 00:47+0000\n"
 "PO-Revision-Date: 2023-03-18 15:02+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -457,13 +457,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "Vereiste rechten"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:28
+#: samba/filepropertiesplugin/qml/ACLPage.qml:29
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "Geen toegang"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:42
+#: samba/filepropertiesplugin/qml/ACLPage.qml:43
 msgctxt "@info"
 msgid ""
 "\n"
@@ -489,17 +489,17 @@ msgstr ""
 "in staat zijn toegang te hebben op afstand zelfs\n"
 "wanneer de regel voor toegang tot shares dat toestaat."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:61
+#: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
 msgstr "Deze map heeft extra rechten nodig om delen te laten werken"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:65
+#: samba/filepropertiesplugin/qml/ACLPage.qml:66
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "Rechten repareren"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:77
+#: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -508,17 +508,17 @@ msgstr ""
 "De share zou niet juist kunnen werken omdat de share-map of zijn pad "
 "geavanceerde rechten heeft: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:83
+#: samba/filepropertiesplugin/qml/ACLPage.qml:85
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "Deze map met andere computers op het lokale netwerk delen"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:100
+#: samba/filepropertiesplugin/qml/ACLPage.qml:102
 msgctxt "@label"
 msgid "Name:"
 msgstr "Naam:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:132
+#: samba/filepropertiesplugin/qml/ACLPage.qml:134
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -528,7 +528,7 @@ msgstr ""
 "gebruikersnamen zijn en er mogen geen twee shares met dezelfde naam op het "
 "gehele systeem zijn."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:141
+#: samba/filepropertiesplugin/qml/ACLPage.qml:143
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -537,33 +537,33 @@ msgstr ""
 "Deze naam kan te lang zijn. Het kan problemen met interoperabiliteit geven "
 "of geweigerd worden door Samba."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:147
+#: samba/filepropertiesplugin/qml/ACLPage.qml:150
 msgctxt "@option:check"
 msgid "Allow guests"
 msgstr "Gasten toelaten"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:160
+#: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr ""
 "Gasttoegang is uitgeschakeld door de Samba-configuratie van het systeem."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:239
+#: samba/filepropertiesplugin/qml/ACLPage.qml:253
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "Volledige besturing"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:240
+#: samba/filepropertiesplugin/qml/ACLPage.qml:254
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "Alleen-lezen"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:241
+#: samba/filepropertiesplugin/qml/ACLPage.qml:255
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "Geen toegang"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:267
+#: samba/filepropertiesplugin/qml/ACLPage.qml:281
 msgctxt "@button"
 msgid "Show Samba status monitor"
 msgstr "Statusmonitor van Samba tonen"
@@ -698,7 +698,7 @@ msgstr ""
 "Extra beheer van gebruiker en wachtwoord kan gedaan worden met het "
 "opdrachtregelhulpmiddel van Samba <command>smbpasswd</command>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:156
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -708,73 +708,73 @@ msgstr ""
 "U hebt de maximum hoeveelheid gedeelde mappen gebruikt die u tegelijk actief "
 "mag hebben."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:158
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "De naam van de share is ongeldig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:160
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "De naam van de share is al in gebruik voor een andere map."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:162
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Het pad is ongeldig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:164
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "De pad bestaat niet."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:166
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Het pad is geen map."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:168
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Het pad is relatief."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:170
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Dit pad mag niet gedeeld worden."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:172
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "De toegangsregel is ongeldig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:174
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Een toegangsregel van een gebruiker is niet geldig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:176
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "De toegangsregel van 'Gast' is ongeldig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Inschakelen van toegang voor gasten is niet toegestaan."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:197
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -786,13 +786,13 @@ msgstr ""
 "was niet aangemaakt.</para><para>Het interne rapportvan Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:203
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:204
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Netwerkshare aanmaken is mislukt"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:216
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:217
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -804,7 +804,7 @@ msgstr ""
 "ongedaan te maken. De share is niet verwijderd.</para><para>Het interne "
 "rapport van Samba:</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:223
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:224
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"

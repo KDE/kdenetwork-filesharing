@@ -30,7 +30,7 @@ Item {
         anchors.centerIn: parent
         width: parent.width
 
-        text: i18nc("@label", "Samba must be installed before folders can be shared.")
+        text: xi18nc("@info", "The <application>Samba</application> file sharing service must be installed before folders can be shared.")
         helpfulAction: Kirigami.Action {
             iconName: "install"
             text: i18nc("@button", "Install Samba")

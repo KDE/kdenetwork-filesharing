@@ -14,8 +14,8 @@ ColumnLayout {
     QQC2.Label {
         Layout.alignment: Qt.AlignHCenter
         Layout.fillWidth: true
-        // FIXME could put this in a component shared with crappy page
-        text: i18nc("@label", "Samba must be installed before folders can be shared.")
+        text: xi18nc("@info", "The <application>Samba</application> file sharing service must be installed before folders can be shared.")
+        explanation: i18n("Because this distro does not include PackageKit, we cannot show you a nice \"Install it\" button, and you will have to use your package manager to install the <command>samba</command> server package manually.")
         wrapMode: Text.Wrap
     }
     Item {

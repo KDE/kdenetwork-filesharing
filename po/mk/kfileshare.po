@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:47+0000\n"
+"POT-Creation-Date: 2023-06-28 00:48+0000\n"
 "PO-Revision-Date: 2004-10-17 21:51+0200\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -592,11 +592,13 @@ msgid "Cancel"
 msgstr "Н&апредно"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
 #, fuzzy
 #| msgid "Only local folders can be shared."
-msgctxt "@label"
-msgid "Samba must be installed before folders can be shared."
+msgctxt "@info"
+msgid ""
+"The <application>Samba</application> file sharing service must be installed "
+"before folders can be shared."
 msgstr "Само локални папки може да се делат."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
@@ -607,6 +609,13 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/InstallPage.qml:44
 msgctxt "@label"
 msgid "The Samba package failed to install."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgid ""
+"Because this distro does not include PackageKit, we cannot show you a nice "
+"\"Install it\" button, and you will have to use your package manager to "
+"install the <command>samba</command> server package manually."
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17

@@ -1,5 +1,5 @@
 # translation of kfileshare.po to
-# Version: $Revision: 1652989 $
+# Version: $Revision: 1654815 $
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Michał 'podles' Podlewski <podles@aster.pl>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:47+0000\n"
+"POT-Creation-Date: 2023-06-28 00:48+0000\n"
 "PO-Revision-Date: 2023-04-10 11:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -628,9 +628,14 @@ msgid "Cancel"
 msgstr "Anuluj"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
-msgctxt "@label"
-msgid "Samba must be installed before folders can be shared."
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Samba must be installed before folders can be shared."
+msgctxt "@info"
+msgid ""
+"The <application>Samba</application> file sharing service must be installed "
+"before folders can be shared."
 msgstr "Aby udostępniać katalogi, trzeba mieć wgraną Sambę."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
@@ -642,6 +647,13 @@ msgstr "Wgraj Sambę"
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Nie udało się wgrać pakietu Samba."
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgid ""
+"Because this distro does not include PackageKit, we cannot show you a nice "
+"\"Install it\" button, and you will have to use your package manager to "
+"install the <command>samba</command> server package manually."
+msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

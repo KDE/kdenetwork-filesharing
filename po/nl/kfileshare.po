@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:47+0000\n"
+"POT-Creation-Date: 2023-06-28 00:48+0000\n"
 "PO-Revision-Date: 2023-03-18 15:02+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -627,9 +627,14 @@ msgid "Cancel"
 msgstr "Annuleren"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
-msgctxt "@label"
-msgid "Samba must be installed before folders can be shared."
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Samba must be installed before folders can be shared."
+msgctxt "@info"
+msgid ""
+"The <application>Samba</application> file sharing service must be installed "
+"before folders can be shared."
 msgstr "Samba moet geïnstalleerd zijn voordat mappen kunnen worden gedeeld."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
@@ -641,6 +646,13 @@ msgstr "Samba installeren"
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Pakket Samba installeren is mislukt."
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+msgid ""
+"Because this distro does not include PackageKit, we cannot show you a nice "
+"\"Install it\" button, and you will have to use your package manager to "
+"install the <command>samba</command> server package manually."
+msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

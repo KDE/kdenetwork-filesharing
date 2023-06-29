@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2023-03-18 20:24+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2023-06-28 10:22+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -631,14 +631,13 @@ msgstr "Cancel·la"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Cal que el Samba estigui instal·lat abans de poder compartir carpetes."
+msgstr ""
+"Cal que el <application>Samba</application> estigui instal·lat abans de "
+"poder compartir carpetes."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -656,6 +655,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Com que aquesta distribució no inclou el PackageKit, no es pot mostrar el "
+"botó «Instal·la'l», i cal que feu servir el gestor de paquets per a "
+"instal·lar manualment el paquet del servidor <command>samba</command>."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

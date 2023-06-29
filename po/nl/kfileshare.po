@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2023-03-18 15:02+0100\n"
+"PO-Revision-Date: 2023-06-28 11:20+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -628,14 +628,13 @@ msgstr "Annuleren"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Samba moet geïnstalleerd zijn voordat mappen kunnen worden gedeeld."
+msgstr ""
+"De service bestanden delen <application>Samba</application> moet "
+"geïnstalleerd zijn voordat mappen kunnen worden gedeeld."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -653,6 +652,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Omdat deze distributie PackageKit niet bevat, kunnen we u geen nette knop "
+"\"Installeer het\" tonen en u zult uw pakketbeheerder moeten gebruiken om "
+"het serverpakket <command>samba</command> handmatig te installeren."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

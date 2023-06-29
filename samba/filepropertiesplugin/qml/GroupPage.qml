@@ -52,7 +52,7 @@ Item {
             explanation: manager.errorExplanation
             helpfulAction: Kirigami.Action {
                 enabled: manager.hasHelpfulAction
-                iconName: manager.helpfulActionIcon
+                icon.name: manager.helpfulActionIcon
                 text: manager.helpfulActionText
                 onTriggered: manager.performHelpfulAction()
             }

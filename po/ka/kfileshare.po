@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2023-03-19 05:23+0100\n"
+"PO-Revision-Date: 2023-06-29 07:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -617,14 +617,13 @@ msgstr "გაუქმება"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "საქაღალდის გასაზიარებლად Samba-ის დაყენება აუცილებელია."
+msgstr ""
+"სანამ საქაღალდის გაზიარებას შეძლებთ, <application>Samba</application-ის "
+"ფაილების გაზიარების სერვისის დაყენება აუცილებელია."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -642,6 +641,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"რადგან ეს დისტრო PackageKit-ს არ შეიცავს, ჩვენ არ შეგვიძლია სასიამოვნო "
+"\"დაყენების\" ღილაკის ჩვენება და <command>samba</command>-ის სერვერის "
+"პაკეტის დაყენება ხელით ან თქვენი პაკეტების მმართველით მოგიწევთ."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

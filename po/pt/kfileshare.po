@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2023-03-20 13:44+0000\n"
+"PO-Revision-Date: 2023-07-02 02:19+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -36,6 +36,7 @@ msgstr ""
 "X-POFile-SpellExtra: SOKEEPALIVE passwd IPTOSTHROUGHPUT spnego bsd smbd\n"
 "X-POFile-SpellExtra: man wins Partilhr lpq ACLs setdir deleteprinter\n"
 "X-POFile-SpellExtra: Options Min KPackageKit usershares admin sambashares\n"
+"X-POFile-SpellExtra: PackageKit\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -646,14 +647,13 @@ msgstr "Cancelar"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "O Samba tem de estar instalado antes de partilhar as pastas."
+msgstr ""
+"O <application>Samba</application> tem de estar instalado antes de partilhar "
+"as pastas."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -671,6 +671,10 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Dado que esta distribuição não inclui o PackageKit, não lhe poderemos "
+"mostrar um botão útil para \"Instalar\", pelo que terá de usar o seu gestor "
+"de pacotes para instalar manualmente o pacote do servidor <command>samba</"
+"command>."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

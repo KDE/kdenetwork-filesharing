@@ -1,12 +1,12 @@
 # translation of kfileshare.po to Swedish
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2016, 2019, 2020, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2011, 2016, 2019, 2020, 2021, 2022, 2023.
 # Mattias Newzella <newzella@linux.nu>, 2004, 2005.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2022-09-27 17:49+0200\n"
+"PO-Revision-Date: 2023-07-25 11:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -222,13 +222,15 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Användarnamnet <resource>%1</resource> är inte giltigt som namn på en Samba-"
+"användare. Kan inte kontrollera om det redan finns."
 
 #: samba/filepropertiesplugin/authhelper.cpp:43
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Kommandot <command>%1 %2</command> misslyckades:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:58
 #, kde-kuit-format
@@ -236,6 +238,8 @@ msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid Samba user name; cannot create it."
 msgstr ""
+"<resource>%1</resource> är inte ett giltigt Samba användarnamn. Kan inte "
+"skapa det."
 
 #: samba/filepropertiesplugin/authhelper.cpp:63
 #, kde-format
@@ -244,20 +248,18 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Av säkerhetsskäl är det inte tillåtet att skapa Samba-användare med tomma "
+"lösenord."
 
 #: samba/filepropertiesplugin/authhelper.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<resource>%1</resource> is not a valid user name; cannot add it to the group "
 "<resource>%2</resource>."
 msgstr ""
-"Misslyckades göra användaren <resource>%1<resource> medlem av gruppen "
-"<resource>%2<resource>"
+"<resource>%1</resource> är inte ett giltigt användarnamn. Kan inte lägga "
+"till det i gruppen <resource>%2</resource>."
 
 #: samba/filepropertiesplugin/authhelper.cpp:108
 #, kde-kuit-format
@@ -266,6 +268,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> är inte ett giltigt gruppnamn. Kan inte göra "
+"användaren <resource>%2</resource> till en medlem i den."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
 #, kde-kuit-format
@@ -278,20 +282,20 @@ msgid ""
 "and do not                                                    include the "
 "text <resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Av säkerhetsskäl kan inte användaren <resource>%1</resource> göras till "
+"medlem av gruppen <resource>%2</resource>. Gruppnamnet är inte säkert. "
+"Giltiga gruppnamn inkluderar texten <resource>samba</resource> och "
+"inkluderar inte texten <resource>admin</resource> eller <resource>root</"
+"resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Installationen av Samba verkar vara felaktig."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -299,16 +303,11 @@ msgid ""
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
 "Felet orsakas av att distributionen inte har ställt in delning med Samba "
-"riktigt. Du kan rätta det själv genom att skapa katalogen manuellt. Stäng "
-"och öppna därefter det här fönstret igen."
+"riktigt. Skicka in en felrapport till distributionen eller kontrollera "
+"distributionens dokumentation om hur delning med Samba ska ställas in."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -317,8 +316,9 @@ msgid ""
 "><message>%1</message>"
 msgstr ""
 "Felet orsakas av att distributionen inte har ställt in delning med Samba "
-"riktigt. Du kan rätta det själv genom att skapa katalogen manuellt. Stäng "
-"och öppna därefter det här fönstret igen."
+"riktigt. Skicka in en felrapport till distributionen eller kontrollera "
+"distributionens dokumentation om hur delning med Samba ska ställas in.:<nl/"
+"><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -328,12 +328,7 @@ msgid ""
 msgstr "Katalogen kan inte delas eftersom <filename>%1</filename> inte finns."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -345,27 +340,17 @@ msgstr ""
 "och öppna därefter det här fönstret igen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:62
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This folder can't be shared because <filename>%1</filename> has its group "
-#| "owner inappropriately set to <resource>%2</resource>."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> has its group "
 "owner inappropriately set to <resource>%2</resource>, which is not allowed."
 msgstr ""
 "Katalogen kan inte delas eftersom <filename>%1</filename> har sin gruppägare "
-"olämpligt inställd till <resource>%2</resource>."
+"olämpligt inställd till <resource>%2</resource>, vilket inte är tillåtet."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distro not setting up Samba sharing "
-#| "properly. You can fix it yourself by changing that folder's group owner "
-#| "to <resource>usershares</resource> and making yourself a member of that "
-#| "group. Then restart the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -375,7 +360,7 @@ msgid ""
 msgstr ""
 "Felet orsakas av att distributionen inte har ställt in delning med Samba "
 "riktigt. Du kan rätta det själv genom att ändra katalogens gruppägare till "
-"<resource>usershares</resource> och göra dig till en medlem av den gruppen. "
+"<resource>sambashares</resource> och göra dig till en medlem av den gruppen. "
 "Starta därefter om datorn."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71
@@ -427,31 +412,24 @@ msgstr ""
 "det här fönstret igen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:116
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"Lägger till användare '%1' till gruppen '%2' så att de kan ställa in Samba "
-"användardelningar."
+"Lägger till användare <resource>%1</resource> till gruppen <resource>%2</"
+"resource> så att de kan ställa in Samba användardelningar"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:127
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Failed to make user <resource>%1<resource> a member of group <resource>"
-#| "%2<resource>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"Misslyckades göra användaren <resource>%1<resource> medlem av gruppen "
-"<resource>%2<resource>"
+"Misslyckades göra användaren <resource>%1</resource> medlem av gruppen "
+"<resource>%2</resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -641,14 +619,13 @@ msgstr "Avbryt"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Samba måste installeras innan kataloger kan delas."
+msgstr ""
+"<application>Samba</application> fildelningstjänst måste installeras innan "
+"kataloger kan delas."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -666,6 +643,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Eftersom distributionen inte inkluderar PackageKit kan vi inte visa en snygg "
+"knapp med \"Installera det\", så du måste använda pakethanteraren för att "
+"installera serverpaketet <command>samba</command> manuellt."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

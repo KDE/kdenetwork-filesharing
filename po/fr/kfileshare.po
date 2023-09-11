@@ -2,12 +2,12 @@
 # translation of kfileshare.po to
 # translation of kfileshare.po to
 # translation of kfileshare.po to
+# SPDX-FileCopyrightText: 2013, 2020, 2021, 2022, 2023 xavier <xavier.besnard@neuf.fr>
 # Matthieu Robin <kde@macolu.org>, 2004, 2005, 2006.
 # Matthieu Robin <matthieu@macolu.org>, 2004.
 # Mickael Sibelle <kimael@gmail.com>, 2007, 2008.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Mickaël Sibelle <kimael@gmail.com>, 2009.
-# xavier <xavier.besnard@neuf.fr>, 2013, 2020, 2021, 2022.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:48+0000\n"
-"PO-Revision-Date: 2023-03-19 09:16+0100\n"
+"PO-Revision-Date: 2023-09-09 16:07+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -644,15 +644,13 @@ msgstr "Annuler"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
 msgstr ""
-"Samba doit être installé avant que les dossiers puissent être partagés."
+"Le service de partage de fichiers <application>Samba</application> doit être "
+"installé avant que les dossiers puissent être partagés."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -670,6 +668,10 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Comme cette distribution n’inclut pas le logiciel « PackageKit », il est "
+"impossible de vous afficher un joli bouton « Installer le ». Par conséquent, "
+"vous devrez utiliser votre gestionnaire de paquets pour installer "
+"manuellement le paquet <command>samba</command> à partir du serveur."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

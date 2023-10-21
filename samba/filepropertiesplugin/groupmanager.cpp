@@ -53,19 +53,6 @@ GroupManager::GroupManager(QObject *parent)
                 // TODO: define a helpfulAction that creates the folder
             }
 
-            // Now see if the group is set to something valid
-            // Keep this condition in sync with the one in authhelper.cpp
-            else if (!m_targetGroup.contains(QLatin1String("samba"))
-                     || m_targetGroup.contains(QLatin1String("admin"))
-                     || m_targetGroup.contains(QLatin1String("root"))
-                    ) {
-                m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> has its group owner inappropriately set to <resource>%2</resource>, which is not allowed.", path, m_targetGroup);
-                Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by changing that folder's group owner to <resource>sambashares</resource> and making yourself a member of that group. Then restart the system.");
-                Q_EMIT errorExplanationChanged();
-                // TODO: define a helpfulAction that creates the group and applies it to the folder
-            }
-
             // Now see if the user is a member of the group
             else if (!groups.contains(m_targetGroup)) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account isn't a member of the <resource>%1</resource> group.", m_targetGroup);

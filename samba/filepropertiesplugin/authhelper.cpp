@@ -112,11 +112,11 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
     // TODO: add ability to resolve remote UID via KAuth and verify the request (or even reduce the arguments down to
     //    only the group and resolve the UID)
     // Keep this condition in sync with the one in groupmanager.cpp
-    if (!group.contains(QLatin1String("samba")) || group.contains(QLatin1String("admin")) ||
+    if (group.contains(QLatin1String("admin")) ||
         group.contains(QLatin1String("root"))) {
         auto reply = ActionReply::HelperErrorReply();
         reply.setErrorDescription(xi18nc("@info", "For security reasons, cannot make user <resource>%1</resource> a member of group <resource>%2</resource>. \
-                                                   The group name is insecure; valid group names include the text <resource>samba</resource> and do not \
+                                                   The group name is insecure; valid group names do not \
                                                    include the text <resource>admin</resource> or <resource>root</resource>."));
         return reply;
     }

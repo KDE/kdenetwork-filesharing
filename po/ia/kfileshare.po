@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-06-29 10:35+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -274,15 +274,23 @@ msgstr ""
 "usator <resource>%2</resource> un membro de illo."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "For security reasons, cannot make user <resource>%1</resource> a member "
+#| "of group <resource>%2</"
+#| "resource>.                                                    The group "
+#| "name is insecure; valid group names include the text <resource>samba</"
+#| "resource> and do not                                                    "
+#| "include the text <resource>admin</resource> or <resource>root</resource>."
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 "Per rationes de seuritate, non pote facer usator <resource>%1</resource> un "
 "membro de gruppo <resource>%2</"
@@ -345,32 +353,7 @@ msgstr ""
 "Samba propriemente. Tu pote corriger lo per tu mesme per crear ille dossier "
 "manualmente. Tum claude e reaperi iste fenestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-"Iste dossier non pote esser compartite proque <filename>%1</filename> ha su "
-"proprietario de gruppo fixate impropriemente a <resource>%2</resource>, le "
-"qual non es permittite."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-"Iste error es causate per tu distribution que non installa propriemente "
-"compartir de Samba. Tu pote corriger lo per tu mesme per cambiar le "
-"proprietario de gruppo de ille dossier a <resource>sambashares</resource> e "
-"facer te mesme un membro de ille guppo.  Tum restarta le systema."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -380,7 +363,7 @@ msgstr ""
 "Iste dossier nonpote esser compartite proque tu conto de usator non es un "
 "membro del gruppo <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -390,13 +373,13 @@ msgstr ""
 "Tu pote corriger isto per facer tu usator un  membro de ille gruppo. Tum "
 "restarta le systema."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Face me un Membro de Gruppo"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -406,7 +389,7 @@ msgstr ""
 "Iste dossier non pote esser compartite proque tu conto de usator non ha "
 "permissiones per scriber in <filename>%1</filename>"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -418,7 +401,7 @@ msgstr ""
 "permission de scriber per <filename>%2</filename>.  Tum  claude e re-aperi "
 "iste fenestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -428,7 +411,7 @@ msgstr ""
 "Addente usator <resource>%1</resource> a gruppo <resource>%2</resource> assi "
 "que illos pote configurar partes (shares) de usator de Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -834,6 +817,28 @@ msgstr "Verificante si usator de Samba '%1' existe"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Creante nove usator de Samba '%1'"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This folder can't be shared because <filename>%1</filename> has its group "
+#~ "owner inappropriately set to <resource>%2</resource>, which is not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Iste dossier non pote esser compartite proque <filename>%1</filename> ha "
+#~ "su proprietario de gruppo fixate impropriemente a <resource>%2</"
+#~ "resource>, le qual non es permittite."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This error is caused by your distribution not setting up Samba sharing "
+#~ "properly. You can fix it yourself by changing that folder's group owner "
+#~ "to <resource>sambashares</resource> and making yourself a member of that "
+#~ "group. Then restart the system."
+#~ msgstr ""
+#~ "Iste error es causate per tu distribution que non installa propriemente "
+#~ "compartir de Samba. Tu pote corriger lo per tu mesme per cambiar le "
+#~ "proprietario de gruppo de ille dossier a <resource>sambashares</resource> "
+#~ "e facer te mesme un membro de ille guppo.  Tum restarta le systema."
 
 #~ msgctxt "@label failed to change user groups so they can manage shares"
 #~ msgid "Group changes failed."

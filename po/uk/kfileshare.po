@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-06-28 09:08+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -279,15 +279,23 @@ msgstr ""
 "запис користувача <resource>%2</resource>, як її учасника."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "For security reasons, cannot make user <resource>%1</resource> a member "
+#| "of group <resource>%2</"
+#| "resource>.                                                    The group "
+#| "name is insecure; valid group names include the text <resource>samba</"
+#| "resource> and do not                                                    "
+#| "include the text <resource>admin</resource> or <resource>root</resource>."
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 "З міркувань безпеки неможливо створити запис користувача <resource>%1</"
 "resource>, як учасника групи <resource>%2</resource>. Назва групи не є "
@@ -348,32 +356,7 @@ msgstr ""
 "вашому дистрибутиві. Ви можете виправити це створенням цієї теки вручну. "
 "Після створення теки закрийте це вікно і відкрийте його знову."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-"Цю теку не можна надати у спільне користування, оскільки для <filename>%1</"
-"filename> визначено невідповідну групу власника — <resource>%2</resource>. "
-"Таку конфігурацію заборонено."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-"Цю помилку спричинено невідповідними правилами оприлюднення даних Samba у "
-"вашому дистрибутиві. Виправити це можна зміною групи власника цієї теки на "
-"<resource>sambashares</resource> і додаванням вашого користувача до "
-"учасників цієї групи. Після цього перезапустіть систему."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -383,7 +366,7 @@ msgstr ""
 "Цю теку не можна надати у спільне користування, ваш обліковий запис "
 "користувача не є учасником групи <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -393,13 +376,13 @@ msgstr ""
 "Ви можете виправити це, додавши вашого користувача до учасників групи. Після "
 "додавання перезапустіть систему."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Зробити вас учасником групи"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -409,7 +392,7 @@ msgstr ""
 "Вміст цієї теки не може бути оприлюднено, оскільки ваш обліковий запис не "
 "має прав доступу до запису до <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -421,7 +404,7 @@ msgstr ""
 "resource> для запису до <filename>%2</filename>. Після додавання закрийте це "
 "вікно і відкрийте його знову."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -431,7 +414,7 @@ msgstr ""
 "Додаємо користувача <resource>%1</resource> до групи <resource>%2</"
 "resource>, щоб він міг налаштовувати спільні ресурси користувачів Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -840,6 +823,28 @@ msgstr "Перевірка, чи існує запис користувача Sa
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Створення нового користувача Samba «%1»"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This folder can't be shared because <filename>%1</filename> has its group "
+#~ "owner inappropriately set to <resource>%2</resource>, which is not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Цю теку не можна надати у спільне користування, оскільки для <filename>"
+#~ "%1</filename> визначено невідповідну групу власника — <resource>%2</"
+#~ "resource>. Таку конфігурацію заборонено."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This error is caused by your distribution not setting up Samba sharing "
+#~ "properly. You can fix it yourself by changing that folder's group owner "
+#~ "to <resource>sambashares</resource> and making yourself a member of that "
+#~ "group. Then restart the system."
+#~ msgstr ""
+#~ "Цю помилку спричинено невідповідними правилами оприлюднення даних Samba у "
+#~ "вашому дистрибутиві. Виправити це можна зміною групи власника цієї теки "
+#~ "на <resource>sambashares</resource> і додаванням вашого користувача до "
+#~ "учасників цієї групи. Після цього перезапустіть систему."
 
 #~ msgctxt "@label failed to change user groups so they can manage shares"
 #~ msgid "Group changes failed."

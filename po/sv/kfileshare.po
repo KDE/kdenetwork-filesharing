@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-07-25 11:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -272,15 +272,23 @@ msgstr ""
 "användaren <resource>%2</resource> till en medlem i den."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "For security reasons, cannot make user <resource>%1</resource> a member "
+#| "of group <resource>%2</"
+#| "resource>.                                                    The group "
+#| "name is insecure; valid group names include the text <resource>samba</"
+#| "resource> and do not                                                    "
+#| "include the text <resource>admin</resource> or <resource>root</resource>."
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 "Av säkerhetsskäl kan inte användaren <resource>%1</resource> göras till "
 "medlem av gruppen <resource>%2</resource>. Gruppnamnet är inte säkert. "
@@ -339,31 +347,7 @@ msgstr ""
 "riktigt. Du kan rätta det själv genom att skapa katalogen manuellt. Stäng "
 "och öppna därefter det här fönstret igen."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-"Katalogen kan inte delas eftersom <filename>%1</filename> har sin gruppägare "
-"olämpligt inställd till <resource>%2</resource>, vilket inte är tillåtet."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-"Felet orsakas av att distributionen inte har ställt in delning med Samba "
-"riktigt. Du kan rätta det själv genom att ändra katalogens gruppägare till "
-"<resource>sambashares</resource> och göra dig till en medlem av den gruppen. "
-"Starta därefter om datorn."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -373,7 +357,7 @@ msgstr ""
 "Katalogen kan inte delas eftersom ditt användarkonto inte är medlem av "
 "gruppen <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -383,13 +367,13 @@ msgstr ""
 "Du kan rätta det själv genom att göra användaren till en medlem av den "
 "gruppen. Starta därefter om datorn."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Gör mig till gruppmedlem"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -399,7 +383,7 @@ msgstr ""
 "Katalogen kan inte delas eftersom ditt användarkonto inte har rättighet att "
 "skriva till <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -411,7 +395,7 @@ msgstr ""
 "har skrivrättigheter för <filename>%2</filename>. Stäng och öppna därefter "
 "det här fönstret igen."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -421,7 +405,7 @@ msgstr ""
 "Lägger till användare <resource>%1</resource> till gruppen <resource>%2</"
 "resource> så att de kan ställa in Samba användardelningar"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -825,6 +809,28 @@ msgstr "Kontrollerar om Samba-användaren \"%1\" finns"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Skapar ny Samba-användare '%1'"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This folder can't be shared because <filename>%1</filename> has its group "
+#~ "owner inappropriately set to <resource>%2</resource>, which is not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Katalogen kan inte delas eftersom <filename>%1</filename> har sin "
+#~ "gruppägare olämpligt inställd till <resource>%2</resource>, vilket inte "
+#~ "är tillåtet."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This error is caused by your distribution not setting up Samba sharing "
+#~ "properly. You can fix it yourself by changing that folder's group owner "
+#~ "to <resource>sambashares</resource> and making yourself a member of that "
+#~ "group. Then restart the system."
+#~ msgstr ""
+#~ "Felet orsakas av att distributionen inte har ställt in delning med Samba "
+#~ "riktigt. Du kan rätta det själv genom att ändra katalogens gruppägare "
+#~ "till <resource>sambashares</resource> och göra dig till en medlem av den "
+#~ "gruppen. Starta därefter om datorn."
 
 #~ msgctxt "@label failed to change user groups so they can manage shares"
 #~ msgid "Group changes failed."

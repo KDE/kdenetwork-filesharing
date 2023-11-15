@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-06-28 09:35+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -279,15 +279,23 @@ msgstr ""
 "<resource>%2</resource> postaviti za njenega člana."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "For security reasons, cannot make user <resource>%1</resource> a member "
+#| "of group <resource>%2</"
+#| "resource>.                                                    The group "
+#| "name is insecure; valid group names include the text <resource>samba</"
+#| "resource> and do not                                                    "
+#| "include the text <resource>admin</resource> or <resource>root</resource>."
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 "Iz varnostnih razlogov ni mogoče postaviti uporabnika <resource>%1</"
 "resource> za člana skupine <resource>%2</"
@@ -347,31 +355,7 @@ msgstr ""
 "lastnosti deljenja Sambe. To lahko popravite vi, tako da ustvarite mapo "
 "ročno. Potem zaprite in spet odprite okno."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-"Te mape si ne morete deliti, ker je skupinski lastnik <filename>%1</"
-"filename> nepravilno nastavljen na <resource>%2</resource>, kar ni dovoljeno."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-"Ta napaka je posledica tega, da vaša distribucija ni pravilno nastavila "
-"lastnosti deljenja Sambe. To lahko popravite vi, tako da spremenite "
-"skupinskega lastnika mape na <resource>sambashares</resource> in postavite "
-"sebe za člana te skupine. Potem ponovno zaženite sistem."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -381,7 +365,7 @@ msgstr ""
 "Te mape si ne morete deliti, ker vaš uporabniški račun ni član skupine "
 "<resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -391,13 +375,13 @@ msgstr ""
 "To lahko vi popravite tako, da vašega uporabnika postavite za člana te "
 "skupine. Potem ponovno zaženite sistem."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Naredi me člana te skupine"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -407,7 +391,7 @@ msgstr ""
 "Te mape si ne morete deliti, ker vaš uporabniški račun nima dovoljenja za "
 "pisanje v <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -419,7 +403,7 @@ msgstr ""
 "dovoljenje za pisanje za <filename>%2</filename>. Potem zaprite in ponovno "
 "odprite to okno."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -429,7 +413,7 @@ msgstr ""
 "Dodajanje uporabnika <resource>%1</resource> v skupino <resource>%2</"
 "resource>, da bodo lahko nastavili skupne vire Sambe"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -834,6 +818,28 @@ msgstr "Preverjanje, ali obstaja uporabnik Sambe »%1«"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Ustvarjanja novega uporabnika Sambe »%1«"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This folder can't be shared because <filename>%1</filename> has its group "
+#~ "owner inappropriately set to <resource>%2</resource>, which is not "
+#~ "allowed."
+#~ msgstr ""
+#~ "Te mape si ne morete deliti, ker je skupinski lastnik <filename>%1</"
+#~ "filename> nepravilno nastavljen na <resource>%2</resource>, kar ni "
+#~ "dovoljeno."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This error is caused by your distribution not setting up Samba sharing "
+#~ "properly. You can fix it yourself by changing that folder's group owner "
+#~ "to <resource>sambashares</resource> and making yourself a member of that "
+#~ "group. Then restart the system."
+#~ msgstr ""
+#~ "Ta napaka je posledica tega, da vaša distribucija ni pravilno nastavila "
+#~ "lastnosti deljenja Sambe. To lahko popravite vi, tako da spremenite "
+#~ "skupinskega lastnika mape na <resource>sambashares</resource> in "
+#~ "postavite sebe za člana te skupine. Potem ponovno zaženite sistem."
 
 #~ msgctxt "@label failed to change user groups so they can manage shares"
 #~ msgid "Group changes failed."

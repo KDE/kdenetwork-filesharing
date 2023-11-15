@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2021-12-28 17:28+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -293,9 +293,9 @@ msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
@@ -339,25 +339,7 @@ msgid ""
 "close and re-open this window."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label"
 #| msgid ""
@@ -371,7 +353,7 @@ msgstr ""
 "A Samba felhasználói megosztások kezeléséhez a <resource>%1</resource> "
 "csoport tagjának kell lennie."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -379,7 +361,7 @@ msgid ""
 "the system."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, fuzzy, kde-format
 #| msgctxt "@button makes user a member of the samba share group"
 #| msgid "Make me a Group Member"
@@ -387,7 +369,7 @@ msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Legyek csoporttag"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -395,7 +377,7 @@ msgid ""
 "permission to write into <filename>%1</filename>."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -404,7 +386,7 @@ msgid ""
 "window."
 msgstr ""
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -417,7 +399,7 @@ msgstr ""
 "„%1” felhasználó hozzáadása a(z) „%2” csoporthoz, hogy beállíthasson Samba "
 "megosztásokat"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label"
 #| msgid ""

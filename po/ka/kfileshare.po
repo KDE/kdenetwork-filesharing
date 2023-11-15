@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:32+0000\n"
+"POT-Creation-Date: 2023-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-06-29 07:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -271,15 +271,23 @@ msgstr ""
 "<resource>%2</resource> მასში ვერ ჩავამატებ."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "For security reasons, cannot make user <resource>%1</resource> a member "
+#| "of group <resource>%2</"
+#| "resource>.                                                    The group "
+#| "name is insecure; valid group names include the text <resource>samba</"
+#| "resource> and do not                                                    "
+#| "include the text <resource>admin</resource> or <resource>root</resource>."
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
 "უსაფრთხოების მიზნით მომხმარებელს <resource>%1</resource> ჯგუფში <resource>"
 "%2</resource> ვერ ჩავამატებთ.                                   ჯგუფის "
@@ -337,31 +345,7 @@ msgstr ""
 "გამოა. გაასწორეთ გაზიარება ხელით, შემდეგ კი დახურეთ ეს ფანჯარა და თავიდან "
 "გახსენით."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:62
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> has its group "
-"owner inappropriately set to <resource>%2</resource>, which is not allowed."
-msgstr ""
-"ამ საქაღალდის გაზიარება შეუძლებელია, რადგან <filename>%1</filename>-ს "
-"მფლობელის ჯგუფი <resource>%2</resource>-ზე უყენია."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by changing that folder's group owner to "
-"<resource>sambashares</resource> and making yourself a member of that group. "
-"Then restart the system."
-msgstr ""
-"ეს შეცდომა თქვენი დისტროს მიერ Samba-ის არასწორად მორგების შედეგია. "
-"შეგიძლიათ ის თქვენ თვითონ გაასწოროთ, რიცხვისაც საქაღალდის ჯგუფის მფლობელი "
-"<resource>sambashares</resource>-ზე შეცვალეთ და თქვენი თავი იმ ჯგუფში "
-"ჩაამატეთ, შემდეგ კი დაარესტარტეთ სისტემა."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -371,7 +355,7 @@ msgstr ""
 "საქაღალდის გაზიარება შეუძლებელია, რადგან თქვენი მომხმარებლის ანგარიში "
 "<resource>%1</resource> ჯგუფის წევრი არაა."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -381,13 +365,13 @@ msgstr ""
 "ეს შეგიძლიათ თქვენი მომხმარებლის შესაბამის ჯგუფში ჩამატებით გამოასწოროთ. "
 "შემდეგ კი გადატვირთეთ სისტემა."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:77
+#: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "ჯგუფის წევრებში ჩამატება"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:86
+#: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -397,7 +381,7 @@ msgstr ""
 "საქაღალდის გაზიარება შეუძლებელია, რადგან თქვენს ანგარიშს <filename>%1</"
 "filename>-ში ჩაწერა არ შეუძლია."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:88
+#: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -409,7 +393,7 @@ msgstr ""
 "%2</filename>-ზე ჩაწერის უფლება გააჩნია. შემდეგ დახურეთ ეს ფანჯარა და "
 "თავიდან გახსენით."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:116
+#: samba/filepropertiesplugin/groupmanager.cpp:103
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -419,7 +403,7 @@ msgstr ""
 "მომხმარებელი '%1' ჩაემატა ჯგუფში '%2'. ახლა მას Samba-ის მომხმარებლის "
 "გაზიარებების მორგება შეუძლია"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:127
+#: samba/filepropertiesplugin/groupmanager.cpp:114
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -820,3 +804,24 @@ msgstr "შემოწმება, არსებობს თუ არა S
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Samba-ის ახალი მომხმარებლის შექმნა '%1'"
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This folder can't be shared because <filename>%1</filename> has its group "
+#~ "owner inappropriately set to <resource>%2</resource>, which is not "
+#~ "allowed."
+#~ msgstr ""
+#~ "ამ საქაღალდის გაზიარება შეუძლებელია, რადგან <filename>%1</filename>-ს "
+#~ "მფლობელის ჯგუფი <resource>%2</resource>-ზე უყენია."
+
+#~ msgctxt "@info:status"
+#~ msgid ""
+#~ "This error is caused by your distribution not setting up Samba sharing "
+#~ "properly. You can fix it yourself by changing that folder's group owner "
+#~ "to <resource>sambashares</resource> and making yourself a member of that "
+#~ "group. Then restart the system."
+#~ msgstr ""
+#~ "ეს შეცდომა თქვენი დისტროს მიერ Samba-ის არასწორად მორგების შედეგია. "
+#~ "შეგიძლიათ ის თქვენ თვითონ გაასწოროთ, რიცხვისაც საქაღალდის ჯგუფის მფლობელი "
+#~ "<resource>sambashares</resource>-ზე შეცვალეთ და თქვენი თავი იმ ჯგუფში "
+#~ "ჩაამატეთ, შემდეგ კი დაარესტარტეთ სისტემა."

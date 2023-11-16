@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 00:42+0000\n"
-"PO-Revision-Date: 2023-06-28 09:08+0300\n"
+"PO-Revision-Date: 2023-11-15 08:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -279,15 +279,7 @@ msgstr ""
 "запис користувача <resource>%2</resource>, як її учасника."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "For security reasons, cannot make user <resource>%1</resource> a member "
-#| "of group <resource>%2</"
-#| "resource>.                                                    The group "
-#| "name is insecure; valid group names include the text <resource>samba</"
-#| "resource> and do not                                                    "
-#| "include the text <resource>admin</resource> or <resource>root</resource>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
@@ -299,8 +291,8 @@ msgid ""
 msgstr ""
 "З міркувань безпеки неможливо створити запис користувача <resource>%1</"
 "resource>, як учасника групи <resource>%2</resource>. Назва групи не є "
-"безпечною; коректні назви груп містять слів <resource>samba</resource> і не "
-"містять слова <resource>admin</resource> або <resource>root</resource>."
+"безпечною; коректні назви груп не містять слів <resource>admin</resource> "
+"або <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

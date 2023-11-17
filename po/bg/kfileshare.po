@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007.
 # Yasen Pramatarov <yasen@lindeas.com>, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-15 00:42+0000\n"
-"PO-Revision-Date: 2023-06-29 15:36+0200\n"
+"PO-Revision-Date: 2023-11-16 13:57+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -273,15 +273,7 @@ msgstr ""
 "потребител <resource>%2</resource> като неин член."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "For security reasons, cannot make user <resource>%1</resource> a member "
-#| "of group <resource>%2</"
-#| "resource>.                                                    The group "
-#| "name is insecure; valid group names include the text <resource>samba</"
-#| "resource> and do not                                                    "
-#| "include the text <resource>admin</resource> or <resource>root</resource>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
@@ -294,9 +286,8 @@ msgstr ""
 "От съображения за сигурност не може да направите потребителя <resource>%1</"
 "resource> член на група <resource>%2</"
 "resource>.                                                    Името на "
-"групата е несигурно; валидните имена на групи включват текста "
-"<resource>samba</resource> и не включват текста <resource>admin</resource> "
-"или <resource>root</resource>."
+"групата е несигурно; валидните имена на групи не включват текста "
+"<resource>admin</resource> или <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

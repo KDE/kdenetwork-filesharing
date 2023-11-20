@@ -13,6 +13,8 @@
 void SambaInstaller::install()
 {
     setInstalling(true);
+    PackageKit::Daemon::setHints(PackageKit::Daemon::hints() + QStringList{QStringLiteral("interactive=true")});
+
     const QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
     QStringList distroSambaPackages = package.split(QLatin1Char(','));
 

@@ -16,8 +16,8 @@ Kirigami.ScrollablePage {
         Layout.fillHeight: true
         Layout.fillWidth: true
         model: Samba.Context.aceModel
-        delegate: Kirigami.BasicListItem {
-            icon: ROLE_ACEObject.inherited ? "emblem-locked" : undefined
+        delegate: QQC2.ItemDelegate {
+            icon.name: ROLE_ACEObject.inherited ? "emblem-locked" : undefined
             text: ROLE_Sid
             onClicked: root.pageStack.push("qrc:/org.kde.filesharing.samba.acl/qml/ACEPage.qml", {title: ROLE_Sid, aceObject: ROLE_ACEObject})
         }

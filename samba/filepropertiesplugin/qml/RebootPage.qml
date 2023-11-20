@@ -16,7 +16,7 @@ Item {
 
         text: i18nc("@label", "Restart the computer to complete the changes.")
         helpfulAction: Kirigami.Action {
-            iconName: "system-restart"
+            icon.name: "system-restart"
             text: i18nc("@button restart the system", "Restart")
             onTriggered: sambaPlugin.reboot()
         }

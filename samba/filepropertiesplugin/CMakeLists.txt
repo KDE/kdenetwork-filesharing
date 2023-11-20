@@ -1,44 +1,35 @@
-########### next target ###############
-
-set(sambausershareplugin_PART_SRCS
+add_library(sambausershareplugin MODULE
     sambausershareplugin.cpp
     model.cpp
     usermanager.cpp
     groupmanager.cpp
     permissionshelper.cpp
-
     qml/qml.qrc
 )
 
-if(SAMBA_INSTALL)
-    list(APPEND sambausershareplugin_PART_SRCS sambainstaller.cpp)
-endif()
-
-
-add_library(sambausershareplugin MODULE ${sambausershareplugin_PART_SRCS})
-
 target_link_libraries(sambausershareplugin
-    KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::KIOCore
+    KF6::KIOWidgets
     Qt::Qml
     Qt::QuickWidgets
-    QCoro${QT_MAJOR_VERSION}::Coro
-    KF${KF_MAJOR_VERSION}::AuthCore
+    QCoro6::Coro
+    KF6::AuthCore
 )
 
 if(SAMBA_INSTALL)
-    target_link_libraries(sambausershareplugin PK::packagekitqt${QT_MAJOR_VERSION})
+    target_sources(sambausershareplugin PRIVATE sambainstaller.cpp)
+    target_link_libraries(sambausershareplugin PK::packagekitqt6)
 endif()
 
-install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/propertiesdialog)
+install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/propertiesdialog)
 
 # kauth
 
 kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)
 add_executable(authhelper authhelper.cpp)
-target_link_libraries(authhelper KF${KF_MAJOR_VERSION}::AuthCore KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::I18n)
+target_link_libraries(authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n)
 
 kauth_install_helper_files(authhelper org.kde.filesharing.samba root)
 install(TARGETS authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

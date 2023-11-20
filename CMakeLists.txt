@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
 project(filesharing)
 
-set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.92.0")
+set(QT_MIN_VERSION "6.6.0")
+set(KF_MIN_VERSION "5.240.0")
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
+find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(FeatureSummary)
 include(KDEInstallDirs)
@@ -16,21 +16,14 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMDeprecationSettings)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    set(QT_REQUIRED_VERSION "6.4.0")
-    set(KF_MIN_VERSION "5.240.0")
-    set(KF_MAJOR_VERSION "6")
-else()
-    set(KF_MAJOR_VERSION "5")
-endif()
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
     Widgets
     Qml
     QuickWidgets
 )
 
-find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
+find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS
     Auth
     Completion
     CoreAddons
@@ -39,14 +32,14 @@ find_package(KF${KF_MAJOR_VERSION} ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     WidgetsAddons
 )
 
-find_package(PackageKitQt${QT_MAJOR_VERSION})
-set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
+find_package(PackageKitQt6)
+set_package_properties(PackageKitQt6
     PROPERTIES DESCRIPTION "Software Manager integration"
     TYPE OPTIONAL
     PURPOSE "Needed to automatically install the samba package."
 )
 
-find_package(QCoro${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core)
+find_package(QCoro6 REQUIRED COMPONENTS Core)
 
 find_package(net)
 set_package_properties(net PROPERTIES
@@ -77,7 +70,7 @@ endif(WIN32)
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME \"samba\" CACHE STRING "Single package or comma-separated list of packages needed for a functional Samba stack on this distribution.")
 
-if(SAMBA_INSTALL AND PackageKitQt${QT_MAJOR_VERSION}_FOUND)
+if(SAMBA_INSTALL AND PackageKitQt6_FOUND)
     add_definitions(-DSAMBA_INSTALL)
     add_definitions(-DSAMBA_PACKAGE_NAME=${SAMBA_PACKAGE_NAME})
 else()

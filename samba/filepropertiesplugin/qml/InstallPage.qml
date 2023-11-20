@@ -32,7 +32,7 @@ Item {
 
         text: xi18nc("@info", "The <application>Samba</application> file sharing service must be installed before folders can be shared.")
         helpfulAction: Kirigami.Action {
-            iconName: "install"
+            icon.name: "install"
             text: i18nc("@button", "Install Samba")
             onTriggered: installer.install()
             enabled: !installer.installing && !installer.installed

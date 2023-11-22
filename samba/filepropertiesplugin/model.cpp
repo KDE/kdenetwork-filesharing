@@ -26,11 +26,7 @@ UserPermissionModel::UserPermissionModel(const KSambaShareData &shareData, UserM
 void UserPermissionModel::setupData()
 {
     const QStringList acl = m_shareData.acl().split(QLatin1Char(','),
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-                                            QString::SkipEmptyParts);
-#else
                                             Qt::SkipEmptyParts);
-#endif
 
     QList<QString>::const_iterator itr;
     for (itr = acl.constBegin(); itr != acl.constEnd(); ++itr) {

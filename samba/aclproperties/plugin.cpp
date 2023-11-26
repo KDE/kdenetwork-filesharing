@@ -132,13 +132,11 @@ static Context &context()
      * POSIX ACL default:* entries are mapped in the flags if applicable (i.e. INHERIT_ONLY_ACE | CONTAINER_INHERIT_ACE | OBJECT_INHERIT_ACE)
      */
 
-SambaACL::SambaACL(QObject *parent, const QList<QVariant> &args)
-    : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
+SambaACL::SambaACL(QObject *parent)
+    : KPropertiesDialogPlugin(parent)
     , m_url(properties->url())
     , m_page(new QWidget(qobject_cast<KPropertiesDialog *>(parent)))
 {
-    Q_UNUSED(args);
-
     auto parts = m_url.path().split(QLatin1Char('/'));
     parts.removeAll(QLatin1String());
     if (!m_url.isValid() || parts.isEmpty()) {

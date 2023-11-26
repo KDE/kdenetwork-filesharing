@@ -10,7 +10,8 @@
 #ifndef SAMBAUSERSHAREPLUGIN_H
 #define SAMBAUSERSHAREPLUGIN_H
 
-#include <kpropertiesdialog.h>
+#include <KPropertiesDialogPlugin>
+#include <KPropertiesDialog>
 #include <KSambaShareData>
 #include <KSambaShare>
 #include <QFileInfo>
@@ -153,7 +154,7 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_PROPERTY(PermissionsHelper *permissionsHelper MEMBER m_permissionsHelper CONSTANT)
 
 public:
-    SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args);
+    SambaUserSharePlugin(QObject *parent);
     ~SambaUserSharePlugin() override = default;
     void applyChanges() override;
 

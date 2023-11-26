@@ -38,13 +38,11 @@
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
 
-SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent, const QList<QVariant> &args)
-    : KPropertiesDialogPlugin(qobject_cast<KPropertiesDialog *>(parent))
+SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
+    : KPropertiesDialogPlugin(parent)
     , m_url(properties->item().mostLocalUrl().toLocalFile())
     , m_userManager(new UserManager(this))
 {
-    Q_UNUSED(args)
-
     if (m_url.isEmpty()) {
         return;
     }

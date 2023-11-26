@@ -4,13 +4,14 @@
 #pragma once
 
 #include <KPropertiesDialog>
+#include <KPropertiesDialogPlugin>
 
 class SambaACL : public KPropertiesDialogPlugin
 {
     Q_OBJECT
     Q_PROPERTY(bool ready MEMBER m_ready NOTIFY readyChanged)
 public:
-    explicit SambaACL(QObject *parent, const QList<QVariant> &args);
+    explicit SambaACL(QObject *parent);
     void applyChanges() override;
 
 Q_SIGNALS:

@@ -1,7 +1,7 @@
 # Translation for kfileshare.po to Euskara/Basque (eu).
 # Copyright (C) 2005-2023 This file is copyright:
 # This file is distributed under the same license as the kdenetwork-filesharing package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2005.
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-23 01:38+0000\n"
-"PO-Revision-Date: 2023-07-16 20:42+0200\n"
+"PO-Revision-Date: 2023-11-25 09:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.0\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -279,15 +279,7 @@ msgstr ""
 "resource> erabiltzailea haren partaide egin."
 
 #: samba/filepropertiesplugin/authhelper.cpp:118
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "For security reasons, cannot make user <resource>%1</resource> a member "
-#| "of group <resource>%2</"
-#| "resource>.                                                    The group "
-#| "name is insecure; valid group names include the text <resource>samba</"
-#| "resource> and do not                                                    "
-#| "include the text <resource>admin</resource> or <resource>root</resource>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
@@ -299,10 +291,10 @@ msgid ""
 msgstr ""
 "Segurtasun arrazoiengatik, ezin da <resource>%1</resource> erabiltzailea "
 "<resource>%2</resource> taldeko partaide "
-"egin.                                                    Talde izena ez da "
-"segurua; talde-izen baliodunek <resource>samba</resource> testua dute eta ez "
-"dute                                                    <resource>admin</"
-"resource> edo <resource>root</resource> testurik."
+"egin.                                                     Talde izena ez da "
+"segurua; talde-izen baliodunek ez "
+"dute                                                     <resource>admin</"
+"resource> edo <resource>root</resource> testua izaten."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

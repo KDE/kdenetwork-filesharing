@@ -200,19 +200,21 @@ QCoro::Task<void> PermissionsHelper::reloadInternal() {
     // check if share path could be resolved (has 'g+x' or 'o+x' all the way through)
     if (permsForShare) {
         QStringList pathParts = m_path.split(QStringLiteral("/"), Qt::SkipEmptyParts);
-        pathParts.removeLast();
-        QString currentPath;
+        if (pathParts.count() > 1) {
+            pathParts.removeLast();
+            QString currentPath;
 
-        for (const auto &it : qAsConst(pathParts)) {
-            currentPath.append(QStringLiteral("/") + it);
-            fileInfo = QFileInfo(currentPath);
-            if (!fileInfo.permission(permsForSharePath)) {
-                addPath(fileInfo, permsForSharePath);
-            }
-            // check and store share path element's POSIX ACL
-            KFileItem fileItem = co_await getCompleteFileItem(m_path);
-            if (fileItem.hasExtendedACL()) {
-                m_filesWithPosixACL.append(currentPath);
+            for (const auto &it : qAsConst(pathParts)) {
+                currentPath.append(QStringLiteral("/") + it);
+                fileInfo = QFileInfo(currentPath);
+                if (!fileInfo.permission(permsForSharePath)) {
+                    addPath(fileInfo, permsForSharePath);
+                }
+                // check and store share path element's POSIX ACL
+                KFileItem fileItem = co_await getCompleteFileItem(m_path);
+                if (fileItem.hasExtendedACL()) {
+                    m_filesWithPosixACL.append(currentPath);
+                }
             }
         }
     }

@@ -4,17 +4,40 @@
 */
 
 #include "authhelper.h"
-#include <kauth/helpersupport.h>
+#include <KLocalizedString>
+#include <KUser>
 #include <QProcess>
 #include <QRegularExpression>
-#include <KLocalizedString>
+#include <kauth/helpersupport.h>
 
-static bool isValidUserName(const QString &name)
+namespace
+{
+bool isValidUserName(const QString &name)
 {
     // https://systemd.io/USER_NAMES/
     static QRegularExpression expr(QStringLiteral("^[a-z_][a-z0-9_-]*$"));
     return expr.match(name).hasMatch();
 }
+
+std::optional<QString> callerUidToUserName()
+{
+    const auto uid = KAuth::HelperSupport::callerUid();
+    if (uid < 0) {
+        return {};
+    }
+
+    const KUser user(static_cast<K_UID>(uid));
+    if (!user.isValid()) {
+        return {};
+    }
+
+    auto name = user.loginName();
+    if (name.isEmpty()) {
+        return {};
+    }
+    return name;
+}
+} // namespace
 
 ActionReply AuthHelper::isuserknown(const QVariantMap &args)
 {
@@ -51,13 +74,13 @@ ActionReply AuthHelper::isuserknown(const QVariantMap &args)
 
 ActionReply AuthHelper::createuser(const QVariantMap &args)
 {
-    const auto username = args.value(QStringLiteral("username")).toString();
-    const auto password = args.value(QStringLiteral("password")).toString();
-    if (!isValidUserName(username)) {
+    const auto username = callerUidToUserName();
+    if (!username.has_value()) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "<resource>%1</resource> is not a valid Samba user name; cannot create it.", username));
+        reply.setErrorDescription(xi18nc("@info error while looking up uid from dbus", "Could not resolve calling user."));
         return reply;
     }
+    const auto password = args.value(QStringLiteral("password")).toString();
     if (password.isEmpty()) {
         auto reply = ActionReply::HelperErrorReply();
         reply.setErrorDescription(i18nc("@info", "For security reasons, creating Samba users with empty passwords is not allowed."));
@@ -71,7 +94,7 @@ ActionReply AuthHelper::createuser(const QVariantMap &args)
         QStringLiteral("-s"), /* read from stdin */
         QStringLiteral("-D"), QStringLiteral("0"), /* force-disable debug */
         QStringLiteral("-a"), /* add user */
-        username });
+        username.value() });
     p.start();
     // despite being in silent mode we still need to write the password twice!
     p.write((password + QStringLiteral("\n")).toUtf8());
@@ -96,21 +119,19 @@ ActionReply AuthHelper::createuser(const QVariantMap &args)
 
 ActionReply AuthHelper::addtogroup(const QVariantMap &args)
 {
-    const auto user = args.value(QStringLiteral("user")).toString();
     const auto group = args.value(QStringLiteral("group")).toString();
-    if (!isValidUserName(user)) {
+    const auto user = callerUidToUserName();
+    if (!user.has_value()) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "<resource>%1</resource> is not a valid user name; cannot add it to the group <resource>%2</resource>.", user, group));
+        reply.setErrorDescription(xi18nc("@info error while looking up uid from dbus", "Could not resolve calling user."));
         return reply;
     }
     if (!isValidUserName(group)) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "<resource>%1</resource> is not a valid group name; cannot make user <resource>%2</resource> a member of it.", group, user));
+        reply.setErrorDescription(xi18nc("@info", "<resource>%1</resource> is not a valid group name; cannot make user <resource>%2</resource> a member of it.", group, user.value()));
         return reply;
     }
     // Harden against some input abuse.
-    // TODO: add ability to resolve remote UID via KAuth and verify the request (or even reduce the arguments down to
-    //    only the group and resolve the UID)
     // Keep this condition in sync with the one in groupmanager.cpp
     if (group.contains(QLatin1String("admin")) ||
         group.contains(QLatin1String("root"))) {
@@ -129,14 +150,14 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
         QStringLiteral("mod"),
         QStringLiteral("{%1}").arg(group),
         QStringLiteral("-m"),
-        QStringLiteral("{%1}").arg(user) });
+        QStringLiteral("{%1}").arg(user.value()) });
 #elif defined(Q_OS_LINUX) || defined(Q_OS_HURD)
     p.setProgram(QStringLiteral("/usr/sbin/usermod"));
     p.setArguments({
         QStringLiteral("--append"),
         QStringLiteral("--groups"),
         group,
-        user });
+        user.value() });
 #else
 #   error "Platform lacks group management support. Please add support."
 #endif

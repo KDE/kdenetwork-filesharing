@@ -108,10 +108,11 @@ void User::resolve()
 void User::addToSamba(const QString &password)
 {
     Q_ASSERT(qobject_cast<UserManager *>(parent())->canManageSamba());
+    // We currently only support adding a plasma user for the current user, not others.
+    Q_ASSERT(qobject_cast<UserManager *>(parent())->currentUser() == this);
 
     auto action = KAuth::Action(QStringLiteral("org.kde.filesharing.samba.createuser"));
     action.setHelperId(QStringLiteral("org.kde.filesharing.samba"));
-    action.addArgument(QStringLiteral("username"), m_name);
     action.addArgument(QStringLiteral("password"), password);
     action.setDetailsV2({{
         KAuth::Action::AuthDetail::DetailMessage,

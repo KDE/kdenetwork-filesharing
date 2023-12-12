@@ -96,7 +96,6 @@ void GroupManager::performHelpfulAction()
             Q_ASSERT(!group.isEmpty());
             auto action = KAuth::Action(QStringLiteral("org.kde.filesharing.samba.addtogroup"));
             action.setHelperId(QStringLiteral("org.kde.filesharing.samba"));
-            action.addArgument(QStringLiteral("user"), user);
             action.addArgument(QStringLiteral("group"), group);
             action.setDetailsV2({{KAuth::Action::AuthDetail::DetailMessage,
                                 xi18nc("@label kauth action description %1 is a username %2 a group name",

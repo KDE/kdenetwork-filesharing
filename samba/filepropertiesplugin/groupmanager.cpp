@@ -37,9 +37,9 @@ GroupManager::GroupManager(QObject *parent)
                 Q_EMIT errorTextChanged();
                 const auto err = proc->readAllStandardError().trimmed();
                 if (err.isEmpty()) {
-                    m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing.");
+                    m_errorExplanation = xi18nc("@info:status", "This error may be caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing.");
                 } else {
-                    m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing. Error:<nl/><message>%1</message>", QString::fromUtf8(err));
+                    m_errorExplanation = xi18nc("@info:status", "This error may be caused by your distribution not setting up Samba sharing properly. Please file a bug with your distribution or check your distribution's documentation on setting up Samba sharing. Error:<nl/><message>%1</message>", QString::fromUtf8(err));
                 }
                 Q_EMIT errorExplanationChanged();
             }
@@ -48,7 +48,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (!info.exists()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> does not exist.", path);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by creating that folder manually. Then close and re-open this window.");
+                m_errorExplanation = xi18nc("@info:status", "This error may be caused by your distribution not setting up Samba sharing properly. You can fix it yourself by creating that folder manually, then close and re-open this window. Alternatively, you may check your distribution's documentation on setting up Samba sharing.");
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that creates the folder
             }
@@ -72,7 +72,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (!info.isWritable()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account doesn't have permission to write into <filename>%1</filename>.", path);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>. Then close and re-open this window.",  m_targetGroup, path);
+                m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>. Then close and re-open this window. Alternatively, you may check your distribution's documentation on setting up Samba sharing.",  m_targetGroup, path);
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that adds group write permission to the folder
             }

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-16 12:35+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -231,7 +231,7 @@ msgstr ""
 "Вероятно, для этого файла не заданы права доступа SMB, Windows или "
 "расширенные права доступа."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -241,23 +241,21 @@ msgstr ""
 "Имя пользователя <resource>%1</resource> не является корректным именем "
 "пользователя Samba; не удалось проверить его существование."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Ошибка при выполнении команды <command>%1 %2</command>:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"<resource>%1</resource> не является корректным именем пользователя Samba; не "
-"удалось выполнить создание."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -267,17 +265,7 @@ msgstr ""
 "Создание пользователей Samba с пустыми паролями не допускается по "
 "соображениям безопасности."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> не является корректным именем пользователя; не "
-"удалось добавить его в группу <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -287,7 +275,7 @@ msgstr ""
 "<resource>%1</resource> не является корректным именем группы; не удалось "
 "сделать пользователя <resource>%2</resource> её участником."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, fuzzy, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -406,7 +394,7 @@ msgstr ""
 "имеет права записи для <filename>%2</filename>. Затем закройте и откройте "
 "окно ещё раз."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -417,7 +405,7 @@ msgstr ""
 "resource> для предоставления возможности настройки пользовательских ресурсов "
 "Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -817,11 +805,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Проверка существования пользователя Samba «%1»"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Создание нового пользователя Samba «%1»"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> не является корректным именем пользователя Samba; "
+#~ "не удалось выполнить создание."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> не является корректным именем пользователя; не "
+#~ "удалось добавить его в группу <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""

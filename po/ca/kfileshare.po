@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-15 09:46+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -221,7 +221,7 @@ msgstr ""
 "Probablement, no hi ha permisos SMB/Windows/Avançats definits en aquest "
 "fitxer."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,23 +231,21 @@ msgstr ""
 "El nom d'usuari <resource>%1</resource> no és vàlid com a nom d'usuari del "
 "Samba; no s'ha pogut comprovar la seva existència."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "L'ordre <command>%1 %2</command> ha fallat:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"<resource>%1</resource> no és un nom d'usuari vàlid del Samba; no s'ha pogut "
-"crear."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -257,17 +255,7 @@ msgstr ""
 "Per motius de seguretat, no es permet crear usuaris del Samba amb "
 "contrasenyes buides."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> no és un nom d'usuari vàlid; no s'ha pogut afegir al "
-"grup <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -277,7 +265,7 @@ msgstr ""
 "<resource>%1</resource> no és un nom de grup vàlid; no s'ha pogut incorporar "
 "l'usuari <resource>%2</resource> com a membre seu."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -395,7 +383,7 @@ msgstr ""
 "permís d'escriptura per a <filename>%2</filename>. Després tanqueu i torneu "
 "a obrir aquesta finestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -405,7 +393,7 @@ msgstr ""
 "S'afegeix l'usuari <resource>%1</resource> al grup <resource>%2</resource> "
 "per tal que pugui configurar les comparticions d'usuari del Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -807,8 +795,23 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Comprovació d'existència de l'usuari Samba «%1»"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Es crea l'usuari Samba nou «%1»"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> no és un nom d'usuari vàlid del Samba; no s'ha "
+#~ "pogut crear."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> no és un nom d'usuari vàlid; no s'ha pogut afegir "
+#~ "al grup <resource>%2</resource>."

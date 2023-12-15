@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-07-02 02:19+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -237,7 +237,7 @@ msgstr ""
 "Provavelmente não existem permissões do SMB/Windows/avançadas definidas para "
 "este ficheiro."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -247,23 +247,21 @@ msgstr ""
 "O nome do utilizador <resource>%1</resource> não é válido como o nome de um "
 "utilizador do Samba; não é possível verificar a sua existência."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "O comando <command>%1 %2</command> falhou:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"O <resource>%1</resource> não é um utilizador válido do Samba; não é "
-"possível criá-lo."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -273,17 +271,7 @@ msgstr ""
 "Por questões de segurança, a criação de utilizadores do Samba com senhas "
 "vazias não é permitida."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"O <resource>%1</resource> não é um nome de utilizador válido; não é possível "
-"adicioná-lo ao grupo <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -293,7 +281,7 @@ msgstr ""
 "O <resource>%1</resource> não é um nome de grupo válido; não é possível "
 "tornar o <resource>%2</resource> um membro do mesmo."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -421,7 +409,7 @@ msgstr ""
 "permissões de escrita para o <filename>%2</filename>. Depois feche e volte a "
 "abrir esta janela."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -431,7 +419,7 @@ msgstr ""
 "A adicionar o utilizador <resource>%1</resource> ao grupo <resource>%2</"
 "resource> para que possam configurar as partilhas de utilizadores do Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -832,11 +820,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "A verificar se o utilizador do Samba '%1' existe"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "A criar o novo utilizador do Samba '%1'"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "O <resource>%1</resource> não é um utilizador válido do Samba; não é "
+#~ "possível criá-lo."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "O <resource>%1</resource> não é um nome de utilizador válido; não é "
+#~ "possível adicioná-lo ao grupo <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-07-24 23:45+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -212,7 +212,7 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "이 파일에 SMB/Windows/고급 권한이 설정되지 않았습니다."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,23 +222,21 @@ msgstr ""
 "사용자 이름 <resource>%1</resource>은(는) 올바른 Samba 사용자 이름이 아닙니"
 "다. 존재 여부를 확인할 수 없습니다."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "<command>%1 %2</command> 명령 실패:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"<resource>%1</resource>은(는) 올바른 Samba 사용자 이름이 아닙니다. 생성할 수 "
-"없습니다."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -246,17 +244,7 @@ msgid ""
 "allowed."
 msgstr "보안상의 이유로 빈 암호를 사용하여 Samba 사용자를 만들 수 없습니다."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource>이(가) 올바른 사용자 이름이 아니므로 <resource>%2</"
-"resource> 그룹에 추가할 수 없습니다."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -266,7 +254,7 @@ msgstr ""
 "<resource>%1</resource>은(는) 올바른 그룹 이름이 아닙니다. <resource>%2</"
 "resource> 사용자를 그룹 구성원으로 추가할 수 없습니다."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -388,7 +376,7 @@ msgstr ""
 "<resource>%1</resource> 그룹이 <filename>%2</filename>에 쓰기 권한이 있도록 "
 "변경하십시오. 그 다음 창을 닫고 다시 여십시오."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -398,7 +386,7 @@ msgstr ""
 "Samba 사용자 공유를 설정할 수 있도록 <resource>%1</resource> 사용자를 "
 "<resource>%2</resource> 그룹에 추가 중"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -791,11 +779,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Samba 사용자 '%1' 존재 여부 검사 중"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "새 Samba 사용자 '%1' 만들기"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource>은(는) 올바른 Samba 사용자 이름이 아닙니다. 생성할 "
+#~ "수 없습니다."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource>이(가) 올바른 사용자 이름이 아니므로 <resource>%2</"
+#~ "resource> 그룹에 추가할 수 없습니다."
 
 #~ msgctxt "@info:status"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-23 10:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 "Il ha probabilemente necun permissiones de SMB/Windows/Avantiate fixate sur "
 "iste file."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,23 +227,22 @@ msgstr ""
 "Nomine de usator <resource>%1</resource> non es vaide como nomine de un "
 "usator de Samba; non pote verificar su existentia."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Commando <command>%1 %2</command> falleva:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
-msgstr ""
-"<resource>%1</resource> non es un valide nomine de usator de Samba; non pote "
-"crear lo."
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
+#, fuzzy, kde-kuit-format
+#| msgid "Could not save settings."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
+msgstr "Non pote salveguardar preferentias."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -253,17 +252,7 @@ msgstr ""
 "Per ration de securitate, crear usatores de Samba con contrasignos vacue non "
 "es permittite."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> non es un valide nomine de usator; non pote adder lo "
-"al gruppo <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -273,7 +262,7 @@ msgstr ""
 "<resource>%1</resource> non es un valide nomine de gruppo; non pote facer "
 "usator <resource>%2</resource> un membro de illo."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -391,7 +380,7 @@ msgstr ""
 "permission de scriber per <filename>%2</filename>.  Tum  claude e re-aperi "
 "iste fenestra."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -401,7 +390,7 @@ msgstr ""
 "Addente usator <resource>%1</resource> a gruppo <resource>%2</resource> assi "
 "que illos pote configurar partes (shares) de usator de Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -802,11 +791,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Verificante si usator de Samba '%1' existe"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Creante nove usator de Samba '%1'"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> non es un valide nomine de usator de Samba; non "
+#~ "pote crear lo."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> non es un valide nomine de usator; non pote adder "
+#~ "lo al gruppo <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""
@@ -3520,9 +3524,6 @@ msgstr "Creante nove usator de Samba '%1'"
 
 #~ msgid "No NFS server installed on this system"
 #~ msgstr "Nulle servitor NFS esseva installate sur iste systema"
-
-#~ msgid "Could not save settings."
-#~ msgstr "Non pote salveguardar preferentias."
 
 #~ msgid "Could not open file '%1' for writing: %2"
 #~ msgstr "Il non pote aperir file'%1' per scriber: '%2'"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-16 05:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -214,7 +214,7 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "ფაილზე SMB/Windows/დამატებითი წვდომები დაყენებული არაა."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -224,23 +224,21 @@ msgstr ""
 "მომმხარებლის სახელი <resource>%1</resource> Samba-ის მომხმარებლის სწორი "
 "სახელს არ წარმოადგენს. გადაამოწმეთ, თუ არსებობს ის."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "ბრძანების <command>%1 %2</command> შეცდომა:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"<resource>%1</resource> Samba-ის მომხმარებლის სწორი სახელი არაა. მისი შექმნა "
-"შეუძლებელია."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -250,17 +248,7 @@ msgstr ""
 "უსაფრთხოების მიზნით Samba-ის მომხმარებლის ცარიელი პაროლით შექმნა დაშვებული "
 "არაა."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> მომხმარებლის არასწორი სახელია. მისი ჩამატება "
-"ჯგუფში<resource>%2</resource> შეუძლებელია."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -270,7 +258,7 @@ msgstr ""
 "<resource>%1</resource> ჯგუფის სწორ სახელს არ წარმოადგენს. მომხმარებელს "
 "<resource>%2</resource> მასში ვერ ჩავამატებ."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -384,7 +372,7 @@ msgstr ""
 "%2</filename>-ზე ჩაწერის უფლება გააჩნია. შემდეგ დახურეთ ეს ფანჯარა და "
 "თავიდან გახსენით."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -394,7 +382,7 @@ msgstr ""
 "მომხმარებელი '%1' ჩაემატა ჯგუფში '%2'. ახლა მას Samba-ის მომხმარებლის "
 "გაზიარებების მორგება შეუძლია"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -790,11 +778,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "შემოწმება, არსებობს თუ არა Samba-ის მომხმარებელი '%1'"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Samba-ის ახალი მომხმარებლის შექმნა '%1'"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> Samba-ის მომხმარებლის სწორი სახელი არაა. მისი "
+#~ "შექმნა შეუძლებელია."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> მომხმარებლის არასწორი სახელია. მისი ჩამატება "
+#~ "ჯგუფში<resource>%2</resource> შეუძლებელია."
 
 #~ msgctxt "@info:status"
 #~ msgid ""

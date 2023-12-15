@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-15 11:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -220,7 +220,7 @@ msgstr ""
 "Er zijn waarschijnlijk geen SMB/Windows/Geavanceerde rechten ingesteld op "
 "dit bestand."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -230,23 +230,22 @@ msgstr ""
 "Gebruikersnaam <resource>%1</resource> is niet geldig als de naam van een "
 "Samba gebruiker; kan zijn bestaan niet controleren."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Commando <command>%1 %2</command> is mislukt:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
-msgstr ""
-"<resource>%1</resource> is geen geldige Samba gebruikersnaam; kan het niet "
-"aanmaken."
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
+#, fuzzy, kde-kuit-format
+#| msgid "Could not save settings."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
+msgstr "Kon de instellingen niet opslaan."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -256,17 +255,7 @@ msgstr ""
 "Om redenen van veiligheid is het aanmaken van Samba gebruikers met lege "
 "wachtwoorden niet toegestaan."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> is geen geldige gebruikersnaam; kan het niet "
-"toevoegen aan de groep <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -276,7 +265,7 @@ msgstr ""
 "<resource>%1</resource> is geen geldige groepsnaam; kan de gebruiker "
 "<resource>%2</resource> er geen lid van maken."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -393,7 +382,7 @@ msgstr ""
 "schrijfrechten heeft voor <filename>%2</filename>. Sluit dit venster daarna "
 "er open het opnieuw."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -403,7 +392,7 @@ msgstr ""
 "Gebruiker <resource>%1</resource> wordt toegevoegd aan groep <resource>%2</"
 "resource> zodat ze Samba-usershares kunnen configureren"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -804,11 +793,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Controleren of Samba-gebruiker '%1' bestaat"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Nieuwe Samba-gebruiker '%1' wordt aangemaakt"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> is geen geldige Samba gebruikersnaam; kan het "
+#~ "niet aanmaken."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> is geen geldige gebruikersnaam; kan het niet "
+#~ "toevoegen aan de groep <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""
@@ -3508,9 +3512,6 @@ msgstr "Nieuwe Samba-gebruiker '%1' wordt aangemaakt"
 
 #~ msgid "No NFS server installed on this system"
 #~ msgstr "Er is geen NFS-server geïnstalleerd op deze computer"
-
-#~ msgid "Could not save settings."
-#~ msgstr "Kon de instellingen niet opslaan."
 
 #~ msgid "Could not open file '%1' for writing: %2"
 #~ msgstr "Kon niet schrijven naar het bestand %1: %2"

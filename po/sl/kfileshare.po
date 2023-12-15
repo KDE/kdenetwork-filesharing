@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-15 09:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -222,7 +222,7 @@ msgid ""
 msgstr ""
 "Verjetno ni nastavljenih SMB/Windows/Naprednih dovoljenj na tej datoteki."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,23 +232,21 @@ msgstr ""
 "Uporabniško ime <resource>%1</resource> ni veljavno ime za uporabnika Sambe; "
 "ni pa mogoče preveriti njegovega obstoja."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Ukaz <command>%1 %2</command> je izpadel:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
 msgstr ""
-"<resource>%1</resource> ni veljavno uporabniško ime za Sambo; ni ga mogoče "
-"ustvariti."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -258,17 +256,7 @@ msgstr ""
 "Iz varnostnih razlogov ustvarjanje uporabnikov Sambe s praznimi gesli ni "
 "dovoljeno."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> ni veljavno uporabniško ime; ni ga mogoče dodati k "
-"skupini <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -278,7 +266,7 @@ msgstr ""
 "<resource>%1</resource> ni veljavno ime skupine; uporabnika ni mogoče "
 "<resource>%2</resource> postaviti za njenega člana."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -395,7 +383,7 @@ msgstr ""
 "dovoljenje za pisanje za <filename>%2</filename>. Potem zaprite in ponovno "
 "odprite to okno."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -405,7 +393,7 @@ msgstr ""
 "Dodajanje uporabnika <resource>%1</resource> v skupino <resource>%2</"
 "resource>, da bodo lahko nastavili skupne vire Sambe"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -805,11 +793,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Preverjanje, ali obstaja uporabnik Sambe »%1«"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Ustvarjanja novega uporabnika Sambe »%1«"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> ni veljavno uporabniško ime za Sambo; ni ga "
+#~ "mogoče ustvariti."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> ni veljavno uporabniško ime; ni ga mogoče dodati "
+#~ "k skupini <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""

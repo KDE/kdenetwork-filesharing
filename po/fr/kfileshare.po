@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-27 01:37+0000\n"
+"POT-Creation-Date: 2023-12-15 01:36+0000\n"
 "PO-Revision-Date: 2023-11-16 10:51+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -229,7 +229,7 @@ msgstr ""
 "Il n'y a probablement aucune permission SMB / Windows / Avancées définie "
 "pour ce fichier."
 
-#: samba/filepropertiesplugin/authhelper.cpp:24
+#: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -239,23 +239,22 @@ msgstr ""
 "Le nom d'utilisateur <resource>%1</resource> n'est pas valable comme nom "
 "d'utilisateur pour Samba. Il est impossible de vérifier son existence."
 
-#: samba/filepropertiesplugin/authhelper.cpp:43
+#: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "La commande <command>%1 %2</command> a échoué :<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:58
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid Samba user name; cannot create it."
-msgstr ""
-"<resource>%1</resource> n'est pas un nom valable d'utilisateur pour Samba "
-"user name. Il est impossible de le créer."
+#: samba/filepropertiesplugin/authhelper.cpp:80
+#: samba/filepropertiesplugin/authhelper.cpp:126
+#, fuzzy, kde-kuit-format
+#| msgid "Could not save settings."
+msgctxt "@info error while looking up uid from dbus"
+msgid "Could not resolve calling user."
+msgstr "Impossible d'enregistrer la configuration."
 
-#: samba/filepropertiesplugin/authhelper.cpp:63
+#: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -265,17 +264,7 @@ msgstr ""
 "Pour des raisons de sécurité, la création d'utilisateurs de Samba avec des "
 "mots de passe vides n'est pas autorisée."
 
-#: samba/filepropertiesplugin/authhelper.cpp:103
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"<resource>%1</resource> is not a valid user name; cannot add it to the group "
-"<resource>%2</resource>."
-msgstr ""
-"<resource>%1</resource> n'est pas un nom valable d'utilisateur. Il est "
-"impossible de l'ajouter au groupe <resource>%2</resource>."
-
-#: samba/filepropertiesplugin/authhelper.cpp:108
+#: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -286,7 +275,7 @@ msgstr ""
 "Il est impossible que l'utilisateur <resource>%2</resource> en devienne "
 "membre."
 
-#: samba/filepropertiesplugin/authhelper.cpp:118
+#: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -405,7 +394,7 @@ msgstr ""
 "resource> possède les permissions en écriture pour <filename>%2</filename>. "
 "Ensuite, veuillez fermer puis ré-ouvrir cette fenêtre."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:103
+#: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -415,7 +404,7 @@ msgstr ""
 "Ajout de l'utilisateur <resource>%1</resource> au groupe <resource>%2</"
 "resource> pour pouvoir configurer les partages d'utilisateurs « Samba »"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:114
+#: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -822,11 +811,26 @@ msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Vérification de l'existence de l'utilisateur « Samba » %1"
 
-#: samba/filepropertiesplugin/usermanager.cpp:118
+#: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Création d'un nouveau utilisateur « Samba » « %1 »"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
+#~ msgstr ""
+#~ "<resource>%1</resource> n'est pas un nom valable d'utilisateur pour Samba "
+#~ "user name. Il est impossible de le créer."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
+#~ "group <resource>%2</resource>."
+#~ msgstr ""
+#~ "<resource>%1</resource> n'est pas un nom valable d'utilisateur. Il est "
+#~ "impossible de l'ajouter au groupe <resource>%2</resource>."
 
 #~ msgctxt "@info:status"
 #~ msgid ""
@@ -3543,9 +3547,6 @@ msgstr "Création d'un nouveau utilisateur « Samba » « %1 »"
 
 #~ msgid "No NFS server installed on this system"
 #~ msgstr "Aucun serveur NFS n'est installé sur ce système."
-
-#~ msgid "Could not save settings."
-#~ msgstr "Impossible d'enregistrer la configuration."
 
 #~ msgid "Could not open file '%1' for writing: %2"
 #~ msgstr "Impossible d'écrire dans le fichier « %1 » : %2."

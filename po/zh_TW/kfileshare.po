@@ -8,20 +8,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2023-12-15 19:55+0900\n"
+"PO-Revision-Date: 2023-12-29 21:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.01.85\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -364,6 +364,8 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"要修正這個問題，請確保 <resource>%1</resource> 群組有 <filename>%2</"
+"filename> 的寫入權限。完成後請關閉並重新開啟本視窗。"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
@@ -372,6 +374,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
+"將使用者 <resource>%1</resource> 加入群組 <resource>%2</resource> 讓該使用者"
+"能設定 Samba 使用者共享資料夾"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -380,6 +384,7 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"將使用者 <resource>%1</resource> 加入群組 <resource>%2</resource> 時失敗"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -402,7 +407,7 @@ msgstr "需要的權限"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:29
 msgctxt "@title"
 msgid "Denying Access"
-msgstr ""
+msgstr "拒絕存取"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:43
@@ -423,7 +428,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "這個資料夾需要額外權限才能正常分享"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
 msgctxt "@action:button opens the change permissions page"
@@ -435,7 +440,7 @@ msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
-msgstr ""
+msgstr "這個共享資料夾可能無法正常運作，因為共享資料夾或它的路徑有進階權限：%1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
 msgctxt "@option:check"
@@ -461,7 +466,7 @@ msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
-msgstr ""
+msgstr "這個名稱可能太長了。它可能會造成系統間的相容性問題或是被 Samba 拒絕。"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:150
 msgctxt "@option:check"
@@ -471,7 +476,7 @@ msgstr "允許訪客"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "系統 Samba 設定已停用訪客存取。"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:253
 msgctxt "@option:radio user can read&write"
@@ -527,6 +532,9 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>資料夾 <filename>%1</filename> 需要額外權限才能正常分享。</para>\n"
+"<para>您要現在新增這些權限嗎？</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
 msgctxt "@action:button changes permissions"
@@ -538,7 +546,7 @@ msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
-msgstr ""
+msgstr "無法為此項目變更權限：%1。所有權限變更皆已回復至初始狀態。"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
 msgctxt "@action:button cancels permissions change"
@@ -570,6 +578,8 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"由於此發行版不包含 PackageKit，我們沒辦法提供一個方便的「安裝它」按鈕，您必須"
+"要手動使用您的軟體包管理員安裝 <command>samba</command> 伺服器軟體包。"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
@@ -612,6 +622,9 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"額外的使用者管理與密碼管理可以透過 Samba 的 <command>smbpasswd</command>\n"
+"命令列工具進行。"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:155
 #, kde-format
@@ -619,7 +632,7 @@ msgctxt "@info detailed error messsage"
 msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
-msgstr ""
+msgstr "您已用盡同時可使用的共享資料夾的最大數量。"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:157
 #, kde-format
@@ -725,13 +738,13 @@ msgstr "移除網路共享資料夾時失敗"
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "正在檢查 Samba 使用者 '%1' 是否存在"
 
 #: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "正在建立新的 Samba 使用者 '%1'"
 
 #, fuzzy
 #~| msgid "&Share"

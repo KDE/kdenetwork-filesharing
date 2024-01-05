@@ -8,20 +8,20 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2023-12-29 21:56+0900\n"
+"PO-Revision-Date: 2024-01-05 02:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.85\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -424,6 +424,15 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"拒絕存取會防止使用這個共享資料夾，就算另一個存取規則希望提供存取。拒絕的規則"
+"優先於接收的規則。\n"
+"拒絕<resource>所有人</resource>的存取時真的會為所有人停用存取，不論其他規則怎"
+"麼說。\n"
+"通常不會需要拒絕任何人的存取權，因為普通的目錄和檔案權限還是會套用於共享資料"
+"夾。在本機\n"
+"無法存取該目錄的使用者在遠端也還是不會有辦法存取它，就算共享資料夾的存取規則"
+"會允許存取。"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
@@ -607,6 +616,14 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba 與系統使用不同的使用者資料庫。\n"
+"這代表您必須為希望用來認證的使用者設定個別設定 Samba 的密碼。\n"
+"</para>\n"
+"<para>\n"
+"在利用您目前的使用者帳號存取共享資料夾前您必須先設定一個 Samba 密碼。\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
 msgctxt "@action:button opens dialog to create new user"

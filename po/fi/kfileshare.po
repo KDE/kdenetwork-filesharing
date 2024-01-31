@@ -4,13 +4,13 @@
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022, 2023.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2023-07-24 21:30+0300\n"
+"PO-Revision-Date: 2024-01-22 16:09+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -238,11 +238,10 @@ msgstr "Komento <command>%1 %2</command> epäonnistui:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
-#| msgid "Could not save settings."
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "Asetuksia ei voitu tallentaa."
+msgstr "Kutsuvaa käyttäjää ei voitu ratkaista."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -264,15 +263,7 @@ msgstr ""
 "%2</resource> ei voida lisätä sen jäseneksi."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "For security reasons, cannot make user <resource>%1</resource> a member "
-#| "of group <resource>%2</"
-#| "resource>.                                                    The group "
-#| "name is insecure; valid group names include the text <resource>samba</"
-#| "resource> and do not                                                    "
-#| "include the text <resource>admin</resource> or <resource>root</resource>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
@@ -282,12 +273,10 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
-"Turvallisuussyistä käyttäjää <resource>%1</resource> ei voi lisätä ryhmän "
-"<resource>%2</resource> "
-"jäseneksi.                                                    Ryhmän nimi on "
-"turvaton: kelvollisissa ryhmänimissä on teksti <resource>samba</resource> "
-"eivätkä ne                                                    sisällä "
-"tekstiä <resource>admin</resource> tai <resource>root</resource>."
+"Tietoturvasyistä käyttäjästä <resource>%1</resource> ei voi tehdä ryhmän "
+"<resource>%2</resource> jäsentä. Ryhmän nimi on turvaton: kelvolliset "
+"ryhmänimet eivät sisällä merkkijonoa <resource>admin</resource> tai "
+"<resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format

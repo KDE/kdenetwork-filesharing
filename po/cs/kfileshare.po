@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2013, 2014, 2016, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2016, 2019, 2020, 2024 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # Vit Pelcak <vit@pelcak.org>, 2022, 2023.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2023-06-28 14:13+0200\n"
+"PO-Revision-Date: 2024-01-19 15:47+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -232,7 +232,7 @@ msgstr "Příkaz <command>%1 %2</command> selhal:<nl/><nl/>%3"
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr ""
+msgstr "Volajícího uživatele nelze zjistit"
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -714,28 +714,3 @@ msgstr ""
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr ""
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
-#~ msgstr ""
-#~ "<resource>%1</resource> není platné uživatelské jméno Samba. Nelze jej "
-#~ "vytvořit."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
-#~ "group <resource>%2</resource>."
-#~ msgstr ""
-#~ "<resource>%1</resource> není platné uživatelské jméno Samba. Nelze jej "
-#~ "přidat do skupiny <resource>%2</resource>."
-
-#~ msgctxt "@info:status"
-#~ msgid ""
-#~ "This folder can't be shared because <filename>%1</filename> has its group "
-#~ "owner inappropriately set to <resource>%2</resource>, which is not "
-#~ "allowed."
-#~ msgstr ""
-#~ "Tuto složku nelze sdílet protože <filename>%1</filename> má vlastníka "
-#~ "skupiny nesprávně nastaveného na <resource>%2</resource>, což není "
-#~ "povoleno."

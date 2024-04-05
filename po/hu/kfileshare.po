@@ -1,11 +1,11 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
-# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2021-12-28 17:28+0100\n"
+"PO-Revision-Date: 2024-04-04 14:37+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -13,18 +13,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Tiltás"
 
 #: samba/aclproperties/plugin.cpp:61
-#, fuzzy, kde-format
-#| msgid "Allow"
+#, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Engedélyezés"
@@ -34,63 +32,61 @@ msgstr "Engedélyezés"
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Csak ez a mappa"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Ez a mappa, almappák és fájlok"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Ez a mappa és almappák"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Ez a mappa és fájlok"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Csak almappák és fájlok"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Csak almappák"
 
 #: samba/aclproperties/plugin.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Read only"
+#, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr "&Csak olvasható"
+msgstr "Csak fájlok"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Ismeretlen"
 
 #: samba/aclproperties/plugin.cpp:185
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "Engedélyek"
+msgstr "Távoli jogosultságok"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -98,95 +94,83 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Ez a jogosultságbejegyzés egy szülőtárolóból öröklődött, és csak abban a "
+"szülőben (például egy magasabb szintű könyvtárban) módosítható."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
-#, fuzzy
-#| msgid "Fst&ype:"
 msgctxt "@label"
 msgid "Type:"
-msgstr "Fs-&típus:"
+msgstr "Típus:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Következőkre vonatkozik:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Mappa bejárása / fájl végrehajtása"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Mappa listázása / adatok olvasása"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Attribútumok olvasása"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr "OS/2-stílusú kibővített attribútumtámogatás"
+msgstr "Kiterjesztett attrubútumok olvasása"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Fájlok létrehozása / adatok írása"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Mappák létrehozása  / adatok hozzáfűzése"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Írható"
+msgstr "Attribútumok írása"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
-#, fuzzy
-#| msgid "OS/2 style extended attributes support"
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr "OS/2-stílusú kibővített attribútumtámogatás"
+msgstr "Kiterjesztett attrubútumok írása"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Almappák és fájlok törlése"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
-#, fuzzy
-#| msgid "Delete Scripts"
 msgctxt "@option:check"
 msgid "Delete"
-msgstr "Törlési szkriptek"
+msgstr "Törlés"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Engedélyek"
+msgstr "Jogosultságok olvasása"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr "Engedélyek"
+msgstr "Jogosultságok módosítása"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Tulajdonjog átvétele"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -194,45 +178,41 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Csak az ebben a tárolóban lévő objektumokra és/vagy tárolóban alkalmazza "
+"ezeket a jogosultságokat"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Hozzáférés-vezérlési bejegyzések"
 
 #: samba/aclproperties/qml/MainPage.qml:29
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr "Tulajdonos"
+msgstr "Tulajdonjog"
 
 #: samba/aclproperties/qml/MainPage.qml:33
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@label"
 msgid "Owner:"
-msgstr "Tulajdonos"
+msgstr "Tulajdonos:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
-#, fuzzy
-#| msgid "Group"
 msgctxt "@label"
 msgid "Group:"
-msgstr "Csoport"
+msgstr "Csoport:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "Engedélyek"
+msgstr "Nem találhatók jogosultságok"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr ""
+"Valószínűleg nincsenek beállítva SMB/Windows/speciális jogosultságok ezen a "
+"fájlon."
 
 #: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
@@ -241,21 +221,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"A(z) <resource>%1</resource> felhasználónév nem érvényes Samba felhasználó "
+"neve; nem lehet ellenőrizni a létezését."
 
 #: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "A(z) <command>%1 %2</command> parancs sikertelen:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
-#| msgid "Could not save settings."
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "Nem sikerült elmenteni a beállításokat."
+msgstr "Nem sikerült feloldani a hívó felhasználót."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -263,7 +244,7 @@ msgctxt "@info"
 msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
-msgstr ""
+msgstr "Biztonsági okokból nem hozható létre Samba felhasználó üres jelszóval."
 
 #: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
@@ -272,6 +253,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"A(z) <resource>%1</resource> nem érvényes csoportnév; a(z) <resource>%2</"
+"resource> felhasználót nem lehet a tagjává tenni."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
@@ -284,12 +267,16 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Biztonsági okokból nem lehet a(z) <resource>%1</resource> felhasználót a(z) "
+"<resource>%2</resource> csoport tagjává tenni. A csoportnév nem biztonságos; "
+"az érvényes csoportnevek nem tartalmazzák az <resource>admin</resource> vagy "
+"<resource>root</resource> szavakat."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "A Samba telepítése sérültnek tűnik."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
 #, kde-kuit-format
@@ -299,6 +286,9 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"Ezt a hibát az okozza, hogy a disztribúciója nem állította be megfelelően a "
+"Samba megosztást. Kérjük, küldjön egy hibajelzést a disztibúciójának, vagy "
+"ellenőrizze a disztribúciója dokumentációját a Samba megosztás beállításáról."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -309,6 +299,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"Ezt a hibát az okozza, hogy a disztribúciója nem állította be megfelelően a "
+"Samba megosztást. Kérjük, küldjön egy hibajelzést a disztibúciójának, vagy "
+"ellenőrizze a disztribúciója dokumentációját a Samba megosztás "
+"beállításáról. Hiba:<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -316,6 +310,7 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"Ez a mappa nem osztható meg, mert a(z) <filename>%1</filename> nem létezik."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
 #, kde-kuit-format
@@ -325,20 +320,19 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
+"Ezt a hibát az okozza, hogy a disztribúciója nem állította be megfelelően a "
+"Samba megosztást. Javíthatja a mappa kézzel létrehozásával. Ezután zárja be "
+"és nyissa meg újra ezt az ablakot."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
-"A Samba felhasználói megosztások kezeléséhez a <resource>%1</resource> "
-"csoport tagjának kell lennie."
+"Ez a mappa nem osztható meg, mert a felhasználói fiókja nem tagja a(z) "
+"<resource>%1</resource> csoportnak."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
@@ -347,11 +341,11 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"Ezt úgy tudja orvosolni, hogy a felhasználót a csoport tagjává teszi. Ezután "
+"indítsa újra a rendszert."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
 msgstr "Legyek csoporttag"
@@ -363,6 +357,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"Ez a mappa nem osztható meg, mert a felhasználói fiókjának nincs "
+"jogosultsjogaága írni ide: <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -372,54 +368,47 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"Ezt úgy javíthatja, ha biztosítja, hogy a(z) <resource>%1</resource> "
+"csoportnak legyen írási joga erre: <filename>%2</filename>. Ezután zárja be "
+"és nyissa meg újra ezt az ablakot."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"„%1” felhasználó hozzáadása a(z) „%2” csoporthoz, hogy beállíthasson Samba "
-"megosztásokat"
+"A(z) <resource>%1</resource> felhasználó hozzáadása a(z) <resource>%2</"
+"resource> csoporthoz, hogy beállíthassa a Samba felhasználói megosztásokat"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"A Samba felhasználói megosztások kezeléséhez a <resource>%1</resource> "
-"csoport tagjának kell lennie."
+"Nem sikerült a(z) <resource>%1</resource> felhasználót a(z) <resource>%2</"
+"resource> csoport tagjává tenni."
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
-#, fuzzy, kde-format
-#| msgid "Path"
+#, kde-format
 msgctxt "@title"
 msgid "File Path"
-msgstr "Elérési út"
+msgstr "Fájlelérési út"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr "Engedélyek"
+msgstr "Jelenlegi jogosultságok"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr "Engedélyek"
+msgstr "Szükséges jogosultságok"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:29
 msgctxt "@title"
@@ -456,14 +445,12 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "A mappának extra jogosultságok szükségesek a megosztás működéséhez"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr "Engedélyek"
+msgstr "Jogosultságok javítása"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
@@ -471,6 +458,8 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"Előfordulhat, hogy a megosztás nem működik megfelelően, mert a megosztási "
+"mappának vagy elérési útjainak speciális jogosultságai vannak: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
 msgctxt "@option:check"
@@ -564,13 +553,15 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>A(z) <filename>%1</filename> mappa extra jogosultságokat igényel a "
+"megosztás működéséhez.</para>\n"
+"<para>Szeretné hozzáadni ezeket a jogosultságokat most?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr "Engedélyek"
+msgstr "Jogosultságok módosítása"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
 msgctxt "@label"
@@ -578,24 +569,23 @@ msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
 msgstr ""
+"Nem sikerült megváltoztatni a(z) %1 jogosultságait. Minden jogosultság "
+"vissza lett állítva a kezdeti állapotra."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
-#, fuzzy
-#| msgid "&Cancel"
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
-msgstr "&Mégsem"
+msgstr "Mégse"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "A Samba telepítése szükséges a mappák megosztása előtt."
+msgstr ""
+"A <application>Samba</application> fájlmegosztó szolgáltatást telepíteni "
+"kell, hogy meg tudja osztani a mappákat."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -613,6 +603,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Mivel a disztribúciója nem tartalmazza a PackageKitet, nem tudunk "
+"megjeleníteni egy szép „Telepítés” gombot, így a saját csomagkezelőjét "
+"használva, kézzel kell telepítenie a <command>samba</command> csomagot."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

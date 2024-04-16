@@ -2,19 +2,20 @@
 # Þröstur Svanbergsson <throstur@bylur.net>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2009, 2010.
+# SPDX-FileCopyrightText: 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2010-05-31 12:12+0000\n"
-"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
-"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"PO-Revision-Date: 2024-04-06 12:56+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
+"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -24,11 +25,10 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
-msgstr ""
+msgstr "Hafna"
 
 #: samba/aclproperties/plugin.cpp:61
-#, fuzzy, kde-format
-#| msgid "Allow"
+#, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Leyfa"
@@ -38,62 +38,61 @@ msgstr "Leyfa"
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Óþekkt"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Aðeins þessa möppu"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Þessa möppu, undirmöppur og skrár"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Þessa möppu og undirmöppur"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Þessa möppu og skrár"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Eingöngu undirmöppur og skrár"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Eingöngu undirmöppur"
 
 #: samba/aclproperties/plugin.cpp:84
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Eingöngu skrár"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Óþekkt"
 
 #: samba/aclproperties/plugin.cpp:185
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "Heimildir"
+msgstr "Fjartengdar heimildir"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -101,91 +100,83 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Þessi heimildarfærsla erfðist frá yfirgeymslu og er einungis hægt að breyta "
+"á þeirri yfirgeymslu (þ.e. möppu á hærra stigi)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
-#, fuzzy
-#| msgid "Fst&ype:"
 msgctxt "@label"
 msgid "Type:"
-msgstr "Skráar&gerð:"
+msgstr "Tegund:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Á við um:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Fara í gegnum möppu / keyra skrá"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Lista upp möppu / lesa gögn"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Lesa eigindi"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "Lesa ítarleg eigindi"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Búa til skrár / skrifa gögn"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Búa til möppur / bæta við gögnum"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Ritanleg"
+msgstr "Skrifa eigindi"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "Skrifa ítarleg eigindi"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Eyða undirmöppum og -skrám"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
-#, fuzzy
-#| msgid "Delete Scripts"
 msgctxt "@option:check"
 msgid "Delete"
-msgstr "Eyða skriftum"
+msgstr "Eyða"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Heimildir"
+msgstr "Lesa heimildir"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr "Heimildir"
+msgstr "Breyta heimildum"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Taka eignarhaldi"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -193,45 +184,40 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Nota þessar heimildir aðeins á hluti og/eða gagnageyma inni í þessum "
+"gagnageymi"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Aðgangsstýringarfærslur"
 
 #: samba/aclproperties/qml/MainPage.qml:29
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr "Eigandi"
+msgstr "Eignarhald"
 
 #: samba/aclproperties/qml/MainPage.qml:33
-#, fuzzy
-#| msgid "Owner"
 msgctxt "@label"
 msgid "Owner:"
-msgstr "Eigandi"
+msgstr "Eigandi:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
-#, fuzzy
-#| msgid "Group"
 msgctxt "@label"
 msgid "Group:"
-msgstr "Hópur"
+msgstr "Hópur:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "Heimildir"
+msgstr "Engar heimildir fundust"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr ""
+"Líklega eru engar SMB/Windows/ítarlegar heimildir stilltar fyrir þessa skrá."
 
 #: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
@@ -240,21 +226,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Notandanafnið <resource>%1</resource> er ekki gilt sem heiti á Samba-"
+"notanda; get ekki kannað hvort það er til."
 
 #: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Skipun <command>%1 %2</command> mistókst:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
-#| msgid "Could not save settings."
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "Gat ekki vistað stillingar."
+msgstr "Gat ekki leyst úr kalli til notanda."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -263,6 +250,8 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Af öryggisástæðum er ekki leyfilegt að búa til Samba-notendur með autt "
+"lykilorð."
 
 #: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
@@ -271,6 +260,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> er ekki gilt heiti á hóp; get ekki gert "
+"notanda<resource>%2</resource> að meðlimi í hópnum."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
@@ -283,12 +274,19 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Af öryggisástæðum er ekki hægt að gera notanda <resource>%1</resource> að "
+"meðlimi í hópi <resource>%2</"
+"resource>.                                                    Heiti hópsins "
+"er óöruggt; gild heiti á hóp "
+"innihaldaekki                                                    "
+"textann<resource>admin</resource> (stjórnandi) eða <resource>root</resource> "
+"(rót)."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Uppsetning þín á Samba virðist vera biluð."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
 #, kde-kuit-format
@@ -298,6 +296,9 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"Þessi villa kemur upp af því að Samba-samnýting er ekki rétt sett upp í "
+"stýrikerfisdreifingu þinni. Sendu villuskýrslu til dreifingaraðila þíns og "
+"skoðaðu leiðbeiningar dreifingarinnar um uppsetningu á Samba."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -308,6 +309,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"Þessi villa kemur upp af því að Samba-samnýting er ekki rétt sett upp í "
+"stýrikerfisdreifingu þinni. Sendu villuskýrslu til dreifingaraðila þíns og "
+"skoðaðu leiðbeiningar dreifingarinnar um uppsetningu á samnýtingu með Samba.:"
+"<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -315,6 +320,8 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"Ekki er hægt að samnýta þessa möppu vegna þess að <filename>%1</filename> er "
+"ekki til."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
 #, kde-kuit-format
@@ -324,6 +331,10 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
+"Þessi villa stafar af því að Samba-samnýting er ekki rétt sett upp í "
+"stýrikerfisdreifingu þinni. Þú getur lagfært þetta upp á eigin spýtur með "
+"því að búa til möppuna handvirkt. Lokaðu svo þessum glugga og opnaðu hann "
+"aftur."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
@@ -332,6 +343,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"Ekki er hægt að samnýta þessa möppu þar sem notandareikningur þinn er ekki "
+"meðlimur í hópnum <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
@@ -340,12 +353,14 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"Þú getur lagað þetta með því að gera notandann þinn að meðlim í þeim hópi. "
+"Endurræstu svo tölvuna."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
-msgstr ""
+msgstr "Gera mig að meðlim í hópi"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
@@ -354,6 +369,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"Ekki er hægt að samnýta þessa möppu þar sem notandareikningur þinn er ekki "
+"með heimildir til að skrifa í <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -363,6 +380,9 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"Þú getur lagað þetta með því að tryggja að hópurinn <resource>%1</resource> "
+"sé með skrifheimild fyrir <filename>%2</filename>. Lokaðu svo þessum glugga "
+"og opnaðu hann aftur."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
@@ -371,6 +391,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
+"Bæti notanda <resource>%1</resource> við hópinn <resource>%2</resource> svo "
+"þau geti grunnstillt Samba notandasameignir"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -379,34 +401,31 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"Mistókst að gera <resource>%1</resource> að meðlimi í hópnum <resource>%2</"
+"resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
-#, fuzzy, kde-format
-#| msgid "Path"
+#, kde-format
 msgctxt "@title"
 msgid "File Path"
-msgstr "Slóð"
+msgstr "Skráarslóð"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr "Heimildir"
+msgstr "Núverandi heimildir"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr "Heimildir"
+msgstr "Nauðsynlegar heimildir"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:29
-#, fuzzy
-#| msgid "&No access at all"
 msgctxt "@title"
 msgid "Denying Access"
-msgstr "&Enginn aðgangur"
+msgstr "Aðgangi hafnað"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:43
@@ -423,18 +442,26 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"Höfnun aðgangs kemur í veg fyrir notkun þessarar sameignar jafnvel þótt "
+"önnur aðgangsregla veiti aðgang að henni. Höfnunarregla\n"
+"tekur alltaf forgang. Sér í lagi mun höfnun aðgangs að <resource>Allir</"
+"resource> (Everyone) í raun loka á aðgang allra notenda.\n"
+"Almennt þarf ekki að hafna neinum þar sem hefðbundnar heimildir fyrir möppur "
+"og skrár ná einnig yfir samnýttar möppur.\n"
+"Notandi sem er ekki með staðbundinn aðgang að möppu getur ekki heldur opnað "
+"hana fjartengt jafnvel þótt\n"
+"aðgangsregla fyrir sameign leyfi það."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "Þessi mappa þarf meiri heimildir til að samnýting virki sem skyldi."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr "Heimildir"
+msgstr "Lagfæra heimildir"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
@@ -442,20 +469,18 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"Sameignin virkar hugsanlega ekki rétt þar sem sameignarmappan eða slóð "
+"hennar er með ítarlegar heimildir: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
-#, fuzzy
-#| msgid "S&hare this folder in the local network"
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr "Deila þessari möpp&u á staðarnetinu"
+msgstr "Samnýta þessa möppu með öðrum tölvum á staðarnetinu"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:102
-#, fuzzy
-#| msgid "Name:"
 msgctxt "@label"
 msgid "Name:"
-msgstr "Nafn:"
+msgstr "Heiti:"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:134
 msgctxt "@label"
@@ -463,6 +488,8 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"Ekki er hægt að nota þetta heiti. Heiti á sameignum mega ekki "
+"veranotendanöfn og engar tvær sameignir mega bera sama nafn á öllu kerfinu."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:143
 msgctxt "@label"
@@ -470,76 +497,64 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"Heitið gæti verið of langt. Það getur valdið vandamálum í samnýtingu eða "
+"Samba hafnað því."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:150
-#, fuzzy
-#| msgid "Allo&w guest logins"
 msgctxt "@option:check"
 msgid "Allow guests"
-msgstr "&Leyfa gestainnskráningar."
+msgstr "Leyfa gesti"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "Gestaaðgangur er óvirkur í grunnstillingum kerfisins fyrir Samba."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:253
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
-msgstr ""
+msgstr "Full stjórn"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:254
-#, fuzzy
-#| msgid "Read only"
 msgctxt "@option:radio user can read"
 msgid "Read Only"
-msgstr "Eingöngu lestur"
+msgstr "Skrifvarið"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:255
-#, fuzzy
-#| msgid "&No access at all"
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
-msgstr "&Enginn aðgangur"
+msgstr "Enginn aðgangur"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:281
 msgctxt "@button"
 msgid "Show Samba status monitor"
-msgstr ""
+msgstr "Sýna stöðuvöktun Samba"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:23
-#, fuzzy
-#| msgid "Password"
 msgctxt "@title"
 msgid "Set password"
-msgstr "Lykilorð"
+msgstr "Velja lykilorð"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:75
-#, fuzzy
-#| msgid "Password"
 msgctxt "@label:textbox"
 msgid "Password"
 msgstr "Lykilorð"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgid "No Password"
 msgctxt "@label:textbox"
 msgid "Confirm password"
-msgstr "Ekkert lykilorð"
+msgstr "Staðfesta lykilorð"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:97
 msgctxt "@label error message"
 msgid "Passwords must match"
-msgstr ""
+msgstr "Lykilorðin þurfa að stemma"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
-#, fuzzy
-#| msgid "Password"
 msgctxt ""
 "@action:button creates a new samba user with the user-specified password"
 msgid "Set Password"
-msgstr "Lykilorð"
+msgstr "Velja lykilorð"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
 msgctxt "@info"
@@ -549,13 +564,15 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>Mappan <filename>%1</filename> þarf auknar heimildir til að samnýting "
+"virki.</para>\n"
+"<para>Viltu bæta þessum heimildum við núna?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
-#, fuzzy
-#| msgid "Permissions"
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr "Heimildir"
+msgstr "Breyta heimildum"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
 msgctxt "@label"
@@ -563,32 +580,33 @@ msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
 msgstr ""
+"Gat ekki breytt heimildum fyrir: %1. Allar breytingar á heimildum hafa verið "
+"stilltar á upprunaleg gildi."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
-#, fuzzy
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
-msgstr "Nán&ar"
+msgstr "Hætta við"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgid "Only local folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Eingöngu má deila staðbundnum möppum á netinu."
+msgstr ""
+"Setja verður upp <application>Samba</application> samnýtingarþjónustuna til "
+"að hægt sé að samnýta möppur."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
 msgid "Install Samba"
-msgstr ""
+msgstr "Setja upp Samba"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:44
 msgctxt "@label"
 msgid "The Samba package failed to install."
-msgstr ""
+msgstr "Mistókst að setja upp Samba-pakkann."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
 msgid ""
@@ -596,16 +614,19 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Þar sem PackageKit fylgir ekki þessari útgáfu stýrikerfisins getum við ekki "
+"boðið þér einfaldan uppsetningarhnapp og því þarftu að nota pakkastjórann "
+"þinn til að setja upp <command>samba</command> þjónspakkann handvirkt."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
 msgid "Restart the computer to complete the changes."
-msgstr ""
+msgstr "Endurræstu tölvuna til að breytingarnar gangi í gegn."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
 msgctxt "@button restart the system"
 msgid "Restart"
-msgstr ""
+msgstr "Endurræsa"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:65
@@ -623,13 +644,22 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba notar annan gagnagrunn yfir notendur en stýrikerfið.\n"
+"Það þýðir að þú þarft að velja sérstakt Samba-lykilorð fyrir hvern notanda "
+"sem þú\n"
+"vilt geta auðkennt með.\n"
+"</para>\n"
+"<para>\n"
+"Þú þarft að velja þér Samba-lykilorð til að fá aðgang að sameignum með "
+"núverandi notandareikningi.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
-#, fuzzy
-#| msgid "Sa&mba Users"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Create Samba password"
-msgstr "Sa&mba notendur"
+msgstr "Búa til Samba-lykilorð"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:88
@@ -640,6 +670,10 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"Hægt er að hafa frekari umsjón með notendum og lykilorðum með því að nota "
+"skipunina <command>smbpasswd</command>\n"
+"á skipanalínu."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:155
 #, kde-format
@@ -648,74 +682,74 @@ msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
 msgstr ""
+"Þú ert búinn með hámarksfjölda af samnýttum möppum sem þú getur haft í gangi "
+"á sama tíma."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:157
-#, fuzzy, kde-format
-#| msgid "File sharing is disabled."
+#, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr "Slökkt er á gerð netdrifa."
+msgstr "Sameignarheitið er ógilt."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:159
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "Sameignarheitið er nú þegar í notkun fyrir aðra möppu."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
-msgstr ""
+msgstr "Slóðin er ógild."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:163
-#, fuzzy, kde-format
-#| msgid "The folder does not exists."
+#, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
-msgstr "Mappan er ekki til."
+msgstr "Slóðin er ekki til."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
-msgstr ""
+msgstr "Slóðin er ekki mappa."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
-msgstr ""
+msgstr "Slóðin er afstæð"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
-msgstr ""
+msgstr "Ekki er hægt að samnýta slóðina."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
-msgstr ""
+msgstr "Aðgangsreglan er ógild."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
-msgstr ""
+msgstr "Notandi aðgangsreglunnar er ógildur."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "Aðgangsreglan 'Guest' (gestur) er ógild."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "Ekki er leyfilegt að virkja gestaaðgang."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:195
 #, kde-kuit-format
@@ -725,12 +759,14 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Villa kom upp þegar reynt var að samnýta möppu. Sameignin var ekki "
+"búin til.</para><para>Innri skýrsla Samba:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:202
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
-msgstr ""
+msgstr "Mistókst að búa til netsameign"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:215
 #, kde-kuit-format
@@ -740,24 +776,27 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Villa kom upp þegar reynt var að hætta samnýtingu á möppu. Sameignin "
+"var ekki fjarlægð.</para><para>Innri skýrsla Samba:</para><message>%1</"
+"message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:222
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
-msgstr ""
+msgstr "Mistókst að fjarlægja netsameign"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "Kanna hvort Samba-notandi '%1' sé til"
 
 #: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "Bý til nýjan Samba-notanda '%1'"
 
 #, fuzzy
 #~| msgid "Share"

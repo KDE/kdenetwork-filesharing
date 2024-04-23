@@ -12,3 +12,6 @@ Dependencies:
     'frameworks/kwidgetsaddons': '@latest-kf6'
     'third-party/qcoro': '@latest'
     'third-party/packagekit-qt': '@latest'
+
+Options:
+  require-passing-tests-on: ['Linux', 'FreeBSD', 'Windows']

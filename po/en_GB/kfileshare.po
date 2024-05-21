@@ -1,13 +1,13 @@
 # translation of kfileshare.po to British English
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2004, 2005.
 # Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2005, 2009.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2016, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2019, 2020, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2023-03-26 14:35+0100\n"
+"PO-Revision-Date: 2024-05-20 19:27+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -234,11 +234,10 @@ msgstr "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
-#| msgid "Could not save settings."
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "Could not save settings."
+msgstr "Could not resolve calling user."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -261,15 +260,7 @@ msgstr ""
 "<resource>%2</resource> a member of it."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "For security reasons, cannot make user <resource>%1</resource> a member "
-#| "of group <resource>%2</"
-#| "resource>.                                                    The group "
-#| "name is insecure; valid group names include the text <resource>samba</"
-#| "resource> and do not                                                    "
-#| "include the text <resource>admin</resource> or <resource>root</resource>."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
@@ -282,9 +273,9 @@ msgstr ""
 "For security reasons, cannot make user <resource>%1</resource> a member of "
 "group <resource>%2</"
 "resource>.                                                    The group name "
-"is insecure; valid group names include the text <resource>samba</resource> "
-"and do not                                                    include the "
-"text <resource>admin</resource> or <resource>root</resource>."
+"is insecure; valid group names do "
+"not                                                    include the text "
+"<resource>admin</resource> or <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
@@ -592,14 +583,13 @@ msgstr "Cancel"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Samba must be installed before folders can be shared."
+msgstr ""
+"The <application>Samba</application> file sharing service must be installed "
+"before folders can be shared."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -617,6 +607,9 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Because this distro does not include PackageKit, we cannot show you a nice "
+"\"Install it\" button, and you will have to use your package manager to "
+"install the <command>samba</command> server package manually."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

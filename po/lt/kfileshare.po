@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2020-03-18 15:48+0200\n"
+"PO-Revision-Date: 2024-10-07 00:15+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, fuzzy, kde-format
@@ -29,68 +29,68 @@ msgstr "Drausti"
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
-msgstr ""
+msgstr "Leisti"
 
 #: samba/aclproperties/plugin.cpp:65
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Nežinoma"
 
 #: samba/aclproperties/plugin.cpp:72
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Tik šis aplankas"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Šis aplankas, poaplankiai ir failai"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Šis aplankas ir poaplankiai"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Šis aplankas ir failai"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Tik poaplankiai ir failai"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Tik poaplankiai"
 
 #: samba/aclproperties/plugin.cpp:84
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Tik failai"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Nežinoma"
 
 #: samba/aclproperties/plugin.cpp:185
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr ""
+msgstr "Nuotoliniai leidimai"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -102,12 +102,12 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
 msgid "Type:"
-msgstr ""
+msgstr "Tipas:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Kam taikoma:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
@@ -152,12 +152,12 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Ištrinti poaplankius ir failus"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
 msgid "Delete"
-msgstr ""
+msgstr "Ištrinti"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
@@ -189,22 +189,22 @@ msgstr ""
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr ""
+msgstr "Nuosavybė"
 
 #: samba/aclproperties/qml/MainPage.qml:33
 msgctxt "@label"
 msgid "Owner:"
-msgstr ""
+msgstr "Savininkas:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
 msgctxt "@label"
 msgid "Group:"
-msgstr ""
+msgstr "Grupė:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr ""
+msgstr "Nerasta jokių leidimų"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
@@ -266,7 +266,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Atrodo, kad jūsų Samba diegimas yra sugadintas."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
 #, kde-kuit-format
@@ -293,6 +293,7 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"Šis aplankas negali būti bendrinamas, nes <filename>%1</filename> nėra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
 #, kde-kuit-format
@@ -362,7 +363,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "File Path"
-msgstr ""
+msgstr "Failo kelias"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
 #, kde-format
@@ -405,7 +406,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr ""
+msgstr "Pataisyti leidimus"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
@@ -415,15 +416,11 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
-#, fuzzy
-#| msgid "Sh&are this folder with other computers on the local network"
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr "&Bendrinti šį aplanką su kitais kompiuteriais vietiniame tinkle"
+msgstr "Bendrinti šį aplanką su kitais kompiuteriais vietiniame tinkle"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:102
-#, fuzzy
-#| msgid "Name:"
 msgctxt "@label"
 msgid "Name:"
 msgstr "Pavadinimas:"
@@ -443,8 +440,6 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:150
-#, fuzzy
-#| msgid "Allow Guests"
 msgctxt "@option:check"
 msgid "Allow guests"
 msgstr "Leisti svečius"
@@ -462,11 +457,9 @@ msgid "Full Control"
 msgstr "Pilnas valdymas"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:254
-#, fuzzy
-#| msgid "Read Only"
 msgctxt "@option:radio user can read"
 msgid "Read Only"
-msgstr "Tik skaitymas"
+msgstr "Tik skaityti"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:255
 msgctxt "@option:radio user not allowed to access share"
@@ -474,11 +467,9 @@ msgid "No Access"
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:281
-#, fuzzy
-#| msgid "Show Samba status &monitor"
 msgctxt "@button"
 msgid "Show Samba status monitor"
-msgstr "Rodyti Samba būsenos &prižiūryklę"
+msgstr "Rodyti Samba būsenos prižiūryklę"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:23
 msgctxt "@title"
@@ -504,7 +495,7 @@ msgstr ""
 msgctxt ""
 "@action:button creates a new samba user with the user-specified password"
 msgid "Set Password"
-msgstr ""
+msgstr "Nustatyti slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
 msgctxt "@info"
@@ -518,7 +509,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr ""
+msgstr "Keisti leidimus"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
 msgctxt "@label"
@@ -530,30 +521,24 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
 msgstr ""
-"Prieš tai, kai galima bus bendrinti aplankus, turi būti įdiegtas Samba "
-"paketas."
+"Prieš pradedant bendrinti aplankus, privalo būti įdiegta <application>Samba</"
+"application> failų bendrinimo tarnyba."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
-#, fuzzy
-#| msgid "Install Samba"
 msgctxt "@button"
 msgid "Install Samba"
 msgstr "Įdiegti Samba"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:44
-#, fuzzy
-#| msgid "The Samba package failed to install."
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Nepavyko įdiegti Samba paketo."
@@ -566,15 +551,11 @@ msgid ""
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
-#, fuzzy
-#| msgid "Restart the computer to complete the installation."
 msgctxt "@label"
 msgid "Restart the computer to complete the changes."
-msgstr "Norėdami užbaigti diegimą, paleiskite kompiuterį iš naujo."
+msgstr "Norėdami užbaigti pakeitimus, paleiskite kompiuterį iš naujo."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgid "Restart"
 msgctxt "@button restart the system"
 msgid "Restart"
 msgstr "Paleisti iš naujo"
@@ -599,7 +580,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
 msgctxt "@action:button opens dialog to create new user"
 msgid "Create Samba password"
-msgstr ""
+msgstr "Sukurti Samba slaptažodį"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:88
@@ -641,13 +622,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
-msgstr ""
+msgstr "Kelio nėra."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
-msgstr ""
+msgstr "Kelias nėra katalogas."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
@@ -698,7 +679,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
-msgstr ""
+msgstr "Nepavyko sukurti tinklo viešinio"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:215
 #, kde-kuit-format
@@ -713,19 +694,19 @@ msgstr ""
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
-msgstr ""
+msgstr "Nepavyko pašalinti tinklo viešinio"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "Tikrinama, ar yra Samba naudotojas „%1“"
 
 #: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "Kuriamas naujas Samba naudotojas „%1“"
 
 #, fuzzy
 #~| msgid "&Share"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2024-10-07 00:15+0300\n"
+"PO-Revision-Date: 2024-10-07 22:23+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,8 +19,7 @@ msgstr ""
 "X-Generator: Poedit 3.4.2\n"
 
 #: samba/aclproperties/plugin.cpp:59
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Drausti"
@@ -98,6 +97,9 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Šis leidimo įrašas buvo paveldėtas iš viršesnio konteinerio ir gali būti "
+"modifikuotas tik tame viršesniame elemente (pvz., aukštesniame katalogo "
+"lygmenyje)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
@@ -112,42 +114,42 @@ msgstr "Kam taikoma:"
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Pereiti skersai aplanką / vykdyti failą"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Išvardyti aplankus / skaityti duomenis"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Skaityti atributus"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "Skaityti išplėstinius atributus"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Kurti failus / rašyti duomenis"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Kurti aplankus / pridėti duomenis"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr ""
+msgstr "Rašyti atributus"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "Rašyti išplėstinius atributus"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
@@ -162,17 +164,17 @@ msgstr "Ištrinti"
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr ""
+msgstr "Skaityti leidimus"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr ""
+msgstr "Keisti leidimus"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Perimti nuosavybę"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -180,11 +182,13 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Taikyti šiuos leidimus tik objektams ir/ar konteineriams, esantiems šiame "
+"konteineryje"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Prieigos valdymo įrašai"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
@@ -211,6 +215,8 @@ msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr ""
+"Šiame faile, tikriausiai, nėra nustatytas joks SMB/Windows/Išplėstinių "
+"leidimų rinkinys."
 
 #: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
@@ -219,20 +225,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Naudotojo vardas <resource>%1</resource> yra netinkamas naudoti Samba "
+"naudotojui; negalima patikrinti, ar toks yra."
 
 #: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Komanda <command>%1 %2</command> patyrė nesėkmę:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr ""
+msgstr "Nepavyko išspręsti naudotojo iškvietos."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -241,6 +249,8 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Saugumo sumetimais, Samba naudotojų kūrimas su tuščiais slaptažodžiais yra "
+"neleidžiamas."
 
 #: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
@@ -249,6 +259,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> nėra tinkamas grupės pavadinimas; negalima padaryti "
+"naudotoją <resource>%2</resource> jos nariu."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
@@ -261,6 +273,12 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Saugumo sumetimais, naudotojo <resource>%1</resource> negalima padaryti "
+"<resource>%2</resource> grupės "
+"nariu.                                                    Grupės pavadinimas "
+"yra nesaugus; tinkamuose grupės pavadinimuose "
+"nėra                                                    teksto "
+"<resource>admin</resource> ar <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
@@ -276,6 +294,10 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"Šia klaidą sukėlė tai, kad jūsų platinamasis paketas tinkamai nenustatė "
+"Samba bendrinimo. Pateikite pranešimą apie klaidą savo platinamajam paketui "
+"arba pasižiūrėkite platinamojo paketo dokumentacijoje, kaip nusistatyti "
+"Samba bendrinimą."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -286,6 +308,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"Šia klaidą sukėlė tai, kad jūsų platinamasis paketas tinkamai nenustatė "
+"Samba bendrinimo. Pateikite pranešimą apie klaidą savo platinamajam paketui "
+"arba pasižiūrėkite platinamojo paketo dokumentacijoje, kaip nusistatyti "
+"Samba bendrinimą. Klaida:<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -303,6 +329,9 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
+"Šia klaidą sukėlė tai, kad jūsų platinamasis paketas tinkamai nenustatė "
+"Samba bendrinimo. Galite tai pataisyti sukurdami tą aplanką rankiniu būdu. "
+"Tuomet užverkite šį langą ir atverkite jį iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
@@ -311,6 +340,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"Šis aplankas negali būti bendrinamas, nes jūsų naudotojo paskyra nėra grupės "
+"<resource>%1</resource> narė."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
@@ -319,12 +350,14 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"Galite tai pataisyti padarydami naudotoją tos grupės nariu. Tuomet "
+"paleiskite sistemą iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
-msgstr ""
+msgstr "Padaryti mane grupės nariu"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
@@ -333,6 +366,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"Šis aplankas negali būti bendrinamas, nes jūsų naudotojo paskyra neturi "
+"leidimo rašyti į <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -342,6 +377,9 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"Galite tai pataisyti įsitikindami, kad grupė <resource>%1</resource> turi "
+"rašymo leidimą, skirtą <filename>%2</filename>. Tuomet užverkite šį langą ir "
+"atverkite jį iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
@@ -350,6 +388,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
+"Pridedamas naudotojas <resource>%1</resource> į grupę <resource>%2</"
+"resource>, kad jis galėtų konfigūruoti Samba naudotojo viešinius"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -358,6 +398,8 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"Naudotojo <resource>%1</resource> nepavyko padaryti <resource>%2</resource> "
+"grupės nariu"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -369,18 +411,18 @@ msgstr "Failo kelias"
 #, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr ""
+msgstr "Dabartiniai leidimai"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr ""
+msgstr "Reikalingi leidimai"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:29
 msgctxt "@title"
 msgid "Denying Access"
-msgstr ""
+msgstr "Prieigos draudimas"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:43
@@ -397,11 +439,21 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"Prieigos draudimas neleidžia naudoti šio viešinio netgi tuomet, kai kita "
+"prieigos taisyklė, galbūt, suteikia prieigą. Draudimo taisyklė visada\n"
+"turi pirmenybę. Pavyzdžiui, uždraudus prieigą <resource>Visiems</resource>, "
+"iš tikrųjų, bus išjungta prieiga visiems.\n"
+"Įprastai, nebūtina kam nors drausti, nes įprasti katalogų ir failų leidimai "
+"ir taip yra taikomi bendrinamiems\n"
+"katalogams. Naudotojas, kuris neturi prieigos prie katalogo vietiniu mastu, "
+"vis tiek negalės gauti nuotolinės prieigos prie jo netgi tuo atveju,\n"
+"kai bendrinimo prieigos taisyklės tą leidžia."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "Tam, kad bendrinimas veiktų, šiam aplankui reikia papildomų leidimų"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
 msgctxt "@action:button opens the change permissions page"
@@ -414,6 +466,8 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"Gali būti, kad viešinys tinkamai neveiks, nes viešinio aplankas ar jo keliai "
+"turi išplėstinius leidimus: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
 msgctxt "@option:check"
@@ -431,6 +485,9 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"Šis pavadinimas negali būti naudojamas. Naudotojo vardai negali būti "
+"viešinių pavadinimais, be to, visoje sistemoje negali būti dviejų viešinių "
+"tuo pačiu pavadinimu."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:143
 msgctxt "@label"
@@ -438,6 +495,8 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"Gali būti, kad šis pavadinimas yra per ilgas. Jis gali sukelti sąveikumo "
+"problemas arba Samba gali jį atmesti."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:150
 msgctxt "@option:check"
@@ -447,14 +506,12 @@ msgstr "Leisti svečius"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "Svečių prieiga yra išjungta Samba sisteminės konfigūracijos."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:253
-#, fuzzy
-#| msgid "Full Control"
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
-msgstr "Pilnas valdymas"
+msgstr "Visiška kontrolė"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:254
 msgctxt "@option:radio user can read"
@@ -464,7 +521,7 @@ msgstr "Tik skaityti"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:255
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
-msgstr ""
+msgstr "Nėra prieigos"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:281
 msgctxt "@button"
@@ -474,22 +531,22 @@ msgstr "Rodyti Samba būsenos prižiūryklę"
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:23
 msgctxt "@title"
 msgid "Set password"
-msgstr ""
+msgstr "Nustatyti slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:75
 msgctxt "@label:textbox"
 msgid "Password"
-msgstr ""
+msgstr "Slaptažodis"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
 msgctxt "@label:textbox"
 msgid "Confirm password"
-msgstr ""
+msgstr "Pakartokite slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:97
 msgctxt "@label error message"
 msgid "Passwords must match"
-msgstr ""
+msgstr "Slaptažodžiai privalo sutapti"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -505,6 +562,10 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>Tam, kad bendrinimas veiktų, aplankui <filename>%1</filename> reikia "
+"papildomų leidimų.</para>\n"
+"<para>Ar norite dabar pridėti šiuos leidimus?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
 msgctxt "@action:button changes permissions"
@@ -517,6 +578,8 @@ msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
 msgstr ""
+"Nepavyko pakeisti leidimų, skirtų: %1. Visi leidimų pakeitimai buvo "
+"sugrąžinti į pradinę būseną."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
 msgctxt "@action:button cancels permissions change"
@@ -549,6 +612,10 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"Kadangi šiame platinamajame pakete nėra PackageKit, mes negalime jums "
+"parodyti patrauklaus mygtuko „Įdiegti“, tad jums teks naudoti paketų "
+"tvarkytuvę, kad rankiniu būdu įsidiegtumėte <command>samba</command> "
+"serverio paketą."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
@@ -576,6 +643,18 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba naudoja atskirą naudotojų duomenų bazę, kuri skiriasi nuo sistemos "
+"naudojamos duomenų bazės.\n"
+"Tai reikalauja, kad kiekvienam naudotojui, kurį naudodami norite gauti "
+"įgaliojimus,\n"
+"nustatytumėte atskirą Samba slaptažodį.\n"
+"</para>\n"
+"<para>\n"
+"Prieš galėdami gauti prieigą prie viešinių naudojant dabartinę naudotojo "
+"paskyrą, turite nusistatyti Samba slaptažodį.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
 msgctxt "@action:button opens dialog to create new user"
@@ -591,6 +670,10 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"Papildomą naudotojų tvarkymą ir slaptažodžių tvarkymą galima atlikti "
+"naudojant Samba <command>smbpasswd</command>\n"
+"komandų eilutės paslaugų programą."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:155
 #, kde-format
@@ -599,24 +682,26 @@ msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
 msgstr ""
+"Jūs išeikvojote didžiausią kiekį bendrinamų katalogų, kuriuos vienu metu "
+"galite turėti aktyvius."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:157
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr ""
+msgstr "Viešinio pavadinimas yra netinkamas."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:159
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "Viešinio pavadinimas jau yra naudojamas kitam katalogui."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
-msgstr ""
+msgstr "Kelias yra netinkamas."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
@@ -634,37 +719,37 @@ msgstr "Kelias nėra katalogas."
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
-msgstr ""
+msgstr "Kelias yra santykinis."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
-msgstr ""
+msgstr "Šio kelio negalima bendrinti."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
-msgstr ""
+msgstr "Netinkama prieigos taisyklė."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
-msgstr ""
+msgstr "Netinkamas prieigos taisyklės naudotojas."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "Netinkama „Svečio“ prieigos taisyklė."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "Neleidžiama įjungti svečio prieigą."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:195
 #, kde-kuit-format
@@ -674,6 +759,8 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Bandant bendrinti katalogą, įvyko klaida. Viešinys nebuvo sukurtas.</"
+"para><para>Samba vidiniai procesai praneša:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:202
 #, kde-format
@@ -689,6 +776,9 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Bandant nustoti bendrinti katalogą, įvyko klaida. Viešinys nebuvo "
+"pašalintas.</para><para>Samba vidiniai procesai praneša:</para><message>%1</"
+"message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:222
 #, kde-format

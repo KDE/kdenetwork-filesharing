@@ -14,12 +14,6 @@ Kirigami.ScrollablePage {
 
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
 
-    // the page it lives within already has its own
-    leftPadding: 0
-    rightPadding: 0
-    topPadding: 0
-    bottomPadding: 0
-
     Keys.onPressed: {
         // We need to explicitly handle some keys inside the sheet. Since the sheet is no FocusScope we will catch
         // them here and feed them to the sheet instead.

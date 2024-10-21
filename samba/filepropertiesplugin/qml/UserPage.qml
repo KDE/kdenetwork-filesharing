@@ -13,7 +13,8 @@ Kirigami.ScrollablePage {
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
 
     background: Item {
-    } /* this page is inside a tabbox, we want its background, not a window/page background */
+        /* this page is inside a tabbox, we want its background, not a window/page background */
+    }
 
     Keys.onPressed: {
         // We need to explicitly handle some keys inside the sheet. Since the sheet is no FocusScope we will catch

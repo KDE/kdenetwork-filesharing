@@ -235,8 +235,8 @@ void SambaUserSharePlugin::setReady(bool ready)
 
 void SambaUserSharePlugin::reboot()
 {
-    QDBusInterface kdeShutdown(QStringLiteral("org.kde.Shutdown"), QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"));
-    kdeShutdown.call(QStringLiteral("logoutAndReboot"));
+    QDBusInterface kdeShutdown(QStringLiteral("org.kde.LogoutPrompt"), QStringLiteral("/LogoutPrompt"), QStringLiteral("org.kde.LogoutPrompt"));
+    kdeShutdown.call(QStringLiteral("promptReboot"));
 }
 
 #include "sambausershareplugin.moc"

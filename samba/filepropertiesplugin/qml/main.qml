@@ -3,10 +3,10 @@
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 QQC2.StackView {

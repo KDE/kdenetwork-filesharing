@@ -4,10 +4,10 @@
     SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
 Item {
     id: page
@@ -33,7 +33,7 @@ Item {
                 textFormat: Text.RichText
                 text: xi18nc("@info", `
 <para>The folder <filename>%1</filename> needs extra permissions for sharing to work.</para>
-<para>Do you want to add these permissions now?</para><nl/>
+<para>Add these permissions now?</para><nl/>
 `, sambaPlugin.shareContext.path)
             }
 

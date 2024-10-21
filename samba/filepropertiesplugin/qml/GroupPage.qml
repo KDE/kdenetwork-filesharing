@@ -3,57 +3,61 @@
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 Item {
-    // This page may be after the InstallPage and so we need to create a GroupManager when the page loads
-    // rather than relying on the global instance that runs from the get go so we can evaluate the status AFTER
+    anchors.fill: parent
+    anchors.margins: Kirigami.Units.largeSpacing
+    // This page may be after the InstallPage, so we need to create a GroupManager when the page loads
+    // rather than relying on the global instance that runs from the get-go so we can evaluate the status AFTER
     // samba installation.
     Samba.GroupManager {
         id: manager
-        onReadyChanged: {
-            if (ready && manager.errorText.length === 0) { // no error; nothing for us to do
-                stackReplace(pendingStack.pop())
-            }
+
+        onHelpfulActionError: error => {
+            actionErrorMessage.text = error;
         }
         onNeedsReboot: () => {
-            stackReplace("RebootPage.qml")
+            stackReplace("RebootPage.qml");
         }
-        onHelpfulActionError: (error) => {
-            actionErrorMessage.text = error
+        onReadyChanged: {
+            if (ready && manager.errorText.length === 0) {
+                // no error; nothing for us to do
+                stackReplace(pendingStack.pop());
+            }
         }
     }
-
     QQC2.BusyIndicator {
         anchors.centerIn: parent
-        visible: !manager.ready
         running: visible
+        visible: !manager.ready
     }
-
     ColumnLayout {
         anchors.fill: parent
         visible: manager.ready
 
         Kirigami.InlineMessage {
             id: actionErrorMessage
+
             Layout.alignment: Qt.AlignTop
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             visible: text != ""
         }
-
         Kirigami.PlaceholderMessage {
+            explanation: manager.errorExplanation
             icon.name: "emblem-error"
             text: manager.errorText
-            explanation: manager.errorExplanation
+
             helpfulAction: Kirigami.Action {
                 enabled: manager.hasHelpfulAction
                 icon.name: manager.helpfulActionIcon
                 text: manager.helpfulActionText
+
                 onTriggered: manager.performHelpfulAction()
             }
         }

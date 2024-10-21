@@ -10,7 +10,7 @@
 #include <QObject>
 #include <QVariant>
 
-#include <QCoro/Task>
+#include <QCoroTask>
 
 class QFileInfo;
 class PermissionsHelper;

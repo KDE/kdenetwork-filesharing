@@ -20,8 +20,10 @@ Item {
     //   Item in place of a Page that gets covered by the Sheet and then that Item is filled by a Column.
     id: page
 
-    anchors.fill: parent
-    anchors.margins: Kirigami.Units.smallSpacing
+    anchors {
+        fill: parent
+        margins: Kirigami.Units.smallSpacing
+    }
 
     Kirigami.OverlaySheet {
         id: denialSheet

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-15 01:36+0000\n"
-"PO-Revision-Date: 2024-09-17 12:54+0400\n"
+"PO-Revision-Date: 2024-10-24 07:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -43,43 +43,43 @@ msgstr "مجهول"
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "هذا المجلد فقط"
 
 #: samba/aclproperties/plugin.cpp:74
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "هذا المجلد والمجلدات الفرعية والملفات"
 
 #: samba/aclproperties/plugin.cpp:76
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "هذا المجلد و المجلدات الفرعية"
 
 #: samba/aclproperties/plugin.cpp:78
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "هذا المجلد والملفات"
 
 #: samba/aclproperties/plugin.cpp:80
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "المجلدات الفرعية والملفات فقط"
 
 #: samba/aclproperties/plugin.cpp:82
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "المجلدات الفرعية فقط"
 
 #: samba/aclproperties/plugin.cpp:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr "اقرأ"
+msgstr "الملفات فقط"
 
 #: samba/aclproperties/plugin.cpp:87
 #, kde-format
@@ -88,10 +88,10 @@ msgid "Unknown"
 msgstr "مجهول"
 
 #: samba/aclproperties/plugin.cpp:185
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr "الأذون"
+msgstr "الأذونات عن بعد"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -99,6 +99,8 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"هذا الإذن موروث من الحاوية الأم ولا يمكن تعديله إلا عن طريق تلك الحاوية (على "
+"سبيل المثال، دليل على مستوى أعلى)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
@@ -113,50 +115,47 @@ msgstr "يطبق على:"
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "التنقل بين المجلدات / تنفيذ ملف"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "سرد المجلد / قراءة بيانات"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "قراءة السمات"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
-#, fuzzy
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr "نظام التّشغيل أسلوب موسّع دعم"
+msgstr "يقرأ السمات الموسعة"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "إنشاء ملفات / كتابة بيانات"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "إنشاء مجلدات / إضافة بيانات"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "قابل للكتابة"
+msgstr "يكتب السمات"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
-#, fuzzy
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr "نظام التّشغيل أسلوب موسّع دعم"
+msgstr "يكتب السمات الموسعة"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "حذف المجلدات الفرعية والملفات"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
@@ -164,10 +163,9 @@ msgid "Delete"
 msgstr "احذف"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "الأذون"
+msgstr "أذون القراءة"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
@@ -177,19 +175,19 @@ msgstr "غيّر الصّلاحيات"
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "أخذ الملكيّة"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
 msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
-msgstr ""
+msgstr "تطبيق هذه الأذون فقط على الكائنات و/أو الحاويات داخل هذه الحاوية"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "إدخالات التحكم بالوصول"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
@@ -207,16 +205,15 @@ msgid "Group:"
 msgstr "المجموعة:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
-#, fuzzy
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr "الأذون"
+msgstr "لم يعثر على أذون"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
-msgstr ""
+msgstr "ربما لا توجد أذون SMB/Windows/Advanced مضبوطة على هذا الملف."
 
 #: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
@@ -225,20 +222,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"اسم المستخدم <resource>%1</resource> ليس صالحًا كاسم مستخدم سامبا؛ ولا يمكن "
+"التحقق من وجوده."
 
 #: samba/filepropertiesplugin/authhelper.cpp:66
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr "فشل الأمر \"%1\"."
+msgstr "فشل الأمر <command>%1 %2</command>:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "يمكن أن ليس حفظ خصائص."
+msgstr "لم يتمكن من حل مشكلة استدعاء المستخدم."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -246,7 +245,7 @@ msgctxt "@info"
 msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
-msgstr ""
+msgstr "لأسباب أمنية، لا يُسمح بإنشاء مستخدمي سامبا بكلمات سر فارغة."
 
 #: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
@@ -255,6 +254,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> ليس اسم مجموعة صالحًا؛ لا يمكن جعل المستخدم <resource>"
+"%2</resource> عضوًا فيها."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
@@ -267,12 +268,15 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"لأسباب أمنية، لا يمكن جعل المستخدم <resource>%1</resource> عضوًا في المجموعة "
+"<resource>%2</resource>. اسم المجموعة غير آمن؛ أسماء المجموعات الصالحة لا "
+"تتضمن النص <resource>admin</resource> أو <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "يبدو أن تثبيت سامبا الخاص بك مكسور."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
 #, kde-kuit-format
@@ -282,6 +286,8 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"يحدث هذا الخطأ بسبب عدم إعداد توزيعك لمشاركة سامبا بشكل صحيح. يُرجى الإبلاغ "
+"عن خطأ في توزيعك أو التحقق من وثائق توزيعك حول إعداد مشاركة سامبا."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -292,13 +298,16 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"يحدث هذا الخطأ بسبب عدم إعداد توزيعك لمشاركة سامبا بشكل صحيح. يُرجى الإبلاغ "
+"عن خطأ في توزيعك أو التحقق من وثائق توزيعك حول إعداد مشاركة سامبا. الخطأ:<nl/"
+"><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
-msgstr ""
+msgstr "لا يمكن مشاركة هذا المجلد لأن <filename>%1</filename> غير موجود."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
 #, kde-kuit-format
@@ -308,6 +317,8 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
+"يحدث هذا الخطأ بسبب عدم إعداد توزيعك لمشاركة سامبا بشكل صحيح. يمكنك إصلاحه "
+"بنفسك عن طريق إنشاء هذا المجلد يدويًا. ثم أغلق هذه النافذة وأعد فتحها."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
@@ -316,6 +327,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"لا يمكن مشاركة هذا المجلد لأن حساب المستخدم الخاص بك ليس عضوًا في المجموعة "
+"<resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
@@ -324,12 +337,14 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"يمكنك إصلاح هذه المشكلة عن طريق جعل المستخدم عضوًا في تلك المجموعة. ثم أعد "
+"تشغيل النظام."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make me a Group Member"
-msgstr ""
+msgstr "اجعلني عضوا في المجموعة"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
@@ -338,6 +353,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"لا يمكن مشاركة هذا المجلد لأن حساب المستخدم الخاص بك لا يملك الإذن للكتابة "
+"في <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -347,6 +364,9 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"يمكنك إصلاح هذه المشكلة من خلال التأكد من أن المجموعة <resource>%1</"
+"resource> لديها إذن الكتابة لـ <filename>%2</filename>. ثم أغلق هذه النافذة "
+"وأعد فتحها."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
 #, kde-kuit-format
@@ -355,6 +375,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
+"إضافة المستخدم <resource>%1</resource> إلى المجموعة <resource>%2</resource> "
+"حتى يتمكنوا من تكوين مشاركات مستخدمي سامبا"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -363,6 +385,8 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"فشل في جعل المستخدم <resource>%1</resource> عضوًا في المجموعة <resource>%2</"
+"resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -371,22 +395,21 @@ msgid "File Path"
 msgstr "مسار الملف"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr "الأذون"
+msgstr "الأذون الحالية"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr "الأذون"
+msgstr "الأذون المطلوبة"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:29
-#, fuzzy
 msgctxt "@title"
 msgid "Denying Access"
-msgstr "لا وصول عند الكل"
+msgstr "منع الوصول"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:43
@@ -403,17 +426,24 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"إن رفض الوصول يمنع استخدام هذه المشاركة حتى عندما تمنح قاعدة وصول أخرى حق "
+"الوصول. تحظى قاعدة الرفض دائمًا بالأولوية. وبشكل خاص، يؤدي رفض الوصول إلى "
+"<resource>كل شخص</resource> إلى تعطيل الوصول للجميع.\n"
+"ليس من الضروري بشكل عام رفض أي شخص لأن أذون الدليل والملف العادية لا تزال "
+"تنطبق على الأدلة/المجلدات المشتركة. لن يتمكن المستخدم -الذي لا يتمتع بحق "
+"الوصول إلى الدليل محليًا- من الوصول إليه عن بُعد حتى\n"
+"عندما تسمح قواعد وصول المشاركة بذلك."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:62
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work"
-msgstr ""
+msgstr "يحتاج هذا المجلد إلى أذون إضافية حتى تعمل المشاركة"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:66
-#, fuzzy
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr "الأذون"
+msgstr "أصلح الأذون"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:78
 msgctxt "@label"
@@ -421,12 +451,13 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"قد لا تعمل المشاركة بشكل صحيح لأن مجلد المشاركة أو مساراته لديه أذون متقدمة: "
+"%1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:85
-#, fuzzy
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr "مشاركة مجلد بوصة محليّ شبكة"
+msgstr "مشاركة هذا المجلد مع أجهزة حاسوب أخرى على الشبكة المحلية"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:102
 msgctxt "@label"
@@ -439,6 +470,8 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"لا يمكن استخدام هذا الاسم. يجب ألا تكون أسماء المشاركة أسماء مستخدمين ويجب "
+"ألا يكون هناك مشاركتان بنفس الاسم على النظام بأكمله."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:143
 msgctxt "@label"
@@ -446,10 +479,10 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"قد يكون هذا الاسم طويلاً للغاية. وقد يتسبب في حدوث مشكلات في التوافق بين "
+"الأسماء أو قد يرفض بواسطة سامبا."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:150
-#, fuzzy
-#| msgid "Allow Guests"
 msgctxt "@option:check"
 msgid "Allow guests"
 msgstr "اسمح للضيوف"
@@ -457,12 +490,12 @@ msgstr "اسمح للضيوف"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:163
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "عُطل وصول الضيف بواسطة ضبط سامبا الخاص بالنظام."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:253
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
-msgstr ""
+msgstr "كامل التحكم"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:254
 msgctxt "@option:radio user can read"
@@ -477,7 +510,7 @@ msgstr "ممنوع الوصول"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:281
 msgctxt "@button"
 msgid "Show Samba status monitor"
-msgstr ""
+msgstr "إظهار حالة مراقبة سامبا"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:23
 msgctxt "@title"
@@ -513,6 +546,10 @@ msgid ""
 "to work.</para>\n"
 "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>يحتاج المجلد <filename>%1</filename> إلى أذون إضافية لكي تعمل المشاركة."
+"</para>\n"
+"<para>هل تريد إضافة هذه الأذون الآن؟</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
 msgctxt "@action:button changes permissions"
@@ -525,6 +562,7 @@ msgid ""
 "Could not change permissions for: %1. All permission changes have been "
 "reverted to initial state."
 msgstr ""
+"تعذر تغيير الأذونات لـ: %1. فأرجعت جميع تغييرات الأذونات إلى حالتها الأولية."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
 msgctxt "@action:button cancels permissions change"
@@ -533,22 +571,23 @@ msgstr "ألغِ"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
-#, fuzzy
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "فقط محليّ."
+msgstr ""
+"يجب تثبيت خدمة مشاركة الملفات <application>Samba</application> قبل أن تتمكن "
+"من مشاركة المجلدات."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
 msgid "Install Samba"
-msgstr ""
+msgstr "ثبت سامبا"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:44
 msgctxt "@label"
 msgid "The Samba package failed to install."
-msgstr ""
+msgstr "فشل تثبيت حزمة سامبا"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
 msgid ""
@@ -556,11 +595,14 @@ msgid ""
 "\"Install it\" button, and you will have to use your package manager to "
 "install the <command>samba</command> server package manually."
 msgstr ""
+"نظرًا لأن هذه التوزيعة لا تتضمن PackageKit، فلن نتمكن من عرض زر \"تثبيته\" "
+"اللطيف، وسيتعين عليك استخدام مدير الحزم لديك لتثبيت حزمة خادم "
+"<command>samba</command> يدويًا."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
 msgid "Restart the computer to complete the changes."
-msgstr ""
+msgstr "أعد تشغيل الحاسوب لاستكمال التغييرات."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
 msgctxt "@button restart the system"
@@ -583,12 +625,21 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"تستخدم سامبا قاعدة بيانات مستخدمين منفصلة عن قاعدة بيانات النظام.\n"
+"يتطلب هذا منك تعيين كلمة سر سامبا منفصلة لكل مستخدم تريد\n"
+"أن تتمكن من المصادقة معه.\n"
+"</para>\n"
+"<para>\n"
+"قبل أن تتمكن من الوصول إلى المشاركات باستخدام حساب المستخدم الحالي الخاص بك، "
+"تحتاج إلى تعيين كلمة سر سامبا.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:80
-#, fuzzy
 msgctxt "@action:button opens dialog to create new user"
 msgid "Create Samba password"
-msgstr "سامبا المستخدمون"
+msgstr "أنشئ كلمة السّر لسامبا"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:88
@@ -599,6 +650,10 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"يمكن إجراء إدارة إضافية للمستخدمين وإدارة كلمات السر باستخدام أداة سطر "
+"الأوامر <command>smbpasswd</command>\n"
+"من سامبا."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:155
 #, kde-format
@@ -607,72 +662,73 @@ msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
 msgstr ""
+"لقد استنفدت الحد الأقصى لعدد الأدلة المشتركة التي يمكنك تنشيطها في نفس الوقت."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:157
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr "مشاركة الملفات غير مُمكّنة."
+msgstr "اسم المشاركة غير صالح."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:159
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "اسم المشاركة قيد الاستخدام بالفعل لدليل أخر."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
-msgstr ""
+msgstr "المسار غير صالح."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:163
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
-msgstr "الـ مجلد ليس موجود."
+msgstr "المسار  غير موجود."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
-msgstr ""
+msgstr "المسار ليس دليلا."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
-msgstr ""
+msgstr "المسار نسبي."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:169
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
-msgstr "هذا هو الاسم من مشاركات"
+msgstr "لا يمكن مشاركة هذا المسار."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
-msgstr ""
+msgstr "قاعدة الوصول غير صالحة."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
-msgstr ""
+msgstr "مستخدم قاعدة الوصول غير صالح."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "قاعدة وصول \"الضيف\" غير صالحة."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "لا يُسمح بتمكين وصول الضيف."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:195
 #, kde-kuit-format
@@ -682,12 +738,14 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>حدث خطأ أثناء محاولة مشاركة الدليل. لم يتم إنشاء المشاركة.</"
+"para><para>تقرير داخلي لسامبا:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:202
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
-msgstr ""
+msgstr "فشل إنشاء مشاركة الشبكة"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:215
 #, kde-kuit-format
@@ -697,24 +755,26 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>حدث خطأ أثناء محاولة إلغاء مشاركة الدليل. لم تتم إزالة المشاركة.</"
+"para><para>تقرير داخلي لسامبا:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:222
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
-msgstr ""
+msgstr "فشل في إزالة مشاركة الشبكة"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "يتحقق من وجود مستخدم سامبا '%1' "
 
 #: samba/filepropertiesplugin/usermanager.cpp:119
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "ينشئ مستخدم سامبا جديد '%1'"
 
 #, fuzzy
 #~ msgctxt "@title:tab"

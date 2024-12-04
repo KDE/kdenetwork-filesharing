@@ -47,7 +47,7 @@ Item {
         }
 
         Kirigami.PlaceholderMessage {
-            icon.name: "emblem-error"
+            icon.name: "dialog-error"
             text: manager.errorText
             explanation: manager.errorExplanation
             helpfulAction: Kirigami.Action {

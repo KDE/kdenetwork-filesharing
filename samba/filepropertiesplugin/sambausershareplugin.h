@@ -152,6 +152,7 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_PROPERTY(UserPermissionModel *userPermissionModel MEMBER m_model CONSTANT)
     Q_PROPERTY(ShareContext *shareContext MEMBER m_context CONSTANT)
     Q_PROPERTY(PermissionsHelper *permissionsHelper MEMBER m_permissionsHelper CONSTANT)
+    Q_PROPERTY(QString bugReportUrl READ bugReportUrl CONSTANT)
 
 public:
     SambaUserSharePlugin(QObject *parent);
@@ -163,6 +164,8 @@ public:
     Q_INVOKABLE static void showSambaStatus();
 
     bool isReady() const;
+
+    QString bugReportUrl() const;
 
 Q_SIGNALS:
     void readyChanged();

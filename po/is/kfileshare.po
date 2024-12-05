@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-16 00:40+0000\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
 "PO-Revision-Date: 2024-04-06 12:56+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -589,7 +589,6 @@ msgid "Cancel"
 msgstr "Hætta við"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -608,15 +607,21 @@ msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Mistókst að setja upp Samba-pakkann."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
-msgid ""
-"Because this distro does not include PackageKit, we cannot show you a nice "
-"\"Install it\" button, and you will have to use your package manager to "
-"install the <command>samba</command> server package manually."
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+msgctxt "@info"
+msgid "File sharing service unavailable"
 msgstr ""
-"Þar sem PackageKit fylgir ekki þessari útgáfu stýrikerfisins getum við ekki "
-"boðið þér einfaldan uppsetningarhnapp og því þarftu að nota pakkastjórann "
-"þinn til að setja upp <command>samba</command> þjónspakkann handvirkt."
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
+msgid ""
+"Please ensure the Samba service is enabled and running.\n"
+"If you haven't disabled it manually, consider reporting a bug to your "
+"distribution."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+msgid "Report a bug"
+msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
@@ -675,7 +680,7 @@ msgstr ""
 "skipunina <command>smbpasswd</command>\n"
 "á skipanalínu."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:155
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -685,73 +690,73 @@ msgstr ""
 "Þú ert búinn með hámarksfjölda af samnýttum möppum sem þú getur haft í gangi "
 "á sama tíma."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Sameignarheitið er ógilt."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Sameignarheitið er nú þegar í notkun fyrir aðra möppu."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Slóðin er ógild."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Slóðin er ekki til."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Slóðin er ekki mappa."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Slóðin er afstæð"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Ekki er hægt að samnýta slóðina."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Aðgangsreglan er ógild."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Notandi aðgangsreglunnar er ógildur."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:181
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Aðgangsreglan 'Guest' (gestur) er ógild."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:183
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Ekki er leyfilegt að virkja gestaaðgang."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:195
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:201
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -762,13 +767,13 @@ msgstr ""
 "<para>Villa kom upp þegar reynt var að samnýta möppu. Sameignin var ekki "
 "búin til.</para><para>Innri skýrsla Samba:</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:202
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:208
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Mistókst að búa til netsameign"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:215
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:221
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -780,7 +785,7 @@ msgstr ""
 "var ekki fjarlægð.</para><para>Innri skýrsla Samba:</para><message>%1</"
 "message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:222
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:228
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
@@ -797,6 +802,16 @@ msgstr "Kanna hvort Samba-notandi '%1' sé til"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Bý til nýjan Samba-notanda '%1'"
+
+#~ msgid ""
+#~ "Because this distro does not include PackageKit, we cannot show you a "
+#~ "nice \"Install it\" button, and you will have to use your package manager "
+#~ "to install the <command>samba</command> server package manually."
+#~ msgstr ""
+#~ "Þar sem PackageKit fylgir ekki þessari útgáfu stýrikerfisins getum við "
+#~ "ekki boðið þér einfaldan uppsetningarhnapp og því þarftu að nota "
+#~ "pakkastjórann þinn til að setja upp <command>samba</command> þjónspakkann "
+#~ "handvirkt."
 
 #, fuzzy
 #~| msgid "Share"

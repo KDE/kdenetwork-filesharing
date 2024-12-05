@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-16 00:40+0000\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
 "PO-Revision-Date: 2023-12-15 23:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -592,7 +592,6 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -611,16 +610,21 @@ msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Не вдалося встановити пакунок Samba."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
-msgid ""
-"Because this distro does not include PackageKit, we cannot show you a nice "
-"\"Install it\" button, and you will have to use your package manager to "
-"install the <command>samba</command> server package manually."
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+msgctxt "@info"
+msgid "File sharing service unavailable"
 msgstr ""
-"Оскільки у цьому дистрибутиві немає PackageKit, ми не можемо показати вам "
-"чудової кнопки «Встановити». Вам доведеться скористатися вашою програмою для "
-"керування пакунками, щоб встановити пакунок сервера <command>samba</command> "
-"вручну."
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
+msgid ""
+"Please ensure the Samba service is enabled and running.\n"
+"If you haven't disabled it manually, consider reporting a bug to your "
+"distribution."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+msgid "Report a bug"
+msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
@@ -680,7 +684,7 @@ msgstr ""
 "отримати за допомогою\n"
 "засобу командного рядка Samba <command>smbpasswd</command>."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:155
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -690,73 +694,73 @@ msgstr ""
 "Вами вичерпано максимальну кількість каталогів спільного користування, "
 "доступ до яких можна відкривати одночасно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Назва спільного ресурсу є некоректною."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Назву спільного ресурсу вже використано для іншого каталогу."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Шлях є некоректним."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Шляху не існує."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Шлях не є каталогом."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Шлях є відносним."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Не можна надавати спільний доступ до цього шляху."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Правило доступу є некоректним."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Користувач правила доступу є некоректним."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:181
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Правило гостьового доступу є некоректним."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:183
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Не можна вмикати гостьовий доступ."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:195
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:201
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -768,13 +772,13 @@ msgstr ""
 "Спільний ресурс не було створено.</para><para>Звіт від Samba:</para><message>"
 "%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:202
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:208
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Не вдалося створити спільний мережевий ресурс"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:215
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:221
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -786,7 +790,7 @@ msgstr ""
 "помилка. Спільний ресурс не було вилучено.</para><para>Звіт від Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:222
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:228
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
@@ -803,6 +807,16 @@ msgstr "Перевірка, чи існує запис користувача Sa
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Створення нового користувача Samba «%1»"
+
+#~ msgid ""
+#~ "Because this distro does not include PackageKit, we cannot show you a "
+#~ "nice \"Install it\" button, and you will have to use your package manager "
+#~ "to install the <command>samba</command> server package manually."
+#~ msgstr ""
+#~ "Оскільки у цьому дистрибутиві немає PackageKit, ми не можемо показати вам "
+#~ "чудової кнопки «Встановити». Вам доведеться скористатися вашою програмою "
+#~ "для керування пакунками, щоб встановити пакунок сервера <command>samba</"
+#~ "command> вручну."
 
 #~ msgctxt "@info"
 #~ msgid ""

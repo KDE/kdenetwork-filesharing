@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-16 00:40+0000\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
 "PO-Revision-Date: 2021-06-20 10:50+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -585,7 +585,6 @@ msgid "Cancel"
 msgstr "Ακύρωση"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "Samba must be installed before folders can be shared."
@@ -605,11 +604,20 @@ msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Αποτυχία εγκατάστασης του πακέτου Samba."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+msgctxt "@info"
+msgid "File sharing service unavailable"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
-"Because this distro does not include PackageKit, we cannot show you a nice "
-"\"Install it\" button, and you will have to use your package manager to "
-"install the <command>samba</command> server package manually."
+"Please ensure the Samba service is enabled and running.\n"
+"If you haven't disabled it manually, consider reporting a bug to your "
+"distribution."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+msgid "Report a bug"
 msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
@@ -670,7 +678,7 @@ msgstr ""
 "εργαλείο της Samba <command>smbpasswd</command>\n"
 "από τη γραμμή εντολών."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:155
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -680,73 +688,73 @@ msgstr ""
 "Έχετε εξαντλήσει το μέγιστο πλήθος των κοινόχρηστων καταλόγων που μπορεί να "
 "είναι ταυτόχρονα ενεργοί."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Το όνομα του κοινού πόρου δεν είναι έγκυρο."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Το όνομα του κοινού πόρου είναι ήδη σε χρήση για έναν άλλο κατάλογο."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Η διαδρομή δεν είναι έγκυρη."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Η διαδρομή δεν υπάρχει."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Η διαδρομή δεν είναι κατάλογος."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Η διαδρομή είναι σχετική."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Αυτή η διαδρομή δεν μπορεί να γίνει κοινόχρηστη."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Ο κανόνας πρόσβασης δεν είναι έγκυρος."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Ο χρήστης σύμφωνα με τον κανόνα πρόσβασης δεν είναι έγκυρος."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:181
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Ο κανόνας πρόσβασης για τον 'Επισκέπτη' δεν είναι έγκυρος."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:183
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Η ενεργοποίηση της πρόσβασης σε επισκέπτες δεν επιτρέπεται."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:195
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:201
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -758,13 +766,13 @@ msgstr ""
 "κατάλογος. Ο κοινός πόρος δεν δημιουργήθηκε.</para><para>Αναφορά εσωτερικών "
 "διαδικασιών της Samba:</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:202
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:208
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Αποτυχία δημιουργίας κοινού πόρου στο δίκτυο"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:215
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:221
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -776,7 +784,7 @@ msgstr ""
 "καταλόγου. Ο κοινός πόρος δεν αφαιρέθηκε.</para><para>Αναφορά εσωτερικών "
 "διαδικασιών της Samba:</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:222
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:228
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"

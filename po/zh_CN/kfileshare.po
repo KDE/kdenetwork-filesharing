@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-16 00:40+0000\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -555,7 +555,6 @@ msgid "Cancel"
 msgstr "取消"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:17
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -573,14 +572,21 @@ msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Samba 软件包安装失败。"
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:18
-msgid ""
-"Because this distro does not include PackageKit, we cannot show you a nice "
-"\"Install it\" button, and you will have to use your package manager to "
-"install the <command>samba</command> server package manually."
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+msgctxt "@info"
+msgid "File sharing service unavailable"
 msgstr ""
-"由于本机运行的发行版没有包含 PackageKit 程序，系统无法为您显示一键安装按钮。"
-"请使用发行版的软件包管理器手动安装 <command>samba</command> 服务器端软件包。"
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
+msgid ""
+"Please ensure the Samba service is enabled and running.\n"
+"If you haven't disabled it manually, consider reporting a bug to your "
+"distribution."
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+msgid "Report a bug"
+msgstr ""
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"
@@ -635,7 +641,7 @@ msgstr ""
 "如需进行额外的用户和密码管理，\n"
 "请使用 Samba 的 <command>smbpasswd</command> 命令行工具。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:155
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -643,73 +649,73 @@ msgid ""
 "active at the same time."
 msgstr "您已经达到了同时活跃的共享目录的最大数量限制。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:157
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "共享名称无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:159
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "此共享名称已被用于另一个目录。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:161
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "路径无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:163
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "此路径不存在。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:165
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "此路径不是一个目录。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:167
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "此路径是相对路径。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:169
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "此路径不能共享。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:171
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "此访问规则无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:173
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:179
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "访问规则中的用户无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:175
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:181
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "访客访问规则无效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:177
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:183
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "不允许启用访客访问。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:195
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:201
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -720,13 +726,13 @@ msgstr ""
 "<para>尝试共享此目录时发生错误。共享未被创建。</para><para>Samba 内部报告：</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:202
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:208
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "创建网络共享失败"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:215
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:221
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -737,7 +743,7 @@ msgstr ""
 "<para>尝试取消共享此目录时出错。共享未被取消。</para><para>Samba 内部报告：</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:222
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:228
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
@@ -754,3 +760,12 @@ msgstr "正在检查 Samba 用户“%1”是否存在"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "正在创建新的 Samba 用户“%1”"
+
+#~ msgid ""
+#~ "Because this distro does not include PackageKit, we cannot show you a "
+#~ "nice \"Install it\" button, and you will have to use your package manager "
+#~ "to install the <command>samba</command> server package manually."
+#~ msgstr ""
+#~ "由于本机运行的发行版没有包含 PackageKit 程序，系统无法为您显示一键安装按"
+#~ "钮。请使用发行版的软件包管理器手动安装 <command>samba</command> 服务器端软"
+#~ "件包。"

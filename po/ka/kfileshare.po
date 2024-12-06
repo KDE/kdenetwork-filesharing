@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:39+0000\n"
-"PO-Revision-Date: 2023-12-15 04:29+0100\n"
+"PO-Revision-Date: 2024-12-05 06:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -600,7 +600,7 @@ msgstr "Samba-ის პაკეტის დაყენების შეც
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "ფაილის გაზიარების სერვისი მიუწვდომელია"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
@@ -608,10 +608,13 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"დარწმუნდით, რომ სერვისი Samba ჩართული და გაშვებულია.\n"
+"თუ ის ხელით არ გაგითიშავთ, იფიქრეთ, თქვენი დისტრიბუტივისთვის შეცდომის "
+"ანგარიში შეავსოთ."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
 msgid "Report a bug"
-msgstr ""
+msgstr "შეცდომის პატაკი"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

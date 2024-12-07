@@ -7,14 +7,14 @@
 # Miguel Branco <mgl.branco@gmail.com>, 2008.
 # Marce Villarino <mvillarino@users.sourceforge.net>, 2009.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2012, 2017.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:39+0000\n"
-"PO-Revision-Date: 2023-12-15 20:32+0100\n"
+"PO-Revision-Date: 2024-12-06 11:54+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -612,7 +612,7 @@ msgstr "Non se puido instalar o paquete de Samba."
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "O servizo de compartición de ficheiros non está dispoñíbel."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
@@ -620,10 +620,13 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"Asegúrese de que o servizo Samba está activado e en execución.\n"
+"Se non o desactivou manualmente, considere informar do fallo á súa "
+"distribución."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
 msgid "Report a bug"
-msgstr ""
+msgstr "Informar dun fallo"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

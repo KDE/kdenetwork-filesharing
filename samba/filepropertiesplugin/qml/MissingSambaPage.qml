@@ -14,7 +14,7 @@ Item {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
-        icon.name: "emblem-error"
+        icon.name: "dialog-error"
 
         text: xi18nc("@info", "The <application>Samba</application> file sharing service must be installed before folders can be shared.")
         explanation: i18n("Because this distro does not include PackageKit, we cannot show you a nice \"Install it\" button, and you will have to use your package manager to install the <command>samba</command> server package manually.")

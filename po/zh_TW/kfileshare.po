@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:39+0000\n"
-"PO-Revision-Date: 2024-01-05 02:12+0900\n"
+"PO-Revision-Date: 2024-12-29 01:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: samba/aclproperties/plugin.cpp:59
@@ -583,7 +583,7 @@ msgstr "Samba 軟體包安裝失敗。"
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "檔案分享服務無法使用"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
@@ -591,10 +591,12 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"請確保 Samba 服務已啟用且執行中。\n"
+"如果您並未手動將其停用，請考慮將這個問題回報給您的發行版。"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
 msgid "Report a bug"
-msgstr ""
+msgstr "回報問題"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

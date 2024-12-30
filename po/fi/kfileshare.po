@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-05 00:39+0000\n"
-"PO-Revision-Date: 2024-01-22 16:09+0200\n"
+"PO-Revision-Date: 2024-12-09 21:16+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -601,7 +602,7 @@ msgstr "Samba-paketin asennus epäonnistui."
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "Tiedostonjakopalvelu ei käytettävissä"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
@@ -609,10 +610,12 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"Varmista, että Samba-palvelu on otettu käyttöön ja käynnissä.\n"
+"Ellet ole poistanut sitä käytöstä itse, harkitse vikailmoitusta jakelullesi."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
 msgid "Report a bug"
-msgstr ""
+msgstr "Ilmoita viasta"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

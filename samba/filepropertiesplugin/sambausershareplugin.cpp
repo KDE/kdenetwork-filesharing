@@ -100,7 +100,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
         QTimer::singleShot(100, properties, &KPropertiesDialog::showFileSharingPage);
     }
 
-    QTimer::singleShot(0, [this] {
+    QTimer::singleShot(0, this, [this] {
         connect(m_userManager, &UserManager::loaded, this, [this] {
             m_permissionsHelper->reload();
             setReady(true);

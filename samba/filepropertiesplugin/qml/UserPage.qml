@@ -1,31 +1,27 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 Kirigami.ScrollablePage {
+    padding: Kirigami.Units.largeSpacing
+
     background: Item {} /* this page is inside a tabbox, we want its background, not a window/page background */
 
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
 
-    Keys.onPressed: {
-        // We need to explicitly handle some keys inside the sheet. Since the sheet is no FocusScope we will catch
-        // them here and feed them to the sheet instead.
-        if (!changePassword.sheetOpen) {
-            return
-        }
-        changePassword.handleKeyEvent(event)
-    }
-
     ChangePassword {
-        // This is an overlay sheet, it requires a scrollable page to anchor on.
         id: changePassword
+
+        name: sambaPlugin.userManager.currentUser().name
+        isPasswordChange: false
 
         function userCreated(userCreated)
         {
@@ -45,10 +41,11 @@ Kirigami.ScrollablePage {
     }
 
     Connections {
-        // ChangePassword being a sheet it's being crap to use and can't even connect to nothing.
         target: sambaPlugin.userManager.currentUser()
+        onAddToSambaError: function (error) {
+            changePassword.errorMessage = error
+        }
         onInSambaChanged: changePassword.userCreated(target.inSamba)
-        onAddToSambaError: changePassword.errorMessage = error
     }
 
     ColumnLayout {
@@ -70,8 +67,8 @@ Before you can access shares with your current user account you need to set a Sa
 
         QQC2.Button {
             Layout.alignment: Qt.AlignHCenter
-            icon.name: "lock"
-            text: i18nc("@action:button opens dialog to create new user", "Create Samba password")
+            icon.name: "lock-symbolic"
+            text: i18nc("@action:button opens dialog to create new user", "Set Samba password")
             onClicked: changePassword.openAndClear()
         }
 

@@ -48,7 +48,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (!info.exists()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because <filename>%1</filename> does not exist.", path);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by creating that folder manually. Then close and re-open this window.");
+                m_errorExplanation = xi18nc("@info:status", "This error is caused by your distribution not setting up Samba sharing properly. You can fix it yourself by creating that folder manually, then close and re-open this window.");
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that creates the folder
             }
@@ -57,11 +57,11 @@ GroupManager::GroupManager(QObject *parent)
             else if (!groups.contains(m_targetGroup)) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account isn't a member of the <resource>%1</resource> group.", m_targetGroup);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "You can fix this by making your user a member of that group. Then restart the system.");
+                m_errorExplanation = xi18nc("@info:status", "You can fix this by making your user a member of that group, then restart the system.");
                 Q_EMIT errorExplanationChanged();
                 m_helpfulActionIcon = QStringLiteral("resource-group-new");
                 Q_EMIT helpfulActionIconChanged();
-                m_helpfulActionText = i18nc("action@button makes user a member of the samba share group", "Make me a Group Member");
+                m_helpfulActionText = i18nc("action@button makes user a member of the samba share group", "Make Me a Group Member");
                 Q_EMIT helpfulActionTextChanged();
                 m_helpfulAction = HelpfulAction::AddUserToGroup;
                 m_hasHelpfulAction = true;
@@ -72,7 +72,7 @@ GroupManager::GroupManager(QObject *parent)
             else if (!info.isWritable()) {
                 m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account doesn't have permission to write into <filename>%1</filename>.", path);
                 Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>. Then close and re-open this window.",  m_targetGroup, path);
+                m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>, then close and re-open this window.",  m_targetGroup, path);
                 Q_EMIT errorExplanationChanged();
                 // TODO: define a helpfulAction that adds group write permission to the folder
             }
@@ -99,7 +99,7 @@ void GroupManager::performHelpfulAction()
             action.addArgument(QStringLiteral("group"), group);
             action.setDetailsV2({{KAuth::Action::AuthDetail::DetailMessage,
                                 xi18nc("@label kauth action description %1 is a username %2 a group name",
-                                        "Adding user <resource>%1</resource> to group <resource>%2</resource> so they may configure Samba user shares",
+                                        "Adding user <resource>%1</resource> to group <resource>%2</resource> so they can configure Samba user shares",
                                         user,
                                         group) }
             });

@@ -140,9 +140,11 @@ Description[zh_TW]=正在檢查 Samba 使用者是否存在
 # TODO: this could be split into a sepearate action createcurrentuser which only
 #   requires auth_self BUT it first needs kauth to grow the ability to resolve the dbus UID of the unprivileged
 #   remote (the client)
+# samba users will have the same username as the logged in user, so it makes more sense from a UX perspective
+# to label it as setting the password for Samba rather than creating a new user
 Policy=auth_admin
 PolicyInactive=auth_admin
-Name=Creating New Samba User
+Name=Setting Password For Samba User
 Name[ar]=إنشاء مستخدم سامبا جديد
 Name[az]=Yeni Samba istifadəçisi yaradılır
 Name[be]=Стварэнне новага карыстальніка Samba
@@ -185,7 +187,7 @@ Name[uk]=Створення нового користувача Samba
 Name[x-test]=xxCreating New Samba Userxx
 Name[zh_CN]=正在创建新的 Samba 用户
 Name[zh_TW]=正在建立新的 Samba 使用者
-Description=Creating new Samba user
+Description=Setting password for Samba user
 Description[ar]=ينشئ مستخدم سامبا جديد
 Description[az]=Yeni Samba istifadəçisi yaradılır
 Description[be]=Стварэнне новага карыстальніка Samba

@@ -2,15 +2,18 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
     SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
-Item {
+Kirigami.Page {
     id: page
+
+    padding: Kirigami.Units.smallSpacing
 
     ColumnLayout {
         anchors.fill: parent
@@ -33,7 +36,7 @@ Item {
                 textFormat: Text.RichText
                 text: xi18nc("@info", `
 <para>The folder <filename>%1</filename> needs extra permissions for sharing to work.</para>
-<para>Do you want to add these permissions now?</para><nl/>
+<para>Add these permissions now?</para><nl/>
 `, sambaPlugin.shareContext.path)
             }
 
@@ -74,7 +77,7 @@ Item {
                         if (failedPaths.length > 0) {
                             changePermissionsError.text =
                                 i18nc("@label",
-                                      "Could not change permissions for: %1. All permission changes have been reverted to initial state.",
+                                      "Could not change permissions for: %1. All permissions changes have been reverted.",
                                       failedPaths.join(", "))
                         } else {
                             stack.pop()

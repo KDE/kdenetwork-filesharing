@@ -5,6 +5,7 @@
     SPDX-FileCopyrightText: 2015-2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 #include "sambausershareplugin.h"
@@ -18,11 +19,15 @@
 #include <KLocalizedString>
 #include <QTimer>
 #include <QQmlContext>
+#include <QClipboard>
 #include <QPushButton>
+#include <QNetworkInterface>
 #include <QStandardPaths>
 #include <QDBusInterface>
 #include <QDBusConnection>
 #include <QMainWindow>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
 
 #include <KLocalizedContext>
 #include <KMessageBox>
@@ -31,6 +36,7 @@
 #include <KService>
 #include <KIO/CommandLauncherJob>
 
+#include "org.freedesktop.Avahi.Server.h"
 
 #include "groupmanager.h"
 
@@ -119,13 +125,62 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
         QTimer::singleShot(100, properties, &KPropertiesDialog::showFileSharingPage);
     }
 
-    QTimer::singleShot(0, this, [this] {
-        connect(m_userManager, &UserManager::loaded, this, [this] {
-            m_permissionsHelper->reload();
-            setReady(true);
-        });
-        m_userManager->load();
+    QMetaObject::invokeMethod(this, &SambaUserSharePlugin::initUserManager, Qt::QueuedConnection);
+    QMetaObject::invokeMethod(this, &SambaUserSharePlugin::initAddressList, Qt::QueuedConnection);
+}
+
+void SambaUserSharePlugin::initUserManager()
+{
+    connect(m_userManager, &UserManager::loaded, this, [this] {
+        m_permissionsHelper->reload();
+        setReady(true);
     });
+    m_userManager->load();
+}
+
+void SambaUserSharePlugin::initAddressList()
+{
+    QStringList addressList;
+
+    const auto interfaces = QNetworkInterface::allInterfaces();
+    for (const auto &interface : interfaces) {
+        if (!interface.flags().testAnyFlag(QNetworkInterface::IsLoopBack)) {
+            for (auto &address : interface.addressEntries()) {
+                // Show only private ip addresses
+                if (address.ip().isPrivateUse()) {
+                    addressList.append(address.ip().toString());
+                }
+            }
+        }
+    }
+
+    // Get fully qualified domain name
+    QString fqdn;
+    auto avahi = new OrgFreedesktopAvahiServerInterface(
+        QStringLiteral("org.freedesktop.Avahi"), 
+        QStringLiteral("/"), 
+        QDBusConnection::systemBus());
+        
+    auto watcher = new QDBusPendingCallWatcher(avahi->GetHostNameFqdn(), this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, avahi, watcher] {
+            watcher->deleteLater();
+            avahi->deleteLater();
+
+            QDBusPendingReply<QString> reply = *watcher;
+            QStringList addressList = m_addressList;
+            if (!reply.isError()) {
+                QString fqdn = reply.argumentAt(0).toString();
+                if (!fqdn.isEmpty()) {
+                    addressList.append(fqdn);
+                }
+            }
+            m_addressList = addressList;
+            Q_EMIT addressListChanged();
+        }
+    );
+
+    m_addressList = addressList;
+    Q_EMIT addressListChanged();
 }
 
 bool SambaUserSharePlugin::isSambaInstalled()
@@ -139,6 +194,12 @@ void SambaUserSharePlugin::showSambaStatus()
     job->setDesktopName(QStringLiteral("org.kde.kinfocenter"));
     job->start();
 }
+
+void SambaUserSharePlugin::copyAddressToClipboard(const QString &address)
+{
+    QGuiApplication::clipboard()->setText(address.trimmed());
+}
+
 
 void SambaUserSharePlugin::applyChanges()
 {

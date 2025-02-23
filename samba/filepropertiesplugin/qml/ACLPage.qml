@@ -118,6 +118,10 @@ when the Share access rules would allow it.`)
             }
         }
 
+        ConnectionAddresses {
+            id: connectionAddresses
+        }
+
         ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -155,6 +159,13 @@ when the Share access rules would allow it.`)
                         sambaPlugin.shareContext.name = text
                         sambaPlugin.dirty = true
                     }
+                }          
+                QQC2.Button {
+                    Layout.alignment: Qt.AlignRight
+                    text: i18nc("@action:button network addresses", "View Addresses")
+                    enabled: shareEnabled.checked
+                    icon.name: "network-connect-symbolic"
+                    onClicked: connectionAddresses.open()
                 }
             }
 

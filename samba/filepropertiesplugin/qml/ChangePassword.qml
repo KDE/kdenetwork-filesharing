@@ -1,27 +1,32 @@
 /*
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
     SPDX-FileCopyrightText: 2020 Carson Black <uhhadd@gmail.com>
-    SPDX-FileCopyrightText: 2020 Harld Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
 
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: passwordRoot
 
+    padding: Kirigami.Units.largeSpacing
+
+    property string name
     property string password
     property bool busy: false
+    property bool isPasswordChange: false
     property alias errorMessage: persistentError.text
-    signal accepted()
 
-    header: Kirigami.Heading {
-        // FIXME make qml user name aware so we can be more contextually accurate and label it 'set password for foo'
-        text: i18nc("@title", "Set password")
-    }
+    title: isPasswordChange ? i18nc("@title", "Change password for '%1'", name) : i18nc("@title", "Set password for '%1'", name)
+
+    standardButtons: Kirigami.Dialog.NoButton
+    showCloseButton: false
+    flatFooterButtons: false
 
     function openAndClear() {
         verifyField.text = ""
@@ -44,29 +49,13 @@ Kirigami.OverlaySheet {
         accepted()
     }
 
-    function handleKeyEvent(event) {
-        if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-            // 🤮 https://bugreports.qt.io/browse/QTBUG-70934
-            event.accepted = true
-            maybeAccept()
-        } else if (event.key === Qt.Key_Escape) {
-            // Handle Esc manually, within the sheet we'll want it to close the sheet rater than let the event fall
-            // through to a higher level item (or worse yet QWidget).
-            event.accepted = true
-            close()
-        }
-    }
-
-    ColumnLayout {
-        id: mainColumn
-        spacing: Kirigami.Units.smallSpacing
-        Layout.preferredWidth: Kirigami.Units.gridUnit * 15
-
-        // We don't use a FormLayout here because layouting breaks at small widths.
+    contentItem: ColumnLayout {
         ColumnLayout {
             id: inputLayout
+            spacing: Kirigami.Units.smallSpacing
+            Layout.fillWidth: true
             Layout.alignment: Qt.AlignHCenter
-            visible: !busy.running
+            visible: !passwordRoot.busy
 
             Kirigami.PasswordField {
                 id: passwordField
@@ -76,7 +65,7 @@ Kirigami.OverlaySheet {
 
                 // Reset external error on any password change
                 onTextChanged: errorMessage = ""
-                // Don't use onAccepted it's no bueno. See handleKeyEvent
+                onAccepted: maybeAccept()
             }
 
             Kirigami.PasswordField {
@@ -87,14 +76,14 @@ Kirigami.OverlaySheet {
 
                 // Reset external error on any password change
                 onTextChanged: errorMessage = ""
-                // Don't use onAccepted it's no bueno. See handleKeyEvent
+                onAccepted: maybeAccept()
             }
 
             Kirigami.InlineMessage {
                 id: passwordWarning
                 Layout.fillWidth: true
                 type: Kirigami.MessageType.Error
-                text: i18nc("@label error message", "Passwords must match")
+                text: i18nc("@label error message", "Passwords must match.")
                 visible: passwordField.text != "" && verifyField.text != "" && passwordField.text != verifyField.text
                 Layout.alignment: Qt.AlignLeft
             }
@@ -111,14 +100,6 @@ Kirigami.OverlaySheet {
                 visible: text != ""
             }
 
-            QQC2.Button {
-                id: passButton
-                icon.name: "dialog-ok"
-                text: i18nc("@action:button creates a new samba user with the user-specified password", "Set Password")
-                enabled: isAcceptable()
-                Layout.alignment: Qt.AlignRight
-                onClicked: maybeAccept()
-            }
         }
 
         QQC2.BusyIndicator {
@@ -128,4 +109,20 @@ Kirigami.OverlaySheet {
             running: passwordRoot.busy
         }
     }
+
+    customFooterActions: [
+        Kirigami.Action {
+            id: passButton
+            icon.name: "dialog-ok"
+            text: i18nc("@action:button creates a new samba user with the user-specified password", "Set Password")
+            enabled: isAcceptable()
+            onTriggered: maybeAccept()
+        },
+        Kirigami.Action {
+            id: cancelButton
+            icon.name: "dialog-cancel"
+            text: i18nc("@action:button", "Cancel")
+            onTriggered: close()
+        }
+    ]
 }

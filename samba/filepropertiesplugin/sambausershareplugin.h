@@ -5,6 +5,7 @@
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 #ifndef SAMBAUSERSHAREPLUGIN_H
@@ -146,6 +147,7 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_OBJECT
     Q_PROPERTY(bool dirty READ isDirty WRITE setDirty NOTIFY changed) // So qml can mark dirty
     Q_PROPERTY(bool ready READ isReady NOTIFY readyChanged) // intentionally not writable from qml
+    Q_PROPERTY(QStringList addressList MEMBER m_addressList NOTIFY addressListChanged)
     // Expose instance-singleton members so QML may access them.
     // They aren't application-wide singletons and also cannot easily be ctor'd from QML.
     Q_PROPERTY(UserManager *userManager MEMBER m_userManager CONSTANT)
@@ -162,6 +164,7 @@ public:
     Q_INVOKABLE static bool isSambaInstalled();
     Q_INVOKABLE static void reboot();
     Q_INVOKABLE static void showSambaStatus();
+    Q_INVOKABLE static void copyAddressToClipboard(const QString &address);
 
     bool isReady() const;
 
@@ -169,17 +172,22 @@ public:
 
 Q_SIGNALS:
     void readyChanged();
+    void addressListChanged();
 
 private:
     void setReady(bool ready);
     void reportAdd(KSambaShareData::UserShareError error);
     void reportRemove(KSambaShareData::UserShareError error);
 
+    Q_SLOT void initUserManager();
+    Q_SLOT void initAddressList();
+
     const QString m_url;
     ShareContext *m_context= nullptr;
     UserPermissionModel *m_model = nullptr;
     UserManager *m_userManager = nullptr;
     PermissionsHelper *m_permissionsHelper = nullptr;
+    QStringList m_addressList;
     bool m_ready = false;
     // Hold the qquickwidget so it gets destroyed with us. Otherwise we'd have bogus reference errors
     // as the Plugin instance is exposed as contextProperty to qml but the widget is parented to the PropertiesDialog

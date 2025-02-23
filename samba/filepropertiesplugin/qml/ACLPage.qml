@@ -3,22 +3,50 @@
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
     SPDX-FileCopyrightText: 2023 ivan tkachenko <me@ratijas.tk>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.14
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.filesharing.samba 1.0 as Samba
 
 // NOTE: sambaPlugin.shareContext is a singleton its properties cannot be bound and need manual syncing back.
 
-Item {
-    // NOTE: we cannot use a Kirigami.Page for this because it adds excessive padding that we can't disable
-    //   so it'd very awkwardly space within the properties dialog reducing the available space a lot and looking
-    //   silly. Alas, Column is also not grand because it gets collapsed by the sheet, so we use a fixed size
-    //   Item in place of a Page that gets covered by the Sheet and then that Item is filled by a Column.
+Kirigami.Page {
     id: page
+
+    padding: Kirigami.Units.smallSpacing
+
+    ChangePassword {
+        id: changePassword
+
+        name: sambaPlugin.userManager.currentUser().name
+        isPasswordChange: true
+
+        function userCreated(userCreated) {
+            enabled = true;
+            changePassword.busy = false;
+            if (userCreated) {
+                close();
+            }
+        }
+
+        onAccepted: {
+            enabled = false;
+            busy = true;
+            sambaPlugin.userManager.currentUser().addToSamba(password);
+        }
+    }
+
+    Connections {
+        target: sambaPlugin.userManager.currentUser()
+        onAddToSambaError: function (error) {
+            changePassword.errorMessage = error;
+        }
+        onInSambaChanged: changePassword.userCreated(target.inSamba)
+    }
 
     Kirigami.OverlaySheet {
         id: denialSheet
@@ -59,7 +87,7 @@ when the Share access rules would allow it.`)
             showCloseButton: true
             visible: sambaPlugin.permissionsHelper.permissionsChangeRequired
             type: Kirigami.MessageType.Warning
-            text: i18nc("@label", "This folder needs extra permissions for sharing to work")
+            text: i18nc("@label", "This folder needs extra permissions for sharing to work.")
 
             actions: [
                 Kirigami.Action {
@@ -94,6 +122,10 @@ when the Share access rules would allow it.`)
             Layout.fillWidth: true
             Layout.fillHeight: true
             enabled: shareEnabled.checked
+
+            Kirigami.Separator {
+                Layout.fillWidth: true
+            }
 
             RowLayout {
                 Layout.fillWidth: true
@@ -147,7 +179,7 @@ when the Share access rules would allow it.`)
             QQC2.CheckBox {
                 id: allowGuestBox
                 Layout.fillWidth: true
-                text: i18nc("@option:check", "Allow guests")
+                text: i18nc("@option:check", "Allow guests to connect")
                 enabled: sambaPlugin.shareContext.canEnableGuest
                 checked: sambaPlugin.shareContext.guestEnabled
                 onToggled: {
@@ -159,7 +191,7 @@ when the Share access rules would allow it.`)
             QQC2.Label {
                 Layout.fillWidth: true
                 enabled: false // looks more visually connected if both are disabled
-                visible: !allowGuestBox.enabled
+                visible: !sambaPlugin.shareContext.canEnableGuest
                 text: i18nc("@label", "Guest access is disabled by the system's Samba configuration.")
                 wrapMode: Text.Wrap
                 font: Kirigami.Theme.smallFont
@@ -198,9 +230,9 @@ when the Share access rules would allow it.`)
                     columnSpacing: Kirigami.Units.smallSpacing
 
                     columnWidthProvider: column => {
-                        // Give 2/3 of the width to the access column for better looks.
+                        // Give 1/2 of the width to the access column for better looks.
                         const availableWidth = width - columnSpacing
-                        var accessWidth = Math.round(availableWidth / 1.5)
+                        var accessWidth = Math.round(availableWidth / 2)
                         if (column === Samba.UserPermissionModel.ColumnAccess) {
                             return accessWidth
                         }
@@ -237,8 +269,15 @@ when the Share access rules would allow it.`)
                             Layout.fillWidth: true
                             Layout.leftMargin: view.columnSpacing
                             visible: column !== Samba.UserPermissionModel.ColumnAccess
-                            text: display === undefined ? "" : display
+                            text: display === undefined ? "" : model.display
                             elide: Text.ElideMiddle
+                        }
+
+                        QQC2.Button {
+                            visible: model.display === sambaPlugin.userManager.currentUser().name
+                            text: i18nc("@button", "Change Password…")
+                            icon.name: "lock-symbolic"
+                            onClicked: changePassword.openAndClear()
                         }
 
                         QQC2.ComboBox {
@@ -249,7 +288,7 @@ when the Share access rules would allow it.`)
                             valueRole: "value"
                             visible: column === Samba.UserPermissionModel.ColumnAccess
                             model: [
-                                { value: undefined, text: "---" },
+                                { value: undefined, text: "⸺" },
                                 { value: "F", text: i18nc("@option:radio user can read&write", "Full Control") },
                                 { value: "R", text: i18nc("@option:radio user can read", "Read Only") },
                                 { value: "D", text: i18nc("@option:radio user not allowed to access share", "No Access") }
@@ -278,7 +317,8 @@ when the Share access rules would allow it.`)
 
         QQC2.Button {
             Layout.fillWidth: true
-            text: i18nc("@button", "Show Samba status monitor")
+            text: i18nc("@button", "View Samba Status")
+            icon.name: "help-about"
             onClicked: sambaPlugin.showSambaStatus()
         }
     }

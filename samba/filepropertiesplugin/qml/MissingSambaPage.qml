@@ -1,15 +1,18 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.14
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 
 // When built without packagekit we cannot do auto-installation.
-Item {
+Kirigami.Page {
+    padding: Kirigami.Units.smallSpacing
+    
     Kirigami.PlaceholderMessage {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)

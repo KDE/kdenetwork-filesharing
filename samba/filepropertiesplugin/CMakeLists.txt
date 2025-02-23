@@ -1,4 +1,4 @@
-add_library(sambausershareplugin MODULE
+set(sambausershareplugin_SRCS
     sambausershareplugin.cpp
     model.cpp
     usermanager.cpp
@@ -7,6 +7,10 @@ add_library(sambausershareplugin MODULE
     qml/qml.qrc
 )
 
+qt_add_dbus_interface(sambausershareplugin_SRCS org.freedesktop.Avahi.Server.xml org.freedesktop.Avahi.Server)
+
+add_library(sambausershareplugin MODULE ${sambausershareplugin_SRCS})
+
 target_link_libraries(sambausershareplugin
     KF6::CoreAddons
     KF6::I18n
@@ -14,6 +18,8 @@ target_link_libraries(sambausershareplugin
     KF6::KIOWidgets
     Qt::Qml
     Qt::QuickWidgets
+    Qt::Network
+    Qt::DBus
     QCoro6::Coro
     KF6::AuthCore
 )

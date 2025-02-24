@@ -21,6 +21,7 @@
 #include <QPushButton>
 #include <QDBusInterface>
 #include <QDBusConnection>
+#include <QMainWindow>
 
 #include <KLocalizedContext>
 #include <KMessageBox>
@@ -53,6 +54,21 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
         return;
     }
 
+    /**
+     * Set QtQuick rendering to software if parent is using RasterSurface.
+     * This avoids random restarts with Dolphin for example.
+     * BUG:494627
+     */
+    const auto parentDialog = qobject_cast<KPropertiesDialog *>(parent);
+    if (parentDialog->nativeParentWidget()){
+        const auto nativeParentWidget = qobject_cast<QMainWindow *>(parentDialog->nativeParentWidget());
+        if (nativeParentWidget && nativeParentWidget->windowHandle()){
+            if (nativeParentWidget->windowHandle()->surfaceType() == QSurface::RasterSurface) {
+                QQuickWindow::setGraphicsApi(QSGRendererInterface::Software);
+            }
+        }
+    }
+
     // TODO: this could be made to load delayed via invokemethod. we technically don't need to fully load
     //   the backing data in the ctor, only the qml view with busyindicator
     // TODO: relatedly if we make ShareContext and the Model more async vis a vis construction we can init them from
@@ -75,8 +91,9 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
     qmlRegisterAnonymousType<ShareContext>("org.kde.filesharing.samba", 1);
     qmlRegisterAnonymousType<SambaUserSharePlugin>("org.kde.filesharing.samba", 1);
 
-    m_page.reset(new QWidget(qobject_cast<KPropertiesDialog *>(parent)));
+    m_page.reset(new QWidget(parentDialog));
     m_page->setAttribute(Qt::WA_TranslucentBackground);
+
     auto widget = new QQuickWidget(m_page.get());
     // Set translation domain before setting the source so strings gets translated.
     auto i18nContext = new KLocalizedContext(widget->engine());

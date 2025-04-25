@@ -49,7 +49,6 @@ Kirigami.Page {
         }
 
         Kirigami.PlaceholderMessage {
-            icon.name: "dialog-error"
             text: manager.errorText
             explanation: manager.errorExplanation
             helpfulAction: Kirigami.Action {

@@ -1,8 +1,10 @@
-# translation of kfileshare.po to Spanish
+# Spanish translations for kfileshare.po package.
+# Copyright (C) 2004-2025 This file is copyright:
+# This file is distributed under the same license as the kdenetwork-filesharing package.
 #
 # SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
 # SPDX-FileCopyrightText: 2004, 2008, 2009 Jaime Robles <jaime@kde.org>
-# SPDX-FileCopyrightText: 2004, 2008, 2016, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2004, 2008, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
 # SPDX-FileCopyrightText: 2005 Matias Costa <mcc3@alu.um.es>
 # SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
@@ -13,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-25 00:40+0000\n"
-"PO-Revision-Date: 2024-12-06 02:19+0100\n"
+"PO-Revision-Date: 2025-05-12 14:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -811,100 +813,3 @@ msgstr "Comprobando si el usuario de Samba «%1» existe"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Creando nuevo usuario de Samba «%1»"
-
-#~ msgid ""
-#~ "Because this distro does not include PackageKit, we cannot show you a "
-#~ "nice \"Install it\" button, and you will have to use your package manager "
-#~ "to install the <command>samba</command> server package manually."
-#~ msgstr ""
-#~ "Debido a que esta distribución no incluye PackageKit, no podemos "
-#~ "mostrarle el botón «Instalar», por lo que tendrá que usar el gestor de "
-#~ "paquetes para instalar el paquete del servidor <command>samba</command> "
-#~ "de forma manual."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<resource>%1</resource> is not a valid Samba user name; cannot create it."
-#~ msgstr ""
-#~ "<resource>%1</resource> no es un nombre de usuario válido de Samba; no se "
-#~ "puede crear."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "<resource>%1</resource> is not a valid user name; cannot add it to the "
-#~ "group <resource>%2</resource>."
-#~ msgstr ""
-#~ "<resource>%1</resource> no es un nombre de usuario válido; no se puede "
-#~ "añadir al grupo <resource>%2</resource>."
-
-#~ msgctxt "@info:status"
-#~ msgid ""
-#~ "This folder can't be shared because <filename>%1</filename> has its group "
-#~ "owner inappropriately set to <resource>%2</resource>, which is not "
-#~ "allowed."
-#~ msgstr ""
-#~ "Esta carpeta no se puede compartir porque <filename>%1</filename> tiene "
-#~ "el propietario del grupo incorrectamente asignado a <resource>%2</"
-#~ "resource>, lo que no está permitido."
-
-#~ msgctxt "@info:status"
-#~ msgid ""
-#~ "This error is caused by your distribution not setting up Samba sharing "
-#~ "properly. You can fix it yourself by changing that folder's group owner "
-#~ "to <resource>sambashares</resource> and making yourself a member of that "
-#~ "group. Then restart the system."
-#~ msgstr ""
-#~ "Este error se debe a que su distribución no ha configurado correctamente "
-#~ "los recursos compartidos de Samba. Puede corregir esto usted mismo "
-#~ "cambiando el propietario del grupo de esta carpeta a "
-#~ "<resource>sambashares</resource> y haciéndose miembro de dicho grupo. A "
-#~ "continuación, reinicie el sistema."
-
-#~ msgctxt "@label failed to change user groups so they can manage shares"
-#~ msgid "Group changes failed."
-#~ msgstr "Ha fallado la modificación del grupo."
-
-#~ msgctxt "@label"
-#~ msgid ""
-#~ "You appear to not have sufficient permissions to manage Samba user shares."
-#~ msgstr ""
-#~ "Parece que no dispone de suficientes permisos para gestionar los recursos "
-#~ "compartidos de usuario de Samba."
-
-#~ msgctxt "@title:tab"
-#~ msgid "Share"
-#~ msgstr "Compartir"
-
-#~ msgctxt "@title"
-#~ msgid "Create User"
-#~ msgstr "Crear usuario"
-
-#~ msgctxt "@action:button creates a new samba user"
-#~ msgid "Create User"
-#~ msgstr "Crear usuario"
-
-#~ msgid "---"
-#~ msgstr "---"
-
-#~ msgid "Installing Samba..."
-#~ msgstr "Instalando Samba..."
-
-#~ msgid ""
-#~ "<qt>There is already a share with the name <strong>%1</strong>.<br /> "
-#~ "Please choose another name.</qt>"
-#~ msgstr ""
-#~ "<qt>Ya hay un recurso compartido con el nombre <strong>%1</strong>. <br /"
-#~ ">Por favor, elija otro nombre.</qt>"
-
-#~ msgid "Samba is not installed on your system."
-#~ msgstr "Samba no está instalado en su sistema."
-
-#~ msgid "Share with S&amba (Microsoft Windows)"
-#~ msgstr "Compartir con S&amba (Microsoft Windows)"
-
-#~ msgid ""
-#~ "<qt><strong>Samba could not be installed.</strong><br />Please, check if "
-#~ "kpackagekit is properly installed</qt>"
-#~ msgstr ""
-#~ "<qt><strong>Samba no se ha podido instalar.</strong><br />Compruebe si "
-#~ "kpackagekit está instalado de manera adecuada</qt>"

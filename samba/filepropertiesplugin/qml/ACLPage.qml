@@ -84,7 +84,6 @@ when the Share access rules would allow it.`)
         Kirigami.InlineMessage {
             id: changePermissionsWarning
             Layout.fillWidth: true
-            showCloseButton: true
             visible: sambaPlugin.permissionsHelper.permissionsChangeRequired
             type: Kirigami.MessageType.Warning
             text: i18nc("@label", "This folder needs extra permissions for sharing to work.")

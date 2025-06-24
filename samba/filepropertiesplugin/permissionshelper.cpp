@@ -33,7 +33,7 @@ static QString getUserPrimaryGroup(const QString &user)
 static QCoro::Task<KFileItem> getCompleteFileItem(const QString &path)
 {
     const QUrl url = QUrl::fromLocalFile(path);
-    auto job = KIO::stat(url);
+    auto job = KIO::stat(url, KIO::HideProgressInfo);
 
     co_await qCoro(job, &KJob::result);
 

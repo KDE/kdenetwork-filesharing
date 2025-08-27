@@ -174,6 +174,7 @@ private:
     void setReady(bool ready);
     void reportAdd(KSambaShareData::UserShareError error);
     void reportRemove(KSambaShareData::UserShareError error);
+    QString ensureSambaIsRunning() const;
 
     const QString m_url;
     ShareContext *m_context= nullptr;

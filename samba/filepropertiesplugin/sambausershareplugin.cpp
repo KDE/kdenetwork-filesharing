@@ -40,6 +40,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
+static const QString DBUS_SYSTEMD_SERVICE = QStringLiteral("org.freedesktop.systemd1");
+static const QString DBUS_SYSTEMD_PATH  = QStringLiteral("/org/freedesktop/systemd1");
+static const QString DBUS_SYSTEMD_MANAGER_INTERFACE = QStringLiteral("org.freedesktop.systemd1.Manager");
+static const QString SMB_SYSTEMD_SERVICE = QStringLiteral("smb");
+
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
     : KPropertiesDialogPlugin(parent)
@@ -145,6 +150,14 @@ void SambaUserSharePlugin::applyChanges()
     qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl() << m_context->m_shareData.path();
     if (!m_context->enabled()) {
         reportRemove(m_context->m_shareData.remove());
+        return;
+    }
+
+    QString sambaState = ensureSambaIsRunning();
+    if (!sambaState.isEmpty()) {
+        KMessageBox::error(qobject_cast<QWidget *>(parent()),
+                           sambaState,
+                           i18nc("@info/title", "Failed to Start File Sharing Server"));
         return;
     }
 
@@ -260,6 +273,117 @@ void SambaUserSharePlugin::reboot()
 {
     QDBusInterface kdeLogoutPrompt(QStringLiteral("org.kde.LogoutPrompt"), QStringLiteral("/LogoutPrompt"), QStringLiteral("org.kde.LogoutPrompt"));
     kdeLogoutPrompt.call(QStringLiteral("promptReboot"));
+}
+
+QString SambaUserSharePlugin::ensureSambaIsRunning() const
+{
+    QString errorMessage = QString();
+
+    // Does the unit file exist?
+    QDBusMessage msg = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                                      DBUS_SYSTEMD_PATH,
+                                                      DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                                      QStringLiteral("ListUnitFilesByPatterns"));
+
+    msg << QStringList() << QStringList{SMB_SYSTEMD_SERVICE};
+    QDBusMessage reply = QDBusConnection::systemBus().call(msg);
+
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return xi18nc("@info", "Could not use <command>ListUnitFilesByPatterns</command> to find the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+    }
+
+    QList<QVariant> args = reply.arguments();
+
+    if (args.isEmpty()) {
+        return xi18nc("@info", "Could not find the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+    }
+
+    bool sambaEnabled = false;
+
+    const QList<QVariant> units = args.at(0).toList();
+    for (const QVariant &entry : units) {
+        QList<QVariant> tuple = entry.toList();
+        if (tuple.size() >= 2) {
+            QString unit = tuple.at(0).toString();
+            QString state = tuple.at(1).toString();
+            if (unit == SMB_SYSTEMD_SERVICE && state == QStringLiteral("enabled")) {
+                sambaEnabled = true;
+            }
+        }
+    }
+
+    if (!sambaEnabled) {
+        // Enable it
+        msg = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                             DBUS_SYSTEMD_PATH,
+                                             DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                             QStringLiteral("EnableUnitFiles"));
+
+        msg << QStringList{SMB_SYSTEMD_SERVICE} << false << true;
+        reply = QDBusConnection::systemBus().call(msg);
+
+        if (reply.type() == QDBusMessage::ErrorMessage) {
+            return xi18nc("@info", "Could not enable the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+        }
+    }
+
+    // We have now finally succeeded at enabing Samba! Make sure it's running right now, too
+    msg = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                         DBUS_SYSTEMD_PATH,
+                                         DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                         QStringLiteral("GetUnit"));
+
+    msg << SMB_SYSTEMD_SERVICE;
+    reply = QDBusConnection::systemBus().call(msg);
+
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return xi18nc("@info", "Could not use <command>GetUnit</command> to find the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+    }
+
+    if (reply.arguments().isEmpty())
+        return xi18nc("@info", "Could not find the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+
+    QDBusObjectPath unitPath = reply.arguments().at(0).value<QDBusObjectPath>();
+
+    // Get its active state
+    msg = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                         unitPath.path(),
+                                         QStringLiteral("org.freedesktop.DBus.Properties"),
+                                         QStringLiteral("Get"));
+
+    msg << QStringLiteral("org.freedesktop.systemd1.Unit") << QStringLiteral("ActiveState");
+    reply = QDBusConnection::systemBus().call(msg);
+
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return xi18nc("@info", "Could not use <command>ActiveState</command> to determine if the <command>smb</command> Systemd unit is active: %1", reply.errorMessage());
+    }
+
+    if (reply.arguments().isEmpty())
+        return xi18nc("@info", "Could not determine if the <command>smb</command> Systemd unit is active: %1", reply.errorMessage());
+
+    QVariant variant = reply.arguments().at(0);
+    QDBusVariant dbusVariant = qvariant_cast<QDBusVariant>(variant);
+    QString state = dbusVariant.variant().toString();
+
+    if (state == QStringLiteral("active")) {
+        return {};
+    }
+
+    // It's enabled but not active; activate it
+    msg = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                         DBUS_SYSTEMD_PATH,
+                                         DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                         QStringLiteral("StartUnit"));
+
+    msg << SMB_SYSTEMD_SERVICE << QStringLiteral("replace");
+    reply = QDBusConnection::systemBus().call(msg);
+
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        return xi18nc("@info", "Could not start the <command>smb</command> Systemd unit: %1", reply.errorMessage());
+    }
+
+    // Finally everything works!
+    return {};
 }
 
 #include "sambausershareplugin.moc"

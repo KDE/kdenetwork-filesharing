@@ -19,6 +19,7 @@
 #include <QTimer>
 #include <QQmlContext>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QDBusInterface>
 #include <QDBusConnection>
 #include <QMainWindow>
@@ -129,8 +130,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
 
 bool SambaUserSharePlugin::isSambaInstalled()
 {
-    return QFile::exists(QStringLiteral("/usr/sbin/smbd"))
-        || QFile::exists(QStringLiteral("/usr/local/sbin/smbd"));
+    return !QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty();
 }
 
 void SambaUserSharePlugin::showSambaStatus()

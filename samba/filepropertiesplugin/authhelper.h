@@ -17,6 +17,8 @@ public Q_SLOTS:
     ActionReply isuserknown(const QVariantMap &args);
     ActionReply createuser(const QVariantMap &args);
     ActionReply addtogroup(const QVariantMap &args);
+    ActionReply enablesmb();
+    ActionReply runsmb();
 };
 
 #endif // AUTHHELPER_H

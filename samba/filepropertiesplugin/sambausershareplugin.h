@@ -174,6 +174,37 @@ private:
     void setReady(bool ready);
     void reportAdd(KSambaShareData::UserShareError error);
     void reportRemove(KSambaShareData::UserShareError error);
+
+    /* returned strings can be:
+      - "true" (Samba was already enabled)
+      - "false" (Samba was not enabled)
+      - anything else (could not determine status; returned string
+        is an error message to show to the user) */
+    QString isSambaEnabled() const;
+
+    /* returned strings can be:
+      - "true" (Samba was successfully enabled)
+      - anything else (could not enable Samba; returned string is
+        an error message to show to the user) */
+    QString enableSamba() const;
+
+    /* returned strings can be:
+      - "true" (Samba was already running)
+      - "false" (Samba was not running)
+      - anything else (could not determine status; returned string
+     is an error message to show to the user) */
+    QString isSambaRunning() const;
+
+    /* returned strings can be:
+      - "true" (Samba was successfully run) *
+      - anything else (could not run Samba; returned string is
+     an error message to show to the user) */
+    QString runSamba() const;
+
+    /* returned strings can be:
+      - "true" (Samba is all working fine) *
+      - anything else (could not enable and/or run Samba; returned
+        string is an error message to show to the user) */
     QString ensureSambaIsRunning() const;
 
     const QString m_url;

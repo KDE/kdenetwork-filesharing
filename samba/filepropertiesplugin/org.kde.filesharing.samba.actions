@@ -316,3 +316,17 @@ Description[uk]=Додавання користувача до спільної 
 Description[x-test]=xxAdding user to Samba's usershare group to edit Samba usersharesxx
 Description[zh_CN]=正在添加用户到 Samba 的共享用户组以便编辑 Samba 用户共享
 Description[zh_TW]=正在將使用者加入 Samba 的使用者分享 (Usershare) 群組來編輯 Samba 使用者分享
+
+[org.kde.filesharing.samba.enablesmb]
+Policy=auth_admin
+PolicyInactive=auth_admin
+Name=Enable Samba
+Description=Enabling the Samba file sharing service
+# Cache credentials so user isn't prompted again 5 seconds later to enable it
+Persistence=session
+
+[org.kde.filesharing.samba.runsmb]
+Policy=auth_admin
+PolicyInactive=auth_admin
+Name=Run Samba
+Description=Turning on the Samba file sharing service

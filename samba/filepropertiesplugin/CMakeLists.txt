@@ -12,6 +12,7 @@ target_link_libraries(sambausershareplugin
     KF6::I18n
     KF6::KIOCore
     KF6::KIOWidgets
+    Qt::DBus
     Qt::Qml
     Qt::QuickWidgets
     QCoro6::Coro
@@ -29,7 +30,7 @@ install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/pr
 
 kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)
 add_executable(authhelper authhelper.cpp)
-target_link_libraries(authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n)
+target_link_libraries(authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n Qt::DBus)
 
 kauth_install_helper_files(authhelper org.kde.filesharing.samba root)
 install(TARGETS authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

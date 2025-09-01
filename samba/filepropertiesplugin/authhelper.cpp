@@ -6,9 +6,17 @@
 #include "authhelper.h"
 #include <KLocalizedString>
 #include <KUser>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QProcess>
 #include <QRegularExpression>
 #include <kauth/helpersupport.h>
+
+static const QString DBUS_SYSTEMD_SERVICE = QStringLiteral("org.freedesktop.systemd1");
+static const QString DBUS_SYSTEMD_PATH  = QStringLiteral("/org/freedesktop/systemd1");
+static const QString DBUS_SYSTEMD_MANAGER_INTERFACE = QStringLiteral("org.freedesktop.systemd1.Manager");
+static const QString SMB_SYSTEMD_SERVICE = QStringLiteral("smb");
 
 namespace
 {
@@ -169,6 +177,46 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
         auto reply = ActionReply::HelperErrorReply();
         reply.setErrorDescription(QString::fromUtf8(p.readAll()));
         return reply;
+    }
+
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::enablesmb()
+{
+    QDBusMessage dbusMessage = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                                              DBUS_SYSTEMD_PATH,
+                                                              DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                                              QStringLiteral("EnableUnitFiles"));
+
+    dbusMessage << QStringList{SMB_SYSTEMD_SERVICE} << false << true;
+
+    QDBusMessage dbusReply = QDBusConnection::systemBus().call(dbusMessage);
+
+    if (dbusReply.type() == QDBusMessage::ErrorMessage) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(xi18nc("@info", "Could not enable the <command>smb</command> Systemd unit: %1", dbusReply.errorMessage()));
+        return kauthReply;
+    }
+
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::runsmb()
+{
+    QDBusMessage dbusMessage = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
+                                                      DBUS_SYSTEMD_PATH,
+                                                      DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                                      QStringLiteral("StartUnit"));
+
+    dbusMessage << SMB_SYSTEMD_SERVICE << QStringLiteral("replace");
+
+    QDBusMessage dbusReply = QDBusConnection::systemBus().call(dbusMessage);
+
+    if (dbusReply.type() == QDBusMessage::ErrorMessage) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(xi18nc("@info", "Could not start the <command>smb</command> Systemd unit: %1", dbusReply.errorMessage()));
+        return kauthReply;
     }
 
     return ActionReply::SuccessReply();

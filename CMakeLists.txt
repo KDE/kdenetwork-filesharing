@@ -18,6 +18,7 @@ include(ECMDeprecationSettings)
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     Core
+    DBus
     Widgets
     Qml
     QuickWidgets

@@ -22,6 +22,7 @@
 #include <QStandardPaths>
 #include <QDBusInterface>
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
 #include <QMainWindow>
 
 #include <KAuth/Action>
@@ -155,14 +156,20 @@ void SambaUserSharePlugin::applyChanges()
         return;
     }
 
-    const QString sambaRunning = ensureSambaIsRunning();
+    const bool systemdAvailable = QDBusConnection::sessionBus().interface()->isServiceRegistered(DBUS_SYSTEMD_SERVICE);
 
-    if (sambaRunning != QStringLiteral("true")) {
-        KMessageBox::error(qobject_cast<QWidget *>(parent()),
-                           sambaRunning,
-                           i18nc("@info/title", "Failed to Start File Sharing Server"));
-        return;
+    // If there's no systemd, a sensible error message will still be shown to the user later if Samba isn't running
+    if (systemdAvailable) {
+        const QString sambaRunningState = ensureSambaIsRunning();
+
+        if (sambaRunningState != QStringLiteral("true")) {
+            KMessageBox::error(qobject_cast<QWidget *>(parent()),
+                            sambaRunningState,
+                            i18nc("@info/title", "Failed to Start File Sharing Server"));
+            return;
+        }
     }
+
 
     // TODO: should run this through reportAdd() as well, ACLs may be invalid and then we shouldn't try to save
     m_context->m_shareData.setAcl(m_model->getAcl());
@@ -324,14 +331,19 @@ QString SambaUserSharePlugin::enableSamba() const
     action.setHelperId(QStringLiteral("org.kde.filesharing.samba"));
 
     KAuth::ExecuteJob *job = action.execute();
+    qWarning() << "Got a job for enabling Samba";
 
     // Needs to be synchronous because we have to know the outcome before proceeding
+    qWarning() << "Exec'ing job";
     const bool succeeded = job->exec();
 
+    qWarning() << "Job's finished";
     if (succeeded) {
+        qWarning() << "Successfully enabled Samba";
         return QStringLiteral("true");
     }
 
+    qWarning() << "Failed to enable Samba:" << job->errorString();
     return job->errorString();
 }
 
@@ -409,16 +421,21 @@ QString SambaUserSharePlugin::ensureSambaIsRunning() const
 {
     QString sambaEnablementStatus = isSambaEnabled();
 
+    qWarning() << "Querying Samba enablement status";
     if (sambaEnablementStatus != QStringLiteral("true") && sambaEnablementStatus != QStringLiteral("false")) {
+        qWarning() << "Samba enablement status is: error, can't figure it out!" << sambaEnablementStatus;
         // error; bail out
         return sambaEnablementStatus;
     }
 
     if (sambaEnablementStatus == QStringLiteral("false")) {
+        qWarning() << "Samba wasn't enabled";
         // Samba wasn't enabled; enable it
         sambaEnablementStatus = enableSamba();
 
+        qWarning() << "Is Samba enabled now?" << sambaEnablementStatus;
         if (sambaEnablementStatus != QStringLiteral("true")) {
+            qWarning() << "Samba enablement status is: error, STILL can't figure it out!" << sambaEnablementStatus;
             // error; bail out
             return sambaEnablementStatus;
         }
@@ -428,21 +445,27 @@ QString SambaUserSharePlugin::ensureSambaIsRunning() const
     // sure it's running right now, too.
     QString sambaRunningStatus = isSambaRunning();
 
+    qWarning() << "Querying Samba running status";
     if (sambaRunningStatus != QStringLiteral("true") && sambaRunningStatus != QStringLiteral("false")) {
+        qWarning() << "Samba running status is: error, can't figure it out!" << sambaEnablementStatus;
         // error; bail out
         return sambaRunningStatus;
     }
 
     if (sambaRunningStatus == QStringLiteral("false")) {
+        qWarning() << "Samba wasn't running";
         // Samba wasn't running; enable run it now
         sambaRunningStatus = runSamba();
 
+        qWarning() << "Is Samba running now?" << sambaEnablementStatus;
         if (sambaRunningStatus != QStringLiteral("true")) {
+            qWarning() << "Samba running status is: error, STILL can't figure it out!" << sambaEnablementStatus;
             // error; bail out
             return sambaRunningStatus;
         }
     }
 
+    qWarning() << "Hooray, I think Samba is running!";
     // Samba is now running!
     return QStringLiteral("true");
 }

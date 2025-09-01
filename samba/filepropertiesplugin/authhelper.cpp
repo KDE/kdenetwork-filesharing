@@ -184,6 +184,8 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
 
 ActionReply AuthHelper::enablesmb()
 {
+    // FIXME WE DON'T EVEN GET INTO HERE!!!!
+    qWarning() << "AuthHelper::enablesmb() has started";
     QDBusMessage dbusMessage = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
                                                               DBUS_SYSTEMD_PATH,
                                                               DBUS_SYSTEMD_MANAGER_INTERFACE,
@@ -191,6 +193,7 @@ ActionReply AuthHelper::enablesmb()
 
     dbusMessage << QStringList{SMB_SYSTEMD_SERVICE} << false << true;
 
+    qWarning() << "Sending a D-Bus message to enable Samba";
     QDBusMessage dbusReply = QDBusConnection::systemBus().call(dbusMessage);
 
     if (dbusReply.type() == QDBusMessage::ErrorMessage) {
@@ -205,9 +208,9 @@ ActionReply AuthHelper::enablesmb()
 ActionReply AuthHelper::runsmb()
 {
     QDBusMessage dbusMessage = QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE,
-                                                      DBUS_SYSTEMD_PATH,
-                                                      DBUS_SYSTEMD_MANAGER_INTERFACE,
-                                                      QStringLiteral("StartUnit"));
+                                                              DBUS_SYSTEMD_PATH,
+                                                              DBUS_SYSTEMD_MANAGER_INTERFACE,
+                                                              QStringLiteral("StartUnit"));
 
     dbusMessage << SMB_SYSTEMD_SERVICE << QStringLiteral("replace");
 

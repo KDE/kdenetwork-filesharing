@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:40+0000\n"
+"POT-Creation-Date: 2025-09-03 00:43+0000\n"
 "PO-Revision-Date: 2024-12-16 18:35+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -320,11 +320,16 @@ msgstr ""
 "existe."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by creating that folder manually. Then "
+"properly. You can fix it yourself by creating that folder manually, then "
 "close and re-open this window."
 msgstr ""
 "Iste error es causate per tu distribution que non  installa compartir de "
@@ -342,19 +347,25 @@ msgstr ""
 "membro del gruppo <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "You can fix this by making your user a member of that group. Then restart "
+#| "the system."
 msgctxt "@info:status"
 msgid ""
-"You can fix this by making your user a member of that group. Then restart "
+"You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
 "Tu pote corriger isto per facer tu usator un  membro de ille gruppo. Tum "
 "restarta le systema."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "action@button makes user a member of the samba share group"
+#| msgid "Make me a Group Member"
 msgctxt "action@button makes user a member of the samba share group"
-msgid "Make me a Group Member"
+msgid "Make Me a Group Member"
 msgstr "Face me un Membro de Gruppo"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
@@ -368,11 +379,16 @@ msgstr ""
 "permissiones per scriber in <filename>%1</filename>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "You can fix this by ensuring that the <resource>%1</resource> group has "
+#| "write permission for <filename>%2</filename>. Then close and re-open this "
+#| "window."
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
-"write permission for <filename>%2</filename>. Then close and re-open this "
+"write permission for <filename>%2</filename>, then close and re-open this "
 "window."
 msgstr ""
 "Tu pote corriger per assecurar que le gruppo <resource>%1</resource> ha "
@@ -380,11 +396,15 @@ msgstr ""
 "iste fenestra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label kauth action description %1 is a username %2 a group name"
+#| msgid ""
+#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
+#| "they may configure Samba user shares"
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
-"may configure Samba user shares"
+"can configure Samba user shares"
 msgstr ""
 "Addente usator <resource>%1</resource> a gruppo <resource>%2</resource> assi "
 "que illos pote configurar partes (shares) de usator de Samba"
@@ -417,13 +437,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "Permissiones  requirite"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:29
+#: samba/filepropertiesplugin/qml/ACLPage.qml:57
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "Refusante accesso"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:43
+#: samba/filepropertiesplugin/qml/ACLPage.qml:71
 msgctxt "@info"
 msgid ""
 "\n"
@@ -448,17 +468,20 @@ msgstr ""
 "localmente ancora non potera acceder a illo anque remotemente\n"
 "quando le regulas de accesso de Share (compartir) lo haberea permittite."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:62
+#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
-msgid "This folder needs extra permissions for sharing to work"
+msgid "This folder needs extra permissions for sharing to work."
 msgstr "Iste dossier necessita permissiones extra per compartir per functionar"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:66
+#: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "Fixa  (corrige) Permissiones"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:78
+#: samba/filepropertiesplugin/qml/ACLPage.qml:105
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -467,17 +490,24 @@ msgstr ""
 "Le compartir poterea non functionar propriemente proque le dossier de "
 "compartir o su percurso ha Permissiones Avantiate: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:85
+#: samba/filepropertiesplugin/qml/ACLPage.qml:112
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "Comparti iste dossier con altere computatores sur le rete local"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:102
+#: samba/filepropertiesplugin/qml/ACLPage.qml:137
 msgctxt "@label"
 msgid "Name:"
 msgstr "Nomine:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:134
+#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#, fuzzy
+#| msgid "Name/Address"
+msgctxt "@action:button network addresses"
+msgid "View Addresses"
+msgstr "Nomine/Adresse"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -487,7 +517,7 @@ msgstr ""
 "nomines de usator e il non pote haber duo portiones con le mesme nomine sur "
 "le systema integre."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:143
+#: samba/filepropertiesplugin/qml/ACLPage.qml:185
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -496,55 +526,80 @@ msgstr ""
 "Iste nomine pote esser troppo longe. Il pote causar problemas de "
 "interoparabilitate o esser rejectate per Samba."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:150
+#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#, fuzzy
+#| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
-msgid "Allow guests"
-msgstr "Permitte invitatos"
+msgid "Allow guests to connect"
+msgstr "Solmente permitte conne&xiones de invitato"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:163
+#: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr ""
 "Eccesso de hospite es dishabilitate per le configuration de Samba de systema."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:253
+#: samba/filepropertiesplugin/qml/ACLPage.qml:288
+#, fuzzy
+#| msgid "Chan&ge Password..."
+msgctxt "@button"
+msgid "Change Password…"
+msgstr "Cambia  contrasi&gno..."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "Plen controlo"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:254
+#: samba/filepropertiesplugin/qml/ACLPage.qml:303
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "Solmente de lectura"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:255
+#: samba/filepropertiesplugin/qml/ACLPage.qml:304
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "Necun accesso"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:281
+#: samba/filepropertiesplugin/qml/ACLPage.qml:330
+#, fuzzy
+#| msgctxt "@button"
+#| msgid "Show Samba status monitor"
 msgctxt "@button"
-msgid "Show Samba status monitor"
+msgid "View Samba Status"
 msgstr "Monstra monitor de stato de Samba"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:23
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:25
+#, fuzzy
+#| msgid "Chan&ge Password..."
 msgctxt "@title"
-msgid "Set password"
+msgid "Change password for '%1'"
+msgstr "Cambia  contrasi&gno..."
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:25
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Set password"
+msgctxt "@title"
+msgid "Set password for '%1'"
 msgstr "Fixa contrasigno"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
 msgid "Password"
 msgstr "Contrasigno"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
 msgctxt "@label:textbox"
 msgid "Confirm password"
 msgstr "Confirma contrasigno"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgctxt "@label error message"
+#| msgid "Passwords must match"
 msgctxt "@label error message"
-msgid "Passwords must match"
+msgid "Passwords must match."
 msgstr "Contrasigno debe coincider"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
@@ -553,39 +608,74 @@ msgctxt ""
 msgid "Set Password"
 msgstr "Fixa contrasigno"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:124
+#, fuzzy
+#| msgctxt "@action:button cancels permissions change"
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Cancella"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "\n"
+#| "<para>The folder <filename>%1</filename> needs extra permissions for "
+#| "sharing to work.</para>\n"
+#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
 "<para>The folder <filename>%1</filename> needs extra permissions for sharing "
 "to work.</para>\n"
-"<para>Do you want to add these permissions now?</para><nl/>\n"
+"<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
 "\n"
 "<para>Le dossier <filename>%1</filename> necessita permissiones per "
 "compartir per functionar.</para>\n"
 "<para>Tu vole adder iste permissiones nunc?</para><nl/>\n"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
 msgstr "Cambia permissiones"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Could not change permissions for: %1. All permission changes have been "
+#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
-"Could not change permissions for: %1. All permission changes have been "
-"reverted to initial state."
+"Could not change permissions for: %1. All permissions changes have been "
+"reverted."
 msgstr ""
 "Non poteva cambiar permissiones per : %1. Omne cambiamentos de permission ha "
 "essite revertite al stato initial."
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
 msgstr "Cancella"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
+msgctxt "@title"
+msgid "Connection Addresses"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
+msgctxt "@info:usagetip"
+msgid "Use any of the following addresses to connect to this share:"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -594,22 +684,22 @@ msgstr ""
 "Le servicioo de compartir files <application>Samba</application> debe esser "
 "installate ante que le dossieres pote esser compartite."
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#: samba/filepropertiesplugin/qml/InstallPage.qml:39
 msgctxt "@button"
 msgid "Install Samba"
 msgstr "Installa Samba"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+#: samba/filepropertiesplugin/qml/InstallPage.qml:47
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Le pacchetto Samba falleva a installar."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:22
 msgctxt "@info"
 msgid "File sharing service unavailable"
 msgstr "Servicio de compartir non disponibile"
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:23
 msgid ""
 "Please ensure the Samba service is enabled and running.\n"
 "If you haven't disabled it manually, consider reporting a bug to your "
@@ -619,22 +709,25 @@ msgstr ""
 "Si tu non lo ha dishabilitate manualmente, considera reportar un bug (falta) "
 "a tu distribution."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:27
 msgid "Report a bug"
 msgstr "Reporta un bug (falta)"
 
-#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
-msgid "Restart the computer to complete the changes."
+msgid "Restart the computer to apply changes."
 msgstr "Restarta le computator pro completar le modificationes."
 
-#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
 msgid "Restart"
 msgstr "Re-Initia"
 
 #. i18n markup
-#: samba/filepropertiesplugin/qml/UserPage.qml:59
+#: samba/filepropertiesplugin/qml/UserPage.qml:56
 msgctxt "@info"
 msgid ""
 "\n"
@@ -660,13 +753,16 @@ msgstr ""
 "usator tu necessita fixar un contrasigno de Samba.\n"
 "</para>"
 
-#: samba/filepropertiesplugin/qml/UserPage.qml:74
+#: samba/filepropertiesplugin/qml/UserPage.qml:71
+#, fuzzy
+#| msgctxt "@action:button opens dialog to create new user"
+#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
-msgid "Create Samba password"
+msgid "Set Samba password"
 msgstr "Crea contrasigno de Samba"
 
 #. i18n markup
-#: samba/filepropertiesplugin/qml/UserPage.qml:82
+#: samba/filepropertiesplugin/qml/UserPage.qml:79
 msgctxt "@info"
 msgid ""
 "\n"
@@ -679,7 +775,7 @@ msgstr ""
 "usar le utilitate de linea de commando <command>smbpasswd</command>\n"
 " de Samba."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -689,74 +785,74 @@ msgstr ""
 "Tu ha exhaurite le maxime amonta de directiorios compartite que tu pote "
 "haber active al mesme tempore."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:180
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Le nomine de compartir esinvalide."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:182
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr ""
 "Le nomine do compartir (share) ja es in uso per un directorio differente."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:184
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Le percurso es invalide."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:186
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Le percurso non existe."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:188
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Le percurso non es un directorio."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:190
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Le percurso es relative."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:192
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Le percurso non pote esser compartite."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:194
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Le regula de accesso es invalide."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Un usator de regula de accesso non es valide."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:198
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Le regula de accesso de 'Guest' (Hospite) es invalide."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:200
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Habilitar accesso de hospite non es permittite."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:218
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -768,13 +864,13 @@ msgstr ""
 "directorio Le portion (share)  non ha essite create. </para><para>Reporto de "
 "interne Samba :</para><message>%1</message> "
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:225
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:286
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Falleva a crear Compartir de rete (Network Share)"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:238
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:299
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -786,7 +882,7 @@ msgstr ""
 "directorio. Le portion (share)  non ha essite removite.</para><para>Reporto "
 "de interne Samba :</para><message>%1</message> "
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
@@ -803,6 +899,10 @@ msgstr "Verificante si usator de Samba '%1' existe"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Creante nove usator de Samba '%1'"
+
+#~ msgctxt "@option:check"
+#~ msgid "Allow guests"
+#~ msgstr "Permitte invitatos"
 
 #~ msgid ""
 #~ "Because this distro does not include PackageKit, we cannot show you a "
@@ -1145,9 +1245,6 @@ msgstr "Creante nove usator de Samba '%1'"
 
 #~ msgid "UNI&X Users"
 #~ msgstr "Usatores de UNI&X"
-
-#~ msgid "Chan&ge Password..."
-#~ msgstr "Cambia  contrasi&gno..."
 
 #~ msgid "&Join Domain"
 #~ msgstr "&Junge dominio"
@@ -2223,9 +2320,6 @@ msgstr "Creante nove usator de Samba '%1'"
 #~ "Si iste es marcate, alora nulle contrasigno es requirite per connecter al "
 #~ "servicio. Privilegios essera illos de conto de invitato."
 
-#~ msgid "Only allow guest connect&ions"
-#~ msgstr "Solmente permitte conne&xiones de invitato"
-
 #~ msgid "Hos&ts"
 #~ msgstr "Hospi&tes"
 
@@ -2730,9 +2824,6 @@ msgstr "Creante nove usator de Samba '%1'"
 
 #~ msgid "&Remove Host"
 #~ msgstr "&Remove hospite"
-
-#~ msgid "Name/Address"
-#~ msgstr "Nomine/Adresse"
 
 #~ msgid "Parameters"
 #~ msgstr "Parametros"

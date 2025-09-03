@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:40+0000\n"
+"POT-Creation-Date: 2025-09-03 00:43+0000\n"
 "PO-Revision-Date: 2024-12-05 20:24+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -315,11 +315,16 @@ msgid ""
 msgstr "Katalogen kan inte delas eftersom <filename>%1</filename> inte finns."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "This error is caused by your distribution not setting up Samba sharing "
+#| "properly. You can fix it yourself by creating that folder manually. Then "
+#| "close and re-open this window."
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by creating that folder manually. Then "
+"properly. You can fix it yourself by creating that folder manually, then "
 "close and re-open this window."
 msgstr ""
 "Felet orsakas av att distributionen inte har ställt in delning med Samba "
@@ -337,19 +342,25 @@ msgstr ""
 "gruppen <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "You can fix this by making your user a member of that group. Then restart "
+#| "the system."
 msgctxt "@info:status"
 msgid ""
-"You can fix this by making your user a member of that group. Then restart "
+"You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
 "Du kan rätta det själv genom att göra användaren till en medlem av den "
 "gruppen. Starta därefter om datorn."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "action@button makes user a member of the samba share group"
+#| msgid "Make me a Group Member"
 msgctxt "action@button makes user a member of the samba share group"
-msgid "Make me a Group Member"
+msgid "Make Me a Group Member"
 msgstr "Gör mig till gruppmedlem"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
@@ -363,11 +374,16 @@ msgstr ""
 "skriva till <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:status"
+#| msgid ""
+#| "You can fix this by ensuring that the <resource>%1</resource> group has "
+#| "write permission for <filename>%2</filename>. Then close and re-open this "
+#| "window."
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
-"write permission for <filename>%2</filename>. Then close and re-open this "
+"write permission for <filename>%2</filename>, then close and re-open this "
 "window."
 msgstr ""
 "Du kan rätta det genom att säkerställa att gruppen <resource>%1</resource> "
@@ -375,11 +391,15 @@ msgstr ""
 "det här fönstret igen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@label kauth action description %1 is a username %2 a group name"
+#| msgid ""
+#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
+#| "they may configure Samba user shares"
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
-"may configure Samba user shares"
+"can configure Samba user shares"
 msgstr ""
 "Lägger till användare <resource>%1</resource> till gruppen <resource>%2</"
 "resource> så att de kan ställa in Samba användardelningar"
@@ -412,13 +432,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "Nödvändiga rättigheter"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:29
+#: samba/filepropertiesplugin/qml/ACLPage.qml:57
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "Nekar åtkomst"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:43
+#: samba/filepropertiesplugin/qml/ACLPage.qml:71
 msgctxt "@info"
 msgid ""
 "\n"
@@ -444,17 +464,20 @@ msgstr ""
 "den från en annan dator även om den delade resursens åtkomstregler skulle "
 "tillåta det."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:62
+#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
-msgid "This folder needs extra permissions for sharing to work"
+msgid "This folder needs extra permissions for sharing to work."
 msgstr "Katalogen kräver extra rättigheter för att delning ska fungera"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:66
+#: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "Korrigera rättigheter"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:78
+#: samba/filepropertiesplugin/qml/ACLPage.qml:105
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -463,17 +486,24 @@ msgstr ""
 "Den delade resursen kanske inte fungerar som den ska eftersom den delade "
 "katalogen eller dess sökvägar har avancerade rättigheter: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:85
+#: samba/filepropertiesplugin/qml/ACLPage.qml:112
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "Dela katalogen med andra datorer i det lokala nätverket"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:102
+#: samba/filepropertiesplugin/qml/ACLPage.qml:137
 msgctxt "@label"
 msgid "Name:"
 msgstr "Namn:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:134
+#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#, fuzzy
+#| msgid "Name/Address"
+msgctxt "@action:button network addresses"
+msgid "View Addresses"
+msgstr "Namn eller adress"
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -483,7 +513,7 @@ msgstr ""
 "användarnamn och det får inte finnas två delade kataloger med samma namn i "
 "hela systemet."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:143
+#: samba/filepropertiesplugin/qml/ACLPage.qml:185
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -492,54 +522,79 @@ msgstr ""
 "Namnet kan vara för långt. Det kan orsaka interoperabilitetsproblem eller "
 "avvisas av Samba."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:150
+#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#, fuzzy
+#| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
-msgid "Allow guests"
-msgstr "Tillåt gäster"
+msgid "Allow guests to connect"
+msgstr "Tillåt bara gästanslutn&ingar"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:163
+#: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Gäståtkomst är inaktiverad av systemets Samba-inställning."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:253
+#: samba/filepropertiesplugin/qml/ACLPage.qml:288
+#, fuzzy
+#| msgid "Chan&ge Password..."
+msgctxt "@button"
+msgid "Change Password…"
+msgstr "Än&dra lösenord..."
+
+#: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "Fullständig kontroll"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:254
+#: samba/filepropertiesplugin/qml/ACLPage.qml:303
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "Skrivskyddad"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:255
+#: samba/filepropertiesplugin/qml/ACLPage.qml:304
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "Ingen åtkomst"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:281
+#: samba/filepropertiesplugin/qml/ACLPage.qml:330
+#, fuzzy
+#| msgctxt "@button"
+#| msgid "Show Samba status monitor"
 msgctxt "@button"
-msgid "Show Samba status monitor"
+msgid "View Samba Status"
 msgstr "Visa Samba statusövervakning"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:23
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:25
+#, fuzzy
+#| msgid "Chan&ge Password..."
 msgctxt "@title"
-msgid "Set password"
+msgid "Change password for '%1'"
+msgstr "Än&dra lösenord..."
+
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:25
+#, fuzzy
+#| msgctxt "@title"
+#| msgid "Set password"
+msgctxt "@title"
+msgid "Set password for '%1'"
 msgstr "Ange lösenord"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
 msgid "Password"
 msgstr "Lösenord"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:75
 msgctxt "@label:textbox"
 msgid "Confirm password"
 msgstr "Bekräfta lösenord"
 
-#: samba/filepropertiesplugin/qml/ChangePassword.qml:97
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:86
+#, fuzzy
+#| msgctxt "@label error message"
+#| msgid "Passwords must match"
 msgctxt "@label error message"
-msgid "Passwords must match"
+msgid "Passwords must match."
 msgstr "Lösenord måste stämma"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
@@ -548,39 +603,74 @@ msgctxt ""
 msgid "Set Password"
 msgstr "Ange lösenord"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:34
+#: samba/filepropertiesplugin/qml/ChangePassword.qml:124
+#, fuzzy
+#| msgctxt "@action:button cancels permissions change"
+#| msgid "Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "\n"
+#| "<para>The folder <filename>%1</filename> needs extra permissions for "
+#| "sharing to work.</para>\n"
+#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
 "<para>The folder <filename>%1</filename> needs extra permissions for sharing "
 "to work.</para>\n"
-"<para>Do you want to add these permissions now?</para><nl/>\n"
+"<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
 "\n"
 "<para>Katalogen <filename>%1</filename> kräver extra rättigheter för att "
 "delning ska fungera.</para>\n"
 "<para>Vill du lägga till rättigheterna nu?</para><nl/>\n"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:71
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
 msgstr "Ändra rättigheter"
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:77
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
+#, fuzzy
+#| msgctxt "@label"
+#| msgid ""
+#| "Could not change permissions for: %1. All permission changes have been "
+#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
-"Could not change permissions for: %1. All permission changes have been "
-"reverted to initial state."
+"Could not change permissions for: %1. All permissions changes have been "
+"reverted."
 msgstr ""
 "Kunde inte ändra rättigheter för: %1. Alla rättighetsändringar har "
 "återställts till det ursprungliga tillståndet."
 
-#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:86
+#: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:33
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
+msgctxt "@title"
+msgid "Connection Addresses"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
+msgctxt "@info:usagetip"
+msgid "Use any of the following addresses to connect to this share:"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
+msgctxt "@action:button"
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -589,22 +679,22 @@ msgstr ""
 "<application>Samba</application> fildelningstjänst måste installeras innan "
 "kataloger kan delas."
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#: samba/filepropertiesplugin/qml/InstallPage.qml:39
 msgctxt "@button"
 msgid "Install Samba"
 msgstr "Installera Samba"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:44
+#: samba/filepropertiesplugin/qml/InstallPage.qml:47
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Installation av Samba-paketet misslyckades."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:22
 msgctxt "@info"
 msgid "File sharing service unavailable"
 msgstr "Fildelningstjänst inte tillgänglig"
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:23
 msgid ""
 "Please ensure the Samba service is enabled and running.\n"
 "If you haven't disabled it manually, consider reporting a bug to your "
@@ -614,22 +704,25 @@ msgstr ""
 "Om du inte har inaktiverat den manuellt, överväg att rapportera ett fel till "
 "distributionen."
 
-#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
+#: samba/filepropertiesplugin/qml/MissingSambaPage.qml:27
 msgid "Report a bug"
 msgstr "Rapportera ett fel"
 
-#: samba/filepropertiesplugin/qml/RebootPage.qml:17
+#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#, fuzzy
+#| msgctxt "@label"
+#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
-msgid "Restart the computer to complete the changes."
+msgid "Restart the computer to apply changes."
 msgstr "Starta om datorn för att slutföra ändringarna."
 
-#: samba/filepropertiesplugin/qml/RebootPage.qml:20
+#: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
 msgid "Restart"
 msgstr "Starta om"
 
 #. i18n markup
-#: samba/filepropertiesplugin/qml/UserPage.qml:59
+#: samba/filepropertiesplugin/qml/UserPage.qml:56
 msgctxt "@info"
 msgid ""
 "\n"
@@ -655,13 +748,16 @@ msgstr ""
 "du ställa in ett Samba-lösenord.\n"
 "</para>"
 
-#: samba/filepropertiesplugin/qml/UserPage.qml:74
+#: samba/filepropertiesplugin/qml/UserPage.qml:71
+#, fuzzy
+#| msgctxt "@action:button opens dialog to create new user"
+#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
-msgid "Create Samba password"
+msgid "Set Samba password"
 msgstr "Skapa Samba-lösenord"
 
 #. i18n markup
-#: samba/filepropertiesplugin/qml/UserPage.qml:82
+#: samba/filepropertiesplugin/qml/UserPage.qml:79
 msgctxt "@info"
 msgid ""
 "\n"
@@ -673,7 +769,7 @@ msgstr ""
 "Ytterligare hantering av användare och lösenords kan göra genom att använda\n"
 "Sambas kommandoradsverktyg <command>smbpasswd</command>.."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:178
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -683,73 +779,73 @@ msgstr ""
 "Du har förbrukat det maximala antalet delade kataloger som kan vara aktiva "
 "samtidigt."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:180
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Delningsnamnet är ogiltigt."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:182
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Delningsnamnet används redan för en annan katalog."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:184
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Sökvägen är ogiltig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:186
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Sökvägen finns inte."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:188
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Sökvägen är inte en katalog."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:190
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Sökvägen är relativ."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:192
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Sökvägen får inte delas."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:194
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Åtkomstregeln är ogiltig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:196
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "En åtkomstregels användare är inte giltig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:198
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Åtkomstregeln 'Gäst' är ogiltig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:200
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Aktivera gäståtkomst tillåts inte."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:218
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -761,13 +857,13 @@ msgstr ""
 "har inte skapats.</para><para>Intern rapport från Samba:</para><message>%1</"
 "message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:225
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:286
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Misslyckades skapa delad nätverksåtkomst"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:238
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:299
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -779,7 +875,7 @@ msgstr ""
 "katalogen har inte tagits bort.</para><para>Intern rapport från Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
@@ -796,6 +892,10 @@ msgstr "Kontrollerar om Samba-användaren \"%1\" finns"
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
 msgstr "Skapar ny Samba-användare '%1'"
+
+#~ msgctxt "@option:check"
+#~ msgid "Allow guests"
+#~ msgstr "Tillåt gäster"
 
 #~ msgid ""
 #~ "Because this distro does not include PackageKit, we cannot show you a "
@@ -1129,9 +1229,6 @@ msgstr "Skapar ny Samba-användare '%1'"
 
 #~ msgid "UNI&X Users"
 #~ msgstr "Uni&x-användare"
-
-#~ msgid "Chan&ge Password..."
-#~ msgstr "Än&dra lösenord..."
 
 #~ msgid "&Join Domain"
 #~ msgstr "&Gå med i domän"
@@ -2205,9 +2302,6 @@ msgstr "Skapar ny Samba-användare '%1'"
 #~ "Om det här är markerat, krävs inget lösenord för att ansluta till "
 #~ "tjänsten. Rättigheter är de som gäller för gästkontot."
 
-#~ msgid "Only allow guest connect&ions"
-#~ msgstr "Tillåt bara gästanslutn&ingar"
-
 #~ msgid "Hos&ts"
 #~ msgstr "Värdda&torer"
 
@@ -2709,9 +2803,6 @@ msgstr "Skapar ny Samba-användare '%1'"
 
 #~ msgid "&Remove Host"
 #~ msgstr "Ta bo&rt värddator"
-
-#~ msgid "Name/Address"
-#~ msgstr "Namn eller adress"
 
 #~ msgid "Parameters"
 #~ msgstr "Parametrar"

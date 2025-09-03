@@ -53,28 +53,30 @@ GroupManager::GroupManager(QObject *parent)
                 // TODO: define a helpfulAction that creates the folder
             }
 
-            // Now see if the user is a member of the group
-            else if (!groups.contains(m_targetGroup)) {
-                m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account isn't a member of the <resource>%1</resource> group.", m_targetGroup);
-                Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "You can fix this by making your user a member of that group, then restart the system.");
-                Q_EMIT errorExplanationChanged();
-                m_helpfulActionIcon = QStringLiteral("resource-group-new");
-                Q_EMIT helpfulActionIconChanged();
-                m_helpfulActionText = i18nc("action@button makes user a member of the samba share group", "Make Me a Group Member");
-                Q_EMIT helpfulActionTextChanged();
-                m_helpfulAction = HelpfulAction::AddUserToGroup;
-                m_hasHelpfulAction = true;
-                Q_EMIT hasHelpfulActionChanged();
-            }
-
             // Now see if it's writable by the user
+            // In case the directory has an ACL the user may have access() even though they are not member of the
+            // relevant group, so we check writability first and if that fails check what may be wrong.
             else if (!info.isWritable()) {
-                m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account doesn't have permission to write into <filename>%1</filename>.", path);
-                Q_EMIT errorTextChanged();
-                m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>, then close and re-open this window.",  m_targetGroup, path);
-                Q_EMIT errorExplanationChanged();
-                // TODO: define a helpfulAction that adds group write permission to the folder
+                // If not: check that the user is in the group
+                if (!groups.contains(m_targetGroup)) {
+                    m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account isn't a member of the <resource>%1</resource> group.", m_targetGroup);
+                    Q_EMIT errorTextChanged();
+                    m_errorExplanation = xi18nc("@info:status", "You can fix this by making your user a member of that group, then restart the system.");
+                    Q_EMIT errorExplanationChanged();
+                    m_helpfulActionIcon = QStringLiteral("resource-group-new");
+                    Q_EMIT helpfulActionIconChanged();
+                    m_helpfulActionText = i18nc("action@button makes user a member of the samba share group", "Make Me a Group Member");
+                    Q_EMIT helpfulActionTextChanged();
+                    m_helpfulAction = HelpfulAction::AddUserToGroup;
+                    m_hasHelpfulAction = true;
+                    Q_EMIT hasHelpfulActionChanged();
+                } else {
+                    m_errorText = xi18nc("@info:status", "This folder can't be shared because your user account doesn't have permission to write into <filename>%1</filename>.", path);
+                    Q_EMIT errorTextChanged();
+                    m_errorExplanation = xi18nc("@info:status", "You can fix this by ensuring that the <resource>%1</resource> group has write permission for <filename>%2</filename>, then close and re-open this window.",  m_targetGroup, path);
+                    Q_EMIT errorExplanationChanged();
+                    // TODO: define a helpfulAction that adds group write permission to the folder
+                }
             }
 
             m_ready = true;

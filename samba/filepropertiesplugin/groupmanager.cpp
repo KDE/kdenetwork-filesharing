@@ -16,7 +16,7 @@
 GroupManager::GroupManager(QObject *parent)
     : QObject(parent)
 {
-    metaObject()->invokeMethod(this, [this] {
+    QMetaObject::invokeMethod(this, [this] {
         auto proc = new QProcess;
         proc->setProgram(QStringLiteral("testparm"));
         proc->setArguments({QStringLiteral("--debuglevel=0"),

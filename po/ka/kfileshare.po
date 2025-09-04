@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:43+0000\n"
-"PO-Revision-Date: 2024-12-05 06:32+0100\n"
+"PO-Revision-Date: 2025-09-03 04:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -313,12 +313,7 @@ msgstr ""
 "ფაილის გაზიარება შეუძლებელია, რადგან <filename>%1</filename> არ არსებობს."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -326,7 +321,7 @@ msgid ""
 "close and re-open this window."
 msgstr ""
 "შეცდომა თქვენ დისტრიბუტივის მიერ Samba-ის გაზიარების არასწორად მორგების "
-"გამოა. გაასწორეთ გაზიარება ხელით, შემდეგ კი დახურეთ ეს ფანჯარა და თავიდან "
+"გამო. გაასწორეთ გაზიარება ხელით, შემდეგ კი დახურეთ ეს ფანჯარა და თავიდან "
 "გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
@@ -340,11 +335,7 @@ msgstr ""
 "<resource>%1</resource> ჯგუფის წევრი არაა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -354,9 +345,7 @@ msgstr ""
 "შემდეგ კი გადატვირთეთ სისტემა."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "ჯგუფის წევრებში ჩამატება"
@@ -372,12 +361,7 @@ msgstr ""
 "filename>-ში ჩაწერა არ შეუძლია."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -389,18 +373,14 @@ msgstr ""
 "თავიდან გახსენით."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
-"მომხმარებელი '%1' ჩაემატა ჯგუფში '%2'. ახლა მას Samba-ის მომხმარებლის "
-"გაზიარებების მორგება შეუძლია"
+"მომხმარებელი <resource>%1</resource> ჩაემატა ჯგუფში <resource>%2</resource>. "
+"ახლა მას Samba-ის მომხმარებლის გაზიარებების მორგება შეუძლია"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -463,12 +443,9 @@ msgstr ""
 "ექნება."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "გაზიარების სამუშაოდ საქაღალდეს დამატებით წვდომები ესაჭიროება"
+msgstr "გაზიარების სამუშაოდ საქაღალდეს დამატებითი წვდომები სჭირდება."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -497,7 +474,7 @@ msgstr "სახელი:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "მისამართების ნახვა"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -519,12 +496,9 @@ msgstr ""
 "ან უბრალოდ უარყოფილი იქნება Samba-ის მიერ."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "სტუმრის დაშვება"
+msgstr "სტუმრებისთვის დაკავშირების უფლების მიცემა"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -532,13 +506,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "სტუმრის წვდომა გათიშულია სისტემის Samba-ის კონფიგურაციაში."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgctxt ""
-#| "@action:button creates a new samba user with the user-specified password"
-#| msgid "Set Password"
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "პაროლის დაყენება"
+msgstr "პაროლის შეცვლა…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -556,25 +526,19 @@ msgid "No Access"
 msgstr "წვდომის გარეშე"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Samba-ს სტატუსის მონიტორის ჩვენება"
+msgstr "Samba-ის სტატუსის ჩვენება"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "პაროლის შეცვლა '%1'-სთვის"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "პაროლის დაყენება"
+msgstr "პაროლის დაყენება '%1'-სთვის"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -587,12 +551,9 @@ msgid "Confirm password"
 msgstr "პაროლის დადასტურება"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "პაროლები არ ემთხვევა"
+msgstr "პაროლები უნდა ემთხვეოდეს."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -601,21 +562,11 @@ msgid "Set Password"
 msgstr "პაროლის დაყენება"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "გაუქმება"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -634,11 +585,6 @@ msgid "Change Permissions"
 msgstr "წვდომების შეცვლა"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
@@ -655,17 +601,18 @@ msgstr "გაუქმება"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "კავშირის მისამართები"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"გამოიყენეთ ნებისმიერი ამ მისამართებიდან, რომ ამ გაზიარებულს დაუკავშირდეთ:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "ბუფერში კოპირება"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -706,12 +653,9 @@ msgid "Report a bug"
 msgstr "შეცდომის პატაკი"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "ცვლილებების დასასრულებლად გადატვირთეთ კომპიუტერი."
+msgstr "ცვლილებების ძალაში შესასვლელად გადატვირთეთ კომპიუტერი."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -746,12 +690,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Samba-ის პაროლის შექმნა"
+msgstr "Samba-ის პაროლის დაყენება"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

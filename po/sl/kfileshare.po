@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:43+0000\n"
-"PO-Revision-Date: 2024-12-05 07:31+0100\n"
+"PO-Revision-Date: 2025-09-03 07:41+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -324,21 +324,16 @@ msgid ""
 msgstr "Te mape si ni mogoče deliti, ker <filename>%1</filename> ne obstaja."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
 "properly. You can fix it yourself by creating that folder manually, then "
 "close and re-open this window."
 msgstr ""
-"Ta napaka je posledica tega, da vaša distribucija ni pravilno nastavila "
-"lastnosti deljenja Sambe. To lahko popravite vi, tako da ustvarite mapo "
-"ročno. Potem zaprite in spet odprite okno."
+"To napako povzroča vaša distribucija, ki ni pravilno nastavila skupne rabe "
+"Sambe. To lahko odpravite sami tako, da ročno ustvarite to mapo, nato pa "
+"zaprete in ponovno odprete to okno."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
@@ -351,26 +346,20 @@ msgstr ""
 "<resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
-"To lahko vi popravite tako, da vašega uporabnika postavite za člana te "
-"skupine. Potem ponovno zaženite sistem."
+"To lahko odpravite tako, da uporabnika dodate v to skupino in nato znova "
+"zaženete sistem."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
-msgstr "Naredi me člana te skupine"
+msgstr "Naredi me člana skupine"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:73
 #, kde-kuit-format
@@ -383,12 +372,7 @@ msgstr ""
 "pisanje v <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -396,22 +380,18 @@ msgid ""
 "window."
 msgstr ""
 "To lahko vi popravite tako, da zagotovite skupini <resource>%1</resource> "
-"dovoljenje za pisanje za <filename>%2</filename>. Potem zaprite in ponovno "
-"odprite to okno."
+"dovoljenje za pisanje za <filename>%2</filename>, potem pa zaprete in "
+"ponovno odprete to okno."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
 "Dodajanje uporabnika <resource>%1</resource> v skupino <resource>%2</"
-"resource>, da bodo lahko nastavili skupne vire Sambe"
+"resource>, da bodo lahko konfigurirali skupne vire Sambe"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
 #, kde-kuit-format
@@ -473,12 +453,9 @@ msgstr ""
 "pravila o dostopu do skupne rabe to dovoljevala."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "Ta mapa potrebuje dodatne pravice za skupno rabo za delo"
+msgstr "Ta mapa potrebuje dodatna dovoljenja za delovanje skupne rabe."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -507,7 +484,7 @@ msgstr "Ime:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "Ogled naslovov"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -529,12 +506,9 @@ msgstr ""
 "Sambi."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Dovoli goste"
+msgstr "Dovoli gostom, da se povežejo"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -542,13 +516,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Dostop gostov je onemogočen z nastavitvijo Sambe."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgctxt ""
-#| "@action:button creates a new samba user with the user-specified password"
-#| msgid "Set Password"
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "Nastavi geslo"
+msgstr "Zamenjaj geslo…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -566,25 +536,19 @@ msgid "No Access"
 msgstr "Ni dostopa"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Pokaži monitor stanja Sambe"
+msgstr "Ogled stanja Sambe"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "Zamenjaj geslo za '%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Nastavi geslo"
+msgstr "Nastavi geslo za '%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -597,12 +561,9 @@ msgid "Confirm password"
 msgstr "Potrdite geslo"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Gesli se morata ujemati"
+msgstr "Gesli se morata ujemati."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -611,21 +572,11 @@ msgid "Set Password"
 msgstr "Nastavi geslo"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Prekliči"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -636,7 +587,7 @@ msgstr ""
 "\n"
 "<para>Mapa <filename>%1</filename> potrebuje dodatne pravice za skupno rabo, "
 "da bi delovalo.</para>\n"
-"<para>Ali želite zdaj dodati te pravice?</para><nl/>\n"
+"<para>Naj dodam te pravice zdaj?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
@@ -644,18 +595,13 @@ msgid "Change Permissions"
 msgstr "Spremeni pravice"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
-"Pravic ni bilo mogoče spremeniti za: %1. Vse spremembe pravic so bile "
-"povrnjene v začetno stanje."
+"Dovoljenj za: %1 ni bilo mogoče spremeniti. Vse spremembe dovoljenj so bile "
+"razveljavljene."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -665,17 +611,18 @@ msgstr "Prekliči"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Naslovi povezav"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"Za povezavo s to skupno rabo uporabite katerega koli od naslednjih naslovov:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopiraj na odložišče"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -716,12 +663,9 @@ msgid "Report a bug"
 msgstr "Poročaj o napaki"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "Ponovno zaženite računalnik za dokončanje namestitve."
+msgstr "Znova zaženite računalnik, da uveljavite spremembe."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -757,12 +701,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Ustvari geslo za Sambo"
+msgstr "Nastavi geslo za Sambo"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

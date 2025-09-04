@@ -14,15 +14,15 @@ msgstr ""
 "Project-Id-Version: kdenetwork-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:43+0000\n"
-"PO-Revision-Date: 2025-03-13 22:41+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-09-03 08:45+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -322,12 +322,7 @@ msgid ""
 msgstr "Bu tlasör paylaşılamıyor; çünkü <filename>%1</filename> yok."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -349,11 +344,7 @@ msgstr ""
 "grubunun bir üyesi değil."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -363,9 +354,7 @@ msgstr ""
 "sistemi yeniden başlatın."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Beni Grup Üyesi Yap"
@@ -381,12 +370,7 @@ msgstr ""
 "filename> ögesine yazma izni yok."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -398,11 +382,7 @@ msgstr ""
 "kapatıp yeniden açın."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
@@ -470,9 +450,6 @@ msgstr ""
 "yine de erişemeyecektir."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr "Paylaşımın çalışması için bu klasör ek izinlere gereksinim duyuyor."
@@ -504,7 +481,7 @@ msgstr "Ad:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "Adresleri Görüntüle"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -525,12 +502,9 @@ msgstr ""
 "çalışma sorunlarına neden olabilir."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Konuklara İzin Ver"
+msgstr "Konukların bağlanmasına izin ver"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -540,13 +514,9 @@ msgstr ""
 "bırakılmış."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgctxt ""
-#| "@action:button creates a new samba user with the user-specified password"
-#| msgid "Set Password"
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "Parola Ayarla"
+msgstr "Parolayı Değiştir…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -564,25 +534,19 @@ msgid "No Access"
 msgstr "Erişim Yok"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Samba durum izleyicisini göster"
+msgstr "Samba Durumunu Göster"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "“%1” Parolasını Değiştir"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Parolayı ayarla"
+msgstr "“%1” Parolasını Ayarla"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -595,12 +559,9 @@ msgid "Confirm password"
 msgstr "Parolayı onayla"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Parolalar eşleşmeli"
+msgstr "Parolalar eşleşmelidir."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -609,21 +570,11 @@ msgid "Set Password"
 msgstr "Parola Ayarla"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "İptal"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -634,7 +585,7 @@ msgstr ""
 "\n"
 "<para><filename>%1</filename> klasörü, paylaşımın çalışması için ek izinlere "
 "gereksinim duyuyor.</para>\n"
-"<para>Bu izinleri şimdi eklemek istiyor musunuz?</para><nl/>\n"
+"<para>İzinler şimdi eklensin mi?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
@@ -642,18 +593,12 @@ msgid "Change Permissions"
 msgstr "İzinleri Değiştir"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
-"Şunun için izinler değiştirilemedi: %1. Tüm izin değişiklikleri ilk "
-"durumlarına geri alındı."
+"Şunun için izinler değiştirilemedi: %1. Tüm izin değişiklikleri geri alındı."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -663,17 +608,17 @@ msgstr "İptal"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Bağlantı Adresleri"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
-msgstr ""
+msgstr "Bu paylaşıma bağlanmak için aşağıdaki adreslerden birini kullanın:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Panoya Kopyala"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -714,12 +659,9 @@ msgid "Report a bug"
 msgstr "Hata Bildir"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "Değişiklikleri tamamlamak için bilgisayarı yeniden başlatın."
+msgstr "Değişiklikleri uygulamak için bilgisayarı yeniden başlatın."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -754,12 +696,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Samba parolası oluştur"
+msgstr "Samba Parolasını Ayarla"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

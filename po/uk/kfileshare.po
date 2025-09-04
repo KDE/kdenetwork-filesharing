@@ -5,13 +5,13 @@
 #
 # Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2004, 2005, 2007, 2008.
 # Andriy Rysin <rysin@kde.org>, 2006.
-# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-03 00:43+0000\n"
-"PO-Revision-Date: 2024-12-05 13:05+0200\n"
+"PO-Revision-Date: 2025-09-03 18:15+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -325,12 +325,7 @@ msgstr ""
 "%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -352,11 +347,7 @@ msgstr ""
 "користувача не є учасником групи <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -366,9 +357,7 @@ msgstr ""
 "додавання перезапустіть систему."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Зробити вас учасником групи"
@@ -384,12 +373,7 @@ msgstr ""
 "має прав доступу до запису до <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -401,11 +385,7 @@ msgstr ""
 "вікно і відкрийте його знову."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
@@ -474,14 +454,11 @@ msgstr ""
 "навіть якщо правила доступу до спільного ресурсу надають йому такий доступ."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr ""
 "Щоб цією текою можна було користуватися спільно, потрібні додаткові права "
-"доступу"
+"доступу."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -508,11 +485,9 @@ msgid "Name:"
 msgstr "Назва:"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
-#, fuzzy
-#| msgid "Name/Address"
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr "Назва/адреса"
+msgstr "Переглянути адреси"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -534,11 +509,9 @@ msgstr ""
 "Samba взагалі відмовиться її реєструвати."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Тільки гостям дозволяти з'&єднання"
+msgstr "Дозволити встановлювати з'єднання гостям"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -546,11 +519,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Гостьовий доступ вимкнено через загальносистемні налаштування Samba."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "З&мінити пароль..."
+msgstr "Змінити пароль…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -568,27 +539,19 @@ msgid "No Access"
 msgstr "Немає доступу"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Показати монітор стану Samba"
+msgstr "Переглянути стан Samba"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr "З&мінити пароль..."
+msgstr "Змінити пароль до «%1»"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Встановіть пароль"
+msgstr "Встановлення пароля до «%1»"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -601,12 +564,9 @@ msgid "Confirm password"
 msgstr "Підтвердьте пароль"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Паролі мають збігатися"
+msgstr "Паролі мають збігатися."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -615,21 +575,11 @@ msgid "Set Password"
 msgstr "Встановити пароль"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -640,7 +590,7 @@ msgstr ""
 "\n"
 "<para>Щоб текою <filename>%1</filename> можна було користуватися спільно, "
 "потрібні додаткові права доступу.</para>\n"
-"<para>Хочете додати ці права доступу зараз?</para><nl/>\n"
+"<para>Додати ці права доступу зараз?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
@@ -648,18 +598,13 @@ msgid "Change Permissions"
 msgstr "Змінити права доступу"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
 "Не вдалося змінити права доступу для %1. Усі зміни у правах доступу було "
-"скасовано — повернуто початковий стан."
+"скасовано."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -669,17 +614,19 @@ msgstr "Скасувати"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Адреси з'єднань"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"Скористайтеся будь-якою з таких адрес для встановлення з'єднання з цим "
+"спільним ресурсом:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Скопіювати до буфера"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -720,12 +667,9 @@ msgid "Report a bug"
 msgstr "Повідомити про ваду"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "Перезапустіть комп'ютер, щоб завершити внесення змін."
+msgstr "Перезапустіть комп'ютер, щоб застосувати зміни."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -762,12 +706,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Створити пароль Samba"
+msgstr "Встановити пароль до Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

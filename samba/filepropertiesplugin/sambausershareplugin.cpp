@@ -10,31 +10,31 @@
 
 #include "sambausershareplugin.h"
 
-#include <QDebug>
-#include <QQmlApplicationEngine>
-#include <QQuickWidget>
-#include <QQuickItem>
-#include <QMetaMethod>
-#include <QVBoxLayout>
 #include <KLocalizedString>
-#include <QTimer>
-#include <QQmlContext>
 #include <QClipboard>
-#include <QPushButton>
-#include <QNetworkInterface>
-#include <QStandardPaths>
-#include <QDBusInterface>
 #include <QDBusConnection>
-#include <QMainWindow>
+#include <QDBusInterface>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <QDebug>
+#include <QMainWindow>
+#include <QMetaMethod>
+#include <QNetworkInterface>
+#include <QPushButton>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include <QQuickItem>
+#include <QQuickWidget>
+#include <QStandardPaths>
+#include <QTimer>
+#include <QVBoxLayout>
 
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedContext>
 #include <KMessageBox>
 #include <KOSRelease>
 #include <KPluginFactory>
 #include <KService>
-#include <KIO/CommandLauncherJob>
 
 #include "org.freedesktop.Avahi.Server.h"
 
@@ -45,7 +45,6 @@
 #endif
 
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
-
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
     : KPropertiesDialogPlugin(parent)
@@ -67,9 +66,9 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
      * BUG:494627
      */
     const auto parentDialog = qobject_cast<KPropertiesDialog *>(parent);
-    if (parentDialog->nativeParentWidget()){
+    if (parentDialog->nativeParentWidget()) {
         const auto nativeParentWidget = qobject_cast<QMainWindow *>(parentDialog->nativeParentWidget());
-        if (nativeParentWidget && nativeParentWidget->windowHandle()){
+        if (nativeParentWidget && nativeParentWidget->windowHandle()) {
             if (nativeParentWidget->windowHandle()->surfaceType() == QSurface::RasterSurface) {
                 QQuickWindow::setGraphicsApi(QSGRendererInterface::Software);
             }
@@ -93,7 +92,10 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
 #endif
     qmlRegisterType<GroupManager>("org.kde.filesharing.samba", 1, 0, "GroupManager");
     // Need access to the column enum, so register this as uncreatable.
-    qmlRegisterUncreatableType<UserPermissionModel>("org.kde.filesharing.samba", 1, 0, "UserPermissionModel",
+    qmlRegisterUncreatableType<UserPermissionModel>("org.kde.filesharing.samba",
+                                                    1,
+                                                    0,
+                                                    "UserPermissionModel",
                                                     QStringLiteral("Access through sambaPlugin.userPermissionModel"));
     qmlRegisterAnonymousType<ShareContext>("org.kde.filesharing.samba", 1);
     qmlRegisterAnonymousType<SambaUserSharePlugin>("org.kde.filesharing.samba", 1);
@@ -156,28 +158,24 @@ void SambaUserSharePlugin::initAddressList()
 
     // Get fully qualified domain name
     QString fqdn;
-    auto avahi = new OrgFreedesktopAvahiServerInterface(
-        QStringLiteral("org.freedesktop.Avahi"), 
-        QStringLiteral("/"), 
-        QDBusConnection::systemBus());
-        
+    auto avahi = new OrgFreedesktopAvahiServerInterface(QStringLiteral("org.freedesktop.Avahi"), QStringLiteral("/"), QDBusConnection::systemBus());
+
     auto watcher = new QDBusPendingCallWatcher(avahi->GetHostNameFqdn(), this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, avahi, watcher] {
-            watcher->deleteLater();
-            avahi->deleteLater();
+        watcher->deleteLater();
+        avahi->deleteLater();
 
-            QDBusPendingReply<QString> reply = *watcher;
-            QStringList addressList = m_addressList;
-            if (!reply.isError()) {
-                QString fqdn = reply.argumentAt(0).toString();
-                if (!fqdn.isEmpty()) {
-                    addressList.append(fqdn);
-                }
+        QDBusPendingReply<QString> reply = *watcher;
+        QStringList addressList = m_addressList;
+        if (!reply.isError()) {
+            QString fqdn = reply.argumentAt(0).toString();
+            if (!fqdn.isEmpty()) {
+                addressList.append(fqdn);
             }
-            m_addressList = addressList;
-            Q_EMIT addressListChanged();
         }
-    );
+        m_addressList = addressList;
+        Q_EMIT addressListChanged();
+    });
 
     m_addressList = addressList;
     Q_EMIT addressListChanged();
@@ -200,10 +198,10 @@ void SambaUserSharePlugin::copyAddressToClipboard(const QString &address)
     QGuiApplication::clipboard()->setText(address.trimmed());
 }
 
-
 void SambaUserSharePlugin::applyChanges()
 {
-    qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl() << m_context->m_shareData.path();
+    qDebug() << "!!! applying changes !!!" << m_context->enabled() << m_context->name() << m_context->guestEnabled() << m_model->getAcl()
+             << m_context->m_shareData.path();
     if (!m_context->enabled()) {
         reportRemove(m_context->m_shareData.remove());
         return;
@@ -226,17 +224,21 @@ static QString errorToString(KSambaShareData::UserShareError error)
     // representations even when those are utter garbage when they require specific (e.g. an invalid ACL) that
     // we do not have here.
     switch (error) {
-    case KSambaShareData::UserShareNameOk: Q_FALLTHROUGH();
-    case KSambaShareData::UserSharePathOk: Q_FALLTHROUGH();
-    case KSambaShareData::UserShareAclOk: Q_FALLTHROUGH();
-    case KSambaShareData::UserShareCommentOk: Q_FALLTHROUGH();
-    case KSambaShareData::UserShareGuestsOk: Q_FALLTHROUGH();
+    case KSambaShareData::UserShareNameOk:
+        Q_FALLTHROUGH();
+    case KSambaShareData::UserSharePathOk:
+        Q_FALLTHROUGH();
+    case KSambaShareData::UserShareAclOk:
+        Q_FALLTHROUGH();
+    case KSambaShareData::UserShareCommentOk:
+        Q_FALLTHROUGH();
+    case KSambaShareData::UserShareGuestsOk:
+        Q_FALLTHROUGH();
     case KSambaShareData::UserShareOk:
         // Technically anything but UserShareOk cannot happen, but best handle everything regardless.
         return QString();
     case KSambaShareData::UserShareExceedMaxShares:
-        return i18nc("@info detailed error messsage",
-                     "You have exhausted the maximum amount of shared directories you may have active at the same time.");
+        return i18nc("@info detailed error messsage", "You have exhausted the maximum amount of shared directories you may have active at the same time.");
     case KSambaShareData::UserShareNameInvalid:
         return i18nc("@info detailed error messsage", "The share name is invalid.");
     case KSambaShareData::UserShareNameInUse:
@@ -281,9 +283,7 @@ void SambaUserSharePlugin::reportAdd(KSambaShareData::UserShareError error)
                               "<para>Samba internals report:</para><message>%1</message>",
                               errorMessage);
     }
-    KMessageBox::error(qobject_cast<QWidget *>(parent()),
-                       errorMessage,
-                       i18nc("@info/title", "Failed to Create Network Share"));
+    KMessageBox::error(qobject_cast<QWidget *>(parent()), errorMessage, i18nc("@info/title", "Failed to Create Network Share"));
 }
 
 void SambaUserSharePlugin::reportRemove(KSambaShareData::UserShareError error)
@@ -301,9 +301,7 @@ void SambaUserSharePlugin::reportRemove(KSambaShareData::UserShareError error)
                               "<para>Samba internals report:</para><message>%1</message>",
                               errorMessage);
     }
-    KMessageBox::error(qobject_cast<QWidget *>(parent()),
-                       errorMessage,
-                       i18nc("@info/title", "Failed to Remove Network Share"));
+    KMessageBox::error(qobject_cast<QWidget *>(parent()), errorMessage, i18nc("@info/title", "Failed to Remove Network Share"));
 }
 
 bool SambaUserSharePlugin::isReady() const

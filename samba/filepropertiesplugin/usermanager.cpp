@@ -7,8 +7,8 @@
 
 #include <KUser>
 #include <QFile>
-#include <QRegularExpression>
 #include <QProcess>
+#include <QRegularExpression>
 
 #include <KAuth/Action>
 #include <KAuth/ExecuteJob>
@@ -91,10 +91,8 @@ void User::resolve()
     action.addArgument(QStringLiteral("username"), m_name);
     // Detail message won't really show up unless the system admin forces authentication for this. Which would
     // be very awkward
-    action.setDetailsV2({{
-        KAuth::Action::AuthDetail::DetailMessage,
-        i18nc("@label kauth action description %1 is a username", "Checking if Samba user '%1' exists", m_name) }
-    });
+    action.setDetailsV2(
+        {{KAuth::Action::AuthDetail::DetailMessage, i18nc("@label kauth action description %1 is a username", "Checking if Samba user '%1' exists", m_name)}});
     KAuth::ExecuteJob *job = action.execute();
     connect(job, &KAuth::ExecuteJob::result, this, [this, job] {
         job->deleteLater();
@@ -114,10 +112,8 @@ void User::addToSamba(const QString &password)
     auto action = KAuth::Action(QStringLiteral("org.kde.filesharing.samba.createuser"));
     action.setHelperId(QStringLiteral("org.kde.filesharing.samba"));
     action.addArgument(QStringLiteral("password"), password);
-    action.setDetailsV2({{
-        KAuth::Action::AuthDetail::DetailMessage,
-        i18nc("@label kauth action description %1 is a username", "Creating new Samba user '%1'", m_name) }
-    });
+    action.setDetailsV2(
+        {{KAuth::Action::AuthDetail::DetailMessage, i18nc("@label kauth action description %1 is a username", "Creating new Samba user '%1'", m_name)}});
     KAuth::ExecuteJob *job = action.execute();
     connect(job, &KAuth::ExecuteJob::result, this, [this, job] {
         job->deleteLater();
@@ -139,13 +135,11 @@ void UserManager::load()
 {
     auto proc = new QProcess(this);
     proc->setProgram(QStringLiteral("testparm"));
-    proc->setArguments({
-        QStringLiteral("--debuglevel=0"),
-        QStringLiteral("--suppress-prompt"),
-        QStringLiteral("--verbose"),
-        QStringLiteral("--parameter-name"),
-        QStringLiteral("passdb backend")
-    });
+    proc->setArguments({QStringLiteral("--debuglevel=0"),
+                        QStringLiteral("--suppress-prompt"),
+                        QStringLiteral("--verbose"),
+                        QStringLiteral("--parameter-name"),
+                        QStringLiteral("passdb backend")});
     connect(proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, proc] {
         proc->deleteLater();
         const QByteArray output = proc->readAllStandardOutput().simplified();
@@ -159,11 +153,16 @@ void UserManager::load()
         for (const auto &name : nameList) {
             ++m_waitingForResolution;
             auto user = new User(name, this);
-            connect(user, &User::resolved, this, [this] {
-                if (--m_waitingForResolution <= 0) {
-                    Q_EMIT loaded();
-                }
-            }, Qt::QueuedConnection /* queue to ensure even shortcut resolution goes through the loop */);
+            connect(
+                user,
+                &User::resolved,
+                this,
+                [this] {
+                    if (--m_waitingForResolution <= 0) {
+                        Q_EMIT loaded();
+                    }
+                },
+                Qt::QueuedConnection /* queue to ensure even shortcut resolution goes through the loop */);
             m_users.append(user);
             if (user->name() == currentUserName) {
                 m_currentUser = user;

@@ -33,8 +33,8 @@ public:
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
-    Qt::ItemFlags flags(const QModelIndex & index) const override;
-    bool setData(const QModelIndex & index, const QVariant & value, int role = Qt::EditRole) override;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
     QString getAcl() const;
 

@@ -11,16 +11,16 @@
 #ifndef SAMBAUSERSHAREPLUGIN_H
 #define SAMBAUSERSHAREPLUGIN_H
 
-#include <KPropertiesDialogPlugin>
 #include <KPropertiesDialog>
-#include <KSambaShareData>
+#include <KPropertiesDialogPlugin>
 #include <KSambaShare>
+#include <KSambaShareData>
 #include <QFileInfo>
 
-#include <memory>
-#include "usermanager.h"
 #include "model.h"
 #include "permissionshelper.h"
+#include "usermanager.h"
+#include <memory>
 
 class ShareContext : public QObject
 {
@@ -36,7 +36,7 @@ public:
         : QObject(parent)
         , m_shareData(resolveShare(url))
         , m_enabled(KSambaShare::instance()->isDirectoryShared(m_shareData.path()))
-        // url isn't a member. always use .path()!
+    // url isn't a member. always use .path()!
     {
     }
 
@@ -80,7 +80,8 @@ public:
         return m_shareData.name();
     }
 
-    QString path() const {
+    QString path() const
+    {
         return m_shareData.path();
     }
 
@@ -96,7 +97,6 @@ public:
         // We consider this kind of a soft limit as there appears to be no actual limit specified anywhere.
         return 60;
     }
-
 
     Q_INVOKABLE static bool isNameFree(const QString &name)
     {
@@ -137,10 +137,10 @@ private:
 public:
     // TODO shouldn't be public may need refactoring though because the ACL model needs an immutable copy
     KSambaShareData m_shareData;
+
 private:
     bool m_enabled = false; // this gets cached so we can manipulate its state from qml
 };
-
 
 class SambaUserSharePlugin : public KPropertiesDialogPlugin
 {
@@ -183,7 +183,7 @@ private:
     Q_SLOT void initAddressList();
 
     const QString m_url;
-    ShareContext *m_context= nullptr;
+    ShareContext *m_context = nullptr;
     UserPermissionModel *m_model = nullptr;
     UserManager *m_userManager = nullptr;
     PermissionsHelper *m_permissionsHelper = nullptr;

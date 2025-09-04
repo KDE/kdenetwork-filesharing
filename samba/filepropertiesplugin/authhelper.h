@@ -10,7 +10,7 @@
 
 using namespace KAuth;
 
-class AuthHelper: public QObject
+class AuthHelper : public QObject
 {
     Q_OBJECT
 public Q_SLOTS:

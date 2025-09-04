@@ -47,7 +47,6 @@ public:
             map[QStringLiteral("text")] = typeToString(static_cast<ACEObject::Type>(value));
             map[QStringLiteral("value")] = value;
             ret << map;
-
         }
         return ret;
     }
@@ -101,7 +100,6 @@ public:
             map[QStringLiteral("text")] = inheritanceToString(static_cast<ACEObject::Inheritance>(value));
             map[QStringLiteral("value")] = value;
             ret << map;
-
         }
         return ret;
     }
@@ -121,16 +119,17 @@ static Context &context()
     return s_context;
 }
 
-    // TODO maybe introduce a unix mode if Unix Group\ exists. only a quarter of the ace mask has meaning because it translates to rwx
+// TODO maybe introduce a unix mode if Unix Group\ exists. only a quarter of the ace mask has meaning because it translates to rwx
 
-    /*
-     * POSIX ACL
-     * rwx => (ALL ACTRL mask bits set) :: 00000000000111110000000111111111
-     * rw- => 00000000000100100000000010101001 :: ACTRL_DS_CREATE_CHILD | ACTRL_DS_SELF | ACTRL_DS_WRITE_PROP | ACTRL_DS_LIST_OBJECT | ACTRL_FILE_READ | ACTRL_FILE_READ_PROP | ACTRL_FILE_EXECUTE | ACTRL_FILE_READ_ATTRIB | ACTRL_DIR_LIST | ACTRL_DIR_TRAVERSE
-     * r-- => 00000000000100100000000010001001 :: ACTRL_DS_CREATE_CHILD | ACTRL_DS_SELF | ACTRL_DS_LIST_OBJECT | ACTRL_FILE_READ | ACTRL_FILE_READ_PROP | ACTRL_FILE_READ_ATTRIB | ACTRL_DIR_LIST
-     *
-     * POSIX ACL default:* entries are mapped in the flags if applicable (i.e. INHERIT_ONLY_ACE | CONTAINER_INHERIT_ACE | OBJECT_INHERIT_ACE)
-     */
+/*
+ * POSIX ACL
+ * rwx => (ALL ACTRL mask bits set) :: 00000000000111110000000111111111
+ * rw- => 00000000000100100000000010101001 :: ACTRL_DS_CREATE_CHILD | ACTRL_DS_SELF | ACTRL_DS_WRITE_PROP | ACTRL_DS_LIST_OBJECT | ACTRL_FILE_READ |
+ * ACTRL_FILE_READ_PROP | ACTRL_FILE_EXECUTE | ACTRL_FILE_READ_ATTRIB | ACTRL_DIR_LIST | ACTRL_DIR_TRAVERSE r-- => 00000000000100100000000010001001 ::
+ * ACTRL_DS_CREATE_CHILD | ACTRL_DS_SELF | ACTRL_DS_LIST_OBJECT | ACTRL_FILE_READ | ACTRL_FILE_READ_PROP | ACTRL_FILE_READ_ATTRIB | ACTRL_DIR_LIST
+ *
+ * POSIX ACL default:* entries are mapped in the flags if applicable (i.e. INHERIT_ONLY_ACE | CONTAINER_INHERIT_ACE | OBJECT_INHERIT_ACE)
+ */
 
 SambaACL::SambaACL(QObject *parent)
     : KPropertiesDialogPlugin(parent)
@@ -185,7 +184,7 @@ SambaACL::SambaACL(QObject *parent)
     (void)properties->addPage(m_page.get(), i18nc("@title:tab", "Remote Permissions"));
     if (auto parentWidget = qobject_cast<QWidget *>(m_page->parent()); parentWidget && parentWidget->layout()) {
         // Force our encompassing layout to have no margins, our QML Controls have some already!
-        parentWidget->layout()->setContentsMargins(0,0,0,0);
+        parentWidget->layout()->setContentsMargins(0, 0, 0, 0);
     }
 
     // TODO make this more discriminatory

@@ -25,8 +25,7 @@ UserPermissionModel::UserPermissionModel(const KSambaShareData &shareData, UserM
 
 void UserPermissionModel::setupData()
 {
-    const QStringList acl = m_shareData.acl().split(QLatin1Char(','),
-                                            Qt::SkipEmptyParts);
+    const QStringList acl = m_shareData.acl().split(QLatin1Char(','), Qt::SkipEmptyParts);
 
     QList<QString>::const_iterator itr;
     for (itr = acl.constBegin(); itr != acl.constEnd(); ++itr) {
@@ -37,9 +36,6 @@ void UserPermissionModel::setupData()
         m_usersAcl.insert(QStringLiteral("Everyone"), QStringLiteral("R"));
     }
 }
-
-
-
 
 int UserPermissionModel::rowCount(const QModelIndex &parent) const
 {
@@ -158,7 +154,8 @@ QString UserPermissionModel::getAcl() const
     return (denials + readables + fulls).join(QLatin1Char(','));
 }
 
-UserPermissionModel::SambaACEHashMap UserPermissionModel::getUsersACEs() const {
+UserPermissionModel::SambaACEHashMap UserPermissionModel::getUsersACEs() const
+{
     SambaACEHashMap result;
     for (auto it = m_usersAcl.constBegin(); it != m_usersAcl.constEnd(); ++it) {
         result.insert(it.key(), it->value<QString>());

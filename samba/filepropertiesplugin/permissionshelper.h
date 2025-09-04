@@ -21,7 +21,11 @@ class PermissionsHelperModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    enum Column { ColumnPath, ColumnOldPermissions, ColumnNewPermissions };
+    enum Column {
+        ColumnPath,
+        ColumnOldPermissions,
+        ColumnNewPermissions
+    };
     Q_ENUM(Column)
 
     explicit PermissionsHelperModel(PermissionsHelper *helper);

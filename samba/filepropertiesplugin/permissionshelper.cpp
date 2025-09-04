@@ -9,11 +9,11 @@
 
 #include <KFileItem>
 #include <KIO/StatJob>
+#include <KLocalizedString>
 #include <KUser>
 #include <QDebug>
 #include <QFileInfo>
 #include <QMetaEnum>
-#include <KLocalizedString>
 
 #include <QCoro/QCoroSignal>
 
@@ -54,15 +54,15 @@ static QString permissionsToString(QFile::Permissions perm)
                                (perm & QFileDevice::WriteOther) ? 'w' : '-',
                                (perm & QFileDevice::ExeOther) ? 'x' : '-'};
 
-    const int permsAsNumber = ((perm & QFileDevice::ReadOwner) ? S_IRUSR : 0)
-            + ((perm & QFileDevice::WriteOwner) ? S_IWUSR : 0)
-            + ((perm & QFileDevice::ExeOwner) ? S_IXUSR : 0)
-            + ((perm & QFileDevice::ReadGroup) ? S_IRGRP : 0)
-            + ((perm & QFileDevice::WriteGroup) ? S_IWGRP : 0)
-            + ((perm & QFileDevice::ExeGroup) ? S_IXGRP : 0)
-            + ((perm & QFileDevice::ReadOther) ? S_IROTH : 0)
-            + ((perm & QFileDevice::WriteOther) ? S_IWOTH : 0)
-            + ((perm & QFileDevice::ExeOther) ? S_IXOTH : 0);
+    const int permsAsNumber = ((perm & QFileDevice::ReadOwner) ? S_IRUSR : 0) //
+        + ((perm & QFileDevice::WriteOwner) ? S_IWUSR : 0) //
+        + ((perm & QFileDevice::ExeOwner) ? S_IXUSR : 0) //
+        + ((perm & QFileDevice::ReadGroup) ? S_IRGRP : 0) //
+        + ((perm & QFileDevice::WriteGroup) ? S_IWGRP : 0) //
+        + ((perm & QFileDevice::ExeGroup) ? S_IXGRP : 0) //
+        + ((perm & QFileDevice::ReadOther) ? S_IROTH : 0) //
+        + ((perm & QFileDevice::WriteOther) ? S_IWOTH : 0) //
+        + ((perm & QFileDevice::ExeOther) ? S_IXOTH : 0); //
 
     return QString::fromLatin1(permString, sizeof(permString)) + QStringLiteral(" (0%1)").arg(QString::number(permsAsNumber, 8));
 }
@@ -143,11 +143,13 @@ PermissionsHelper::PermissionsHelper(const QString &path, const UserManager *use
 {
 }
 
-void PermissionsHelper::reload() {
+void PermissionsHelper::reload()
+{
     reloadInternal();
 }
 
-QCoro::Task<void> PermissionsHelper::reloadInternal() {
+QCoro::Task<void> PermissionsHelper::reloadInternal()
+{
     if (!m_userManager->currentUser()) {
         qWarning() << "PermissionsHelper::reload() failed: current user is null";
         co_return;

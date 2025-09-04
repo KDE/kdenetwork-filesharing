@@ -3,7 +3,6 @@
 
 #include "debug.h"
 
-
 #include <QDebug>
 
 #include "acccrtl.h"
@@ -64,7 +63,7 @@ void printType(const ACE &ace)
 
 QString check(unsigned int value)
 {
-    if (value){
+    if (value) {
         return QStringLiteral("☒");
     }
     return QStringLiteral("☐");

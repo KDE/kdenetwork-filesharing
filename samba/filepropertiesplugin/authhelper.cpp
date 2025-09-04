@@ -44,13 +44,14 @@ ActionReply AuthHelper::isuserknown(const QVariantMap &args)
     const auto username = args.value(QStringLiteral("username")).toString();
     if (!isValidUserName(username)) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "User name <resource>%1</resource> is not valid as the name of a Samba user; cannot check for its existence.", username));
+        reply.setErrorDescription(
+            xi18nc("@info", "User name <resource>%1</resource> is not valid as the name of a Samba user; cannot check for its existence.", username));
         return reply;
     }
 
     QProcess p;
     const auto program = QStringLiteral("pdbedit");
-    const auto arguments = QStringList({QStringLiteral("--debuglevel=0"), QStringLiteral("--user"), username });
+    const auto arguments = QStringList({QStringLiteral("--debuglevel=0"), QStringLiteral("--user"), username});
     p.setProgram(program);
     p.setArguments(arguments);
     p.start();
@@ -63,7 +64,10 @@ ActionReply AuthHelper::isuserknown(const QVariantMap &args)
         const QString errorText = QString::fromUtf8(p.readAllStandardOutput());
         auto reply = ActionReply::HelperErrorReply();
         reply.setErrorDescription(xi18nc("@info '%1 %2' together make up a terminal command; %3 is the command's output",
-                                         "Command <command>%1 %2</command> failed:<nl/><nl/>%3", program, arguments.join(QLatin1Char(' ')), errorText));
+                                         "Command <command>%1 %2</command> failed:<nl/><nl/>%3",
+                                         program,
+                                         arguments.join(QLatin1Char(' ')),
+                                         errorText));
         return reply;
     }
 
@@ -89,12 +93,12 @@ ActionReply AuthHelper::createuser(const QVariantMap &args)
 
     QProcess p;
     p.setProgram(QStringLiteral("smbpasswd"));
-    p.setArguments({
-        QStringLiteral("-L"), /* local mode */
-        QStringLiteral("-s"), /* read from stdin */
-        QStringLiteral("-D"), QStringLiteral("0"), /* force-disable debug */
-        QStringLiteral("-a"), /* add user */
-        username.value() });
+    p.setArguments({QStringLiteral("-L"), /* local mode */
+                    QStringLiteral("-s"), /* read from stdin */
+                    QStringLiteral("-D"),
+                    QStringLiteral("0"), /* force-disable debug */
+                    QStringLiteral("-a"), /* add user */
+                    username.value()});
     p.start();
     // despite being in silent mode we still need to write the password twice!
     p.write((password + QStringLiteral("\n")).toUtf8());
@@ -128,15 +132,18 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
     }
     if (!isValidUserName(group)) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "<resource>%1</resource> is not a valid group name; cannot make user <resource>%2</resource> a member of it.", group, user.value()));
+        reply.setErrorDescription(xi18nc("@info",
+                                         "<resource>%1</resource> is not a valid group name; cannot make user <resource>%2</resource> a member of it.",
+                                         group,
+                                         user.value()));
         return reply;
     }
     // Harden against some input abuse.
     // Keep this condition in sync with the one in groupmanager.cpp
-    if (group.contains(QLatin1String("admin")) ||
-        group.contains(QLatin1String("root"))) {
+    if (group.contains(QLatin1String("admin")) || group.contains(QLatin1String("root"))) {
         auto reply = ActionReply::HelperErrorReply();
-        reply.setErrorDescription(xi18nc("@info", "For security reasons, cannot make user <resource>%1</resource> a member of group <resource>%2</resource>. \
+        reply.setErrorDescription(xi18nc("@info",
+                                         "For security reasons, cannot make user <resource>%1</resource> a member of group <resource>%2</resource>. \
                                                    The group name is insecure; valid group names do not \
                                                    include the text <resource>admin</resource> or <resource>root</resource>."));
         return reply;
@@ -145,21 +152,13 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
     QProcess p;
 #if defined(Q_OS_FREEBSD)
     p.setProgram(QStringLiteral("pw"));
-    p.setArguments({
-        QStringLiteral("group"),
-        QStringLiteral("mod"),
-        QStringLiteral("{%1}").arg(group),
-        QStringLiteral("-m"),
-        QStringLiteral("{%1}").arg(user.value()) });
+    p.setArguments(
+        {QStringLiteral("group"), QStringLiteral("mod"), QStringLiteral("{%1}").arg(group), QStringLiteral("-m"), QStringLiteral("{%1}").arg(user.value())});
 #elif defined(Q_OS_LINUX) || defined(Q_OS_HURD)
     p.setProgram(QStringLiteral("/usr/sbin/usermod"));
-    p.setArguments({
-        QStringLiteral("--append"),
-        QStringLiteral("--groups"),
-        group,
-        user.value() });
+    p.setArguments({QStringLiteral("--append"), QStringLiteral("--groups"), group, user.value()});
 #else
-#   error "Platform lacks group management support. Please add support."
+#error "Platform lacks group management support. Please add support."
 #endif
 
     p.start();

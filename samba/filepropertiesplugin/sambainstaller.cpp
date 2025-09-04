@@ -18,25 +18,21 @@ void SambaInstaller::install()
     const QString package = QStringLiteral(SAMBA_PACKAGE_NAME);
     QStringList distroSambaPackages = package.split(QLatin1Char(','));
 
-    PackageKit::Transaction *resolveTransaction = PackageKit::Daemon::resolve(distroSambaPackages,
-                                                                              PackageKit::Transaction::FilterArch);
+    PackageKit::Transaction *resolveTransaction = PackageKit::Daemon::resolve(distroSambaPackages, PackageKit::Transaction::FilterArch);
 
     QSharedPointer<QStringList> pkgids(new QStringList);
 
-    connect(resolveTransaction, &PackageKit::Transaction::package,
-            this, [pkgids](PackageKit::Transaction::Info /*info*/, const QString &packageId) {
+    connect(resolveTransaction, &PackageKit::Transaction::package, this, [pkgids](PackageKit::Transaction::Info /*info*/, const QString &packageId) {
         pkgids->append(packageId);
     });
 
-    connect(resolveTransaction, &PackageKit::Transaction::finished,
-            this, [this, pkgids](PackageKit::Transaction::Exit exit) {
+    connect(resolveTransaction, &PackageKit::Transaction::finished, this, [this, pkgids](PackageKit::Transaction::Exit exit) {
         if (exit != PackageKit::Transaction::ExitSuccess) {
             setFailed(true);
             return;
         }
         auto installTransaction = PackageKit::Daemon::installPackages(*pkgids);
-        connect(installTransaction, &PackageKit::Transaction::finished,
-                this, &SambaInstaller::packageFinished);
+        connect(installTransaction, &PackageKit::Transaction::finished, this, &SambaInstaller::packageFinished);
     });
 }
 
@@ -95,4 +91,3 @@ void SambaInstaller::setInstalling(bool installing)
     }
     Q_EMIT installingChanged();
 }
-

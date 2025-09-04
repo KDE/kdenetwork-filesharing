@@ -43,4 +43,3 @@ Q_SIGNALS:
 private:
     mutable QList<std::shared_ptr<ACE>> m_acl;
 };
-

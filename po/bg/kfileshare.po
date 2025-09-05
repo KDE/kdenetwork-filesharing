@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-03 00:43+0000\n"
+"POT-Creation-Date: 2025-09-05 00:42+0000\n"
 "PO-Revision-Date: 2024-12-05 22:02+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -19,74 +19,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.03.70\n"
 
-#: samba/aclproperties/plugin.cpp:59
+#: samba/aclproperties/plugin.cpp:58
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Забраняване"
 
-#: samba/aclproperties/plugin.cpp:61
+#: samba/aclproperties/plugin.cpp:60
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Разрешаване"
 
-#: samba/aclproperties/plugin.cpp:65
+#: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Неизвестено"
 
-#: samba/aclproperties/plugin.cpp:72
+#: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
 msgstr "Само тази папка"
 
-#: samba/aclproperties/plugin.cpp:74
+#: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
 msgstr "Тази папка, подпапки и файлове"
 
-#: samba/aclproperties/plugin.cpp:76
+#: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
 msgstr "Тази папка и подпапки"
 
-#: samba/aclproperties/plugin.cpp:78
+#: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
 msgstr "Тази папка и файлове"
 
-#: samba/aclproperties/plugin.cpp:80
+#: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
 msgstr "Само подпапки и файлове"
 
-#: samba/aclproperties/plugin.cpp:82
+#: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
 msgstr "Само подпапки"
 
-#: samba/aclproperties/plugin.cpp:84
+#: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
 msgstr "Само файлове"
 
-#: samba/aclproperties/plugin.cpp:87
+#: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Неизвестено"
 
-#: samba/aclproperties/plugin.cpp:185
+#: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
@@ -216,7 +216,7 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "Вероятно няма SMB/Windows/Разширени разрешения, зададени на този файл."
 
-#: samba/filepropertiesplugin/authhelper.cpp:47
+#: samba/filepropertiesplugin/authhelper.cpp:48
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -226,21 +226,21 @@ msgstr ""
 "Потребителското име <resource>%1</resource> не е валидно като име на "
 "потребител на Samba; не може да се провери за съществуването му."
 
-#: samba/filepropertiesplugin/authhelper.cpp:66
+#: samba/filepropertiesplugin/authhelper.cpp:67
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Командата <command>%1 %2</command> е неуспешна:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:80
-#: samba/filepropertiesplugin/authhelper.cpp:126
+#: samba/filepropertiesplugin/authhelper.cpp:84
+#: samba/filepropertiesplugin/authhelper.cpp:130
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
 msgstr "Неуспешно обаждане на потребител."
 
-#: samba/filepropertiesplugin/authhelper.cpp:86
+#: samba/filepropertiesplugin/authhelper.cpp:90
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -250,7 +250,7 @@ msgstr ""
 "От съображения за сигурност създаването на потребители на Samba с празни "
 "пароли не е позволено."
 
-#: samba/filepropertiesplugin/authhelper.cpp:131
+#: samba/filepropertiesplugin/authhelper.cpp:136
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -260,7 +260,7 @@ msgstr ""
 "<resource>%1</resource> не е валидно име на група; не може да се създаде "
 "потребител <resource>%2</resource> като неин член."
 
-#: samba/filepropertiesplugin/authhelper.cpp:139
+#: samba/filepropertiesplugin/authhelper.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -283,7 +283,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr "Инсталацията на Samba изглежда е повредена."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:40
+#: samba/filepropertiesplugin/groupmanager.cpp:41
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -296,7 +296,7 @@ msgstr ""
 "проверете документацията на дистрибуцията за настройване на споделянето на "
 "Samba."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:42
+#: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -310,7 +310,7 @@ msgstr ""
 "проверете документацията на дистрибуцията за настройване на споделянето на "
 "Samba. Грешка:<nl/><message>%1</message>"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:49
+#: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -319,7 +319,7 @@ msgstr ""
 "Тази папка не може да се сподели, защото  <filename>%1</filename> не "
 "съществува."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:51
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 "споделянето на Samba. Можете да я поправите сами, като създадете тази папка "
 "ръчно. След това затворете и отново отворете този прозорец."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 "Тази папка не може да бъде споделена, защото вашият потребителски акаунт не "
 "е член на група <resource>%1</resource>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:74
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -360,7 +360,7 @@ msgstr ""
 "Можете да поправите това, като направите потребителя член на тази група. "
 "След това рестартирайте системата."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "action@button makes user a member of the samba share group"
 #| msgid "Make me a Group Member"
@@ -368,7 +368,7 @@ msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Включване в групата"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:85
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -378,7 +378,7 @@ msgstr ""
 "Тази папка не може да бъде споделена, защото вашият потребителски акаунт "
 "няма разрешение да записва в <filename>%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:75
+#: samba/filepropertiesplugin/groupmanager.cpp:89
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -395,7 +395,7 @@ msgstr ""
 "resource> има право на запис за <filename>%2</filename>. След това затворете "
 "и отворете отново този прозорец."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:102
+#: samba/filepropertiesplugin/groupmanager.cpp:120
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -409,7 +409,7 @@ msgstr ""
 "Добавяне на потребител <resource>%1</resource> към група <resource>%2</"
 "resource>, за да може да настройват потребителски споделяния със Samba"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:113
+#: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -775,7 +775,7 @@ msgstr ""
 "правят с помощната програма<command> smbpasswd </command>\n"
 " от командния ред."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -785,73 +785,73 @@ msgstr ""
 "Вие сте изчерпали максималното количество споделени директории, които може "
 "да имате активни едновременно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Споделеното име е неактивно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Споделеното име вече се използва за друга директория"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Пътят е невалиден."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Посоченият път не съществува."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Пътят не е директория."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Посоченият път е относителен."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Посоченият път не може да бъде споделен."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Правилото за достъп е невалидно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Посоченият потребител в правило за достъп не е валиден."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Правилото за достъп за \"Гост\" е невалидно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Активирането на достъп за гости не е разрешено."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -880,19 +880,19 @@ msgstr ""
 "Споделянето не е премахнато.</para><para>Вътрешен доклад на Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
 msgstr "Неуспешно премахване на мрежово споделяне"
 
-#: samba/filepropertiesplugin/usermanager.cpp:96
+#: samba/filepropertiesplugin/usermanager.cpp:95
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Проверка за съществуване на Samba потребител „%1“"
 
-#: samba/filepropertiesplugin/usermanager.cpp:119
+#: samba/filepropertiesplugin/usermanager.cpp:116
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"

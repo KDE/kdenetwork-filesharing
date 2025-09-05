@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-03 00:43+0000\n"
+"POT-Creation-Date: 2025-09-05 00:42+0000\n"
 "PO-Revision-Date: 2025-01-04 15:03+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -22,74 +22,74 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: samba/aclproperties/plugin.cpp:59
+#: samba/aclproperties/plugin.cpp:58
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Liegt"
 
-#: samba/aclproperties/plugin.cpp:61
+#: samba/aclproperties/plugin.cpp:60
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Atļaut"
 
-#: samba/aclproperties/plugin.cpp:65
+#: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Nezināms"
 
-#: samba/aclproperties/plugin.cpp:72
+#: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
 msgstr "Tikai šai mapei"
 
-#: samba/aclproperties/plugin.cpp:74
+#: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
 msgstr "Šai mapei, apakšmapēm un datnēm"
 
-#: samba/aclproperties/plugin.cpp:76
+#: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
 msgstr "Šai mapei un apakšmapēm"
 
-#: samba/aclproperties/plugin.cpp:78
+#: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
 msgstr "Šai mapei un datnēm"
 
-#: samba/aclproperties/plugin.cpp:80
+#: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
 msgstr "Tikai apakšmapēm un datnēm"
 
-#: samba/aclproperties/plugin.cpp:82
+#: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
 msgstr "Tikai apakšmapēm"
 
-#: samba/aclproperties/plugin.cpp:84
+#: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
 msgstr "Tikai datnēm"
 
-#: samba/aclproperties/plugin.cpp:87
+#: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Nezināms"
 
-#: samba/aclproperties/plugin.cpp:185
+#: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
@@ -217,7 +217,7 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "Šai datnei, iespējams nav SMB/„Windows“/papildu tiesību."
 
-#: samba/filepropertiesplugin/authhelper.cpp:47
+#: samba/filepropertiesplugin/authhelper.cpp:48
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,21 +227,21 @@ msgstr ""
 "Lietotājvārds <resource>%1</resource> nav derīgs „Samba“ lietotāja vārds, "
 "nevar pārbaudīt, vai tas pastāv."
 
-#: samba/filepropertiesplugin/authhelper.cpp:66
+#: samba/filepropertiesplugin/authhelper.cpp:67
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Komanda <command>%1 %2</command> neizdevās:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:80
-#: samba/filepropertiesplugin/authhelper.cpp:126
+#: samba/filepropertiesplugin/authhelper.cpp:84
+#: samba/filepropertiesplugin/authhelper.cpp:130
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
 msgstr "Neizdevās atrisināt lietotāja izsaukšanu."
 
-#: samba/filepropertiesplugin/authhelper.cpp:86
+#: samba/filepropertiesplugin/authhelper.cpp:90
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -249,7 +249,7 @@ msgid ""
 "allowed."
 msgstr "Drošības nolūkos „Samba“ lietotāju izveide bez paroles ir aizliegta."
 
-#: samba/filepropertiesplugin/authhelper.cpp:131
+#: samba/filepropertiesplugin/authhelper.cpp:136
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -259,7 +259,7 @@ msgstr ""
 "<resource>%1</resource> nav derīgs grupas nosaukums, tāpēc tam nevar "
 "izmantot locekli <resource>%2</resource>."
 
-#: samba/filepropertiesplugin/authhelper.cpp:139
+#: samba/filepropertiesplugin/authhelper.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -281,7 +281,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr "Izskatās, ka „Samba“ instalācija nav korekta."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:40
+#: samba/filepropertiesplugin/groupmanager.cpp:41
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 "distributīva veidotājiem vai pārbaudiet distribūcijas dokumentāciju par "
 "„Samba“ kopīgošanas iestatīšanu."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:42
+#: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -308,14 +308,14 @@ msgstr ""
 "distributīva veidotājiem vai pārbaudiet distribūcijas dokumentāciju par "
 "„Samba“ kopīgošanas iestatīšanu. Kļūda:<nl/><message>%1</message>"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:49
+#: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr "Ar šo mapi nevar dalīties, jo <filename>%1</filename> nepastāv."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:51
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -332,7 +332,7 @@ msgstr ""
 "iestatījis „Samba“ kopīgošanu. To varat labot, mapi izveidojot manuāli. Pēc "
 "tam aizveriet un no jauna atveriet šo logu."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -342,7 +342,7 @@ msgstr ""
 "Šo mapi nevarat kopīgot, jo lietotāja konta nepieder <resource>%1</resource> "
 "grupai."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:74
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 "To varat novērst, lietotāju pievienojot grupai. Pēc tam pārstartējiet "
 "sistēmu."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "action@button makes user a member of the samba share group"
 #| msgid "Make me a Group Member"
@@ -364,7 +364,7 @@ msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Padarīt manu par grupas locekli"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:85
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -374,7 +374,7 @@ msgstr ""
 "Šo mapi nevarat kopīgot, jo lietotāja kontam nav atļauju rakstīt <filename>"
 "%1</filename>."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:75
+#: samba/filepropertiesplugin/groupmanager.cpp:89
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -391,7 +391,7 @@ msgstr ""
 "rakstīšanas atļaujas attiecībā uz <filename>%2</filename>. Pēc tam aizveriet "
 "un no jauna atveriet šo logu."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:102
+#: samba/filepropertiesplugin/groupmanager.cpp:120
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -405,7 +405,7 @@ msgstr ""
 "Lietotāja <resource>%1</resource> pievienošana grupai <resource>%2</"
 "resource>, lai lietotājs varētu konfigurēt caur „Samba“ kopīgotos resursus"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:113
+#: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -769,7 +769,7 @@ msgstr ""
 "„Samba“<command>smbpasswd</command>\n"
 "komandrindas utilītprogrammu."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -777,73 +777,73 @@ msgid ""
 "active at the same time."
 msgstr "Ir sasniegts maksimālais aktīvo kopīgoto mapju skaits."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Koīgošanas nosaukums nav derīgs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Šo kopīgošanas nosaukumu jau izmanto cita mape."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Ceļš nav derīgs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Ceļš nepastāv."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Ceļš nav mape."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Ceļš ir relatīvs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Šo ceļu nevarat kopīgot."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Piekļuves noteikums ir nederīgs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Piekļuves nosaukuma lietotājs nav derīgs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "„Viesa“ konta noteikums nav derīgs."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Viesa piekļuves ieslēgšana nav atļauta."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -871,19 +871,19 @@ msgstr ""
 "<para>Notika kļūda, mēģinot atcelt mapes kopīgošanu. Kopīgotais resurss nav "
 "noņemts.</para><para>„Samba“ ziņo:</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
 msgstr "Neizdevās noņemt tīklā kopīgotu resursu"
 
-#: samba/filepropertiesplugin/usermanager.cpp:96
+#: samba/filepropertiesplugin/usermanager.cpp:95
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Pārbauda, vai pastāv „Samba“ lietotājs „%1“"
 
-#: samba/filepropertiesplugin/usermanager.cpp:119
+#: samba/filepropertiesplugin/usermanager.cpp:116
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"

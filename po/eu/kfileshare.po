@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-03 00:43+0000\n"
+"POT-Creation-Date: 2025-09-05 00:42+0000\n"
 "PO-Revision-Date: 2025-09-03 21:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -23,74 +23,74 @@ msgstr ""
 "X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: samba/aclproperties/plugin.cpp:59
+#: samba/aclproperties/plugin.cpp:58
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Ukatu"
 
-#: samba/aclproperties/plugin.cpp:61
+#: samba/aclproperties/plugin.cpp:60
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "Baimendu"
 
-#: samba/aclproperties/plugin.cpp:65
+#: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: samba/aclproperties/plugin.cpp:72
+#: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
 msgstr "Karpeta hau bakarrik"
 
-#: samba/aclproperties/plugin.cpp:74
+#: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
 msgstr "Karpeta hau, azpikarpetak eta fitxategiak"
 
-#: samba/aclproperties/plugin.cpp:76
+#: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
 msgstr "Karpeta hau eta azpikarpetak"
 
-#: samba/aclproperties/plugin.cpp:78
+#: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
 msgstr "Karpeta hau eta fitxategiak"
 
-#: samba/aclproperties/plugin.cpp:80
+#: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
 msgstr "Azpikarpetak eta fitxategiak bakarrik"
 
-#: samba/aclproperties/plugin.cpp:82
+#: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
 msgstr "Azpikarpetak bakarrik"
 
-#: samba/aclproperties/plugin.cpp:84
+#: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
 msgstr "Fitxategiak bakarrik"
 
-#: samba/aclproperties/plugin.cpp:87
+#: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: samba/aclproperties/plugin.cpp:185
+#: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
@@ -222,7 +222,7 @@ msgstr ""
 "Fitxategi honetan seguruenik ez dago ezarrita SMB/Windows/baimen "
 "aurreraturik."
 
-#: samba/filepropertiesplugin/authhelper.cpp:47
+#: samba/filepropertiesplugin/authhelper.cpp:48
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,21 +232,21 @@ msgstr ""
 "<resource>%1</resource> erabiltzaile-izena ez da balioduna Samba "
 "erabiltzaile baten izen gisa; ezin du egiaztatu existitzen denik."
 
-#: samba/filepropertiesplugin/authhelper.cpp:66
+#: samba/filepropertiesplugin/authhelper.cpp:67
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "<command>%1 %2</command> komandoak huts egin du:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:80
-#: samba/filepropertiesplugin/authhelper.cpp:126
+#: samba/filepropertiesplugin/authhelper.cpp:84
+#: samba/filepropertiesplugin/authhelper.cpp:130
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
 msgstr "Ezin izan du deitzen duen erabiltzailea ebatzi."
 
-#: samba/filepropertiesplugin/authhelper.cpp:86
+#: samba/filepropertiesplugin/authhelper.cpp:90
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -256,7 +256,7 @@ msgstr ""
 "Segurtasun-arrazoiak direla eta, ezin da pasahitz hutsak dituen samba-"
 "erabiltzailerik sortu."
 
-#: samba/filepropertiesplugin/authhelper.cpp:131
+#: samba/filepropertiesplugin/authhelper.cpp:136
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -266,7 +266,7 @@ msgstr ""
 "<resource>%1</resource> ez da talde-izen balioduna; ezin da  <resource>%2</"
 "resource> erabiltzailea haren partaide egin."
 
-#: samba/filepropertiesplugin/authhelper.cpp:139
+#: samba/filepropertiesplugin/authhelper.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -290,7 +290,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr "Zure Sanbaren instalazioa hondatuta dagoela dirudi."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:40
+#: samba/filepropertiesplugin/groupmanager.cpp:41
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -302,7 +302,7 @@ msgstr ""
 "ondorio da. Mesedez, bete zure banaketaren akats-txosten bat edo begiratu "
 "zure banaketaren dokumentazioan Sambaren partekatzea nola ezarri."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:42
+#: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -316,7 +316,7 @@ msgstr ""
 "zure banaketaren dokumentazioan Sambaren partekatzea nola ezarri. Errorea:"
 "<nl/><message>%1</message>"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:49
+#: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -324,7 +324,7 @@ msgid ""
 msgstr ""
 "Karpeta hau ezin da partekatu <filename>%1</filename> ez delako existitzen."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:51
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -336,7 +336,7 @@ msgstr ""
 "ondorio da. Zuk zeuk konpon dezakezu karpeta hori eskuz sortuta, ondoren "
 "leiho hau itxi eta berriz ireki."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 "Karpeta hau ezin da partekatu zure erabiltzaile-kontua ez delako <resource>"
 "%1</resource> taldeko partaidea."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:74
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -356,13 +356,13 @@ msgstr ""
 "Hori konpon dezakezu zure erabiltzailea talde horretako partaide eginda, "
 "gero sistema berrabiarazi."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:78
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Egin nazazu taldeko kide"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:85
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -372,7 +372,7 @@ msgstr ""
 "Karpeta hau ezin da partekatu zure erabiltzaile-kontuak ez duelako <filename>"
 "%1</filename>(e)(a)n idazteko baimenik."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:75
+#: samba/filepropertiesplugin/groupmanager.cpp:89
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -383,7 +383,7 @@ msgstr ""
 "Hau konpon dezakezu <resource>%1</resource> taldeak <filename>%2</filename> "
 "idazteko baimena duela ziurtatuz, gero leiho hau itxi eta berriz ireki."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:102
+#: samba/filepropertiesplugin/groupmanager.cpp:120
 #, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
@@ -393,7 +393,7 @@ msgstr ""
 "<resource>%1</resource> erabiltzailea <resource>%2</resource> taldera "
 "gehitzea, Samba erabiltzaileen partekatzeak konfiguratu ahal izan ditzaten"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:113
+#: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -717,7 +717,7 @@ msgstr ""
 "komando-lerroko <command>smbpasswd</command>\n"
 "baliagarritasuna erabiliz."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -727,73 +727,73 @@ msgstr ""
 "Aldi berean aktibo izan dezakezun direktorio partekatuen gehienezko kopurua "
 "agortu duzu."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Partekatze-izena baliogabea da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Partekatze-izena dagoeneko beste direktorio batekin erabili da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Bide-izena baliogabea da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Bide-izena ez da existitzen."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Bide-izena ez dagokio direktorio bati."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Bide-izena erlatiboa da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Baliteke bide-izen hau partekatzerik ez izatea."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Sarbide-araua baliogabea da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Sarbide-arau baten erabiltzailea baliogabea da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "«Gonbidatu» sarbide-araua baliogabea da."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Gonbidatu sarbidea gaitzea ez da onartzen."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -822,19 +822,19 @@ msgstr ""
 "Partekatzea ez da kendu.</para><para>Samba barneko txostena:</para><message>"
 "%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
 msgstr "Sareko partekatzea kentzea huts egin du"
 
-#: samba/filepropertiesplugin/usermanager.cpp:96
+#: samba/filepropertiesplugin/usermanager.cpp:95
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Samba-ko «%1» erabiltzailea existitzen den egiaztatzen"
 
-#: samba/filepropertiesplugin/usermanager.cpp:119
+#: samba/filepropertiesplugin/usermanager.cpp:116
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-03 00:43+0000\n"
+"POT-Creation-Date: 2025-09-05 00:42+0000\n"
 "PO-Revision-Date: 2024-12-29 01:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -24,74 +24,74 @@ msgstr ""
 "X-Generator: Lokalize 24.12.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: samba/aclproperties/plugin.cpp:59
+#: samba/aclproperties/plugin.cpp:58
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "拒絕"
 
-#: samba/aclproperties/plugin.cpp:61
+#: samba/aclproperties/plugin.cpp:60
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
 msgstr "允許"
 
-#: samba/aclproperties/plugin.cpp:65
+#: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
 msgstr "未知"
 
-#: samba/aclproperties/plugin.cpp:72
+#: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
 msgstr "僅此資料夾"
 
-#: samba/aclproperties/plugin.cpp:74
+#: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
 msgstr "此資料夾、子資料夾和檔案"
 
-#: samba/aclproperties/plugin.cpp:76
+#: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
 msgstr "此資料夾和子資料夾"
 
-#: samba/aclproperties/plugin.cpp:78
+#: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
 msgstr "此資料夾和檔案"
 
-#: samba/aclproperties/plugin.cpp:80
+#: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
 msgstr "僅子資料夾和檔案"
 
-#: samba/aclproperties/plugin.cpp:82
+#: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
 msgstr "僅子資料夾"
 
-#: samba/aclproperties/plugin.cpp:84
+#: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
 msgstr "僅檔案"
 
-#: samba/aclproperties/plugin.cpp:87
+#: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
 msgstr "未知"
 
-#: samba/aclproperties/plugin.cpp:185
+#: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
@@ -218,7 +218,7 @@ msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr "這個檔案上大概沒有設定 SMB/Windows/進階權限。"
 
-#: samba/filepropertiesplugin/authhelper.cpp:47
+#: samba/filepropertiesplugin/authhelper.cpp:48
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -228,21 +228,21 @@ msgstr ""
 "使用者名稱 <resource>%1</resource> 不是一個有效的 Samba 使用者名稱；無法檢查"
 "它的存在。"
 
-#: samba/filepropertiesplugin/authhelper.cpp:66
+#: samba/filepropertiesplugin/authhelper.cpp:67
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "指令 <command>%1 %2</command> 失敗：<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:80
-#: samba/filepropertiesplugin/authhelper.cpp:126
+#: samba/filepropertiesplugin/authhelper.cpp:84
+#: samba/filepropertiesplugin/authhelper.cpp:130
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
 msgstr "無法剖析呼叫使用者。"
 
-#: samba/filepropertiesplugin/authhelper.cpp:86
+#: samba/filepropertiesplugin/authhelper.cpp:90
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -250,7 +250,7 @@ msgid ""
 "allowed."
 msgstr "為了安全，不允許建立密碼空白的 Samba 使用者。"
 
-#: samba/filepropertiesplugin/authhelper.cpp:131
+#: samba/filepropertiesplugin/authhelper.cpp:136
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -260,7 +260,7 @@ msgstr ""
 "<resource>%1</resource> 不是一個有效的群組名稱；無法將使用者 <resource>%2</"
 "resource> 加入其中。"
 
-#: samba/filepropertiesplugin/authhelper.cpp:139
+#: samba/filepropertiesplugin/authhelper.cpp:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -282,7 +282,7 @@ msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
 msgstr "您的 Samba 安裝看起來有問題。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:40
+#: samba/filepropertiesplugin/groupmanager.cpp:41
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -293,7 +293,7 @@ msgstr ""
 "這個錯誤來自於您的發行版未正確設定 Samba 共享。請回報問題給您的發行版，或檢視"
 "您的發行版關於設定 Samba 共享的說明文件。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:42
+#: samba/filepropertiesplugin/groupmanager.cpp:46
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -305,14 +305,14 @@ msgstr ""
 "這個錯誤來自於您的發行版未正確設定 Samba 共享。請回報問題給您的發行版，或檢視"
 "您的發行版關於設定 Samba 共享的說明文件。錯誤：<nl/><message>%1</message>"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:49
+#: samba/filepropertiesplugin/groupmanager.cpp:55
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr "這個資料夾無法被分享，因為 <filename>%1</filename> 不存在。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:51
+#: samba/filepropertiesplugin/groupmanager.cpp:58
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -328,7 +328,7 @@ msgstr ""
 "這個錯誤來自於您的發行版未正確設定 Samba 共享。您可以自行建立該資料夾來自己修"
 "正它。建立後請關閉並重新開啟這個視窗。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:58
+#: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -337,7 +337,7 @@ msgid ""
 msgstr ""
 "這個資料夾無法被分享，因為您的使用者帳號不在群組 <resource>%1</resource> 中。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:60
+#: samba/filepropertiesplugin/groupmanager.cpp:74
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -349,7 +349,7 @@ msgid ""
 "the system."
 msgstr "您可以將自己加入該群組來自行修正這個問題。加入後請重新啟動系統。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:64
+#: samba/filepropertiesplugin/groupmanager.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "action@button makes user a member of the samba share group"
 #| msgid "Make me a Group Member"
@@ -357,7 +357,7 @@ msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "將我加入群組"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:73
+#: samba/filepropertiesplugin/groupmanager.cpp:85
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
@@ -367,7 +367,7 @@ msgstr ""
 "這個資料夾無法被分享，因為您的使用者帳號沒有寫入 <filename>%1</filename> 的權"
 "限。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:75
+#: samba/filepropertiesplugin/groupmanager.cpp:89
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:status"
 #| msgid ""
@@ -383,7 +383,7 @@ msgstr ""
 "要修正這個問題，請確保 <resource>%1</resource> 群組有 <filename>%2</"
 "filename> 的寫入權限。完成後請關閉並重新開啟本視窗。"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:102
+#: samba/filepropertiesplugin/groupmanager.cpp:120
 #, fuzzy, kde-kuit-format
 #| msgctxt "@label kauth action description %1 is a username %2 a group name"
 #| msgid ""
@@ -397,7 +397,7 @@ msgstr ""
 "將使用者 <resource>%1</resource> 加入群組 <resource>%2</resource> 讓該使用者"
 "能設定 Samba 使用者共享資料夾"
 
-#: samba/filepropertiesplugin/groupmanager.cpp:113
+#: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -746,7 +746,7 @@ msgstr ""
 "額外的使用者管理與密碼管理可以透過 Samba 的 <command>smbpasswd</command>\n"
 "命令列工具進行。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:239
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -754,73 +754,73 @@ msgid ""
 "active at the same time."
 msgstr "您已用盡同時可使用的共享資料夾的最大數量。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "共享資料夾名稱無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "共享資料夾名稱已用於另一個目錄。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "路徑無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "路徑不存在。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "路徑不是目錄。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "路徑是相對的。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "這個路徑不能被分享。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "存取規則無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "某個存取規則的使用者無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "「訪客」存取規則是無效的。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "不允許啟用訪客存取。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:279
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -848,19 +848,19 @@ msgstr ""
 "<para>嘗試停止分享目錄時發生錯誤。共享資料夾未被移除。</para><para>Samba 內部"
 "報告：</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:306
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
 msgstr "移除網路共享資料夾時失敗"
 
-#: samba/filepropertiesplugin/usermanager.cpp:96
+#: samba/filepropertiesplugin/usermanager.cpp:95
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "正在檢查 Samba 使用者 '%1' 是否存在"
 
-#: samba/filepropertiesplugin/usermanager.cpp:119
+#: samba/filepropertiesplugin/usermanager.cpp:116
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"

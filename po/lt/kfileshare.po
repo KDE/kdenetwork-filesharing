@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-05 00:42+0000\n"
-"PO-Revision-Date: 2025-01-24 01:04+0200\n"
+"PO-Revision-Date: 2025-09-06 22:09+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -322,12 +322,7 @@ msgstr ""
 "Šis aplankas negali būti bendrinamas, nes <filename>%1</filename> nėra."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -336,7 +331,7 @@ msgid ""
 msgstr ""
 "Šia klaidą sukėlė tai, kad jūsų platinamasis paketas tinkamai nenustatė "
 "Samba bendrinimo. Galite tai pataisyti sukurdami tą aplanką rankiniu būdu. "
-"Tuomet užverkite šį langą ir atverkite jį iš naujo."
+"Tada užverkite šį langą ir atverkite jį iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:71
 #, kde-kuit-format
@@ -349,23 +344,17 @@ msgstr ""
 "<resource>%1</resource> narė."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:74
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
-"Galite tai pataisyti padarydami naudotoją tos grupės nariu. Tuomet "
+"Galite tai pataisyti padarydami naudotoją tos grupės nariu, o tada "
 "paleiskite sistemą iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Padaryti mane grupės nariu"
@@ -381,12 +370,7 @@ msgstr ""
 "leidimo rašyti į <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:89
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -394,15 +378,11 @@ msgid ""
 "window."
 msgstr ""
 "Galite tai pataisyti įsitikindami, kad grupė <resource>%1</resource> turi "
-"rašymo leidimą, skirtą <filename>%2</filename>. Tuomet užverkite šį langą ir "
+"rašymo leidimą, skirtą <filename>%2</filename>, o tada užverkite šį langą ir "
 "atverkite jį iš naujo."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:120
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
@@ -471,12 +451,9 @@ msgstr ""
 "kai bendrinimo prieigos taisyklės tą leidžia."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "Tam, kad bendrinimas veiktų, šiam aplankui reikia papildomų leidimų"
+msgstr "Tam, kad bendrinimas veiktų, šiam aplankui reikia papildomų leidimų."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -505,7 +482,7 @@ msgstr "Pavadinimas:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "Rodyti adresus"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -527,12 +504,9 @@ msgstr ""
 "problemas arba Samba gali jį atmesti."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Leisti svečius"
+msgstr "Leisti svečiams prisijungti"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -540,13 +514,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Svečių prieiga yra išjungta Samba sisteminės konfigūracijos."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgctxt ""
-#| "@action:button creates a new samba user with the user-specified password"
-#| msgid "Set Password"
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "Nustatyti slaptažodį"
+msgstr "Keisti slaptažodį…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -564,25 +534,19 @@ msgid "No Access"
 msgstr "Nėra prieigos"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Rodyti Samba būsenos prižiūryklę"
+msgstr "Rodyti Samba būseną"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "Keisti „%1“ slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Nustatyti slaptažodį"
+msgstr "Nustatyti „%1“ slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -595,12 +559,9 @@ msgid "Confirm password"
 msgstr "Pakartokite slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Slaptažodžiai privalo sutapti"
+msgstr "Slaptažodžiai privalo sutapti."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -609,21 +570,11 @@ msgid "Set Password"
 msgstr "Nustatyti slaptažodį"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -642,18 +593,13 @@ msgid "Change Permissions"
 msgstr "Keisti leidimus"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
 "Nepavyko pakeisti leidimų, skirtų: %1. Visi leidimų pakeitimai buvo "
-"sugrąžinti į pradinę būseną."
+"sugrąžinti."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -663,17 +609,18 @@ msgstr "Atsisakyti"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Prisijungimo adresai"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"Naudokite bet kurį iš šių adresų norėdami prisijungti prie šio viešinio:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopijuoti į iškarpinę"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -714,12 +661,9 @@ msgid "Report a bug"
 msgstr "Pranešti apie klaidą"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "Norėdami užbaigti pakeitimus, paleiskite kompiuterį iš naujo."
+msgstr "Norėdami taikyti pakeitimus, paleiskite kompiuterį iš naujo."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -756,12 +700,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Sukurti Samba slaptažodį"
+msgstr "Nustatyti Samba slaptažodį"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

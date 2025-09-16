@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-05 00:42+0000\n"
-"PO-Revision-Date: 2025-08-20 19:47+0400\n"
+"PO-Revision-Date: 2025-09-15 13:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -310,12 +310,7 @@ msgid ""
 msgstr "لا يمكن مشاركة هذا المجلد لأن <filename>%1</filename> غير موجود."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -336,11 +331,7 @@ msgstr ""
 "<resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:74
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -350,9 +341,7 @@ msgstr ""
 "تشغيل النظام."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "اجعلني عضوا في المجموعة"
@@ -368,12 +357,7 @@ msgstr ""
 "في <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:89
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -385,11 +369,7 @@ msgstr ""
 "وأعد فتحها."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:120
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
@@ -456,12 +436,9 @@ msgstr ""
 "عندما تسمح قواعد وصول المشاركة بذلك."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "يحتاج هذا المجلد إلى أذون إضافية حتى تعمل المشاركة"
+msgstr "يحتاج هذا المجلد إلى أذون إضافية حتى تعمل المشاركة."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -488,10 +465,9 @@ msgid "Name:"
 msgstr "الاسم:"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
-#, fuzzy
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr "الاسم العنوان"
+msgstr "أظهر العناوين"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -512,10 +488,9 @@ msgstr ""
 "الأسماء أو قد يرفض بواسطة سامبا."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "فقط اسمح ضيف"
+msgstr "اسمح للضيوف بالاتصال"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -523,10 +498,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "عُطل وصول الضيف بواسطة ضبط سامبا الخاص بالنظام."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "&تغيير كلمة المرور..."
+msgstr "غيّر كلمة السر…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -544,26 +518,19 @@ msgid "No Access"
 msgstr "ممنوع الوصول"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "إظهار حالة مراقبة سامبا"
+msgstr "أظهر حالة سامبا"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr "&تغيير كلمة المرور..."
+msgstr "غيّر كلمة السر لـ'%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "ضع كلمة سر"
+msgstr "عيّن كلمة سر '%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -576,12 +543,9 @@ msgid "Confirm password"
 msgstr "أكد كلمة السر"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "يجب أن تتطابق كلمتي السر"
+msgstr "يجب أن تتطابق كلمتي السر."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -590,21 +554,11 @@ msgid "Set Password"
 msgstr "ضع كلمة سر"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغِ"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -623,17 +577,12 @@ msgid "Change Permissions"
 msgstr "غيّر الصّلاحيات"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
-"تعذر تغيير الأذونات لـ: %1. فأرجعت جميع تغييرات الأذونات إلى حالتها الأولية."
+"تعذر تغيير الأذونات لـ: %1. أُعيدت جميع تغييرات الأذونات إلى حالتها السابقة."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -643,17 +592,17 @@ msgstr "ألغِ"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "عناوين الاتصال"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
-msgstr ""
+msgstr "استخدم أيًا من العناوين التالية للاتصال بهذه المشاركة:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "انسخ إلى الحافظة"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -693,12 +642,9 @@ msgid "Report a bug"
 msgstr "أبلغ عن علّة"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "أعد تشغيل الحاسوب لاستكمال التغييرات."
+msgstr "أعد تشغيل الحاسوب لتطبيق التغييرات."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -733,12 +679,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "أنشئ كلمة السر لسامبا"
+msgstr "عيّن كلمة السر لسامبا"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

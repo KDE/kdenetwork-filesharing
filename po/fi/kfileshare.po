@@ -1,16 +1,16 @@
 # translation of kfileshare.po to
 #
 # KDE Finnish translation sprint participants:
+# SPDX-FileCopyrightText: 2016, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # Kim Enkovaara <kim.enkovaara@iki.fi>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2008.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013.
-# Tommi Nieminen <translator@legisign.org>, 2016, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-05 00:42+0000\n"
-"PO-Revision-Date: 2024-12-09 21:16+0200\n"
+"PO-Revision-Date: 2025-09-19 18:19+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -317,12 +317,7 @@ msgstr ""
 "olemassa."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -344,11 +339,7 @@ msgstr ""
 "<resource>%1</resource>. "
 
 #: samba/filepropertiesplugin/groupmanager.cpp:74
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -358,9 +349,7 @@ msgstr ""
 "käynnistämällä järjestelmän uudelleen."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
 msgstr "Lisää minut ryhmän jäseneksi"
@@ -376,12 +365,7 @@ msgstr ""
 "kirjoittaa kansioon <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:89
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -389,22 +373,18 @@ msgid ""
 "window."
 msgstr ""
 "Tämän voi korjata varmistamalla, että ryhmällä <resource>%1</resource> on "
-"kirjoitusoikeudet kansioon <filename>%2</filename>. Sulje sitten ja avaa "
+"kirjoitusoikeus kansioon <filename>%2</filename>. Sulje sitten ja avaa "
 "uudelleen tämä ikkuna."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:120
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
-"Lisätään käyttäjä <resource>%1</resource> ryhmään <resource>%2</resource>, "
-"jotta hän voi määrittää Samban käyttäjäjakoja"
+"Lisätään käyttäjä <resource>%1</resource> ryhmään <resource>%2</resource> "
+"Samban käyttäjäjakojen määrittämiseksi"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
@@ -466,12 +446,9 @@ msgstr ""
 "vaikka jakosääntö sen sallisi."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "Kansio tarvitaan jakamista varten lisäkäyttöoikeuksia"
+msgstr "Kansio vaatii jakamista varten lisäkäyttöoikeuksia."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -498,11 +475,9 @@ msgid "Name:"
 msgstr "Nimi:"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
-#, fuzzy
-#| msgid "Name/Address"
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr "Nimi/Osoite"
+msgstr "Näytä osoitteet"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -523,12 +498,9 @@ msgstr ""
 "hylätä nimen."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Salli vierailijat"
+msgstr "Salli vieraiden yhdistää"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -536,11 +508,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Järjestelmän Samba-asetuksissa vieraskäyttö on poistettu käytöstä."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "&Vaihda salasana..."
+msgstr "Vaihda salasana…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -558,27 +528,19 @@ msgid "No Access"
 msgstr "Ei pääsyä"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Näytä Samban tilavalvonta"
+msgstr "Näytä Samban tila"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr "&Vaihda salasana..."
+msgstr "Vaihda käyttäjän ”%1” salasana"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Aseta salasana"
+msgstr "Aseta käyttäjän ”%1” salasana"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -591,12 +553,9 @@ msgid "Confirm password"
 msgstr "Vahvista salasana"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Salasanojen on täsmättävä"
+msgstr "Salasanojen on täsmättävä."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -605,21 +564,11 @@ msgid "Set Password"
 msgstr "Aseta salasana"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -628,9 +577,9 @@ msgid ""
 "<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
 "\n"
-"<para>Kansio <filename>%1</filename> vaatii jakoa varten lisäkäyttöoikeuksia."
-"</para>\n"
-"<para>Haluatko lisätä nämä käyttöoikeudet nyt?</para><nl/>\n"
+"<para>Kansio <filename>%1</filename> vaatii jakamista varten "
+"lisäkäyttöoikeuksia.</para>\n"
+"<para>Lisätäänkö nämä käyttöoikeudet nyt?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
@@ -638,18 +587,13 @@ msgid "Change Permissions"
 msgstr "Muuta käyttöoikeuksia"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
 "Käyttöoikeuksia ei voitu muuttaa: %1. Kaikki käyttöoikeusmuutokset on "
-"palautettu alkutilaansa."
+"palautettu."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -659,17 +603,17 @@ msgstr "Peru"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Yhteysosoitteet"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
-msgstr ""
+msgstr "Yhdistä tähän jakoon millä tahansa seuraavista osoitteista:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopioi leikepöydälle"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -709,9 +653,6 @@ msgid "Report a bug"
 msgstr "Ilmoita viasta"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
 msgstr "Viimeistele muutokset käynnistämällä tietokone uudelleen."
@@ -749,12 +690,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Luo Samba-salasana"
+msgstr "Aseta Samba-salasana"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-05 00:42+0000\n"
-"PO-Revision-Date: 2025-01-04 15:03+0200\n"
+"PO-Revision-Date: 2025-09-24 15:11+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -316,12 +316,7 @@ msgid ""
 msgstr "Ar šo mapi nevar dalīties, jo <filename>%1</filename> nepastāv."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "This error is caused by your distribution not setting up Samba sharing "
-#| "properly. You can fix it yourself by creating that folder manually. Then "
-#| "close and re-open this window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This error is caused by your distribution not setting up Samba sharing "
@@ -343,11 +338,7 @@ msgstr ""
 "grupai."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:74
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by making your user a member of that group. Then restart "
-#| "the system."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by making your user a member of that group, then restart "
@@ -357,12 +348,10 @@ msgstr ""
 "sistēmu."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:78
-#, fuzzy, kde-format
-#| msgctxt "action@button makes user a member of the samba share group"
-#| msgid "Make me a Group Member"
+#, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
-msgstr "Padarīt manu par grupas locekli"
+msgstr "Padarīt mani par grupas locekli"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:85
 #, kde-kuit-format
@@ -375,12 +364,7 @@ msgstr ""
 "%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:89
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:status"
-#| msgid ""
-#| "You can fix this by ensuring that the <resource>%1</resource> group has "
-#| "write permission for <filename>%2</filename>. Then close and re-open this "
-#| "window."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "You can fix this by ensuring that the <resource>%1</resource> group has "
@@ -392,18 +376,14 @@ msgstr ""
 "un no jauna atveriet šo logu."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:120
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user <resource>%1</resource> to group <resource>%2</resource> so "
-#| "they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
-"Lietotāja <resource>%1</resource> pievienošana grupai <resource>%2</"
-"resource>, lai lietotājs varētu konfigurēt caur „Samba“ kopīgotos resursus"
+"Pievieno lietotāju <resource>%1</resource> grupai <resource>%2</resource>, "
+"lai lietotājs varētu konfigurēt caur „Samba“ kopīgotos resursus"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:131
 #, kde-kuit-format
@@ -465,12 +445,9 @@ msgstr ""
 "ja to atļautu kopīgošanas atļaujas."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:89
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "This folder needs extra permissions for sharing to work"
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr "Šai mapei ir nepieciešamas papildu atļaujas, lai darbotos kopīgošana"
+msgstr "Lai kopīgošana darbotos, šai mapei ir nepieciešamas papildu atļaujas."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:93
 msgctxt "@action:button opens the change permissions page"
@@ -497,11 +474,9 @@ msgid "Name:"
 msgstr "Nosaukums:"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:164
-#, fuzzy
-#| msgid "Name/Address"
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr "Nosaukums/adrese"
+msgstr "Skatīt adreses"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:176
 msgctxt "@label"
@@ -522,11 +497,9 @@ msgstr ""
 "var noraidīt."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:192
-#, fuzzy
-#| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "Atļaut pieslēgties tikai kā vie&sim"
+msgstr "Atļaut pievienoties viesiem"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:205
 msgctxt "@label"
@@ -534,11 +507,9 @@ msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "Viesu piekļuve ir izslēgta sistēmas „Samba“ konfigurācijā."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:288
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@button"
 msgid "Change Password…"
-msgstr "Mainīt par&oli..."
+msgstr "Mainīt paroli…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:302
 msgctxt "@option:radio user can read&write"
@@ -556,27 +527,19 @@ msgid "No Access"
 msgstr "Nav piekļuves"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:330
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr "Rādīt Samba statusa pārraugu"
+msgstr "Skatīt „Samba“ statusu"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgid "Chan&ge Password..."
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr "Mainīt par&oli..."
+msgstr "Mainīt „%1“ paroli"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Iestatīt paroli"
+msgstr "Iestatīt „%1“ paroli"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -589,12 +552,9 @@ msgid "Confirm password"
 msgstr "Apstiprināt paroli"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr "Paroles nesakrīt"
+msgstr "Parolēm ir jāsakrīt."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
@@ -603,21 +563,11 @@ msgid "Set Password"
 msgstr "Iestatīt paroli"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
-#, fuzzy
-#| msgctxt "@action:button cancels permissions change"
-#| msgid "Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Atcelt"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "\n"
-#| "<para>The folder <filename>%1</filename> needs extra permissions for "
-#| "sharing to work.</para>\n"
-#| "<para>Do you want to add these permissions now?</para><nl/>\n"
 msgctxt "@info"
 msgid ""
 "\n"
@@ -626,9 +576,9 @@ msgid ""
 "<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
 "\n"
-"<para>Mapei <filename>%1</filename> nepieciešamas papildu atļaujas, lai "
-"darbotos kopīgošana.</para>\n"
-"<para>Vai vēlaties pievienot šīs atļaujas?</para><nl/>\n"
+"<para>Lai kopīgošanas darbotos, mapei <filename>%1</filename> nepieciešamas "
+"papildu atļaujas.</para>\n"
+"<para>Vai pievienot šīs atļaujas?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
@@ -636,11 +586,6 @@ msgid "Change Permissions"
 msgstr "Mainīt atļaujas"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
-#, fuzzy
-#| msgctxt "@label"
-#| msgid ""
-#| "Could not change permissions for: %1. All permission changes have been "
-#| "reverted to initial state."
 msgctxt "@label"
 msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
@@ -656,17 +601,18 @@ msgstr "Atcelt"
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Savienojuma adreses"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"Lai savienotos ar šo kopīgoto resursu, izmantot jebkuru no šīm adresēm:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopēt starpliktuvē"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@info"
@@ -707,12 +653,9 @@ msgid "Report a bug"
 msgstr "Ziņot par kļūdu"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr "Pārstartējiet datoru, lai pabeigtu izmaiņas."
+msgstr "Lai apstiprinātu izmaiņas, datoru pārstartējiet."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
@@ -748,12 +691,9 @@ msgstr ""
 "</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr "Izveidot „Samba“ paroli"
+msgstr "Iestatīt „Samba“ paroli"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79

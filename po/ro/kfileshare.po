@@ -1,13 +1,13 @@
 # Traducerea kfileshare.po în Română
+# SPDX-FileCopyrightText: 2008, 2009, 2020, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
 # This file is distributed under the same license as the kfileshare package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-25 00:40+0000\n"
-"PO-Revision-Date: 2022-08-14 16:46+0100\n"
+"PO-Revision-Date: 2025-09-27 12:30+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: samba/aclproperties/plugin.cpp:59
 #, kde-format
@@ -97,6 +97,8 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Acest element de permisiune a fost moștenit de la un container-părinte și "
+"poate fi modificat doar pe acel părinte (cum ar fi un director superior)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
@@ -111,49 +113,47 @@ msgstr "Se aplică la:"
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Traversează dosar / execută fișier"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Enumeră dosar / citește date"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Citește atribute"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "Citește atribute extinse"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Creează fișiere / scrie date"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Creează dosare / adaugă date"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
-#, fuzzy
-#| msgid "Writeable"
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr "Inscriptibil"
+msgstr "Scrie atribute"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "Scrie atribute extinse"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Șterge subdosare și fișiere"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
@@ -161,25 +161,19 @@ msgid "Delete"
 msgstr "Șterge"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Required Permissions"
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr "Permisiuni necesare"
+msgstr "Permisiuni de citire"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
-#, fuzzy
-#| msgctxt "@action:button changes permissions"
-#| msgid "Change Permissions"
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr "Schimbă permisiunile"
+msgstr "Permisiuni de modificare"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Ia în proprietate"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -187,11 +181,13 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Aplică aceste permisiuni numai obiectelor și/sau containerelor din acest "
+"container"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Înregistrări de control al accesului"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
@@ -217,7 +213,7 @@ msgstr "Nicio permisiune găsită"
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
-msgstr ""
+msgstr "Probabil nu sunt permisiuni SMB/Windows/avansate pe acest fișier."
 
 #: samba/filepropertiesplugin/authhelper.cpp:47
 #, kde-kuit-format
@@ -226,21 +222,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Numele de utilizator <resource>%1</resource> nu e valid pentru utilizatori "
+"Samba; nu i se poate verifica existența."
 
 #: samba/filepropertiesplugin/authhelper.cpp:66
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Comanda <command>%1 %2</command> a eșuat:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/authhelper.cpp:80
 #: samba/filepropertiesplugin/authhelper.cpp:126
-#, fuzzy, kde-kuit-format
-#| msgid "Could not save settings."
+#, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr "Imposibil de salvat configurările."
+msgstr "Nu s-a putut rezolva numele utilizatorului apelant."
 
 #: samba/filepropertiesplugin/authhelper.cpp:86
 #, kde-format
@@ -249,6 +246,8 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Din motive de securitate, crearea utilizatorilor Samba cu parole goale nu e "
+"permisă."
 
 #: samba/filepropertiesplugin/authhelper.cpp:131
 #, kde-kuit-format
@@ -257,6 +256,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> nu e o denumire de grup validă; utilizatorul "
+"<resource>%2</resource> nu poate fi făcut membru al acestuia."
 
 #: samba/filepropertiesplugin/authhelper.cpp:139
 #, kde-kuit-format
@@ -269,12 +270,16 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Din motive de securitate, utilizatorul <resource>%1</resource> nu poate fi "
+"făcut membru al grupului <resource>%2</resource>.\n"
+"Denumirea grupului nu e sigură; denumirile de grup valide nu includ textul "
+"<resource>admin</resource> sau <resource>root</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:36
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Instalarea Samba pare a fi stricată."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:40
 #, kde-kuit-format
@@ -284,6 +289,10 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"Această eroare e cauzată de faptul că distribuția dumneavoastră nu a "
+"configurat partajarea Samba corect. Raportați un defect distribuției sau "
+"verificați documentația acesteia referitoare la configurarea partajării "
+"Samba."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -294,6 +303,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"Această eroare e cauzată de faptul că distribuția dumneavoastră nu a "
+"configurat partajarea Samba corect. Raportați un defect distribuției sau "
+"verificați documentația acesteia referitoare la configurarea partajării "
+"Samba. Eroare:<nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:49
 #, kde-kuit-format
@@ -301,6 +314,7 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"Acest dosar nu poate fi partajat deoarece <filename>%1</filename> nu există."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:51
 #, kde-kuit-format
@@ -310,20 +324,19 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually. Then "
 "close and re-open this window."
 msgstr ""
+"Această eroare e cauzată de faptul că distribuția dumneavoastră nu a "
+"configurat partajarea Samba corect. O puteți remedia creând acel dosar "
+"manual, apoi redeschizând această fereastră."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:58
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-kuit-format
 msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
-"Pentru a gestiona partajări de utilizator Samba, trebuie să fiți membru al "
-"grupului <resource>%1</resource>."
+"Acest dosar nu poate fi partajat deoarece utilizatorul dumneavoastră nu e "
+"membru al grupului <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:60
 #, kde-kuit-format
@@ -332,6 +345,8 @@ msgid ""
 "You can fix this by making your user a member of that group. Then restart "
 "the system."
 msgstr ""
+"Puteți remedia aceasta făcându-vă utilizatorul membru al acelui grup, apoi "
+"repornind sistemul."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:64
 #, kde-format
@@ -346,6 +361,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"Acest dosar nu poate fi partajat deoarece utilizatorul dumneavoastră nu are "
+"permisiunea de a scrie în <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -355,33 +372,29 @@ msgid ""
 "write permission for <filename>%2</filename>. Then close and re-open this "
 "window."
 msgstr ""
+"Puteți remedia aceasta asigurându-vă că grupul <resource>%1</resource> are "
+"permisiuni de scriere pentru <filename>%2</filename>, apoi redeschizând "
+"această fereastră."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:102
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label kauth action description %1 is a username %2 a group name"
-#| msgid ""
-#| "Adding user '%1' to group '%2' so they may configure Samba user shares"
+#, kde-kuit-format
 msgctxt "@label kauth action description %1 is a username %2 a group name"
 msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "may configure Samba user shares"
 msgstr ""
-"Se adaugă utilizatorul „%1” la grupul „%2” ca să poată configura partajări "
-"de utilizator Samba"
+"Se adaugă utilizatorul <resource>%1</resource> la grupul <resource>%2</"
+"resource> ca să poată configura partajări de utilizator Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:113
-#, fuzzy, kde-kuit-format
-#| msgctxt "@label"
-#| msgid ""
-#| "To manage Samba user shares you need to be member of the <resource>%1</"
-#| "resource> group."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
-"Pentru a gestiona partajări de utilizator Samba, trebuie să fiți membru al "
-"grupului <resource>%1</resource>."
+"Utilizatorul <resource>%1</resource> nu a putut fi făcut membru al grupului "
+"<resource>%2</resource>"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -572,14 +585,13 @@ msgid "Cancel"
 msgstr "Renunță"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:33
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
-msgstr "Samba trebuie instalat înainte să puteți partaja dosare."
+msgstr ""
+"Serviciul de partajare a fișierelor <application>Samba</application> trebuie "
+"instalat înainte de a putea să partajați dosare."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:36
 msgctxt "@button"
@@ -594,7 +606,7 @@ msgstr "Instalarea pachetului Samba a eșuat."
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:19
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "Serviciu de partajare a fișierelor indisponibil"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:20
 msgid ""
@@ -602,10 +614,13 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"Asigurați-vă că serviciul Samba e activat ți rulează.\n"
+"Dacă nu l-ați dezactivat manual, poate raportați un defect distribuției "
+"dumneavoastră."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:24
 msgid "Report a bug"
-msgstr ""
+msgstr "Raportează defect"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:17
 msgctxt "@label"

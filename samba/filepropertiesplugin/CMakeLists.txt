@@ -31,11 +31,4 @@ endif()
 
 install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/propertiesdialog)
 
-# kauth
-
-kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)
-add_executable(authhelper authhelper.cpp)
-target_link_libraries(authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n)
-
-kauth_install_helper_files(authhelper org.kde.filesharing.samba root)
-install(TARGETS authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+add_subdirectory(kauth)

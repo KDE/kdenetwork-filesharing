@@ -44,6 +44,10 @@
 #include "sambainstaller.h"
 #endif
 
+#ifdef USE_SYSTEMD
+#include "servicehelper.h"
+#endif
+
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
 using namespace Qt::StringLiterals;
@@ -91,6 +95,25 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
 
 #ifdef SAMBA_INSTALL
     qmlRegisterType<SambaInstaller>("org.kde.filesharing.samba", 1, 0, "Installer");
+#endif
+#ifdef USE_SYSTEMD
+    qmlRegisterType<ServiceHelper>("org.kde.filesharing.samba", 1, 0, "ServiceHelper");
+    m_serviceHelper = new ServiceHelper(this);
+
+    [](SambaUserSharePlugin *self) -> QCoro::Task<void> {
+        const bool ready = co_await ServiceHelper::isServiceReady();
+        self->setServiceReady(ready);
+        self->setCheckingService(false);
+    }(this);
+
+    connect(m_serviceHelper, &ServiceHelper::enablingChanged, this, [this]() {
+        if (!m_serviceHelper->isEnabling() && !m_serviceHelper->hasFailed()) {
+            setServiceReady(true);
+        }
+    });
+#else
+    m_serviceReady = true;
+    m_checkingService = false;
 #endif
     qmlRegisterType<GroupManager>("org.kde.filesharing.samba", 1, 0, "GroupManager");
     // Need access to the column enum, so register this as uncreatable.
@@ -319,6 +342,34 @@ void SambaUserSharePlugin::setReady(bool ready)
 {
     m_ready = ready;
     Q_EMIT readyChanged();
+}
+
+bool SambaUserSharePlugin::isCheckingService() const
+{
+    return m_checkingService;
+}
+
+bool SambaUserSharePlugin::serviceReady() const
+{
+    return m_serviceReady;
+}
+
+void SambaUserSharePlugin::setCheckingService(bool checking)
+{
+    if (m_checkingService == checking) {
+        return;
+    }
+    m_checkingService = checking;
+    Q_EMIT checkingServiceChanged();
+}
+
+void SambaUserSharePlugin::setServiceReady(bool ready)
+{
+    if (m_serviceReady == ready) {
+        return;
+    }
+    m_serviceReady = ready;
+    Q_EMIT serviceReadyChanged();
 }
 
 void SambaUserSharePlugin::reboot()

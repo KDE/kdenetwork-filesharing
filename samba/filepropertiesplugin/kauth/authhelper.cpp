@@ -6,12 +6,42 @@
 #include "authhelper.h"
 #include <KLocalizedString>
 #include <KUser>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QProcess>
 #include <QRegularExpression>
-#include <kauth/helpersupport.h>
+
+#include <KAuth/HelperSupport>
+
+#ifdef USE_SYSTEMD
+#include "servicedefinitions.h"
+#include "systemd_manager.h"
+#endif
 
 namespace
 {
+#ifdef USE_SYSTEMD
+static QString findAvailableService()
+{
+    // The smb service can be named "smbd.service" on some systems, e.g. Debian.
+    // Ensure the correct service name is used.
+    OrgFreedesktopSystemd1ManagerInterface manager(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, QDBusConnection::systemBus());
+    auto candidates = {QStringLiteral("smb.service"), QStringLiteral("smbd.service")};
+
+    for (const QString &candidate : candidates) {
+        // If this call doesn't return an error, it means the unit file exists, even if it's disabled.
+        auto reply = manager.GetUnitFileState(candidate);
+        reply.waitForFinished();
+
+        if (!reply.isError()) {
+            return candidate;
+        }
+    }
+    return QString();
+}
+#endif
+
 bool isValidUserName(const QString &name)
 {
     // https://systemd.io/USER_NAMES/
@@ -170,6 +200,60 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
         return reply;
     }
 
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::startservice(const QVariantMap &args)
+{
+    Q_UNUSED(args);
+#ifdef USE_SYSTEMD
+    QString smbServiceName = findAvailableService();
+
+    if (smbServiceName.isEmpty()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(i18nc("@info", "Could not find a valid systemd service file for the Samba file sharing service."));
+        return kauthReply;
+    }
+
+    OrgFreedesktopSystemd1ManagerInterface manager(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, QDBusConnection::systemBus());
+    auto startReply = manager.StartUnit(smbServiceName, QStringLiteral("replace"));
+    startReply.waitForFinished();
+
+    if (startReply.isError()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(
+            xi18nc("@info", "Could not start the <command>%1</command> systemd service: %2", smbServiceName, startReply.error().message()));
+        return kauthReply;
+    }
+#endif
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::enableservice(const QVariantMap &args)
+{
+    Q_UNUSED(args);
+#ifdef USE_SYSTEMD
+    const QString smbServiceName = findAvailableService();
+
+    if (smbServiceName.isEmpty()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(i18nc("@info", "Could not find a valid systemd service file for the Samba file sharing service."));
+        return kauthReply;
+    }
+
+    OrgFreedesktopSystemd1ManagerInterface manager(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, QDBusConnection::systemBus());
+    auto enableReply = manager.EnableUnitFiles(QStringList{smbServiceName},
+                                               false, // enable persistently in /etc
+                                               true); // overwrite conflicting symlinks
+    enableReply.waitForFinished();
+
+    if (enableReply.isError()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(
+            xi18nc("@info", "Could not enable the <command>%1</command> systemd service: %2", smbServiceName, enableReply.error().message()));
+        return kauthReply;
+    }
+#endif
     return ActionReply::SuccessReply();
 }
 

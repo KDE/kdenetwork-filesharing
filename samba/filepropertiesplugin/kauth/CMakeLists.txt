@@ -2,7 +2,11 @@
 # SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 
 add_executable(sambausershareplugin_authhelper authhelper.cpp)
-target_link_libraries(sambausershareplugin_authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n)
+target_link_libraries(sambausershareplugin_authhelper KF6::AuthCore KF6::ConfigCore KF6::I18n Qt::DBus)
+if (USE_SYSTEMD)
+    target_link_libraries(sambausershareplugin_authhelper systemdmanagerlib)
+endif()
+
 install(TARGETS sambausershareplugin_authhelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
 kauth_install_actions(org.kde.filesharing.samba org.kde.filesharing.samba.actions)

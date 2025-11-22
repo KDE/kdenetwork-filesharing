@@ -285,3 +285,15 @@ Description[tr]=Samba kullanıcı paylaşımlarını düzenlemek için kullanıc
 Description[uk]=Додавання користувача до спільної групи користувачів Samba для редагування спільних ресурсів користувачів Samba
 Description[zh_CN]=正在添加用户到 Samba 的共享用户组以便编辑 Samba 用户共享
 Description[zh_TW]=正在將使用者加入 Samba 的使用者分享 (Usershare) 群組來編輯 Samba 使用者分享
+
+[org.kde.filesharing.samba.startservice]
+Policy=auth_admin
+PolicyInactive=auth_admin
+Name=Start Samba
+Description=Start the Samba file sharing service
+
+[org.kde.filesharing.samba.enableservice]
+Policy=auth_admin
+PolicyInactive=auth_admin
+Name=Enable Samba
+Description=Enable the Samba file sharing service

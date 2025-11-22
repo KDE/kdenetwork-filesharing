@@ -43,7 +43,7 @@ set_package_properties(PackageKitQt6
     PURPOSE "Needed to automatically install the samba package."
 )
 
-find_package(QCoro6 REQUIRED COMPONENTS Core)
+find_package(QCoro6 REQUIRED COMPONENTS Core DBus)
 
 find_package(net)
 set_package_properties(net PROPERTIES
@@ -70,6 +70,13 @@ if(WIN32)
     set(CMAKE_REQUIRED_LIBRARIES ${KDEWIN32_LIBRARIES})
     set(CMAKE_REQUIRED_INCLUDES  ${KDEWIN32_INCLUDES})
 endif(WIN32)
+
+option(USE_SYSTEMD "Use systemd for automatically enabling the Samba service." ON)
+if(USE_SYSTEMD)
+    add_definitions(-DUSE_SYSTEMD)
+    find_package(QCoro6 REQUIRED COMPONENTS DBus)
+endif()
+add_feature_info("Use Systemd" USE_SYSTEMD "Automatically enable the Samba service with systemd.")
 
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME \"samba\" CACHE STRING "Single package or comma-separated list of packages needed for a functional Samba stack on this distribution.")

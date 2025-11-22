@@ -29,7 +29,7 @@ QQC2.StackView {
     initialItem: Item {
         QQC2.BusyIndicator {
             anchors.centerIn: parent
-            running: !sambaPlugin.ready || !groupManager.ready
+            running: !sambaPlugin.ready || !groupManager.ready || sambaPlugin.checkingService
 
             onRunningChanged: {
                 if (running) {
@@ -42,6 +42,9 @@ QQC2.StackView {
                 }
                 if (!groupManager.member) {
                     pendingStack.push("GroupPage.qml")
+                }
+                if (!sambaPlugin.serviceReady) {
+                    pendingStack.push("ServicePage.qml")
                 }
                 if (!sambaPlugin.isSambaInstalled()) {
                     // NB: the plugin may be built without installer support!

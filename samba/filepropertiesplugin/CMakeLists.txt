@@ -29,6 +29,10 @@ if(SAMBA_INSTALL)
     target_link_libraries(sambausershareplugin PK::packagekitqt6)
 endif()
 
+if(USE_SYSTEMD)
+    target_sources(sambausershareplugin PRIVATE servicehelper.cpp)
+endif()
+
 install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/propertiesdialog)
 
 add_subdirectory(kauth)

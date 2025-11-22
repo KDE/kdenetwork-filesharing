@@ -44,6 +44,10 @@
 #include "sambainstaller.h"
 #endif
 
+#ifdef USE_SYSTEMD
+#include "servicehelper.h"
+#endif
+
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
@@ -89,6 +93,9 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
 
 #ifdef SAMBA_INSTALL
     qmlRegisterType<SambaInstaller>("org.kde.filesharing.samba", 1, 0, "Installer");
+#endif
+#ifdef USE_SYSTEMD
+    qmlRegisterType<ServiceHelper>("org.kde.filesharing.samba", 1, 0, "ServiceHelper");
 #endif
     qmlRegisterType<GroupManager>("org.kde.filesharing.samba", 1, 0, "GroupManager");
     // Need access to the column enum, so register this as uncreatable.
@@ -184,6 +191,15 @@ void SambaUserSharePlugin::initAddressList()
 bool SambaUserSharePlugin::isSambaInstalled()
 {
     return !QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty();
+}
+
+bool SambaUserSharePlugin::isSambaServiceReady()
+{
+#ifdef USE_SYSTEMD
+    return ServiceHelper::isServiceReady();
+#else
+    return true;
+#endif
 }
 
 void SambaUserSharePlugin::showSambaStatus()

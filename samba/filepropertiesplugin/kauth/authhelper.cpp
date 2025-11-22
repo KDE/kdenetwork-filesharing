@@ -6,9 +6,41 @@
 #include "authhelper.h"
 #include <KLocalizedString>
 #include <KUser>
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QProcess>
 #include <QRegularExpression>
-#include <kauth/helpersupport.h>
+
+#include <KAuth/HelperSupport>
+
+#ifdef USE_SYSTEMD
+static const QString DBUS_SYSTEMD_SERVICE = QStringLiteral("org.freedesktop.systemd1");
+static const QString DBUS_SYSTEMD_PATH = QStringLiteral("/org/freedesktop/systemd1");
+static const QString DBUS_SYSTEMD_MANAGER_INTERFACE = QStringLiteral("org.freedesktop.systemd1.Manager");
+
+static QString findAvailableService()
+{
+    // The smb service can be named "smbd.service" on some systems, e.g. Debian.
+    // Ensure the correct service name is used.
+    const QStringList candidates = {QStringLiteral("smb.service"), QStringLiteral("smbd.service")};
+    for (const QString &candidate : candidates) {
+        // If this call doesn't return an error, it means the unit file exists, even if it's disabled.
+        QDBusMessage dbusMessage =
+            QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, DBUS_SYSTEMD_MANAGER_INTERFACE, QStringLiteral("GetUnitFileState"));
+
+        dbusMessage << candidate;
+
+        QDBusMessage dbusReply = QDBusConnection::systemBus().call(dbusMessage);
+
+        if (dbusReply.type() != QDBusMessage::ErrorMessage) {
+            return candidate;
+        }
+    }
+
+    return QString();
+}
+#endif
 
 namespace
 {
@@ -170,6 +202,78 @@ ActionReply AuthHelper::addtogroup(const QVariantMap &args)
         return reply;
     }
 
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::startservice(const QVariantMap &args)
+{
+    Q_UNUSED(args);
+#ifdef USE_SYSTEMD
+    QString smbServiceName = findAvailableService();
+
+    if (smbServiceName.isEmpty()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(i18nc("@info", "Could not find a valid systemd service file for the Samba file sharing service."));
+        return kauthReply;
+    }
+
+    QDBusMessage startMessage =
+        QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, DBUS_SYSTEMD_MANAGER_INTERFACE, QStringLiteral("StartUnit"));
+
+    startMessage << smbServiceName << QStringLiteral("replace");
+
+    QDBusMessage startReply = QDBusConnection::systemBus().call(startMessage);
+
+    if (startReply.type() == QDBusMessage::ErrorMessage) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(
+            xi18nc("@info", "Could not start the <command>%1</command> systemd service: %2", smbServiceName, startReply.errorMessage()));
+        return kauthReply;
+    }
+
+    QDBusMessage enableMessage =
+        QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, DBUS_SYSTEMD_MANAGER_INTERFACE, QStringLiteral("EnableUnitFiles"));
+
+    enableMessage << QStringList{smbServiceName} << false << true;
+
+    QDBusMessage enableReply = QDBusConnection::systemBus().call(enableMessage);
+
+    if (enableReply.type() == QDBusMessage::ErrorMessage) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(
+            xi18nc("@info", "Could not enable the <command>%1</command> systemd service: %2", smbServiceName, enableReply.errorMessage()));
+        return kauthReply;
+    }
+#endif
+    return ActionReply::SuccessReply();
+}
+
+ActionReply AuthHelper::enableservice(const QVariantMap &args)
+{
+    Q_UNUSED(args);
+#ifdef USE_SYSTEMD
+    const QString smbServiceName = findAvailableService();
+
+    if (smbServiceName.isEmpty()) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(i18nc("@info", "Could not find a valid systemd service file for the Samba file sharing service."));
+        return kauthReply;
+    }
+
+    QDBusMessage enableMessage =
+        QDBusMessage::createMethodCall(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, DBUS_SYSTEMD_MANAGER_INTERFACE, QStringLiteral("EnableUnitFiles"));
+
+    enableMessage << QStringList{smbServiceName} << false << true;
+
+    QDBusMessage enableReply = QDBusConnection::systemBus().call(enableMessage);
+
+    if (enableReply.type() == QDBusMessage::ErrorMessage) {
+        auto kauthReply = ActionReply::HelperErrorReply();
+        kauthReply.setErrorDescription(
+            xi18nc("@info", "Could not enable the <command>%1</command> systemd service: %2", smbServiceName, enableReply.errorMessage()));
+        return kauthReply;
+    }
+#endif
     return ActionReply::SuccessReply();
 }
 

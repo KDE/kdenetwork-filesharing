@@ -71,6 +71,12 @@ if(WIN32)
     set(CMAKE_REQUIRED_INCLUDES  ${KDEWIN32_INCLUDES})
 endif(WIN32)
 
+option(USE_SYSTEMD "Use systemd for automatically enabling the Samba service." ON)
+if(USE_SYSTEMD)
+    add_definitions(-DUSE_SYSTEMD)
+endif()
+add_feature_info("Use Systemd" SAMBA_INSTALL "Automatically enable the Samba service with systemd.")
+
 option(SAMBA_INSTALL "Offer to install Samba for file sharing with PackageKit if it is not already installed, use -DSAMBA_INSTALL=off to disable, use -DSAMBA_PACKAGE_NAME= to set package name." ON)
 set(SAMBA_PACKAGE_NAME \"samba\" CACHE STRING "Single package or comma-separated list of packages needed for a functional Samba stack on this distribution.")
 

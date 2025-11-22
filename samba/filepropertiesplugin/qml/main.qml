@@ -43,6 +43,9 @@ QQC2.StackView {
                 if (!groupManager.member) {
                     pendingStack.push("GroupPage.qml")
                 }
+                if (!sambaPlugin.isSambaServiceReady()) {
+                    pendingStack.push("ServicePage.qml")
+                }
                 if (!sambaPlugin.isSambaInstalled()) {
                     // NB: the plugin may be built without installer support!
                     if (Samba.Installer === undefined) {

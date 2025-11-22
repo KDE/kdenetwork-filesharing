@@ -19,6 +19,7 @@
 
 #include "model.h"
 #include "permissionshelper.h"
+#include "servicehelper.h"
 #include "usermanager.h"
 #include <memory>
 
@@ -147,6 +148,8 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_OBJECT
     Q_PROPERTY(bool dirty READ isDirty WRITE setDirty NOTIFY changed) // So qml can mark dirty
     Q_PROPERTY(bool ready READ isReady NOTIFY readyChanged) // intentionally not writable from qml
+    Q_PROPERTY(bool checkingService READ isCheckingService NOTIFY checkingServiceChanged)
+    Q_PROPERTY(bool serviceReady READ serviceReady NOTIFY serviceReadyChanged)
     Q_PROPERTY(QStringList addressList MEMBER m_addressList NOTIFY addressListChanged)
     // Expose instance-singleton members so QML may access them.
     // They aren't application-wide singletons and also cannot easily be ctor'd from QML.
@@ -154,6 +157,7 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_PROPERTY(UserPermissionModel *userPermissionModel MEMBER m_model CONSTANT)
     Q_PROPERTY(ShareContext *shareContext MEMBER m_context CONSTANT)
     Q_PROPERTY(PermissionsHelper *permissionsHelper MEMBER m_permissionsHelper CONSTANT)
+    Q_PROPERTY(ServiceHelper *serviceHelper MEMBER m_serviceHelper CONSTANT)
     Q_PROPERTY(QString bugReportUrl READ bugReportUrl CONSTANT)
 
 public:
@@ -167,15 +171,21 @@ public:
     Q_INVOKABLE static void copyAddressToClipboard(const QString &address);
 
     bool isReady() const;
+    bool isCheckingService() const;
+    bool serviceReady() const;
 
     QString bugReportUrl() const;
 
 Q_SIGNALS:
     void readyChanged();
     void addressListChanged();
+    void checkingServiceChanged();
+    void serviceReadyChanged();
 
 private:
     void setReady(bool ready);
+    void setCheckingService(bool checking);
+    void setServiceReady(bool ready);
     void reportAdd(KSambaShareData::UserShareError error);
     void reportRemove(KSambaShareData::UserShareError error);
 
@@ -187,7 +197,10 @@ private:
     UserPermissionModel *m_model = nullptr;
     UserManager *m_userManager = nullptr;
     PermissionsHelper *m_permissionsHelper = nullptr;
+    ServiceHelper *m_serviceHelper = nullptr;
     QStringList m_addressList;
+    bool m_checkingService = true;
+    bool m_serviceReady = false;
     bool m_ready = false;
     // Hold the qquickwidget so it gets destroyed with us. Otherwise we'd have bogus reference errors
     // as the Plugin instance is exposed as contextProperty to qml but the widget is parented to the PropertiesDialog

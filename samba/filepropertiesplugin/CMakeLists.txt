@@ -29,6 +29,25 @@ if(SAMBA_INSTALL)
     target_link_libraries(sambausershareplugin PK::packagekitqt6)
 endif()
 
+if(USE_SYSTEMD)
+    target_sources(sambausershareplugin PRIVATE servicehelper.cpp)
+    target_link_libraries(sambausershareplugin QCoro6::DBus)
+
+    qt_add_dbus_interface(
+        SYSTEMD_MANAGER_SRCS
+        ${CMAKE_CURRENT_SOURCE_DIR}/org.freedesktop.systemd1.Manager.xml
+        systemd_manager
+    )
+
+    add_library(systemdmanagerlib STATIC ${SYSTEMD_MANAGER_SRCS} servicedefinitions.h)
+
+    set_property(TARGET systemdmanagerlib PROPERTY POSITION_INDEPENDENT_CODE ON)
+
+    target_include_directories(systemdmanagerlib PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
+    target_link_libraries(systemdmanagerlib PUBLIC Qt::DBus)
+    target_link_libraries(sambausershareplugin systemdmanagerlib)
+endif()
+
 install(TARGETS sambausershareplugin DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/propertiesdialog)
 
 add_subdirectory(kauth)

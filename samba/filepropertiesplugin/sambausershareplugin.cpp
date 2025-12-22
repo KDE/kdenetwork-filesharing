@@ -46,6 +46,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(SambaUserSharePlugin, "sambausershareplugin.json")
 
+using namespace Qt::StringLiterals;
+
 SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
     : KPropertiesDialogPlugin(parent)
     , m_url(properties->item().mostLocalUrl().toLocalFile())
@@ -183,7 +185,11 @@ void SambaUserSharePlugin::initAddressList()
 
 bool SambaUserSharePlugin::isSambaInstalled()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("smbd")).isEmpty();
+    if (QStandardPaths::findExecutable(u"smbd"_s).isEmpty()
+        && QStandardPaths::findExecutable(u"smbd"_s, {u"/usr/sbin/"_s, u"/usr/local/sbin/"_s}).isEmpty()) {
+        return false;
+    }
+    return true;
 }
 
 void SambaUserSharePlugin::showSambaStatus()

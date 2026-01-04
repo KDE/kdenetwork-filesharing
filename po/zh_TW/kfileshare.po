@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-01-04 00:44+0000\n"
 "PO-Revision-Date: 2025-09-05 17:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -686,7 +686,7 @@ msgstr ""
 "額外的使用者管理與密碼管理可以透過 Samba 的 <command>smbpasswd</command>\n"
 "命令列工具進行。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -694,73 +694,73 @@ msgid ""
 "active at the same time."
 msgstr "您已用盡同時可使用的共享資料夾的最大數量。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "共享資料夾名稱無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "共享資料夾名稱已用於另一個目錄。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "路徑無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "路徑不存在。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "路徑不是目錄。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "路徑是相對的。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "這個路徑不能被分享。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "存取規則無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:265
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "某個存取規則的使用者無效。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:267
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "「訪客」存取規則是無效的。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:269
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "不允許啟用訪客存取。"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:287
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -771,13 +771,13 @@ msgstr ""
 "<para>嘗試分享目錄時發生錯誤。共享資料夾未被建立。</para><para>Samba 內部報"
 "告：</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:286
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:292
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "建立網路共享資料夾時失敗"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:299
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:305
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -788,7 +788,7 @@ msgstr ""
 "<para>嘗試停止分享目錄時發生錯誤。共享資料夾未被移除。</para><para>Samba 內部"
 "報告：</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:310
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-01-04 00:44+0000\n"
 "PO-Revision-Date: 2025-12-23 19:23+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -729,7 +729,7 @@ msgstr ""
 "Дополнительную настройку записей пользователей и паролей возможно выполнить\n"
 "с помощью программы командной строки <command>smbpasswd</command>."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:241
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -739,73 +739,73 @@ msgstr ""
 "Достигнут предел максимального количества общих каталогов, которые могут "
 "быть активны одновременно."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:243
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "Некорректное имя ресурса."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:245
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Имя ресурса уже используется для другого каталога."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Неверный путь."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Путь не существует."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Путь не является каталогом."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Это относительный путь."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Для этого пути нельзя установить общий доступ."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Некорректное правило доступа."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:265
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "В правиле доступа указан некорректный пользователь."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:267
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Некорректное правило гостевого доступа."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:269
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Включение гостевого доступа запрещено."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:281
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:287
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -817,13 +817,13 @@ msgstr ""
 "ресурс не создан.</para><para>Сведения внутренних служб Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:286
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:292
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Ошибка создания сетевого ресурса"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:299
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:305
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -835,7 +835,7 @@ msgstr ""
 "удалён.</para><para>Сведения внутренних служб Samba:</para><message>%1</"
 "message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:304
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:310
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"

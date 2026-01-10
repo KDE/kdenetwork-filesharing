@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16)
 project(filesharing)
 
 set(QT_MIN_VERSION "6.6.0")

@@ -1,7 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 import QtQuick
@@ -29,7 +29,7 @@ Kirigami.ScrollablePage {
             changePassword.busy = false
             if (userCreated) {
                 close()
-                stackReplace(pendingStack.pop())
+                stack.popPageAndReinit()
             }
         }
 

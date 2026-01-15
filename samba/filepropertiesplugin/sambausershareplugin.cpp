@@ -5,13 +5,16 @@
     SPDX-FileCopyrightText: 2015-2020 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2019 Nate Graham <nate@kde.org>
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 #include "sambausershareplugin.h"
 
 #include <KLocalizedString>
 #include <QClipboard>
+#include <QCoroDBusPendingReply>
+#include <QCoroSignal>
+#include <QCoroTask>
 #include <QDBusConnection>
 #include <QDBusInterface>
 #include <QDBusPendingCallWatcher>
@@ -98,22 +101,6 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
 #endif
 #ifdef USE_SYSTEMD
     qmlRegisterType<ServiceHelper>("org.kde.filesharing.samba", 1, 0, "ServiceHelper");
-    m_serviceHelper = new ServiceHelper(this);
-
-    [](SambaUserSharePlugin *self) -> QCoro::Task<void> {
-        const bool ready = co_await ServiceHelper::isServiceReady();
-        self->setServiceReady(ready);
-        self->setCheckingService(false);
-    }(this);
-
-    connect(m_serviceHelper, &ServiceHelper::enablingChanged, this, [this]() {
-        if (!m_serviceHelper->isEnabling() && !m_serviceHelper->hasFailed()) {
-            setServiceReady(true);
-        }
-    });
-#else
-    m_serviceReady = true;
-    m_checkingService = false;
 #endif
     qmlRegisterType<GroupManager>("org.kde.filesharing.samba", 1, 0, "GroupManager");
     // Need access to the column enum, so register this as uncreatable.
@@ -152,28 +139,89 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
         QTimer::singleShot(100, properties, &KPropertiesDialog::showFileSharingPage);
     }
 
-    QMetaObject::invokeMethod(this, &SambaUserSharePlugin::initUserManager, Qt::QueuedConnection);
-    QMetaObject::invokeMethod(this, &SambaUserSharePlugin::initAddressList, Qt::QueuedConnection);
-}
-
-void SambaUserSharePlugin::initUserManager()
-{
-    connect(m_userManager, &UserManager::loaded, this, [this] {
-        m_permissionsHelper->reload();
-        setReady(true);
+    connect(this, &SambaUserSharePlugin::reinitialize, this, [this]() {
+        initializeChain();
     });
-    m_userManager->load();
+
+    // Start the initialization chain asynchronously (once the event loop starts).
+    // This eventually sets the plugin as ready.
+    QMetaObject::invokeMethod(
+        this,
+        [this]() {
+            initializeChain();
+        },
+        Qt::QueuedConnection);
 }
 
-void SambaUserSharePlugin::initAddressList()
+QCoro::Task<void> SambaUserSharePlugin::initializeChain()
+{
+    if (isReady()) {
+        co_return;
+    }
+
+    if (!isSambaInstalled()) {
+#ifdef SAMBA_INSTALL
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/InstallPage.qml"_s);
+#else
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/MissingSambaPage.qml"_s);
+#endif
+        co_return;
+    }
+
+#ifdef USE_SYSTEMD
+    if (!m_serviceHelper) {
+        m_serviceHelper = new ServiceHelper(this);
+    }
+    const bool serviceReady = co_await ServiceHelper::isServiceReady();
+
+    if (!serviceReady) {
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/ServicePage.qml"_s);
+        co_return;
+    }
+#endif
+
+    if (!m_groupManager) {
+        m_groupManager = new GroupManager(this);
+    }
+
+    if (!m_groupManager->isReady()) {
+        co_await qCoro(m_groupManager, &GroupManager::isReadyChanged);
+    }
+
+    if (!m_groupManager->errorExplanation().isEmpty()) {
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/GroupPage.qml"_s);
+        co_return;
+    }
+
+    m_userManager->load();
+    co_await qCoro(m_userManager, &UserManager::loaded);
+
+    auto user = m_userManager->currentUser();
+    if (!user || user->name().isEmpty() || !user->inSamba()) {
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/UserPage.qml"_s);
+        co_return;
+    }
+
+    if (m_needsReboot) {
+        Q_EMIT pagePushed(u"qrc:/org.kde.filesharing.samba/qml/RebootPage.qml"_s);
+        co_return;
+    }
+
+    m_permissionsHelper->reload();
+
+    co_await initAddressList();
+
+    setReady(true);
+}
+
+QCoro::Task<void> SambaUserSharePlugin::initAddressList()
 {
     QStringList addressList;
 
     const auto interfaces = QNetworkInterface::allInterfaces();
     for (const auto &interface : interfaces) {
-        if (!interface.flags().testAnyFlag(QNetworkInterface::IsLoopBack)) {
-            for (auto &address : interface.addressEntries()) {
-                // Show only private ip addresses
+        if (!(interface.flags() & QNetworkInterface::IsLoopBack)) {
+            for (const auto &address : interface.addressEntries()) {
                 if (address.ip().isPrivateUse()) {
                     addressList.append(address.ip().toString());
                 }
@@ -182,25 +230,16 @@ void SambaUserSharePlugin::initAddressList()
     }
 
     // Get fully qualified domain name
-    QString fqdn;
-    auto avahi = new OrgFreedesktopAvahiServerInterface(QStringLiteral("org.freedesktop.Avahi"), QStringLiteral("/"), QDBusConnection::systemBus());
+    OrgFreedesktopAvahiServerInterface avahi(QStringLiteral("org.freedesktop.Avahi"), QStringLiteral("/"), QDBusConnection::systemBus());
 
-    auto watcher = new QDBusPendingCallWatcher(avahi->GetHostNameFqdn(), this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, avahi, watcher] {
-        watcher->deleteLater();
-        avahi->deleteLater();
+    auto reply = co_await avahi.GetHostNameFqdn();
 
-        QDBusPendingReply<QString> reply = *watcher;
-        QStringList addressList = m_addressList;
-        if (!reply.isError()) {
-            QString fqdn = reply.argumentAt(0).toString();
-            if (!fqdn.isEmpty()) {
-                addressList.append(fqdn);
-            }
+    if (reply.isValid()) {
+        QString fqdn = reply.value();
+        if (!fqdn.isEmpty()) {
+            addressList.append(fqdn);
         }
-        m_addressList = addressList;
-        Q_EMIT addressListChanged();
-    });
+    }
 
     m_addressList = addressList;
     Q_EMIT addressListChanged();
@@ -344,32 +383,18 @@ void SambaUserSharePlugin::setReady(bool ready)
     Q_EMIT readyChanged();
 }
 
-bool SambaUserSharePlugin::isCheckingService() const
+bool SambaUserSharePlugin::needsReboot() const
 {
-    return m_checkingService;
+    return m_needsReboot;
 }
 
-bool SambaUserSharePlugin::serviceReady() const
+void SambaUserSharePlugin::setNeedsReboot(bool reboot)
 {
-    return m_serviceReady;
-}
-
-void SambaUserSharePlugin::setCheckingService(bool checking)
-{
-    if (m_checkingService == checking) {
+    if (m_needsReboot == reboot) {
         return;
     }
-    m_checkingService = checking;
-    Q_EMIT checkingServiceChanged();
-}
-
-void SambaUserSharePlugin::setServiceReady(bool ready)
-{
-    if (m_serviceReady == ready) {
-        return;
-    }
-    m_serviceReady = ready;
-    Q_EMIT serviceReadyChanged();
+    m_needsReboot = reboot;
+    Q_EMIT needsRebootChanged();
 }
 
 void SambaUserSharePlugin::reboot()

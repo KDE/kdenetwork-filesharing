@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 #include "groupmanager.h"
@@ -143,4 +144,14 @@ void GroupManager::performHelpfulAction()
         break;
         // no Default so we have to explicitly handle new enums in the future
     }
+}
+
+bool GroupManager::isReady()
+{
+    return m_ready;
+}
+
+QString GroupManager::errorExplanation()
+{
+    return m_errorExplanation;
 }

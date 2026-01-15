@@ -1,8 +1,8 @@
 /*
-    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-    SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
-*/
+ *   SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ *   SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+ *   SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
+ */
 
 import QtQuick
 import QtQuick.Controls as QQC2
@@ -12,50 +12,58 @@ import org.kde.filesharing.samba as Samba
 
 Kirigami.Page {
     padding: Kirigami.Units.smallSpacing
-    // This page may be after the InstallPage and so we need to create a GroupManager when the page loads
-    // rather than relying on the global instance that runs from the get go so we can evaluate the status AFTER
-    // samba installation.
-    Samba.GroupManager {
-        id: manager
-        onReadyChanged: {
-            if (ready && manager.errorText.length === 0) { // no error; nothing for us to do
-                stackReplace(pendingStack.pop())
+
+    Connections {
+        target: sambaPlugin.groupManager
+
+        function onReadyChanged() {
+            if (sambaPlugin.groupManager.ready && sambaPlugin.groupManager.errorText.length === 0) {
+                stack.popAndRetry()
             }
         }
-        onNeedsReboot: () => {
-            stackReplace("RebootPage.qml")
+
+        function onNeedsReboot() {
+            sambaPlugin.needsReboot = true
         }
-        onHelpfulActionError: (error) => {
+
+        function onHelpfulActionError(error) {
             actionErrorMessage.text = error
         }
     }
 
     QQC2.BusyIndicator {
         anchors.centerIn: parent
-        visible: !manager.ready
+        visible: !sambaPlugin.groupManager.ready
         running: visible
     }
 
     ColumnLayout {
         anchors.fill: parent
-        visible: manager.ready
+        visible: sambaPlugin.groupManager.ready
 
         Kirigami.InlineMessage {
             id: actionErrorMessage
             Layout.alignment: Qt.AlignTop
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
-            visible: text != ""
+            visible: text !== ""
+            onVisibleChanged: {
+                if (!visible) text = ""
+            }
         }
 
         Kirigami.PlaceholderMessage {
-            text: manager.errorText
-            explanation: manager.errorExplanation
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            text: sambaPlugin.groupManager.errorText
+            explanation: sambaPlugin.groupManager.errorExplanation
+
             helpfulAction: Kirigami.Action {
-                enabled: manager.hasHelpfulAction
-                icon.name: manager.helpfulActionIcon
-                text: manager.helpfulActionText
-                onTriggered: manager.performHelpfulAction()
+                enabled: sambaPlugin.groupManager.hasHelpfulAction
+                icon.name: sambaPlugin.groupManager.helpfulActionIcon
+                text: sambaPlugin.groupManager.helpfulActionText
+                onTriggered: sambaPlugin.groupManager.performHelpfulAction()
             }
         }
     }

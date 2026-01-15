@@ -43,7 +43,7 @@ set_package_properties(PackageKitQt6
     PURPOSE "Needed to automatically install the samba package."
 )
 
-find_package(QCoro6 REQUIRED COMPONENTS Core DBus)
+find_package(QCoro6 REQUIRED COMPONENTS Core DBus Quick)
 
 find_package(net)
 set_package_properties(net PROPERTIES
@@ -74,7 +74,6 @@ endif(WIN32)
 option(USE_SYSTEMD "Use systemd for automatically enabling the Samba service." ON)
 if(USE_SYSTEMD)
     add_definitions(-DUSE_SYSTEMD)
-    find_package(QCoro6 REQUIRED COMPONENTS DBus)
 endif()
 add_feature_info("Use Systemd" USE_SYSTEMD "Automatically enable the Samba service with systemd.")
 

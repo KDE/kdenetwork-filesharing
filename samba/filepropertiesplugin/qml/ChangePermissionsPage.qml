@@ -2,7 +2,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2021 Slava Aseev <nullptrnine@basealt.ru>
     SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 import QtQuick
@@ -80,14 +80,14 @@ Kirigami.Page {
                                       "Could not change permissions for: %1. All permissions changes have been reverted.",
                                       failedPaths.join(", "))
                         } else {
-                            stack.pop()
+                            stack.popPage()
                         }
                     }
                 },
                 Kirigami.Action {
                     icon.name: "dialog-cancel"
                     text: i18nc("@action:button cancels permissions change", "Cancel")
-                    onTriggered: stack.pop()
+                    onTriggered: stack.popPage()
                 }
             ]
         }

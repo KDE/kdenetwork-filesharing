@@ -1,7 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
-    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 import QtQuick
@@ -17,15 +17,10 @@ Kirigami.Page {
         id: installer
 
         onInstalledChanged: {
-            if (!installer.installed) {
-                return
+            if (installer.installed) {
+                sambaPlugin.needsReboot = true; // Mark that we need a reboot eventually
+                stack.popPageAndReinit(); // Trigger the initialization chain again, which eventually will end up at RebootPage.
             }
-            // Installation is a bit special because it eventually ends in a reboot. So we push that page onto the
-            // pending pages and move to the group page. The group page in turn will either explicitly
-            // go to the reboot page (if group changes were made) or pop a pending page if groups are already cool.
-            // In either event it'll end up on the reboot page because of our pending meddling here.
-            pendingStack.push("RebootPage.qml")
-            stackReplace("GroupPage.qml")
         }
     }
 

@@ -1,6 +1,7 @@
 /*
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
     SPDX-FileCopyrightText: 2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
 */
 
 #include "usermanager.h"
@@ -133,6 +134,11 @@ bool UserManager::canManageSamba() const
 
 void UserManager::load()
 {
+    // This can be triggered multiple times, when SambaUserSharePlugin is trying to initialize itself.
+    // Make sure it's cleared out before it's loaded again.
+    m_users.clear();
+    m_currentUser = nullptr;
+
     auto proc = new QProcess(this);
     proc->setProgram(QStringLiteral("testparm"));
     proc->setArguments({QStringLiteral("--debuglevel=0"),

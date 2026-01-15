@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
- * SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
+ * SPDX-FileCopyrightText: 2026 Thomas Duckworth <tduck@filotimoproject.org>
  */
 
 import QtQuick
@@ -20,7 +20,7 @@ Kirigami.Page {
                 // when we transition to the next page, which looks weird.
                 message.visible = false
 
-                stackReplace(pendingStack.pop())
+                stack.popPageAndReinit()
             }
         }
     }

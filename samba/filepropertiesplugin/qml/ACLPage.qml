@@ -213,6 +213,7 @@ when the Share access rules would allow it.`)
 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
+                clip: true
 
                 activeFocusOnTab: false
                 Kirigami.Theme.colorSet: Kirigami.Theme.View
@@ -294,6 +295,7 @@ when the Share access rules would allow it.`)
                             id: combo
                             Layout.fillWidth: true
                             Layout.rightMargin: view.columnSpacing
+                            wheelEnabled: false
                             textRole: "text"
                             valueRole: "value"
                             visible: column === Samba.UserPermissionModel.ColumnAccess

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-16 00:43+0000\n"
+"POT-Creation-Date: 2026-01-17 00:43+0000\n"
 "PO-Revision-Date: 2025-09-03 04:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -410,13 +410,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "აუცილებელი წვდომები"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:57
+#: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "წვდომის უარყოფები"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:71
+#: samba/filepropertiesplugin/qml/ACLPage.qml:73
 msgctxt "@info"
 msgid ""
 "\n"
@@ -442,17 +442,17 @@ msgstr ""
 "თუნდაც გაზიარებულის წვდომა უშვებდეს, მას საქაღალდის შემცველობასთან წვდომა არ "
 "ექნება."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#: samba/filepropertiesplugin/qml/ACLPage.qml:91
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr "გაზიარების სამუშაოდ საქაღალდეს დამატებითი წვდომები სჭირდება."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:93
+#: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "წვდომების გასწორება"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:105
+#: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -461,22 +461,22 @@ msgstr ""
 "გაზიარებულმა შეიძლება სწორად არ იმუშაოს, რადგან გაზიარებულ საქაღალდეს ან მის "
 "ბილიკებს დამატებით წვდომები გააჩნიათ: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:112
+#: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "გააზიარეთ ეს საქაღალდე ლოკალურად სხვა კომპიუტერებისთვის"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:137
+#: samba/filepropertiesplugin/qml/ACLPage.qml:139
 msgctxt "@label"
 msgid "Name:"
 msgstr "სახელი:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#: samba/filepropertiesplugin/qml/ACLPage.qml:166
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
 msgstr "მისამართების ნახვა"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:176
+#: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -486,7 +486,7 @@ msgstr ""
 "შეიძლება იყოს და მთელ სისტემაში იგივე სახელის მქონე სხვა გაზიარებული ვერ "
 "იარსებებს."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:185
+#: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -495,37 +495,37 @@ msgstr ""
 "ეს სახელი მეტისმეტად გრძელია. მას თავსებადობის პრობლემების გამოწვევა შეუძლია "
 "ან უბრალოდ უარყოფილი იქნება Samba-ის მიერ."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#: samba/filepropertiesplugin/qml/ACLPage.qml:194
 msgctxt "@option:check"
 msgid "Allow guests to connect"
 msgstr "სტუმრებისთვის დაკავშირების უფლების მიცემა"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:205
+#: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "სტუმრის წვდომა გათიშულია სისტემის Samba-ის კონფიგურაციაში."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:289
+#: samba/filepropertiesplugin/qml/ACLPage.qml:291
 msgctxt "@button"
 msgid "Change Password…"
 msgstr "პაროლის შეცვლა…"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:304
+#: samba/filepropertiesplugin/qml/ACLPage.qml:306
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "სრული კონტროლი"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:305
+#: samba/filepropertiesplugin/qml/ACLPage.qml:307
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "მხოლოდ კითხვისთვის"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:306
+#: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "წვდომის გარეშე"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:332
+#: samba/filepropertiesplugin/qml/ACLPage.qml:334
 msgctxt "@button"
 msgid "View Samba Status"
 msgstr "Samba-ის სტატუსის ჩვენება"

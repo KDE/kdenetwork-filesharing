@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-16 00:43+0000\n"
-"PO-Revision-Date: 2026-01-14 12:41+0100\n"
+"POT-Creation-Date: 2026-01-17 00:43+0000\n"
+"PO-Revision-Date: 2026-01-16 11:50+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -437,13 +437,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "Permissiones  requirite"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:57
+#: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "Refusante accesso"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:71
+#: samba/filepropertiesplugin/qml/ACLPage.qml:73
 msgctxt "@info"
 msgid ""
 "\n"
@@ -468,7 +468,7 @@ msgstr ""
 "localmente ancora non potera acceder a illo anque remotemente\n"
 "quando le regulas de accesso de Share (compartir) lo haberea permittite."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#: samba/filepropertiesplugin/qml/ACLPage.qml:91
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "This folder needs extra permissions for sharing to work"
@@ -476,12 +476,12 @@ msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr "Iste dossier necessita permissiones extra per compartir per functionar"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:93
+#: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "Fixa  (corrige) Permissiones"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:105
+#: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -490,24 +490,24 @@ msgstr ""
 "Le compartir poterea non functionar propriemente proque le dossier de "
 "compartir o su percurso ha Permissiones Avantiate: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:112
+#: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "Comparti iste dossier con altere computatores sur le rete local"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:137
+#: samba/filepropertiesplugin/qml/ACLPage.qml:139
 msgctxt "@label"
 msgid "Name:"
 msgstr "Nomine:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#: samba/filepropertiesplugin/qml/ACLPage.qml:166
 #, fuzzy
 #| msgid "Name/Address"
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
 msgstr "Nomine/Adresse"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:176
+#: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -517,7 +517,7 @@ msgstr ""
 "nomines de usator e il non pote haber duo portiones con le mesme nomine sur "
 "le systema integre."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:185
+#: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -526,42 +526,42 @@ msgstr ""
 "Iste nomine pote esser troppo longe. Il pote causar problemas de "
 "interoparabilitate o esser rejectate per Samba."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#: samba/filepropertiesplugin/qml/ACLPage.qml:194
 #, fuzzy
 #| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
 msgstr "Solmente permitte conne&xiones de invitato"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:205
+#: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr ""
 "Eccesso de hospite es dishabilitate per le configuration de Samba de systema."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:289
+#: samba/filepropertiesplugin/qml/ACLPage.qml:291
 #, fuzzy
 #| msgid "Chan&ge Password..."
 msgctxt "@button"
 msgid "Change Password…"
 msgstr "Modifica contrasigno:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:304
+#: samba/filepropertiesplugin/qml/ACLPage.qml:306
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "Plen controlo"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:305
+#: samba/filepropertiesplugin/qml/ACLPage.qml:307
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "Solmente de lectura"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:306
+#: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "Necun accesso"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:332
+#: samba/filepropertiesplugin/qml/ACLPage.qml:334
 #, fuzzy
 #| msgctxt "@button"
 #| msgid "Show Samba status monitor"

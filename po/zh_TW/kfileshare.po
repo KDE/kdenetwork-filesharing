@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-16 00:43+0000\n"
+"POT-Creation-Date: 2026-01-17 00:43+0000\n"
 "PO-Revision-Date: 2025-09-05 17:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -404,13 +404,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "需要的權限"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:57
+#: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "拒絕存取"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:71
+#: samba/filepropertiesplugin/qml/ACLPage.qml:73
 msgctxt "@info"
 msgid ""
 "\n"
@@ -434,39 +434,39 @@ msgstr ""
 "無法存取該目錄的使用者在遠端也還是不會有辦法存取它，就算共享資料夾的存取規則"
 "會允許存取。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#: samba/filepropertiesplugin/qml/ACLPage.qml:91
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr "這個資料夾需要額外權限才能正常分享。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:93
+#: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "修正權限"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:105
+#: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr "這個共享資料夾可能無法正常運作，因為共享資料夾或它的路徑有進階權限：%1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:112
+#: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "與區域網路中其他電腦分享此資料夾"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:137
+#: samba/filepropertiesplugin/qml/ACLPage.qml:139
 msgctxt "@label"
 msgid "Name:"
 msgstr "名稱："
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#: samba/filepropertiesplugin/qml/ACLPage.qml:166
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
 msgstr "檢視位址"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:176
+#: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -475,44 +475,44 @@ msgstr ""
 "無法使用這個名稱。共享資料夾名稱不能是使用者名稱，且不能與整個系統上另一個共"
 "享資料夾有相同的名稱。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:185
+#: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr "這個名稱可能太長了。它可能會造成系統間的相容性問題或是被 Samba 拒絕。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#: samba/filepropertiesplugin/qml/ACLPage.qml:194
 msgctxt "@option:check"
 msgid "Allow guests to connect"
 msgstr "允許訪客連線"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:205
+#: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "系統 Samba 設定已停用訪客存取。"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:289
+#: samba/filepropertiesplugin/qml/ACLPage.qml:291
 msgctxt "@button"
 msgid "Change Password…"
 msgstr "變更密碼…"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:304
+#: samba/filepropertiesplugin/qml/ACLPage.qml:306
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "完全控制"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:305
+#: samba/filepropertiesplugin/qml/ACLPage.qml:307
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "唯讀"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:306
+#: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "無法存取"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:332
+#: samba/filepropertiesplugin/qml/ACLPage.qml:334
 msgctxt "@button"
 msgid "View Samba Status"
 msgstr "檢視 Samba 狀態"

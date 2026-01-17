@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-16 00:43+0000\n"
+"POT-Creation-Date: 2026-01-17 00:43+0000\n"
 "PO-Revision-Date: 2025-04-29 21:42+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -430,13 +430,13 @@ msgctxt "@title"
 msgid "Required Permissions"
 msgstr "Szükséges jogosultságok"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:57
+#: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
 msgstr "Hozzáférés megtagadása"
 
 #. i18n markup; this also means newlines are ignored!
-#: samba/filepropertiesplugin/qml/ACLPage.qml:71
+#: samba/filepropertiesplugin/qml/ACLPage.qml:73
 msgctxt "@info"
 msgid ""
 "\n"
@@ -462,7 +462,7 @@ msgstr ""
 "távolról sem érheti el azt,\n"
 "még ha a Megosztás hozzáférési szabály engedné is azt."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:89
+#: samba/filepropertiesplugin/qml/ACLPage.qml:91
 #, fuzzy
 #| msgctxt "@label"
 #| msgid "This folder needs extra permissions for sharing to work"
@@ -470,12 +470,12 @@ msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
 msgstr "A mappának extra jogosultságok szükségesek a megosztás működéséhez"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:93
+#: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
 msgstr "Jogosultságok javítása"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:105
+#: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
 msgid ""
 "The share might not work properly because share folder or its paths has "
@@ -484,24 +484,24 @@ msgstr ""
 "Előfordulhat, hogy a megosztás nem működik megfelelően, mert a megosztási "
 "mappának vagy elérési útjainak speciális jogosultságai vannak: %1"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:112
+#: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
 msgstr "Mappa megosztása más számítógépekkel a helyi hálózaton"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:137
+#: samba/filepropertiesplugin/qml/ACLPage.qml:139
 msgctxt "@label"
 msgid "Name:"
 msgstr "Név:"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:164
+#: samba/filepropertiesplugin/qml/ACLPage.qml:166
 #, fuzzy
 #| msgid "Name/Address"
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
 msgstr "Név/cím"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:176
+#: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
 msgid ""
 "This name cannot be used. Share names must not be user names and there must "
@@ -510,7 +510,7 @@ msgstr ""
 "A név nem használható. A megosztási nevek nem lehetnek felhasználónevek, és "
 "két megosztás neve nem lehet ugyanaz a teljes rendszeren belül."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:185
+#: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
 msgid ""
 "This name may be too long. It can cause interoperability problems or get "
@@ -519,41 +519,41 @@ msgstr ""
 "A név túl hosszú lehet. Ez együttműködési problémákat okozhat, vagy a Samba "
 "elutasíthatja."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:192
+#: samba/filepropertiesplugin/qml/ACLPage.qml:194
 #, fuzzy
 #| msgid "Only allow guest connect&ions"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
 msgstr "Csak vendégkapcsolatok enge&délyezése"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:205
+#: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
 msgstr "A vendég hozzáférés ki van kapcsolva a rendszer Samba beállításaiban."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:289
+#: samba/filepropertiesplugin/qml/ACLPage.qml:291
 #, fuzzy
 #| msgid "Chan&ge Password..."
 msgctxt "@button"
 msgid "Change Password…"
 msgstr "A jelszó meg&változtatása..."
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:304
+#: samba/filepropertiesplugin/qml/ACLPage.qml:306
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
 msgstr "Teljes irányítás"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:305
+#: samba/filepropertiesplugin/qml/ACLPage.qml:307
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "Csak olvasható"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:306
+#: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
 msgstr "Nincs hozzáférés"
 
-#: samba/filepropertiesplugin/qml/ACLPage.qml:332
+#: samba/filepropertiesplugin/qml/ACLPage.qml:334
 #, fuzzy
 #| msgctxt "@button"
 #| msgid "Show Samba status monitor"

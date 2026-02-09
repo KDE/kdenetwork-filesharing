@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:43+0000\n"
+"POT-Creation-Date: 2026-02-09 00:43+0000\n"
 "PO-Revision-Date: 2025-12-11 22:49+0100\n"
 "Last-Translator: Oliver Schramm <oliver.schramm97@gmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -222,7 +222,131 @@ msgstr ""
 "Für diese Datei sind wahrscheinlich keine SMB-, Windows- oder erweiterten "
 "Berechtigungen festgelegt."
 
-#: samba/filepropertiesplugin/authhelper.cpp:48
+#: samba/filepropertiesplugin/groupmanager.cpp:37
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid "Your Samba installation appears to be broken."
+msgstr "Ihre Samba-Installation scheint fehlerhaft zu sein."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:42
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing."
+msgstr ""
+"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
+"mittels Samba nicht korrekt eingerichtet hat. Bitte reichen Sie einen "
+"Fehlerbericht bei Ihrer Distribution ein oder konsultieren Sie deren "
+"Dokumentation über die Einrichtung von Freigaben mittels Samba."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:47
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. Please file a bug with your distribution or check your "
+"distribution's documentation on setting up Samba sharing. Error:<nl/"
+"><message>%1</message>"
+msgstr ""
+"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
+"mittels Samba nicht korrekt eingerichtet hat. Bitte reichen Sie einen "
+"Fehlerbericht bei Ihrer Distribution ein oder konsultieren Sie deren "
+"Dokumentation über die Einrichtung von Freigaben mittels Samba. Fehler:<nl/"
+"><message>%1</message>"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:56
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because <filename>%1</filename> does not exist."
+msgstr ""
+"Dieser Ordner kann nicht freigegeben werden, da <filename>%1</filename> "
+"nicht existiert."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:59
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This error is caused by your distribution not setting up Samba sharing "
+"properly. You can fix it yourself by creating that folder manually, then "
+"close and re-open this window."
+msgstr ""
+"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
+"mittels Samba nicht korrekt eingerichtet hat. Sie können dies selbst "
+"beheben, indem Sie den Ordner manuell erstellen und anschließend dieses "
+"Fenster schließen und wieder öffnen."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:72
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account isn't a member of the "
+"<resource>%1</resource> group."
+msgstr ""
+"Dieser Ordner kann nicht freigegeben werden, da Ihr Benutzerkonto nicht "
+"Mitglied der Gruppe <resource>%1</resource> ist."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:75
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by making your user a member of that group, then restart "
+"the system."
+msgstr ""
+"Sie können dies beheben, indem Sie Ihr Benutzerkonto zu dieser Gruppe "
+"hinzufügen und anschließend das System neu starten."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:79
+#, kde-format
+msgctxt "action@button makes user a member of the samba share group"
+msgid "Make Me a Group Member"
+msgstr "Mich der Gruppe hinzufügen"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:86
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"This folder can't be shared because your user account doesn't have "
+"permission to write into <filename>%1</filename>."
+msgstr ""
+"Dieser Ordner kann nicht freigegeben werden, da Ihr Benutzerkonto keine "
+"Schreibberechtigung für <filename>%1</filename> besitzt."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:90
+#, kde-kuit-format
+msgctxt "@info:status"
+msgid ""
+"You can fix this by ensuring that the <resource>%1</resource> group has "
+"write permission for <filename>%2</filename>, then close and re-open this "
+"window."
+msgstr ""
+"Sie können dies beheben, indem Sie sicherstellen, dass die Gruppe <resource>"
+"%1</resource> Schreibberechtigung für <filename>%2</filename> besitzt. "
+"Schließen Sie danach dieses Fenster und öffnen Sie es erneut."
+
+#: samba/filepropertiesplugin/groupmanager.cpp:121
+#, kde-kuit-format
+msgctxt "@label kauth action description %1 is a username %2 a group name"
+msgid ""
+"Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
+"can configure Samba user shares"
+msgstr ""
+"Benutzer <resource>%1</resource> wird zur Gruppe <resource>%2</resource> "
+"hinzugefügt, sodass er Samba-Benutzerfreigaben einrichten kann"
+
+#: samba/filepropertiesplugin/groupmanager.cpp:132
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Failed to make user <resource>%1</resource> a member of group <resource>%2</"
+"resource>"
+msgstr ""
+"Das Benutzerkonto <resource>%1</resource> kann nicht zur Gruppe <resource>"
+"%2</resource> hinzugefügt werden"
+
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:78
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,21 +356,21 @@ msgstr ""
 "Der Benutzername <resource>%1</resource> ist als Name eines Samba-Benutzers "
 "ungültig, da seine Existenz nicht überprüft werden kann."
 
-#: samba/filepropertiesplugin/authhelper.cpp:67
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:97
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
 msgstr "Der Befehl <command>%1 %2</command> ist fehlgeschlagen:<nl/><nl/>%3"
 
-#: samba/filepropertiesplugin/authhelper.cpp:84
-#: samba/filepropertiesplugin/authhelper.cpp:130
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:114
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:160
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
 msgstr "Der aufrufende Benutzer kann nicht ermittelt werden."
 
-#: samba/filepropertiesplugin/authhelper.cpp:90
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:120
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -256,7 +380,7 @@ msgstr ""
 "Aus Sicherheitsgründen ist das Erstellen von Samba-Benutzern mit leeren "
 "Passwörtern nicht zulässig."
 
-#: samba/filepropertiesplugin/authhelper.cpp:136
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:166
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -266,7 +390,7 @@ msgstr ""
 "<resource>%1</resource> ist kein gültiger Gruppenname. Der Benutzer "
 "<resource>%2</resource> kann nicht als Mitglied hinzugefügt werden."
 
-#: samba/filepropertiesplugin/authhelper.cpp:146
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:176
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -282,129 +406,26 @@ msgstr ""
 "unsicher, da er <resource>admin</resource> oder <resource>root</resource> "
 "enthält."
 
-#: samba/filepropertiesplugin/groupmanager.cpp:36
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid "Your Samba installation appears to be broken."
-msgstr "Ihre Samba-Installation scheint fehlerhaft zu sein."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:41
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution or check your "
-"distribution's documentation on setting up Samba sharing."
-msgstr ""
-"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
-"mittels Samba nicht korrekt eingerichtet hat. Bitte reichen Sie einen "
-"Fehlerbericht bei Ihrer Distribution ein oder konsultieren Sie deren "
-"Dokumentation über die Einrichtung von Freigaben mittels Samba."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:46
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. Please file a bug with your distribution or check your "
-"distribution's documentation on setting up Samba sharing. Error:<nl/"
-"><message>%1</message>"
-msgstr ""
-"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
-"mittels Samba nicht korrekt eingerichtet hat. Bitte reichen Sie einen "
-"Fehlerbericht bei Ihrer Distribution ein oder konsultieren Sie deren "
-"Dokumentation über die Einrichtung von Freigaben mittels Samba. Fehler:<nl/"
-"><message>%1</message>"
-
-#: samba/filepropertiesplugin/groupmanager.cpp:55
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because <filename>%1</filename> does not exist."
-msgstr ""
-"Dieser Ordner kann nicht freigegeben werden, da <filename>%1</filename> "
-"nicht existiert."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:58
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This error is caused by your distribution not setting up Samba sharing "
-"properly. You can fix it yourself by creating that folder manually, then "
-"close and re-open this window."
-msgstr ""
-"Dieser Fehler wird dadurch verursacht, dass Ihre Distribution das Freigeben "
-"mittels Samba nicht korrekt eingerichtet hat. Sie können dies selbst "
-"beheben, indem Sie den Ordner manuell erstellen und anschließend dieses "
-"Fenster schließen und wieder öffnen."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:71
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because your user account isn't a member of the "
-"<resource>%1</resource> group."
-msgstr ""
-"Dieser Ordner kann nicht freigegeben werden, da Ihr Benutzerkonto nicht "
-"Mitglied der Gruppe <resource>%1</resource> ist."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:74
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"You can fix this by making your user a member of that group, then restart "
-"the system."
-msgstr ""
-"Sie können dies beheben, indem Sie Ihr Benutzerkonto zu dieser Gruppe "
-"hinzufügen und anschließend das System neu starten."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:78
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:214
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:240
 #, kde-format
-msgctxt "action@button makes user a member of the samba share group"
-msgid "Make Me a Group Member"
-msgstr "Mich der Gruppe hinzufügen"
-
-#: samba/filepropertiesplugin/groupmanager.cpp:85
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"This folder can't be shared because your user account doesn't have "
-"permission to write into <filename>%1</filename>."
-msgstr ""
-"Dieser Ordner kann nicht freigegeben werden, da Ihr Benutzerkonto keine "
-"Schreibberechtigung für <filename>%1</filename> besitzt."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:89
-#, kde-kuit-format
-msgctxt "@info:status"
-msgid ""
-"You can fix this by ensuring that the <resource>%1</resource> group has "
-"write permission for <filename>%2</filename>, then close and re-open this "
-"window."
-msgstr ""
-"Sie können dies beheben, indem Sie sicherstellen, dass die Gruppe <resource>"
-"%1</resource> Schreibberechtigung für <filename>%2</filename> besitzt. "
-"Schließen Sie danach dieses Fenster und öffnen Sie es erneut."
-
-#: samba/filepropertiesplugin/groupmanager.cpp:120
-#, kde-kuit-format
-msgctxt "@label kauth action description %1 is a username %2 a group name"
-msgid ""
-"Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
-"can configure Samba user shares"
-msgstr ""
-"Benutzer <resource>%1</resource> wird zur Gruppe <resource>%2</resource> "
-"hinzugefügt, sodass er Samba-Benutzerfreigaben einrichten kann"
-
-#: samba/filepropertiesplugin/groupmanager.cpp:131
-#, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Failed to make user <resource>%1</resource> a member of group <resource>%2</"
-"resource>"
+"Could not find a valid systemd service file for the Samba file sharing "
+"service."
 msgstr ""
-"Das Benutzerkonto <resource>%1</resource> kann nicht zur Gruppe <resource>"
-"%2</resource> hinzugefügt werden"
+
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Could not start the <command>%1</command> systemd service: %2"
+msgstr ""
+
+#: samba/filepropertiesplugin/kauth/authhelper.cpp:253
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Could not enable the <command>%1</command> systemd service: %2"
+msgstr ""
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -631,7 +652,7 @@ msgctxt "@action:button"
 msgid "Copy to Clipboard"
 msgstr "In die Zwischenablage kopieren"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:36
+#: samba/filepropertiesplugin/qml/InstallPage.qml:31
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -640,12 +661,12 @@ msgstr ""
 "Der <application>Samba</application>-Freigabedienst muss installiert werden, "
 "bevor lokale Ordner freigegeben werden können."
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:39
+#: samba/filepropertiesplugin/qml/InstallPage.qml:34
 msgctxt "@button"
 msgid "Install Samba"
 msgstr "Samba installieren"
 
-#: samba/filepropertiesplugin/qml/InstallPage.qml:47
+#: samba/filepropertiesplugin/qml/InstallPage.qml:42
 msgctxt "@label"
 msgid "The Samba package failed to install."
 msgstr "Die Installation des Samba-Pakets ist fehlgeschlagen."
@@ -679,6 +700,30 @@ msgstr "Starten Sie bitte den Rechner neu, um die Änderungen anzuwenden."
 msgctxt "@button restart the system"
 msgid "Restart"
 msgstr "Neu starten"
+
+#: samba/filepropertiesplugin/qml/ServicePage.qml:42
+msgctxt "@title"
+msgid "Failed to Enable Samba"
+msgstr ""
+
+#: samba/filepropertiesplugin/qml/ServicePage.qml:55
+#, fuzzy
+#| msgctxt "@info"
+#| msgid ""
+#| "The <application>Samba</application> file sharing service must be "
+#| "installed before folders can be shared."
+msgctxt "@info"
+msgid ""
+"The <application>Samba</application> file sharing service must be enabled "
+"and started before folders can be shared."
+msgstr ""
+"Der <application>Samba</application>-Freigabedienst muss installiert werden, "
+"bevor lokale Ordner freigegeben werden können."
+
+#: samba/filepropertiesplugin/qml/ServicePage.qml:59
+msgctxt "@button"
+msgid "Enable the Samba Service"
+msgstr ""
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -728,7 +773,7 @@ msgstr ""
 "Befehlszeilenprogramm\n"
 "<command>smbpasswd</command> von Samba."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:247
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:309
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid ""
@@ -738,73 +783,73 @@ msgstr ""
 "Sie haben die maximale Anzahl an gemeinsam genutzten Verzeichnissen, die Sie "
 "gleichzeitig aktiv sein können, überschritten."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:249
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:311
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
 msgstr "De Name der Freigabe ist ungültig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:251
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:313
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
 msgstr "Der Name der Freigabe wird bereits für einen anderen Ordner verwendet."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:253
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:315
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
 msgstr "Der Pfad ist ungültig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:255
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:317
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
 msgstr "Der Pfad existiert nicht."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:257
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:319
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
 msgstr "Der Pfad ist kein Ordner."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:259
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:321
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
 msgstr "Der Pfad ist relativ."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:261
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:323
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
 msgstr "Dieser Pfad darf nicht freigegeben werden."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:263
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:325
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
 msgstr "Die Zugriffsregel ist ungültig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:265
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:327
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
 msgstr "Die Zugriffsregel für den Benutzer ist nicht gültig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:267
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:329
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
 msgstr "Die Zugriffsregel „Guest“ ist ungültig."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:269
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:331
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
 msgstr "Aktivieren des Gastzugriffs ist nicht erlaubt."
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:287
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:349
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -816,13 +861,13 @@ msgstr ""
 "wurde nicht erstellt.</para><para>Interne Fehlmeldung von Samba:</"
 "para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:292
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:354
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
 msgstr "Erstellen der Netzwerkfreigabe fehlgeschlagen"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:305
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:367
 #, kde-kuit-format
 msgctxt "@info error in the underlying binaries. %1 is CLI output"
 msgid ""
@@ -834,19 +879,52 @@ msgstr ""
 "Die Freigabe wurde nicht entfernt.</para><para>Interne Fehlmeldung von Samba:"
 "</para><message>%1</message>"
 
-#: samba/filepropertiesplugin/sambausershareplugin.cpp:310
+#: samba/filepropertiesplugin/sambausershareplugin.cpp:372
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
 msgstr "Entfernen der Netzwerkfreigabe fehlgeschlagen"
 
-#: samba/filepropertiesplugin/usermanager.cpp:95
+#: samba/filepropertiesplugin/servicehelper.cpp:197
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
+"sharing service is installed and enabled."
+msgstr ""
+
+#: samba/filepropertiesplugin/servicehelper.cpp:223
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
+"sharing service is installed and enabled."
+msgstr ""
+
+#: samba/filepropertiesplugin/servicehelper.cpp:245
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No Samba file sharing service was found. This is a packaging issue, and "
+"should be reported to %1 on <link url='%2'>their bug reporting website.</"
+"link>"
+msgstr ""
+
+#: samba/filepropertiesplugin/servicehelper.cpp:327
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
+"Samba file sharing service is installed and enabled."
+msgstr ""
+
+#: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
 msgstr "Überprüfung, ob der Samba-Benutzer „%1“ existiert"
 
-#: samba/filepropertiesplugin/usermanager.cpp:116
+#: samba/filepropertiesplugin/usermanager.cpp:117
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"

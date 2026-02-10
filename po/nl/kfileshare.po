@@ -5,20 +5,20 @@
 # Tom Albers <tomalbers@kde.nl>, 2004.
 # Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2006, 2007, 2008, 2010.
 # Kristof Bal <kristof.bal@gmail.com>, 2009.
-# SPDX-FileCopyrightText: 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-03 23:36+0200\n"
+"PO-Revision-Date: 2026-02-09 10:45+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: samba/aclproperties/plugin.cpp:58
@@ -409,18 +409,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Er kon geen geldig systemd-servicebestand worden gevonden voor de Samba-"
+"bestandsdelingsservice."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Kon de <command>%1</command>-systemd-service niet starten: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Kon de <command>%1</command>-systemd-service niet inschakelen: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -694,26 +696,21 @@ msgstr "Opnieuw starten"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Samba inschakelen is mislukt"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"De service bestanden delen <application>Samba</application> moet "
-"geïnstalleerd zijn voordat mappen kunnen worden gedeeld."
+"De bestandsdelingsservice <application>Samba</application> moet ingeschakeld "
+"zijn voordat mappen kunnen worden gedeeld."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "De Samba-service inschakelen"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -880,6 +877,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Kon de Samba-service niet inschakelen:<nl/>%1<nl/>Ga na dat de Samba "
+"bestandsdelingsservice is geïnstalleerd en ingeschakeld."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -888,6 +887,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Kon de Samba-service niet starten:<nl/>%1<nl/>Ga na dat de Samba "
+"bestandsdelingsservice is geïnstalleerd en ingeschakeld."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -897,6 +898,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Geen Samba bestandsdelingsservice gevonden. Dit is een probleem met het "
+"pakket, en zou gerapporteerd moeten worden aan %1 op <link url='%2'>hun "
+"website voor rapporteren van bugs.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -905,6 +909,9 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Wachttijd verlopen voor wachten op starten van <command>%1</command>.<nl/"
+"><nl/>Ga na dat de Samba bestandsdelingsservice is geïnstalleerd en "
+"ingeschakeld."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

@@ -1,9 +1,9 @@
 # Translation of kfileshare.po to Catalan
-# Copyright (C) 2004-2025 This_file_is_part_of_KDE
+# Copyright (C) 2004-2026 This_file_is_part_of_KDE
 #
 # SPDX-FileCopyrightText: 2004, 2005 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2004, 2005 Sebastià Pla i Sanz <sps@sastia.com>
-# SPDX-FileCopyrightText: 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2009 Manuel Tortosa Moreno <manutortosa@gmail.com>
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-03 10:21+0200\n"
+"PO-Revision-Date: 2026-02-09 13:18+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -411,18 +411,22 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"No s'ha pogut trobar cap fitxer vàlid de servei del «systemd» per al servei "
+"de compartició de fitxers Samba."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
 msgstr ""
+"No s'ha pogut iniciar el servei <command>%1</command> del «systemd»: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
 msgstr ""
+"No s'ha pogut activar el servei <command>%1</command> del «systemd»: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -699,26 +703,21 @@ msgstr "Reinicia"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Ha fallat en activar el Samba"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"Cal que el <application>Samba</application> estigui instal·lat abans de "
-"poder compartir carpetes."
+"Cal que el <application>Samba</application> estigui activat i iniciat abans "
+"de poder compartir carpetes."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Activa el servei Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -885,6 +884,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"No s'ha pogut activar el servei Samba:<nl/>%1<nl/><nl/>Comproveu que el "
+"servei de compartició de fitxers Samba estigui instal·lat i activat."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -893,6 +894,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"No s'ha pogut iniciar el servei Samba:<nl/>%1<nl/><nl/>Comproveu que el "
+"servei de compartició de fitxers Samba estigui instal·lat i activat."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -902,6 +905,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"No s'ha trobat cap servei de compartició de fitxers Samba. Aquest és un "
+"problema d'empaquetament, i s'hauria d'informar a %1 al <link url='%2'> del "
+"seu lloc web d'informes d'errors.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -910,6 +916,9 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"S'ha exhaurit el temps d'espera per a iniciar <command>%1</command>.<nl/><nl/"
+">Comproveu que el servei de compartició de fitxers Samba estigui instal·lat "
+"i activat."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

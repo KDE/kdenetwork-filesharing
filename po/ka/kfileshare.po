@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdenetwork-filesharing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-03 04:50+0200\n"
+"PO-Revision-Date: 2026-02-09 04:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -400,18 +400,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Sama-ის ფაილების გაზიარების სერვისისთვის system-ის სერვისის ფაილი აღმოჩენილი "
+"არაა."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "systemd-ის სერვისის <command>%1</command> გაშვება შეუძლებელია: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "systemd-ის სერვისის <command>%1</command> ჩართვა შეუძლებელია: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -686,26 +688,21 @@ msgstr "რესტარტ"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Samba-ის ჩართვა ჩავარდა"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"სანამ საქაღალდის გაზიარებას შეძლებთ, <application>Samba</application-ის "
-"ფაილების გაზიარების სერვისის დაყენება აუცილებელია."
+"სანამ საქაღალდის გაზიარებას შეძლებთ, ფაილების გაზიარების სერვისის "
+"<application>Samba</application> ჩართვა და გაშვება აუცილებელია."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Samba-ის სერვისის ჩართვა"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -868,6 +865,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba-ის სერვისის ჩართვა შეუძლებელია:<nl/>%1<nl/><nl/>დარწმუნდით, რომ "
+"ფაილების გაზიარების სერვისი Samba დაყენებული და ჩართულია."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -876,6 +875,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba-ის სერვისის გაშვება შეუძლებელია:<nl/>%1<nl/><nl/>დარწმუნდით, რომ "
+"ფაილების გაზიარების სერვისი Samba დაყენებული და ჩართულია."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -885,6 +886,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"ფაილების გაზიარების სერვისი Samba გაზიარებული არაა. ეს პაკეტის პრობლემაა და "
+"უნდა შეატყობინოთ %1-ს <link url='%2'>მათი შეცდომების ანგარიშების ვებგვერდზე."
+"</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -893,6 +897,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"<command>%1</command>-ის გაშვების მოლოდინის ვადა ამოიწურა.<nl/><nl/"
+">დარწმუნდით, რომ Samba დაყენებული და ჩართულია."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

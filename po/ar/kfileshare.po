@@ -3,13 +3,13 @@
 # Nuriddin Aminagha <nuriddin@eminaga.de>, 2003.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-15 13:19+0400\n"
+"PO-Revision-Date: 2026-02-11 21:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -395,19 +395,19 @@ msgctxt "@info"
 msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
-msgstr ""
+msgstr "تعذر العثور على ملف خدمة systemd صالح لخدمة مشاركة الملفات سامبا."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "تعذر بدء خدمة systemd <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "تعذر تمكين خدمة systemd <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -675,26 +675,21 @@ msgstr "أعد التّشغيل"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "فشل تمكين سامبا"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"يجب تثبيت خدمة مشاركة الملفات <application>Samba</application> قبل أن تتمكن "
-"من مشاركة المجلدات."
+"يجب تمكين خدمة مشاركة الملفات <application>سامبا</application> وتشغيلها قبل "
+"أن يمكن مشاركة المجلدات."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "مكّن خدمة سامبا"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -858,6 +853,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"تعذر تمكين خدمة سامبا:<nl/>%1<nl/><nl/>تأكد من تثبيت خدمة مشاركة ملفات سامبا "
+"وتمكينها."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -866,6 +863,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"تعذر بدء تشغيل خدمة سامبا:<nl/>%1<nl/><nl/>تأكد من تثبيت خدمة مشاركة ملفات "
+"سامبا وتمكينها."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -875,6 +874,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"لم يُعثر على خدمة مشاركة ملفات سامبا. هذه مشكلة تتعلق بتركيب الحزمة، ويجب "
+"الإبلاغ عنها إلى %1 على <link url='%2'>موقع الإبلاغ عن الأخطاء الخاص بهم.</"
+"link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -883,6 +885,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"انتهت مهلة انتظار بدء <command>%1</command>.<nl/><nl/>تأكد من تثبيت خدمة "
+"مشاركة ملفات سامبا وتمكينها."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

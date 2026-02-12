@@ -386,19 +386,19 @@ msgctxt "@info"
 msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
-msgstr ""
+msgstr "无法找到 Samba 文件共享服务的有效 systemd 服务文件。"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "无法启动 <command>%1</command> systemd 服务：%2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "无法启用 <command>%1</command> systemd 服务：%2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -659,7 +659,7 @@ msgstr "重新启动"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "启动 Samba 失败"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
 msgctxt "@info"
@@ -667,11 +667,13 @@ msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
+"要共享文件夹，必须先启用并启动 <application>Samba</application> 文件共享服"
+"务。"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "启用 Samba 服务"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -831,6 +833,7 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"无法启用 Samba 服务：<nl/>%1<nl/><nl/>请确保 Samba 文件共享服务已安装并启用。"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -839,6 +842,7 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"无法启动 Samba 服务：<nl/>%1<nl/><nl/>请确保 Samba 文件共享服务已安装并启用。"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -848,6 +852,8 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"找不到 Samba 文件共享服务。这是一个程序打包问题，请将此情况报告到 %1 的 "
+"<link url='%2'>程序缺陷报告网站。</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -856,6 +862,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"等待 <command>%1</command> 启动超时。<nl/><nl/>请确保 Samba 文件共享服务已安"
+"装并启用。"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

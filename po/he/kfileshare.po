@@ -12,13 +12,13 @@
 # Zviki Karov <karovz@gmail.com>, 2005.
 # דיאגו יסטרובני <elcuco@kde.org>, 2005.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-17 10:40+0300\n"
+"PO-Revision-Date: 2026-02-09 21:35+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -406,19 +406,19 @@ msgctxt "@info"
 msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
-msgstr ""
+msgstr "לא ניתן למצוא קובץ שירות systemd תקף לשירות שיתוף הקבצים Samba."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "לא ניתן להריץ את שירות ה־systemd ‏<command>%1</command>‏: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "לא ניתן להפעיל את שירות ה־systemd ‏<command>%1</command>‏: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -686,26 +686,21 @@ msgstr "הפעלה מחדש"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "הפעלת Samba נכשלה"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"יש להתקין את שירות שיתוף הקבצים <application>Samba</application> לפני "
-"שיתאפשר לשתף תיקיות."
+"שירות שיתוף הקבצים <application>Samba</application> חייב להיות מופעל ורץ "
+"לפני שאפשר יהיה לשתף תיקיות."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "הפעלת שירות ה־Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -867,6 +862,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"לא ניתן להפעיל את שירות ה־Samba‏:<nl/>%1<nl/><nl/>נא לוודא ששירות שיתוף "
+"הקבצים Samba מותקן ופעיל."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -875,6 +872,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"לא ניתן להריץ את שירות ה־Samba‏:<nl/>%1<nl/><nl/>נא לוודא ששירות שיתוף הקבצים "
+"Samba מותקן ופעיל."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -884,6 +883,8 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"לא נמצא שירות שיתוף קבצים Samba. זאת בעיית אריזה ויש לדווח עליה אל %1 דרך "
+"<link url='%2'>אתר דיווח התקלות שלהם.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -892,6 +893,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"נגמר הזמן שהוקצב להמתנה להתחלה של <command>%1</command>.<nl/><nl/>נא לוודא "
+"ששירות שיתוף הקבצים Samba מותקן ופעיל."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

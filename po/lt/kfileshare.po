@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-06 22:09+0300\n"
+"PO-Revision-Date: 2026-02-17 01:57+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -409,18 +409,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Nepavyko surasti tinkamo systemd tarnybos failo, skirto Samba failų "
+"bendrinimo tarnybai."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nepavyko paleisti <command>%1</command> systemd tarnybos: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nepavyko įjungti <command>%1</command> systemd tarnybos: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -694,26 +696,21 @@ msgstr "Paleisti iš naujo"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Nepavyko įjungti Samba"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"Prieš pradedant bendrinti aplankus, privalo būti įdiegta <application>Samba</"
-"application> failų bendrinimo tarnyba."
+"Prieš pradedant bendrinti aplankus, privalo būti įjungta ir paleista "
+"<application>Samba</application> failų bendrinimo tarnyba."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Įjungti Samba tarnybą"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -881,6 +878,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nepavyko įjungti Samba tarnybos:<nl/>%1<nl/><nl/>Įsitikinkite, kad Samba "
+"failų bendrinimo tarnyba yra įdiegta ir įjungta."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -889,6 +888,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nepavyko paleisti Samba tarnybos:<nl/>%1<nl/><nl/>Įsitikinkite, kad Samba "
+"failų bendrinimo tarnyba yra įdiegta ir įjungta."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -898,6 +899,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Nerasta Samba failų bendrinimo tarnyba. Tai yra pakavimo problema ir apie ją "
+"turėtų būti pranešta %1 <link url='%2'>jų pranešimo apie klaidas "
+"internetinėje svetainėje.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -906,6 +910,9 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Pasibaigė skirtas laikas, laukiant, kol pasileis <command>%1</command>.<nl/"
+"><nl/>Įsitikinkite, kad Samba failų bendrinimo tarnyba yra įdiegta ir "
+"įjungta."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

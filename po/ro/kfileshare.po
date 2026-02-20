@@ -1,5 +1,5 @@
 # Traducerea kfileshare.po în Română
-# SPDX-FileCopyrightText: 2008, 2009, 2020, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2008, 2009, 2020, 2022, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 # This file is distributed under the same license as the kfileshare package.
 #
 msgid ""
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-09-27 12:30+0100\n"
+"PO-Revision-Date: 2026-02-19 19:05+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -404,18 +404,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Nu a fost găsit niciun fișier systemd „service” valabil pentru serviciul de "
+"partajare a fișierelor Samba."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Serviciul systemd <command>%1</command> nu a putut fi pornit: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Serviciul systemd <command>%1</command> nu a putut fi activat: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -693,26 +695,21 @@ msgstr "Repornește"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Activarea Samba a eșuat"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
 "Serviciul de partajare a fișierelor <application>Samba</application> trebuie "
-"instalat înainte de a putea să partajați dosare."
+"activat și pornit înainte de a putea să partajați dosare."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Activează serviciul Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -880,6 +877,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Serviciul Samba nu a putut fi activat:<nl/>%1<nl/><nl/>Asigurați-vă că "
+"serviciul de partajare a fișierelor Samba e instalat și activat."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -888,6 +887,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Serviciul Samba nu a putut fi pornit:<nl/>%1<nl/><nl/>Asigurați-vă că "
+"serviciul de partajare a fișierelor Samba e instalat și activat."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -897,6 +898,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Nu a fost găsit un serviciu de partajare a fișierelor Samba. Aceasta e o "
+"problemă de împachetare ce trebuie raportată la %1 pe <link url='%2'>saitul "
+"lor de raportare a defectelor.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -905,6 +909,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Pornirea <command>%1</command> a expirat.<nl/><nl/>Asigurați-vă că serviciul "
+"de partajare a fișierelor Samba e instalat și activat."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

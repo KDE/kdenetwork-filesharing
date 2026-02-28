@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2026-02-26 11:24+0000\n"
+"PO-Revision-Date: 2026-02-27 09:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -411,18 +411,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Tókst ekki að finna gilda systemd-þjónustuskrá fyrir Samba-"
+"skráadeiliþjónustuna."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Tókst ekki að ræsa <command>%1</command> systemd-þjónustu: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Tókst ekki að virkja <command>%1</command> systemd-þjónustu: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -876,6 +878,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Tókst ekki að virkja Samba-þjónustuna:<nl/>%1<nl/><nl/>Gakktu úr skugga um "
+"að Samba-skráadeilingarþjónustan sé uppsett og virkjuð."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -884,6 +888,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Tókst ekki að ræsa Samba-þjónustuna:<nl/>%1<nl/><nl/>Gakktu úr skugga um að "
+"Samba-skráadeilingarþjónustan sé uppsett og virkjuð."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -893,6 +899,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Engin Samba-skráadeilingarþjónusta fannst. Þetta er vandamál sem stafar af "
+"pökkun hugbúnaðarins, og ætti því að tilkynna til %1 á <link "
+"url='%2'>villumeldingtavefnum þeirra.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -901,6 +910,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Féll á tíma við að bíða eftir að <command>%1</command> færi í gang.<nl/><nl/"
+">Gakktu úr skugga um að Samba-skráadeilingarþjónustan sé uppsett og virkjuð."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

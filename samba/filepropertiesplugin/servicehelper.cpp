@@ -39,7 +39,7 @@ QCoro::Task<QString> findAvailableService()
         // If this call doesn't return an error, it means the unit file exists, even if it's disabled.
         auto reply = co_await manager.GetUnitFileState(candidate);
 
-        if (!reply.isError()) {
+        if (!reply.isError() && reply.value() != QLatin1String("alias")) {
             co_return candidate;
         }
     }

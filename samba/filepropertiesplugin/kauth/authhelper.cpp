@@ -34,7 +34,7 @@ static QString findAvailableService()
         auto reply = manager.GetUnitFileState(candidate);
         reply.waitForFinished();
 
-        if (!reply.isError()) {
+        if (!reply.isError() && reply.value() != QLatin1String("alias")) {
             return candidate;
         }
     }

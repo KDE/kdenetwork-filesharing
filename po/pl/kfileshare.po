@@ -1,5 +1,5 @@
 # translation of kfileshare.po to
-# Version: $Revision: 1729618 $
+# Version: $Revision: 1732231 $
 # Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Michał 'podles' Podlewski <podles@aster.pl>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2026-01-01 11:58+0100\n"
+"PO-Revision-Date: 2026-03-14 06:54+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -413,18 +413,20 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Nie można było znaleźć odpowiedniego pliku usługi systemd dla usługi "
+"współdzielenia plików Samba."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nie można uruchomić usługi systemowej <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nie można włączyć usługi systemowej <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -676,7 +678,7 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
-"Upewnij się, że usługa Samby jest włączona i działa.\n"
+"Upewnij się, że usługa Samba została wgrana i jest uruchomiona.\n"
 "Jeśli nie wyłączałeś jej ręcznie, to rozważ zgłoszenie tego jako błąd do "
 "twojej dystrybucji."
 
@@ -697,26 +699,21 @@ msgstr "Uruchom ponownie"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Nie udało włączyć Samby"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"Aby móc udostępniać katalogi, trzeba mieć wgraną usługę do udostępniania "
-"plików <application>Samba</application>."
+"Aby móc udostępniać katalogi, trzeba mieć włączoną i uruchomioną usługę "
+"udostępniania plików <application>Samba</application>."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Włącz usługę Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -880,6 +877,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nie można włączyć usługi Samba:<nl/>%1<nl/><nl/>Upewnij się, że usługa "
+"udostępniania plików Samba została wgrana i jest uruchomiona."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -888,6 +887,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nie można uruchomić usługi Samba:<nl/>%1<nl/><nl/>Upewnij się, że usługa "
+"udostępniania plików Samba została wgrana i jest uruchomiona."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -897,6 +898,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Nie znaleziono usługi udostępniania plików Samba. Jest to błąd pakowania i "
+"powinien zostać zgłoszony do %1 na <link url='%2'>ich stronę zgłaszania "
+"błędów.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -905,6 +909,9 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Upłynął czas oczekiwania na uruchomienie <command>%1</command>.<nl/><nl/"
+">Upewnij się, że usługa udostępniania plików Samba została wgrana i jest "
+"uruchomiona."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

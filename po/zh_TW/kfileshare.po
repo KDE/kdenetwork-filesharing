@@ -8,13 +8,13 @@
 # Franklin Weng <franklin@goodhorse.idv.tw>, 2011.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2026-02-12 16:34+0900\n"
+"PO-Revision-Date: 2026-03-16 16:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -393,19 +393,19 @@ msgctxt "@info"
 msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
-msgstr ""
+msgstr "找不到 Samba 檔案分享服務用的有效 systemd 服務檔案。"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "無法啟動 <command>%1</command> systemd 服務：%2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "無法啟用 <command>%1</command> systemd 服務：%2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -841,6 +841,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"無法啟用 Samba 服務：<nl/>%1<nl/><nl/>請確保 Samba 檔案分享服務已安裝且已啟"
+"用。"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -849,6 +851,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"無法啟動 Samba 服務：<nl/>%1<nl/><nl/>請確保 Samba 檔案分享服務已安裝且已啟"
+"用。"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -858,6 +862,8 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"沒有找到 Samba 檔案分享服務。這是打包上的問題，請至 <link url='%2'>%1 的錯誤"
+"回報網站</link>向 %1 回報這個問題。"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -866,6 +872,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"等待 <command>%1</command> 啟動時逾時。<nl/><nl/>請確保 Samba 檔案分享服務已"
+"安裝且已啟用。"
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

@@ -17,12 +17,11 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.08.2\n"
 
 #: samba/aclproperties/plugin.cpp:58
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "Zakázať"
@@ -31,68 +30,68 @@ msgstr "Zakázať"
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
-msgstr ""
+msgstr "Povoliť"
 
 #: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Len tento priečinok"
 
 #: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Tento priečinok, podpriečinky a súbory"
 
 #: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Tento priečinok a podpriečinky"
 
 #: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Tento priečinok a súbory"
 
 #: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Len podpriečinky a súbory"
 
 #: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Len podpriečinky"
 
 #: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Len súbory"
 
 #: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "Neznáme"
 
 #: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr ""
+msgstr "Vzdialené oprávnenia"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -100,81 +99,83 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"Táto položka oprávnení bola zdedená z nadradeného kontajnera a je možné ju "
+"upraviť len v tomto nadradenom kontajneri (napr. v priečinku vyššej úrovne)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "Vzťahuje sa na:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "Prechádzať priečinkom / spustiť súbor"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "Zobraziť obsah priečinka / čítať údaje"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Čítať atribúty"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "Čítať rozšírené atribúty"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Vytvárať súbory / zapisovať údaje"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Vytvárať priečinky / pripájať údaje"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr ""
+msgstr "Zapisovať atribúty"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "Zapisovať rozšírené atribúty"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Odstrániť podpriečinky a súbory"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
 msgid "Delete"
-msgstr ""
+msgstr "Odstrániť"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr ""
+msgstr "Oprávnenia na čítanie"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr ""
+msgstr "Oprávnenia na zmenu"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "Prevziať vlastníctvo"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
@@ -182,43 +183,47 @@ msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
 msgstr ""
+"Použiť tieto oprávnenia iba na objekty a/alebo kontajnery v rámci tohto "
+"kontajnera"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "Záznamy riadenia prístupu"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr ""
+msgstr "Vlastníctvo"
 
 #: samba/aclproperties/qml/MainPage.qml:33
 msgctxt "@label"
 msgid "Owner:"
-msgstr ""
+msgstr "Vlastník:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
 msgctxt "@label"
 msgid "Group:"
-msgstr ""
+msgstr "Skupina:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr ""
+msgstr "Nenašli sa žiadne oprávnenia"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
 msgstr ""
+"Pre tento súbor pravdepodobne nie sú nastavené žiadne oprávnenia SMB/Windows/"
+"Rozšírené."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:37
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "Vaša inštalácia Samby sa zdá byť poškodená."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -228,6 +233,9 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"Táto chyba je spôsobená tým, že vaša distribúcia nenastavila zdieľanie Samba "
+"správne. Nahláste chybu vašej distribúcii alebo si pozrite dokumentáciu "
+"vašej distribúcie o nastavení zdieľania Samba."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:47
 #, kde-kuit-format
@@ -238,6 +246,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"Táto chyba je spôsobená tým, že vaša distribúcia nenastavila zdieľanie Samba "
+"správne. Nahláste chybu vašej distribúcii alebo si pozrite dokumentáciu "
+"vašej distribúcie o nastavení zdieľania Samba. Chyba:<nl/><message>%1</"
+"message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:56
 #, kde-kuit-format
@@ -245,6 +257,8 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"Tento priečinok nie je možné zdieľať, pretože <filename>%1</filename> "
+"neexistuje."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:59
 #, kde-kuit-format
@@ -254,6 +268,9 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually, then "
 "close and re-open this window."
 msgstr ""
+"Táto chyba je spôsobená tým, že vaša distribúcia nenastavila zdieľanie Samba "
+"správne. Môžete to opraviť sami ručným vytvorením tohto priečinka a potom "
+"zatvorte a znovu otvorte toto okno."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:72
 #, kde-kuit-format
@@ -262,6 +279,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"Tento priečinok nie je možné zdieľať, pretože váš používateľský účet nie je "
+"členom skupiny <resource>%1</resource>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -270,12 +289,14 @@ msgid ""
 "You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
+"Môžete to opraviť pridaním svojho používateľa do tejto skupiny a potom "
+"reštartujte systém."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:79
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
-msgstr ""
+msgstr "Pridať ma do skupiny"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:86
 #, kde-kuit-format
@@ -284,6 +305,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"Tento priečinok nie je možné zdieľať, pretože váš používateľský účet nemá "
+"oprávnenie na zápis do <filename>%1</filename>."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:90
 #, kde-kuit-format
@@ -293,6 +316,9 @@ msgid ""
 "write permission for <filename>%2</filename>, then close and re-open this "
 "window."
 msgstr ""
+"Môžete to opraviť uistením sa, že skupina <resource>%1</resource> má "
+"oprávnenie na zápis do <filename>%2</filename>, a potom zatvorte a znovu "
+"otvorte toto okno."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:121
 #, kde-kuit-format
@@ -301,6 +327,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
+"Pridávanie používateľa <resource>%1</resource> do skupiny <resource>%2</"
+"resource>, aby mohol konfigurovať zdieľané priečinky Samba"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:132
 #, kde-kuit-format
@@ -309,6 +337,8 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"Nepodarilo sa pridať používateľa <resource>%1</resource> do skupiny "
+"<resource>%2</resource>"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:78
 #, kde-kuit-format
@@ -317,20 +347,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"Používateľské meno <resource>%1</resource> nie je platné ako meno "
+"používateľa Samba; nie je možné overiť jeho existenciu."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:97
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "Príkaz <command>%1 %2</command> zlyhal:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:114
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:160
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr ""
+msgstr "Nepodarilo sa rozpoznať volajúceho používateľa."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:120
 #, kde-format
@@ -339,6 +371,8 @@ msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
 msgstr ""
+"Z bezpečnostných dôvodov nie je povolené vytvárať používateľov Samba s "
+"prázdnymi heslami."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:166
 #, kde-kuit-format
@@ -347,6 +381,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> nie je platný názov skupiny; nie je možné pridať "
+"používateľa <resource>%2</resource> do tejto skupiny."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:176
 #, kde-kuit-format
@@ -359,6 +395,12 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"Z bezpečnostných dôvodov nie je možné pridať používateľa <resource>%1</"
+"resource> do skupiny <resource>%2</"
+"resource>.                                                    Názov skupiny "
+"nie je bezpečný; platné názvy skupín "
+"neobsahujú                                                    text "
+"<resource>admin</resource> alebo <resource>root</resource>."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:214
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:240
@@ -368,36 +410,38 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Nepodarilo sa nájsť platný súbor služby systemd pre službu zdieľania súborov "
+"Samba."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nepodarilo sa spustiť službu systemd <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "Nepodarilo sa povoliť službu systemd <command>%1</command>: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "File Path"
-msgstr ""
+msgstr "Cesta k súboru"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
 #, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr ""
+msgstr "Aktuálne oprávnenia"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr ""
+msgstr "Požadované oprávnenia"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
@@ -419,16 +463,26 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"Zamietnutie prístupu zabráni použitiu tohto zdieľania, aj keď by iné "
+"pravidlo prístupu mohlo prístup povoliť. Pravidlo zamietnutia má vždy\n"
+"prednosť. Konkrétne zamietnutie prístupu pre <resource>Everyone</resource> v "
+"skutočnosti zakáže prístup pre všetkých.\n"
+"Zvyčajne nie je potrebné nikomu zamietať prístup, pretože bežné oprávnenia "
+"priečinkov a súborov sa stále vzťahujú na zdieľané\n"
+"priečinky. Používateľ, ktorý nemá prístup k priečinku lokálne, k nemu nebude "
+"môcť pristupovať ani vzdialene,\n"
+"aj keď by to pravidlá prístupu k zdieľaniu povoľovali."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:91
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr ""
+msgstr "Tento priečinok potrebuje ďalšie oprávnenia, aby zdieľanie fungovalo."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr ""
+msgstr "Opraviť oprávnenia"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
@@ -436,6 +490,8 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"Zdieľanie nemusí správne fungovať, pretože zdieľaný priečinok alebo jeho "
+"cesty majú rozšírené oprávnenia: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
@@ -450,7 +506,7 @@ msgstr "Názov:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:166
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "Zobraziť adresy"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
@@ -458,6 +514,8 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"Tento názov nie je možné použiť. Názvy zdieľaní nesmú byť používateľské mená "
+"a v celom systéme nesmú existovať dve zdieľania s rovnakým názvom."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
@@ -465,11 +523,10 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"Tento názov môže byť príliš dlhý. Môže spôsobiť problémy s interoperabilitou "
+"alebo byť odmietnutý službou Samba."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:194
-#, fuzzy
-#| msgctxt "@option:check"
-#| msgid "Allow guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
 msgstr "Povoliť hostí"
@@ -477,13 +534,9 @@ msgstr "Povoliť hostí"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "Hosťovský prístup je zakázaný konfiguráciou systémovej služby Samba."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:291
-#, fuzzy
-#| msgctxt ""
-#| "@action:button creates a new samba user with the user-specified password"
-#| msgid "Set Password"
 msgctxt "@button"
 msgid "Change Password…"
 msgstr "Nastaviť heslo"
@@ -504,9 +557,6 @@ msgid "No Access"
 msgstr "Žiadny prístup"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:334
-#, fuzzy
-#| msgctxt "@button"
-#| msgid "Show Samba status monitor"
 msgctxt "@button"
 msgid "View Samba Status"
 msgstr "Zobraziť monitor stavu Samba"
@@ -514,15 +564,12 @@ msgstr "Zobraziť monitor stavu Samba"
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "Change password for '%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
-#, fuzzy
-#| msgctxt "@title"
-#| msgid "Set password"
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr "Nastaviť heslo"
+msgstr "Set password for '%1'"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
@@ -535,9 +582,6 @@ msgid "Confirm password"
 msgstr "Potvrdiť heslo"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
-#, fuzzy
-#| msgctxt "@label error message"
-#| msgid "Passwords must match"
 msgctxt "@label error message"
 msgid "Passwords must match."
 msgstr "Heslá sa musia zhodovať"
@@ -551,7 +595,7 @@ msgstr "Nastaviť heslo"
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
 msgctxt "@info"
@@ -561,11 +605,15 @@ msgid ""
 "to work.</para>\n"
 "<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>Priečinok <filename>%1</filename> potrebuje ďalšie oprávnenia, aby "
+"zdieľanie fungovalo.</para>\n"
+"<para>Pridať tieto oprávnenia teraz?</para><nl/>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr ""
+msgstr "Zmeniť oprávnenia"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
 msgctxt "@label"
@@ -573,31 +621,31 @@ msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
+"Nepodarilo sa zmeniť oprávnenia pre: %1. Všetky zmeny oprávnení boli vrátené "
+"späť."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "Adresy pripojenia"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
 msgstr ""
+"Na pripojenie k tomuto zdieľaniu použite ktorúkoľvek z nasledujúcich adries:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "Kopírovať do schránky"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:31
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be installed "
@@ -617,7 +665,7 @@ msgstr "Zlyhala inštalácia balíka Samba."
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:22
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "Služba zdieľania súborov je nedostupná"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:23
 msgid ""
@@ -625,15 +673,14 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"Uistite sa, že služba Samba je povolená a spustená.\n"
+"Ak ste ju nezakázali ručne, zvážte nahlásenie chyby vašej distribúcii."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:27
 msgid "Report a bug"
-msgstr ""
+msgstr "Nahlásiť chybu"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Restart the computer to complete the changes."
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
 msgstr "Reštartujte počítač na dokončenie inštalácie."
@@ -646,12 +693,9 @@ msgstr "Reštartovať"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Nepodarilo sa povoliť službu Samba"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@label"
-#| msgid "Samba must be installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
@@ -661,7 +705,7 @@ msgstr "Pred zdieľaním priečinkov musí byť nainštalovaná Samba."
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Povoliť službu Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -679,11 +723,19 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba používa oddelenú databázu používateľov od systémovej.\n"
+"To vyžaduje, aby ste nastavili samostatné heslo Samba pre každého "
+"používateľa,\n"
+"ktorý sa má môcť overiť.\n"
+"</para>\n"
+"<para>\n"
+"Predtým, než budete môcť pristupovať k zdieľaniam pomocou vášho aktuálneho "
+"používateľského účtu, musíte nastaviť heslo Samba.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
-#, fuzzy
-#| msgctxt "@action:button opens dialog to create new user"
-#| msgid "Create Samba password"
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
 msgstr "Vytvoriť Samba heslo"
@@ -697,6 +749,10 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"Ďalšiu správu používateľov a hesiel je možné vykonávať pomocou nástroja "
+"príkazového riadku <command>smbpasswd</command>\n"
+"služby Samba."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:309
 #, kde-format
@@ -705,6 +761,8 @@ msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
 msgstr ""
+"Vyčerpali ste maximálny počet zdieľaných priečinkov, ktoré môžete mať "
+"aktívne súčasne."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:311
 #, kde-format
@@ -716,7 +774,7 @@ msgstr "Názov zdieľania je neplatný."
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "Názov zdieľania sa už používa pre iný priečinok."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:315
 #, kde-format
@@ -764,13 +822,13 @@ msgstr "Používateľ prístupového pravidla je neplatný."
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "Pravidlo hosťovského prístupu je neplatné."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:331
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "Povolenie hosťovského prístupu nie je dovolené."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:349
 #, kde-kuit-format
@@ -780,6 +838,8 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Pri pokuse o zdieľanie priečinka sa vyskytla chyba. Zdieľanie nebolo "
+"vytvorené.</para><para>Interné hlásenie Samby:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:354
 #, kde-format
@@ -795,6 +855,9 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>Pri pokuse o zrušenie zdieľania priečinka sa vyskytla chyba. Zdieľanie "
+"nebolo odstránené.</para><para>Interné hlásenie Samby:</para><message>%1</"
+"message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:372
 #, kde-format
@@ -809,6 +872,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nepodarilo sa povoliť službu Samba:<nl/>%1<nl/><nl/>Uistite sa, že služba "
+"zdieľania súborov Samba je nainštalovaná a povolená."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -817,6 +882,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Nepodarilo sa spustiť službu Samba:<nl/>%1<nl/><nl/>Uistite sa, že služba "
+"zdieľania súborov Samba je nainštalovaná a povolená."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -826,6 +893,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Nenašla sa žiadna služba zdieľania súborov Samba. Ide o problém s balíčkom, "
+"ktorý by ste mali nahlásiť %1 na <link url='%2'>ich stránke na nahlasovanie "
+"chýb.</link>"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -834,18 +904,20 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"Vypršal časový limit pri čakaní na spustenie <command>%1</command>.<nl/><nl/"
+">Uistite sa, že služba zdieľania súborov Samba je nainštalovaná a povolená."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "Checking if Samba user '%1' exists"
 
 #: samba/filepropertiesplugin/usermanager.cpp:117
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "Creating new Samba user '%1'"
 
 #~ msgctxt "@label failed to change user groups so they can manage shares"
 #~ msgid "Group changes failed."

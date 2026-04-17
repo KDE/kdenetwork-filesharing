@@ -20,7 +20,9 @@
 #include "groupmanager.h"
 #include "model.h"
 #include "permissionshelper.h"
+#ifdef USE_SYSTEMD
 #include "servicehelper.h"
+#endif
 #include "usermanager.h"
 #include <memory>
 #include <qcorotask.h>
@@ -159,7 +161,9 @@ class SambaUserSharePlugin : public KPropertiesDialogPlugin
     Q_PROPERTY(UserPermissionModel *userPermissionModel MEMBER m_model CONSTANT)
     Q_PROPERTY(ShareContext *shareContext MEMBER m_context CONSTANT)
     Q_PROPERTY(PermissionsHelper *permissionsHelper MEMBER m_permissionsHelper CONSTANT)
+#ifdef USE_SYSTEMD
     Q_PROPERTY(ServiceHelper *serviceHelper MEMBER m_serviceHelper CONSTANT)
+#endif
     Q_PROPERTY(GroupManager *groupManager MEMBER m_groupManager CONSTANT)
     Q_PROPERTY(QString bugReportUrl READ bugReportUrl CONSTANT)
 
@@ -209,7 +213,9 @@ private:
     UserPermissionModel *m_model = nullptr;
     UserManager *m_userManager = nullptr;
     PermissionsHelper *m_permissionsHelper = nullptr;
+#ifdef USE_SYSTEMD
     ServiceHelper *m_serviceHelper = nullptr;
+#endif
     GroupManager *m_groupManager = nullptr;
     QStringList m_addressList;
     bool m_checkingService = true;

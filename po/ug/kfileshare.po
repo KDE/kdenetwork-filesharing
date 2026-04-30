@@ -8,19 +8,18 @@ msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2013-09-12 09:37+0600\n"
-"Last-Translator: Abduqadir Abliz <sahran.ug@gmail.com>\n"
+"PO-Revision-Date: 2026-04-28 10:10-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 3.9\n"
 
 #: samba/aclproperties/plugin.cpp:58
-#, fuzzy, kde-format
-#| msgid "Deny"
+#, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
 msgstr "رەت قىل"
@@ -29,68 +28,68 @@ msgstr "رەت قىل"
 #, kde-format
 msgctxt "@option:radio an entry allowing permissions"
 msgid "Allow"
-msgstr ""
+msgstr "يول قوي"
 
 #: samba/aclproperties/plugin.cpp:64
 #, kde-format
 msgctxt ""
 "@option:radio an unknown permission entry type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "يوچۇن"
 
 #: samba/aclproperties/plugin.cpp:71
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "بۇ قىسقۇچقىلا"
 
 #: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "بۇ قىسقۇچ، تارماق قىسقۇچ ۋە ھۆججەت"
 
 #: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "بۇ قىسقۇچ ۋە تارماق قىسقۇچ"
 
 #: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "بۇ قىسقۇچ ۋە ھۆججەت"
 
 #: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "تارماق قىسقۇچ ۋە ھۆججەتلا"
 
 #: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "تارماق قىسقۇچلا"
 
 #: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "ھۆججەتلا"
 
 #: samba/aclproperties/plugin.cpp:86
 #, kde-format
 msgctxt "@option:radio permission applicability type (doesn't really happen)"
 msgid "Unknown"
-msgstr ""
+msgstr "يوچۇن"
 
 #: samba/aclproperties/plugin.cpp:184
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr ""
+msgstr "يىراقتىكى ئىجازەت"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -98,125 +97,127 @@ msgid ""
 "This permission entry was inherited from a parent container and can only be "
 "modified on that parent (e.g. a higher level directory)."
 msgstr ""
+"بۇ ئىجازەت ئاتا يۈكداندىن ۋارىسلىق قىلىنغان، پەقەت ئاتا يۈكداندىنلا "
+"ئۆزگەرتكىلى بولىدۇ(مەسىلەن، يۇقىرى دەرىجىلىك مۇندەرىجە)."
 
 #: samba/aclproperties/qml/ACEPage.qml:36
 msgctxt "@label"
 msgid "Type:"
-msgstr ""
+msgstr "تۈرى:"
 
 #: samba/aclproperties/qml/ACEPage.qml:46
 msgctxt "@label"
 msgid "Applies to:"
-msgstr ""
+msgstr "قوللىنىش دائىرىسى:"
 
 #: samba/aclproperties/qml/ACEPage.qml:59
 msgctxt "@option:check"
 msgid "Traverse folder / execute file"
-msgstr ""
+msgstr "قىسقۇچقا كۆز يۈگۈرتۈش/ھۆججەت ئىجرا قىلىش"
 
 #: samba/aclproperties/qml/ACEPage.qml:63
 msgctxt "@option:check"
 msgid "List folder / read data"
-msgstr ""
+msgstr "قىسقۇچنى تىزىپ كۆرسىتىش/سانلىق مەلۇمات ئوقۇش"
 
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "ئوقۇش خاسلىقى"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
 msgid "Read extended attributes"
-msgstr ""
+msgstr "كېڭەيتىلگەن ئوقۇش خاسلىقى"
 
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "ھۆججەت قۇرۇش/سانلىق مەلۇمات يېزىش"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "قىسقۇچ قۇرۇش/سانلىق مەلۇمات قوشۇش"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
 msgctxt "@option:check"
 msgid "Write attributes"
-msgstr ""
+msgstr "يېزىش خاسلىقى"
 
 #: samba/aclproperties/qml/ACEPage.qml:87
 msgctxt "@option:check"
 msgid "Write extended attributes"
-msgstr ""
+msgstr "كېڭەيتىلگەن يېزىش خاسلىقى"
 
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "تارماق قىسقۇچ ۋە ھۆججەت ئۆچۈرۈش"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
 msgid "Delete"
-msgstr ""
+msgstr "ئۆچۈر"
 
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr ""
+msgstr "ئوقۇش ئىجازىتى"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr ""
+msgstr "ئۆزگەرتىش ئىجازىتى"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
 msgid "Take ownership"
-msgstr ""
+msgstr "ئىگىدارلىق ھوقۇقىغا ئېرىش"
 
 #: samba/aclproperties/qml/ACEPage.qml:112
 msgctxt "@option:check"
 msgid ""
 "Only apply these permissions to objects and/or containers within this "
 "container"
-msgstr ""
+msgstr "بۇ ئىجازەتنى پەقەت مەزكۇر يۈكداندىكى جىسىم ۋە يۈكدانغا قوللىنىدۇ"
 
 #: samba/aclproperties/qml/MainPage.qml:13
 msgctxt "@title"
 msgid "Access Control Entries"
-msgstr ""
+msgstr "ئىجازەت تىزگىن تۈرى"
 
 #: samba/aclproperties/qml/MainPage.qml:29
 msgctxt "@title file/folder owner info"
 msgid "Ownership"
-msgstr ""
+msgstr "ئىگىدارلىق"
 
 #: samba/aclproperties/qml/MainPage.qml:33
 msgctxt "@label"
 msgid "Owner:"
-msgstr ""
+msgstr "ئىگىدار:"
 
 #: samba/aclproperties/qml/MainPage.qml:37
 msgctxt "@label"
 msgid "Group:"
-msgstr ""
+msgstr "گۇرۇپپا:"
 
 #: samba/aclproperties/qml/NoDataPage.qml:17
 msgctxt "@info"
 msgid "No Permissions Found"
-msgstr ""
+msgstr "ئىجازەت تېپىلمىدى"
 
 #: samba/aclproperties/qml/NoDataPage.qml:18
 msgctxt "@info"
 msgid ""
 "There are probably no SMB/Windows/Advanced permissions set on this file."
-msgstr ""
+msgstr "بۇ ھۆججەتتە SMB/Windows/ئالىي ئىجازەت تەڭشەلمىگەن بولۇشى مۇمكىن."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:37
 #, kde-kuit-format
 msgctxt "@info:status"
 msgid "Your Samba installation appears to be broken."
-msgstr ""
+msgstr "سىستېمىغا ئورنىتىلغان Samba بۇزۇلغان بولۇشى مۇمكىن."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:42
 #, kde-kuit-format
@@ -226,6 +227,10 @@ msgid ""
 "properly. Please file a bug with your distribution or check your "
 "distribution's documentation on setting up Samba sharing."
 msgstr ""
+"بۇ خاتالىق سىستېمىغا ئورنىتىلغان تارقىتىلغان نەشرىدە Samba ھەمبەھىرنىڭ توغرا "
+"سەپلەنمىگەنلىكىدىن كېلىپ چىققان. تارقاتقۇچىغا كەمتۈكلۈك مەلۇماتى يوللاڭ ياكى "
+"مەزكۇر تارقىتىش نەشرىدە Samba ھەمبەھىرنى قانداق سەپلەش ھەققىدىكى قوللانمىنى "
+"كۆرۈڭ."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:47
 #, kde-kuit-format
@@ -236,6 +241,10 @@ msgid ""
 "distribution's documentation on setting up Samba sharing. Error:<nl/"
 "><message>%1</message>"
 msgstr ""
+"بۇ خاتالىق سىستېمىغا ئورنىتىلغان تارقىتىلغان نەشرىدە Samba ھەمبەھىرنىڭ توغرا "
+"سەپلەنمىگەنلىكىدىن كېلىپ چىققان. تارقاتقۇچىغا كەمتۈكلۈك مەلۇماتى يوللاڭ ياكى "
+"مەزكۇر تارقىتىش نەشرىدە Samba ھەمبەھىرنى قانداق سەپلەش ھەققىدىكى قوللانمىنى "
+"كۆرۈڭ. خاتالىق: <nl/><message>%1</message>"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:56
 #, kde-kuit-format
@@ -243,6 +252,7 @@ msgctxt "@info:status"
 msgid ""
 "This folder can't be shared because <filename>%1</filename> does not exist."
 msgstr ""
+"بۇ قىسقۇچنى ھەمبەھىرلىيەلمەيدۇ چۈنكى <filename>%1</filename> مەۋجۇت ئەمەس."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:59
 #, kde-kuit-format
@@ -252,6 +262,9 @@ msgid ""
 "properly. You can fix it yourself by creating that folder manually, then "
 "close and re-open this window."
 msgstr ""
+"بۇ خاتالىق سىستېمىغا ئورنىتىلغان تارقىتىلغان نەشرىدە Samba ھەمبەھىرنىڭ توغرا "
+"سەپلەنمىگەنلىكىدىن كېلىپ چىققان. ئاشۇ مۇندەرىجىنى ئۆزىڭىز قۇرۇپ مەسىلىنى "
+"ئوڭشىيالايسىز ئاندىن مەزكۇر كۆزنەكنى يېپىپ، قايتا ئېچىڭ."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:72
 #, kde-kuit-format
@@ -260,6 +273,8 @@ msgid ""
 "This folder can't be shared because your user account isn't a member of the "
 "<resource>%1</resource> group."
 msgstr ""
+"بۇ قىسقۇچنى ھەمبەھىرلىيەلمەيدۇ چۈنكى ئىشلەتكۈچى ھېسابىڭىز <resource>%1</"
+"resource> گۇرۇپپىنىڭ ئەزاسى ئەمەس."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:75
 #, kde-kuit-format
@@ -268,12 +283,14 @@ msgid ""
 "You can fix this by making your user a member of that group, then restart "
 "the system."
 msgstr ""
+"بۇ مەسىلىنى ئۆزىڭىز ئوڭشىيالايسىز، ئالدى بىلەن ئىشلەتكۈچى ھېسابىنى ئاشۇ "
+"گۇرۇپپىنىڭ ئەزالىقىغا قوشۇپ ئاندىن سىستېمىنى قايتا قوزغىتىڭ."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:79
 #, kde-format
 msgctxt "action@button makes user a member of the samba share group"
 msgid "Make Me a Group Member"
-msgstr ""
+msgstr "مېنى گۇرۇپپا ئەزالىقىغا كىرگۈز"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:86
 #, kde-kuit-format
@@ -282,6 +299,8 @@ msgid ""
 "This folder can't be shared because your user account doesn't have "
 "permission to write into <filename>%1</filename>."
 msgstr ""
+"بۇ قىسقۇچنى ھەمبەھىرلىيەلمەيدۇ چۈنكى ئىشلەتكۈچى ھېسابىڭىز <filename>%1</"
+"filename> غا يېزىش ئىجازىتى يوق."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:90
 #, kde-kuit-format
@@ -291,6 +310,9 @@ msgid ""
 "write permission for <filename>%2</filename>, then close and re-open this "
 "window."
 msgstr ""
+"بۇ مەسىلىنى ئۆزىڭىز ئوڭشىيالايسىز، ئالدى بىلەن <resource>%1</resource> "
+"ئىشلەتكۈچى گۇرۇپپىسىنىڭ <filename>%2</filename> غا يېزىش ئىجازىتىنىڭ "
+"بارلىقىنى جەزملەڭ، ئاندىن بۇ كۆزنەكنى يېپىپ، قايتا ئېچىڭ."
 
 #: samba/filepropertiesplugin/groupmanager.cpp:121
 #, kde-kuit-format
@@ -299,6 +321,8 @@ msgid ""
 "Adding user <resource>%1</resource> to group <resource>%2</resource> so they "
 "can configure Samba user shares"
 msgstr ""
+"<resource>%1</resource> ئىشلەتكۈچىنى <resource>%2</resource> ئىشلەتكۈچى "
+"گۇرۇپپىسىغا قوشسىڭىز، Samba ئىشلەتكۈچى ھەمبەھىرلەشنى سەپلىيەلەيدۇ"
 
 #: samba/filepropertiesplugin/groupmanager.cpp:132
 #, kde-kuit-format
@@ -307,6 +331,8 @@ msgid ""
 "Failed to make user <resource>%1</resource> a member of group <resource>%2</"
 "resource>"
 msgstr ""
+"<resource>%1</resource> ئىشلەتكۈچىنى <resource>%2</resource> گۇرۇپپىنىڭ "
+"ئەزالىقىغا تەڭشىيەلمىدى."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:78
 #, kde-kuit-format
@@ -315,20 +341,22 @@ msgid ""
 "User name <resource>%1</resource> is not valid as the name of a Samba user; "
 "cannot check for its existence."
 msgstr ""
+"<resource>%1</resource> ئىشلەتكۈچى ئاتى ئىناۋەتلىك Samba ئىشلەتكۈچىنىڭ ئاتى "
+"ئەمەس؛ ئۇنىڭ مەۋجۇتلۇقىنى تەكشۈرەلمەيدۇ."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:97
 #, kde-kuit-format
 msgctxt ""
 "@info '%1 %2' together make up a terminal command; %3 is the command's output"
 msgid "Command <command>%1 %2</command> failed:<nl/><nl/>%3"
-msgstr ""
+msgstr "بۇيرۇق <command>%1 %2</command> مەغلۇپ بولدى:<nl/><nl/>%3"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:114
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:160
 #, kde-kuit-format
 msgctxt "@info error while looking up uid from dbus"
 msgid "Could not resolve calling user."
-msgstr ""
+msgstr "ئىشلەتكۈچى چاقىرىشنى يېشەلمىدى."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:120
 #, kde-format
@@ -336,7 +364,7 @@ msgctxt "@info"
 msgid ""
 "For security reasons, creating Samba users with empty passwords is not "
 "allowed."
-msgstr ""
+msgstr "بىخەتەرلىك سەۋەبىدىن ئىم يوق Samba ئىشلەتكۈچى قۇرۇشقا يول قويۇلمايدۇ."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:166
 #, kde-kuit-format
@@ -345,6 +373,8 @@ msgid ""
 "<resource>%1</resource> is not a valid group name; cannot make user "
 "<resource>%2</resource> a member of it."
 msgstr ""
+"<resource>%1</resource> ئىناۋەتلىك گۇرۇپپا ئاتى ئەمەس؛ <resource>%2</"
+"resource> ئىشلەتكۈچىنى ئۇنىڭ گۇرۇپپا ئەزالىقىغا قوشالمايدۇ."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:176
 #, kde-kuit-format
@@ -357,6 +387,10 @@ msgid ""
 "not                                                    include the text "
 "<resource>admin</resource> or <resource>root</resource>."
 msgstr ""
+"بىخەتەرلىك سەۋەبىدىن، <resource>%1</resource> ئىشلەتكۈچىنى <resource>%2</"
+"resource> نىڭ ئەزالىقىغا تەڭشىيەلمەيدۇ.\n"
+"گۇرۇپپا ئاتى بىخەتەر ئەمەس؛ ئىناۋەتلىك گۇرۇپپا ئاتى <resource>admin</"
+"resource> ياكى <resource>root</resource> نى ئۆز ئىچىگە ئالمايدۇ."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:214
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:240
@@ -366,41 +400,43 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Samba ھۆججەت ھەمبەھىرلەش مۇلازىمىتىنىڭ ئىناۋەتلىك systemd مۇلازىمەت "
+"ھۆججىتىنى تاپالمىدى."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "<command>%1</command> systemd مۇلازىمىتىنى باشلىيالمايدۇ: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "<command>%1</command> systemd مۇلازىمىتىنى قوزغىتالمايدۇ: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
 msgctxt "@title"
 msgid "File Path"
-msgstr ""
+msgstr "ھۆججەت يولى"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:97
 #, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr ""
+msgstr "نۆۋەتتىكى ئىجازەت"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr ""
+msgstr "زۆرۈر ئىجازەت"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
-msgstr ""
+msgstr "زىيارەتنى رەت قىلىۋاتىدۇ"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:73
@@ -417,16 +453,28 @@ msgid ""
 "still not be able to access it remotely even\n"
 "when the Share access rules would allow it."
 msgstr ""
+"\n"
+"زىيارەتنى رەت قىلىش بۇ ھەمبەھىرنى ئىشلىتىشتىن توسىدۇ، گەرچە باشقا بىر "
+"زىيارەت قائىدىسى زىيارەت ئىجازىتى بەرگەن تەقدىردىمۇ شۇنداق. زىيارەتنى رەت "
+"قىلىش قائىدىسىنىڭ ئالدىنلىقى يۇقىرى.\n"
+"شۇنى تەكىتلەپ ئۆتۈش كېرەككى، ئەگەر زىيارەتنى رەت قىلىش نىشانى "
+"<resource>ھەممەيلەن</resource> گە تەڭشەلسە، ئۇنداقتا ھەممەيلەننىڭ زىيارىتى "
+"چەكلىنىدۇ.\n"
+"ئادەتتىكى ئەھۋالدا ھېچكىمنىڭ زىيارىتىنى رەت قىلىش بىھاجەت چۈنكى ئادەتتىكى "
+"مۇندەرىجە ۋە ھۆججەت ئىجازىتى يەنىلا ھەمبەھىرلىنىدىغان مۇندەرىجىگە "
+"قوللىنىلىدۇ. يەرلىك مۇندەرىجىنى زىيارەت قىلىش ئىجازىتى يوق ئىشلەتكۈچى "
+"ئوخشاشلا يىراقتىكى مەزكۇر مۇندەرىجىنى زىيارەت قىلالمايدۇ، گەرچە ھەمبەھىر "
+"زىيارەت قائىدىسى يول قويغان بولسىمۇ زىيارەت قىلالمايدۇ."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:91
 msgctxt "@label"
 msgid "This folder needs extra permissions for sharing to work."
-msgstr ""
+msgstr "ھەمبەھىرنىڭ ئىشلىشى ئۈچۈن بۇ قىسقۇچ قوشۇمچە ئىجازەتكە ئېھتىياجلىق."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr ""
+msgstr "ئىجازەت ئوڭشا"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
@@ -434,15 +482,15 @@ msgid ""
 "The share might not work properly because share folder or its paths has "
 "Advanced Permissions: %1"
 msgstr ""
+"ھەمبەھىر ئادەتتىكىدەك ئىشلىمەسلىكى مۇمكىن چۈنكى ھەمبەھىر قىسقۇچ ياكى ئۇنىڭ "
+"يولىنىڭ ئالىي ئىجازىتى بار: %1"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:114
 msgctxt "@option:check"
 msgid "Share this folder with other computers on the local network"
-msgstr ""
+msgstr "بۇ قىسقۇچنى يەرلىك توردىكى باشقا كومپيۇتېرغا ھەمبەھىرلەيدۇ"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:139
-#, fuzzy
-#| msgid "Name:"
 msgctxt "@label"
 msgid "Name:"
 msgstr "ئاتى:"
@@ -450,7 +498,7 @@ msgstr "ئاتى:"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:166
 msgctxt "@action:button network addresses"
 msgid "View Addresses"
-msgstr ""
+msgstr "ئادرېسنى كۆرسەت"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:178
 msgctxt "@label"
@@ -458,6 +506,8 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"بۇ ئاتنى ئىشلەتكىلى بولمايدۇ. ھەمبەھىر ئات چوقۇم ئىشلەتكۈچى ئاتى بولماسلىقى "
+"ۋە سىستېمىدا ئوخشاش ئاتلىق ئىككى ھەمبەھىر بولماسلىقى كېرەك."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
@@ -465,34 +515,30 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"بۇ ئات بەك  ئۇزۇن بولۇشى مۇمكىن. ئۇ ماسلىشىشچانلىق مەسىلى كەلتۈرۈپ چىقىرىشى "
+"ياكى Samba رەت قىلىشى مۇمكىن."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:194
-#, fuzzy
-#| msgid "Allow Guests"
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr "مېھمانلارغا يول قوي"
+msgstr "مېھماننىڭ باغلىنىشىغا يول قويىدۇ"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
 msgid "Guest access is disabled by the system's Samba configuration."
-msgstr ""
+msgstr "مېھمان زىيارىتى سىستېمىنىڭ Samba سەپلىمىسىدە چەكلەنگەن."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:291
 msgctxt "@button"
 msgid "Change Password…"
-msgstr ""
+msgstr "ئىم ئۆزگەرت…"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:306
-#, fuzzy
-#| msgid "Full Control"
 msgctxt "@option:radio user can read&write"
 msgid "Full Control"
-msgstr "تولۇق كونترول قىلىش"
+msgstr "تولۇق تىزگىن"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:307
-#, fuzzy
-#| msgid "Read Only"
 msgctxt "@option:radio user can read"
 msgid "Read Only"
 msgstr "ئوقۇشقىلا بولىدىغان"
@@ -500,48 +546,48 @@ msgstr "ئوقۇشقىلا بولىدىغان"
 #: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
 msgid "No Access"
-msgstr ""
+msgstr "زىيارەت چەكلەندى"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:334
 msgctxt "@button"
 msgid "View Samba Status"
-msgstr ""
+msgstr "Samba ھالىتىنى كۆرسەت"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Change password for '%1'"
-msgstr ""
+msgstr "«%1» ئۈچۈن ئىم ئۆزگەرتىدۇ"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:25
 msgctxt "@title"
 msgid "Set password for '%1'"
-msgstr ""
+msgstr "«%1» غا ئىم تەڭشەيدۇ"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:64
 msgctxt "@label:textbox"
 msgid "Password"
-msgstr ""
+msgstr "ئىم"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:75
 msgctxt "@label:textbox"
 msgid "Confirm password"
-msgstr ""
+msgstr "ئىم جەزملە"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:86
 msgctxt "@label error message"
 msgid "Passwords must match."
-msgstr ""
+msgstr "ئىم چوقۇم ماس كېلىشى كېرەك."
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:117
 msgctxt ""
 "@action:button creates a new samba user with the user-specified password"
 msgid "Set Password"
-msgstr ""
+msgstr "ئىم تەڭشەك"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "ۋاز كەچ"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:37
 msgctxt "@info"
@@ -551,11 +597,14 @@ msgid ""
 "to work.</para>\n"
 "<para>Add these permissions now?</para><nl/>\n"
 msgstr ""
+"\n"
+"<para>ھەمبەھىرنىڭ ئىشلىتىش ئۈچۈن <filename>%1</filename> قىسقۇچ قوشۇمچە "
+"ئىجازەتكە ئېھتىياجلىق.</para>\n"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr ""
+msgstr "ئىجازەت ئۆزگەرت"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
 msgctxt "@label"
@@ -563,26 +612,27 @@ msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
+"%1 نىڭ ئىجازىتىنى ئۆزگەرتەلمىدى. ھەممە ئىجازەت ئۆزگەرتىش ئەسلىگە ياندۇرۇلدى."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
 msgid "Cancel"
-msgstr ""
+msgstr "ۋاز كەچ"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:17
 msgctxt "@title"
 msgid "Connection Addresses"
-msgstr ""
+msgstr "باغلىنىش ئادرېسى"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:24
 msgctxt "@info:usagetip"
 msgid "Use any of the following addresses to connect to this share:"
-msgstr ""
+msgstr "بۇ ھەمبەھىرگە باغلىنىش ئۈچۈن تۆۋەندىكى خالىغان ئادرېسنى ئىشلىتىدۇ:"
 
 #: samba/filepropertiesplugin/qml/ConnectionAddresses.qml:57
 msgctxt "@action:button"
 msgid "Copy to Clipboard"
-msgstr ""
+msgstr "چاپلاش تاختىسىغا كۆچۈر"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:31
 msgctxt "@info"
@@ -590,23 +640,23 @@ msgid ""
 "The <application>Samba</application> file sharing service must be installed "
 "before folders can be shared."
 msgstr ""
+"قىسقۇچ ھەمبەھىرلەشتە ئالدى بىلەن <application>Samba</application> ھۆججەت "
+"ھەمبەھىرلەش مۇلازىمىتىنى ئورنىتىش كېرەك."
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:34
-#, fuzzy
-#| msgid "Install Samba..."
 msgctxt "@button"
 msgid "Install Samba"
-msgstr "Samba ئورنات…"
+msgstr "Samba ئورنات"
 
 #: samba/filepropertiesplugin/qml/InstallPage.qml:42
 msgctxt "@label"
 msgid "The Samba package failed to install."
-msgstr ""
+msgstr "Samba بوغچىنى ئورنىتالمىدى."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:22
 msgctxt "@info"
 msgid "File sharing service unavailable"
-msgstr ""
+msgstr "ھۆججەت ھەمبەھىرلەش مۇلازىمىتىنى ئىشلەتكىلى بولمايدۇ"
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:23
 msgid ""
@@ -614,25 +664,28 @@ msgid ""
 "If you haven't disabled it manually, consider reporting a bug to your "
 "distribution."
 msgstr ""
+"Samba مۇلازىمىتىنىڭ قوزغىتىلغان ۋە ئىجرا قىلىنىۋاتقانلىقىنى جەزملەڭ.\n"
+"ئەگەر ئۇنى قولدا چەكلىمىگەن بولسىڭىز، سىستېما تارقاتقۇچىغا بۇ كەمتۈكلۈكنى "
+"مەلۇم قىلىشنى ئويلىشىڭ."
 
 #: samba/filepropertiesplugin/qml/MissingSambaPage.qml:27
 msgid "Report a bug"
-msgstr ""
+msgstr "كەمتۈك مەلۇم قىل"
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:20
 msgctxt "@label"
 msgid "Restart the computer to apply changes."
-msgstr ""
+msgstr "ئۆزگەرتىشنى قوللىنىش ئۈچۈن كومپيۇتېرنى قايتا قوزغىتىدۇ."
 
 #: samba/filepropertiesplugin/qml/RebootPage.qml:23
 msgctxt "@button restart the system"
 msgid "Restart"
-msgstr ""
+msgstr "قايتا قوزغات"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Samba نى قوزغىتالمىدى"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
 msgctxt "@info"
@@ -640,11 +693,14 @@ msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
+"ئالدى بىلەن <application>Samba</application> ھۆججەت ھەمبەھىرلەش مۇلازىمىتى "
+"قوزغىتىلغان بولۇشى ۋە قىسقۇچ ھەمبەھىرلەشتىن ئىلگىرى قوزغىتىش باشلىنىپ بولغان "
+"بولۇشى كېرەك."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Samba مۇلازىمىتىنى قوزغات"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -662,11 +718,21 @@ msgid ""
 "a Samba password.\n"
 "</para>"
 msgstr ""
+"\n"
+"<para>\n"
+"Samba سىستېمىدىن مۇستەقىل ئىشلەتكۈچى ساندانى ئىشلىتىدۇ.\n"
+"بۇ ھەر بىر Samba ئىشلەتكۈچىگە ئايرىم بىر Samba ئىم تەڭشەپ تىزىمغا كىرىشى "
+"زۆرۈر.\n"
+"</para>\n"
+"<para>\n"
+"نۆۋەتتىكى ھېسابنىڭ ھەمبەھىرىنى زىيارەت قىلىشتىن ئىلگىرى شۇ ھېسابقا Samba ئىم "
+"تەڭشىشىڭىز كېرەك.\n"
+"</para>"
 
 #: samba/filepropertiesplugin/qml/UserPage.qml:71
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr ""
+msgstr "Samba ئىم تەڭشەك"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:79
@@ -677,6 +743,9 @@ msgid ""
 "<command>smbpasswd</command>\n"
 "command line utility."
 msgstr ""
+"\n"
+"ئەگەر قوشۇمچە ئىشلەتكۈچى باشقۇرۇش ۋە ئىم باشقۇرۇش ئۈچۈن، Samba نىڭ "
+"<command>smbpasswd</command> بۇيرۇق قۇرى قورالىنى ئىشلىتىڭ."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:309
 #, kde-format
@@ -685,72 +754,74 @@ msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
 msgstr ""
+"بىرلا ۋاقىتتا ئاكتىپ تۇرىدىغان ھەمبەھىر مۇندەرىجىنىڭ ئەڭ يۇقىرى چېكىگە "
+"يەتتىڭىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:311
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr ""
+msgstr "ھەمبەھىر ئات ئىناۋەتسىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:313
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "ھەمبەھىر ئاتنى باشقا بىر مۇندەرىجە ئىشلىتىۋاتىدۇ."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:315
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is invalid."
-msgstr ""
+msgstr "يول ئىناۋەتسىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:317
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path does not exist."
-msgstr ""
+msgstr "يول مەۋجۇت ئەمەس."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:319
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is not a directory."
-msgstr ""
+msgstr "يول مۇندەرىجە ئەمەس."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:321
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The path is relative."
-msgstr ""
+msgstr "يول نىسپىي يول."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:323
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "This path may not be shared."
-msgstr ""
+msgstr "بۇ يولنى ھەمبەھىرلىگىلى بولمايدۇ."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:325
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The access rule is invalid."
-msgstr ""
+msgstr "زىيارەت قائىدىسى ئىناۋەتسىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:327
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "An access rule's user is not valid."
-msgstr ""
+msgstr "زىيارەت قائىدىسىنىڭ ئىشلەتكۈچىسى ئىناۋەتسىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:329
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The 'Guest' access rule is invalid."
-msgstr ""
+msgstr "«مېھمان» زىيارەت قائىدىسى ئىناۋەتسىز."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:331
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "مېھمان زىيارىتىنى قوزغىتىشقا يول قويمايدۇ."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:349
 #, kde-kuit-format
@@ -760,12 +831,14 @@ msgid ""
 "not been created.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>مۇندەرىجىنى ھەمبەھىرلەۋاتقاندا خاتالىق كۆرۈلدى.ھەمبەھىر قۇرۇلمىدى.</"
+"para><para>Samba ئىچكى دوكلاتى:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:354
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Create Network Share"
-msgstr ""
+msgstr "تور ھەمبەھىر قۇرالمىدى"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:367
 #, kde-kuit-format
@@ -775,12 +848,14 @@ msgid ""
 "has not been removed.</para><para>Samba internals report:</para><message>%1</"
 "message>"
 msgstr ""
+"<para>مۇندەرىجىنى ھەمبەھىرلەۋاتقاندا خاتالىق كۆرۈلدى.ھەمبەھىر "
+"چىقىرىۋېتىلمىدى.</para><para>Samba ئىچكى دوكلاتى:</para><message>%1</message>"
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:372
 #, kde-format
 msgctxt "@info/title"
 msgid "Failed to Remove Network Share"
-msgstr ""
+msgstr "تور ھەمبەھىرنى چىقىرىۋېتەلمىدى"
 
 #: samba/filepropertiesplugin/servicehelper.cpp:197
 #, kde-kuit-format
@@ -789,6 +864,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba مۇلازىمىتىنى قوزغىتالمىدى:<nl/>%1<nl/><nl/>Samba مۇلازىمىتىنىڭ "
+"ئورنىتىلغان ۋە قوزغىتىلغانلىقىنى جەزملەڭ."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -797,6 +874,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba مۇلازىمىتىنى باشلىيالمىدى:<nl/>%1<nl/><nl/>Samba مۇلازىمىتىنىڭ "
+"ئورنىتىلغان ۋە قوزغىتىلغانلىقىنى جەزملەڭ."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -806,6 +885,9 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Samba ھۆججەت ھەمبەھىرلەش مۇلازىمىتىنى تاپالمىدى. بۇ بوغچىلاش مەسىلىسىنى "
+"<link url='%2'>ئۇلارنىڭ كەمتۈكلۈك مەلۇم قىلىدىغان تور بېكىتى</link> دىكى %1 "
+"غا مەلۇم قىلىڭ."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -814,20 +896,21 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"<command>%1</command> نى قوزغىتىشنى كۈتۈش ۋاقتى توشتى.<nl/><nl/>Samba ھۆججەت "
+"ھەمبەھىرلەش مۇلازىمىتىنىڭ ئورنىتىلغان ۋە قوزغىتىلغانلىقىنى جەزملەڭ."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "Samba ئىشلەتكۈچى «%1» نىڭ مەۋجۇت ياكى ئەمەسلىكىنى تەكشۈرۈۋاتىدۇ"
 
 #: samba/filepropertiesplugin/usermanager.cpp:117
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "يېڭى Samba ئىشلەتكۈچى «%1» نى قۇرۇۋاتىدۇ"
 
-#, fuzzy
 #~| msgid "&Share"
 #~ msgctxt "@title:tab"
 #~ msgid "Share"
@@ -836,7 +919,6 @@ msgstr ""
 #~ msgid "---"
 #~ msgstr "---"
 
-#, fuzzy
 #~| msgid "Install Samba..."
 #~ msgid "Installing Samba..."
 #~ msgstr "Samba ئورنات…"

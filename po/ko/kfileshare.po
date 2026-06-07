@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2011, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-09 00:43+0000\n"
-"PO-Revision-Date: 2025-10-12 11:38+0200\n"
+"PO-Revision-Date: 2026-06-06 13:00+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: samba/aclproperties/plugin.cpp:58
 #, kde-format
@@ -395,18 +395,19 @@ msgid ""
 "Could not find a valid systemd service file for the Samba file sharing "
 "service."
 msgstr ""
+"Samba 파일 공유 서비스에 대한 올바른 systemd 서비스 파일을 찾을 수 없습니다."
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not start the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "<command>%1</command> systemd 서비스를 시작할 수 없음: %2"
 
 #: samba/filepropertiesplugin/kauth/authhelper.cpp:253
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Could not enable the <command>%1</command> systemd service: %2"
-msgstr ""
+msgstr "<command>%1</command> systemd 서비스를 활성화할 수 없음: %2"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:95
 #, kde-format
@@ -675,26 +676,21 @@ msgstr "다시 시작"
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Samba를 활성화할 수 없음"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
-#, fuzzy
-#| msgctxt "@info"
-#| msgid ""
-#| "The <application>Samba</application> file sharing service must be "
-#| "installed before folders can be shared."
 msgctxt "@info"
 msgid ""
 "The <application>Samba</application> file sharing service must be enabled "
 "and started before folders can be shared."
 msgstr ""
-"폴더를 공유하려면 <application>Samba</application> 파일 공유 서비스를 설치해"
-"야 합니다."
+"폴더를 공유하려면 <application>Samba</application> 파일 공유 서비스가 활성화 "
+"및 시작되어 있어야 합니다."
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Samba 서비스 활성화"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:56
@@ -856,6 +852,8 @@ msgid ""
 "Could not enable the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba 서비스를 활성화할 수 없음: <nl/>%1<nl/><nl/>Samba 파일 공유 서비스가 설"
+"치 및 활성화되어 있는지 확인하십시오."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:223
 #, kde-kuit-format
@@ -864,6 +862,8 @@ msgid ""
 "Could not start the Samba service:<nl/>%1<nl/><nl/>Ensure the Samba file "
 "sharing service is installed and enabled."
 msgstr ""
+"Samba 서비스를 시작할 수 없음: <nl/>%1<nl/><nl/>Samba 파일 공유 서비스가 설"
+"치 및 활성화되어 있는지 확인하십시오."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:245
 #, kde-kuit-format
@@ -873,6 +873,8 @@ msgid ""
 "should be reported to %1 on <link url='%2'>their bug reporting website.</"
 "link>"
 msgstr ""
+"Samba 파일 공유 서비스를 찾을 수 없습니다. 이 문제는 패키지 문제이며, %1의 "
+"<link url='%2'>버그 보고 웹사이트</link>에 보고해야 합니다."
 
 #: samba/filepropertiesplugin/servicehelper.cpp:327
 #, kde-kuit-format
@@ -881,6 +883,8 @@ msgid ""
 "Timed out waiting for <command>%1</command> to start.<nl/><nl/>Ensure the "
 "Samba file sharing service is installed and enabled."
 msgstr ""
+"<command>%1</command> 명령의 시작을 기다리는 시간이 초과되었습니다.<nl/><nl/"
+">Samba 파일 공유 서비스가 설치 및 활성화되어 있는지 확인하십시오."
 
 #: samba/filepropertiesplugin/usermanager.cpp:96
 #, kde-format

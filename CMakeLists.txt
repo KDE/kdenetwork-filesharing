@@ -25,6 +25,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
     DBus
     Qml
     QuickWidgets
+    QuickControls2
 )
 
 find_package(KF6 ${KF_MIN_VERSION} REQUIRED COMPONENTS

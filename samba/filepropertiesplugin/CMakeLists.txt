@@ -18,6 +18,7 @@ target_link_libraries(sambausershareplugin
     KF6::KIOWidgets
     Qt::Qml
     Qt::QuickWidgets
+    Qt::QuickControls2
     Qt::Network
     Qt::DBus
     QCoro6::Coro

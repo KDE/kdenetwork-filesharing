@@ -27,6 +27,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickItem>
+#include <QQuickStyle>
 #include <QQuickWidget>
 #include <QStandardPaths>
 #include <QTimer>
@@ -78,7 +79,7 @@ SambaUserSharePlugin::SambaUserSharePlugin(QObject *parent)
     if (parentDialog->nativeParentWidget()) {
         const auto nativeParentWidget = qobject_cast<QMainWindow *>(parentDialog->nativeParentWidget());
         if (nativeParentWidget && nativeParentWidget->windowHandle()) {
-            if (nativeParentWidget->windowHandle()->surfaceType() == QSurface::RasterSurface) {
+            if (nativeParentWidget->windowHandle()->surfaceType() == QSurface::RasterSurface && QQuickStyle::name() == u"org.kde.desktop") {
                 QQuickWindow::setGraphicsApi(QSGRendererInterface::Software);
             }
         }

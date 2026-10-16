@@ -14,7 +14,7 @@ Kirigami.Page {
 
     Connections {
         target: sambaPlugin.serviceHelper
-        onEnablingChanged: {
+        function onEnablingChanged() {
             if (!sambaPlugin.serviceHelper.enabling && !sambaPlugin.serviceHelper.failed) {
                 // Lock the UI state immediately so the placeholder doesn't reappear
                 // when we transition to the next page, which looks weird.

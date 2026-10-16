@@ -42,10 +42,12 @@ Kirigami.ScrollablePage {
 
     Connections {
         target: sambaPlugin.userManager.currentUser()
-        onAddToSambaError: function (error) {
+        function onAddToSambaError(error) {
             changePassword.errorMessage = error
         }
-        onInSambaChanged: changePassword.userCreated(target.inSamba)
+        function onInSambaChanged() {
+            changePassword.userCreated(target.inSamba)
+        }
     }
 
     ColumnLayout {

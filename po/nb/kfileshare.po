@@ -2,19 +2,20 @@
 #
 # Knut Yrvin <knut.yrvin@gmail.com>, 2004.
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2005, 2008, 2009, 2011.
+# Daniel Dybing <daniel.dybing@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfileshare\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-20 00:52+0000\n"
-"PO-Revision-Date: 2011-03-08 10:02+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2026-11-08 15:32+0100\n"
+"Last-Translator: Daniel Dybing <daniel.dybing@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,7 +25,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio an entry denying permissions"
 msgid "Deny"
-msgstr ""
+msgstr "Avvis"
 
 #: samba/aclproperties/plugin.cpp:60
 #, kde-format
@@ -43,43 +44,43 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder only"
-msgstr ""
+msgstr "Bare denne mappa"
 
 #: samba/aclproperties/plugin.cpp:73
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder, subfolders and files"
-msgstr ""
+msgstr "Denne mappa, undermapper og filer"
 
 #: samba/aclproperties/plugin.cpp:75
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and subfolders"
-msgstr ""
+msgstr "Denne mappa og undermapper"
 
 #: samba/aclproperties/plugin.cpp:77
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "This folder and files"
-msgstr ""
+msgstr "Denne mappa og filer"
 
 #: samba/aclproperties/plugin.cpp:79
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders and files only"
-msgstr ""
+msgstr "Bare undermapper og filer"
 
 #: samba/aclproperties/plugin.cpp:81
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Subfolders only"
-msgstr ""
+msgstr "Bare undermapper"
 
 #: samba/aclproperties/plugin.cpp:83
 #, kde-format
 msgctxt "@option:radio permission applicability type"
 msgid "Files only"
-msgstr ""
+msgstr "Bare filer"
 
 #: samba/aclproperties/plugin.cpp:86
 #, kde-format
@@ -91,7 +92,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:tab"
 msgid "Remote Permissions"
-msgstr ""
+msgstr "Fjerntilganger"
 
 #: samba/aclproperties/qml/ACEPage.qml:29
 msgctxt "@info"
@@ -123,7 +124,7 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:67
 msgctxt "@option:check"
 msgid "Read attributes"
-msgstr ""
+msgstr "Les attributter"
 
 #: samba/aclproperties/qml/ACEPage.qml:71
 msgctxt "@option:check"
@@ -133,12 +134,12 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:75
 msgctxt "@option:check"
 msgid "Create files / write data"
-msgstr ""
+msgstr "Opprett filer / skriv data"
 
 #: samba/aclproperties/qml/ACEPage.qml:79
 msgctxt "@option:check"
 msgid "Create folders / append data"
-msgstr ""
+msgstr "Opprett mapper / tilføy data"
 
 #: samba/aclproperties/qml/ACEPage.qml:83
 msgctxt "@option:check"
@@ -153,7 +154,7 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:91
 msgctxt "@option:check"
 msgid "Delete subfolders and files"
-msgstr ""
+msgstr "Slett undermapper og filer"
 
 #: samba/aclproperties/qml/ACEPage.qml:95
 msgctxt "@option:check"
@@ -163,12 +164,12 @@ msgstr ""
 #: samba/aclproperties/qml/ACEPage.qml:99
 msgctxt "@option:check"
 msgid "Read permissions"
-msgstr ""
+msgstr "Lesetilgang"
 
 #: samba/aclproperties/qml/ACEPage.qml:103
 msgctxt "@option:check"
 msgid "Change permissions"
-msgstr ""
+msgstr "Endre tilganger"
 
 #: samba/aclproperties/qml/ACEPage.qml:107
 msgctxt "@option:check"
@@ -390,18 +391,18 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Current Permissions"
-msgstr ""
+msgstr "Gjeldende tilganger"
 
 #: samba/filepropertiesplugin/permissionshelper.cpp:99
 #, kde-format
 msgctxt "@title"
 msgid "Required Permissions"
-msgstr ""
+msgstr "Påkrevde tilganger"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:59
 msgctxt "@title"
 msgid "Denying Access"
-msgstr ""
+msgstr "Nekter tilgang"
 
 #. i18n markup; this also means newlines are ignored!
 #: samba/filepropertiesplugin/qml/ACLPage.qml:73
@@ -427,7 +428,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:95
 msgctxt "@action:button opens the change permissions page"
 msgid "Fix Permissions"
-msgstr ""
+msgstr "Rett opp tilganger"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:107
 msgctxt "@label"
@@ -457,6 +458,8 @@ msgid ""
 "This name cannot be used. Share names must not be user names and there must "
 "not be two shares with the same name on the entire system."
 msgstr ""
+"Navnet kan ikke brukes. Navnet på delte ressurser kan ikke være brukernavn, "
+"og det kan ikke finnes to delte ressurser med samme navn i systemet."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:187
 msgctxt "@label"
@@ -464,11 +467,13 @@ msgid ""
 "This name may be too long. It can cause interoperability problems or get "
 "rejected by Samba."
 msgstr ""
+"Navnet er veldig langt. Det kan føre til problemer med interoperabilitet, "
+"eller det kan bli avvist av Samba."
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:194
 msgctxt "@option:check"
 msgid "Allow guests to connect"
-msgstr ""
+msgstr "Tillat gjestetilgang"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:207
 msgctxt "@label"
@@ -488,7 +493,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ACLPage.qml:307
 msgctxt "@option:radio user can read"
 msgid "Read Only"
-msgstr ""
+msgstr "Skrivebeskyttet"
 
 #: samba/filepropertiesplugin/qml/ACLPage.qml:308
 msgctxt "@option:radio user not allowed to access share"
@@ -529,7 +534,7 @@ msgstr ""
 msgctxt ""
 "@action:button creates a new samba user with the user-specified password"
 msgid "Set Password"
-msgstr ""
+msgstr "Velg passord"
 
 #: samba/filepropertiesplugin/qml/ChangePassword.qml:124
 msgctxt "@action:button"
@@ -548,7 +553,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:74
 msgctxt "@action:button changes permissions"
 msgid "Change Permissions"
-msgstr ""
+msgstr "Endre tilganger"
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:80
 msgctxt "@label"
@@ -556,6 +561,7 @@ msgid ""
 "Could not change permissions for: %1. All permissions changes have been "
 "reverted."
 msgstr ""
+"Klarte ikke endre tilganger for: %1. Alle tilgangsendringene er tilbakestilt."
 
 #: samba/filepropertiesplugin/qml/ChangePermissionsPage.qml:89
 msgctxt "@action:button cancels permissions change"
@@ -623,7 +629,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ServicePage.qml:42
 msgctxt "@title"
 msgid "Failed to Enable Samba"
-msgstr ""
+msgstr "Klarte ikke slå på Samba"
 
 #: samba/filepropertiesplugin/qml/ServicePage.qml:55
 msgctxt "@info"
@@ -635,7 +641,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/ServicePage.qml:59
 msgctxt "@button"
 msgid "Enable the Samba Service"
-msgstr ""
+msgstr "Slå på Samba-tjenesten"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:58
@@ -657,7 +663,7 @@ msgstr ""
 #: samba/filepropertiesplugin/qml/UserPage.qml:73
 msgctxt "@action:button opens dialog to create new user"
 msgid "Set Samba password"
-msgstr ""
+msgstr "Velg passord for Samba"
 
 #. i18n markup
 #: samba/filepropertiesplugin/qml/UserPage.qml:81
@@ -675,19 +681,19 @@ msgctxt "@info detailed error messsage"
 msgid ""
 "You have exhausted the maximum amount of shared directories you may have "
 "active at the same time."
-msgstr ""
+msgstr "Du har nådd grensa for antall delte mapper du kan ha samtidig."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:311
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is invalid."
-msgstr ""
+msgstr "Ressursnavnet er ugyldig."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:313
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "The share name is already in use for a different directory."
-msgstr ""
+msgstr "Ressursnavnet er allerede i bruk for en annen mappe."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:315
 #, kde-format
@@ -741,7 +747,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info detailed error messsage"
 msgid "Enabling guest access is not allowed."
-msgstr ""
+msgstr "Det er ikke tillatt å gi gjestetilgang."
 
 #: samba/filepropertiesplugin/sambausershareplugin.cpp:349
 #, kde-kuit-format
@@ -810,10 +816,10 @@ msgstr ""
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Checking if Samba user '%1' exists"
-msgstr ""
+msgstr "Sjekker om Samba-brukeren «%1» finnes fra før"
 
 #: samba/filepropertiesplugin/usermanager.cpp:117
 #, kde-format
 msgctxt "@label kauth action description %1 is a username"
 msgid "Creating new Samba user '%1'"
-msgstr ""
+msgstr "Oppretter ny Samba-bruker «%1»"

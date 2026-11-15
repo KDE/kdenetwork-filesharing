@@ -27,7 +27,7 @@ static QString findAvailableService()
     // The smb service can be named "smbd.service" on some systems, e.g. Debian.
     // Ensure the correct service name is used.
     OrgFreedesktopSystemd1ManagerInterface manager(DBUS_SYSTEMD_SERVICE, DBUS_SYSTEMD_PATH, QDBusConnection::systemBus());
-    auto candidates = {QStringLiteral("smb.service"), QStringLiteral("smbd.service")};
+    auto candidates = {QStringLiteral("smb.service"), QStringLiteral("smbd.service"), QStringLiteral("samba-smbd.service")};
 
     for (const QString &candidate : candidates) {
         // If this call doesn't return an error, it means the unit file exists, even if it's disabled.
